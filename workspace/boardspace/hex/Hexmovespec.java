@@ -97,7 +97,7 @@ public class Hexmovespec extends commonMove implements HexConstants
         {
         default:
             G.Error("Cant parse " + cmd);
-
+            break;
         case MOVE_DROPB:
 	           op = opcode;
 	            source = EmptyBoard;
@@ -189,7 +189,7 @@ public class Hexmovespec extends commonMove implements HexConstants
         {
         default:
             G.Error("moveString Not implemented: " + op);
-
+            return(null);	// not used
         case MOVE_PICKB:
 	        return (ind+D.findUnique(op) +" " + to_col + " " + to_row);
 

@@ -141,10 +141,9 @@ public class HexGameViewer extends commonCanvas
     		// images and textures are static variables, so they're shared by
     		// the entire class and only get loaded once.  Special synchronization
     		// tricks are used to make sure.
-    	  tileImages = load_images(ImageDir,TileFileNames,load_images(ImageDir,TileFileNames,"-mask"));
+    	  tileImages = load_masked_images(ImageDir,TileFileNames);
           textures = load_images(ImageDir,TextureNames);
-          borders = load_images(ImageDir,BorderFileNames,
-        		  		load_images(ImageDir,BorderFileNames,"-mask"));
+          borders = load_masked_images(ImageDir,BorderFileNames);
     	}
     }
 
@@ -392,7 +391,6 @@ public class HexGameViewer extends commonCanvas
 
             int spacex = r.width - CELLSIZE;
             int spacey = r.height - CELLSIZE;
-            int nc = 20;							 // draw 20 chips
             Random rand = new Random(4321 + player); // consistant randoms, different for black and white 
 
             if (canhit)
@@ -402,9 +400,9 @@ public class HexGameViewer extends commonCanvas
 
             G.frameRect(gc, Color.black, r);
             hexChip chip = gb.getPlayerChip(player);
+            int nc = 20;							 // draw 20 chips
             while (nc-- > 0)
-            {
-                int rx = Math.abs(rand.nextInt()) % spacex;
+            {	int rx = Math.abs(rand.nextInt()) % spacex;
                 int ry = Math.abs(rand.nextInt()) % spacey;
                 chip.drawChip(gc,this,CELLSIZE,r.x+CELLSIZE/2+rx,r.y+CELLSIZE/2+ry,null);
              }
@@ -513,15 +511,15 @@ public class HexGameViewer extends commonCanvas
 
         // using closestCell is preferable to G.PointInside(highlight, xpos, ypos, CELLRADIUS)
         // because there will be no gaps or overlaps between cells.
-        hexCell closestCell = (highlight==null)?null
-        		:(hexCell)gb.closestCell(highlight.x-brect.x,brect.height-(highlight.y-brect.y));
+        hexCell closestCell = (hexCell)gb.closestCell(highlight,brect);
         boolean hitCell = gb.LegalToHitBoard(closestCell);
         if(hitCell)
         { // note what we hit, row, col, and cell
           boolean empty = (closestCell.chip == null);
-          highlight.hitCode = empty ? EmptyBoard : BoardLocation;
+          boolean picked = (gb.pickedObject!=null);
+          highlight.hitCode = (empty||picked) ? EmptyBoard : BoardLocation;
           highlight.hitObject = closestCell;
-          highlight.arrow = empty ? StockArt.DownArrow : StockArt.UpArrow;
+          highlight.arrow = (empty||picked) ? StockArt.DownArrow : StockArt.UpArrow;
           highlight.awidth = CELLSIZE;
           highlight.col = closestCell.col;
           highlight.row = closestCell.row;
@@ -681,7 +679,7 @@ public class HexGameViewer extends commonCanvas
         	}
     	}
         handleExecute(bb,mm);
-		lastDropped = bb.lastDroppedDest;	// this is for the image adjustment logic
+		lastDropped = bb.lastDroppedObject;	// this is for the image adjustment logic
 		if(sounds) { playSounds((Hexmovespec)mm); }
        return (true);
     }
@@ -738,10 +736,6 @@ public class HexGameViewer extends commonCanvas
             		}
             		idx = -1; 
             	}
-            else if((m.op==MOVE_RESIGN) && (newmove.op!=MOVE_DONE)&& (newmove.op!=MOVE_RESIGN))
-            {	UndoHistoryElement(idx);
-            	idx--;
-            }
             else {
             switch(newmove.op)
         	{
@@ -783,8 +777,9 @@ public class HexGameViewer extends commonCanvas
         				break;
         				}
                 default:
-             		if((state==RESIGN_STATE)||(state==PUZZLE_STATE)) { idx = -1; break; }
-
+             		if(state==PUZZLE_STATE) { idx = -1; break; }
+                case MOVE_PICKB:
+                case MOVE_PICK:
                     UndoHistoryElement(idx);
                 	idx--;
                     break;
@@ -800,9 +795,27 @@ public class HexGameViewer extends commonCanvas
         			{ UndoHistoryElement(idx); 
         			}
         		}
+        		else
+        		{
+        		if((idx>2)&& (m.op==MOVE_PICKB))
+        		{
+        		Hexmovespec m2 = (Hexmovespec) History.elementAt(idx-1);	
+        		Hexmovespec m3 = (Hexmovespec) History.elementAt(idx-2);	
+        		if((m3.op==MOVE_PICKB)
+        				&& (m2.source==EmptyBoard)
+        				&& (m2.op==MOVE_DROPB)
+        				&& (m2.to_col==m.to_col)
+        				&& (m2.to_row==m.to_row))
+        			{	UndoHistoryElement(idx);
+        				UndoHistoryElement(idx-1);
+        			}
+        		}
+        		}
         		idx = -1;
         		break;
         	case MOVE_PICKB:
+        		if(state!=PUZZLE_STATE)
+        		{
         		switch(m.op)
         		{
         		case MOVE_PICKB:
@@ -814,7 +827,7 @@ public class HexGameViewer extends commonCanvas
             				if(newmove.op!=m.op) // protect against bounces
             					{ rval = null; }
             			}
-        		}
+        		}}
    				idx = -1;
    			 	break;
         		}	// end of switch on new move
@@ -866,6 +879,7 @@ public class HexGameViewer extends commonCanvas
 		switch(state)
 		{
 		default: G.Error("Not expecting state "+state);
+			break;
 		case PUZZLE_STATE:
 		{
 		hexChip mo = bb.pickedObject;

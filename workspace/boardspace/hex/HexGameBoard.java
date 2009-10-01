@@ -16,7 +16,7 @@ import online.game.*;
  * in the graphics.
  * 
  *  The principle interface with the game viewer is the "Execute" method
- *  which processes moves.  Note that this
+ *  which processes moves. 
  *  
  *  In general, the state of the game is represented by the contents of the board,
  *  whose turn it is, and an explicit state variable.  All the transitions specified
@@ -64,7 +64,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
     private hexCell whiteChipPool = new hexCell();
     private hexCell pickedSource = null; 
     private hexCell droppedDest = null;
-    public Object lastDroppedDest = null;	// for image adjustment logic
+    public Object lastDroppedObject = null;	// for image adjustment logic
 
     
 	
@@ -125,7 +125,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
         chips_on_board = 0;
         droppedDest = null;
         pickedSource = null;
-        lastDroppedDest = null;
+        lastDroppedObject = null;
 
 		playerColor[0]=White_Chip_Pool;
 		playerColor[1]=Black_Chip_Pool;
@@ -195,6 +195,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
 		switch(playerColor[0])
 		{
 		default: G.Error("Not expecting playerColor[0]="+playerColor[0]);
+			break;
 		case Black_Chip_Pool: v^= c1; break;
 		case White_Chip_Pool: v^= c2; break;
 		}
@@ -275,6 +276,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
         {
         default:
             G.Error("Move not complete, can't change the current player");
+            break;
         case PUZZLE_STATE:
             break;
         case CONFIRM_SWAP_STATE:
@@ -427,26 +429,31 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
     // 
     // drop the floating object.
     //
-    private void dropObject(int dest, char col, int row)
+    private void dropObject(Hexmovespec m)
     {
        pickedSource = null;
-       switch (dest)
+       switch (m.source)
         {
-        case BoardLocation: // an already filled board slot.
         default:
-            G.Error("Not expecting dest " + dest);
+            G.Error("Not expecting dest " + m.source);
+            break;
         case Black_Chip_Pool:
         case White_Chip_Pool:		// back in the pool, we don't really care where
         	pickedObject = null;
         	pickedSource = null;
         	droppedDest = null;
             break;
-
+        case BoardLocation:	// already filled board slot, which can happen in edit mode
         case EmptyBoard:
-           	hexCell c = (hexCell)GetBoardCell(col,row);
+           	hexCell c = GetCell(m.to_col,m.to_row);
+           	if(c.chip!=null) 
+           		{ // this is an important bit of communication with editHistory
+           		  // tell it that this drop wasn't on an empty cell
+           			m.source=BoardLocation; 
+           		}
            	SetBoard(c,pickedObject);
            	droppedDest = c;
-            lastDroppedDest = pickedObject;
+            lastDroppedObject = pickedObject;
             pickedObject = null;
             break;
         }
@@ -477,7 +484,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
         {
         default:
             G.Error("Not expecting source " + source);
-
+            break;
         case BoardLocation:
         	{
         	hexCell c = (hexCell)GetBoardCell(col,row);
@@ -487,7 +494,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
         	{
             pickedSource = c;
             lastPicked = pickedObject = c.topChip();
-         	lastDroppedDest = droppedDest = null;
+         	lastDroppedObject = droppedDest = null;
 			c.chip = null;
         	}}
             break;
@@ -528,6 +535,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
         {
         default:
             G.Error("Not expecting drop in state " + board_state);
+            break;
         case CONFIRM_STATE:
         	if(droppedDest==null)
         	{setNextStateAfterDone();
@@ -548,6 +556,8 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
        	switch(board_state)
     	{
     	default: G.Error("Not expecting state "+board_state);
+    		break;
+    	case GAMEOVER_STATE: break;
     	case CONFIRM_SWAP_STATE: setBoardState(PLAY_STATE); break;
     	case CONFIRM_STATE:
     	case PUZZLE_STATE:
@@ -587,6 +597,7 @@ void doSwap()
 	switch(board_state)
 	{	
 	default: G.Error("Not expecting state "+board_state);
+		break;
 	case PLAY_OR_SWAP_STATE:
 		  setBoardState(CONFIRM_SWAP_STATE);
 		  break;
@@ -622,7 +633,7 @@ void doSwap()
 			  case PLAY_OR_SWAP_STATE: acceptPlacement(); break;
 			}
 			pickObject(m.object, m.to_col, m.to_row);
-            dropObject(m.source, m.to_col, m.to_row);
+            dropObject(m);
             setNextStateAfterDrop();
 
             break;
@@ -635,13 +646,19 @@ void doSwap()
         	// come here only where there's something to pick, which must
         	// be a temporary p
         	pickObject(m.source, m.to_col, m.to_row);
-        	if(board_state==CONFIRM_STATE) 
-        		{ setBoardState((chips_on_board==1) ? PLAY_OR_SWAP_STATE : PLAY_STATE);
-        		}
+        	switch(board_state)
+        	{
+        	case PUZZLE_STATE:
+         		break;
+        	case CONFIRM_STATE:
+        		setBoardState((chips_on_board==1) ? PLAY_OR_SWAP_STATE : PLAY_STATE);
+        		break;
+        	default: ;
+        	}
             break;
 
         case MOVE_DROP: // drop on chip pool;
-            dropObject(m.source, m.to_col, m.to_row);
+            dropObject(m);
             //setNextStateAfterDrop();
 
             break;
@@ -664,7 +681,7 @@ void doSwap()
 
        case MOVE_RESIGN:
             next_rp = !resign_planned;
-            // and be like reset
+           // fall through and be like reset
        case MOVE_RESET:
         	switch(board_state)
         	{
@@ -679,6 +696,7 @@ void doSwap()
         		unDropObject();
         		unPickObject();
         		setBoardState(((whoseTurn==1)&&(chips_on_board==1)) ? PLAY_OR_SWAP_STATE : PLAY_STATE);
+        		break;
         	case GAMEOVER_STATE:
         		break;
         	}
@@ -707,6 +725,7 @@ void doSwap()
         {
         default:
             G.Error("Not expecting state " + board_state);
+            return(false);	// not used
         case CONFIRM_STATE:
         case PLAY_OR_SWAP_STATE:
         case FIRST_PLAY_STATE:
@@ -737,7 +756,7 @@ void doSwap()
 			return(isDest(c) || (c.chip==null));
         default:
             G.Error("Not expecting state " + board_state);
-
+            return(true);	// not used
         case PUZZLE_STATE:
             return (true);
         }
@@ -793,7 +812,7 @@ void doSwap()
         case MOVE_EDIT: // robot never does these
    	    default:
             G.Error("Can't un execute " + m);
-
+            break;
         case MOVE_DONE:
             break;
             

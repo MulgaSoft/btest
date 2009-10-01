@@ -17,6 +17,27 @@ public class hexCell extends chipCell implements HexConstants
 	public hexCell(char c,int r) 		// construct a cell on the board
 	{	super(cell.Hex_Geometry,c,r);
 	};
+	
+	/** sameCell is called at various times as a consistancy check
+	 * 
+	 * @param other
+	 * @return
+	 */
+	public boolean sameCell(hexCell other)
+	{	return(super.sameCell(other)
+				// check the values of any variables that define "sameness"
+				// && (moveClaimed==other.moveClaimed)
+			); 
+	}
+	/** copyFrom is called when cloning boards
+	 * 
+	 */
+	public void copyFrom(cell ot)
+	{	//hexCell other = (hexCell)ot;
+		// copy any variables that need copying
+		super.copyFrom(ot);
+	}
+	
 	// constructor a cell not on the board, with a chip.  Used to construct the pool chips
 	public hexCell(hexChip cont)
 	{	super();
