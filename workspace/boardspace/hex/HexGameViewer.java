@@ -720,7 +720,7 @@ public class HexGameViewer extends commonCanvas
     {
         Hexmovespec newmove = (Hexmovespec) nmove;
         Hexmovespec rval = newmove;			// default returned value
-        int state = bb.getBoardState();
+        int state = bb.board_state;
         int idx = History.size() - 1;
         
        while(idx>=0)
