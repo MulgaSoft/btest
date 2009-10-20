@@ -178,6 +178,7 @@ public class HexGameViewer extends commonCanvas
     }
     
 
+    
 	/**
 	 * 
 	 * this is a debugging hack to give you an event based on clicking in the player name
@@ -713,7 +714,9 @@ public class HexGameViewer extends commonCanvas
  * This may require that move be merged with an existing history move
  * and discarded.  Return null if nothing should be added to the history
  * One should be very cautious about this, only to remove real pairs that
- * result in a null move.
+ * result in a null move.  It is vital that the operations performed on
+ * the history are idential in effect to the manipulations of the board
+ * state performed by "nmove".  This is checked by verifyGameRecord().
  * 
  */
     public commonMove EditHistory(commonMove nmove)
@@ -764,9 +767,12 @@ public class HexGameViewer extends commonCanvas
         		idx = -1;
         		break;
         	case MOVE_RESET:
+        		// reset is a special move that gets you back to the start of the
+        		// current player's turn, effectively unwinding all actions taken
+        		// so far.
         		rval = null;		// reset is never recorded in the history
         		// fall through
-        	case MOVE_RESIGN:		// resign is your whole move
+        	case MOVE_RESIGN:		// resign is your whole move, so acts like reset.
         		switch(m.op)
         		{
         		case MOVE_RESIGN:
@@ -838,7 +844,51 @@ public class HexGameViewer extends commonCanvas
         return (rval);
     }
     
-
+    /** 
+     * this method is called from deep inside PerformAndTransmit, at the point
+     * where the move has been executed and the history has been edited.  It's
+     * purpose is to veryfy that the history accurately represents the current
+     * state of the game, and that the fundamental game machinery is in a consistent
+     * and reproducable state.  Basically, it works by creating a duplicate board
+     * resetting it and feeding the duplicate the entire history, and then verifying 
+     * that the duplcate is the same as the original board.  It's perfectly ok, during
+     * debugging and development, to temporarily change this method into a no-op, but
+     * be warned if you do this because it is throwing an error, there are other problems
+     * that need to be fixed eventually.
+     */
+    public void verifyGameRecord()
+    {	super.verifyGameRecord();
+    }
+ // for reference, here's the standard definition
+ //   public void verifyGameRecord()
+ //   {	BoardProtocol ourB =  getBoard();
+ //   	int ourDig = ourB.Digest();
+ //   	BoardProtocol dup = dupBoard = ourB.cloneBoard();
+ //   	int dupDig = dup.Digest();
+ //   	G.Assert(dupDig==ourDig,"Duplicate Digest Matches");
+ //   	dup.doInit();
+ //   	int step = History.size();
+ //   	int limit = viewStep>=0 ? viewStep : step;
+ //   	for(int i=0;i<limit;i++) 
+ //   		{ commonMove mv = (commonMove)History.elementAt(i);
+ //   		  //G.print(".. "+mv);
+ //   		  dup.Execute(mv); 
+ //   		}
+ //   	int dupRedig = dup.Digest();
+ //   	G.Assert(dup.whoseTurn()==ourB.whoseTurn(),"Replay whose turn matches");
+ //   	G.Assert(dup.moveNumber()==ourB.moveNumber(),"Replay move number matches");
+ //   	if(dupRedig!=ourDig)
+ //   	{
+ //   	//int d0 = ourB.Digest();
+ //   	//int d1 = dup.Digest();
+ //   	G.Assert(false,"Replay digest matches");
+ //   	}
+ //   	// note: can't quite do this because the timing of "SetDrawState" is wrong.  ourB
+ //   	// may be a draw where dup is not if ourB is pending a draw.
+ //   	//G.Assert(dup.getBoardState()==ourB.getBoardState(),"Replay state matches");
+ //   	dupBoard = null;
+ //   }
+    
 /**
  * the preferred mouse gesture style is to let the user "pick up" objects
  * by simply clicking on them, but we also allow him to click and drag. 
