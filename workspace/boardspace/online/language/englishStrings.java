@@ -641,6 +641,21 @@ public class englishStrings extends internationalStrings
         put("Place a GIPF piece on a starting point","Place a GIPF piece on a starting point");
         put("Designate GIPF pieces to capture, or place a GIPF chip","Designate GIPF pieces to capture, or place a GIPF chip");
         put("Designate GIPF pieces to capture, or place a chip","Designate GIPF pieces to capture, or place a chip");
-     
+
+        // Mutton
+        put("Mutton", "Mutton");
+        put("Mutton_variation","Standard Mutton");
+        put("Shoot", "Shoot");
+        put("Pass", "Pass");
+        put("Rage", "RAGE!");
+        put("Hide", "Hide");
+        put("Eat", "Eat");
+        put("Wolves_Hidden", "Wolves Hidden");
+        put("Wolf player hiding", "Wolf player must choose 4 sheep to be wolves.");
+        put("Wolf player eating", "Wolf player must choose a sheep to eat.");
+        put("Wolf moving suspects", "Wolf player must move all suspect sheep away from the carcass.");
+        put("Farmer select", "Farmer can select a sheep to shoot, or pass.");
+        put("Farmer moving scared", "Farmer must move all suspect sheep away from the shooting victim.");
+        put("Mutton Goal", "Farmer must shoot all 4 wolves.");
      }
 }
