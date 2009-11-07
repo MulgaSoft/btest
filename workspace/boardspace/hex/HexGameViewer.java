@@ -101,8 +101,8 @@ public class HexGameViewer extends commonCanvas
     private Color vcrButtonColor = new Color(0.7f, 0.7f, 0.75f);
 
     // images, shared among all instances of the class so loaded only once
-    private static Image[] tileImages = null; // tile images
-    private static Image[] borders = null;// border tweaks for the images
+    private static StockArt[] tileImages = null; // tile images
+    private static StockArt[] borders = null;// border tweaks for the images
     private static Image[] textures = null;// background textures
     
     // private state
@@ -141,9 +141,9 @@ public class HexGameViewer extends commonCanvas
     		// images and textures are static variables, so they're shared by
     		// the entire class and only get loaded once.  Special synchronization
     		// tricks are used to make sure.
-    	  tileImages = load_masked_images(ImageDir,TileFileNames);
+    	  tileImages = StockArt.preLoadArt(this,ImageDir,TileFileNames,TILESCALES);
           textures = load_images(ImageDir,TextureNames);
-          borders = load_masked_images(ImageDir,BorderFileNames);
+          borders = StockArt.preLoadArt(this,ImageDir,BorderFileNames,BORDERSCALES);
     	}
     }
 
@@ -420,7 +420,7 @@ public class HexGameViewer extends commonCanvas
     {
     	// draw an object being dragged
     	// use the board cell size rather than the window cell size
-    	hexChip.getChip(obj).drawChip(g,this,CELLSIZE, xp, yp, null);
+    	hexChip.getChip(obj).drawChip(g,this,(int)bb.CELLSIZE, xp, yp, null);
     }
     // also related to sprites,
     // default position to display static sprites, typically the "moving object" in replay mode
@@ -473,11 +473,16 @@ public class HexGameViewer extends commonCanvas
               int xpos = brect.x + gb.cellToX(thiscol, thisrow);
               int hidx = lastRotation?HEXTILE_INDEX:HEXTILE_NR_INDEX;
               int bindex = lastRotation ? HEXTILE_BORDER_INDEX : HEXTILE_BORDER_NR_INDEX;
-              double scale[] = TILESCALES[hidx];
-              adjustScales(scale,null);		// adjust the tile size/position.  This is used only in development
-              // to fine tune the board rendering.
-              drawImage(gc,tileImages[hidx],scale,xpos,ypos,gb.CELLSIZE,lastRotation?0.80:0.86,0.0);
-              
+              int xsize = (int)gb.CELLSIZE;//((lastRotation?0.80:0.8)*);
+             // double scale[] = TILESCALES[hidx];
+             //adjustScales(scale,null);		// adjust the tile size/position.  This is used only in development
+             // to fine tune the board rendering.
+             //G.print("cell "+CELLSIZE+" "+xsize);
+              tileImages[hidx].drawChip(gc,this,xsize,xpos,ypos,null);
+              //equivalent lower level draw image
+              // drawImage(gc,tileImages[hidx].image,tileImages[hidx].getScale(), xpos,ypos,gb.CELLSIZE,1.0);
+              //
+               
               // decorate the borders with darker and lighter colors.  The border status
               // of cells is precomputed, so each cell has a mask of which borders it needs.
               // in order to make the artwork as simple as possible to maintain, the border
@@ -489,8 +494,7 @@ public class HexGameViewer extends commonCanvas
               for(int dir=0; dir<4;dir++)
               {	// precalculated border cell properties
             	  if((c.borders&(1<<dir))!=0)
-            	  {
-            		  drawImage(gc,borders[bindex+dir],scale,xpos,ypos,gb.CELLSIZE,lastRotation?0.80:0.86,0.0);
+            	  {	  borders[bindex+dir].drawChip(gc,this,xsize,xpos,ypos,null);
             	  }
               }}
           }
@@ -544,13 +548,12 @@ public class HexGameViewer extends commonCanvas
   
              if (drawhighlight)
              { // checking for pointable position
-                drawImage(gc, tileImages[SELECTION_INDEX],TILESCALES[SELECTION_INDEX], xpos, ypos, CELLSIZE, 1.0,0.0);
-                
+            	 StockArt.SmallO.drawChip(gc,this,(int)(gb.CELLSIZE*5),xpos,ypos,null);                
              }
 
              if (chip!=null)
              {
-              chip.drawChip(gc,this,CELLSIZE,xpos,ypos,null); 
+              chip.drawChip(gc,this,(int)(gb.CELLSIZE),xpos,ypos,null); 
               }
             }}
         }
@@ -615,7 +618,7 @@ public class HexGameViewer extends commonCanvas
 		{ // make the "swap" button appear if we're in the correct state
 			if(G.handleRoundButton(gc, swapRect, buttonSelect, s.get("Swap Colors"),
                 HighlightColor, rackBackGroundColor))
-			{ buttonSelect.hitCode = SwapButton;
+			{ buttonSelect.hitCode = HitSwapButton;
 			}
 		}
 
@@ -763,7 +766,24 @@ public class HexGameViewer extends commonCanvas
         		if((state!=PUZZLE_STATE) && (m.op==MOVE_DROPB))
         			{ UndoHistoryElement(idx); idx=-1; }
            	case MOVE_DROP:
+           		if((idx>1) && (m.op==MOVE_PICKB) && (state!=PUZZLE_STATE))
+           		{
+           			Hexmovespec m2 = (Hexmovespec) History.elementAt(idx-1);
+           			if((m2.op==MOVE_DROPB)
+           				&& (m2.to_row==m.to_row)
+           				&& (m2.to_col==m.to_col))
+           				{
+           				UndoHistoryElement(idx);
+           				UndoHistoryElement(idx-1);
+           				rval = null;
+           				idx = -1;
+           				}
+           				
+           		}
+           		else if(m.op!=MOVE_PICKB)
+           		{
         		rval = null;		// picks don't appear in the history.  This is probably peculiar to hex
+           		}
         		idx = -1;
         		break;
         	case MOVE_RESET:
@@ -776,12 +796,10 @@ public class HexGameViewer extends commonCanvas
         		switch(m.op)
         		{
         		case MOVE_RESIGN:
-        			if(newmove.op==MOVE_RESIGN)
-        				{rval = null;		// two resigns toggle
-        				UndoHistoryElement(idx);
-        				idx = -1;
-        				break;
-        				}
+        			rval = null;		// two resigns toggle
+        			UndoHistoryElement(idx);
+        			idx = -1;
+        			break;
                 default:
              		if(state==PUZZLE_STATE) { idx = -1; break; }
                 case MOVE_PICKB:

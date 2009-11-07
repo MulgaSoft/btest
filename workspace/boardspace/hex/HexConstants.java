@@ -11,10 +11,6 @@ public interface HexConstants extends OnlineConstants
     static final int White_Chip_Pool = 101;
     static final int BoardLocation = 102;
     static final int EmptyBoard = 103;
-	// other things you can point at.  Negative numbers are fixed objects such as buttons
-    // positive numbers are movable objects you pick up and drag.  There are also some
-    // shared object such as HitNoWhere
-	static final int SwapButton = -8;			// swap colors button
 
     // init strings for variations of the game.
     static final String Hex_INIT = "hex"; //init for standard game
@@ -26,11 +22,28 @@ public interface HexConstants extends OnlineConstants
        calculating adjacency and connectivity. */
     static int[] ZfirstInCol = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 }; // these are indexes into the first ball in a column, ie B1 has index 2
     static int[] ZnInCol = { 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11 }; // depth of columns, ie A has 4, B 5 etc.
+    //
+    // rhombix hex board 15 per side
     static int[] ZfirstInCol15 = { 14,13,12,11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 }; // these are indexes into the first ball in a column, ie B1 has index 2
     static int[] ZnInCol15 = { 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15 }; // depth of columns, ie A has 4, B 5 etc.
+    // rhombix hex board, 19 per side
     static int[] ZfirstInCol19 = { 18, 17, 16, 15, 14,13,12,11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 }; // these are indexes into the first ball in a column, ie B1 has index 2
     static int[] ZnInCol19 =     { 19,19,19,19,19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19 }; // depth of columns, ie A has 4, B 5 etc.
+//
+// this would be a standard six sided 5-per-side hex board
+//    static int[] ZfirstInCol = { 4, 3, 2, 1, 0, 1, 2, 3, 4 };
+//    static int[] ZnInCol =     {5, 6, 7, 8, 9, 8, 7, 6, 5 }; // depth of columns, ie A has 4, B 5 etc.
+//
+// this would be a standard six sided 4-per-side hex board
+//    static int[] ZfirstInCol = { 3, 2, 1, 0, 1, 2, 3 }; // these are indexes into the first ball in a column, ie B1 has index 2
+//    static int[] ZnInCol = { 4, 5, 6, 7, 6, 5, 4 }; // depth of columns, ie A has 4, B 5 etc.
+//
+// this would be a standard yinsh board, 5-per side with the corners missing
+//    static int[] ZfirstInCol = { 6, 3, 2, 1, 0, 1, 0, 1, 2, 3, 6 }; // these are indexes into the first ball in a column, ie B1 has index 2
+//    static int[] ZnInCol = { 4, 7, 8, 9, 10, 9, 10, 9, 8, 7, 4 }; // depth of columns, ie A has 4, B 5 etc.
+//    static int[] ZfirstCol = { 1, 0, 0, 0, 0, 1, 1, 2, 3, 4, 6 }; // number of the first visible column in this row, 
 
+    
     /* states of the board/game.  Because several gestures are needed to complete a move, and
     there are several types of move, we use a state machine to determine what is legal */
     //static final int PUZZLE_STATE = 0; // no game, just plopping balls and removing rings at will.
@@ -61,7 +74,7 @@ public interface HexConstants extends OnlineConstants
     static final int MOVE_DROP = 205; // drop a chip
     static final int MOVE_PICKB = 206; // pick from the board
     static final int MOVE_DROPB = 207; // drop on the board
- 	static final int MOVE_SWAP = SwapButton;	// swap colors (as a move) share the code for the parser's concenience
+ 	static final int MOVE_SWAP = HitSwapButton;	// swap colors (as a move) share the code for the parser's concenience
 	
     static final String Hex_SGF = "11"; // sgf game number allocated for hex
     static final String[] HEXGRIDSTYLE = { "1", null, "A" }; // left and bottom numbers
@@ -69,9 +82,8 @@ public interface HexConstants extends OnlineConstants
  
     // file names for jpeg images and masks
     static final String ImageDir = "hex/images/";
-    static final int SELECTION_INDEX = 0;
-    static final int HEXTILE_INDEX = 1;
-    static final int HEXTILE_NR_INDEX = 2;
+    static final int HEXTILE_INDEX = 0;
+    static final int HEXTILE_NR_INDEX = 1;
     //
     // basic image strategy is to use jpg format because it is compact.
     // .. but since jpg doesn't support transparency, we have to create
@@ -79,8 +91,7 @@ public interface HexConstants extends OnlineConstants
     // the masks are used to give images soft edges and shadows
     //
     static final String[] TileFileNames = 
-        {   "selection",
-            "hextile",
+        {   "hextile",
             "hextile-nr"
         };
     // the artwork for these is derived directly from the tile artwork, so 
@@ -100,7 +111,18 @@ public interface HexConstants extends OnlineConstants
        	"border-e"
 
     };
+    static final double BORDERSCALES[][] = 
+    {	{0.50,0.50,1.76},
+    	{0.50,0.50,1.76},
+    	{0.50,0.50,1.76},
+    	{0.50,0.50,1.76},
+    	
+    	{0.50,0.50,1.76},
+    	{0.50,0.50,1.76},
+    	{0.50,0.50,1.76},
+    	{0.50,0.50,1.76}
     
+    };
     //to keep the artwork aquisition problem as simple as possible, images
     //are recentered and scaled on the fly before presentation.  These arrays
     //are X,Y,SCALE factors to standardize the size and center of the images
@@ -112,9 +134,8 @@ public interface HexConstants extends OnlineConstants
     //
     //ad hoc scale factors to fit the stones to the board
     static final double[][] TILESCALES=
-    {   {0.65,0.50,2.1},	// selection
-    	{0.50,0.55,2.1},	// hex tile and border artworks
-    	{0.50,0.50,1.9}};	// unrotated hex tile and border artwork
+    {   {0.50,0.50,1.76},	// hex tile and border artworks
+    	{0.50,0.50,1.6}};	// unrotated hex tile and border artwork
 
     
     static final int BACKGROUND_TILE_INDEX = 0;

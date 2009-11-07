@@ -20,8 +20,8 @@ public class hexChip extends chip
 	public int chipNumber() { return(index); }
 	
     static final double[][] SCALES=
-    {   {0.65,0.48,2.66},	// white stone
-    	{0.64,0.48,2.48}		// black stone
+    {   {0.691,0.450,2.3},	// white stone
+    	{0.66,0.458,2.099}		// black stone
     };
     //
     // basic image strategy is to use jpg format because it is compact.
