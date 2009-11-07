@@ -656,6 +656,7 @@ public class englishStrings extends internationalStrings
         put("Wolf moving suspects", "Wolf player must move all suspect sheep away from the carcass.");
         put("Farmer select", "Farmer can select a sheep to shoot, or pass.");
         put("Farmer moving scared", "Farmer must move all suspect sheep away from the shooting victim.");
+        put("Wolf no valid meals", "Wolf player has no valid meals; Must pass.");
         put("Mutton Goal", "Farmer must shoot all 4 wolves.");
      }
 }
