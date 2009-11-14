@@ -644,12 +644,13 @@ public class englishStrings extends internationalStrings
 
         // Mutton
         put("Mutton", "Mutton");
-        put("Mutton_variation","Standard Mutton");
+        put("Mutton_variation", "Standard Mutton");
         put("Shoot", "Shoot");
         put("Pass", "Pass");
         put("Rage", "RAGE!");
         put("Hide", "Hide");
         put("Eat", "Eat");
+        put("Play Farmer", "Play Farmer");
         put("Wolves_Hidden", "Wolves Hidden");
         put("Wolf player hiding", "Wolf player must choose 4 sheep to be wolves.");
         put("Wolf player eating", "Wolf player must choose a sheep to eat.");
@@ -657,6 +658,7 @@ public class englishStrings extends internationalStrings
         put("Farmer select", "Farmer can select a sheep to shoot, or pass.");
         put("Farmer moving scared", "Farmer must move all suspect sheep away from the shooting victim.");
         put("Wolf no valid meals", "Wolf player has no valid meals; Must pass.");
+        put("Farmer configuring board", "Farmer can set up board and set winning condition.");
         put("Mutton Goal", "Farmer must shoot all 4 wolves.");
      }
 }
