@@ -3,8 +3,8 @@
 	<section name="ChooseWorkspaceDialogSettings">
 		<item value="456" key="DIALOG_WIDTH"/>
 		<item value="229" key="DIALOG_Y_ORIGIN"/>
-		<item value="351" key="DIALOG_X_ORIGIN"/>
 		<item value="244" key="DIALOG_HEIGHT"/>
+		<item value="351" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Tahoma|8|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="WORKBENCH_SETTINGS">
@@ -13,17 +13,17 @@
 	</section>
 	<section name="org.eclipse.ui.views.problem">
 	</section>
-	<section name="CleanDialogSettings">
-		<item value="443" key="DIALOG_WIDTH"/>
-		<item value="262" key="DIALOG_Y_ORIGIN"/>
-		<item value="371" key="DIALOG_X_ORIGIN"/>
-		<item value="369" key="DIALOG_HEIGHT"/>
-		<item value="false" key="TOGGLE_SELECTED"/>
-	</section>
 	<section name="NewWizardAction">
 		<item value="org.eclipse.jdt.ui.wizards.JavaProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.jdt.ui.java"/>
 		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item value="443" key="DIALOG_WIDTH"/>
+		<item value="262" key="DIALOG_Y_ORIGIN"/>
+		<item value="369" key="DIALOG_HEIGHT"/>
+		<item value="371" key="DIALOG_X_ORIGIN"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
 	</section>
 </section>

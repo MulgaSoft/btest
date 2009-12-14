@@ -2,8 +2,16 @@
 <classpath>
 	<classpathentry kind="src" path=""/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="Game.jar"/>
-	<classpathentry kind="lib" path="OnlineLobby.jar"/>
+	<classpathentry kind="lib" path="Game.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/G:/share/projects/workspace-master/doc/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="OnlineLobby.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/G:/share/projects/workspace-master/doc/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="Sounds.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>

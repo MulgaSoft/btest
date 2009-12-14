@@ -66,7 +66,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
     private hexCell droppedDest = null;
     public Object lastDroppedObject = null;	// for image adjustment logic
 
-    
+    public Vector blobs;
 	
 	// factory method to generate a board cell
 	public cell newcell(char c,int r)
@@ -114,6 +114,8 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
     	if(Hex_INIT.equals(game)) { firstcol = ZfirstInCol; ncol = ZnInCol; }
     	else if(Hex_15_INIT.equals(game)) { firstcol = ZfirstInCol15; ncol = ZnInCol15; }
     	else if(Hex_19_INIT.equals(game)) { firstcol = ZfirstInCol19; ncol = ZnInCol19; }
+    	else if(Hex_5_INIT.equals(game)) { firstcol = ZfirstInCol5; ncol = ZnInCol5; }
+    	else if(Hex_9_INIT.equals(game)) { firstcol = ZfirstInCol9; ncol = ZnInCol9; }
     	else { G.Error("No init named "+game); }
         gametype = game;
         setBoardState(PUZZLE_STATE);
@@ -317,60 +319,51 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
     // than it needs to be for scoring purposes, but it is also used by the robot
     //
     private void expandHexBlob(hexblob blob,hexCell cell)
-    {	if(cell==null) {}
-    	else if((cell.sweep_counter!=sweep_counter))
+    {
+    	if(cell==null) {}
+    	else if ((cell.chip==blob.color) && (cell.sweep_counter!=sweep_counter))
     	{
-    	cell.sweep_counter = sweep_counter;
-    	cell.blob = blob;
-    	
-     	
-    	if(cell.chip==blob.color)
-    	  {
+    		cell.sweep_counter = sweep_counter;
+    		cell.blob = blob;
     	   	blob.addCell(cell);
     	   	for(int dir = 0; dir<6; dir++)
     		{	expandHexBlob(blob,(hexCell)cell.exitToward(dir));
     		}
-    	  }
     	}
-    	else if(cell.chip==null)
-    	{	// cell was previously encountered on this sweep
-    		hexblob other = cell.blob;
-    		if((other!=blob)&&(other.color==blob.color))
-    		{	// a connection
-    			other.addConnection(blob,cell);
-    			blob.addConnection(other,cell);
-    		}
-    	}
+//    	else if(cell.chip==null)
+//    	{	// cell was previously encountered on this sweep
+//    		hexblob other = cell.blob;
+//    		if((other!=blob)&&(other.color==blob.color))
+//    		{	// a connection
+//    			other.addConnection(blob,cell);
+//    			blob.addConnection(other,cell);
+//    		}
+//    	}
     }
     
-    Vector findBlobs(int forplayer,Vector all)
-    {	sweep_counter++;
-    	hexChip pch = playerChip[forplayer];
+    public void findBlobs()
+    {
+    	blobs = new Vector();
+    	sweep_counter++;
     	for(hexCell cell = (hexCell)allCells;  cell!=null; cell=(hexCell)cell.next)
-    	{	if((cell.sweep_counter!=sweep_counter) && (cell.chip==pch))
+    	{
+    		if ((cell.sweep_counter!=sweep_counter) && (cell.chip!=null))
     		{
-    		hexblob blob = new hexblob(pch);
-    		all.addElement(blob);
-    		expandHexBlob(blob,cell);
+	    		hexblob blob = new hexblob((hexChip)cell.chip);
+	    		blobs.addElement(blob);
+	    		expandHexBlob(blob,cell);
      		}
     	}
-       	return(all);
     }
 
     public boolean WinForPlayerNow(int player)
     {	if(win[player]) { return(true); }
-    	Vector blobs = new Vector();
-    	return(WinForPlayerNow(player,blobs));
-     }
-    // this method is also called by the robot to get the blobs as a side effect
-    public boolean WinForPlayerNow(int player,Vector blobs)
-    {
-     	findBlobs(player,blobs);
-    	return(someBlobWins(blobs,player));
+     	findBlobs();
+    	return(someBlobWins(player));
    	
     }
 
-    public boolean someBlobWins(Vector blobs,int player)
+    public boolean someBlobWins(int player)
     {	// if the span of any blobs is the whole board, we have a winner
     	// in Hex, there is only one winner.
     	for(int i=0;i<blobs.size(); i++)

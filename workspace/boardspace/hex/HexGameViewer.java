@@ -1283,10 +1283,7 @@ public class HexGameViewer extends commonCanvas
     /** factory method to create a robot */
     public SimpleRobotProtocol newRobotPlayer() 
     {  int level = sharedInfo.getInt(exHashtable.ROBOTLEVEL,0);
-       switch(level)
-       { default: G.Error("not defined");
-       	 case 0:	return(new HexPlay());
-       }
+       return(new HexPlay(level));
     }
 
     /** replay a move specified in SGF format.  

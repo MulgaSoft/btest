@@ -7,10 +7,13 @@ import online.game.*;
 // games commonly add a more complex structue.   Games with square geometry
 // instead of hex can use Oct_Geometry instead of Hex_Geometry
 //
-public class hexCell extends chipCell implements HexConstants
+public class hexCell extends chipCell implements HexConstants, Comparable
 {	hexblob blob;			// the blob which contains this cell
 	hexCell nextInBlob;		// a link to the next cell in this blob
 	int sweep_counter;		// the sweep counter for which blob is accurate
+	// See "two-distance", as per Queen-bee / "Search and evaluation in Hex" by Jack van Rijswijck
+	int links;   		    // number of ways we have reached the cell so far
+	int two_dist;   		// distance calculated through 2nd-best neighbour
 	int borders = -1;		// bitmask of possible borders
 
 	public hexCell() { super(); }		// construct a cell not on the board
@@ -47,4 +50,10 @@ public class hexCell extends chipCell implements HexConstants
 	// return the top (actually, only) chip. Cast to the correct type
 	// here so no one else needs to.
 	public hexChip topChip() { return((hexChip)chip); }
+	
+	public int compareTo(Object arg0)
+	{
+		hexCell Other = (hexCell)arg0;
+		return two_dist - Other.two_dist;
+	}
 }
