@@ -40,16 +40,11 @@
 <part id="5"/>
 <part id="6"/>
 <part id="7"/>
-<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MuttonPlayRandomBot.java" partName="MuttonPlayRandomBot.java" path="G:/share/projects/workspace-master/boardspace/mutton/MuttonPlayRandomBot.java" title="MuttonPlayRandomBot.java" tooltip="boardspace/mutton/MuttonPlayRandomBot.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/mutton/MuttonPlayRandomBot.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9979" selectionTopPixel="4488"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HexGameViewer.java" partName="HexGameViewer.java" path="G:/share/projects/workspace-master/boardspace/hex/HexGameViewer.java" title="HexGameViewer.java" tooltip="boardspace/hex/HexGameViewer.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HexGameViewer.java" partName="HexGameViewer.java" path="G:/share/projects/workspace-master/boardspace/hex/HexGameViewer.java" title="HexGameViewer.java" tooltip="boardspace/hex/HexGameViewer.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/hex/HexGameViewer.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
@@ -418,6 +413,7 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonMoveSpec.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonGameBoard.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonPlayRandomBot.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/hex/HexGameViewer.java"/>
 </editors>
 <item historyLabel="MuttonPlayRandomBot.java" index="0">
 <position info="not_deleted" x="9109" y="0"/>
@@ -557,7 +553,10 @@
 <item historyLabel="MuttonPlayRandomBot.java" index="15">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="MuttonPlayRandomBot.java" index="15">
+<item historyLabel="MuttonPlayRandomBot.java" index="15">
+<position info="not_deleted" x="9979" y="0"/>
+</item>
+<item active="true" historyLabel="HexGameViewer.java" index="16">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
