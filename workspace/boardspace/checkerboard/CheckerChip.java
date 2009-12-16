@@ -46,8 +46,8 @@ public class CheckerChip extends chip
     static private double SCALES[][] =
     {	{0.5,0.5,0.98},		// light square
     	{0.5,0.5,0.98},		// dark square
-    	{0.472,0.492,1.38},	// white chip
-    	{0.472,0.492,1.38},	// dark chip
+    	{0.527,0.430,1.38},	// white chip
+    	{0.500,0.402,1.38},	// dark chip
     };
      
  

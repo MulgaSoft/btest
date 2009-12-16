@@ -72,8 +72,17 @@ public class CheckerGameViewer extends commonCanvas
 	 * info contains all the goodies from the environment.
 	 * */
     public void init(exHashtable info)
-    {
-        super.init(info);
+    {	// for games with more than two players, the default players list should be 
+    	// adjusted to the actual number, adjusted by the min and max
+       	// int players_in_game = Math.max(3,info.getInt(exHashtable.PLAYERS_IN_GAME,4));
+    	// players = new commonPlayer[players_in_game];
+       	// 
+    	// for games that require some random initialization, the random key should be
+    	// captured at this point and passed to the the board init too.
+        // randomKey = info.getInt(exHashtable.RANDOMSEED,-1);
+    	//
+
+    	super.init(info);
 
         lockAndLoadImages(theRoot);
         
@@ -285,7 +294,7 @@ public class CheckerGameViewer extends commonCanvas
     		highlight.dragging = lifted = highlight.down;
     	}
 		if(gc!=null) 
-		{ G.centerImage(gc,textures[LIFT_ICON_INDEX],liftRect.x,liftRect.y,liftRect.width,liftRect.height,this); 
+		{ G.centerImage(gc,textures[LIFT_ICON_INDEX],liftRect,this); 
 		  G.frameRect(gc,hit?HighlightColor:Color.black,liftRect);
 		}
     }
@@ -345,18 +354,15 @@ public class CheckerGameViewer extends commonCanvas
       // erase
       gc.setColor(reviewMode() ? reviewModeBackground : boardBackgroundColor);
       //G.fillRect(gc, fullRect);
-      G.tileImage(gc,textures[BACKGROUND_TILE_INDEX], 
-    		  fullRect.x,fullRect.y, fullRect.width,fullRect.height, this);   
+      G.tileImage(gc,textures[BACKGROUND_TILE_INDEX], fullRect, this);   
       if(reviewMode())
       {	 
-        G.tileImage(gc,textures[BACKGROUND_REVIEW_INDEX],
-        		boardRect.x,boardRect.y, boardRect.width,boardRect.height, this);   
+        G.tileImage(gc,textures[BACKGROUND_REVIEW_INDEX],boardRect, this);   
       }
        
       // if the board is one large graphic, for which the visual target points
       // are carefully matched with the abstract grid
-      //G.centerImage(gc,images[BOARD_INDEX], 
-      //	  brect.x,brect.y,brect.width,brect.height,this);
+      //G.centerImage(gc,images[BOARD_INDEX], brect,this);
 
       gb.DrawGrid(gc,brect,use_grid,Color.white,Color.black,Color.blue,Color.black);
     }
@@ -396,36 +402,16 @@ public class CheckerGameViewer extends commonCanvas
             CheckerCell cell = gb.getCell(thiscol,row);
             int ypos = (brect.y + brect.height) - gb.cellToY(thiscol, row);
             int xpos = brect.x + gb.cellToX(thiscol, row);
-            int topindex = cell.chipIndex;
+            if( cell.drawStack(gc,highlight,xpos,ypos,this,liftSteps,SQUARESIZE,0.1,null)) { hitCell = cell; }
 
-            for(int cindex =0; cindex<=topindex; cindex++)    
-            {
-             int liftYval = (Math.max(0,(cindex-1))*SQUARESIZE)/10
-         		+(dolift?((liftSteps*SQUARESIZE)/(2*liftdiv))*cindex : 0);
-             int liftXval =  (Math.max(0,(cindex-1))*SQUARESIZE)/40
-             	+(((cindex%5)==0)?SQUARESIZE/12:0);
-             int e_x = xpos + liftXval;
-             int e_y = ypos - liftYval;
-             CheckerChip cup = cell.chipAtIndex(cindex);
-             
-             if(cup!=null)
-                {	cup.drawChip(gc,this,SQUARESIZE,e_x,e_y,null);
-                }
-              if((highlight!=null)
-              		&& G.PointInside(highlight, e_x, e_y-perspective_offset, CELLSIZE)
-                    && gb.LegalToHitBoard(cell))
-              { hitCell = cell; 
-                hitX = e_x;
-                hitY = e_y;
-             }}}
-             }
-        
+        	}
+    	}
   
         if(hitCell!=null)
         {	// draw a highlight rectangle here, but defer drawing an arrow until later, after the moving chip is drawn
-        	highlight.hitObject = hitCell;
-        	highlight.hitCode = BoardLocation;
-      		highlight.arrow =(getMovingObject()>=0) ? StockArt.DownArrow : StockArt.UpArrow;
+      		highlight.arrow =(getMovingObject()>=0) 
+      			? StockArt.DownArrow 
+      			: hitCell.height()>1?StockArt.UpArrow:null;
       		highlight.awidth = SQUARESIZE/2;
         	G.frameRect(gc,Color.red,hitX-CELLSIZE,hitY-CELLSIZE-((hitCell.topChip()==null)?0:perspective_offset),CELLSIZE*2,CELLSIZE*2);
         }
@@ -550,6 +536,8 @@ public class CheckerGameViewer extends commonCanvas
  * result in a null move. It is vital that the operations performed on
  * the history are idential in effect to the manipulations of the board
  * state performed by "nmove".  This is checked by verifyGameRecord().
+ * Multiple occurrences of "resign" "start" and "edit" are handled separately
+ * in commonEditHistory()
  * 
  */
     public commonMove EditHistory(commonMove nmove)
@@ -574,13 +562,7 @@ public class CheckerGameViewer extends commonCanvas
                 	// resign unwind any preliminary motions
                 	switch(m.op)
                 	{
-                	case MOVE_RESIGN:
-                 		// two resigns cancel each other
-                   		rval = null;
-                   	 	UndoHistoryElement(idx);
-                		idx = -1;
-                		break;
-                 	default:	
+                  	default:	
                  		if(state==PUZZLE_STATE) { idx = -1; break; }
                  	case MOVE_PICK:
                  	case MOVE_PICKB:
@@ -594,13 +576,8 @@ public class CheckerGameViewer extends commonCanvas
                 	}
                 	break;
                 	
-             	case MOVE_EDIT:
-            	case MOVE_START:
-            		if((m.op==MOVE_START)||(m.op==MOVE_EDIT)) 
-            			{ UndoHistoryElement(idx);	// start or edit, only need the last one
-              			}
-            	case MOVE_DONE:
-            	default:
+             case MOVE_DONE:
+             default:
             		idx = -1;
             		break;
                case MOVE_DROPB:
@@ -889,7 +866,13 @@ private void playSounds(commonMove mm)
             displayClipped(g,fullRect,chatRect,offScreen);
         	}
     }
-
+    /**
+     * this is a token or tokens that initialize the variation and
+     * set immutable parameters such as the number of players
+     * and the random key for the game.  It can be more than one
+     * token, which ought to be parseable by {@link performHistoryInitialization}
+     * @return return what will be the init type for the game
+     */
     public String gameType() 
     { 
    	   // in games which have a randomized start, this method would return
@@ -933,7 +916,10 @@ private void playSounds(commonMove mm)
 
     
     
-    // interact with the board to initialize a game
+    /**
+     * parse and perform the initialization sequence for the game, which
+     * was produced by {@link gameType}
+     */
     public void performHistoryInitialization(StringTokenizer his)
     {	String token = his.nextToken();		// should be a checker init spec
 	   	//
