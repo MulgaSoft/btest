@@ -46,7 +46,6 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
     {
         parse(ss, p);
     }
-
     public boolean Same_Move_P(commonMove oth)
     {
     	CheckerMovespec other = (CheckerMovespec) oth;

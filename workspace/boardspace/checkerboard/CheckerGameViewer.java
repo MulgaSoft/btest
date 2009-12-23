@@ -83,8 +83,6 @@ public class CheckerGameViewer extends commonCanvas
     	//
 
     	super.init(info);
-
-        lockAndLoadImages(theRoot);
         
         b = new CheckerBoard(info.getString(exHashtable.GAMETYPE, Checker_INIT));
         doInit(false);

@@ -174,7 +174,14 @@ public class CheckerPlay extends commonRobot implements Runnable, CheckerConstan
  public void PrepareToMove(int playerIndex)
  {	InitBoardFromGame();
  }
- 
+ /**
+  * breakpoint or otherwise override this method to intercept search events.
+  * This is a low level way of getting control in the middle of a search for
+  * debugging purposes.
+  */
+public void Search_Break(String msg)
+{	super.Search_Break(msg);
+}
  public commonMove DoFullMove()
     {
 	 CheckerMovespec move = null;

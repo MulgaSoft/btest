@@ -36,39 +36,37 @@ import online.game.sgf.sgf_property;
 
 /**
  * 
- * Change History
- *
  * This is intended to be maintained as the reference example how to interface to boardspace.
- *
+ * <p>
  * The overall structure here is a collection of classes specific to Hex, which extend
  * or use supporting online.game.* classes shared with the rest of the site.  The top level 
  * class is a Canvas which implements ViewerProtocol, which is created by the game manager.  
  * The game manager has very limited communication with this viewer class, but manages
  * all the error handling, communication, scoring, and general chatter necessary to make
  * the game part of the site.
- * 
+ * <p>
  * The main classes are:
- *  HexGameViewer - this class, a canvas for display and mouse handling
- *  HexGameBoard - board representaion and implementation of the game logic
- *  Hexmovespec - representation, parsing and printing of move specifiers
- *  HexPlay - a robot to play the game
- *  HexConstants - static constants shared by all of the above.  
- *  
+ * <br>HexGameViewer - this class, a canvas for display and mouse handling
+ * <br>HexGameBoard - board representaion and implementation of the game logic
+ * <br>Hexmovespec - representation, parsing and printing of move specifiers
+ * <br>HexPlay - a robot to play the game
+ * <br>HexConstants - static constants shared by all of the above.  
+ *  <p>
  *  The primary purpose of the HexGameViewer class is to do the actual
  *  drawing and to mediate the mouse gestures.  All the actual work is 
  *  done in an event loop, rather than in direct reposonse to mouse or
  *  window events, so there is only one process involved.  With a single 
  *  process, there are no worries about synchronization among processes
  *  of lack of synchronization - both major causes of flakey user interfaces.
- *  
+ *  <p>
  *  The actual mouse handling is done by the commonCanvas class, which simply 
  *  records the recent mouse activity, and triggers "MouseMotion" to be called
  *  while the main loop is executing.
- *  
+ *  <p>
  *  Similarly, the actual "update" and "paint" methods for the canvas are handled
  *  by commonCanvas, which merely notes that a paint is needed and returns immediately.
  *  paintCanvas is called in the event loop.
- *  
+ *  <p>
  *  The drawing methods here combine mouse handling and drawing in a slightly
  *  nonstandard way.  Most of the drawing routines also accept a "HitPoint" object
  *  which contains the coordinates of the mouse.   As objects are drawn, we notice
@@ -78,14 +76,14 @@ import online.game.sgf.sgf_property;
  *  anyway.  This method of combining drawing with mouse sensitivity helps keep the
  *  mouse sensitivity accurate, because it is always in agreement with what is being
  *  drawn.
- *  
+ *  <p>
  *  Steps to clone this hierarchy to start the next game
- *  1) copy the hierarchy to a brother directory
- *  2) open eclipse, then select the root and "refresh".  This should result
- *     in just a few complaints about package mismatches for the clones.
- *  3) fix the package names in the clones
- *  4) rename each of the classes in the clones, using refactor/rename
- *  5) revert the original "Hex" hierarchy in case eclipse got carried away.
+ *  <li> copy the hierarchy to a brother directory
+ *  <li>open eclipse, then select the root and "refresh".  This should result
+ * in just a few complaints about package mismatches for the clones.
+ *  <li>fix the package names in the clones
+ *  <li>rename each of the classes in the clones, using refactor/rename
+ *  <li>revert the original "Hex" hierarchy in case eclipse got carried away.
 */
 public class HexGameViewer extends commonCanvas 
 	implements ViewerProtocol, HexConstants, sgf_names
@@ -131,18 +129,25 @@ public class HexGameViewer extends commonCanvas
     private boolean doRotation=true;					// current state
     private boolean lastRotation=!doRotation;			// user to trigger background redraw
     
-
+/**
+ * this is called during initialization to load all the images. Conventionally,
+ * these are loading into a static variable so they can be shared by all.
+ */
     public void preloadImages()
-    {	hexChip.preloadImages(this,ImageDir);
+    {	hexChip.preloadImages(this,ImageDir);	// load the images used by stones
     	if (tileImages == null)
     	{ 	// note that for this to work correctly, the images and masks must be the same size.  
         	// Refer to http://www.andromeda.com/people/ddyer/java/imagedemo/transparent.html
     		
     		// images and textures are static variables, so they're shared by
     		// the entire class and only get loaded once.  Special synchronization
-    		// tricks are used to make sure.
+    		// tricks are used to make sure this is true.
+    		
+    	  // load the tiles used to construct the board as stock art
     	  tileImages = StockArt.preLoadArt(this,ImageDir,TileFileNames,TILESCALES);
+    	  // load the background textures as simple images
           textures = load_images(ImageDir,TextureNames);
+          // load the black and white borders as stock art.
           borders = StockArt.preLoadArt(this,ImageDir,BorderFileNames,BORDERSCALES);
     	}
     }
@@ -153,12 +158,19 @@ public class HexGameViewer extends commonCanvas
 	 * info contains all the goodies from the environment.
 	 * */
     public void init(exHashtable info)
-    {
+    {	// for games with more than two players, the default players list should be 
+    	// adjusted to the actual number, adjusted by the min and max
+       	// int players_in_game = Math.max(3,info.getInt(exHashtable.PLAYERS_IN_GAME,4));
+    	// players = new commonPlayer[players_in_game];
+    	// 
+    	// for games that require some random initialization, the random key should be
+    	// captured at this point and passed to the the board init too.
+        // randomKey = info.getInt(exHashtable.RANDOMSEED,-1);
+    	//
         super.init(info);
         // use_grid=reviewer;// use this to turn the grid letters off by default
 
-        lockAndLoadImages(theRoot);		// this ends up calling preloadImages
-        
+         
         rotationOption = myFrame.addOption("rotate board",true,deferredEvents);
         
         bb = new HexGameBoard(info.getString(exHashtable.GAMETYPE, Hex_INIT));
@@ -210,12 +222,12 @@ public class HexGameViewer extends commonCanvas
 	 * may vary, and of course you're free to use whatever layout and drawing methods you
 	 * want to.  However, I do strongly encourage making a UI that is resizable within
 	 * reasonable limits, and which has the main "board" object at the left.
-	 * 
+	 * <p>
 	 *  The basic layout technique used here is to start with a cell which is about the size
 	 *  of a board square, and lay out all the other objects relative to the board or to one
 	 *  another.  The rectangles don't all have to be on grid points, and don't have to
 	 *  be nonoverlapping, just so long as the result generally looks good.
-	 *  
+	 *  <p>
 	 *  When "extraactions" is available, a menu opion "show rectangles" works
 	 *  with the "addRect" mechanism to help visualize the layout.
 	 */ 
@@ -376,7 +388,8 @@ public class HexGameViewer extends commonCanvas
 
 
 
-	// draw a box of spare chips. For hex it's purely for effect.
+	// draw a box of spare chips. For hex it's purely for effect, but if you
+    // wish you can pick up and drop chips.
     private void DrawChipPool(Graphics gc, Rectangle r, int player, HitPoint highlight,HexGameBoard gb)
     {
         boolean canhit = gb.LegalToHitChips(player) && G.pointInRect(highlight, r);
@@ -409,13 +422,14 @@ public class HexGameViewer extends commonCanvas
              }
         }
     }
-    //
-    // sprites are normally a game piece that is "in the air" being moved
-    // around.  This is called when dragging your own pieces, and also when
-    // presenting the motion of your opponent's pieces, and also during replay
-    // when a piece is picked up and not yet placed.  While "obj" is nominally
-    // a game piece, it is really whatever is associated with b.movingObject()
-    //
+    /**
+    * sprites are normally a game piece that is "in the air" being moved
+    * around.  This is called when dragging your own pieces, and also when
+    * presenting the motion of your opponent's pieces, and also during replay
+    * when a piece is picked up and not yet placed.  While "obj" is nominally
+    * a game piece, it is really whatever is associated with b.movingObject()
+    
+      */
     public void drawSprite(Graphics g,int obj,int xp,int yp)
     {
     	// draw an object being dragged
@@ -431,7 +445,7 @@ public class HexGameViewer extends commonCanvas
     //}  
 
 
-    /* draw the deep unchangable objects, including those that might be rather expensive
+    /** draw the deep unchangable objects, including those that might be rather expensive
      * to draw.  This background layer is used as a backdrop to the rest of the activity.
      * in our cease, we draw the board and the chips on it. 
      * */
@@ -439,14 +453,16 @@ public class HexGameViewer extends commonCanvas
     { // erase
       gc.setColor(reviewMode() ? reviewModeBackground : boardBackgroundColor);
       //G.fillRect(gc, fullRect);
-      G.tileImage(gc,textures[BACKGROUND_TILE_INDEX], 
-    		  fullRect.x,fullRect.y, fullRect.width,fullRect.height, this);   
+      G.tileImage(gc,textures[BACKGROUND_TILE_INDEX], fullRect, this);   
       if(reviewMode())
       {	 
-        G.tileImage(gc,textures[BACKGROUND_REVIEW_INDEX],
-        		boardRect.x,boardRect.y, boardRect.width,boardRect.height, this);   
+        G.tileImage(gc,textures[BACKGROUND_REVIEW_INDEX],boardRect, this);   
       }
        
+      // if the board is one large graphic, for which the visual target points
+      // are carefully matched with the abstract grid
+      //G.centerImage(gc,images[BOARD_INDEX], brect,this);
+
       // draw a picture of the board. In this version we actually draw just the grid
       // to draw the cells, set gb.Drawing_Style in the board init method.  Create a
       // DrawGridCoord(Graphics gc, Color clt,int xpos, int ypos, int cellsize,String txt)
@@ -502,7 +518,7 @@ public class HexGameViewer extends commonCanvas
  
     }
 
-   /* draw the board and the chips on it. the gc will normally draw on a background
+   /** draw the board and the chips on it. the gc will normally draw on a background
     * array which contains the slowly changing part of the board. 
     * */
     private void drawBoardElements(Graphics gc, HexGameBoard gb, Rectangle brect, HitPoint highlight)
@@ -559,7 +575,7 @@ public class HexGameViewer extends commonCanvas
         }
     }
 
-    /*
+    /**
      * draw the main window and things on it.  
      * If gc!=null then actually draw, 
      * If selectPos is not null, then as you draw (or pretend to draw) notice if
@@ -567,21 +583,21 @@ public class HexGameViewer extends commonCanvas
      * click there to do something.  Care must be taken to consider if a click really
      * ought to be allowed, considering spectator status, use of the scroll controls,
      * if some board token is already actively moving, and if the game is active or over.
-     * 
+     * <p>
      * This dual purpose (draw, and notice mouse sensitive areas) tends to make the
      * code a little complicated, but it is the most reliable way to make sure the
      * mouse logic is in sync with the drawing logic.
-     * 
+     * <p>
     General GUI checklist
-
-    vcr scroll section always tracks, scroll bar drags
-    lift rect always works
-    zoom rect always works
-    drag board always works
-    pieces can be picked or dragged
-    moving pieces always track
-    stray buttons are insensitive when dragging a piece
-    stray buttons and pick/drop are inactive when not on turn
+<p>
+<li>vcr scroll section always tracks, scroll bar drags
+<li>lift rect always works
+<li>zoom rect always works
+<li>drag board always works
+<li>pieces can be picked or dragged
+<li>moving pieces always track
+<li>stray buttons are insensitive when dragging a piece
+<li>stray buttons and pick/drop are inactive when not on turn
 */
     public void redrawBoard(Graphics gc, HitPoint selectPos)
     {  HexGameBoard disb = (HexGameBoard)disB();
@@ -720,6 +736,8 @@ public class HexGameViewer extends commonCanvas
  * result in a null move.  It is vital that the operations performed on
  * the history are idential in effect to the manipulations of the board
  * state performed by "nmove".  This is checked by verifyGameRecord().
+ * Multiple occurrences of "resign" "start" and "edit" are handled separately
+ * in commonEditHistory()
  * 
  */
     public commonMove EditHistory(commonMove nmove)
@@ -742,7 +760,7 @@ public class HexGameViewer extends commonCanvas
             		}
             		idx = -1; 
             	}
-            else {
+             else {
             switch(newmove.op)
         	{
             case MOVE_SWAP:
@@ -752,12 +770,6 @@ public class HexGameViewer extends commonCanvas
             		  }
        		  idx=-1;
               break;
-        	case MOVE_EDIT:
-        	case MOVE_START:
-        		if((m.op==MOVE_START)||(m.op==MOVE_EDIT)) 
-        			{ UndoHistoryElement(idx);	// start or edit, only need the last one
-         			}
-        		idx = -1;
         	case MOVE_DONE:
         	default:
         		idx = -1;
@@ -795,11 +807,6 @@ public class HexGameViewer extends commonCanvas
         	case MOVE_RESIGN:		// resign is your whole move, so acts like reset.
         		switch(m.op)
         		{
-        		case MOVE_RESIGN:
-        			rval = null;		// two resigns toggle
-        			UndoHistoryElement(idx);
-        			idx = -1;
-        			break;
                 default:
              		if(state==PUZZLE_STATE) { idx = -1; break; }
                 case MOVE_PICKB:
@@ -911,6 +918,10 @@ public class HexGameViewer extends commonCanvas
  * the preferred mouse gesture style is to let the user "pick up" objects
  * by simply clicking on them, but we also allow him to click and drag. 
  * StartDragging is called when he has done this.
+ * <p>
+ * None on debugging: If you get here mysteriously with hitOjbect and hitCode
+ * set to default values, instead of the values you expect, you're probably
+ * not setting the values when the gc is null.
  */
     public void StartDragging(HitPoint hp)
     {
@@ -970,6 +981,10 @@ public class HexGameViewer extends commonCanvas
 	 * this is called on "mouse up".  We may have been just clicking
 	 * on something, or we may have just finished a click-drag-release.
 	 * We're guaranteed just one mouse up, no bounces.
+ * <p>
+ * None on debugging: If you get here mysteriously with hitOjbect and hitCode
+ * set to default values, instead of the values you expect, you're probably
+ * not setting the values when the gc is null.
 	 */
     public void StopDragging(HitPoint hp)
     {
@@ -1012,6 +1027,7 @@ public class HexGameViewer extends commonCanvas
 			{
 				default:
 					G.Error("Not expecting hit in state "+state);
+					break;
 				case CONFIRM_STATE:
 				case PLAY_STATE:
 				case PLAY_OR_SWAP_STATE:
@@ -1064,16 +1080,20 @@ public class HexGameViewer extends commonCanvas
      }
     /** this is the place where the canvas is actually repainted.  We get here
      * from the event loop, not from the normal canvas repaint request.
-     * 
+     * <p>
      * if complete is true, we definitely want to start from scratch, otherwise
      * only the known changed elements need to be painted.  Exactly what this means
      * is game specific, but for hex the underlying empty board is cached as a deep
      * background, but the chips are painted fresh every time.
-     * 
+     * <p>
      * this used to be very important to optimize, but with faster machines it's
      * less important now.  The main strategy we employ is to paint EVERYTHING
      * into a background bitmap, then display that bitmap to the real screen
      * in one swell foop at the end.
+     * 
+     * @parm gc the graphics object.  If gc is null, don't actually draw but do check for mouse location anyay
+     * @parm complete if true, always redraw everything
+     * @parm hp the mouse location.  This should be annotated to indicate what the mouse points to.
      */
     public void paintCanvas(Graphics g, boolean complete,HitPoint hp)
     {	HexGameBoard disb = (HexGameBoard)disB();
@@ -1134,13 +1154,21 @@ public class HexGameViewer extends commonCanvas
         	}
     }
     
-    // return what will be the init type for the game
+    /**
+     * this is a token or tokens that initialize the variation and
+     * set immutable parameters such as the number of players
+     * and the random key for the game.  It can be more than one
+     * token, which ought to be parseable by {@link performHistoryInitialization}
+     * @return return what will be the init type for the game
+     */
      public String gameType() 
     	{
     	   // in games which have a randomized start, this method would return
     	   // return(bb.gametype+" "+bb.randomKey); 
     	return(bb.gametype); 
-    	}	// this is the subgame "setup" within the master type.
+    	}	
+     
+    // this is the subgame "setup" within the master type.
     public String sgfGameType() { return(Hex_SGF); }	// this is the official SGF number assigned to the game
 
     // the format is just what is produced by FormHistoryString
@@ -1176,9 +1204,11 @@ public class HexGameViewer extends commonCanvas
     //	
     //}
     
-    
-    // interact with the board to initialize a game
-    public void performHistoryInitialization(StringTokenizer his)
+    /**
+     * parse and perform the initialization sequence for the game, which
+     * was produced by {@link gameType}
+     */
+     public void performHistoryInitialization(StringTokenizer his)
     {   //the initialization sequence
     	String token = his.nextToken();
     	//
@@ -1209,7 +1239,7 @@ public class HexGameViewer extends commonCanvas
     }
 /** handle the run loop, and any special actions we need to take.
  * The mouse handling and canvas painting will be called automatically.
- * 
+ * <p>
  * This is a good place to make notes about threads.  Threads in Java are
  * very dangerous and tend to lead to all kinds of undesirable and/or flakey
  * behavior.  The fundamental problem is that there are three or four sources
@@ -1218,11 +1248,11 @@ public class HexGameViewer extends commonCanvas
  * structures at the same time.   Java "synchronized" declarations are
  * hard to get right, resulting in synchronization locks, or lack of
  * synchronization where it is really needed.
- * 
+ * <p>
  * This toolkit addresses this problem by adopting the "one thread" model,
  * and this is where it is.  Any other threads should do as little as possible,
  * mainly leave breadcrumbs that will be picked up by this thread.
- * 
+ * <p>
  * In particular:
  * GUI events do not respond in the native thread.  Mouse movement and button
  * events are noted for later.  Requests to repaint the canvas are recorded but
@@ -1283,11 +1313,15 @@ public class HexGameViewer extends commonCanvas
     /** factory method to create a robot */
     public SimpleRobotProtocol newRobotPlayer() 
     {  int level = sharedInfo.getInt(exHashtable.ROBOTLEVEL,0);
-       return(new HexPlay(level));
+       switch(level)
+       { default: G.Error("not defined");
+       	// fall through
+       	 case 0:	return(new HexPlay());
+       }
     }
 
     /** replay a move specified in SGF format.  
-     * this is mostly standard stuff, but the key is to recognise
+     * this is mostly standard stuff, but the contract is to recognise
      * the elements that we generated in sgf_save
      */
     public void ReplayMove(sgf_node no)

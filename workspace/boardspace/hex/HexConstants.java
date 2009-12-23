@@ -13,8 +13,6 @@ public interface HexConstants extends OnlineConstants
     static final int EmptyBoard = 103;
 
     // init strings for variations of the game.
-    static final String Hex_5_INIT = "hex-5"; // can help debugging
-    static final String Hex_9_INIT = "hex-9";
     static final String Hex_INIT = "hex"; //init for standard game
     static final String Hex_15_INIT = "hex-15";
     static final String Hex_19_INIT = "hex-19";
@@ -22,10 +20,6 @@ public interface HexConstants extends OnlineConstants
     /* the "external representation for the board is A1 B2 etc.  This internal representation is X,Y
        where adjacent X's are separated by 2.  This gives the board nice mathematical properties for
        calculating adjacency and connectivity. */
-    static int[] ZfirstInCol5 = { 4, 3, 2, 1, 0 }; // these are indexes into the first ball in a column, ie B1 has index 2
-    static int[] ZnInCol5 = { 5, 5, 5, 5, 5 }; // depth of columns, ie A has 4, B 5 etc.
-    static int[] ZfirstInCol9 = { 8, 7, 6, 5, 4, 3, 2, 1, 0 }; // these are indexes into the first ball in a column, ie B1 has index 2
-    static int[] ZnInCol9 = { 9, 9, 9, 9, 9, 9, 9, 9, 9 }; // depth of columns, ie A has 4, B 5 etc.
     static int[] ZfirstInCol = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 }; // these are indexes into the first ball in a column, ie B1 has index 2
     static int[] ZnInCol = { 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11 }; // depth of columns, ie A has 4, B 5 etc.
     //
