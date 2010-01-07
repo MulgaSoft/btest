@@ -370,8 +370,7 @@ public class CheckerGameViewer extends commonCanvas
     private void drawBoardElements(Graphics gc, CheckerBoard gb, Rectangle brect, HitPoint highlight)
     {
     	liftSteps = lifted ? Math.min(++liftSteps,12) : Math.max(--liftSteps,0);
-     	int liftdiv = 40;
-     	boolean dolift = (liftSteps>0);
+      	boolean dolift = (liftSteps>0);
      	if(dolift && (liftSteps<12))
      		{ // this induces a very simple animation
      		repaint(); 
