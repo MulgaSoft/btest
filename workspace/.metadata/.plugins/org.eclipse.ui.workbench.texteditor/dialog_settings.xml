@@ -2,9 +2,9 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="237" key="DIALOG_WIDTH"/>
-		<item value="227" key="DIALOG_Y_ORIGIN"/>
+		<item value="199" key="DIALOG_Y_ORIGIN"/>
 		<item value="355" key="DIALOG_HEIGHT"/>
-		<item value="838" key="DIALOG_X_ORIGIN"/>
+		<item value="822" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,14 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="Graphics" key="selection"/>
+		<item value="getSources" key="selection"/>
 		<list key="findhistory">
-			<item value="graphics"/>
-			<item value="randomize"/>
-			<item value="edith"/>
-			<item value="drawfix"/>
-			<item value="downa"/>
-			<item value="hexplay"/>
+			<item value="getSources"/>
+			<item value="getdests"/>
+			<item value="getListOfRunnerMoves"/>
+			<item value="getl"/>
+			<item value="getdes"/>
+			<item value="droppedo"/>
+			<item value="setnext"/>
+			<item value="getDests"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="21" version="2.0">
 <workbenchAdvisor/>
-<window height="926" width="1202" x="34" y="21">
+<window height="926" width="1246" x="6" y="57">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -12,7 +12,7 @@
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.google.gdt.eclipse.suite.actionSet" itemType="typeToolBarContribution" x="85" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="124" y="22"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="98" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="98" y="22"/>
@@ -40,46 +40,60 @@
 <part id="5"/>
 <part id="6"/>
 <part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HexGameViewer.java" partName="HexGameViewer.java" path="G:/share/projects/workspace-master/boardspace/hex/HexGameViewer.java" title="HexGameViewer.java" tooltip="boardspace/hex/HexGameViewer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/hex/HexGameViewer.java"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OctilesBoard.java" partName="OctilesBoard.java" path="G:/share/projects/workspace-master/boardspace/octiles/OctilesBoard.java" title="OctilesBoard.java" tooltip="boardspace/octiles/OctilesBoard.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/octiles/OctilesBoard.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="27380" selectionTopPixel="12036"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OctilesConstants.java" partName="OctilesConstants.java" path="G:/share/projects/workspace-master/boardspace/octiles/OctilesConstants.java" title="OctilesConstants.java" tooltip="boardspace/octiles/OctilesConstants.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/octiles/OctilesConstants.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1600" selectionTopPixel="374"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OctilesMovespec.java" partName="OctilesMovespec.java" path="G:/share/projects/workspace-master/boardspace/octiles/OctilesMovespec.java" title="OctilesMovespec.java" tooltip="boardspace/octiles/OctilesMovespec.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/octiles/OctilesMovespec.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8104" selectionTopPixel="4381"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OctilesViewer.java" partName="OctilesViewer.java" path="G:/share/projects/workspace-master/boardspace/octiles/OctilesViewer.java" title="OctilesViewer.java" tooltip="boardspace/octiles/OctilesViewer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/octiles/OctilesViewer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="14665" selectionTopPixel="5780"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="G.class" partName="G.class" title="G.class" tooltip="online.common.G" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/OnlineLobby.jar&lt;online.common(G.class"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OctilesCell.java" partName="OctilesCell.java" path="G:/share/projects/workspace-master/boardspace/octiles/OctilesCell.java" title="OctilesCell.java" tooltip="boardspace/octiles/OctilesCell.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/octiles/OctilesCell.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="310" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerBoard.java" partName="CheckerBoard.java" path="G:/share/projects/workspace-master/boardspace/checkerboard/CheckerBoard.java" title="CheckerBoard.java" tooltip="boardspace/checkerboard/CheckerBoard.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/checkerboard/CheckerBoard.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="24" selectionOffset="11532" selectionTopPixel="5270"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OctilesChip.java" partName="OctilesChip.java" path="G:/share/projects/workspace-master/boardspace/octiles/OctilesChip.java" title="OctilesChip.java" tooltip="boardspace/octiles/OctilesChip.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/octiles/OctilesChip.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5495" selectionTopPixel="2142"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.ClassFileEditor" name="commonCanvas.class" partName="commonCanvas.class" title="commonCanvas.class" tooltip="online.game.commonCanvas" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/Game.jar&lt;online.game(commonCanvas.class"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MuttonGameViewer.java" partName="MuttonGameViewer.java" path="G:/share/projects/workspace-master/boardspace/mutton/MuttonGameViewer.java" title="MuttonGameViewer.java" tooltip="boardspace/mutton/MuttonGameViewer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/mutton/MuttonGameViewer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="14" selectionOffset="49232" selectionTopPixel="20536"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MuttonGraphicsHelper.java" partName="MuttonGraphicsHelper.java" path="G:/share/projects/workspace-master/boardspace/mutton/MuttonGraphicsHelper.java" title="MuttonGraphicsHelper.java" tooltip="boardspace/mutton/MuttonGraphicsHelper.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/mutton/MuttonGraphicsHelper.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="574" selectionTopPixel="102"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HexPlay.java" partName="HexPlay.java" path="G:/share/projects/workspace-master/boardspace/hex/HexPlay.java" title="HexPlay.java" tooltip="boardspace/hex/HexPlay.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/hex/HexPlay.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="18498" selectionTopPixel="7565"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MuttonCell.java" partName="MuttonCell.java" path="G:/share/projects/workspace-master/boardspace/mutton/MuttonCell.java" title="MuttonCell.java" tooltip="boardspace/mutton/MuttonCell.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/mutton/MuttonCell.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="4320" selectionTopPixel="3043"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MuttonMoveSpec.java" partName="MuttonMoveSpec.java" path="G:/share/projects/workspace-master/boardspace/mutton/MuttonMoveSpec.java" title="MuttonMoveSpec.java" tooltip="boardspace/mutton/MuttonMoveSpec.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/mutton/MuttonMoveSpec.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="14" selectionOffset="2635" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MuttonGameBoard.java" partName="MuttonGameBoard.java" path="G:/share/projects/workspace-master/boardspace/mutton/MuttonGameBoard.java" title="MuttonGameBoard.java" tooltip="boardspace/mutton/MuttonGameBoard.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/mutton/MuttonGameBoard.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="8" selectionOffset="15829" selectionTopPixel="7368"/>
-</editor>
 </editors>
 <views>
+<view id="org.eclipse.team.ui.GenericHistoryView" partName="History">
+<viewState/>
+</view>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy">
 <viewState hidefields="false" hidelocaltypes="false" hidenonpublic="false" hidestatic="false" link_editors="0" mv_vertical_scroll="0" orientation="0" qualified_names="0" ratio="350" showinherited="false" sortbydefiningtype="false" vertical_scroll="0" view="2" workingSetName=""/>
+</view>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.jdt.ui.JavaSearchResultPage" org.eclipse.jdt.search.resultpage.grouping="3" org.eclipse.jdt.search.resultpage.limit="1000" org.eclipse.jdt.search.resultpage.limit_enabled="TRUE" org.eclipse.jdt.search.resultpage.sorting="1" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2"/>
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
@@ -98,10 +112,9 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings"/>
+<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="54" org.eclipse.ui.ide.markerType="79" org.eclipse.ui.ide.pathField="104" org.eclipse.ui.ide.resourceField="79" org.eclipse.ui.ide.severityAndDescriptionField="538"/>
+<columnWidths org.eclipse.ui.ide.locationField="54" org.eclipse.ui.ide.markerType="79" org.eclipse.ui.ide.pathField="104" org.eclipse.ui.ide.resourceField="79" org.eclipse.ui.ide.severityAndDescriptionField="250"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -110,7 +123,7 @@
 </viewState>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
-<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
+<viewState group_libraries="1" layout="1" linkWithEditor="0" rootMode="1" workingSetName="">
 <customFilters userDefinedPatternsEnabled="false">
 <xmlDefinedFilters>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
@@ -141,21 +154,14 @@
 <viewState/>
 </view>
 <view id="ccw.view.namespacebrowser" partName="Namespace Browser"/>
-<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
-<viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
-<sorter groupBy="CATEGORY_QUERY">&#x0A;<sorter>&#x0A;<sort0 sortDirection="1" sortKey="PRIORITY"/>
-<sort1 sortDirection="1" sortKey="DATE_CREATED"/>
-<sort2 sortDirection="1" sortKey="NONE"/>
-<sort3 sortDirection="1" sortKey="NONE"/>
-</sorter>
-</sorter>
-</viewState>
-</view>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List"/>
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
-<view id="org.eclipse.help.ui.HelpView" partName="Help">
-<viewState BrowserPart.url="/org.eclipse.jdt.doc.user/reference/ref-dialog-javadoc-location.htm?resultof=%22%6a%61%76%61%64%6f%63%22%20%22%6c%6f%63%61%74%69%6f%6e%22%20%22%6c%6f%63%61%74%22%20" activeSet="Default" expression="javadoc location" pageId="browser-page"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
+<viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+<view id="com.google.gwt.eclipse.DevModeView" partName="Development Mode">
+<viewState/>
+</view>
 </views>
 <perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
@@ -181,6 +187,7 @@
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -231,15 +238,12 @@
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.team.ui.GenericHistoryView"/>
 <fastViewBars>
 <fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@538b14" orientation="512" selectedTabId="org.eclipse.mylyn.tasks.ui.views.tasks" style="0">
 <fastViews>
 <view id="org.eclipse.mylyn.tasks.ui.views.tasks" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
-<fastViewBar fastViewLocation="131072" id="stickyFolderRight" orientation="512" selectedTabId="org.eclipse.help.ui.HelpView" style="0">
-<fastViews>
-<view id="org.eclipse.help.ui.HelpView" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
 <fastViewBar fastViewLocation="131072" id="right" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
@@ -274,12 +278,14 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.24956217" ratioLeft="285" ratioRight="857" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.7490953" ratioLeft="621" ratioRight="208" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.team.ui.GenericHistoryView" label="History"/>
+<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -287,6 +293,8 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -310,26 +318,25 @@
 </perspective>
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
-<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
 <alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.google.gdt.eclipse.suite.actionSet.2.gae"/>
+<alwaysOnActionSet id="com.google.gdt.eclipse.suite.actionSet"/>
+<alwaysOnActionSet id="com.google.gdt.eclipse.suite.actionSet.1.gwt"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
-<alwaysOnActionSet id="org.eclipse.ui.WorkingSetActionSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
-<alwaysOnActionSet id="com.google.gdt.eclipse.suite.actionSet.2.gae"/>
-<alwaysOnActionSet id="com.google.gdt.eclipse.suite.actionSet"/>
-<alwaysOnActionSet id="com.google.gdt.eclipse.suite.actionSet.1.gwt"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
 <show_view_action id="org.eclipse.debug.ui.DebugView"/>
 <show_view_action id="org.eclipse.debug.ui.VariableView"/>
@@ -339,12 +346,16 @@
 <show_view_action id="org.eclipse.ui.console.ConsoleView"/>
 <show_view_action id="org.eclipse.ui.views.TaskList"/>
 <show_view_action id="org.eclipse.ant.ui.views.AntView"/>
-<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
 <show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
 <perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
 <perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.wst.xml.ui.perspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.TaskList"/>
+<view id="com.google.gwt.eclipse.DevModeView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.eclipse.debug.ui.VariableView"/>
 <view id="org.eclipse.debug.ui.BreakpointView"/>
@@ -358,30 +369,34 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.74950296" ratioLeft="754" ratioRight="252" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="897" ratioRight="299" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7496252" ratioLeft="500" ratioRight="167" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.75" ratioLeft="591" ratioRight="197" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="com.google.gwt.eclipse.DevModeView" label="Development Mode"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.45" ratioLeft="225" ratioRight="275" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.74950296" ratioLeft="754" ratioRight="252" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info part="org.eclipse.ui.editorss" ratio="0.44839254" ratioLeft="265" ratioRight="326" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="897" ratioRight="299" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="503" ratioRight="503" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="598" ratioRight="598" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
@@ -397,167 +412,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonPlayRandomBot.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/hex/HexGameViewer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/octiles/OctilesBoard.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/OnlineLobby.jar&lt;online.common(G.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/octiles/OctilesBoard.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/octiles/OctilesViewer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/octiles/OctilesConstants.java"/>
 <editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/Game.jar&lt;online.game(commonCanvas.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonGameViewer.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonGraphicsHelper.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonPlayRandomBot.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonGameBoard.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonGameViewer.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonPlayRandomBot.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/hex/HexPlay.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonGameViewer.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;java.awt(Graphics.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonCell.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonMoveSpec.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonGameBoard.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/mutton/MuttonPlayRandomBot.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/hex/HexGameViewer.java"/>
 </editors>
-<item historyLabel="MuttonPlayRandomBot.java" index="0">
-<position info="not_deleted" x="9109" y="0"/>
+<item historyLabel="OctilesBoard.java" index="0">
+<position info="not_deleted" x="38387" y="0"/>
 </item>
-<item historyLabel="MuttonPlayRandomBot.java" index="0">
-<position info="not_deleted" x="9647" y="0"/>
+<item historyLabel="OctilesBoard.java" index="0">
+<position info="not_deleted" x="37380" y="0"/>
 </item>
-<item historyLabel="MuttonPlayRandomBot.java" index="0">
+<item historyLabel="OctilesBoard.java" index="0">
+<position info="not_deleted" x="37430" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="0">
+<position info="not_deleted" x="37380" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="0">
+<position info="not_deleted" x="37373" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="0">
+<position info="not_deleted" x="37380" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="0">
+<position info="not_deleted" x="37261" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="0">
+<position info="not_deleted" x="36846" y="0"/>
+</item>
+<item historyLabel="G.class" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="38764" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
 <position/>
 </item>
-<item historyLabel="MuttonPlayRandomBot.java" index="0">
-<position info="not_deleted" x="5713" y="43"/>
-</item>
-<item historyLabel="MuttonPlayRandomBot.java" index="0">
+<item historyLabel="OctilesBoard.java" index="2">
 <position/>
 </item>
-<item historyLabel="HexGameViewer.java" index="1">
-<position info="not_deleted" x="22531" y="9"/>
-</item>
-<item historyLabel="commonCanvas.class" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="HexGameViewer.java" index="1">
-<position info="not_deleted" x="22531" y="9"/>
-</item>
-<item historyLabel="MuttonGameViewer.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MuttonGraphicsHelper.java" index="4">
-<position info="not_deleted" x="740" y="9"/>
-</item>
-<item historyLabel="MuttonPlayRandomBot.java" index="5">
-<position info="not_deleted" x="9985" y="0"/>
-</item>
-<item historyLabel="MuttonGameViewer.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MuttonPlayRandomBot.java" index="5">
-<position info="not_deleted" x="9210" y="31"/>
-</item>
-<item historyLabel="MuttonGameBoard.java" index="6">
-<position info="not_deleted" x="53" y="14"/>
-</item>
-<item historyLabel="MuttonPlayRandomBot.java" index="5">
-<position info="not_deleted" x="9210" y="31"/>
-</item>
-<item historyLabel="MuttonGameViewer.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MuttonGameViewer.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MuttonPlayRandomBot.java" index="8">
-<position info="not_deleted" x="9210" y="31"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="15181" y="14"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="13698" y="14"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="14296" y="10"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="5598" y="10"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="5800" y="0"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="14282" y="0"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="14397" y="0"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="16161" y="0"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="5800" y="0"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="16306" y="0"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="16183" y="14"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="13698" y="14"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="14296" y="10"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="5598" y="10"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="5912" y="0"/>
-</item>
-<item historyLabel="HexPlay.java" index="9">
-<position info="not_deleted" x="5800" y="0"/>
-</item>
-<item historyLabel="MuttonGameViewer.java" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MuttonGameViewer.java" index="10">
-<position info="not_deleted" x="19298" y="8"/>
-</item>
-<item historyLabel="Graphics.class" index="11">
+<item historyLabel="OctilesBoard.java" index="2">
 <position/>
 </item>
-<item historyLabel="MuttonGameViewer.java" index="10">
-<position info="not_deleted" x="19298" y="8"/>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="6287" y="8"/>
 </item>
-<item historyLabel="MuttonCell.java" index="12">
+<item historyLabel="OctilesBoard.java" index="2">
+<position/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="6287" y="8"/>
+</item>
+<item historyLabel="OctilesViewer.java" index="3">
+<position info="not_deleted" x="14622" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="6287" y="8"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="5640" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="6420" y="0"/>
+</item>
+<item historyLabel="OctilesConstants.java" index="4">
+<position info="not_deleted" x="1600" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="6420" y="24"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="22436" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="29962" y="6"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="30230" y="15"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="31349" y="21"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="28352" y="0"/>
+</item>
+<item historyLabel="G.class" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="MuttonGameViewer.java" index="10">
-<position info="not_deleted" x="49232" y="14"/>
-</item>
-<item historyLabel="MuttonMoveSpec.java" index="13">
-<position info="not_deleted" x="2635" y="14"/>
-</item>
-<item historyLabel="MuttonGameBoard.java" index="14">
+<item historyLabel="commonCanvas.class" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="MuttonGameBoard.java" index="14">
-<position info="not_deleted" x="15829" y="8"/>
-</item>
-<item historyLabel="MuttonCell.java" index="12">
-<position info="not_deleted" x="4320" y="8"/>
-</item>
-<item historyLabel="MuttonPlayRandomBot.java" index="15">
+<item historyLabel="G.class" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="MuttonPlayRandomBot.java" index="15">
-<position info="not_deleted" x="9979" y="0"/>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="34912" y="0"/>
 </item>
-<item active="true" historyLabel="HexGameViewer.java" index="16">
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="34268" y="6"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="26409" y="6"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="6985" y="18"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="40620" y="18"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="6590" y="20"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="38978" y="20"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="6686" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="34461" y="1"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="34365" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="34549" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="34558" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="33574" y="0"/>
+</item>
+<item historyLabel="OctilesViewer.java" index="3">
+<position info="not_deleted" x="14665" y="0"/>
+</item>
+<item historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="34718" y="0"/>
+</item>
+<item historyLabel="G.class" index="1">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="OctilesBoard.java" index="2">
+<position info="not_deleted" x="27380" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -568,7 +578,6 @@
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@538b14"/>
 <trimItem IMemento.internal.id="right"/>
-<trimItem IMemento.internal.id="stickyFolderRight"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
@@ -582,50 +591,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MuttonGameBoard.java" tooltip="boardspace/mutton/MuttonGameBoard.java">
-<persistable path="/boardspace/mutton/MuttonGameBoard.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MuttonMoveSpec.java" tooltip="boardspace/mutton/MuttonMoveSpec.java">
-<persistable path="/boardspace/mutton/MuttonMoveSpec.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MuttonCell.java" tooltip="boardspace/mutton/MuttonCell.java">
-<persistable path="/boardspace/mutton/MuttonCell.java"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Graphics.class" tooltip="java.awt.Graphics">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;java.awt(Graphics.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HexPlay.java" tooltip="boardspace/hex/HexPlay.java">
-<persistable path="/boardspace/hex/HexPlay.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MuttonGraphicsHelper.java" tooltip="boardspace/mutton/MuttonGraphicsHelper.java">
-<persistable path="/boardspace/mutton/MuttonGraphicsHelper.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MuttonGameViewer.java" tooltip="boardspace/mutton/MuttonGameViewer.java">
-<persistable path="/boardspace/mutton/MuttonGameViewer.java"/>
-</file>
 <file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="commonCanvas.class" tooltip="online.game.commonCanvas">
 <persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/Game.jar&lt;online.game(commonCanvas.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HexGameViewer.java" tooltip="boardspace/hex/HexGameViewer.java">
-<persistable path="/boardspace/hex/HexGameViewer.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OctilesChip.java" tooltip="boardspace/octiles/OctilesChip.java">
+<persistable path="/boardspace/octiles/OctilesChip.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MuttonPlayRandomBot.java" tooltip="boardspace/mutton/MuttonPlayRandomBot.java">
-<persistable path="/boardspace/mutton/MuttonPlayRandomBot.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerBoard.java" tooltip="boardspace/checkerboard/CheckerBoard.java">
+<persistable path="/boardspace/checkerboard/CheckerBoard.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HexConstants.java" tooltip="boardspace/hex/HexConstants.java">
-<persistable path="/boardspace/hex/HexConstants.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OctilesCell.java" tooltip="boardspace/octiles/OctilesCell.java">
+<persistable path="/boardspace/octiles/OctilesCell.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="hexCell.java" tooltip="boardspace/hex/hexCell.java">
-<persistable path="/boardspace/hex/hexCell.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="G.class" tooltip="online.common.G">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/OnlineLobby.jar&lt;online.common(G.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="hexChip.java" tooltip="boardspace/hex/hexChip.java">
-<persistable path="/boardspace/hex/hexChip.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Win32SurfaceData.class" tooltip="sun.awt.windows.Win32SurfaceData">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;sun.awt.windows(Win32SurfaceData.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HexViewer.java" tooltip="boardspace/hex/jdk11/HexViewer.java">
-<persistable path="/boardspace/hex/jdk11/HexViewer.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OctilesViewer.java" tooltip="boardspace/octiles/OctilesViewer.java">
+<persistable path="/boardspace/octiles/OctilesViewer.java"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="EventDispatchThread.class" tooltip="java.awt.EventDispatchThread">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;java.awt(EventDispatchThread.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="jeForth.java" tooltip="J/src/jforth/jeForth.java">
+<persistable path="/J/src/jforth/jeForth.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="RepaintArea.class" tooltip="sun.awt.RepaintArea">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=J/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;sun.awt(RepaintArea.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Object.class" tooltip="java.lang.Object">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=J/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;java.lang(Object.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Thread.class" tooltip="java.lang.Thread">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=J/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;java.lang(Thread.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Component.class" tooltip="java.awt.Component">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;java.awt(Component.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="jeForth.java" tooltip="J/src/jeForth.java">
+<persistable path="/J/src/jeForth.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="AppletPanel.class" tooltip="sun.applet.AppletPanel">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;sun.applet(AppletPanel.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Win32GraphicsConfig.class" tooltip="sun.awt.Win32GraphicsConfig">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;sun.awt(Win32GraphicsConfig.class"/>
 </file>
 </mruList>
 </workbench>

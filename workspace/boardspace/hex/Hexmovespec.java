@@ -6,13 +6,13 @@ import java.util.*;
 import online.game.*;
 
 public class Hexmovespec extends commonMove implements HexConstants
-{
+{	// this is the dictionary of move names
     static exHashtable D = new exHashtable(true);
 
     static
-    {
+    {	// load the dictionary
         // these int values must be unique in the dictionary
-    	addStandardMoves(D);
+    	addStandardMoves(D);	// this adds "start" "done" "edit" "reset" and so on.
         D.putInt("Pick", MOVE_PICK);
         D.putInt("Pickb", MOVE_PICKB);
         D.putInt("Drop", MOVE_DROP);
@@ -21,12 +21,15 @@ public class Hexmovespec extends commonMove implements HexConstants
         D.putInt("B", Black_Chip_Pool);
 		D.putInt("Swap",MOVE_SWAP);
   }
-
+    //
+    // variables to identify the move
     int source; // where from/to
 	int object;	// object being picked/dropped
     char to_col; // for from-to moves, the destination column
     int to_row; // for from-to moves, the destination row
-    int state;	// the state of the move before state, for UNDO
+    //
+    // variables for use by the robot
+    int state;	// the state of the move before state, for robot UNDO
     
     public Hexmovespec()
     {
@@ -78,7 +81,11 @@ public class Hexmovespec extends commonMove implements HexConstants
     }
 
     /* parse a string into the state of this move.  Remember that we're just parsing, we can't
-     * refer to the state of the board or the game.
+     * refer to the state of the board or the game.  This parser follows the recommended practice
+     * of keeping it very simple.  A move spec is just a sequence of tokens parsed by calling
+     * nextToken
+     * @param msg a string tokenizer containing the move spec
+     * @param the player index for whom the move will be.
      * */
     private void parse(StringTokenizer msg, int p)
     {
@@ -139,8 +146,10 @@ public class Hexmovespec extends commonMove implements HexConstants
         }
     }
 
-    /* construct a move string for this move.  These are the inverse of what are accepted
-    by the constructors, and are also human readable */
+    /** construct an abbreviated move string, mainly for use in the game log.  These
+     * don't have to be parseable, they're intended only to help humans understand
+     * the game record.
+     * */
     public String shortMoveString()
     {
         switch (op)
@@ -172,8 +181,8 @@ public class Hexmovespec extends commonMove implements HexConstants
         }
     }
 
-    /* construct a move string for this move.  These are the inverse of what are accepted
-    by the constructors, and are also human readable */
+    /** construct a move string for this move.  These are the inverse of what are accepted
+    by the constructors, and only secondarily human readable */
     public String moveString()
     {
         String ind = "";
@@ -211,7 +220,8 @@ public class Hexmovespec extends commonMove implements HexConstants
             return (ind+D.findUnique(op));
         }
     }
-    /* longMoveString is used for sgf format records and can contain other information
+    /**
+     *  longMoveString is used for sgf format records and can contain other information
      * intended to be ignored in the normal course of play, for example human-readable
      * information
      */
@@ -219,7 +229,7 @@ public class Hexmovespec extends commonMove implements HexConstants
     {	String str = moveString();
     	return(str);
     }
-    /* standard java method, so we can read moves easily while debugging */
+    /** standard java method, so we can read moves easily while debugging */
     public String toString()
     {
         return ("P" + player + "[" + moveString() + "]");

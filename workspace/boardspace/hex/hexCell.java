@@ -1,12 +1,15 @@
 package hex;
 import online.game.*;
-//
-// specialized cell used for the game hex, not for all games using a hex board.
-//
-// the game hex needs only a char to indicate the contents of the board.  Other
-// games commonly add a more complex structue.   Games with square geometry
-// instead of hex can use Oct_Geometry instead of Hex_Geometry
-//
+/**
+ * specialized cell used for the game hex, not for all games using a hex board.
+ * <p>
+ * the game hex needs only a single object on each cell, or empty.
+ *  @see {@link chipCell} 
+ *  @see {@link stackCell}
+ * 
+ * @author ddyer
+ *
+ */
 public class hexCell extends chipCell implements HexConstants
 {	hexblob blob;			// the blob which contains this cell
 	hexCell nextInBlob;		// a link to the next cell in this blob
