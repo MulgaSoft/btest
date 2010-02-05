@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>BoardSpace.net Home Page</title>
+  <script src="/js/site.js"></script>
+</head>
+<body style="background-image: url(../images/background-image.jpg);">
+<h1 style="text-align: center;"><img alt="boardspace.net"
+ src="master-logo.jpg" style="width: 600px; height: 100px;"></h1>
+<h1 style="text-align: center;">A Place for Board Games</h1>
+<table
+ style="width: 80%; height: 1%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+  <caption><font size="+1"><span style="font-weight: bold;"></span></font><br>
+  </caption><tbody>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><font
+ size="+1"><a href="register.shtml"><span style="font-weight: bold;">Register</span></a></font><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><font
+ size="+2"><a style="font-weight: bold;" href="login.shtml">Log in and
+Play<br>
+      </a></font></td>
+      <td style="vertical-align: top; text-align: center;"><font
+ size="+1"><a href="guest.shtml"><span style="font-weight: bold;">Guest
+Login</span></a></font><br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" style="vertical-align: top;">If you just want to
+have a look, click on the "Guest Login" link above.&nbsp;&nbsp;
+Otherwise,&nbsp; it takes only a minute to register so you can play
+under your own name.&nbsp; Once you have logged in,&nbsp; you can
+bookmark the page to bypass this page and the login page entirely. The
+game is the thing!<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<!--#include virtual="/cgi-bin/top_games.cgi?embed=1" --><br>
+<br>
+<p></p>
+<div style="text-align: center;"><span style="font-weight: bold;">Other
+Stuff</span><br>
+</div>
+<table style="width: 100%; text-align: left;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <h3><span style="font-weight: bold;">What is the Next Game?</span></h3>
+      </td>
+      <td style="vertical-align: top;"> Candidates for the next game
+are listed on this <a
+ href="http://boardgamegeek.com/geeklist/12240/item/439185#item439185">geeklist</a>.;&nbsp;
+Add your candidates.<a href="http://boardgamegeek.com/game/1337"></a></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><font size="+1"><a
+ style="font-weight: bold;" href="handmade.html">Handmade Games</a></font></td>
+      <td style="vertical-align: top;">In the same sense that this is a
+handmade game site, I've always been a fan of real hand made games.</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">
+      <h3><a href="../nngs/">NNGS clone</a></h3>
+      <div style="text-align: center;">and also the<br>
+      </div>
+      <a href="http://cgos.boardspace.net/">9x9 Go Server</a><br>
+      <br>
+      </td>
+      <td style="vertical-align: top;">This is a clone of the <span
+ style="font-style: italic;">No Name Go Server</span>&nbsp; and related
+pages, which Boardspace is providing as a service to the Go Programming
+community.&nbsp; Of course, you could play Go here even if you don't
+have a Go program under development; but that's not really what it's
+for.&nbsp;&nbsp; Also, exclusively for development of 9x9 Go programs,
+we're providing space for an experimental <a
+ href="http://cgos.boardspace.net/">9x9 Go Server</a> which runs
+continuous practice tournaments.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+Translations by Babyl Fish (far from perfect, but better than nothing!)
+<a
+ href="http://babelfish.altavista.com/babelfish/tr?doit=done&amp;url=http://www.boardspace.net/english/index.html&amp;lp=en_es"><img
+ alt="spanish" src="/images/flags/Spain.gif"
+ style="border: 0px solid ; width: 30px; height: 20px;"></a><a
+ href="http://babelfish.altavista.com/babelfish/tr?doit=done&amp;url=http://www.boardspace.net/english/index.html&amp;lp=en_de"><img
+ alt="german" src="/images/flags/Germany.gif"
+ style="border: 0px solid ; width: 30px; height: 20px;"></a><a
+ href="http://babelfish.altavista.com/babelfish/tr?doit=done&amp;url=http://www.boardspace.net/english/index.html&amp;lp=en_it"><img
+ alt="italian" src="/images/flags/Italy.gif"
+ style="border: 0px solid ; width: 30px; height: 20px;"></a><a
+ href="http://babelfish.altavista.com/babelfish/tr?doit=done&amp;url=http://www.boardspace.net/english/index.html&amp;lp=en_fr"><img
+ alt="french" src="/images/flags/France.gif"
+ style="border: 0px solid ; width: 30px; height: 20px;"></a>
+<hr>
+<center>
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td align="left"><font size="-1">
+      <script language="javascript">
+document.write("<a href='mailto:gamemaste");
+document.write("r\@board");
+document.write("space.net'>gamemaste<n>r@board<n>space.net</a>");
+      </script></font><br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">
+visitor map
+<a
+ href="http://www4.clustrmaps.com/counter/maps.php?url=http://www.boardspace.net"
+ id="clustrMapsLink"><img
+ src="http://www4.clustrmaps.com/counter/index2.php?url=http://www.boardspace.net"
+ height="35" width="50">
+      </a><br>
+      </td>
+      <td style="vertical-align: top;"><a href="logon-page.html">Site<br>
+&nbsp;Map</a><br>
+      </td>
+      <td align="right">Go to <a href="/">BoardSpace.net home page</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+</body>
+</html>

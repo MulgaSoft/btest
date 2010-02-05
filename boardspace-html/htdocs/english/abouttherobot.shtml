@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>About the Robot</title>
+  <script src="site.js">
+  </script>
+</head>
+<body background="/images/background-image.jpg">
+<h1 style="text-align: center;"><img
+ style="width: 600px; height: 100px;" alt="boardspace.net" title=""
+ src="/images/master-logo.jpg"></h1>
+<h1 style="text-align: center;">About the Robots<br>
+</h1>
+Select the robot to play by clicking on <span
+ style="font-style: italic;">select robot</span> next to the start
+button.&nbsp; <br>
+<br>
+The robots are currently known as <span style="font-style: italic;">Dumbot</span>
+<span style="font-style: italic;">Smartbot </span>and <span
+ style="font-style: italic;">BestBot.&nbsp;&nbsp; </span>Each game has
+its own family of robots, and some are better players than others, but
+generally <span style="font-style: italic;">Dumbot </span>plays well
+enough to win against beginners, <span style="font-style: italic;">Smartbot
+</span>in intended to play well enough to challenge intermediate skilll
+players, and <span style="font-style: italic;">Bestbot </span>is the
+best available, challenging even for advanced players.&nbsp;&nbsp; Some
+games may not have any robot, or may not have all three.<br>
+<br>
+The robots are written in Java, and run on your machine rather than on
+the server.&nbsp; Consequently, if the robot seems too slow, my first
+suggestion is to buy a faster machine.&nbsp; I calibrate the robots'
+speed and playing ability so they will respond at least as fast as a
+typical human player.<br>
+<br>
+Robot games are scored just like regular games, and each robot has a
+ranking for each game.&nbsp;&nbsp;&nbsp; In <span
+ style="font-style: italic;">ranked </span>robot games the player to
+move first is random, and the games are remembered if you quit
+them.&nbsp; Consequenly you can always quit to join a human player, and
+come back to your robot game later, and also you can't get out of&nbsp;
+eventually finishing a robot game you are losing.&nbsp; The robots are
+happy to play <span style="font-style: italic;">unranked </span>games
+and let you choose who will move first.<br>
+<br>
+If your opponent quits a game before it is over, you can let the robot
+finish the game by clicking on the "actions" menu in the game
+room.&nbsp; In these games, the robot's win or loss is credited to the
+player who quit. <br>
+<span style="font-style: italic;"></span><br>
+<br>
+<hr style="width: 100%; height: 2px;">
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td align="left"> <font size="-1">E-mail:
+      <script language="javascript">
+document.write("<a href='mailto:gamemaste");
+document.write("r\@board");
+document.write("space.net'>gamemaste<n>r@board<n>space.net</a>");
+      </script>
+      </font> </td>
+      <td style="vertical-align: top; text-align: center;"><a
+ href="http://netmap.efxservices.com/cgi-bin/mapper/displaymap.pl?client=1036"><img
+ src="http://netmap.efxservices.com/cgi-bin/mapper/record-hit.pl?client=1036">visitor
+map<br>
+      </a></td>
+      <td align="right">Go to <a href="/">BoardSpace.net home page</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

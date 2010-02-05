@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>About the Site</title>
+  <script src="/js/site.js">
+  </script>
+</head>
+<body
+ style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); background-image: url(/images/background-image.jpg);"
+ alink="#000099" link="#000099" vlink="#990099">
+<h1 style="text-align: center;"><img alt="boardspace.net"
+ src="../images/master-logo.jpg" style="width: 600px; height: 100px;"></h1>
+<h1 style="text-align: center;">About the Site</h1>
+<ul>
+  <li><span style="font-weight: bold;">Who runs the site?</span><br>
+Boardspace.net is a hobby, not a
+commercial site under
+development, not a technology demonstration for a software
+company.&nbsp; There is no hidden catch.&nbsp; Just enjoy it as my
+guest.&nbsp; My home page is <a style="font-weight: normal;"
+ href="http://www.real-me.net/ddyer/">here</a><span
+ style="font-weight: normal;">.</span></li>
+  <li><span style="font-weight: bold;">Why Z&egrave;rtz? Why Yinsh? Why
+Punct? Why Dvonn? Why Tzaar?<br>
+    </span></li>
+I was originally hooked into playing Z&egrave;rtz on
+Richard's<a href="http://www.gamerz.net/"> PBEM server</a>, using <a
+ href="http://assimilate.int.webmatrixhosting.net/zf1/">Z&egrave;rtz
+for One</a>
+as a study tool to plan moves.&nbsp;&nbsp; It's great to spend hours
+planning
+perfect sequences, but face to face games are another thing
+entirely.&nbsp; I waited a year for a direct play site to emerge.&nbsp;
+When none did, I fell off the deep end and did it myself.&nbsp; <span
+ style="font-weight: bold;">Kris Burm, </span>the inventor, is not
+directly
+involved, but knows about the site and approves. Likewise, <span
+ style="font-weight: bold;">Michael Reitz</span> (who wrote ZF1)&nbsp;
+has provided some useful feedback, but isn't directly involved with the
+design or implementation of this site.&nbsp;&nbsp; <span
+ style="font-weight: bold;"></span>The remaining games in
+project GIPF are strong candidates to be added to the site eventually.<br>
+  <li><span style="font-weight: bold;">Why Lines of Action?<br>
+    </span><a href="/loa/">Lines
+of Action</a>
+was a game I had played some, but knew little about, and knew no one
+else that played it.&nbsp; Way back when the Internet first exploded on
+the public
+consciousness,&nbsp; I adopted Lines of Action as project.&nbsp; I
+developed an applet to play and review games, and a home page
+to consolidate all known information about the game.&nbsp; It was
+always
+my desire to have
+a place to
+play it online.&nbsp; It just took a while.</li>
+  <li><span style="font-weight: bold;">Why Plateau?<br>
+    </span>The
+thing that attracts me to <a href="http://www.plateaugame.com/">Plateau</a>
+is that it is as much a
+psychological&nbsp; game as it is a strategic and tactical one.&nbsp;
+The concealed information makes the threat matrix uncomputable - there
+are no safe plays or sure winning strategies. Plateau is a really fine
+game that deserves a wider audience. <br>
+  </li>
+  <li><span style="font-weight: bold;">Why Hex?</span><br>
+Hex is one of those classic games that no one seems to actually
+play.&nbsp; Imagine my surprise that it's actually a very interesting
+game, especially to a Go player.&nbsp; Hex reminds me of the a sequence
+in <span style="font-style: italic;">Creatures of Light and
+Darkness.&nbsp; </span>(extra
+points if you can tell me which one, and why.)<br>
+  </li>
+  <li><span style="font-weight: bold;">Why Trax?</span></li>
+Trax is another under appreciated classic game.&nbsp; It's been around
+a while, and has a following.&nbsp; It's probably better analyzed than
+any other game played here; and the good players are <span
+ style="font-style: italic;">good </span>not just amateurs who are a
+little more advanced.&nbsp;&nbsp; Oh yea, and my friends from
+Tantrix.com are distributing the tiles, so I hope for a little
+cross-site traffic.<br>
+  <li><span style="font-weight: bold;"> Why Gobblet?<br>
+    </span>Gobblet was an not-quite accidental discovery - my wife gave
+it to me for Christmas. Among a bunch of games I've acquired randomly
+in
+the last couple years, it's the clear winner as the most fun, light
+abstract.&nbsp; So there you are.</li>
+  <li><span style="font-weight: bold;"> Why Hive?<br>
+    </span>Hive made the cut because in addition to being a first rate
+and highly rated new game, it seemed to inspire fanatics far beyond the
+oh-yea-its-a-good-game variety.&nbsp; Game fanatics deserve to be
+rewarded.</li>
+  <li><span style="font-weight: bold;">Why Exxit?</span><br>
+Exxit grabbed my attention at BoiteAJeux, a turn based site.&nbsp; It's
+a frustratingly difficult game for such simple rules.&nbsp; In other
+words; just the kind of thing I like., I think Exxit has huge potential.</li>
+  <li><span style="font-weight: bold;">Why Tablut?<br>
+    </span>It's a classic - literally - having been played for over
+1000 years.&nbsp;&nbsp; A modern variant called Breakthru was a
+favorite of mine.&nbsp; This is in the class of games which definitely
+ought to be more widely known.</li>
+  <li><span style="font-weight: bold;">Why Dipole?<br>
+    </span>Mark Steere's austere approach to game design results in
+real gamer's games: finite, unforgiving of errors, and begging for
+in-depth study.&nbsp; Dipole is his best yet.</li>
+  <li><span style="font-weight: bold;">Why Tumblingdown?<br>
+    </span>Someone pointed out the similarity of Tumblingdown's move
+mechanic to Exxit, and it turned out to be a first rate game which was
+invented and promptly forgotten.</li>
+  <li><span style="font-weight: bold;">Why Truchet?<br>
+    </span>There's no doubt: my attraction is to the tiles. <br>
+  </li>
+  <li><span style="font-weight: bold;">Why Fanorona?<br>
+    </span>I was intrigued by the novelty of the "capture by
+withdrawal" mechanism, and the back story "national game of Madagascar"
+helped too.&nbsp; Plus I can see an emerging category of classic
+abstracts - so far containing Tablut, Lines of Action, and Fanorona.</li>
+  <li><span style="font-weight: bold;">Why Volcano?<br>
+    </span>Icehouse pieces!&nbsp; They're so nice looking,&nbsp; and so
+versatile, they deserve a place in every abstract gamer's shelf.&nbsp;
+Volcano is my current favorite icehouse game, and also one of the less
+frequently played since it requires 6 stashes. <br>
+  </li>
+  <li><b>Why Traboulet?</b><br>
+Traboulet came to my attention on a BGG geeklist for games with unique
+mechanisms. It proved to be
+hard to find, fun to play, and the inventor has a compelling story to
+tell about his struggle
+to with the publisher of similar-looking <i>Abalone</i>.</li>
+  <li><b>Why Qyshinsu?<br>
+    </b>Qyshinsu is definitely one of my odder choices.&nbsp; It
+started as a suggestion on the "proposed games" geeklist.&nbsp; It
+definitely helped that there was already a Zillions implementation and
+a turn based implementation at SuperDuperGames, so I was able to play a
+few games and experience it's mind-twisting for myself.&nbsp; It
+definitely helped that the developer sent me a free copy of the game
+(this is the first time a free game has influenced my choice).</li>
+  <li><b>Why knockabout?<br>
+    </b>The dice-as-playing pieces paradigm is way cool.&nbsp; I've had
+in mind to implement one of them since the beginning - knockabout
+happens to be the first one to make it out the door.&nbsp; Maybe more
+later!<br>
+  </li>
+  <li><span style="font-weight: bold;">What's the Master Plan?</span>&nbsp;
+The plan is to build the site into a place where you can
+drop in anytime for a game.&nbsp; Under&nbsp; reasonable assumptions,
+it
+takes (only) about 200 regular players to reach the point where you
+will probably encounter another player in the lobby within a few
+minutes.&nbsp;&nbsp; Unfortunately, the number 200 is separate for each
+game, so having lots of games doesn't directly help.&nbsp;&nbsp;
+Getting to 200 will be hard.&nbsp;&nbsp;&nbsp;
+Meantime, bring your own opponent.</li>
+  <li><span style="font-weight: bold;">More Games! Better&nbsp; Robots!
+Better Graphics! </span>etc. etc. etc.&nbsp; I'm always interested in
+suggestions, especially suggestions with a lot of support in the player
+community. Easy things and things that really grab my attention are
+much more likely to be implemented.&nbsp;&nbsp; If you want to
+help,&nbsp; lets talk.</li>
+  <li><span style="font-weight: bold;">What does it take to make a site
+like this?&nbsp; </span>No actual spit or baling wire is involved.
+Here's <a href="sitecomponents.html">the rundown</a>.<br>
+  </li>
+</ul>
+<br>
+<hr style="width: 100%; height: 2px;">
+<table style="width: 100%;">
+  <tbody>
+    <tr>
+      <td align="left"> <font size="-1">E-mail:
+      <script language="javascript">
+document.write("<a href='mailto:gamebmaste");
+document.write("r\@board");
+document.write("space.net'>gamemaste<n>r@board<n>space.net</a>");
+      </script></font>
+      </td>
+      <td style="vertical-align: top; text-align: center;"><a
+ href="http://netmap.efxservices.com/cgi-bin/mapper/displaymap.pl?client=1036"><img
+ src="http://netmap.efxservices.com/cgi-bin/mapper/record-hit.pl?client=1036">visitor
+map<br>
+      </a></td>
+      <td align="right">Go to <a href="/">BoardSpace.net home page</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
