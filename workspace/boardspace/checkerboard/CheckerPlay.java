@@ -127,12 +127,11 @@ public class CheckerPlay extends commonRobot implements Runnable, CheckerConstan
      * */
     public void StaticEval()
     {
-    	CheckerBoard evboard = new CheckerBoard(GameBoard.gametype);
-            evboard.clone(GameBoard);
-            double val0 = ScoreForPlayer(evboard,FIRST_PLAYER_INDEX,true);
-            double val1 = ScoreForPlayer(evboard,SECOND_PLAYER_INDEX,true);
-            if(val1>=VALUE_OF_WIN) { val0=0.0; }
-            System.out.println("Eval is "+ val0 +" "+val1+ " = " + (val0-val1));
+    	CheckerBoard evboard = (CheckerBoard)GameBoard.cloneBoard();
+        double val0 = ScoreForPlayer(evboard,FIRST_PLAYER_INDEX,true);
+        double val1 = ScoreForPlayer(evboard,SECOND_PLAYER_INDEX,true);
+        if(val1>=VALUE_OF_WIN) { val0=0.0; }
+        System.out.println("Eval is "+ val0 +" "+val1+ " = " + (val0-val1));
     }
 
 
@@ -145,7 +144,7 @@ public class CheckerPlay extends commonRobot implements Runnable, CheckerConstan
     {
         InitRobot(info);
         GameBoard = (CheckerBoard) gboard;
-        board = new CheckerBoard(GameBoard.gametype);
+        board = (CheckerBoard)GameBoard.cloneBoard();
         switch(strategy)
         {case 0:
         	MAX_DEPTH = DUMBOT_DEPTH;

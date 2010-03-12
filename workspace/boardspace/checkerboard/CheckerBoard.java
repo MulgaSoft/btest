@@ -59,10 +59,10 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
 	public cell newcell(char c,int r)
 	{	return(new CheckerCell(c,r));
 	}
-    public CheckerBoard(String init) // default constructor
+    public CheckerBoard(String init,int key) // default constructor
     {   drawing_style = STYLE_NOTHING; // STYLE_CELL or STYLE_LINES
     	Grid_Style = CHECKERGRIDSTYLE; //coordinates left and bottom
-        doInit(init); // do the initialization 
+        doInit(init,key); // do the initialization 
      }
 
 
@@ -174,7 +174,7 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
         return (v);
     }
    public BoardProtocol cloneBoard() 
-	{ CheckerBoard copy = new CheckerBoard(gametype);
+	{ CheckerBoard copy = new CheckerBoard(gametype,randomKey);
 	  copy.clone(this); 
 	  return(copy);
 	}
@@ -187,7 +187,7 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
     {
         CheckerBoard from_b = from_board;
         G.Assert(from_b != this, "can clone from myself");
-        doInit(from_b.gametype);
+        doInit(from_b.gametype,from_b.randomKey);
         
         whoseTurn = from_b.whoseTurn;
         board_state = from_b.board_state;
@@ -209,8 +209,8 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
     }
 
     /* initialize a board back to initial empty state */
-    public void doInit(String gtype)
-    {
+    public void doInit(String gtype,int key)
+    {	randomKey = key;	// not used, but for reference in this demo game
     	rack = new CheckerCell[CheckerChip.N_STANDARD_CHIPS];
      	for(int i=0,pl=FIRST_PLAYER_INDEX;i<CheckerChip.N_STANDARD_CHIPS; i++,pl=nextPlayer[pl])
     	{

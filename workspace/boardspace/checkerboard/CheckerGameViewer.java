@@ -60,7 +60,7 @@ public class CheckerGameViewer extends commonCanvas
        	CheckerChip.preloadImages(this,ImageDir);
         if (textures == null)
     	{ // note that for this to work correctly, the images and masks must be the same size.  
-      // Refer to http://www.andromeda.com/people/ddyer/java/imagedemo/transparent.html
+          // Refer to http://www.andromeda.com/people/ddyer/java/imagedemo/transparent.html
         textures = load_images(ImageDir,TextureNames);
     	}
     }
@@ -81,10 +81,11 @@ public class CheckerGameViewer extends commonCanvas
     	// captured at this point and passed to the the board init too.
         // randomKey = info.getInt(exHashtable.RANDOMSEED,-1);
     	//
+        int randomKey = sharedInfo.getInt(exHashtable.RANDOMSEED,-1);
 
     	super.init(info);
         
-        b = new CheckerBoard(info.getString(exHashtable.GAMETYPE, Checker_INIT));
+        b = new CheckerBoard(info.getString(exHashtable.GAMETYPE, Checker_INIT),randomKey);
         doInit(false);
 
         PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,true);
@@ -95,10 +96,9 @@ public class CheckerGameViewer extends commonCanvas
      *  used when starting up or replaying and also when loading a new game 
      *  */
     public void doInit(boolean preserve_history)
-    {
-        //System.out.println(myplayer.trueName + " doinit");
+    {	//System.out.println(myplayer.trueName + " doinit");
         super.doInit(preserve_history);				// let commonViewer do it's things
-        b.doInit(b.gametype);						// initialize the board
+        b.doInit(b.gametype,b.randomKey);						// initialize the board
    }
     
 
@@ -370,7 +370,7 @@ public class CheckerGameViewer extends commonCanvas
     private void drawBoardElements(Graphics gc, CheckerBoard gb, Rectangle brect, HitPoint highlight)
     {
     	liftSteps = lifted ? Math.min(++liftSteps,12) : Math.max(--liftSteps,0);
-      	boolean dolift = (liftSteps>0);
+     	boolean dolift = (liftSteps>0);
      	if(dolift && (liftSteps<12))
      		{ // this induces a very simple animation
      		repaint(); 
@@ -872,9 +872,7 @@ private void playSounds(commonMove mm)
      */
     public String gameType() 
     { 
-   	   // in games which have a randomized start, this method would return
- 	   // return(bb.gametype+" "+bb.randomKey); 
-    	return(b.gametype); 
+    	return(""+b.gametype+" "+b.randomKey); 
    }
     public String sgfGameType() { return(Checker_SGF); }
 
@@ -919,12 +917,10 @@ private void playSounds(commonMove mm)
      */
     public void performHistoryInitialization(StringTokenizer his)
     {	String token = his.nextToken();		// should be a checker init spec
-	   	//
-		// in games which have a randomized start, this is the point where
-		// the randomization is inserted
-	    // int rk = G.IntToken(his);
-		// bb.doInit(token,rk);
-         b.doInit(token);
+    	int rk = G.IntToken(his);
+    	// make the random key part of the standard initialization,
+    	// even though games like checkers probably don't use it.
+        b.doInit(token,rk);
     }
 
     
@@ -988,8 +984,10 @@ private void playSounds(commonMove mm)
             String value = (String) prop.getValue();
 
             if (setup_property.equals(name))
-            {
-                b.doInit(value);
+            {	StringTokenizer st = new StringTokenizer(value);
+            	String typ = st.nextToken();
+            	int ran = G.IntToken(st);
+                b.doInit(typ,ran);
                 resetBounds();
              }
             else if (name.equals(comment_property))

@@ -365,7 +365,7 @@ public class englishStrings extends internationalStrings
         		"You must move the gobblet you have picked up");
          put("review","review");
 
-        // hive strings
+        // frogs strings
         put("Hive","Hive");
         put("Hive_variation","standard Hive");
         put("Place a tile on the board","Place a tile on the board");
@@ -494,7 +494,7 @@ public class englishStrings extends internationalStrings
         put("Complete a split or merge","Complete a split or merge");
         put("Continue merging or click Done","Continue merging or click Done");
         
-        // hive-m
+        // frogs-m
         put("Hive-M","Hive-M");
         put("Hive-M_variation","Hive with Mosquito added");
         // fanorona
