@@ -471,7 +471,7 @@ public class CheckerGameViewer extends commonCanvas
 
         if (gc != null)
         {
-            standardGameMessage(gc,s.get(boardStates[vstate]),vstate!=PUZZLE_STATE,gb.whoseTurn,stateRect);
+            standardGameMessage(gc,gb,s.get(boardStates[vstate]),vstate,stateRect);
             goalAndProgressMessage(gc,s.get("do what it takes to win"),progressRect,goalRect);
          }
         DrawRepRect(gc,b.Digest(),repRect);

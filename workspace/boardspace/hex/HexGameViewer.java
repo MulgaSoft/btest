@@ -667,7 +667,7 @@ public class HexGameViewer extends commonCanvas
  
         if (gc != null)
         {	// draw the avatars
-            standardGameMessage(gc,s.get(boardStates[state]),state!=PUZZLE_STATE,gb.whoseTurn,stateRect);
+            standardGameMessage(gc,gb,s.get(boardStates[state]),state,stateRect);
             goalAndProgressMessage(gc,s.get("connect opposite sides with a chain of markers"),progressRect,goalRect);
             //DrawRepRect(gc,gb.Digest(),repRect);	// Not needed for hex
         }
