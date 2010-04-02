@@ -794,7 +794,7 @@ private void playSounds(commonMove mm)
             break;
 
          case HitNoWhere:
-        	if(!reviewMode() && OurMove()) { PerformAndTransmit(commonMove.RESET); }
+        	 performReset();
             break;
         }
         repaint();
