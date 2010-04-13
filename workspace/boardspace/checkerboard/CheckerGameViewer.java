@@ -713,6 +713,9 @@ private void playSounds(commonMove mm)
 	    	PerformAndTransmit("Pick W "+cell.row+" "+chip.chipNumber());
 	    	break;
 	    case BoardLocation:
+	    	// note, in this implementation the board squares are themselves pieces on the board
+	    	// if the board becomes a graphic, then this > should be >= to enable click-and-drag 
+	    	// behavior as well as click-to-pick
 	    	if(cell.chipIndex>0)
 	    		{
 	    		PerformAndTransmit("Pickb "+cell.col+" "+cell.row+" "+chip.chipNumber());
