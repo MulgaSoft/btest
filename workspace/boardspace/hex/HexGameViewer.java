@@ -5,6 +5,9 @@ import online.common.*;
 
 import java.awt.*;
 import java.util.*;
+
+import javax.swing.JCheckBoxMenuItem;
+
 import online.game.*;
 /**
  * 
@@ -33,6 +36,7 @@ import online.game.*;
 import online.game.sgf.sgf_names;
 import online.game.sgf.sgf_node;
 import online.game.sgf.sgf_property;
+
 
 /**
  * 
@@ -125,7 +129,7 @@ public class HexGameViewer extends commonCanvas
 	private Rectangle swapRect=addRect("swapRect");
 
 	// private menu items
-    private CheckboxMenuItem rotationOption = null;		// rotate the board view
+    private JCheckBoxMenuItem rotationOption = null;		// rotate the board view
     private boolean doRotation=true;					// current state
     private boolean lastRotation=!doRotation;			// user to trigger background redraw
     

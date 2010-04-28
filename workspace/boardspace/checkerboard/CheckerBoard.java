@@ -603,6 +603,9 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
             setWhoseTurn(m.player);
             acceptPlacement();
             unPickObject();
+            // standardize the gameover state.  Particularly importing if the
+            // sequence in a game is resign/start
+            setBoardState(PUZZLE_STATE);
             {	boolean win1 = WinForPlayerNow(whoseTurn);
             	boolean win2 = WinForPlayerNow(nextPlayer[whoseTurn]);
             	if(win1 || win2) { setGameOver(win1,win2); }
@@ -633,8 +636,9 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
         case MOVE_EDIT:
     		acceptPlacement();
             setWhoseTurn(FIRST_PLAYER_INDEX);
+            // standardize "gameover" is not true
             setBoardState(PUZZLE_STATE);
-
+ 
             break;
 
         default:

@@ -670,7 +670,9 @@ void doSwap()
             acceptPlacement();
             unPickObject();
             int nextp = nextPlayer[whoseTurn];
-            win[FIRST_PLAYER_INDEX] = win[SECOND_PLAYER_INDEX] = false;
+            // standardize the gameover state.  Particularly importing if the
+            // sequence in a game is resign/start
+            setBoardState(PUZZLE_STATE);	// standardize the current state
             if((win[whoseTurn]=WinForPlayerNow(whoseTurn))
                ||(win[nextp]=WinForPlayerNow(nextp)))
                	{ setBoardState(GAMEOVER_STATE); 
@@ -705,7 +707,7 @@ void doSwap()
         	acceptPlacement();
             setWhoseTurn(FIRST_PLAYER_INDEX);
             setBoardState(PUZZLE_STATE);
-
+ 
             break;
 
         default:
