@@ -1,4 +1,8 @@
-online
+checkerboard
+checkerboard.jdk11
+container
+hex
+hex.jdk11
 online.common
 online.game
 online.game.sgf
