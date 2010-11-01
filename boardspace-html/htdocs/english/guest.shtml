@@ -20,38 +20,35 @@ to play, but guest games are always unranked.<br>
  style="width: 50%; text-align: left; margin-left: auto; margin-right: auto;"
  border="1" cellpadding="2" cellspacing="2">
     <tbody>
-      <tr style="font-weight: bold;">
+      <tr >
         <td style="vertical-align: top;">Player Name:<br>
         </td>
         <td style="vertical-align: top;"><input value="guest"
- name="pname" type="hidden">Guest<input value="guestx" name="password"
+ name="pname" type="hidden"><b>Guest</b><input value="guestx" name="password"
  type="hidden"><br>
         </td>
-        <td rowspan="2">
-<!--[if !IE]> Firefox and others will use outer object --> <applet
- codebase="/java/" code="online/version.class"
- height="50" width="200"><!--<![endif]--><!-- MSIE (Microsoft Internet Explorer) will use inner object -->
-        <object classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93"
- height="50" width="200"> <param name="code" value="online.version"> <param
- name="codebase" value="/java/"><strong> This browser does not have a
-Java
-Plug-in. <br>
-        <a
- href="http://java.sun.com/products/plugin/downloads/index.html"> Get
-the latest Java Plug-in here. </a> </strong> </object><!--[if !IE]> close outer object -->
-        </applet>
-<!--<![endif]--><br>
+        <td rowspan="3">
+        
+        <center><b>Your Java Version</b><br>
+        <applet codebase="/java/" code="online.version" height="50" width="200">
+         <strong> This browser does not have a Java Plug-in. </strong>
+         </applet></center><p>
+        There should be a java applet above this line which shows your java version. 
+        If there is none, <a href="http://java.sun.com/products/plugin/downloads/index.html"> Get
+the Java Plug-in here. </a>
+<br>
         </td>
       </tr>
       <tr>
-        <td style="vertical-align: top;"><span
- style="font-weight: bold;">Preferred Language:</span><br>
+        <td style="vertical-align: top;"><span>Preferred Language:</span><br>
         </td>
         <td style="vertical-align: top;"><!--#include virtual="/cgi-bin/tlib/selectors.cgi?what=language" -->
         <br>
         </td>
       </tr>
       <tr>
+      <td colspan=2><center><input value="Login" type="submit"> </center></td>
+      </tr>
         <td colspan="3" style="vertical-align: top;">The login button
 will take you to the lobby, which is the central point for starting or
 observing all the types of games at boardspace.&nbsp;&nbsp; See the <a
@@ -61,7 +58,7 @@ around in the lobby.<br>
       </tr>
     </tbody>
   </table>
-&nbsp;<input value="Login" type="submit"> <br>
+
 </form>
 </div>
 <center>
