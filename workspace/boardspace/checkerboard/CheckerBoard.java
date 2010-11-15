@@ -5,6 +5,7 @@ import online.game.*;
 
 import java.util.*;
 
+
 /**
  * CheckerBoard knows all about the game of Truchet, which is played
  * on a 7x7 board. It gets a lot of logistic support from 
@@ -94,6 +95,7 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
         }
 
     }
+	public void sameboard(BoardProtocol f) { sameboard((CheckerBoard)f); }
 
     /**
      * Robots use this to verify a copy of a board.  If the copy method is
@@ -299,7 +301,7 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
     	return(false);
     }
     // look for a win for player.  This algorithm should work for Gobblet Jr too.
-    public synchronized double ScoreForPlayer(int player,boolean print,double cup_weight,double ml_weight,boolean dumbot)
+    public double ScoreForPlayer(int player,boolean print,double cup_weight,double ml_weight,boolean dumbot)
     {  	double finalv=0.0;
     	G.Error("not implemented");
     	return(finalv);
@@ -372,10 +374,12 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
     
 	//get the index in the image array corresponding to movingObjectChar 
     // or HitNoWhere if no moving object.  This is used to determine what
-    // to draw when tracking the mouse.
+    // to draw when tracking the mouse.  
+    // Caution! This method is called in the mouse process
     public int movingObjectIndex()
-    {	if((pickedObject!=null)&&(droppedDest==null))
-    		{ return(pickedObject.chipNumber());
+    {	CheckerChip ch = pickedObject;
+    	if((ch!=null)&&(droppedDest==null))
+    		{ return(ch.chipNumber());
     		}
         return (HitNoWhere);
     }

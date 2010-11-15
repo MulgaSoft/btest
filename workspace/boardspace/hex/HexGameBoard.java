@@ -134,6 +134,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
         // set the initial contents of the board to all empty cells
 		for(hexCell c = (hexCell)allCells; c!=null; c=(hexCell)c.next) { c.chip=null; }
     }
+    public void sameboard(BoardProtocol f) { sameboard((HexGameBoard)f); }
 
     /**
      * Robots use this to verify a copy of a board.  If the copy method is
@@ -469,9 +470,11 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
 	//get the index in the image array corresponding to movingObjectChar 
     // or HitNoWhere if no moving object.  This is used to determine what
     // to draw when tracking the mouse.
+    // caution! this method is called in the mouse event process
     public int movingObjectIndex()
-    { if(pickedObject!=null)
-    	{	return(pickedObject.chipNumber()); 
+    { hexChip ch = pickedObject;
+      if(ch!=null)
+    	{	return(ch.chipNumber()); 
     	}
       	return (HitNoWhere);
     }

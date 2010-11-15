@@ -354,6 +354,7 @@ public void PrepareToMove(int playerIndex)
             search_state.good_enough_to_quit = GOOD_ENOUGH_VALUE;
             search_state.verbose = VERBOSE;
             search_state.allow_killer = KILLER;
+            search_state.save_top_digest = true;	// always on as a background check
             search_state.save_digest=false;	// debugging only
             search_state.check_duplicate_digests = false; 	// debugging only
 

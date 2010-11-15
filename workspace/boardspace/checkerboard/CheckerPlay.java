@@ -213,6 +213,7 @@ public void Search_Break(String msg)
             search_state.save_all_variations = SAVE_TREE;
             search_state.allow_killer = KILLER;
             search_state.verbose=VERBOSE;			// debugging
+            search_state.save_top_digest = true;	// always on as a background check
             search_state.save_digest=true;	// debugging only
             search_state.check_duplicate_digests = true; 	// debugging only
 

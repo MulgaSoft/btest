@@ -76,15 +76,15 @@ public class CheckerGameViewer extends commonCanvas
     	// adjusted to the actual number, adjusted by the min and max
        	// int players_in_game = Math.max(3,info.getInt(exHashtable.PLAYERS_IN_GAME,4));
     	// players = new commonPlayer[players_in_game];
+    	super.init(info);
        	// 
     	// for games that require some random initialization, the random key should be
     	// captured at this point and passed to the the board init too.
         // randomKey = info.getInt(exHashtable.RANDOMSEED,-1);
     	//
-        int randomKey = sharedInfo.getInt(exHashtable.RANDOMSEED,-1);
 
-    	super.init(info);
-        
+        int randomKey = info.getInt(exHashtable.RANDOMSEED,-1);
+       
         b = new CheckerBoard(info.getString(exHashtable.GAMETYPE, Checker_INIT),randomKey);
         doInit(false);
 
