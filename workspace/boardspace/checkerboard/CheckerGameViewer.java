@@ -3,9 +3,10 @@ package checkerboard;
 import online.common.*;
 import online.game.*;
 import online.game.sgf.*;
-
 import java.awt.*;
 import java.util.*;
+import javax.swing.JCheckBoxMenuItem;
+
 
 /**
  * 
@@ -45,6 +46,8 @@ public class CheckerGameViewer extends commonCanvas
     private Rectangle stateRect = addRect("stateRect");
     private Rectangle firstPlayerChipRect = addRect("firstPlayerChipRect");
     private Rectangle secondPlayerChipRect = addRect("secondPlayerChipRect");
+    private Rectangle reverseViewRect = addRect("reverse");
+    private JCheckBoxMenuItem reverseOption = null;
    
     private Rectangle doneRect = addRect("doneRect");
     private Rectangle editRect = addRect("editRect");
@@ -87,6 +90,7 @@ public class CheckerGameViewer extends commonCanvas
        
         b = new CheckerBoard(info.getString(exHashtable.GAMETYPE, Checker_INIT),randomKey);
         doInit(false);
+        reverseOption = myFrame.addOption(s.get("Reverse View"),b.reverse_y,deferredEvents);
 
         PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,true);
         
@@ -273,7 +277,12 @@ public class CheckerGameViewer extends commonCanvas
         repRect.height = CELLSIZE;
         repRect.width = goalRect.width-CELLSIZE;
         
-		//this sets up the "vcr cluster" of forward and back controls.
+        reverseViewRect.x = liftRect.x;
+        reverseViewRect.y = G.Bottom(liftRect)+CELLSIZE;
+        reverseViewRect.width = CELLSIZE*2;
+        reverseViewRect.height = CELLSIZE*4;
+ 
+        //this sets up the "vcr cluster" of forward and back controls.
         SetupVcrRects(liftRect.x,G.Bottom(doneRect)+2*CELLSIZE,
             CELLSIZE * 8,
             4 * CELLSIZE);
@@ -283,7 +292,17 @@ public class CheckerGameViewer extends commonCanvas
         generalRefresh();
     }
     
- 
+	// draw a box of spare . Notice if any are being pointed at.  Highlight those that are.
+    private void DrawReverseMarker(Graphics gc, Rectangle r,HitPoint highlight)
+    {	StockArt king = CheckerChip.getChip(b.reverse_y?1:0,CheckerChip.BLANK_CHIP_INDEX);
+    	StockArt reverse = CheckerChip.getChip(b.reverse_y?0:1,CheckerChip.BLANK_CHIP_INDEX);
+    	reverse.drawChip(gc,this,r.width,r.x+r.width/2,r.y+r.width/2,null);
+    	king.drawChip(gc,this,r.width,r.x+r.width/2,r.y+r.width+r.width/2,null);
+    	if(G.pointInRect(highlight,r))
+    	{	G.frameRect(gc,Color.red,r);
+    		highlight.hitCode = ReverseViewButton;
+    	}
+     }  
     private void DrawLiftRect(Graphics gc,HitPoint highlight)
     {	boolean hit = false;
     	if(G.pointInRect(highlight,liftRect))
@@ -416,6 +435,7 @@ public class CheckerGameViewer extends commonCanvas
     }
      public void drawAuxControls(Graphics gc,HitPoint highlight)
     {  DrawLiftRect(gc,highlight);
+       DrawReverseMarker(gc,reverseViewRect,highlight);
     }
     //
     // draw the board and things on it.  If gc!=null then actually 
@@ -754,6 +774,12 @@ private void playSounds(commonMove mm)
             G.Error("Hit Unknown object " + hitObject);
             }
         	break;
+
+        case ReverseViewButton:
+       	 reverseOption.setState(b.reverse_y = !b.reverse_y);
+       	 generalRefresh();
+       	 break;
+
         case LiftRect:
         	break;
          case BoardLocation:	// we hit the board 
@@ -945,7 +971,14 @@ private void playSounds(commonMove mm)
      */
     public boolean handleDeferredEvent(Object target,String command)
     {
-        return(super.handleDeferredEvent(target,command));
+    	if(target==reverseOption)
+    	{
+    	b.reverse_y = reverseOption.getState();
+    	generalRefresh();
+    	return(true);
+    	}
+    	else 
+    	return(super.handleDeferredEvent(target,command));
      }
 /** handle the run loop, and any special actions we need to take.
  * The mouse handling and canvas painting will be called automatically

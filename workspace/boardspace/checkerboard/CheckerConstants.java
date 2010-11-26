@@ -18,7 +18,7 @@ public interface CheckerConstants extends OnlineConstants
     
     static final int BoardLocation = 102;
     static final int LiftRect = 103;
-    
+    static final int ReverseViewButton = 104;
      /* states of the board/game.  Because several gestures are needed to complete a move, and
     there are several types of move, we use a state machine to determine what is legal */
     //static final int PUZZLE_STATE = 0; // no game, just plopping balls and removing rings at will.

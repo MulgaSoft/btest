@@ -225,7 +225,7 @@ public void Search_Break(String msg)
         finally
         {
             Accumulate_Search_Summary();
-            Abort_Search_In_Progress();
+            Finish_Search_In_Progress();
         }
 
         if (move != null)

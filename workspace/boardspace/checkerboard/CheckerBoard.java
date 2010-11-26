@@ -213,8 +213,8 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
     /* initialize a board back to initial empty state */
     public void doInit(String gtype,int key)
     {	randomKey = key;	// not used, but for reference in this demo game
-    	rack = new CheckerCell[CheckerChip.N_STANDARD_CHIPS];
-     	for(int i=0,pl=FIRST_PLAYER_INDEX;i<CheckerChip.N_STANDARD_CHIPS; i++,pl=nextPlayer[pl])
+    	rack = new CheckerCell[CheckerChip.N_STANDARD_CHIPS*2];
+     	for(int i=0,pl=FIRST_PLAYER_INDEX;i<CheckerChip.N_STANDARD_CHIPS*2; i++,pl=nextPlayer[pl])
     	{
        	CheckerCell cell = new CheckerCell();
        	cell.rackLocation=RackLocation[i];

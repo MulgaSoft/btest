@@ -370,7 +370,7 @@ public void PrepareToMove(int playerIndex)
         finally
         {
             Accumulate_Search_Summary();
-            Abort_Search_In_Progress();
+            Finish_Search_In_Progress();
         }
 
         if (move != null)

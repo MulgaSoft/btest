@@ -20,7 +20,8 @@ public class CheckerChip extends chip
 
 	static final int FIRST_TILE_INDEX = 0;
     static final int N_STANDARD_TILES = 2;
-    static final int N_STANDARD_CHIPS = 2;
+    static final int N_STANDARD_CHIPS = 1;
+    static final int BLANK_CHIP_INDEX = 0;
     static final int FIRST_CHIP_INDEX = N_STANDARD_TILES;
     static final int BLACK_CHIP_INDEX = FIRST_CHIP_INDEX+1;
     static final int WHITE_CHIP_INDEX = FIRST_CHIP_INDEX;
@@ -57,7 +58,10 @@ public class CheckerChip extends chip
 	public static CheckerChip getChip(int color)
 	{	return(CANONICAL_PIECE[FIRST_CHIP_INDEX+color]);
 	}
-
+	public static CheckerChip getChip(int pl,int color)
+	{
+		return(CANONICAL_PIECE[FIRST_CHIP_INDEX+(pl*N_STANDARD_CHIPS)+color]);
+	}
   /* pre load images and create the canonical pieces
    * 
    */
