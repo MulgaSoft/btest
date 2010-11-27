@@ -3,8 +3,8 @@
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
 	<item value="filter_imports;" key="filters_last_used"/>
 	<item value="G:\share\projects\export\boardspace" key="org.eclipse.jdt.ui.lastextjar"/>
-	<item value="0" key="TypeHierarchyViewPart.orientation"/>
 	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
+	<item value="0" key="TypeHierarchyViewPart.orientation"/>
 	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
 	<item value="G:\share\projects\workspace-master\boardspace" key="org.eclipse.jdt.ui.last.external.project"/>
 	<section name="hierarchy_presenter_bounds">
@@ -63,8 +63,8 @@
 		<section name="DialogBoundsSettings">
 			<item value="600" key="DIALOG_WIDTH"/>
 			<item value="130" key="DIALOG_Y_ORIGIN"/>
-			<item value="500" key="DIALOG_HEIGHT"/>
 			<item value="259" key="DIALOG_X_ORIGIN"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
 			<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
 		</section>
 	</section>
@@ -79,18 +79,18 @@
 	</section>
 	<section name="JavaElementSearchActions">
 	</section>
+	<section name="RenameInformationPopup">
+	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="1" key="updateSimilarElementsMatchStrategy"/>
 		<item value="false" key="updateTextualMatches"/>
 		<item value="false" key="updateSimilarElements"/>
 	</section>
-	<section name="RenameInformationPopup">
-	</section>
 	<section name="JavadocWizardDialog">
 		<item value="508" key="DIALOG_WIDTH"/>
 		<item value="19" key="DIALOG_Y_ORIGIN"/>
-		<item value="325" key="DIALOG_X_ORIGIN"/>
 		<item value="559" key="DIALOG_HEIGHT"/>
+		<item value="325" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
 	</section>
 </section>
