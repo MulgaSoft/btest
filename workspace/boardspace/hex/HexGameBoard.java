@@ -861,9 +861,13 @@ void doSwap()
  // small ad-hoc adjustment to the grid positions
  public void DrawGridCoord(Graphics gc, Color clt,int xpos, int ypos, int cellsize,String txt)
  {   if(Character.isDigit(txt.charAt(0)))
-	 	{ xpos-=2;
+	 	{ xpos-=cellsize/4;
 	 	}
- 	G.Text(gc, false, xpos-2, ypos, -1, 0,clt, null, txt);
+ 		else
+ 		{ xpos += cellsize/4; 
+ 		  ypos += cellsize/4;
+ 		}
+ 	G.Text(gc, false, xpos, ypos, -1, 0,clt, null, txt);
  }
 // return a very simple representation of the board for the benefit of external robots
 // meta-format is "game" "version" xxx

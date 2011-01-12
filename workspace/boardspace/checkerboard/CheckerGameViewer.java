@@ -105,7 +105,19 @@ public class CheckerGameViewer extends commonCanvas
         b.doInit(b.gametype,b.randomKey);						// initialize the board
    }
     
-
+    /**
+     * translate the mouse coordinate x,y into a size-independent representation
+     * presumably based on the cell grid.  This is used to transmit our mouse
+     * position to the other players and spectators, so it will be displayed
+     * at approximately the same visual spot on their screen.  
+     * 
+     * Some trickier logic may be needed if the board has several orientations,
+     * or if some mouse activity should be censored.
+     */
+    public Point getBoardCoords(int x, int y)
+    {
+    	return(super.getBoardCoords(x,y));
+    }
 
 	/**
 	 * 
@@ -942,7 +954,7 @@ private void playSounds(commonMove mm)
     
     /**
      * parse and perform the initialization sequence for the game, which
-     * was produced by {@link gameType}
+     * was produced by {@link commonCanvas.gameType}
      */
     public void performHistoryInitialization(StringTokenizer his)
     {	String token = his.nextToken();		// should be a checker init spec

@@ -521,6 +521,20 @@ public class HexGameViewer extends commonCanvas
        }
  
     }
+    
+    /**
+     * translate the mouse coordinate x,y into a size-independent representation
+     * presumably based on the cell grid.  This is used to transmit our mouse
+     * position to the other players and spectators, so it will be displayed
+     * at approximately the same visual spot on their screen.  
+     * 
+     * Some trickier logic may be needed if the board has several orientations,
+     * or if some mouse activity should be censored.
+     */
+    public Point getBoardCoords(int x, int y)
+    {
+    	return(super.getBoardCoords(x,y));
+    }
 
    /** draw the board and the chips on it. the gc will normally draw on a background
     * array which contains the slowly changing part of the board. 
@@ -1095,9 +1109,9 @@ public class HexGameViewer extends commonCanvas
      * into a background bitmap, then display that bitmap to the real screen
      * in one swell foop at the end.
      * 
-     * @parm gc the graphics object.  If gc is null, don't actually draw but do check for mouse location anyay
-     * @parm complete if true, always redraw everything
-     * @parm hp the mouse location.  This should be annotated to indicate what the mouse points to.
+     * @param g the graphics object.  If gc is null, don't actually draw but do check for mouse location anyay
+     * @param complete if true, always redraw everything
+     * @param hp the mouse location.  This should be annotated to indicate what the mouse points to.
      */
     public void paintCanvas(Graphics g, boolean complete,HitPoint hp)
     {	HexGameBoard disb = (HexGameBoard)disB();
@@ -1162,7 +1176,7 @@ public class HexGameViewer extends commonCanvas
      * this is a token or tokens that initialize the variation and
      * set immutable parameters such as the number of players
      * and the random key for the game.  It can be more than one
-     * token, which ought to be parseable by {@link performHistoryInitialization}
+     * token, which ought to be parseable by {@link performHistoryInitialization()}
      * @return return what will be the init type for the game
      */
      public String gameType() 
@@ -1207,10 +1221,10 @@ public class HexGameViewer extends commonCanvas
     //    players[(fp == 0) ? 1 : 0].ordinal = 1;
     //	
     //}
-    
+   
     /**
      * parse and perform the initialization sequence for the game, which
-     * was produced by {@link gameType}
+     * was produced by {@link online.game.commonCanvas::gameType()}
      */
      public void performHistoryInitialization(StringTokenizer his)
     {   //the initialization sequence
