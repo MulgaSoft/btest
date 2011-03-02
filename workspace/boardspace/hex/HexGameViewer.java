@@ -237,7 +237,7 @@ public class HexGameViewer extends commonCanvas
 	 */ 
     public void setLocalBounds(int x, int y, int width, int height)
     {
-        int ncols = 43; // more cells wide to allow for the aux displays
+        int ncols = 41; // more cells wide to allow for the aux displays
         int nrows = 23 ;  
         int cellw = width / ncols;
         chatHeight = selectChatHeight(height);
@@ -290,14 +290,14 @@ public class HexGameViewer extends commonCanvas
 
 		//this sets up the "vcr cluster" of forward and back controls.
         SetupVcrRects(CELLSIZE / 2,
-            (boardRect.y + boardRect.height) - (3 * CELLSIZE), CELLSIZE * 5,
-            3 * CELLSIZE);
+            (boardRect.y + boardRect.height) - (5 * CELLSIZE), CELLSIZE * 6,
+            5 * CELLSIZE/2);
         auxSRect.max = 3.0;		// max scale on the aux sliders
         
-        goalRect.x = CELLSIZE * 3;		// really just a general message
+        goalRect.x = CELLSIZE * 6;		// really just a general message
         goalRect.y = G.Bottom(boardRect)-CELLSIZE*2;
-        goalRect.height = CELLSIZE * 2;
-        goalRect.width = 20 * CELLSIZE;
+        goalRect.height = CELLSIZE;
+        goalRect.width = boardRect.width-14*CELLSIZE;
         
         progressRect.x = goalRect.x+goalRect.width/6;	// a simple progress bar when the robot is running.
         progressRect.width = goalRect.width/2;
@@ -508,7 +508,7 @@ public class HexGameViewer extends commonCanvas
               // in order to make the artwork as simple as possible to maintain, the border
               // pictures are derived directly from the hex cell masters, so they need the
               // same scale and offset factors as the main cell.
-              hexCell c =(hexCell)gb.GetBoardCell(thiscol,thisrow);
+              hexCell c = gb.getCell(thiscol,thisrow);
               if(c.borders!=0)
               {
               for(int dir=0; dir<4;dir++)
@@ -550,7 +550,7 @@ public class HexGameViewer extends commonCanvas
 
         // using closestCell is preferable to G.PointInside(highlight, xpos, ypos, CELLRADIUS)
         // because there will be no gaps or overlaps between cells.
-        hexCell closestCell = (hexCell)gb.closestCell(highlight,brect);
+        hexCell closestCell = gb.closestCell(highlight,brect);
         boolean hitCell = gb.LegalToHitBoard(closestCell);
         if(hitCell)
         { // note what we hit, row, col, and cell
@@ -568,7 +568,7 @@ public class HexGameViewer extends commonCanvas
         // depend on the shadows being cast correctly.
         if (gc != null)
         {
-        for(hexCell cell = (hexCell)gb.allCells; cell!=null; cell=(hexCell)cell.next)
+        for(hexCell cell = gb.allCells; cell!=null; cell=cell.next)
           {
             boolean drawhighlight = (hitCell && (cell==closestCell)) 
    				|| gb.isDest(cell) 		// is legal for a "drop" operation
@@ -913,7 +913,7 @@ public class HexGameViewer extends commonCanvas
  //   	int step = History.size();
  //   	int limit = viewStep>=0 ? viewStep : step;
  //   	for(int i=0;i<limit;i++) 
- //   		{ commonMove mv = (commonMove)History.elementAt(i);
+ //   		{ commonMove mv = History.elementAt(i);
  //   		  //G.print(".. "+mv);
  //   		  dup.Execute(mv); 
  //   		}
@@ -1176,7 +1176,7 @@ public class HexGameViewer extends commonCanvas
      * this is a token or tokens that initialize the variation and
      * set immutable parameters such as the number of players
      * and the random key for the game.  It can be more than one
-     * token, which ought to be parseable by {@link performHistoryInitialization()}
+     * token, which ought to be parseable by {@link online.game.commonCanvas.performHistoryInitialization()}
      * @return return what will be the init type for the game
      */
      public String gameType() 
@@ -1224,7 +1224,7 @@ public class HexGameViewer extends commonCanvas
    
     /**
      * parse and perform the initialization sequence for the game, which
-     * was produced by {@link online.game.commonCanvas::gameType()}
+     * was produced by {@link online.game.commonCanvas:gameType()}
      */
      public void performHistoryInitialization(StringTokenizer his)
     {   //the initialization sequence

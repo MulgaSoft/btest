@@ -32,7 +32,7 @@ import online.game.*;
  *
  */
 
-class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
+class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstants
 {	static final boolean debug = false;
     //
     // private variables
@@ -69,7 +69,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
     
 	
 	// factory method to generate a board cell
-	public cell newcell(char c,int r)
+	public hexCell newcell(char c,int r)
 	{	return(new hexCell(c,r));
 	}
     public HexGameBoard(String init) // default constructor
@@ -83,20 +83,19 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
 	  dup.clone(this);
 	  return(dup); 
    	}
-    public hexCell GetCell(char col,int row) { return((hexCell)GetBoardCell(col,row)); }
 
     // precompute which border cell decorations needs to be drawn 
     // this is peculiar to the way we draw the borders of the hex board
     // not a general game requirement.
     private void setBorderDirections()
-    {	for(hexCell c = (hexCell)allCells;
+    {	for(hexCell c = allCells;
     		c!=null;
-    		c = (hexCell)c.next)
+    		c = c.next)
     	{
     	int bd = 0;
         for(int direction=0;direction<6;direction++)
-        {		hexCell border0 = (hexCell)c.exitToward(direction);
-        		hexCell border1 = (hexCell)c.exitToward(direction+1); 
+        {		hexCell border0 = c.exitTo(direction);
+        		hexCell border1 = c.exitTo(direction+1); 
         		// this is a little complex because the corner cells
         		// are part of two borders.
         		if((border0==null) && (border1==null))
@@ -132,7 +131,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
 		playerChip[0]=hexChip.White;
 		playerChip[1]=hexChip.Black;
         // set the initial contents of the board to all empty cells
-		for(hexCell c = (hexCell)allCells; c!=null; c=(hexCell)c.next) { c.chip=null; }
+		for(hexCell c = allCells; c!=null; c=c.next) { c.chip=null; }
     }
     public void sameboard(BoardProtocol f) { sameboard((HexGameBoard)f); }
 
@@ -145,6 +144,12 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
     public void sameboard(HexGameBoard from_b)
     {
         super.sameboard(from_b); // hexboard compares the boards
+        
+        for(hexCell c = allCells,d=from_b.allCells;  
+		c!=null;
+		c=c.next, d= d.next)
+		{G.Assert(c.sameCell(d),"cells match");
+		}
 
         for (int i = 0; i < win.length; i++)
         {
@@ -202,7 +207,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
 		}
 		// note we can't modernize this without invalidating all the existing
 		// digests.
-		for(hexCell c=(hexCell)allCells; c!=null; c=(hexCell)c.next)
+		for(hexCell c=allCells; c!=null; c=c.next)
 		{	
             v ^= c.Digest(r);
 		}
@@ -329,7 +334,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
     	  {
     	   	blob.addCell(cell);
     	   	for(int dir = 0; dir<6; dir++)
-    		{	expandHexBlob(blob,(hexCell)cell.exitToward(dir));
+    		{	expandHexBlob(blob,cell.exitTo(dir));
     		}
     	  }
     	}
@@ -344,14 +349,14 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
     	}
     }
     
-    Vector findBlobs(int forplayer,Vector all)
+    OStack<hexblob> findBlobs(int forplayer,OStack<hexblob> all)
     {	sweep_counter++;
     	hexChip pch = playerChip[forplayer];
-    	for(hexCell cell = (hexCell)allCells;  cell!=null; cell=(hexCell)cell.next)
+    	for(hexCell cell = allCells;  cell!=null; cell=cell.next)
     	{	if((cell.sweep_counter!=sweep_counter) && (cell.chip==pch))
     		{
     		hexblob blob = new hexblob(pch);
-    		all.addElement(blob);
+    		all.push(blob);
     		expandHexBlob(blob,cell);
      		}
     	}
@@ -360,22 +365,22 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
 
     public boolean WinForPlayerNow(int player)
     {	if(win[player]) { return(true); }
-    	Vector blobs = new Vector();
+    	OStack<hexblob> blobs = new OStack<hexblob>(hexblob.class);
     	return(WinForPlayerNow(player,blobs));
      }
     // this method is also called by the robot to get the blobs as a side effect
-    public boolean WinForPlayerNow(int player,Vector blobs)
+    public boolean WinForPlayerNow(int player,OStack<hexblob> blobs)
     {
      	findBlobs(player,blobs);
     	return(someBlobWins(blobs,player));
    	
     }
 
-    public boolean someBlobWins(Vector blobs,int player)
+    public boolean someBlobWins(OStack<hexblob> blobs,int player)
     {	// if the span of any blobs is the whole board, we have a winner
     	// in Hex, there is only one winner.
     	for(int i=0;i<blobs.size(); i++)
-    	{	hexblob blob = (hexblob)blobs.elementAt(i);
+    	{	hexblob blob = blobs.elementAt(i);
     		int span = blob.span();
     		if(span==ncols)
     		{ return(true); }
@@ -446,7 +451,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
             break;
         case BoardLocation:	// already filled board slot, which can happen in edit mode
         case EmptyBoard:
-           	hexCell c = GetCell(m.to_col,m.to_row);
+           	hexCell c = getCell(m.to_col,m.to_row);
            	if(c.chip!=null) 
            		{ // this is an important bit of communication with editHistory
            		  // tell it that this drop wasn't on an empty cell
@@ -490,7 +495,7 @@ class HexGameBoard extends hexBoard implements BoardProtocol,HexConstants
             break;
         case BoardLocation:
         	{
-        	hexCell c = (hexCell)GetBoardCell(col,row);
+        	hexCell c = getCell(col,row);
         	boolean wasDest = isDest(c);
         	unDropObject(); 
         	if(!wasDest)
@@ -826,7 +831,7 @@ void doSwap()
         	doSwap();
         	break;
         case MOVE_DROPB:
-        	SetBoard(GetCell(m.to_col,m.to_row),null);
+        	SetBoard(getCell(m.to_col,m.to_row),null);
         	break;
         case MOVE_RESIGN:
             resign_planned = !resign_planned;
@@ -841,15 +846,15 @@ void doSwap()
         }
  }
     
- Vector GetListOfMoves()
- {	Vector all = new Vector();
+ OStack<commonMove> GetListOfMoves()
+ {	OStack<commonMove> all = new OStack<commonMove>(commonMove.class);
  	if(board_state==PLAY_OR_SWAP_STATE)
  	{
  		all.addElement(new Hexmovespec("swap",whoseTurn));
  	}
- 	for(hexCell c = (hexCell)allCells;
+ 	for(hexCell c = allCells;
  	    c!=null;
- 	    c = (hexCell)c.next)
+ 	    c = c.next)
  	{	if(c.topChip()==null)
  		{all.addElement(new Hexmovespec("dropb "+playerChip[whoseTurn].colorName+" "+c.col+" "+c.row,whoseTurn));
  		}
@@ -876,7 +881,7 @@ void doSwap()
 public String getStateString()
 {	StringBuffer occupied = new StringBuffer();
 	occupied.append("hex 1 "+ ncols+" "+hexChip.chipColor[whoseTurn]);
-	for(hexCell c = (hexCell)allCells; c!=null; c=(hexCell)c.next)
+	for(hexCell c =allCells; c!=null; c=c.next)
 	{	if(c.chip!=null) { occupied.append(" "+c.col+" "+c.row+" "+c.topChip().colorName); }
 	}
 	return(occupied.toString());

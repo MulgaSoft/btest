@@ -1,5 +1,4 @@
 package hex;
-import java.util.Vector;
 
 import online.common.*;
 
@@ -124,10 +123,10 @@ public class hexblob implements HexConstants
     // consisting of those with two or more links to other blobs.  This is an 
     // approximation to the blobs will surely be able to connection, but it's
     // not quite right in reality.  Sometimes a conneciton can be overloaded
-    static OStack mergeBlobs(Vector blobs)
-    {	OStack newblobs = new OStack();
+    static OStack<hexblob> mergeBlobs(OStack<hexblob> blobs)
+    {	OStack<hexblob> newblobs = new OStack<hexblob>(hexblob.class);
     	for(int i=0; i<blobs.size(); i++)
-    	{	hexblob cb = (hexblob)blobs.elementAt(i);
+    	{	hexblob cb = blobs.elementAt(i);
     		if(cb.mergedWith==null)
     		{
     		hexblob newb = new hexblob(cb.color);

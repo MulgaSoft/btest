@@ -32,7 +32,7 @@ import java.util.*;
  *
  */
 
-class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
+class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,CheckerConstants
 {
     public int boardColumns = DEFAULT_COLUMNS;	// size of the board
     public int boardRows = DEFAULT_ROWS;
@@ -52,12 +52,8 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
     private CheckerCell pickedSource = null;
     private CheckerCell droppedDest = null;
     
-    public CheckerCell getCell(char col,int row)
-    {	return((CheckerCell)GetBoardCell(col,row));
-    }
-
 	// factory method
-	public cell newcell(char c,int r)
+	public CheckerCell newcell(char c,int r)
 	{	return(new CheckerCell(c,r));
 	}
     public CheckerBoard(String init,int key) // default constructor
@@ -81,7 +77,7 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
         initBoard(boardColumns,boardRows); //this sets up the board and cross links
         
         // fill the board with the background tiles
-        for(CheckerCell c = (CheckerCell)allCells; c!=null; c=(CheckerCell)c.next)
+        for(CheckerCell c = allCells; c!=null; c=c.next)
         {  int i = (c.row+c.col)%2;
            c.addChip(CheckerChip.getTile(i));
         }
@@ -105,16 +101,17 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
      */
     public void sameboard(CheckerBoard from_b)
     {
-
+    	super.sameboard(from_b);
+    	
         for (int i = 0; i < win.length; i++)
         {
             G.Assert(win[i] == from_b.win[i], "Win[] matches");
 			G.Assert(playerColor[i]==from_b.playerColor[i],"Player colors match");
 			G.Assert(chips_on_board[i]==from_b.chips_on_board[i],"chip count matches");
         }
-        for(CheckerCell c = (CheckerCell)allCells,d=(CheckerCell)from_b.allCells;
+        for(CheckerCell c = allCells,d=from_b.allCells;
         	c!=null;
-        	c=(CheckerCell)c.next,d=(CheckerCell)d.next)
+        	c=c.next,d=d.next)
         {	G.Assert(c.sameCell(d),"cells match");
         }
  
@@ -165,7 +162,7 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
 		case White_Chip_Pool: v^= c2; break;
 		}
 		
-		for(CheckerCell c = (CheckerCell)allCells; c!=null; c=(CheckerCell)c.next)
+		for(CheckerCell c = allCells; c!=null; c=c.next)
 		{	v ^= c.Digest(r);
 		}
         // for most games, we should also digest whose turn it is
@@ -199,9 +196,9 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
 		   playerColor[i]=from_b.playerColor[i];
 		   chips_on_board[i]=from_b.chips_on_board[i];
 		}
-		for(CheckerCell dest=(CheckerCell)allCells,src=(CheckerCell)from_board.allCells;
+		for(CheckerCell dest=allCells,src=from_board.allCells;
 			dest!=null;
-			dest=(CheckerCell)dest.next,src=(CheckerCell)src.next)
+			dest=dest.next,src=src.next)
 		{ dest.copyFrom(src);
 		}
         resign_planned = from_b.resign_planned;
@@ -280,7 +277,7 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
 
 
    public boolean uniformRow(int player,CheckerCell cell,int dir)
-    {	for(CheckerCell c=(CheckerCell)cell.exitToward(dir); c!=null; c=(CheckerCell)c.exitToward(dir))
+    {	for(CheckerCell c=cell.exitTo(dir); c!=null; c=c.exitTo(dir))
     	{    CheckerChip cup = c.topChip();
     	     if(cup==null) { return(false); }	// empty cell
     	     if(cup.chipNumber()!=player) { return(false); }	// cell covered by the other player
@@ -398,7 +395,7 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
         case BoardLocation:
          	{
         	CheckerCell c = pickedSource = getCell(col,row);
-        	pickedObject = c.removeChip();
+        	pickedObject = c.removeTop();
          	break;
          	}
         case White_Chip_Pool:
@@ -800,8 +797,8 @@ class CheckerBoard extends rectBoard implements BoardProtocol,CheckerConstants
         }
  }
 
- Vector GetListOfMoves()
- {	Vector all = new Vector();
+ OStack<commonMove> GetListOfMoves()
+ {	OStack<commonMove> all = new OStack<commonMove>(commonMove.class);
  	G.Error("Not implemented");
   	return(all);
  }

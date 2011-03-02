@@ -296,7 +296,7 @@ public class CheckerGameViewer extends commonCanvas
  
         //this sets up the "vcr cluster" of forward and back controls.
         SetupVcrRects(liftRect.x,G.Bottom(doneRect)+2*CELLSIZE,
-            CELLSIZE * 8,
+            CELLSIZE * 10,
             4 * CELLSIZE);
  
         theChat.setBounds(chatRect.x+x,chatRect.y+y,chatRect.width,chatRect.height);
@@ -908,7 +908,7 @@ private void playSounds(commonMove mm)
      * this is a token or tokens that initialize the variation and
      * set immutable parameters such as the number of players
      * and the random key for the game.  It can be more than one
-     * token, which ought to be parseable by {@link performHistoryInitialization}
+     * token, which ought to be parsable by {@link online.game.commonCanvas.performHistoryInitialization}
      * @return return what will be the init type for the game
      */
     public String gameType() 
@@ -954,7 +954,7 @@ private void playSounds(commonMove mm)
     
     /**
      * parse and perform the initialization sequence for the game, which
-     * was produced by {@link commonCanvas.gameType}
+     * was produced by {@link online.game.commonCanvas.gameType}
      */
     public void performHistoryInitialization(StringTokenizer his)
     {	String token = his.nextToken();		// should be a checker init spec

@@ -3,7 +3,7 @@ package hex;
 import online.game.*;
 import online.common.*;
 import online.search.*;
-import java.util.*;
+
 
 /** 
  * the Robot player only has to implement the basic methods to generate and evaluate moves.
@@ -52,7 +52,7 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
     static final int VALUE_LARGE = 200;
     int VERBOSE = 1;						// 0 is normal, 1 is useful
     boolean SAVE_TREE = false;				// debug flag for the search driver.  Uses lots of memory
-    int MAX_DEPTH = 4;						// search depth.
+    int MAX_DEPTH = 5;						// search depth.
 	static final boolean KILLER = false;	// if true, allow the killer heuristic in the search
 	static final double GOOD_ENOUGH_VALUE = VALUE_OF_WIN;	// good enough to stop looking
 				// this is appropriate for simple games like hex, but probably not too effective
@@ -147,7 +147,7 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
  * be evaluated and sorted, then used as fodder for the depth limited search
  * pruned with alpha-beta.
  */
-    public Vector List_Of_Legal_Moves()
+    public OStack<commonMove> List_Of_Legal_Moves()
     {
         return(board.GetListOfMoves());
     }
@@ -165,14 +165,14 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
      * @param print
      * @return
      */
-     double dumbotEval(HexGameBoard evboard,Vector blobs,int player,boolean print)
+     double dumbotEval(HexGameBoard evboard,OStack<hexblob> blobs,int player,boolean print)
     {	// note we don't need "player" here because the blobs variable
     	// contains all the information, and was calculated for the player
     	double val = 0.0;
     	double ncols = evboard.ncols;
     	for(int i=0;i<blobs.size();i++)
     	{
-    		hexblob blob = (hexblob)blobs.elementAt(i);
+    		hexblob blob = blobs.elementAt(i);
     		int span = blob.span();
     		double spanv = span/ncols;
     		if(print) 
@@ -180,10 +180,10 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
     		}
     		val += spanv*spanv;		// basic metric is the square of the span
     	}
-    	OStack merged = hexblob.mergeBlobs(blobs);
+    	OStack<hexblob> merged = hexblob.mergeBlobs(blobs);
     	for(int i=0;i<merged.size();i++)
     	{
-    		hexblob blob = (hexblob)merged.elementAt(i);
+    		hexblob blob = merged.elementAt(i);
     		int span = blob.span();
     		double spanv = span/ncols;
     		if(print) 
@@ -206,7 +206,7 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
      * @return
      */
     double ScoreForPlayer(HexGameBoard evboard,int player,boolean print)
-    {	Vector blobs = new Vector();
+    {	OStack<hexblob> blobs = new OStack<hexblob>(hexblob.class);
 		double val = 0.0;
 		// is this a won position? If so that's the evaluation.
 		// note that for some games, the current position might be a win

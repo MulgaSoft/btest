@@ -3,7 +3,7 @@ package checkerboard;
 import online.game.*;
 import online.common.*;
 import online.search.*;
-import java.util.*;
+
 /** 
  * the Robot player only has to implement the basic methods to generate and evaluate moves.
  * the actual search is handled by the search driver framework.
@@ -82,7 +82,7 @@ public class CheckerPlay extends commonRobot implements Runnable, CheckerConstan
  * be evaluated and sorted, then used as fodder for the depth limited search
  * pruned with alpha-beta.
  */
-    public Vector List_Of_Legal_Moves()
+    public OStack<commonMove> List_Of_Legal_Moves()
     {   return(board.GetListOfMoves());
     }
     
