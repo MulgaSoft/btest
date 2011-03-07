@@ -7,7 +7,7 @@ public class CheckerCell extends stackCell<CheckerCell,CheckerChip> implements C
 	public CheckerChip[] newComponentArray(int n) { return(new CheckerChip[n]); }
 	// constructor
 	public CheckerCell(char c,int r) 
-	{	super(Oct_Geometry,c,r);
+	{	super(Geometry.Oct,c,r);
 		rackLocation = BoardLocation;
 	}
 	public CheckerCell() { super(); }

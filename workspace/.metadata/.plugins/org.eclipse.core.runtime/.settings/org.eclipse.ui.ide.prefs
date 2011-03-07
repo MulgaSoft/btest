@@ -1,7 +1,8 @@
-#Fri Nov 26 21:15:45 PST 2010
+#Mon Feb 07 14:45:55 PST 2011
 eclipse.preferences.version=1
+TASKS_FILTERS_MIGRATE=true
 tipsAndTricks=true
-platformState=1280553331096
+platformState=1280553331100
 EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
 quickStart=false
 PROBLEMS_FILTERS_MIGRATE=true
