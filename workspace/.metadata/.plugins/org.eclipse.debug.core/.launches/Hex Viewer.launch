@@ -24,7 +24,6 @@
 <mapEntry key="zertz.classname" value="L:Game"/>
 </mapAttribute>
 <intAttribute key="org.eclipse.jdt.launching.APPLET_WIDTH" value="200"/>
-<stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.5.0_06"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="online.Root"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="boardspace"/>
 </launchConfiguration>
