@@ -48,38 +48,36 @@ import online.search.*;
 public class HexPlay extends commonRobot implements Runnable, HexConstants,
     RobotProtocol
     {
+	// this is an internal value used to affect the search in several ways.  Normal "value of position" results
+	// should be well below this in magnitude.  Searches are normally called off if the value of a position exceeds
+	// this, indicating "we won".   It should be at least 2x any non-winning value the evaluator normally produces.
+	// but it's exact value and scale are unimportant.  The main thing is to have a conventient range of values
+	// for the evaluator to work with.
     static final double VALUE_OF_WIN = 10000.0;
-    static final int VALUE_LARGE = 200;
-    int VERBOSE = 1;						// 0 is normal, 1 is useful
-    boolean SAVE_TREE = false;				// debug flag for the search driver.  Uses lots of memory
+    int VERBOSE = 1;						// 0 is normal, 1 displays each new principal variation, 2 displays all top level variations.
+    boolean SAVE_TREE = false;				// debug flag for the search driver.  Uses lots of memory. Set a breakpoint after the search.
     int MAX_DEPTH = 5;						// search depth.
 	static final boolean KILLER = false;	// if true, allow the killer heuristic in the search
 	static final double GOOD_ENOUGH_VALUE = VALUE_OF_WIN;	// good enough to stop looking
-				// this is appropriate for simple games like hex, but probably not too effective
-				// until there is a much better evaluator.
-    // this is an arbitrary value assigned to a winning position, so minmax
-    // and alpha-beta will prefer wins to non-wins.  It's exact value is
-    // unimportant, but it must at least double any non-winning score the
-    // evaluator produces.  Integers are cheap, don't be stingy.  The main thing
-    // is to have a convenient range of numbers to work with.
-    /* strategies */
-    static final int DUMBOT = 1;
+
+	static final int DUMBOT = 1;
     static final int SMARTBOT = 2;
     static final int BESTBOT = 3;
     int Strategy = DUMBOT;
     
-    HexGameBoard GameBoard = null;			// this is the "real" game board we're starting from
+    HexGameBoard GameBoard = null;			// this is the "real" game board we're starting from, but make a copy of
     HexGameBoard board = null;				// this is our local copy
     int boardSearchLevel = 0;				// the current search depth
 
-    /* constructor */
+    /**
+     *  Constructor, strategy corresponds to the robot skill level displayed in the lobby.
+     * 
+     *  */
     public HexPlay(int strategy)
     {
     	Strategy = strategy;
     }
-    public HexPlay()
-    {	Strategy = DUMBOT;
-    }
+
     /** 
      * this is a debugging hack, use this board when the "alternate board"
      * item is selected from the extraactions menu, so we can visualize the

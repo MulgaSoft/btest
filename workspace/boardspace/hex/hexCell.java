@@ -20,7 +20,7 @@ public class hexCell extends chipCell<hexCell,hexChip> implements HexConstants
 
 	public hexCell() { super(); }		// construct a cell not on the board
 	public hexCell(char c,int r) 		// construct a cell on the board
-	{	super(cell.Hex_Geometry,c,r);
+	{	super(cell.Geometry.Hex,c,r);
 	};
 	
 	/** sameCell is called at various times as a consistency check

@@ -1334,7 +1334,9 @@ public class HexGameViewer extends commonCanvas
        switch(level)
        { default: G.Error("not defined");
        	// fall through
-       	 case 0:	return(new HexPlay());
+       	 case 0:
+       	 case 1:
+       	 case 2: return(new HexPlay(level));
        }
     }
 
