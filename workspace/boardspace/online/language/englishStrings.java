@@ -18,30 +18,28 @@ public class englishStrings extends internationalStrings
         // lobby messages
         put("launchfailed","The other player didn't start properly");
         put("#1 invites #2 to join room #3", "#1 invites #2 to join room #3");
+        put("#1 invites #2 to play #3 in room #4","#1 invites #2 to play #3 in room #4");
         put("#1 has been muted, by a consensus of the players",
             "#1 has been muted, by a consensus of the players");
         put("welcome", "Welcome to the BoardSpace Lobby, version #1"); //version number follows
-        put("website", "#1 BoardSpace"); //pretty name for the web site
+        put("website", "#1 BoardSpace"); //pretty name for the web site.. #1 is something like "Game Room" or "Lobby"
         put("enterMessage", "#1 has entered the lobby"); //somebody entered
-        put("maybeBad",
-            "#1 is using client version #2, which may be incompatible"); //name is using client xx
-        put("shouldbeOK", "#1 is using client version #2, which should be ok"); //different but ok version
         put("in #1", "in #1"); //followed by a session number
         put("Move ##1", "Move ##1"); //move number for games in lobby
         put("News", "News"); //header for news lines
         put("Lobby", "Lobby"); //the name of the lobby
         put("Error", "Error"); //the name for errors
-        put("launchChat", "Launching chat room in Session #1"); //launching a chat room
-        put("launchspectator", "Launching spectator in Session #1"); //session id follows
-        put("launchGame", "Launching game in session #1"); //launching a game
-        put("launchReview", "Launching review room in session #1");
-        put("Session #1: state unknown.", "Session #1: state unknown.");
-        put("Session #1 is idle.  ", "Session #1 is idle.  ");
-        put("Session #1 is being launched.  ", "Session #1 is being launched.  ");
-        put("Session #1 is active.  ", "Session #1 is active.  ");
-        put("Session #1 is private. ", "Session #1 is private. ");
+        put("launchChat", "Launching chat room in Room #1"); //launching a chat room
+        put("launchspectator", "Launching spectator in Room #1"); //session id follows
+        put("launchGame", "Launching game in Room #1"); //launching a game
+        put("launchReview", "Launching review room in Room #1");
+        put("Session #1: state unknown.", "Room #1: state unknown.");
+        put("Session #1 is idle.  ", "Room #1 is idle.  ");
+        put("Session #1 is being launched.  ", "Room #1 is being launched.  ");
+        put("Session #1 is active.  ", "Room #1 is active.  ");
+        put("Session #1 is private. ", "Room #1 is private. ");
         put("Session #1 is displaying the map of players real locations",
-            "Session #1 is displaying the map of players real locations");
+            "Room #1 is displaying the map of players real locations");
         put("Invite", "Invite #1 into room #2");
         put("Accept chat from #1", "Accept chat from #1");
         put("Ignore chat from #1", "Ignore chat from #1");
@@ -108,7 +106,7 @@ public class englishStrings extends internationalStrings
         put("No Chat", "No Chat");
         put("Map of Player Locations", "Map Room");
         put("Game Room", "Game Room");
-        put("Review Saved Games", "Review Room");
+        put("Review Saved Games", "Review Room");	// appears as the frame name in review rooms
         put("Anyone can play in this room", "Anyone can play in this room");
         put("Master Room", "Master Room");
         put("Master ranked players can play", "Masters can play in this room");
@@ -186,14 +184,14 @@ public class englishStrings extends internationalStrings
         put("#1 is taking over playing #2 for #3",
             "#1 is taking over playing #2 for #3");
         put("#1 deliberately quit", "#1 deliberately quit");
-        put("#1 has quit and become a spectator",
+        put("#1 has quit and become a spectator",	// quit as a player.  Not in use right now.
             "#1 has quit and become a spectator");
         put("#1 killed due to #2", "#1 killed due to #2");
         put("quitting", "#1 has left the room");
         put("#1 quit", "#1 quit"); //quit (not deliberately)
         put("Welcome to Game client, version #1",
             "Welcome to BoardSpace client, version #1");
-        put("play", "play for #1"); //play color for xx
+        put("play", "play for #1"); //play for a player who has quit.  #1 is a player name
         put("Selecting game: #1", "Selecting game: #1"); //loading a review game
         put("Hint", "Hint"); //the name for hints
 
@@ -316,14 +314,14 @@ public class englishStrings extends internationalStrings
         put("Hex-15","Hex-15");
         put("Hex-19","Hex-19");
         put("Trax","Trax");
-        put("Trax_variation","Standard Trax");
+        put("Trax_variation","standard Trax");
         put("make 5 in a row to capture a ring and win",
         		"make 5 in a row to capture a ring and win");
         
         put("Zertz_variation","standard Zèrtz");
         put("Zertz+11_variation","Zèrtz with 11 extra rings");
         put("Zertz+24_variation","Zèrtz with 24 extra rings");
-        put("LOA_variation","play 8x8 LOA");
+        put("LOA_variation","standard 8x8 Lines of Action");
         put("LOAP_variation","play the LOA program contest variation");
         put("Plateau_variation","standard Plateau");
         put("Yinsh_variation","standard Yinsh");
@@ -333,7 +331,7 @@ public class englishStrings extends internationalStrings
         put("Hex_variation","11x11 Hex");
         put("Hex-15_variation","15x15 Hex");
         put("Hex-19_variation","19x19 Hex");
-        put("Punct_variation","standard Punct");
+        put("Punct_variation","standard Pünct");
         put("TBA1_variation","game to be announced");
         put("TBA2_variation","game to be announced");
         put("TBA3_variation","game to be announced");
@@ -358,14 +356,14 @@ public class englishStrings extends internationalStrings
         put("make 4 in a row in any direction","make 4 in a row in any direction");
         put("Place a gobblet on the board, or move a gobblet","Place a gobblet on the board, or move a gobblet");
         put("Gobblet","Gobblet");
-        put("GobbletM","GobbletM");
+        put("Gobbletm","GobbletM");
         put("Gobblet_variation","Play with peeking allowed");
-        put("GobbletM_variation","Memory counts, no peeking");
+        put("Gobbletm_variation","Memory counts, no peeking");
         put("You must move the gobblet you have picked up",
         		"You must move the gobblet you have picked up");
          put("review","review");
 
-        // frogs strings
+        // hive strings
         put("Hive","Hive");
         put("Hive_variation","standard Hive");
         put("Place a tile on the board","Place a tile on the board");
@@ -376,6 +374,11 @@ public class englishStrings extends internationalStrings
                 "You have no legal moves.  Click on Done to pass");
         put("Click on Done to end the game as a Draw",
         	"Click on Done to end the game as a Draw");
+        put("Hive-L","Hive-L");
+        put("Hive-L_variation","Hive with LadyBug added");
+        put("Hive-LM","Hive-LM");
+        put("Hive-LM_variation","Hive with LadyBug and Mosquito");
+
         put("#1 repetitions","#1 repetitions");
         // for plateau
         put("Click on Done to complete the capture",
@@ -466,7 +469,7 @@ public class englishStrings extends internationalStrings
         put("Truchet","Truchet");
         
         //dipole
-        put("Dipole","Dipole (original)");
+         put("Dipole","Dipole (original)");
         put("Dipole-s","Dipole");
        // put("Dipole-10","Dipole 10x10");
         //put("Dipole-10_variation","Dipole on a 10x10 board");
@@ -494,7 +497,7 @@ public class englishStrings extends internationalStrings
         put("Complete a split or merge","Complete a split or merge");
         put("Continue merging or click Done","Continue merging or click Done");
         
-        // frogs-m
+        // hive-m
         put("Hive-M","Hive-M");
         put("Hive-M_variation","Hive with Mosquito added");
         // fanorona
@@ -548,6 +551,7 @@ public class englishStrings extends internationalStrings
         
         put("Closing...","Closing...");
         put("Played on #1","Played on #1");
+
         put("...plus #1 more","...plus #1 more");
          
         // tzaar
@@ -571,7 +575,7 @@ public class englishStrings extends internationalStrings
         // knockabout
         put("Knock 5 of your opponent's dice into the gutter",
             "Knock 5 of your opponent's dice into the gutter");
-        put("Knockabout_variation","Standard Knockabout");
+        put("Knockabout_variation","standard Knockabout");
         put("Move a piece","Move a piece");
         put("Knockabout","Knockabout");
         		
@@ -589,9 +593,12 @@ public class englishStrings extends internationalStrings
         put("Gipf-standard","Gipf Standard");
         put("Click on Gipf pieces to change their capture status",
         		"Click on Gipf pieces to change their capture status");
+        put("Place a GIPF piece on a starting point","Place a GIPF piece on a starting point");
+        put("Designate GIPF pieces to capture, or place a GIPF chip","Designate GIPF pieces to capture, or place a GIPF chip");
+        put("Designate GIPF pieces to capture, or place a chip","Designate GIPF pieces to capture, or place a chip");
         
         // palago
-        put("Palago_variation","Standard Palago");
+        put("Palago_variation","standard Palago");
         put("Palago","Palago");
         put("select tile color","select tile color");
         put("Aqua","Aqua");
@@ -618,13 +625,13 @@ public class englishStrings extends internationalStrings
         // "spangles"
         put("Tile Pattern Games","Tile Pattern Games");
         put("form a larger triangle with your color at the tips","form a larger triangle with your color at the tips");
-        put("Spangles_variation","Standard Spangles");
+        put("Spangles_variation","standard Spangles");
         
         put("Spangles","Spangles");
   
         // micropul
         put("Micropul","Micropul");
-        put("Micropul_variation","Standard Micropul");
+        put("Micropul_variation","standard Micropul");
          put("maximize the number of tiles in your reserve",
         		"maximize the number of tiles in your reserve");
         put("Place a Chip, or a Jewel, or a chip from the Store",
@@ -632,33 +639,266 @@ public class englishStrings extends internationalStrings
 
         //Medina
         put("Medina","Medina");
-        put("Medina_variation","Standard Medina");
+        put("Medina_variation","standard Medina");
+        put("Place the first meeple on the board","Place the first meeple on the board");
+        put("Place a second piece on the board","Place a second piece on the board");
+        put("Final Scores:","Final Scores:");
+        put("You must place a dome","You must place a dome");
+        put("build an ideal city","build an ideal city");
         
+        // cannon
+        put("Cannon","Cannon");
+        put("Capture your opponent's town","Capture your opponent's town");
+        put("Place your town in your first row","Place your town in your first row");
+        put("Move a soldier, or fire a cannon","Move a soldier, or fire a cannon");
+        put("Cannon_variation","standard Cannon");
+        
+        // warp 6
+        put("Warp6","Warp 6");
+        put("Warp6_variation","standard Warp 6");
+        put("Move a ship to the board","Move a ship to the board");
+        put("Move 6 ships to the center","Move 6 ships to the center");
+        put("Move a ship","Move a ship");
+        
+        // Triad
+        put("capture all of one opponentr's color","capture all of one opponentr's color");
+        put("Capture a group of opponents","Capture a group of opponents");
+        put("Drop bunny chip","Place one of the Bunny player's chips");
+        put("Triad","Triad");
+        put("Triad_variation","standard Triad");
+         
         //Che
         put("Che","Che");
-        put("Che_variation","Standard Che");
+        put("Che_variation","standard Che");
+        put("Place a tile on any empty cell","Place a tile on any empty cell");
+        put("Place a tile adjacent to those already on the board",
+        		"Place a tile adjacent to those already on the board");
+        put("Place a second tile adjacent to those already on the board",
+        		"Place a second tile adjacent to those already on the board");
         
-        put("Place a GIPF piece on a starting point","Place a GIPF piece on a starting point");
-        put("Designate GIPF pieces to capture, or place a GIPF chip","Designate GIPF pieces to capture, or place a GIPF chip");
-        put("Designate GIPF pieces to capture, or place a chip","Designate GIPF pieces to capture, or place a chip");
-
-        // Mutton
-        put("Mutton", "Mutton");
-        put("Mutton_variation", "Standard Mutton");
-        put("Shoot", "Shoot");
-        put("Pass", "Pass");
-        put("Rage", "RAGE!");
-        put("Hide", "Hide");
-        put("Eat", "Eat");
-        put("Play Farmer", "Play Farmer");
-        put("Wolves_Hidden", "Wolves Hidden");
-        put("Wolf player hiding", "Wolf player must choose 4 sheep to be wolves.");
-        put("Wolf player eating", "Wolf player must choose a sheep to eat.");
-        put("Wolf moving suspects", "Wolf player must move all suspect sheep away from the carcass.");
-        put("Farmer select", "Farmer can select a sheep to shoot, or pass.");
-        put("Farmer moving scared", "Farmer must move all suspect sheep away from the shooting victim.");
-        put("Wolf no valid meals", "Wolf player has no valid meals; Must pass.");
-        put("Farmer configuring board", "Farmer can set up board and set winning condition.");
-        put("Mutton Goal", "Farmer must shoot all 4 wolves.");
-     }
+        // trax
+        put("Illegal - this move would form an illegal pattern of lines",
+        		"Illegal - this move would form an illegal pattern of lines");
+        
+        // mutton
+        put("Capturing Games","Capturing Games");
+        put("Mutton","Mutton");
+        put("Mutton-shotgun","shotgun Mutton");
+        put("Mutton_variation","standard Mutton");
+        put("Mutton-shotgun_variation","Mutton - farmer uses a shotgun");
+        put("Farmer configuring board","Farmer configuring board");
+        put("Play Farmer","Play Farmer");
+        put("Hide","Hide");
+        put("Wolf player hiding","Wolf player hiding");
+        put("Wolf moving suspects","Wolf moving suspects");
+        put("Eat","Eat");
+        put("Wolf player eating","Wolf player eating");
+        put("Farmer select","Farmer select");
+        put("Shoot","Shoot");
+        put("Farmer moving scared","Farmer moving scared");
+        
+        // octiles
+        put("Octiles","Octiles");
+        put("Octiles_variation","standard Octiles");
+        put("Place the next tile on the board, where a runner can move over it",
+        		"Place the next tile on the board, where a runner can move over it");
+        put("Move a runner","Move a runner");
+        put("Place a tile on the board, where a runner can leave a home space",
+        		"Place a tile on the board, where a runner can leave a home space");
+        put("Move a runner from a home space","Move a runner from a home space");
+        put("Move your runners to the opposite side","Move your runners to the opposite side");
+        
+        // army of frogs
+        put("ArmyOfFrogs","Army of Frogs");
+        put("ArmyOfFrogs_variation","standard Army of Frogs");
+        put("Place a Frog on the board","Place a Frog on the board");
+        put("Move a Frog","Move a Frog");
+        put("Connect all your frogs (at least 7) in one cluster",
+        		"Connect all your frogs (at least 7) in one cluster");
+        
+        // variation to game
+        put("Frogs","Army of Frogs");
+        put("Loa","Lines of Action");
+         put("No Recent Games","No Recent Games");
+        
+        // xiangqi
+        put("Traditional Pieces","Traditional Pieces");
+        put("Checkmate your opponent's general","Checkmate your opponent's general");
+        put("Illegal move due to repetition - try something else",
+        		"Illegal move due to repetition - try something else");
+        put("Xiangqi","Xiangqi");
+        put("Xiangqi_variation","standard Xiangqi");
+        put("You have been offered a draw - Accept or Decline" ,
+        		"You have been offered a draw - Accept or Decline" );
+        put("Offer a Draw","Offer a Draw");
+        put("Accept Draw","Accept Draw");
+        put("Decline Draw","Decline Draw");
+        put("Escape from check","Escape from check");
+        
+        put("Click Done to offer a draw","Click Done to offer a draw");
+        put("Click Done to accept a draw","Click Done to accept a draw");
+        put("Click Done to decline a draw","Click Done to decline a draw");
+        
+        // lobby
+        put("select the type of room","select the type of room");
+        put("select the game to play","select the game to play");
+        put("select the game variation","select the game variation");
+        
+        put("Dipole_family","Dipole");
+        put("Gipf_family","Gipf");
+   		put("Zertz_family","Zèrtz");
+   		put("Yinsh_family","Yinsh");
+     	put("Dvonn_family","Dvonn");
+        put("Tzaar_family","Tzaar");
+        put("Punct_family","Pünct");
+        put("Che_family","Che");
+        put("Micropul_family","Micropul");
+        put("Palago_family","Palago");
+        put("Spangles_family","Spangles");
+        put("Trax_family","Trax");
+        put("Truchet_family","Truchet");
+        put("TumblingDown_family","Tumbling Down");
+        put("Cannon_family","Cannon");
+        put("Fanorona_family","Fanorona");
+        put("Knockabout_family","Knockabout");
+        put("Traboulet_family","Traboulet");
+        put("Triad_family","Triad");
+        put("Xiangqi_family","Xiangqi");
+        put("Octiles_family","Octiles");
+        put("Warp6_family","Warp 6");
+        put("ArmyOfFrogs_family","Army Of Frogs");
+        put("LOA_family","Lines of Action");
+        put("Hive_family","Hive");
+        
+        put("Racing Games","Racing Games");
+        put("Connection Games","Connection Games");
+        put("Plateau_family","Plateau");
+        put("Hex_family","Hex");
+        put("Gobblet_family","Gobblet");
+        put("Exxit_family","Exxit");
+        put("Tablut_family","Tablut");
+        put("Volcano_family","Volcano");
+        put("Qyshinsu_family","Qyshinsu");
+        put("Santorini_family","Santorini");
+        put("Medina_family","Medina");
+        put("Mutton_family","Mutton");
+        put("Tajii","Tajii");
+        put("Tajii_family","Tajii");
+        
+        put("LOAP","LOAP");
+        put("Tumblingdown","Tumbling Down");
+        // misc
+        put("All Games","All Games");
+        // breaking away
+        put("BreakingAway","Breaking Away");
+        put("BreakingAway_variation","standard Breaking Away");
+        put("BreakingAway_family","Breaking Away");
+        put("Adjust","Adjust");
+        put("Move a Cyclist","Move a Cyclist");
+        put("Score the most points at the sprint and finish lines",
+        		"Score the most points at the sprint and finish lines");
+        put("Adjust your starting movements","Adjust your starting movements");
+        put("Wait for other players to adjust","Wait for other players to adjust");
+        put("The next sprint bonus is #1","The next sprint bonus is #1");
+        put("#1 riders have crossed the second sprint line.",
+        		"#1 riders have crossed the second sprint line.");
+        put("#1 riders have crossed the first sprint line.",
+        		"#1 riders have crossed the first sprint line.");
+        put("#1 riders have finished","#1 riders have finished");
+        put("The next finish bonus is #1","The next finish bonus is #1");
+        put("Rider Size","Rider Size");
+        put("Confirm Dropping this rider","Confirm Dropping this rider");
+        put("Drop this rider from the Race","Drop this rider from the Race");
+        put("Animate","Animate");
+        
+        // container
+        put("Container","Container");
+        put("Container-First","Container - Original");
+        put("Euro Games","Euro Games");
+        put("Container-First_variation","Container with the original rules");
+        
+        put("Auction","Auction");
+        put("Maximize your profits","Maximize your profits");
+        put("Bank","Bank");
+        put("Loan for #1 from #2", "Loan for #1 from #2");
+        put("Container_family","Container");
+        put("Container_variation","Container with second shipment rules");
+        put("Take your first action","Take your first action");
+        put("Click Done to confirm this action","Click Done to confirm this action");
+        put("Reprice the goods in your factory storage","Reprice the goods in your factory storage");
+        put("Take your second action","Take your second action");
+        put("Warehouse","Warehouse");
+        put("Unsold Warehouses","Unsold Warehouses");
+        put("#1 Ship","#1 Ship");
+        put("#1 Machine","#1 Machine");
+        put("#1 #2 Containers","#1 #2 Containers");
+        put("Loan Card","Loan Card");
+        put("Let someone else make the loan","Let someone else make the loan");
+        put("I will make the loan","I will make the loan");
+        put("fund a loan from a player or the bank","fund a loan from a player or the bank");
+        put("Load the goods you will produce","Load the goods you will produce");
+        put("set bid amount","set bid amount");
+        put("Offer a price for the goods on the ship","Offer a price for the goods on the ship");
+        put("Load the your warehouse from the seller","Load the your warehouse from the seller");
+        put("Reprice the goods in your warehouse storage","Reprice the goods in your warehouse storage");
+        put("Load your ship from the Dock","Load your ship from the Dock");
+        put("Load more goods from the Dock","Load more goods from the Dock");
+        put("Buy the goods for $#1","Buy the goods for $#1");
+        put("Accept $#1 from #2","Accept $#1 from #2");
+        put("Bid $ #1","Bid $ #1");
+        put("Requesting Bids","Requesting Bids");
+        put("you may increase your bid","you may increase your bid");
+        put("Wait for the other players to decide","Wait for the other players to decide");
+        put("accept the bid, or pay the amount yourself","accept the bid, or pay the amount yourself");
+        put("trade a second container for a gold container","trade a second container for a gold container");
+        put("You must take out a loan to pay interest","You must take out a loan to pay interest");
+        put("Requesting Loan","Requesting Loan");
+        put("No, let the bank fund it","No, let the bank fund it");
+        put("Accept the loan from the bank", "Accept the loan from the bank");
+        put("Yes, I will fund the loan","Yes, I will fund the loan");
+        put("Place your bid to fund the loan","Place your bid to fund the loan");
+        put("Decline the loan","Decline the loan");
+        put("Accept this loan financing or not","Accept this loan financing or not");
+        put("Choose the penalty for non-payment of interest","Choose the penalty for non-payment of interest");
+        put("Loan for #1 from the bank","Loan for #1 from the bank");
+        put("Spot Price #1","Spot Price #1");
+        put("click Done to finish this Auction","click Done to finish this Auction");
+        put("load a luxury container","load a luxury container");
+        
+        // for stats
+        put("Cash/Score","Cash/Score");
+        put("Machines","Machines");
+        put("Warehouses","Warehouses");
+        put("Shipping","Shipping");
+        put("Island","Island");
+        put("Loans","Loans");
+        // arimaa
+        put("Move a Rabbit to the last row","Move a Rabbit to the last row");
+        put("Reverse View","Reverse View");
+        put("Move a piece, step #1","Move a piece, step #1");
+        put("Complete the push, step #1","Complete the push, step #1");
+        put("Complete the pull, step #1","Complete the pull, step #1");
+        put("Place all your pieces in your two home rows","Place all your pieces in your two home rows");
+        put("Arimaa_family","Arimaa");
+        put("Arimaa","Arimaa");
+        put("Arimaa_variation","Standard Arimaa");
+        put("Place the Rabbits","Place the Rabbits");
+        put("Illegal due to repetition, try something else or resign","Illegal due to repetition, try something else or resign");
+        put("Complete a push or pull, step #1","Complete a push or pull, step #1");
+        
+        // crossfire
+        put("Crossfire_family","Crossfire");
+        put("Crossfire","Crossfire");
+        put("Crossfire_variation","standard Crossfire");
+        put("own all the stacks","own all the stacks");
+        put("#1 prisoners","#1 prisoners");
+        put("#1 reserves","#1 reserves");
+        
+        // game controls 
+        put("Rotate the board 180 degrees","Rotate the board 180 degrees");
+        put("Spread out the stacks","Spread out the stacks");
+        put("Adjust the chip spacing in stacks","Adjust the chip spacing in stacks");
+        put("Switch to a more overhead view of the board","Switch to a more overhead view of the board");
+        put("Switch to a more oblique view of the board","Switch to a more oblique view of the board");
+    }
 }
