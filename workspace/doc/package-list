@@ -1,9 +1,6 @@
 checkerboard
-checkerboard.jdk11
 hex
-hex.jdk11
 online
 online.common
 online.game
 online.game.sgf
-online.jdk11
