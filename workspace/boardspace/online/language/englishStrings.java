@@ -253,8 +253,8 @@ public class englishStrings extends internationalStrings
         put("Drop your piece onto the board or any stack",
             "Drop your piece onto the board or any stack");
         put("Click Done to Finish the move", "Click Done to Finish the move");
-        put("Drop the moving stack back on the rack",
-            "Drop the moving stack back on the rack");
+        put("Drop the moving stack back on the barriers",
+            "Drop the moving stack back on the barriers");
         put("Pick up and Continue your move", "Pick up and Continue your move");
         put("Shuffle pieces to the exchange area, Click Done to start the exchange",
             "Shuffle pieces to the exchange area, Click Done to start the exchange");

@@ -46,7 +46,7 @@ public interface CheckerConstants extends OnlineConstants
     static final int MOVE_DROP = 205; // drop a chip
     static final int MOVE_PICKB = 206; // pick from the board
     static final int MOVE_DROPB = 207; // drop on the board
-    static final int MOVE_RACK_BOARD = 209;	// move from rack to board
+    static final int MOVE_RACK_BOARD = 209;	// move from barriers to board
     static final int MOVE_BOARD_BOARD = 210;	// move board to board
 	
     static final String Checker_SGF = "Checker"; // sgf game number allocated for hex

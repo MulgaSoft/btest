@@ -821,7 +821,7 @@ private void playSounds(commonMove mm)
 			{//if we're dragging a black chip around, drop it.
             	switch(state)
             	{
-            	default: G.Error("can't drop on rack in state "+state);
+            	default: G.Error("can't drop on barriers in state "+state);
                 	case PLAY_STATE:
             		PerformAndTransmit(commonMove.RESET);
             		break;

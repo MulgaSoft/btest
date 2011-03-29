@@ -306,7 +306,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 
 
     //
-    // return true if balls[rack][ball] should be selectable, meaning
+    // return true if balls[barriers][ball] should be selectable, meaning
     // we can pick up a ball or drop a ball there.  movingBallColor is 
     // the ball we would drop, or -1 if we want to pick up
     //
@@ -704,7 +704,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
   	return((pickedObject!=null)				// something moving
   			&&(pickedSource.onBoard 
   					? (cell!=pickedSource)	// dropping on the board, must be to a different cell 
-  					: (cell==pickedSource))	// dropping in the rack, must be to the same cell
+  					: (cell==pickedSource))	// dropping in the barriers, must be to the same cell
   				);
   }
  

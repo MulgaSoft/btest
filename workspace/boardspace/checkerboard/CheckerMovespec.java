@@ -105,11 +105,11 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
         default:
             G.Error("Cant parse " + cmd);
         
-        case MOVE_RACK_BOARD:	// a robot move from the rack to the board
+        case MOVE_RACK_BOARD:	// a robot move from the barriers to the board
             op = opcode;
-            source = D.getInt(msg.nextToken());	// white rack or black rack
+            source = D.getInt(msg.nextToken());	// white barriers or black barriers
             from_col = '@';						// always
-            from_row = G.IntToken(msg);			// index into the rack
+            from_row = G.IntToken(msg);			// index into the barriers
             object = G.IntToken(msg);			// cup size
  	        to_col = G.CharToken(msg);			// destination cell col
 	        to_row = G.IntToken(msg);  			// destination cell row
