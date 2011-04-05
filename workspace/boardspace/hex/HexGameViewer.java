@@ -740,7 +740,7 @@ public class HexGameViewer extends commonCanvas
  * be called while we are in review mode, so the current state of the board should
  * not be considered.
  */
-    public commonMove ParseNewMove(StringTokenizer st)
+    public commonMove ParseNewMove(String st)
     {
         return (new Hexmovespec(st, -1));
     }
