@@ -1,6 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
   <title>BoardSpace.net Home Page</title>
   <script src="/js/site.js"></script>
 </head>
@@ -40,7 +42,6 @@ game is the thing!<br>
 <br>
 <!--#include virtual="/cgi-bin/top_games.cgi?embed=1" --><br>
 <br>
-<p></p>
 <div style="text-align: center;"><span style="font-weight: bold;">Other
 Stuff</span><br>
 </div>
@@ -54,7 +55,9 @@ Stuff</span><br>
       <td style="vertical-align: top;"> Candidates for the next game
 are listed on this <a
  href="http://boardgamegeek.com/geeklist/12240/item/439185#item439185">geeklist</a>.;&nbsp;
-Add your candidates.<a href="http://boardgamegeek.com/game/1337"></a></td>
+Add
+your
+candidates.</td>
     </tr>
     <tr>
       <td style="vertical-align: top;"><font size="+1"><a
@@ -110,20 +113,17 @@ document.write("r\@board");
 document.write("space.net'>gamemaste<n>r@board<n>space.net</a>");
       </script></font><br>
       </td>
-      <td style="vertical-align: top; text-align: center;">
-visitor map
-<a
+      <td style="vertical-align: top; text-align: center;">visitor map <a
  href="http://www4.clustrmaps.com/counter/maps.php?url=http://www.boardspace.net"
  id="clustrMapsLink"><img
  src="http://www4.clustrmaps.com/counter/index2.php?url=http://www.boardspace.net"
- height="35" width="50">
-      </a><br>
+ width="50" height="35"> </a><br>
       </td>
       <td style="vertical-align: top;"><a href="logon-page.html">Site<br>
 &nbsp;Map</a><br>
       </td>
-<td>
-<script type="text/javascript">
+      <td>
+      <script type="text/javascript">
 
 // Google Internal Site Search script- By JavaScriptKit.com (http://www.javascriptkit.com)
 // For this and over 400+ free scripts, visit JavaScript Kit- http://www.javascriptkit.com/
@@ -134,15 +134,12 @@ var domainroot="www.boardspace.net"
 function Gsitesearch(curobj){
 curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
 }
-</script>
-<form action="http://www.google.com/search" method="get" onSubmit="Gsitesearch(this)">
-
-<input name="q" type="hidden" />
-<input name="qfront" type="text" style="width: 120px" /> <input type="submit" value="Search this site" /></p>
-
-</form>
-
-</td>
+      </script>
+      <form action="http://www.google.com/search" method="get"
+ onsubmit="Gsitesearch(this)"><input name="q" type="hidden"> <input
+ name="qfront" style="width: 120px;" type="text"> <input
+ value="Search this site" type="submit"> </form>
+      </td>
       <td align="right">Go to <a href="/">BoardSpace.net home page</a>
       </td>
     </tr>
