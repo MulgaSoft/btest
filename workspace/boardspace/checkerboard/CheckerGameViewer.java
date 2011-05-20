@@ -150,7 +150,7 @@ public class CheckerGameViewer extends commonCanvas
         int sncols = (b.boardColumns*SUBCELL+20); // more cells wide to allow for the aux displays
         int snrows = (b.boardRows+1)*SUBCELL;  
         int cellw = width / sncols;
-        chatHeight = selectChatHeight(height);
+        int chatHeight = selectChatHeight(height);
         int cellh = (height-chatHeight) / snrows;
         int ideal_logwidth = CELLSIZE * 12;
         CELLSIZE = Math.max(1,Math.min(cellw, cellh)); //cell size appropriate for the aspect ration of the canvas
@@ -555,93 +555,108 @@ public class CheckerGameViewer extends commonCanvas
     
 
 
-/**
- * prepare to add nmove to the history list, but also edit the history
- * to remove redundant elements, so that indecisiveness by the user doesn't
- * result in a messy replay.
- * This may require that move be merged with an existing history move
- * and discarded.  Return null if nothing should be added to the history
- * One should be very cautious about this, only to remove real pairs that
- * result in a null move. It is vital that the operations performed on
- * the history are idential in effect to the manipulations of the board
- * state performed by "nmove".  This is checked by verifyGameRecord().
- * Multiple occurrences of "resign" "start" and "edit" are handled separately
- * in commonEditHistory()
- * 
- */
-    public commonMove EditHistory(commonMove nmove)
-    {
-    	CheckerMovespec newmove = (CheckerMovespec) nmove;
-    	CheckerMovespec rval = newmove;			// default returned value
-        int size = History.size() - 1;
-        int idx = size;
-        int state = b.board_state;
- 
-        while (idx >= 0)
-            {	int start_idx = idx;
-            CheckerMovespec m = (CheckerMovespec) History.elementAt(idx);
-                if(m.next!=null) { idx = -1; }
-                else 
-               {
-                switch (newmove.op)
-                {
-                case MOVE_RESET:
-                	rval = null;	// reset never appears in the record
-                 case MOVE_RESIGN:
-                	// resign unwind any preliminary motions
-                	switch(m.op)
-                	{
-                  	default:	
-                 		if(state==PUZZLE_STATE) { idx = -1; break; }
-                 	case MOVE_PICK:
-                 	case MOVE_PICKB:
-                		UndoHistoryElement(idx);	// undo back to last done
-                		idx--;
-                		break;
-                	case MOVE_DONE:
-                	case MOVE_START:
-                	case MOVE_EDIT:
-                		idx = -1;	// stop the scan
-                	}
-                	break;
-                	
-             case MOVE_DONE:
-             default:
-            		idx = -1;
-            		break;
-               case MOVE_DROPB:
-                	if(m.op==MOVE_PICKB)
-                	{	if((newmove.to_col==m.from_col)
-                			&&(newmove.to_row==m.from_row))
-                		{ UndoHistoryElement(idx);	// pick/drop back to the same spot
-                		  idx--;
-                		  rval=null;
-                		}
-                	else if(idx>0)
-                	{ CheckerMovespec m2 = (CheckerMovespec)History.elementAt(idx-1);
-                	  if((m2.op==MOVE_DROPB)
-                			  && (m2.to_col==m.from_col)
-                			  && (m2.to_row==m.from_row))
-                	  {	// sequence is pick/drop/pick/drop, edit out the middle pick/drop
-                		UndoHistoryElement(idx);
-                	  	UndoHistoryElement(idx-1);
-                	  	idx = idx-2;
-                	  }
-                	  else { idx = -1; }
-                		
-                	}
-                	else { idx = -1; }
-                	}
-                	else { idx = -1; }
-                	break;
-                	
-            	}
-               }
-            G.Assert(idx!=start_idx,"progress editing history");
-            }
-         return (rval);
-    }
-    /** 
+    /**
+     * prepare to add nmove to the history list, but also edit the history
+     * to remove redundant elements, so that indecisiveness by the user doesn't
+     * result in a messy game log.  
+     * 
+     * For all ordinary cases, this is now handled by the standard implementation
+     * in commonCanvas, which uses the board's Digest() method to distinguish new
+     * states and reversions to past states.
+     * 
+     * For reference, the commented out method below does the same thing for "Hex". 
+     * You could resort to similar techniques to replace or augment what super.EditHistory
+     * does, but your efforts would probably be better spent improving your Digest() method
+     * so the commonCanvas method gives the desired result.
+     * 
+     * Note that it should always be correct to simply return nmove and accept the messy
+     * game record.
+     * 
+     * This may require that move be merged with an existing history move
+     * and discarded.  Return null if nothing should be added to the history
+     * One should be very cautious about this, only to remove real pairs that
+     * result in a null move.  It is vital that the operations performed on
+     * the history are identical in effect to the manipulations of the board
+     * state performed by "nmove".  This is checked by verifyGameRecord().
+     * Multiple occurrences of "resign" "start" and "edit" are handled separately
+     * in commonEditHistory()
+     * 
+     */
+
+//    public commonMove EditHistory(commonMove nmove)
+//    {
+//    	CheckerMovespec newmove = (CheckerMovespec) nmove;
+//    	CheckerMovespec rval = newmove;			// default returned value
+//        int size = History.size() - 1;
+//        int idx = size;
+//        int state = b.board_state;
+// 
+//        while (idx >= 0)
+//            {	int start_idx = idx;
+//            CheckerMovespec m = (CheckerMovespec) History.elementAt(idx);
+//                if(m.next!=null) { idx = -1; }
+//                else 
+//               {
+//                switch (newmove.op)
+//                {
+//                case MOVE_RESET:
+//                	rval = null;	// reset never appears in the record
+//                 case MOVE_RESIGN:
+//                	// resign unwind any preliminary motions
+//                	switch(m.op)
+//                	{
+//                  	default:	
+//                 		if(state==PUZZLE_STATE) { idx = -1; break; }
+//                 	case MOVE_PICK:
+//                 	case MOVE_PICKB:
+//               		UndoHistoryElement(idx);	// undo back to last done
+//                		idx--;
+//                		break;
+//                	case MOVE_DONE:
+//                	case MOVE_START:
+//                	case MOVE_EDIT:
+//                		idx = -1;	// stop the scan
+//                	}
+//                	break;
+//                	
+//             case MOVE_DONE:
+//             default:
+//            		idx = -1;
+//            		break;
+//               case MOVE_DROPB:
+//                	if(m.op==MOVE_PICKB)
+//                	{	if((newmove.to_col==m.from_col)
+//                			&&(newmove.to_row==m.from_row))
+//                		{ UndoHistoryElement(idx);	// pick/drop back to the same spot
+//                		  idx--;
+//                		  rval=null;
+//                		}
+//                	else if(idx>0)
+//                	{ CheckerMovespec m2 = (CheckerMovespec)History.elementAt(idx-1);
+//                	  if((m2.op==MOVE_DROPB)
+//                			  && (m2.to_col==m.from_col)
+//                			  && (m2.to_row==m.from_row))
+//                	  {	// sequence is pick/drop/pick/drop, edit out the middle pick/drop
+//                		UndoHistoryElement(idx);
+//                	  	UndoHistoryElement(idx-1);
+//                	  	idx = idx-2;
+//                	  }
+//                	  else { idx = -1; }
+//                		
+//                	}
+//                	else { idx = -1; }
+//                	}
+//                	else { idx = -1; }
+//                	break;
+//                	
+//            	}
+//               }
+//            G.Assert(idx!=start_idx,"progress editing history");
+//            }
+//         return (rval);
+//    }
+//
+   /** 
      * this method is called from deep inside PerformAndTransmit, at the point
      * where the move has been executed and the history has been edited.  It's
      * purpose is to veryfy that the history accurately represents the current
@@ -821,7 +836,7 @@ private void playSounds(commonMove mm)
 			{//if we're dragging a black chip around, drop it.
             	switch(state)
             	{
-            	default: G.Error("can't drop on barriers in state "+state);
+            	default: G.Error("can't drop on rack in state "+state);
                 	case PLAY_STATE:
             		PerformAndTransmit(commonMove.RESET);
             		break;
@@ -908,7 +923,7 @@ private void playSounds(commonMove mm)
      * this is a token or tokens that initialize the variation and
      * set immutable parameters such as the number of players
      * and the random key for the game.  It can be more than one
-     * token, which ought to be parsable by {@link online.game.commonCanvas.performHistoryInitialization}
+     * token, which ought to be parsable by {@link online.game.commonCanvas.performHistoryInitialization()}
      * @return return what will be the init type for the game
      */
     public String gameType() 
@@ -954,7 +969,7 @@ private void playSounds(commonMove mm)
     
     /**
      * parse and perform the initialization sequence for the game, which
-     * was produced by {@link online.game.commonCanvas.gameType}
+     * was produced by {@link online.game.commonCanvas#gameType}
      */
     public void performHistoryInitialization(StringTokenizer his)
     {	String token = his.nextToken();		// should be a checker init spec

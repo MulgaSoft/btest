@@ -124,6 +124,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         chips_on_board = 0;
         droppedDest = null;
         pickedSource = null;
+        pickedObject = null;
         lastDroppedObject = null;
 
 		playerColor[0]=White_Chip_Pool;
@@ -157,7 +158,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 			G.Assert(playerColor[i]==from_b.playerColor[i],"Player colors match");
 			G.Assert(playerChip[i]==from_b.playerChip[i],"Player chars must match");
         }
-
+        G.Assert(pickedObject==from_b.pickedObject, "picked Object matches");
         // here, check any other state of the board to see if
         G.Assert((whoseTurn == from_b.whoseTurn) &&
             (board_state == from_b.board_state) &&
@@ -211,12 +212,13 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 		{	
             v ^= c.Digest(r);
 		}
-
+		{int po = r.nextInt();
+		 if(pickedObject!=null) { po = po<<(pickedObject.chipNumber()+1); }
+		 v ^= po;
+		}
         if(resign_planned) { v^=r.nextInt(); }
-        // for most games, we should also digest whose turn it is
-		//int v0 = r.nextInt();
-		//int v1 = r.nextInt();
-		//v ^= whoseTurn==0 ? v0 : v1;	// player to mvoe
+        v ^= board_state;
+		v ^= (r.nextInt() << whoseTurn);	// player to move
         return (v);
     }
 
@@ -237,7 +239,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         moveNumber = from_b.moveNumber;
         droppedDest = null;
         pickedSource = null;
-        pickedObject = null;
+        pickedObject = from_b.pickedObject;
         lastPicked = null;
 
 		for(int i=0;i<2;i++) 
@@ -691,7 +693,7 @@ void doSwap()
 
        case MOVE_RESIGN:
             next_rp = !resign_planned;
-           // fall through and be like reset
+            break;
        case MOVE_RESET:
         	switch(board_state)
         	{

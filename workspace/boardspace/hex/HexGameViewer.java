@@ -98,6 +98,7 @@ public class HexGameViewer extends commonCanvas
     private Color RingFillColor = new Color(10, 163, 190);
     private Color RingTextColor = Color.black;
     private Color GridColor = Color.black;
+    private Color chatBackgroundColor = new Color(255,230,230);
     private Color rackBackGroundColor = new Color(225,192,182);
     private Color boardBackgroundColor = new Color(220,165,155);
     private Color vcrButtonColor = new Color(0.7f, 0.7f, 0.75f);
@@ -236,14 +237,14 @@ public class HexGameViewer extends commonCanvas
 	 *  with the "addRect" mechanism to help visualize the layout.
 	 */ 
     public void setLocalBounds(int x, int y, int width, int height)
-    {
-        int ncols = 41; // more cells wide to allow for the aux displays
-        int nrows = 23 ;  
+    {	boolean wideFormat = (height*1.6)<width;
+        int ncols = 34; // more cells wide to allow for the aux displays
+        int nrows = wideFormat?16:18;  
         int cellw = width / ncols;
-        chatHeight = selectChatHeight(height);
-        int cellh = (height-chatHeight) / nrows;
-        
+        int chatHeight = selectChatHeight(height);
+        int cellh = (height-(wideFormat?0:chatHeight)) / nrows;
         CELLSIZE = Math.max(2,Math.min(cellw, cellh)); //cell size appropriate for the aspect ratio of the canvas
+        int logHeight = wideFormat ? CELLSIZE*4 : chatHeight;
 
         fullRect.x = 0;			// the whole canvas
         fullRect.y = 0;
@@ -251,7 +252,7 @@ public class HexGameViewer extends commonCanvas
         fullRect.height = height;
 
         boardRect.x = 0;		// the main board
-        boardRect.y = chatHeight;
+        boardRect.y = wideFormat ? CELLSIZE : chatHeight;
         boardRect.width = CELLSIZE * (int)(nrows*1.5);
         boardRect.height = CELLSIZE * (nrows );
 
@@ -260,49 +261,45 @@ public class HexGameViewer extends commonCanvas
         stateRect.height = CELLSIZE/2;
         stateRect.width = boardRect.width-CELLSIZE;
         
-        logRect.width = CELLSIZE * 10;
-        logRect.x = fullRect.width-logRect.width-CELLSIZE/2;	// the game log
-        logRect.y = fullRect.y ;
-        logRect.height = chatRect.height;
+        logRect.width = CELLSIZE * 6;
+        logRect.x = wideFormat ? G.Right(boardRect)-logRect.width-CELLSIZE
+        						:fullRect.width-logRect.width-CELLSIZE/2;	// the game log
+        logRect.y = fullRect.y +CELLSIZE/2;
+        logRect.height = logHeight;
 
-        chatRect.x = fullRect.x;		// the chat area
-        chatRect.y = fullRect.y;
-        chatRect.width = fullRect.width-logRect.width-CELLSIZE;
-        chatRect.height = chatHeight;
-
- 
-
-		swapRect.x = boardRect.x + CELLSIZE;	//the "swap colors" button which appears briefly
+ 		swapRect.x = boardRect.x + CELLSIZE;	//the "swap colors" button which appears briefly
 		swapRect.y = boardRect.y+(doRotation?2:14)*CELLSIZE;
 		swapRect.width = CELLSIZE * 5;
 		swapRect.height = CELLSIZE ;
 
 		// a pool of chips for the first player at the top
-        firstPlayerChipRect.x = (boardRect.x + boardRect.width) - 8*CELLSIZE;
-        firstPlayerChipRect.y = boardRect.y+CELLSIZE*2;
-        firstPlayerChipRect.width = 5*CELLSIZE;
-        firstPlayerChipRect.height = 2*CELLSIZE;
+        firstPlayerChipRect.x = wideFormat?G.Right(boardRect) : (boardRect.x + boardRect.width) - 8*CELLSIZE;
+        firstPlayerChipRect.y = wideFormat?fullRect.y+CELLSIZE: chatHeight+CELLSIZE;
+        firstPlayerChipRect.width = 2*CELLSIZE;
+        firstPlayerChipRect.height = 3*CELLSIZE;
+        
+        
         // and for the second player at the bottom
-		secondPlayerChipRect.x =firstPlayerChipRect.x;
-		secondPlayerChipRect.y = boardRect.y+boardRect.height-firstPlayerChipRect.height-CELLSIZE/2;
+		secondPlayerChipRect.x = firstPlayerChipRect.x + (wideFormat?0:4*CELLSIZE); 
+		secondPlayerChipRect.y = firstPlayerChipRect.y+6*CELLSIZE+((doRotation&&!wideFormat)?5*CELLSIZE:0);
 		secondPlayerChipRect.width = firstPlayerChipRect.width;
 		secondPlayerChipRect.height= firstPlayerChipRect.height;
 
 		//this sets up the "vcr cluster" of forward and back controls.
         SetupVcrRects(CELLSIZE / 2,
-            (boardRect.y + boardRect.height) - (5 * CELLSIZE), CELLSIZE * 6,
-            5 * CELLSIZE/2);
+            (boardRect.y + boardRect.height) - (5 * CELLSIZE), CELLSIZE * 4,
+            CELLSIZE*2);
         auxSRect.max = 3.0;		// max scale on the aux sliders
         
         goalRect.x = CELLSIZE * 6;		// really just a general message
-        goalRect.y = G.Bottom(boardRect)-CELLSIZE*2;
+        goalRect.y = G.Bottom(boardRect)-CELLSIZE;
         goalRect.height = CELLSIZE;
         goalRect.width = boardRect.width-14*CELLSIZE;
         
         progressRect.x = goalRect.x+goalRect.width/6;	// a simple progress bar when the robot is running.
         progressRect.width = goalRect.width/2;
         progressRect.y = goalRect.y;
-        progressRect.height = CELLSIZE/2;
+        progressRect.height = CELLSIZE/3;
 
   
         {
@@ -320,25 +317,25 @@ public class HexGameViewer extends commonCanvas
             Rectangle secondPlayerPicRect = pl1.picRect;
             
             //first player name
-            firstPlayerRect.x = G.Right(boardRect)-2*CELLSIZE;
-            firstPlayerRect.y = boardRect.y+CELLSIZE / 2;
-            firstPlayerRect.width = CELLSIZE * 6;
-            firstPlayerRect.height = (3 * CELLSIZE) / 2;
+            firstPlayerRect.x = G.Right(firstPlayerChipRect)+CELLSIZE;
+            firstPlayerRect.y = firstPlayerChipRect.y;
+            firstPlayerRect.width = CELLSIZE * 4;
+            firstPlayerRect.height = CELLSIZE;
             // first player portrait
             firstPlayerPicRect.x = firstPlayerRect.x;
             firstPlayerPicRect.y = G.Bottom(firstPlayerRect);
-            firstPlayerPicRect.width = CELLSIZE * 6;
-            firstPlayerPicRect.height = CELLSIZE * 6;
+            firstPlayerPicRect.width = CELLSIZE * 4;
+            firstPlayerPicRect.height = CELLSIZE * 4;
             // "edit" rectangle, available in reviewers to switch to puzzle mode
-            editRect.x = G.Right(boardRect)+CELLSIZE/2;
-            editRect.y = G.Bottom(firstPlayerPicRect)+CELLSIZE;
-            editRect.width = CELLSIZE*4;
-            editRect.height = 3*CELLSIZE/2;
+            editRect.x = G.Right(boardRect)-CELLSIZE*4;
+            editRect.y = G.Bottom(boardRect)-2*CELLSIZE;
+            editRect.width = CELLSIZE*2;
+            editRect.height = CELLSIZE;
            
      
             //second player name
-            secondPlayerRect.x = firstPlayerRect.x;
-            secondPlayerRect.y = G.Bottom(boardRect) - firstPlayerRect.height;
+            secondPlayerRect.x = G.Right(secondPlayerChipRect)+CELLSIZE;
+            secondPlayerRect.y = secondPlayerChipRect.y;
             secondPlayerRect.width = firstPlayerRect.width;
             secondPlayerRect.height = firstPlayerRect.height;
 
@@ -346,18 +343,17 @@ public class HexGameViewer extends commonCanvas
             // player 2 portrait
             secondPlayerPicRect.x = secondPlayerRect.x;
             secondPlayerPicRect.height = firstPlayerPicRect.height;
-            secondPlayerPicRect.y = secondPlayerRect.y -
-                firstPlayerPicRect.height;
+            secondPlayerPicRect.y = G.Bottom(secondPlayerRect);
             secondPlayerPicRect.width = firstPlayerPicRect.width;
             
             // time dispay for first player
             p0time.x = G.Right(firstPlayerRect);
             p0time.y = firstPlayerRect.y;
-            p0time.width = CELLSIZE * 3;
-            p0time.height = 3*CELLSIZE/2;
+            p0time.width = 3*CELLSIZE/2;
+            p0time.height = CELLSIZE;
             // first player "i'm alive" anumation ball
-            p0anim.x = p0time.x ;
-            p0anim.y = firstPlayerPicRect.y;
+            p0anim.x = G.Right(p0time) ;
+            p0anim.y = p0time.y;
             p0anim.width = CELLSIZE;
             p0anim.height = CELLSIZE;
             // time dispay for second player
@@ -366,15 +362,20 @@ public class HexGameViewer extends commonCanvas
             p1time.width = p0time.width;
             p1time.height = p0time.height;
             
-            p1anim.x = p1time.x;
-            p1anim.y = G.Bottom(secondPlayerPicRect)-p0anim.height;
+            p1anim.x = G.Right(p1time);
+            p1anim.y = p1time.y;
             p1anim.width = p0anim.width;
             p1anim.height = p0anim.height;
        	
-            
+            chatRect.x = wideFormat ? G.Right(boardRect):fullRect.x;		// the chat area
+            chatRect.y = wideFormat ? secondPlayerChipRect.y+6*CELLSIZE : fullRect.y;
+            chatRect.width = fullRect.width-(wideFormat?chatRect.x:logRect.width)-CELLSIZE;
+            chatRect.height = wideFormat?Math.min(fullRect.height-chatRect.y-CELLSIZE/2,chatHeight):chatHeight;
+
+          
             // "done" rectangle, should alway be visible, but only active when a move is complete.
-            doneRect.x = editRect.x;
-            doneRect.y = secondPlayerPicRect.y-editRect.height-CELLSIZE;
+            doneRect.x = editRect.x-3*CELLSIZE;
+            doneRect.y = editRect.y;
             doneRect.width = editRect.width;
             doneRect.height = editRect.height;
            }}
@@ -386,6 +387,7 @@ public class HexGameViewer extends commonCanvas
         //repRect.height = CELLSIZE;
 
         theChat.setBounds(chatRect.x+x,chatRect.y+y,chatRect.width,chatRect.height);
+        theChat.setBackgroundColor(chatBackgroundColor);
         theChat.setVisible(true);
         generalRefresh();
     }
@@ -747,145 +749,192 @@ public class HexGameViewer extends commonCanvas
 /**
  * prepare to add nmove to the history list, but also edit the history
  * to remove redundant elements, so that indecisiveness by the user doesn't
- * result in a messy game log.
+ * result in a messy game log.  
+ * 
+ * For all ordinary cases, this is now handled by the standard implementation
+ * in commonCanvas, which uses the board's Digest() method to distinguish new
+ * states and reversions to past states.
+ * 
+ * For reference, the commented out method below does the same thing for "Hex". 
+ * You could resort to similar techniques to replace or augment what super.EditHistory
+ * does, but your efforts would probably be better spent improving your Digest() method
+ * so the commonCanvas method gives the desired result.
+ * 
+ * Note that it should always be correct to simply return nmove and accept the messy
+ * game record.
+ * 
  * This may require that move be merged with an existing history move
  * and discarded.  Return null if nothing should be added to the history
  * One should be very cautious about this, only to remove real pairs that
  * result in a null move.  It is vital that the operations performed on
- * the history are idential in effect to the manipulations of the board
+ * the history are identical in effect to the manipulations of the board
  * state performed by "nmove".  This is checked by verifyGameRecord().
  * Multiple occurrences of "resign" "start" and "edit" are handled separately
  * in commonEditHistory()
  * 
  */
-    public commonMove EditHistory(commonMove nmove)
-    {
-        Hexmovespec newmove = (Hexmovespec) nmove;
-        Hexmovespec rval = newmove;			// default returned value
-        int state = bb.board_state;
-        int idx = History.size() - 1;
-        
-       while(idx>=0)
-        {	Hexmovespec m = (Hexmovespec) History.elementAt(idx);
-        	int start_idx = idx;
-            if(m.next!=null) 
-            	{ // editing history, don't edit directly
-            		switch(newmove.op)
-            		{	case MOVE_PICK:
-            			case MOVE_DROP:
-            				rval = null;
-            			default: break;
-            		}
-            		idx = -1; 
-            	}
-             else {
-            switch(newmove.op)
-        	{
-            case MOVE_SWAP:
-            	if(m.op==MOVE_SWAP) 
-            		{ UndoHistoryElement(idx);
-             		  rval = null;
-            		  }
-       		  idx=-1;
-              break;
-        	case MOVE_DONE:
-        	default:
-        		idx = -1;
-        		break;
-        	case MOVE_PICK:	
-        		if((state!=PUZZLE_STATE) && (m.op==MOVE_DROPB))
-        			{ UndoHistoryElement(idx); idx=-1; }
-           	case MOVE_DROP:
-           		if((idx>1) && (m.op==MOVE_PICKB) && (state!=PUZZLE_STATE))
-           		{
-           			Hexmovespec m2 = (Hexmovespec) History.elementAt(idx-1);
-           			if((m2.op==MOVE_DROPB)
-           				&& (m2.to_row==m.to_row)
-           				&& (m2.to_col==m.to_col))
-           				{
-           				UndoHistoryElement(idx);
-           				UndoHistoryElement(idx-1);
-           				rval = null;
-           				idx = -1;
-           				}
-           				
-           		}
-           		else if(m.op!=MOVE_PICKB)
-           		{
-        		rval = null;		// picks don't appear in the history.  This is probably peculiar to hex
-           		}
-        		idx = -1;
-        		break;
-        	case MOVE_RESET:
-        		// reset is a special move that gets you back to the start of the
-        		// current player's turn, effectively unwinding all actions taken
-        		// so far.
-        		rval = null;		// reset is never recorded in the history
-        		// fall through
-        	case MOVE_RESIGN:		// resign is your whole move, so acts like reset.
-        		switch(m.op)
-        		{
-                default:
-             		if(state==PUZZLE_STATE) { idx = -1; break; }
-                case MOVE_PICKB:
-                case MOVE_PICK:
-                    UndoHistoryElement(idx);
-                	idx--;
-                    break;
-                case MOVE_DONE: // these stop the scan 
-                case MOVE_EDIT:
-                case MOVE_START:
-                    idx = -1;
-                }
-        		break;
-        	case MOVE_DROPB:
-        		if(state!=PUZZLE_STATE)
-        		{	if(m.op==MOVE_DROPB) 
-        			{ UndoHistoryElement(idx); 
-        			}
-        		}
-        		else
-        		{
-        		if((idx>2)&& (m.op==MOVE_PICKB))
-        		{
-        		Hexmovespec m2 = (Hexmovespec) History.elementAt(idx-1);	
-        		Hexmovespec m3 = (Hexmovespec) History.elementAt(idx-2);	
-        		if((m3.op==MOVE_PICKB)
-        				&& (m2.source==EmptyBoard)
-        				&& (m2.op==MOVE_DROPB)
-        				&& (m2.to_col==m.to_col)
-        				&& (m2.to_row==m.to_row))
-        			{	UndoHistoryElement(idx);
-        				UndoHistoryElement(idx-1);
-        			}
-        		}
-        		}
-        		idx = -1;
-        		break;
-        	case MOVE_PICKB:
-        		if(state!=PUZZLE_STATE)
-        		{
-        		switch(m.op)
-        		{
-        		case MOVE_PICKB:
-        		case MOVE_DROPB:
-        			if( (newmove.to_col==m.to_col)
-            				&& (newmove.to_row==m.to_row))
-            			{
-            				UndoHistoryElement(idx);
-            				if(newmove.op!=m.op) // protect against bounces
-            					{ rval = null; }
-            			}
-        		}}
-   				idx = -1;
-   			 	break;
-        		}	// end of switch on new move
-            }
-            G.Assert(idx!=start_idx,"progress editing history");
-            }
-
-        return (rval);
-    }
+      public commonMove EditHistory(commonMove nmove)
+      {
+    	  commonMove rval = super.EditHistory(nmove);
+    	  if((rval!=null)
+    		 && (bb.board_state==CONFIRM_STATE)
+    	     && (rval.op==MOVE_DROPB))
+    	  {
+    		  // a peculiarity of the hex engine, if we have dropped a stone,
+    		  // we can change our mind by simply dropping another stone elsewhere,
+    		  // or dropping it back in the pool, or picking up a new stone from the pool.
+    		  // Most games do not need this extra logic.
+    		  int idx = History.size()-1;
+    		  while(idx>=0)
+    		  {	Hexmovespec oldMove = (Hexmovespec)History.elementAt(idx);
+    		  	switch(oldMove.op)
+    		  	{
+    		  	case MOVE_DONE:
+    		  	case MOVE_START:
+    		  	case MOVE_EDIT: idx = -1;
+    		  		break;
+    		  	default: 
+    		  		if(oldMove.nVariations()>0) { idx=-1; }
+    		  			else 
+    		  			{ 
+    		  				UndoHistoryElement(idx); 
+    		  				idx--;
+    		  			}
+    		  		break;
+    		  	}
+    		  }
+    	  }
+    	     
+    	  return(rval);
+      }
+ //   public commonMove EditHistory(commonMove nmove)
+ //   {
+ //       Hexmovespec newmove = (Hexmovespec) nmove;
+ //       Hexmovespec rval = newmove;			// default returned value
+ //       int state = bb.board_state;
+ //       int idx = History.size() - 1;
+ //       
+ //      while(idx>=0)
+ //       {	Hexmovespec m = (Hexmovespec) History.elementAt(idx);
+ //       	int start_idx = idx;
+ //           if(m.next!=null) 
+ //           	{ // editing history, don't edit directly
+ //           		switch(newmove.op)
+ //           		{	case MOVE_PICK:
+ //           			case MOVE_DROP:
+ //           				rval = null;
+ //           			default: break;
+ //           		}
+ //           		idx = -1; 
+ //           	}
+ //            else {
+ //           switch(newmove.op)
+ //       	{
+ //           case MOVE_SWAP:
+ //           	if(m.op==MOVE_SWAP) 
+ //           		{ UndoHistoryElement(idx);
+ //            		  rval = null;
+ //           		  }
+ //      		  idx=-1;
+ //             break;
+ //       	case MOVE_DONE:
+ //       	default:
+ //       		idx = -1;
+ //       		break;
+ //       	case MOVE_PICK:	
+ //       		if((state!=PUZZLE_STATE) && (m.op==MOVE_DROPB))
+ //       			{ UndoHistoryElement(idx); idx=-1; }
+ //          	case MOVE_DROP:
+ //          		if((idx>1) && (m.op==MOVE_PICKB) && (state!=PUZZLE_STATE))
+ //          		{
+ //          			Hexmovespec m2 = (Hexmovespec) History.elementAt(idx-1);
+ //          			if((m2.op==MOVE_DROPB)
+ //          				&& (m2.to_row==m.to_row)
+ //          				&& (m2.to_col==m.to_col))
+ //          				{
+ //         				UndoHistoryElement(idx);
+ //          				UndoHistoryElement(idx-1);
+ //          				rval = null;
+ //          				idx = -1;
+ //          				}
+ //          				
+ //          		}
+ //          		else if(m.op!=MOVE_PICKB)
+ //          		{
+ //       		rval = null;		// picks don't appear in the history.  This is probably peculiar to hex
+ //          		}
+ //       		idx = -1;
+ //       		break;
+ //       	case MOVE_RESET:
+ //       		// reset is a special move that gets you back to the start of the
+ //       		// current player's turn, effectively unwinding all actions taken
+ //       		// so far.
+ //       		rval = null;		// reset is never recorded in the history
+ //       		// fall through
+ //       	case MOVE_RESIGN:		// resign is your whole move, so acts like reset.
+ //       		switch(m.op)
+ //       		{
+ //               default:
+ //            		if(state==PUZZLE_STATE) { idx = -1; break; }
+ //               case MOVE_PICKB:
+ //               case MOVE_PICK:
+ //                   UndoHistoryElement(idx);
+ //               	idx--;
+ //                   break;
+ //               case MOVE_DONE: // these stop the scan 
+ //               case MOVE_EDIT:
+ //               case MOVE_START:
+ //                   idx = -1;
+ //               }
+ //       		break;
+ //       	case MOVE_DROPB:
+ //       		if(state!=PUZZLE_STATE)
+ //       		{	if(m.op==MOVE_DROPB) 
+ //       			{ UndoHistoryElement(idx); 
+ //       			}
+ //       		}
+ //       		else
+ //       		{
+ //       		if((idx>2)&& (m.op==MOVE_PICKB))
+ //       		{
+ //       		Hexmovespec m2 = (Hexmovespec) History.elementAt(idx-1);	
+ //      		Hexmovespec m3 = (Hexmovespec) History.elementAt(idx-2);	
+ //       		if((m3.op==MOVE_PICKB)
+ //       				&& (m2.source==EmptyBoard)
+ //       				&& (m2.op==MOVE_DROPB)
+ //       				&& (m2.to_col==m.to_col)
+ //       				&& (m2.to_row==m.to_row))
+ //       			{	UndoHistoryElement(idx);
+ //       				UndoHistoryElement(idx-1);
+ //       			}
+ //       		}
+ //       		}
+ //       		idx = -1;
+ //       		break;
+ //       	case MOVE_PICKB:
+ //       		if(state!=PUZZLE_STATE)
+ //       		{
+ //       		switch(m.op)
+ //       		{
+ //       		case MOVE_PICKB:
+ //       		case MOVE_DROPB:
+ //       			if( (newmove.to_col==m.to_col)
+ //           				&& (newmove.to_row==m.to_row))
+ //           			{
+ //           				UndoHistoryElement(idx);
+ //           				if(newmove.op!=m.op) // protect against bounces
+ //           					{ rval = null; }
+ //           			}
+ //       		}}
+ //  				idx = -1;
+ //  			 	break;
+ //       		}	// end of switch on new move
+ //           }
+ //           G.Assert(idx!=start_idx,"progress editing history");
+ //           }
+ //
+ //       return (rval);
+ //   }
     
     /** 
      * this method is called from deep inside PerformAndTransmit, at the point
@@ -1176,7 +1225,7 @@ public class HexGameViewer extends commonCanvas
      * this is a token or tokens that initialize the variation and
      * set immutable parameters such as the number of players
      * and the random key for the game.  It can be more than one
-     * token, which ought to be parseable by {@link online.game.commonCanvas.performHistoryInitialization()}
+     * token, which ought to be parseable by {@link online.game.commonCanvas#performHistoryInitialization}
      * @return return what will be the init type for the game
      */
      public String gameType() 
@@ -1224,7 +1273,7 @@ public class HexGameViewer extends commonCanvas
    
     /**
      * parse and perform the initialization sequence for the game, which
-     * was produced by {@link online.game.commonCanvas:gameType()}
+     * was produced by {@link online.game.commonCanvas#gameType}
      */
      public void performHistoryInitialization(StringTokenizer his)
     {   //the initialization sequence

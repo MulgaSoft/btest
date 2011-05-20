@@ -5,8 +5,8 @@ import online.game.*;
  * specialized cell used for the game hex, not for all games using a hex board.
  * <p>
  * the game hex needs only a single object on each cell, or empty.
- *  @see {@link chipCell} 
- *  @see {@link stackCell}
+ *  @see chipCell 
+ *  @see stackCell
  * 
  * @author ddyer
  *

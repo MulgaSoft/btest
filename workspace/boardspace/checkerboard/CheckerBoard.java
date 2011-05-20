@@ -114,13 +114,11 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         	c=c.next,d=d.next)
         {	G.Assert(c.sameCell(d),"cells match");
         }
- 
-        // here, check any other state of the board to see if
-        G.Assert((whoseTurn == from_b.whoseTurn) &&
-            (board_state == from_b.board_state) &&
-            (moveNumber == from_b.moveNumber) &&
-            (resign_planned == from_b.resign_planned), "Boards not the same");
-        
+        G.Assert((whoseTurn == from_b.whoseTurn),"whoseTurn matches");
+        G.Assert((board_state == from_b.board_state),"board_state matches");
+        G.Assert((moveNumber == from_b.moveNumber),"moveNumber matches");
+        G.Assert((resign_planned == from_b.resign_planned),"resign_planned matches");
+        G.Assert(board_state==from_b.board_state, "board_state matches");
         // this is a good overall check that all the copy/check/digest methods
         // are in sync, although if this does fail you'll no doubt be at a loss
         // to explain why.
@@ -165,11 +163,14 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 		for(CheckerCell c = allCells; c!=null; c=c.next)
 		{	v ^= c.Digest(r);
 		}
-        // for most games, we should also digest whose turn it is
-		int v0 = r.nextInt();
-		int v1 = r.nextInt();
-		v ^= whoseTurn==0 ? v0 : v1;	// player to move
-
+		{
+			int po = r.nextInt();
+			if(pickedObject!=null) 
+				{ po *= (pickedObject.chipNumber()+2); 
+				}
+			v ^= po;
+		}
+		v ^= (board_state<<(whoseTurn+(resign_planned?3:2)))*r.nextInt();
         return (v);
     }
    public BoardProtocol cloneBoard() 
@@ -191,6 +192,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         whoseTurn = from_b.whoseTurn;
         board_state = from_b.board_state;
         moveNumber = from_b.moveNumber;
+        pickedObject = from_b.pickedObject;
 		for(int i=0;i<2;i++) 
 		{  win[i] = from_b.win[i];
 		   playerColor[i]=from_b.playerColor[i];
@@ -306,7 +308,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 
 
     //
-    // return true if balls[barriers][ball] should be selectable, meaning
+    // return true if balls[rack][ball] should be selectable, meaning
     // we can pick up a ball or drop a ball there.  movingBallColor is 
     // the ball we would drop, or -1 if we want to pick up
     //
@@ -618,7 +620,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 
         case MOVE_RESIGN:
             next_rp = !resign_planned;
-            // fall into reset
+            break;
        case MOVE_RESET:
         	switch(board_state)
         	{
@@ -704,7 +706,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
   	return((pickedObject!=null)				// something moving
   			&&(pickedSource.onBoard 
   					? (cell!=pickedSource)	// dropping on the board, must be to a different cell 
-  					: (cell==pickedSource))	// dropping in the barriers, must be to the same cell
+  					: (cell==pickedSource))	// dropping in the rack, must be to the same cell
   				);
   }
  

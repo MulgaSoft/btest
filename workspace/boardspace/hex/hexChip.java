@@ -44,7 +44,7 @@ public class hexChip extends chip
     static hexChip CANONICAL_PIECE[] = null;
     static hexChip Black = null;
     static hexChip White = null;
-    // indexes into the balls array, usually called the barriers
+    // indexes into the balls array, usually called the rack
     static final char[] chipColor = { 'W', 'B' };
     static final hexChip getChip(int n) { return(CANONICAL_PIECE[n]); }
     /**
