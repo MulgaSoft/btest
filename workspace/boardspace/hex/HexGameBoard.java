@@ -60,8 +60,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     // be represented explicitly, so unwinding is easy and reliable.
     public hexChip pickedObject = null;
     public hexChip lastPicked = null;
-    private hexCell blackChipPool = new hexCell();	// dummy source for the chip pools
-    private hexCell whiteChipPool = new hexCell();
+    private hexCell blackChipPool = null;	// dummy source for the chip pools
+    private hexCell whiteChipPool = null;
     private hexCell pickedSource = null; 
     private hexCell droppedDest = null;
     public Object lastDroppedObject = null;	// for image adjustment logic
@@ -110,14 +110,17 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     private void Init_Standard(String game)
     {	int[] firstcol = null;
     	int[] ncol = null;
+    	Random r = new Random(734687);
     	if(Hex_INIT.equals(game)) { firstcol = ZfirstInCol; ncol = ZnInCol; }
     	else if(Hex_15_INIT.equals(game)) { firstcol = ZfirstInCol15; ncol = ZnInCol15; }
     	else if(Hex_19_INIT.equals(game)) { firstcol = ZfirstInCol19; ncol = ZnInCol19; }
     	else { G.Error("No init named "+game); }
         gametype = game;
         setBoardState(PUZZLE_STATE);
+        blackChipPool = new hexCell(r);
+        whiteChipPool = new hexCell(r);
         initBoard(firstcol, ncol, null); //this sets up the hex board
-        
+        allCells.setDigestChain(r);		// set the randomv for all cells on the board
       	setBorderDirections();	// mark the border cells for use in painting
         
         whoseTurn = FIRST_PLAYER_INDEX;
@@ -186,39 +189,28 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
      * of the board position, this is mainly a debug/development function, but a very useful one.
      * @return
      */
-    public int Digest()
+    public long Digest()
     {
-        int v = 0;
+    	long v = 0;
  
-        // the basic digestion technique is to xor a bunch of random numbers. The key
-        // trick is to always generate exactly the same sequence of random numbers, and
-        // xor some subset of them.  Note that if you tweak this, all the existing
-        // digests are invalidated.
+        // the basic digestion technique is to xor a bunch of random numbers. 
+    	// many object have an associated unique random number, including "chip" and "cell"
+    	// derivatives.  If the same object is digested more than once (ie; once as a chip
+    	// in play, and once as the chip currently "picked up", then it must be given a
+    	// different identity for the second use.
         //
         Random r = new Random(64 * 1000); // init the random number generator
         
-		int c1 = r.nextInt();
-		int c2 = r.nextInt();
-		switch(playerColor[0])
-		{
-		default: G.Error("Not expecting playerColor[0]="+playerColor[0]);
-			break;
-		case Black_Chip_Pool: v^= c1; break;
-		case White_Chip_Pool: v^= c2; break;
-		}
-		// note we can't modernize this without invalidating all the existing
-		// digests.
+		// note we can't change this without invalidating all the existing digests.
 		for(hexCell c=allCells; c!=null; c=c.next)
 		{	
-            v ^= c.Digest(r);
+            v ^= c.Digest();
 		}
-		{int po = r.nextInt();
-		 if(pickedObject!=null) { po = po<<(pickedObject.chipNumber()+1); }
-		 v ^= po;
-		}
-        if(resign_planned) { v^=r.nextInt(); }
-        v ^= board_state;
-		v ^= (r.nextInt() << whoseTurn);	// player to move
+		// many games will want to digest pickedSource too
+		// v ^= cell.Digest(r,pickedSource);
+		v ^= chip.Digest(r,playerChip[0]);	// this accounts for the "swap" button
+		v ^= chip.Digest(r,pickedObject);
+		v ^= r.nextLong()*(board_state*10+whoseTurn+(resign_planned?4:2));
         return (v);
     }
 

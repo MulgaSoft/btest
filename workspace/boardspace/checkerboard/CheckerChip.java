@@ -37,9 +37,7 @@ public class CheckerChip extends chip
 	{	return("<"+ name+" #"+colorIndex+">");
 	}
 	
-	public int Digest()
-	{	return(randomv);
-	}
+
 		
 	// note, do not make these private, as some optimization failure
 	// tries to access them from outside.

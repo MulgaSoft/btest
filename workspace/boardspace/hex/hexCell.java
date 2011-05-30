@@ -1,5 +1,7 @@
 package hex;
 
+import java.util.Random;
+
 import online.game.*;
 /**
  * specialized cell used for the game hex, not for all games using a hex board.
@@ -18,7 +20,7 @@ public class hexCell extends chipCell<hexCell,hexChip> implements HexConstants
 	int sweep_counter;		// the sweep counter for which blob is accurate
 	int borders = -1;		// bitmask of possible borders
 
-	public hexCell() { super(); }		// construct a cell not on the board
+	public hexCell(Random r) { super(r); }		// construct a cell not on the board
 	public hexCell(char c,int r) 		// construct a cell on the board
 	{	super(cell.Geometry.Hex,c,r);
 	};

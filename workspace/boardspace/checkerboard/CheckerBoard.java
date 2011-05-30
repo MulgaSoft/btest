@@ -63,34 +63,6 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
      }
 
 
-
-    // standared init for Hex.  Presumably there could be different
-    // initializations for variation games.
-    private void Init_Standard(String game)
-    { 	if(Checker_INIT.equals(game)) 
-    		{ boardColumns=DEFAULT_COLUMNS; 
-    		  boardRows = DEFAULT_ROWS;
-    		}
-    	else { G.Error("No init named "+game); }
-        gametype = game;
-        setBoardState(PUZZLE_STATE);
-        initBoard(boardColumns,boardRows); //this sets up the board and cross links
-        
-        // fill the board with the background tiles
-        for(CheckerCell c = allCells; c!=null; c=c.next)
-        {  int i = (c.row+c.col)%2;
-           c.addChip(CheckerChip.getTile(i));
-        }
-        
-        whoseTurn = FIRST_PLAYER_INDEX;
-		playerColor[FIRST_PLAYER_INDEX]=White_Chip_Pool;
-		playerColor[SECOND_PLAYER_INDEX]=Black_Chip_Pool;
-        for(int i=FIRST_PLAYER_INDEX;i<=SECOND_PLAYER_INDEX; i++)
-        {
-        chips_on_board[i] = 0;
-        }
-
-    }
 	public void sameboard(BoardProtocol f) { sameboard((CheckerBoard)f); }
 
     /**
@@ -139,9 +111,9 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
      * of the board position, this is mainly a debug/development function, but a very useful one.
      * @return
      */
-   public int Digest()
+   public long Digest()
     {
-        int v = 0;
+        long v = 0;
 
         // the basic digestion technique is to xor a bunch of random numbers. The key
         // trick is to always generate exactly the same sequence of random numbers, and
@@ -150,27 +122,12 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         //
         Random r = new Random(64 * 1000); // init the random number generator
         
-		int c1 = r.nextInt();
-		int c2 = r.nextInt();
-		switch(playerColor[0])
-		{
-		default: G.Error("Not expecting playerColor[0]="+playerColor[0]);
-			break;
-		case Black_Chip_Pool: v^= c1; break;
-		case White_Chip_Pool: v^= c2; break;
-		}
-		
 		for(CheckerCell c = allCells; c!=null; c=c.next)
-		{	v ^= c.Digest(r);
+		{	v ^= c.Digest();
 		}
-		{
-			int po = r.nextInt();
-			if(pickedObject!=null) 
-				{ po *= (pickedObject.chipNumber()+2); 
-				}
-			v ^= po;
-		}
-		v ^= (board_state<<(whoseTurn+(resign_planned?3:2)))*r.nextInt();
+		v ^= chip.Digest(r,pickedObject);
+		v ^= cell.Digest(r,pickedSource);
+		v ^= (board_state*10+whoseTurn+(resign_planned?4:2))*r.nextLong();
         return (v);
     }
    public BoardProtocol cloneBoard() 
@@ -193,6 +150,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         board_state = from_b.board_state;
         moveNumber = from_b.moveNumber;
         pickedObject = from_b.pickedObject;
+        pickedSource = getCell(from_b.pickedSource);
+        droppedDest = getCell(from_b.droppedDest);
 		for(int i=0;i<2;i++) 
 		{  win[i] = from_b.win[i];
 		   playerColor[i]=from_b.playerColor[i];
@@ -213,15 +172,41 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     public void doInit(String gtype,int key)
     {	randomKey = key;	// not used, but for reference in this demo game
     	rack = new CheckerCell[CheckerChip.N_STANDARD_CHIPS*2];
+    	Random r = new Random(67246765);
      	for(int i=0,pl=FIRST_PLAYER_INDEX;i<CheckerChip.N_STANDARD_CHIPS*2; i++,pl=nextPlayer[pl])
     	{
-       	CheckerCell cell = new CheckerCell();
+       	CheckerCell cell = new CheckerCell(r);
        	cell.rackLocation=RackLocation[i];
        	cell.addChip(CheckerChip.getChip(i));
     	rack[i]=cell;
      	}    
-       Init_Standard(gtype.toLowerCase());
- 
+     	{
+     	String game = gtype.toLowerCase();
+     	if(Checker_INIT.equals(game)) 
+     		{ boardColumns=DEFAULT_COLUMNS; 
+     		boardRows = DEFAULT_ROWS;
+     		}
+     	else { G.Error("No init named "+game); }
+     	gametype = game;
+     	}
+	    setBoardState(PUZZLE_STATE);
+	    initBoard(boardColumns,boardRows); //this sets up the board and cross links
+	    
+	    
+	    // fill the board with the background tiles
+	    for(CheckerCell c = allCells; c!=null; c=c.next)
+	    {  int i = (c.row+c.col)%2;
+	       c.addChip(CheckerChip.getTile(i));
+	    }
+	    
+	    whoseTurn = FIRST_PLAYER_INDEX;
+		playerColor[FIRST_PLAYER_INDEX]=White_Chip_Pool;
+		playerColor[SECOND_PLAYER_INDEX]=Black_Chip_Pool;
+	    for(int i=FIRST_PLAYER_INDEX;i<=SECOND_PLAYER_INDEX; i++)
+	    {
+	    chips_on_board[i] = 0;
+	    }
+        allCells.setDigestChain(r);
         win[0] = win[1] = false;
         resign_planned = false;
         moveNumber = 1;
@@ -383,6 +368,24 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         return (HitNoWhere);
     }
     
+    public CheckerCell getLocalCell(int source,char col,int row)
+    {
+        switch (source)
+        {
+        default:
+            G.Error("Not expecting source " + source);
+        case BoardLocation:
+        	return(getCell(col,row));
+        case White_Chip_Pool:
+       		return(rack[White_Chip_Index]);
+        case Black_Chip_Pool:
+       		return(rack[Black_Chip_Index]);
+        }
+    }
+    public CheckerCell getCell(CheckerCell c)
+    {
+    	return((c==null)?null:getLocalCell(c.rackLocation,c.col,c.row));
+    }
 	// pick something up.  Note that when the something is the board,
     // the board location really becomes empty, and we depend on unPickObject
     // to replace the original contents if the pick is cancelled.

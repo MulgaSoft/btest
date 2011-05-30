@@ -1051,7 +1051,6 @@ private void playSounds(commonMove mm)
             	String typ = st.nextToken();
             	int ran = G.IntToken(st);
                 b.doInit(typ,ran);
-                resetBounds();
              }
             else if (name.equals(comment_property))
             {

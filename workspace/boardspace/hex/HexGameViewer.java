@@ -1406,8 +1406,7 @@ public class HexGameViewer extends commonCanvas
             if (setup_property.equals(name))
             {
                 bb.doInit(value);
-                resetBounds();
-             }
+              }
             else if (name.equals(comment_property))
             {
                 comments += value;
