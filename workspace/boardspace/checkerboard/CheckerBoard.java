@@ -99,17 +99,29 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     }
 
     /** 
-     * Digest produces a 32 bit hash of the game state.  This is used 3 different
-     * ways in the system.
-     * (1) This is used in fraud detection to see if the same game is being played
+     * Digest produces a 64 bit hash of the game state.  This is used in many different
+     * ways to identify "same" board states.  Some are germaine to the ordinary operation
+     * of the game, others are for system record keeping use; so it is important that the
+     * game Digest be consistent both within a game and between games over a long period
+     * of time which have the same moves. 
+     * (1) Digest is used by the default implementation of EditHistory to remove moves
+     * that have returned the game to a previous state; ie when you undo a move or
+     * hit the reset button.  
+     * (2) Digest is used after EditHistory to verify that replaying the history results
+     * in the same game as the user is looking at.  This catches errors in implementing
+     * undo, reset, and EditHistory
+	 * (3) Digest is used by standard robot search to verify that move/unmove 
+	 * returns to the same board state, also that move/move/unmove/unmove etc.
+	 * (4) Digests are also used as the game is played to look for draw by repetition.  The state
+     * after most moves is recorded in a hashtable, and duplicates/triplicates are noted.
+     * (5) games where repetition is forbidden (like xiangqi/arimaa) can also use this
+     * information to detect forbidden loops.
+	 * (6) Digest is used in fraud detection to see if the same game is being played
      * over and over. Each game in the database contains a digest of the final
      * state of the game, and a midpoint state of the game. Other site machinery
-     *  looks for duplicate digests.  
-     * (2) Digests are also used as the game is played to look for draw by repetition.  The state
-     * after most moves is recorded in a hashtable, and duplicates/triplicates are noted.
-     * (3) Digests are used by the search machinery as a check on the robot's winding/unwinding
-     * of the board position, this is mainly a debug/development function, but a very useful one.
-     * @return
+     * looks for duplicate digests.  
+     * (7) digests are also used in live play to detect "parroting" by running two games
+     * simultaneously and playing one against the other.
      */
    public long Digest()
     {
