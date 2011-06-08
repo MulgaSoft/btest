@@ -1,0 +1,1118 @@
+S #1 #2 Containers
+S #1 Machine
+S #1 Ship
+K #1 center
+V #1 sentrum
+K #1 choices
+V #1 valg
+K #1 deliberately quit
+V #1 sluttet med vilje.
+K #1 has been muted, by a consensus of the players
+V #1 har blitt fratatt taleretten, etter enighet mellom spillerne.
+K #1 has quit and become a spectator
+V #1 har sluttet og blitt en tilskuer.
+K #1 invites #2 to join room #3
+V #1 inviterer #2 til rom #3.
+K #1 invites #2 to play #3 in room #4
+V #1 inviterer #2 Spill #3 rom #4.
+K #1 is taking over for #2
+V #1 tar over for #2.
+K #1 is taking over playing #2 for #3
+V #1 tar over for #3 \u00e5 spille #2.
+K #1 killed due to #2
+V #1 drept p\u00e5 grunn av #2
+K #1 left
+V #1 venstre
+S #1 prisoners
+K #1 quit
+V #1 sluttet.
+K #1 repetitions
+V #1 gjentagelser
+K #1 requests Joint review
+V #1: Foresp\u00f8rsel om felles gjennomgang. Velg \u00abFelles gjennomgang\u00bb under \u00abMeldinger\u00bb i menyen.
+S #1 reserves
+S #1 riders have crossed the first sprint line.
+S #1 riders have crossed the second sprint line.
+S #1 riders have finished
+K #1 starts Joint review
+V #1: Blir med p\u00e5 felles gjennomgang
+K (unknown)
+V (ukjent)
+K (unoccupied)
+V (ledig)
+K (vacancy)
+V (ledig)
+S + #1 turns
+S ...plus #1 more
+K 1 choice
+V 1 valg
+K 4w 5g 6b or 3 of each wins
+V 4hv 5g 6s eller 3 av hver for \u00e5 vinne.
+S Accept $#1 from #2
+S Accept Draw
+K Accept chat from #1
+V Tillat chat fra #1
+S Accept the loan from the bank
+S Accept this loan financing or not
+K Actions
+V Handlinger
+K Active in
+V Aktiv i
+K Add a ball
+V Legg til en ball.
+K Add a ball, remove a Ring
+V Legg til en ball og fjern en ring.
+S Adjust
+S Adjust the chip spacing in stacks
+S Adjust your starting movements
+S All Games
+K Allow challenges from #1
+V Tillat invitasjoner fra #1
+S Animate
+K Anyone can play in this room
+V Alle kan spille i dette rommet.
+K Apr #1#2#3
+V #1. apr, #2.#3 GMT
+S Aqua
+S Arimaa
+K Arimaa_family
+V Arimaa
+K Arimaa_variation
+V Standard Arimaa
+K ArmyOfFrogs
+V Army of Frogs
+K ArmyOfFrogs_family
+V Army Of Frogs
+K ArmyOfFrogs_variation
+V standard Army of Frogs
+S Auction
+K Aug #1#2#3
+V #1. aug, #2.#3 GMT
+S Bank
+K Become a Spectator
+V Bli tilskuer
+S Bid $ #1
+K Black
+V svart
+K Black Pieces
+V Svarte brikker
+S Blue
+K BreakingAway
+V Breaking Away
+K BreakingAway_family
+V Breaking Away
+K BreakingAway_variation
+V standard Breaking Away
+S Build adjacent to the man you moved
+K Build an initial stack of 2 to be placed
+V Bygg en stabel med to brikker som skal plasseres p\u00e5 brettet.
+S Buy the goods for $#1
+K Calling server...
+V Kontakter serveren...
+S Cannon
+K Cannon_family
+V Cannon
+K Cannon_variation
+V standard Cannon
+S Capture 7 red balls or all of your opponent's balls
+K Capture a ball
+V Ta en ball.
+S Capture a group of opponents
+S Capture a stack
+S Capture all of your opponent's pieces
+S Capture most of your opponent's pieces
+K Capture the best combinations of all 5 colors
+V Capture the best combinations of colors and sizes
+S Capture the most chips under your color stack
+S Capture your opponent's tallest king stack
+S Capture your opponent's town
+S Capturing Games
+S Cash/Score
+K Chat Room
+V Snakkerom
+S Che
+K Che_family
+V Che
+K Che_variation
+V standard Che
+S Checkmate your opponent's general
+S Choose the penalty for non-payment of interest
+K Click DONE to confirm removing these markers
+V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte at disse skal fjernes.
+K Click DONE to confirm removing this ring
+V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte at denne ringen skal fjernes.
+K Click DONE to confirm this move
+V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte trekket.
+K Click DONE to confirm this placement
+V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte plasseringen.
+K Click Done
+V Klikk \u00abFerdig\u00bb.
+K Click Done to Finish the move
+V Klikk \u00abFerdig\u00bb for \u00e5 avslutte trekket.
+S Click Done to accept a draw
+K Click Done to complete the exchange
+V Klikk \u00abFerdig\u00bb for \u00e5 avslutte utvekslingen.
+K Click Done to confirm swapping colors with your opponent
+V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte at du bytter farge med motstanderen.
+K Click Done to confirm swapping fleets with your opponent
+V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte at du vil bytte fl\u00e5ter med motstanderen.
+S Click Done to confirm this action
+K Click Done to confirm this move
+V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte dette trekket.
+S Click Done to confirm this placement
+S Click Done to decline a draw
+S Click Done to offer a draw
+K Click on Done to complete the capture
+V Klikk \u00abFerdig\u00bb for \u00e5 gjennomf\u00f8re slaget.
+K Click on Done to confirm swapping
+V Klikk p\u00e5 Ferdig for \u00e5 bekrefte bytte
+K Click on Done to confirm the Exchange
+V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte byttet.
+K Click on Done to confirm this Dance
+V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte dette dansetrekket.
+K Click on Done to confirm your resignation
+V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte at du gir opp.
+K Click on Done to end the game
+V Klikk \u00abFerdig\u00bb for \u00e5 avslutte partiet.
+S Click on Done to end the game (you lose)
+K Click on Done to end the game as a Draw
+V Klikk \u00abFerdig\u00bb for \u00e5 avslutte spillet som uavgjort.
+S Click on Done to finish all captures
+S Click on Gipf pieces to change their capture status
+S Click on the line to be captured
+K Click on the placed piece to rotate it, or Click Done
+V Klikk p\u00e5 brikken du har plassert for \u00e5 rotere den eller velg \u00abFerdig\u00bb.
+S Closing...
+K Colorblind
+V Fargeblind
+S Combine two stacks or capture another stack
+S Complete a push or pull, step #1
+K Complete a split or merge
+V Fullf\u00f8r en oppdeling eller forening
+K Complete the merge
+V Fullf\u00f8r foreningen
+S Complete the pull, step #1
+S Complete the push, step #1
+K Complete the split
+V Fullf\u00f8r oppdelingen
+S Confirm Dropping this rider
+S Connect all your frogs (at least 7) in one cluster
+S Connection Games
+K Connection error
+V Feil med forbindelsen
+S Container
+K Container-First
+V Container - Original
+K Container-First_variation
+V Container with the original rules
+K Container_family
+V Container
+K Container_variation
+V Container with second shipment rules
+K Continue Capturing
+V Fortsett \u00e5 ta baller.
+K Continue merging or click Done
+V Fortsett forening eller klikk Ferdig
+S Crossfire
+K Crossfire_family
+V Crossfire
+K Crossfire_variation
+V standard Crossfire
+K Dec #1#2#3
+V #1. des, #2.#3 GMT
+S Decline Draw
+S Decline the loan
+S Designate GIPF pieces to capture, or place a GIPF chip
+S Designate GIPF pieces to capture, or place a chip
+S Designate a row to capture
+S Designate a row to capture before your turn
+K Dipole
+V Dipole (Originalversjonen)
+K Dipole-s
+V Dipole
+K Dipole-s_variation
+V Dipole 8x8 med symmetrisk startposisjon
+K Dipole_family
+V Dipole
+K Dipole_variation
+V Dipole 8x8 med asymmetrisk startposisjon
+K Done
+V Ferdig
+K Drop a tile to enlarge the board
+V Slipp en helle for \u00e5 forst\u00f8rre brettet.
+K Drop bunny chip
+V Place one of the Bunny player's chips
+K Drop the moving stack back on the rack
+V Plasser stabelen du flytter tilbake p\u00e5 hylla.
+K Drop the ring
+V Slipp ringen
+S Drop this rider from the Race
+K Drop your piece onto the board or any of your stacks
+V Plasser brikken p\u00e5 brettet eller opp\u00e5 en av dine egne stabler.
+K Drop your piece onto the board or any stack
+V Plasser brikken p\u00e5 brettet eller p\u00e5 hvilken som helst stabel.
+S Dvonn
+K Dvonn_family
+V Dvonn
+K Dvonn_variation
+V Spill Dvonn standardvarianten
+S Eat
+K Edit
+V Rediger
+K Eliminate all your opponent's pieces
+V Eliminer alle brikkene til motspilleren
+S Entrapment
+S Entrapment-6x7
+K Entrapment-6x7_variation
+V Entrapment 6x7 - faster game
+K Entrapment-7x7
+V Entrapment
+K Entrapment-7x7_variation
+V standard 7x7 Entrapment
+S Entrapment-7x7x4
+K Entrapment-7x7x4_variation
+V Entrapment-7x7 with 4 roamers
+K Entrapment_family
+V Entrapment
+K Error
+V Feil
+K Error reading directory
+V Feil under lesing av katalog
+K Error reading file
+V Feil under lesing av fil
+S Escape forced position
+S Escape forced position, or move a barrier
+S Escape forced position, or place a barrier
+S Escape from check
+S Euro Games
+K Exchange Prisoners
+V Utveksl fanger
+K Exchange an off-board piece for a new tile
+V Bytt en brikke utenfor brettet mot en ny helle.
+S Exxit
+K Exxit-Beginner
+V Exxit-Begynner
+K Exxit-Beginner_variation
+V spill Exxit begynnervarianten med 19 heller
+K Exxit-Blitz
+V Exxit-Lyn
+K Exxit-Blitz_variation
+V spill Exxit det kortere spillet med 29 heller
+K Exxit-Pro
+V Exxit-Ekspert
+K Exxit-Pro_variation
+V spill Exxit ekspertvarianten
+K Exxit_family
+V Exxit
+K Exxit_variation
+V spill Exxit standardspillet med 39 heller
+S Fanorona
+K Fanorona_family
+V Fanorona
+K Fanorona_variation
+V standard Fanorona
+S Farmer configuring board
+S Farmer moving scared
+S Farmer select
+K Feb #1#2#3
+V #1. feb, #2.#3 GMT
+S Final Scores:
+K Finished Capturing, Click Done
+V Ingen flere baller \u00e5 ta: klikk \u00abFerdig\u00bb.
+K Flagship can not capture
+V Flaggskipet kan ikke fange motstanderens skip.
+K Flagship can participate in captures
+V Flaggskipet kan v\u00e6re med p\u00e5 \u00e5 fange motstanderens skip.
+K Flagship is captured normally
+V Flaggskipet fanges p \u00e5 vanlig m\u00e5te.
+K Flagship must Reach the corner to win
+V Flaggskipet m \u00e5 n\u00e5 hj\u00f8rnet for \u00e5 vinne.
+K Flagship must be surrounded on all 4 sides
+V Flaggskipet m\u00e5 omringes p\u00e5 alle fire sider.
+K Flagship wins at any edge square
+V Flaggskipet vinner ved \u00e5 n\u00e5 kanten.
+K Flip a tile, or Move Split or Merge a stack
+V Snu en helle, eller flytt, fordel eller foren en stabel
+S Form a closed shape in your color
+K Frogs
+V Army of Frogs
+K From #1
+V Fra #1
+K Game
+V Spill
+K Game Over
+V Partiet er over.
+K Game Room
+V Spillerom
+K Game in progress...
+V Parti spilles...
+K Game timed out.  Session has ended.
+V Tiden har l\u00f8pt ut. Sesjonen er over.
+K Game won by #1
+V Partiet ble vunnet av #1.
+K Games do not affect your Ranking
+V Partiene p\u00e5virker ikke rangeringen din.
+K Gipf
+V Gipf Basic
+S Gipf Games
+K Gipf-standard
+V Gipf Standard
+K Gipf-standard_variation
+V Gipf Standard (with Gipf pieces)
+K Gipf-tournament
+V Gipf Expert
+K Gipf-tournament_variation
+V Gipf Expert (unlimited Gipf pieces)
+K Gipf_family
+V Gipf
+K Gipf_variation
+V Gipf Basic (no Gipf pieces)
+S Gobblet
+K Gobblet_family
+V Gobblet
+K Gobblet_variation
+V Det er lov \u00e5 kikke
+K Gobbletm
+V GobbletM
+K Gobbletm_variation
+V Hukommelsen gjelder - ingen kikking
+S Hex
+S Hex-15
+K Hex-15_variation
+V Spill 15x15 Hex
+S Hex-19
+K Hex-19_variation
+V Spill 19x19 Hex
+K Hex_family
+V Hex
+K Hex_variation
+V Spill 11x11 Hex p\u00e5
+S Hide
+S Hint
+S Hive
+S Hive-L
+S Hive-LM
+K Hive-LM_variation
+V Hive with LadyBug and Mosquito
+K Hive-L_variation
+V Hive with LadyBug added
+S Hive-M
+K Hive-M_variation
+V Hive with Mosquito added
+K Hive_family
+V Hive
+K Hive_variation
+V Spill Hive standardvarianten
+S I will make the loan
+K Idle.
+V Ikke i bruk.
+K Ignore chat from #1
+V Overse chat fra #1
+S Illegal - this move would form an illegal pattern of lines
+S Illegal due to repetition, try something else or resign
+S Illegal move due to repetition - try something else
+S Immobilize your opponent's roamers
+K Invite
+V Inviter #1 til rom #2
+K Invite players to this room
+V Inviter spillere til dette rommet.
+S Island
+K Jan #1#2#3
+V #1. jan, #2.#3 GMT
+K Join
+V Bli med
+K Join only if Invited
+V Bare for inviterte
+K Joining as a spectator
+V #1 har blitt med som tilskuer.
+K Joint Review
+V Felles gjennomgang
+K Jul #1#2#3
+V #1. jul, #2.#3 GMT
+K Jun #1#2#3
+V #1. jun, #2.#3 GMT
+S Knock 5 of your opponent's dice into the gutter
+S Knockabout
+K Knockabout_family
+V Knockabout
+K Knockabout_variation
+V Standard Knockabout
+S LIMBO
+K LOA
+V Handlingens linjer
+S LOAP
+K LOAP_variation
+V spill varianten fra programmeringskonkurransen
+K LOA_family
+V Lines of Action
+K LOA_variation
+V Spill standardspillet med 8\u00d78 ruter
+K Launching...
+V Starter...
+S LeHavre
+K LeHavre_family
+V LeHavre
+K LeHavre_variation
+V standard LeHavre
+K Let The Robot Play
+V La roboten spille
+S Let someone else make the loan
+S Load more goods from the Dock
+S Load the goods you will produce
+S Load the your warehouse from the seller
+S Load your ship from the Dock
+K Loading game file
+V Laster inn parti-fil
+S Loan Card
+S Loan for #1 from #2
+S Loan for #1 from the bank
+S Loans
+K Lobby
+V Foaj\u00e9
+K Lobby shutdown...
+V Foajeen stenger...
+S Machines
+K Make a Dance move
+V Gj\u00f8r et dansetrekk.
+S Make a capturing move
+S Make an addional capturing move, or click on Done
+S Make an addional move, or click on Done
+K Make the first move, or swap and move second
+V Gj\u00f8r f\u00f8rste trekk, eller bytt og flytt som nummer to
+K Make your first move, or swap fleets
+V Gj\u00f8r ditt  f\u00f8rste trekk, eller bytt fl\u00e5ter.
+K Map of Player Locations
+V Kart
+K Mar #1#2#3
+V #1. mar, #2.#3 GMT
+K Master Room
+V Mesterrom
+K Master ranked players can play
+V Bare mestere kan spille i dette rommet.
+K Match words:
+V S\u00f8k:
+S Maximize your profits
+K May #1#2#3
+V #1. mai, #2.#3 GMT
+S Medina
+K Medina_family
+V Medina
+K Medina_variation
+V Standard Medina
+K Members
+V Medlemmer
+K Memory is low
+V Lavt minne.
+K Merge this stack, or click Done
+V Foren denne stabelen eller klikk Ferdig
+K Message:
+V Til ALLE:
+K MessageTo:
+V Til #1:
+K Messages
+V Meldinger
+S Micropul
+K Micropul_family
+V Micropul
+K Micropul_variation
+V Standard Micropul
+K Move ##1
+V Trekk ##1
+S Move 6 ships to the center
+K Move A Stack
+V Flytt en stabel
+S Move a Cyclist
+S Move a Frog
+S Move a Man
+S Move a Man up to level 3
+S Move a Rabbit to the last row
+K Move a ball or change a Ring
+V Flytt en ball eller forandre p\u00e5 en ring.
+S Move a piece
+S Move a piece one space
+S Move a piece, step #1
+S Move a ring
+S Move a roamer
+S Move a roamer or move a barrier
+S Move a roamer, or place a barrier
+S Move a runner
+S Move a runner from a home space
+S Move a ship
+S Move a ship to the board
+S Move a soldier, or fire a cannon
+S Move a stack, or add a reserve piece
+S Move a volcano cap
+K Move one ship
+V Flytt ett skip.
+K Move stacks around any way you want to
+V Flytt stablene rundt som du \u00f8nsker.
+K Move the flipped stack
+V Flytt stabelen som har blitt flippet.
+S Move your runners to the opposite side
+K Move, Split or Merge a stack
+V Flytt, fordel eller foren en stabel
+K Moves are coming in
+V Trekk kommer inn.
+S Mutton
+K Mutton-shotgun
+V shotgun Mutton
+K Mutton-shotgun_variation
+V Mutton - farmer uses a shotgun
+K Mutton_family
+V Mutton
+K Mutton_variation
+V standard Mutton
+K News
+V Nyheter
+K No Challenges
+V Ingen invitasjoner til \u00e5 spille
+K No Chat
+V Ingen chat
+S No Recent Games
+K No challenges from #1
+V Ingen invitasjoner fra #1
+K No players.
+V Ingen spillere.
+K No spectators.
+V Ingen tilskuere.
+S No, let the bank fund it
+K Nov #1#2#3
+V #1. nov, #2.#3 GMT
+K Occupy 3 enemy bases
+V Okkuper tre av motstanderens baser
+K Oct #1#2#3
+V #1. okt, #2.#3 GMT
+S Octiles
+K Octiles_family
+V Octiles
+K Octiles_variation
+V standard Octiles
+S Offer a Draw
+S Offer a price for the goods on the ship
+K Onboard a piece, Move a stack, or Exchange
+V Plasser en brikke p\u00e5 brettet, flytt en stabel, eller utveksl fanger.
+K Only the flagship can occupy the center square
+V Bare flaggskipet kan v\u00e6re i sentrumsfeltet.
+K Options
+V Innstillinger
+S Palago
+K Palago_family
+V Palago
+K Palago_variation
+V Standard Palago
+S Pass
+K Pick a ring to place a chip and move
+V Velg ringen som skal flyttes for \u00e5 plassere en brikke.
+S Pick the stack to move
+K Pick up and Continue your move
+V Plukk opp og fortsett trekket.
+S Place a Chip, or a Jewel, or a chip from the Store
+S Place a Frog on the board
+S Place a GIPF piece on a starting point
+K Place a Ring on the board
+V Plasser en ring p\u00e5 brettet.
+S Place a chip on a starting point
+K Place a gobblet on the board, or move a gobblet
+V Flytt et beger eller plasser et nytt beger p\u00e5 brettet.
+K Place a marker on any empty cell
+V Plasser en brikke i et tomt felt.
+K Place a marker on any empty cell, or Swap Colors
+V Plasser en brikke i et tomt felt eller bytt farger.
+K Place a piece on the board
+V Plasser en brikke p\u00e5 brettet.
+K Place a piece on the board, or Exchange an off-board piece for a new tile
+V Sett en brikke p\u00e5 brettet eller bytt en brikke utenfor brettet mot en ny helle.
+K Place a piece on the board, or move a piece already on the board
+V Plasser en brikke p\u00e5 brettet eller flytt en som allerede ligger der.
+S Place a ring on the board
+S Place a roamer on the board
+S Place a second piece on the board
+S Place a second tile adjacent to the first
+S Place a second tile adjacent to those already on the board
+S Place a stone on the board, or remove a stone from the board
+K Place a tile
+V Plasser en brikke
+S Place a tile adjacent to those already on the board
+S Place a tile on any empty cell
+K Place a tile on the board
+V Plasser en brikke p\u00e5 brettet.
+K Place a tile on the board, or move a tile
+V Plasser en brikke p\u00e5 brettet eller flytt en brikke.
+S Place a tile on the board, where a runner can leave a home space
+S Place all your pieces in your two home rows
+K Place prisoners here for exhange
+V Plasser fangene her for \u00e5 bytte dem.
+S Place the Rabbits
+S Place the first meeple on the board
+S Place the next tile on the board, where a runner can move over it
+S Place your bid to fund the loan
+S Place your first man on the board
+K Place your queen on the board
+V Plasser dronningen p\u00e5 brettet.
+S Place your second man on the board
+K Place your stack on the edge of the board
+V Plasser stabelen p\u00e5 kanten av brettet.
+S Place your town in your first row
+S Placing Gipf Pieces
+S Placing Standard Pieces
+K Plateau
+V Plat\u00e5
+K Plateau_family
+V Plateau
+K Plateau_variation
+V Spill Plateau standardvarianten
+K Play #1
+V Spill mot #1
+S Play Farmer
+S Played on #1
+K Player #1
+V Spiller #1
+K Player is 
+V Spilleren er 
+K Players
+V Spillere
+K Players are: 
+V Spillerne er: 
+K Please Join Me
+V Alle kan bli med
+K Please respect the 15 minute time limit
+V Mesterpartier har 15 minutters betenkningstid.
+K Position the starting rings
+V Plasser ringene
+K Prisoners captured by Black are held here
+V Fanger tatt av svart holdes her.
+K Prisoners captured by White are held here
+V Fanger tatt av hvit holdes her.
+K Punct
+V P\u00fcnct
+K Punct_family
+V P\u00fcnct
+K Punct_variation
+V Spill Punct standardvarianten
+S Qyshinsu
+K Qyshinsu_family
+V Qyshinsu
+S Qyshinsu_variation
+S Racing Games
+K Rearrange the gold fleet
+V Omgrupper gullfl\u00e5ten.
+K Rearrange the silver fleet
+V Omgrupper s\u00f8lvfl \u00e5ten.
+K Rearrange things any way you want to
+V Omm\u00f8bler tingene som du \u00f8nsker.
+K Reconnecting
+V  ...Gjenoppretter forbindelsen...
+S Red
+K Rejoin
+V Kom tilbake
+K Rejoin #1
+V G\u00e5 tilbake til #1
+K Remove a Ring
+V Fjern en ring.
+S Reprice the goods in your factory storage
+S Reprice the goods in your warehouse storage
+S Requesting Bids
+S Requesting Loan
+K Resign
+V Gi opp
+K Resign State
+V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte at du gir opp.
+S Restart
+S Return to the Way
+S Reverse View
+K Review Room
+V Studierom
+K Review Saved Games
+V Studierom
+S Rider Size
+S Rotate the board 180 degrees
+S Santorini
+K Santorini_family
+V Santorini
+K Santorini_variation
+V Santorini (without Gods)
+S Score the most points at the sprint and finish lines
+K See Player Comments
+V Se spillernes kommentarer
+K See Spectator Comments
+V Se tilskuernes kommentarer
+K Select Game
+V Velg spill
+K Select Robot
+V Velg robot
+K Select a ring to remove
+V Velg hvilken ring som skal fjernes.
+K Select a row of 5 to remove
+V Velg en rad med fem brikker som skal fjernes.
+K Select the #1 piece to move
+V Velg en #1 brikke \u00e5 flytte.
+K Select the destination for the selected piece
+V Velg hvor du vil flytte hen.
+K Select the stack to move from
+V Velg stabel \u00e5 flytte fra
+S Select which of your roamers to kill
+S Select which opponent roamer to kill
+K Selecting game: #1
+V Velger parti: #1
+S Send
+K Sep #1#2#3
+V #1. sep, #2.#3 GMT
+K Session #1 is active.  
+V Sesjon #1 er aktiv.  
+K Session #1 is being launched.  
+V Sesjon #1 startes opp.  
+K Session #1 is displaying the map of players real locations
+V Sesjon #1 viser kart over spillernes tilholdssteder.
+K Session #1 is idle.  
+V Sesjon #1 er ikke i bruk.  
+K Session #1 is private. 
+V Sesjon #1 er privat. 
+K Session #1: state unknown.
+V Sesjon #1: tilstand ukjent.
+S Shipping
+S Shoot
+K Show SGF Text
+V Vis SGF tekst
+K Shuffle pieces to the exchange area, Click Done to start the exchange
+V Flytt brikker til utvekslingsomr\u00e5det. Klikk \u00abFerdig\u00bb for \u00e5 starte utvekslingen.
+S Slide the chip toward the center
+K Sound
+V Lyd
+S Spangles
+K Spangles_family
+V Spangles
+K Spangles_variation
+V Standard Spangles
+K Spectate
+V Se p\u00e5
+K Spectator
+V Tilskuer
+K Spectator is: 
+V Tilskueren er: 
+K Spectators
+V Tilskuere
+K Spectators are: 
+V Tilskuerne er: 
+K Split or Merge this stack, or click Done
+V Fordel eller foren denne stabelen eller klikk Ferdig
+K Split this stack, or click Done
+V Fordel denne stabelen eller klikk Ferdig
+S Spot Price #1
+S Spread out the stacks
+S Stack Height
+K Stacking Games
+V Stablingsspill
+S Start
+S Start #1
+K Start Black
+V Start Svart
+K Start White
+V Start Hvit
+K State unknown.
+V Tilstand ukjent.
+K Swap
+V Bytt side
+K Swap Colors
+V Bytt farger
+S Switch to a more oblique view of the board
+S Switch to a more overhead view of the board
+K TBA1_variation
+V game to be announced
+K TBA2_variation
+V game to be announced
+K TBA3_variation
+V game to be announced
+S Tablut
+K Tablut-11
+V Tablut 11\u00d711
+K Tablut-11_variation
+V Tablut p\u00e5 et 11\u00d711- brett
+K Tablut-7
+V Tablut 7\u00d77
+K Tablut-7_variation
+V Tablut p\u00e5 et 7\u00d77-brett
+K Tablut-9
+V Tablut 9\u00d79
+K Tablut-9_variation
+V Tablut p\u00e5 et 9\u00d79-brett
+K Tablut_family
+V Tablut
+S Tajii
+K Tajii_family
+V Tajii
+K Take Over Playing
+V Ta over \u00e5 spille
+S Take your first action
+S Take your second action
+K Tamsk_variation
+V Spill Tamsk standardvarianten
+K The game is a draw
+V Partiet er uavgjort.
+K The game record is not available during the game
+V Partinotatene er ikke tilgjengelige under partiet.
+S The next finish bonus is #1
+S The next sprint bonus is #1
+K This is now a private room
+V Dette er n\u00e5 et privat rom.
+K This is now a public room
+V Dette er n\u00e5 et offentlig rom.
+S Tile Pattern Games
+K Tile Size
+V Brikkest\u00f8rrelse
+K Time is 
+V Tiden er 
+K Timeout in 1 minute.
+V Tiden l\u00f8per ut om ett minutt.
+K Tournament Game
+V Turneringsparti
+S Traboulet
+K Traboulet_family
+V Traboulet
+K Traboulet_variation
+V Play standard Traboulet
+K Track Mice
+V Spor musene
+S Traditional Pieces
+S Trax
+K Trax_family
+V Trax
+K Trax_variation
+V Spill Trax standardvarianten
+S Triad
+K Triad_family
+V Triad
+K Triad_variation
+V standard Triad
+S Truchet
+K Truchet_family
+V Truchet
+K Truchet_variation
+V Truchet p\u00c3\u00a5 et standard
+K TumblingDown
+V Tumbling Down
+K TumblingDown_family
+V Tumbling Down
+K TumblingDown_variation
+V TumblingDown p\u00c3\u00a5 et standard 8x8-brett
+K Type your message here.
+V Skriv meldingen din her.
+S Tzaar
+S Tzaar-custom
+S Tzaar-custom_variation
+S Tzaar-random
+S Tzaar-random_variation
+S Tzaar-standard
+S Tzaar-standard_variation
+K Tzaar_family
+V Tzaar
+S Tzaar_variation
+K Unranked Room
+V Urangert rom
+S Unsold Warehouses
+K User 
+V Bruker 
+S Volcano
+K Volcano-h
+V Hex Volcano
+K Volcano-h_variation
+V Volcano on a Hexagonal grid
+K Volcano-hr
+V Hex Volcano (Randomized)
+K Volcano-hr_variation
+V  Hex Volcano with randomized positions
+K Volcano-r
+V Volcano (Randomized)
+K Volcano-r_variation
+V Volcano with randomized positions
+K Volcano_family
+V Volcano
+K Volcano_variation
+V standard 5x5 Volcano
+K Wait for opponents to arrive.
+V Vent p\u00e5 at motstanderne kommer.
+S Wait for other players to adjust
+S Wait for the other players to decide
+K Waiting in
+V Venter i
+S Warehouse
+S Warehouses
+K Warp6
+V Warp 6
+K Warp6_family
+V Warp 6
+K Warp6_variation
+V standard Warp 6
+K Welcome to Game client, version #1
+V Velkommen til spillklienten, versjon #1
+K White
+V hvit
+K White Pieces
+V Hvite brikker
+S Wolf moving suspects
+S Wolf player eating
+S Wolf player hiding
+S Xiangqi
+K Xiangqi_family
+V Xiangqi
+K Xiangqi_variation
+V standard Xiangqi
+S Yes, I will fund the loan
+S Yinsh
+K Yinsh-Blitz
+V Lyn-Yinsh
+K Yinsh-Blitz_variation
+V Spill lyn-Yinsh \u2013 f\u00f8rste ring vinner
+K Yinsh_family
+V Yinsh
+K Yinsh_variation
+V Spill Yinsh standardvarianten
+K You can only resign when it is your move
+V Du kan bare gi opp n\u00e5r det er ditt trekk.
+K You have been disconnected: #1
+V Du har mistet forbindelsen.
+S You have been offered a draw - Accept or Decline
+K You have no legal moves.  Click on Done to pass
+V Du har ingen lovlige trekk. Klikk \u00abFerdig\u00bb for \u00e5 passe.
+K You have no moves available. Click on Done to pass.
+V Du har ingen tilgjengelige trekk. Trykk Ferdig for \u00e5 melde pass.
+K You must move the gobblet you have picked up
+V Du m\u00e5 flytte begeret du har plukket opp.
+S You must place a dome
+S You must take out a loan to pay interest
+K Zertz
+V Z\u00e8rtz
+K Zertz+11
+V Z\u00e8rtz+11
+K Zertz+11_variation
+V Spill Z\u00e8rtz med 11 ringer ekstra
+K Zertz+24
+V Z\u00e8rtz+24
+K Zertz+24_variation
+V Spill Z\u00e8rtz med 24 ringer ekstra
+K Zertz+xx
+V Z\u00e8rtz Extreme
+K Zertz+xx_variation
+V Z\u00e8rtz med tilpasset brettlayout
+K Zertz_family
+V Z\u00e8rtz
+K Zertz_variation
+V Spill Z\u00e8rtz standardvarianten
+S accept the bid, or pay the amount yourself
+K and
+V  og 
+K announceOption
+V Kunngj\u00f8r nye spillere
+K automute
+V #1 har automatisk blitt stum.
+S build an ideal city
+S capture all of one opponentr's color
+K center square is not special
+V Sentrumsfeltet er ikke spesielt.
+S click Done to finish this Auction
+K connect opposite sides with a chain of markers
+V Forbind dine to motst\u00e5ende sider med en kjede av brikker i din farge.
+K connecting
+V Oppretter forbindelse til 
+K enterMessage
+V #1 har kommet inn i lobbyen.
+K enters the room
+V #1 har kommet inn i rommet.
+S expand the board with your color tiles
+K fontfamily
+V sansserif
+S form a larger triangle with your color at the tips
+S fund a loan from a player or the bank
+K game selector
+V partivelger
+K gold: escape the flagship  silver: capture gold flagship
+V gull: r\u00f8m med flaggskipet  s\u00f8lv: fang flaggskipet
+K guest
+V gjest
+K in #1
+V i #1
+K launchChat
+V Oppretter snakkerom i sesjon #1.
+K launchGame
+V Starter parti i sesjon #1.
+K launchReview
+V Oppretter studierom i sesjon #1.
+K launchfailed
+V Den andre spilleren klarte ikke starte ordentlig.
+K launchspectator
+V Sender tilskuer til sesjon #1.
+S load a luxury container
+K loaderr
+V Feil i innlastingen av: 
+K make 4 in a row in any direction
+V Lag 4 p\u00e5 rad i hvilken som helst retning.
+K make 5 in a row to capture a ring and win
+V Lag fem p\u00e5 rad for \u00e5 fjerne en ring og vinne.
+K make 5 in a row to capture a ring, 3 rings win
+V Lag fem p\u00e5 rad for \u00e5 fjerne en ring \u2013 tre ringer vinner.
+K make any loop, or a line which spans 8 rows or columns, in your color
+V lag en l\u00f8kke eller en linje som strekker seg over minst 8 rader eller kolonner i din farge
+S maximize the number of tiles in your reserve
+K mouse tracking disabled
+V mussporing er deaktivert
+K nolaunch
+V Serveren avviste foresp\u00f8rselen; meldingen er 
+K nolobby
+V Beklager, du kan ikke komme inn i foajeen. Kanskje er den full.
+K noresponse1
+V S\u00f8rveren svarer ikke.
+K noresponse2
+V Den kan v\u00e6re nede, eller forbindelsen kan v\u00e6re forhindret av en brannmur.
+K noserver
+V Foajeen har ikke forbindelse til s\u00f8rveren.
+S own all the stacks
+K perspective
+V perspektiv
+K play
+V spill for #1
+K player
+V spiller
+S player 
+K private room
+V privat rom
+K punctgoal
+V Lag en forbindelse mellom to motst\u00e5ende sider eller kontroller den st\u00f8rste delen av sentrum i det en av spillerne setter sin siste brikke.
+K quitting
+V #1 har forlatt rommet.
+K rankingsfailed
+V Oppdateringen av rangeringen mislyktes.
+K reading Zip directory...
+V leser zip-katalog...
+K reading directory...
+V leser katalog...
+K reconok
+V ..forbindelsen er gjenopprettet
+S review
+K savedmsg
+V Partiet er lagret som #1.
+S select the game to play
+S select the game variation
+S select the type of room
+S select tile color
+S set bid amount
+K show grid
+V vis koordinater
+K stack six or capture six
+V stable seks brikker eller fang seks brikker
+K stillwaiting
+V still launching... v\u00e6r vennlig og vent.
+K surround your opponents queen bee
+V omring motstanderens dronning
+K the game has resumed
+V partiet fortsetter
+K timeoutWarning
+V   Foajeen stenger om ett minutt.
+S trade a second container for a gold container
+S use Wooden tiles
+K website
+V #1 spillserver
+K welcome
+V Velkommen til BoardSpace, versjon #1.
+S you may increase your bid
+K your name
+V ditt navn
+N 689

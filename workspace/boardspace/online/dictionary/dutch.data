@@ -1,0 +1,1303 @@
+S #1 #2 Containers
+S #1 Machine
+K #1 Ship
+V #1 Schip
+K #1 center
+V #1 centrum
+K #1 choices
+V #1 keuzes
+K #1 deliberately quit
+V #1 heeft de partij opzettelijk verlaten
+K #1 has been muted, by a consensus of the players
+V #1 is beeindigd met wederzijds goedvinden
+K #1 has quit and become a spectator
+V #1 is nu een toeschouwer
+K #1 invites #2 to join room #3
+V #1 nodigt #2 uit in ruimte #3
+K #1 invites #2 to play #3 in room #4
+V #1 nodigt #2 uit voor #3 in ruimte #4
+K #1 is taking over for #2
+V #1 neemt over van #2
+K #1 is taking over playing #2 for #3
+V #1 neemt speler #2 over van #3
+K #1 killed due to #2
+V #1 getermineerd door #2
+K #1 left
+V #1 links
+K #1 prisoners
+V #1 gevangenen
+K #1 quit
+V #1 heeft de partij verlaten
+K #1 repetitions
+V #1 herhalingen
+K #1 requests Joint review
+V #1 verzoekt gezamenlijk commentaar.  Kies "Gezamenlijk commentaar" in het berichten menu
+S #1 reserves
+K #1 riders have crossed the first sprint line.
+V #1 fietsers zijn over de eerst sprintlijn.
+K #1 riders have crossed the second sprint line.
+V #1 fietsers zijn over de tweede sprintlijn.
+K #1 riders have finished
+V #1 fietsers zijn over de finish
+K #1 starts Joint review
+V #1 start gezamelijk commentaar
+K (unknown)
+V (onbekend)
+K (unoccupied)
+V (leeg)
+K (vacancy)
+V (vacant)
+S + #1 turns
+K ...plus #1 more
+V ...plus #1 meer
+K 1 choice
+V 1 keuze
+K 4w 5g 6b or 3 of each wins
+V 4w 5g 6b of 3 van elk wint
+K Accept $#1 from #2
+V Accepteer $#1 van #2
+K Accept Draw
+V Accepteer Remise
+K Accept chat from #1
+V Accepteer chat van #1
+K Accept the loan from the bank
+V Accepteer de lening van de bank
+K Accept this loan financing or not
+V Accepteer deze lening ongeacht garantie
+K Actions
+V Acties
+K Active in
+V Actief in
+K Add a ball
+V Plaats een bal
+K Add a ball, remove a Ring
+V Plaats een bal, verwijder een Ring
+K Adjust
+V Aanpassen
+K Adjust the chip spacing in stacks
+V Pas ruimte tussen schijven aan
+K Adjust your starting movements
+V Pas startbewegingen aan
+K All Games
+V Alle Spelen
+K Allow challenges from #1
+V Sta uitnodiging toe van #1
+K Animate
+V Animeer
+K Anyone can play in this room
+V Iedereen kan in deze ruimte spelen
+K Apr #1#2#3
+V #1 Apr, #2:#3 GMT
+S Aqua
+S Arimaa
+K Arimaa_family
+V Arimaa
+K Arimaa_variation
+V Standaard Arimaa
+K ArmyOfFrogs
+V Army of Frogs
+K ArmyOfFrogs_family
+V Army Of Frogs
+K ArmyOfFrogs_variation
+V standaard Army of Frogs
+K Auction
+V Veiling
+K Aug #1#2#3
+V #1 Aug, #2:#3 GMT
+S Bank
+K Become a Spectator
+V Word toeschouwer
+K Bid $ #1
+V Bied $ #1
+K Black
+V Zwart
+K Black Pieces
+V Zwarte Stukken
+S Blue
+K BreakingAway
+V Breaking Away
+K BreakingAway_family
+V Breaking Away
+K BreakingAway_variation
+V standaard Breaking Away
+K Build adjacent to the man you moved
+V Bouw naast het gezette stuk
+K Build an initial stack of 2 to be placed
+V Bouw een beginkolom van twee om te plaatsen
+K Buy the goods for $#1
+V Koop de goederen voor $#1
+K Calling server...
+V Probeert server...
+S Cannon
+K Cannon_family
+V Cannon
+K Cannon_variation
+V standaard Cannon
+K Capture 7 red balls or all of your opponent's balls
+V Vang 7 rode ballen of alle ballen van de tegenspeler
+K Capture a ball
+V Sla een bal
+K Capture a group of opponents
+V Vang een groep van tegenspelers
+K Capture a stack
+V Sla een kolom
+K Capture all of your opponent's pieces
+V Sla alle stukken van de tegenspeler
+K Capture most of your opponent's pieces
+V Sla het merendeel van de stukken van je tegenspeler
+K Capture the best combinations of all 5 colors
+V Sla de beste combinatie van kleur en grootte
+K Capture the most chips under your color stack
+V Vang de meeste chips onder je kolom
+K Capture your opponent's tallest king stack
+V Sla de grootste koningskolom van je tegenspeler
+K Capture your opponent's town
+V Verover de stad van je tegenspeler
+K Capturing Games
+V Eliminatie Spelen
+S Cash/Score
+K Chat Room
+V Chat Ruimte
+S Che
+K Che_family
+V Che
+K Che_variation
+V standaard Che
+K Checkmate your opponent's general
+V Zet de Generaal van de tegenspeler schaakmat
+K Choose the penalty for non-payment of interest
+V Kies de boete voor het niet betalen van rente
+K Click DONE to confirm removing these markers
+V Klik Klaar om verwijdering van de markers te voltooien
+K Click DONE to confirm removing this ring
+V Klik Klaar om de verwijdering van de ring te voltooien
+K Click DONE to confirm this move
+V Klik Klaar om de zet te voltooien
+K Click DONE to confirm this placement
+V Klik Klaar om het plaatsen te voltooien
+K Click Done
+V Klik Klaar
+K Click Done to Finish the move
+V Klik Klaar om de zet te voltooien
+K Click Done to accept a draw
+V Klik Klaar om remise te accepteren
+K Click Done to complete the exchange
+V Klik Klaar om de ruil te voltooien
+K Click Done to confirm swapping colors with your opponent
+V Klik Klaar om de switch te voltooien
+K Click Done to confirm swapping fleets with your opponent
+V Klik Klaar om de switch te voltooien
+K Click Done to confirm this action
+V Klik Klaar om de actie te voltooien
+K Click Done to confirm this move
+V Klik Klaar om deze zet te voltooien
+K Click Done to confirm this placement
+V Klik Klaar om de plaatsing te voltooien
+K Click Done to decline a draw
+V Klik Klaar om remise te weigeren
+K Click Done to offer a draw
+V Klik Klaar om remise aan te bieden
+K Click on Done to complete the capture
+V Klik Klaar om het slaan te voltooien
+K Click on Done to confirm swapping
+V Klik Klaar om de switch te voltooien
+K Click on Done to confirm the Exchange
+V Klik Klaar om de ruil te voltooien
+K Click on Done to confirm this Dance
+V Klik Klaar om de Dans te voltooien
+K Click on Done to confirm your resignation
+V Klik Klaar om op te geven
+K Click on Done to end the game
+V Klik Klaar om het spel te beeindigen
+K Click on Done to end the game (you lose)
+V Klik Klaar om het spel te beeindigen (je verliest)
+K Click on Done to end the game as a Draw
+V Klik Klaar om remise te maken
+K Click on Done to finish all captures
+V Klik Klaar om het slaan te voltooien
+K Click on Gipf pieces to change their capture status
+V Klik op de stukken om hun status mbt. slaan te wijzigen
+K Click on the line to be captured
+V Klik op de lijn die gelagen moet worden
+K Click on the placed piece to rotate it, or Click Done
+V Klik op het geplaatste stuk om te roteren, of klik Klaar
+K Closing...
+V Sluit...
+K Colorblind
+V Kleurenblind
+K Combine two stacks or capture another stack
+V Voeg twee kolommen samen of sla een kolom
+K Complete a push or pull, step #1
+V Voltooi een push of een pull, stap #1
+K Complete a split or merge
+V Voltooi het splitsen of het samenvoegen
+K Complete the merge
+V Voltooi het samenvoegen
+K Complete the pull, step #1
+V Voltooi de pull, stap #1
+K Complete the push, step #1
+V Voltooi de push, stap #1
+K Complete the split
+V Voltooi het splitsen
+K Confirm Dropping this rider
+V Bevestig het uitvallen van deze fietser
+K Connect all your frogs (at least 7) in one cluster
+V Breng all je Kikkers (tenminste 7) samen in een cluster
+K Connection Games
+V Connectie Spelen
+K Connection error
+V Geen verbinding
+S Container
+K Container-First
+V Container - Origineel
+K Container-First_variation
+V Container met de oorspronkelijke regels
+K Container_family
+V Container
+K Container_variation
+V Container met 'tweede lading' regels
+K Continue Capturing
+V Blijf slaan
+K Continue merging or click Done
+V Blijf samenvoegen of Klik Klaar
+S Crossfire
+K Crossfire_family
+V Crossfire
+K Crossfire_variation
+V standaard Crossfire
+K Dec #1#2#3
+V #1 Dec, #2:#3 GMT
+K Decline Draw
+V Weiger Remise
+K Decline the loan
+V Zie af van de lening
+K Designate GIPF pieces to capture, or place a GIPF chip
+V Bepaal een GIPF stuk om te slaan, of plaats een GIPF chip
+K Designate GIPF pieces to capture, or place a chip
+V Bepaal een GIPF stuk om te slaan, of plaats een chip
+K Designate a row to capture
+V Bepaal een rij om te slaan
+K Designate a row to capture before your turn
+V Bepaal voor je zet een rij om te slaan
+K Dipole
+V Dipole (origineel)
+K Dipole-s
+V Dipole
+K Dipole-s_variation
+V Dipole 8x8 met symmetrische beginopstelling
+K Dipole_family
+V Dipole
+K Dipole_variation
+V Dipole 8x8 met a-symmetrische beginopstelling
+K Done
+V Klaar
+K Drop a tile to enlarge the board
+V Plaats een hex om het bord te vergroten
+K Drop bunny chip
+V Plaats een chip van de Bunny speler
+K Drop the moving stack back on the rack
+V Plaats de kolom terug in het rek
+K Drop the ring
+V Plaats de ring
+K Drop this rider from the Race
+V Laat deze fietser uitvallen
+K Drop your piece onto the board or any of your stacks
+V Plaats op een vrij veld of op een stuk van eigen kleur
+K Drop your piece onto the board or any stack
+V Plaats op een vrij veld of op een stuk
+S Dvonn
+K Dvonn_family
+V Dvonn
+K Dvonn_variation
+V standaard Dvonn
+K Eat
+V Eet
+K Edit
+V Bewerk
+K Eliminate all your opponent's pieces
+V Sla alle stukken van de tegenspeler
+S Entrapment
+S Entrapment-6x7
+K Entrapment-6x7_variation
+V Entrapment 6x7 - faster game
+K Entrapment-7x7
+V Entrapment
+K Entrapment-7x7_variation
+V standard 7x7 Entrapment
+S Entrapment-7x7x4
+K Entrapment-7x7x4_variation
+V Entrapment-7x7 with 4 roamers
+K Entrapment_family
+V Entrapment
+K Error
+V Fout
+K Error reading directory
+V Fout bij lezen van directory
+K Error reading file
+V Fout bij lezen van bestand
+S Escape forced position
+S Escape forced position, or move a barrier
+S Escape forced position, or place a barrier
+K Escape from check
+V Hef het schaak op
+S Euro Games
+K Exchange Prisoners
+V Ruil Gevangenen
+K Exchange an off-board piece for a new tile
+V Ruil een stuk naast het bord voor een nieuwe hex
+S Exxit
+S Exxit-Beginner
+K Exxit-Beginner_variation
+V speel 19 hex Exxit
+S Exxit-Blitz
+K Exxit-Blitz_variation
+V speel 29 hex Exxit
+K Exxit-Pro
+V Exxit-Expert
+K Exxit-Pro_variation
+V speel expert Exxit
+K Exxit_family
+V Exxit
+K Exxit_variation
+V speel 39 hex Exxit
+S Fanorona
+K Fanorona_family
+V Fanorona
+K Fanorona_variation
+V standaard Fanorona
+K Farmer configuring board
+V Boer vormt bord
+K Farmer moving scared
+V Boer wordt bang
+K Farmer select
+V Boer kiest
+K Feb #1#2#3
+V #1 Feb, #2:#3 GMT
+K Final Scores:
+V Eindscores:
+K Finished Capturing, Click Done
+V Slag beeindigd, Klik Klaar
+K Flagship can not capture
+V Vlaggenschepen kunnen niet meedoen bij het slaan
+K Flagship can participate in captures
+V Vlaggenschepen kunnen meedoen bij het slaan
+K Flagship is captured normally
+V Het Vlaggenschip moet aan twee kanten ingesloten zijn
+K Flagship must Reach the corner to win
+V Het Vlaggenschip moet een hoek bereiken voor winst
+K Flagship must be surrounded on all 4 sides
+V Het Vlaggenschip moet aan vier kanten ingesloten zijn
+K Flagship wins at any edge square
+V Het Vlaggenschip moet een randveld bereiken voor winst
+K Flip a tile, or Move Split or Merge a stack
+V Draai een tegel, of Zet, Splits of Voeg een kolom samen
+K Form a closed shape in your color
+V Maak een gesloten vorm van je kleur
+K Frogs
+V Army of Frogs
+K From #1
+V Van #1
+K Game
+V Spelhint
+K Game Over
+V Partij geeindigd
+K Game Room
+V Speelruimte
+K Game in progress...
+V Partij gaande...
+K Game timed out.  Session has ended.
+V Tijd verlopen.  Sessie is beeindigd.
+K Game won by #1
+V De partij is gewonnen door #1
+K Games do not affect your Ranking
+V Partijen hebben geen invloed op de standen
+K Gipf
+V Gipf Basic
+K Gipf Games
+V Gipf Spelen
+K Gipf-standard
+V Gipf Standaard
+K Gipf-standard_variation
+V Gipf Standaard (met Gipf stukken)
+K Gipf-tournament
+V Gipf Expert
+K Gipf-tournament_variation
+V Gipf Expert (onbeperkt aantal Gipf stukken)
+K Gipf_family
+V Gipf
+K Gipf_variation
+V Gipf Basic (geen Gipf stukken)
+S Gobblet
+K Gobblet_family
+V Gobblet
+K Gobblet_variation
+V Spieken toegestaan
+K Gobbletm
+V GobbletM
+K Gobbletm_variation
+V Spieken niet toegestaan
+S Hex
+S Hex-15
+K Hex-15_variation
+V 15x15 Hex
+S Hex-19
+K Hex-19_variation
+V 19x19 Hex
+K Hex_family
+V Hex
+K Hex_variation
+V 11x11 Hex
+K Hide
+V Houd je schuil
+S Hint
+S Hive
+S Hive-L
+S Hive-LM
+K Hive-LM_variation
+V Hive met extra Lieveheersbeestje en Mug
+K Hive-L_variation
+V Hive met extra Lieveheersbeestje
+S Hive-M
+K Hive-M_variation
+V Hive met extra mug
+K Hive_family
+V Hive
+K Hive_variation
+V standaard Hive
+K I will make the loan
+V Ik zal de lening sluiten
+K Idle.
+V Inactief.
+K Ignore chat from #1
+V Negeer chat van #1
+K Illegal - this move would form an illegal pattern of lines
+V niet legaal - deze zet vormt een illegaal lijnpatroon
+K Illegal due to repetition, try something else or resign
+V Niet legaal wegens herhaling, probeer iets anders of geef op
+K Illegal move due to repetition - try something else
+V niet legaal wegens herhaling - probeer iets anders
+S Immobilize your opponent's roamers
+K Invite
+V Uitnodiging #1 in ruimte #2
+K Invite players to this room
+V Nodig spelers uit in deze ruimte
+K Island
+V Eiland
+K Jan #1#2#3
+V #1 Jan, #2:#3 GMT
+K Join
+V Kom erbij
+K Join only if Invited
+V Toegang alleen op uitnodiging
+K Joining as a spectator
+V #1 komt erbij als toeschouwer
+K Joint Review
+V Gezamenlijk commentaar
+K Jul #1#2#3
+V #1 Jul, #2:#3 GMT
+K Jun #1#2#3
+V #1 Jun, #2:#3 GMT
+K Knock 5 of your opponent's dice into the gutter
+V Sla 5 dobbelstenen van de tegenspeler in de goot
+S Knockabout
+K Knockabout_family
+V Knockabout
+K Knockabout_variation
+V standaard Knockabout
+S LIMBO
+K LOA
+V Lines of Action
+S LOAP
+K LOAP_variation
+V De LOA programma wedstijd variant
+K LOA_family
+V Lines of Action
+K LOA_variation
+V standaard 8x8 Lines of Action
+K Launching...
+V Opent...
+S LeHavre
+K LeHavre_family
+V LeHavre
+K LeHavre_variation
+V standard LeHavre
+K Let The Robot Play
+V Laat de robot spelen
+K Let someone else make the loan
+V Laat iemand anders de lening sluiten
+K Load more goods from the Dock
+V Laad meer goederen van het dok
+K Load the goods you will produce
+V Laad de goederen die je gaat produceren
+S Load the your warehouse from the seller
+K Load your ship from the Dock
+V Laad het schip vanaf het dok
+K Loading game file
+V Laadt partijbestand
+K Loan Card
+V Leen kaart
+K Loan for #1 from #2
+V Lening voor #1 van #2
+K Loan for #1 from the bank
+V Lening voor #1 van de bank
+K Loans
+V Leningen
+S Lobby
+K Lobby shutdown...
+V Lobby sluit...
+S Machines
+K Make a Dance move
+V Maak een Dans zet
+K Make a capturing move
+V Doe een slagzet
+K Make an addional capturing move, or click on Done
+V Sla verder, of Klik Klaar
+K Make an addional move, or click on Done
+V Doe nog een zet, of Klik Klaar
+K Make the first move, or swap and move second
+V Doe de eerste zet, of wissel kleur en zet als tweede
+K Make your first move, or swap fleets
+V Doe een eerste zet, of verwissel de kleuren
+K Map of Player Locations
+V Kaartruimte
+K Mar #1#2#3
+V #1 Mrt, #2:#3 GMT
+K Master Room
+V Meesterruimte
+K Master ranked players can play
+V Meesters kunnen spelen in deze ruimte
+K Match words:
+V Vergelijk woorden:
+K Maximize your profits
+V Haal zoveel mogelijk voordeel
+K May #1#2#3
+V #1 Mei, #2:#3 GMT
+S Medina
+K Medina_family
+V Medina
+K Medina_variation
+V standaard Medina
+K Members
+V Leden
+K Memory is low
+V Weinig geheugen
+K Merge this stack, or click Done
+V Voeg deze kolom same, of Klik Klaar
+K Message:
+V Aan Allemaal:
+K MessageTo:
+V Aan #1:
+K Messages
+V Berichten
+S Micropul
+K Micropul_family
+V Micropul
+K Micropul_variation
+V standaard Micropul
+K Move ##1
+V Zet ##1
+K Move 6 ships to the center
+V Verplaats 6 schepen naar het centrum
+K Move A Stack
+V Verplaats een Kolom
+K Move a Cyclist
+V Beweeg een Fietser
+K Move a Frog
+V Verplaats een Kikker
+K Move a Man
+V Verplaats een stuk
+K Move a Man up to level 3
+V Verplaats een stuk naar level 3
+K Move a Rabbit to the last row
+V Breng een konijn naar de laatste rij
+K Move a ball or change a Ring
+V Verplaats een bal of een Ring
+K Move a piece
+V Zet een stuk
+K Move a piece one space
+V Verplaats een stuk naar een aangrenzend veld
+K Move a piece, step #1
+V Verplaats een stuk, stap #1
+K Move a ring
+V Verplaats een ring
+S Move a roamer
+S Move a roamer or move a barrier
+S Move a roamer, or place a barrier
+K Move a runner
+V Verpaats een renner
+K Move a runner from a home space
+V Verplaats een renner van een thuisbasis
+K Move a ship
+V Verplaats een schip
+K Move a ship to the board
+V Verplaats een schip naar het bord
+K Move a soldier, or fire a cannon
+V Zet een soldaat, of vuur een kanon af
+S Move a stack, or add a reserve piece
+K Move a volcano cap
+V Zet een volcano cap
+K Move one ship
+V Verplaats een schip
+K Move stacks around any way you want to
+V Beweeg kolommen naar believen
+K Move the flipped stack
+V Verplaats de omgedraaide kolom
+K Move your runners to the opposite side
+V Breng je renners naar de overkant
+K Move, Split or Merge a stack
+V Zet, Splits of Voeg een kolom samen
+K Moves are coming in
+V Zetten komen
+S Mutton
+K Mutton-shotgun
+V shotgun Mutton
+K Mutton-shotgun_variation
+V Mutton - de boer gebruikt een geweer
+K Mutton_family
+V Mutton
+K Mutton_variation
+V standaard Mutton
+K News
+V Nieuws
+K No Challenges
+V Geen uitnodigingen
+K No Chat
+V Geen Chat
+K No Recent Games
+V Geen Recente Spelen
+K No challenges from #1
+V Geen uitnodigingen van #1
+K No players.
+V Geen spelers.
+K No spectators.
+V Geen toeschouwers.
+K No, let the bank fund it
+V Nee, laat de bank het garanderen
+K Nov #1#2#3
+V #1 Nov, #2:#3 GMT
+K Occupy 3 enemy bases
+V Bezet 3 vijandelijke bases
+K Oct #1#2#3
+V #1 Okt, #2:#3 GMT
+S Octiles
+K Octiles_family
+V Octiles
+K Octiles_variation
+V standaard Octiles
+K Offer a Draw
+V Bied remise aan
+K Offer a price for the goods on the ship
+V Bied een prijs voor de goederen op het schip
+K Onboard a piece, Move a stack, or Exchange
+V Plaats een stuk, Verplaats een kolom, Of Ruil
+K Only the flagship can occupy the center square
+V Het centrale veld is alleen voor het Vlaggenschip
+K Options
+V Opties
+S Palago
+K Palago_family
+V Palago
+K Palago_variation
+V standaard Palago
+K Pass
+V Pas
+K Pick a ring to place a chip and move
+V Kies een ring voor een chip en zet
+K Pick the stack to move
+V Kies de te verplaatsen kolom
+K Pick up and Continue your move
+V Pak op en ga verder met de zet
+K Place a Chip, or a Jewel, or a chip from the Store
+V Plaats een Chip, of een Juweel, of een chip uit de voorraad
+K Place a Frog on the board
+V Zet een Kikker op het bord
+K Place a GIPF piece on a starting point
+V Plaats een GIPF stuk op een beginpunt
+K Place a Ring on the board
+V Plaats een Ring op het bord
+K Place a chip on a starting point
+V Plaats een chip op een beginpunt
+K Place a gobblet on the board, or move a gobblet
+V Plaats een gobblet op het bord, of verplaats een gobblet
+K Place a marker on any empty cell
+V Plaats een steen op een vrij veld
+K Place a marker on any empty cell, or Swap Colors
+V Plaats een steen op een vrij veld, of wissel van kleur
+K Place a piece on the board
+V Plaats een stuk op het bord
+K Place a piece on the board, or Exchange an off-board piece for a new tile
+V Plaats een stuk op het bord, of Ruil een stuk naast het bord voor een nieuwe hex
+K Place a piece on the board, or move a piece already on the board
+V Plaats een stuk op het bord, of verplaats een stuk
+K Place a ring on the board
+V Plaats een ring op het bord
+S Place a roamer on the board
+K Place a second piece on the board
+V Zet een tweede stuk op het bord
+K Place a second tile adjacent to the first
+V Plaats een tweede hex grenzend aan de eerste
+K Place a second tile adjacent to those already on the board
+V Plaats een tweede tegel aangrenzend aan de bordpositie
+K Place a stone on the board, or remove a stone from the board
+V Plaats een steen op het bord, of haal een steen van het bord
+K Place a tile
+V Plaats een stuk
+K Place a tile adjacent to those already on the board
+V Plaats een tegel aangrenzend aan de bordpositie
+K Place a tile on any empty cell
+V Plaats een tegel op een vrij veld
+K Place a tile on the board
+V Plaats een stuk op het bord
+K Place a tile on the board, or move a tile
+V Plaats een stuk op het bord, of verplaats een stuk
+K Place a tile on the board, where a runner can leave a home space
+V Plaats een tegel, zodat een renner een thuisbasis verlaten kan
+K Place all your pieces in your two home rows
+V Plaats alle stukken op de twee achterste rijen
+K Place prisoners here for exhange
+V Plaats ruilgevangenen hier
+K Place the Rabbits
+V Plaats de Konijnen
+K Place the first meeple on the board
+V Zet de eerste meeple op het bord
+K Place the next tile on the board, where a runner can move over it
+V Plaats een volgende tegel, zodat een renner er over kan
+K Place your bid to fund the loan
+V Bied op de garantie voor de lening
+K Place your first man on the board
+V Zet je eerste stuk op het bord
+K Place your queen on the board
+V Plaats je koningin op het bord
+K Place your second man on the board
+V Zet je tweede stuk op het bord
+K Place your stack on the edge of the board
+V Plaats je kolom op een randveld
+K Place your town in your first row
+V Plaats je stad op de eerste rij
+K Placing Gipf Pieces
+V Plaats Gipf Stukken
+K Placing Standard Pieces
+V Plaats Standaard Stukken
+S Plateau
+K Plateau_family
+V Plateau
+K Plateau_variation
+V standaard Plateau
+K Play #1
+V Speel tegen #1
+K Play Farmer
+V Speel Boer
+K Played on #1
+V Gespeeld op #1
+K Player #1
+V Speler #1
+K Player is 
+V Speler is 
+K Players
+V Spelers
+K Players are: 
+V Spelers zijn: 
+K Please Join Me
+V Ik nodig je uit
+K Please respect the 15 minute time limit
+V Meester partijen hebben een tijdslimiet van 15 minuten
+K Position the starting rings
+V Plaats de startringen
+K Prisoners captured by Black are held here
+V Gevangenen van Zwart zijn hier
+K Prisoners captured by White are held here
+V Gevangenen van Wit zijn hier
+K Punct
+V P\u00fcnct
+K Punct_family
+V P\u00fcnct
+K Punct_variation
+V standaard P\u00fcnct
+S Qyshinsu
+K Qyshinsu_family
+V Qyshinsu
+K Qyshinsu_variation
+V Het mysterie van de weg
+K Racing Games
+V Race Spelen
+K Rearrange the gold fleet
+V Herschik de goudvloot
+K Rearrange the silver fleet
+V Herschik de zilvervloot
+K Rearrange things any way you want to
+V Herschik alles naar believen
+K Reconnecting
+V  ...maakt verbinding...
+S Red
+K Rejoin
+V Terug naar de partij
+K Rejoin #1
+V Terug naar #1
+K Remove a Ring
+V Verwijder een Ring
+K Reprice the goods in your factory storage
+V Herprijs de goederen in je fabriek
+K Reprice the goods in your warehouse storage
+V Herprijs de goederen in je pakhuis
+K Requesting Bids
+V Vraag biedingen
+K Requesting Loan
+V Vraag lening aan
+K Resign
+V Geef op
+K Resign State
+V Klik Klaar om opgave te bevestigen
+K Restart
+V Herstart
+K Return to the Way
+V Ga terug naar de Weg
+K Reverse View
+V Draai bord
+K Review Room
+V Commentaarruimte
+K Review Saved Games
+V Commentaarruimte
+K Rider Size
+V Maat van de Fietser
+K Rotate the board 180 degrees
+V Roteer het bord 180 graden
+S Santorini
+K Santorini_family
+V Santorini
+K Santorini_variation
+V Santorini (zonder Goden)
+K Score the most points at the sprint and finish lines
+V Scoor de meeste punten in tussensprints en aan de finish
+K See Player Comments
+V Zie commentaar van spelers
+K See Spectator Comments
+V Zie commentaar van toeschouwers
+K Select Game
+V Kies Spel
+K Select Robot
+V Selecteer Robot
+K Select a ring to remove
+V Kies een ring om te verwijderen
+K Select a row of 5 to remove
+V Kies een rij van 5 om te verwijderen
+K Select the #1 piece to move
+V Selecteer #1 stuk
+K Select the destination for the selected piece
+V Kies veld voor het geselecteerde stuk
+K Select the stack to move from
+V Selecteer de kolom vanwaar je zet
+S Select which of your roamers to kill
+S Select which opponent roamer to kill
+K Selecting game: #1
+V Selecteert partij: #1
+K Send
+V Verstuur
+K Sep #1#2#3
+V #1 Sep, #2:#3 GMT
+K Session #1 is active.  
+V Ruimte #1 is in gebruik.  
+K Session #1 is being launched.  
+V Ruimte #1 wordt geopend.  
+K Session #1 is displaying the map of players real locations
+V Ruimte #1 toont een kaart met de locatie van de spelers
+K Session #1 is idle.  
+V Ruimte #1 is niet in gebruik.  
+K Session #1 is private. 
+V Ruimte #1 is prive. 
+K Session #1: state unknown.
+V Ruimte #1: status onbekend.
+K Shipping
+V Verschepingen
+S Shoot
+K Show SGF Text
+V Toon SGF Tekst
+K Shuffle pieces to the exchange area, Click Done to start the exchange
+V Schuif stukken naar de ruilbeurs, Klik Klaar om te ruilen
+K Slide the chip toward the center
+V Schuif de chip naar het centrum
+K Sound
+V Geluid
+S Spangles
+K Spangles_family
+V Spangles
+K Spangles_variation
+V standaard Spangles
+K Spectate
+V Bekijk
+K Spectator
+V Toeschouwer
+K Spectator is: 
+V Toeschouwer is: 
+K Spectators
+V Toeschouwers
+K Spectators are: 
+V Toeschouwers zijn: 
+K Split or Merge this stack, or click Done
+V Splits of Voeg samen, of Klik Klaar
+K Split this stack, or click Done
+V Splits deze kolom, of Klik Klaar
+K Spot Price #1
+V Spot Prijs #1
+K Spread out the stacks
+V Spreid de kolommen
+K Stack Height
+V Kolom Hoogte
+K Stacking Games
+V Kolom Spelen
+S Start
+S Start #1
+K Start Black
+V Start Zwart
+K Start White
+V Start Wit
+K State unknown.
+V Status onbekend.
+K Swap
+V Wissel kleur
+K Swap Colors
+V Verwissel Kleuren
+K Switch to a more oblique view of the board
+V Verlaag blikveld op het bord
+K Switch to a more overhead view of the board
+V Verhoog blikveld op het bord
+K TBA1_variation
+V spel wordt aangekondigd
+K TBA2_variation
+V spel wordt aangekondigd
+K TBA3_variation
+V spel wordt aangekondigd
+S Tablut
+K Tablut-11
+V Tablut-11x11
+K Tablut-11_variation
+V Tablut op een 11x11 bord
+K Tablut-7
+V Tablut 7x7
+K Tablut-7_variation
+V Tablut op een 7x7 bord
+K Tablut-9
+V Tablut 9x9
+K Tablut-9_variation
+V Tablut op een 9x9 bord
+K Tablut_family
+V Tablut
+S Tajii
+K Tajii_family
+V Tajii
+K Take Over Playing
+V Neem de parij over
+K Take your first action
+V Maak je eerste actie
+K Take your second action
+V Maak je tweede actie
+K Tamsk_variation
+V standaard Tamsk
+K The game is a draw
+V De partij is remise
+K The game record is not available during the game
+V Het partijverloop is niet beschikbaar tijdens de partij
+K The next finish bonus is #1
+V De volgende finish bonus is #1
+K The next sprint bonus is #1
+V De volgende sprint bonus is #1
+K This is now a private room
+V Dit is nu een prive ruimte
+K This is now a public room
+V Dit is nu een publieke ruimte
+K Tile Pattern Games
+V Configuratie Spelen
+K Tile Size
+V Stukgrootte
+K Time is 
+V De tijd is nu 
+K Timeout in 1 minute.
+V Timeout in 1 minuut.
+K Tournament Game
+V Tournooi Partij
+S Traboulet
+K Traboulet_family
+V Traboulet
+K Traboulet_variation
+V standaard Traboulet
+K Track Mice
+V Volg Muis
+K Traditional Pieces
+V Traditionele Stukken
+S Trax
+K Trax_family
+V Trax
+K Trax_variation
+V standaard Trax
+S Triad
+K Triad_family
+V Triad
+K Triad_variation
+V standaard Triad
+S Truchet
+K Truchet_family
+V Truchet
+K Truchet_variation
+V standaard Truchet
+K TumblingDown
+V Tumbling Down
+K TumblingDown_family
+V Tumbling Down
+K TumblingDown_variation
+V standaard 8x8 TumblingDown
+K Type your message here.
+V Typ je bericht hier.
+S Tzaar
+K Tzaar-custom
+V Tzaar - custom
+K Tzaar-custom_variation
+V Tzaar - custom beginopstelling
+K Tzaar-random
+V Tzaar - random
+K Tzaar-random_variation
+V Tzaar - random beginopstelling
+K Tzaar-standard
+V Tzaar - standard
+K Tzaar-standard_variation
+V Tzaar - standaard beginopstelling
+K Tzaar_family
+V Tzaar
+K Tzaar_variation
+V standaard Tzaar
+K Unranked Room
+V Vrije speelruimte
+K Unsold Warehouses
+V Onverkochte pakhuizen
+K User 
+V Gebruiker 
+S Volcano
+K Volcano-h
+V Hex Volcano
+K Volcano-h_variation
+V Volcano op een hexraster
+K Volcano-hr
+V random Hex Volcano
+K Volcano-hr_variation
+V  Hex Volcano met random posities
+K Volcano-r
+V random Volcano
+K Volcano-r_variation
+V Volcano met random posities
+K Volcano_family
+V Volcano
+K Volcano_variation
+V standaard 5x5 Volcano
+K Wait for opponents to arrive.
+V Wacht op komst tegenspeler.
+K Wait for other players to adjust
+V Wacht tot anderen klaar zijn met aanpassen
+K Wait for the other players to decide
+V Wacht tot de andere spelers beslissen
+K Waiting in
+V Wachtend in
+K Warehouse
+V Pakhuis
+K Warehouses
+V Pakhuizen
+K Warp6
+V Warp 6
+K Warp6_family
+V Warp 6
+K Warp6_variation
+V standaard Warp 6
+K Welcome to Game client, version #1
+V Welkom bij BoardSpace client, versie #1
+K White
+V Wit
+K White Pieces
+V Witte Stukken
+K Wolf moving suspects
+V Wolf verplaatst verdachten
+K Wolf player eating
+V De Wolf eet
+K Wolf player hiding
+V De Wolf speler houdt zich schuil
+S Xiangqi
+K Xiangqi_family
+V Xiangqi
+K Xiangqi_variation
+V standaard Xiangqi
+K Yes, I will fund the loan
+V Ja, ik garandeer de lening
+S Yinsh
+S Yinsh-Blitz
+K Yinsh-Blitz_variation
+V blitz Yinsh - de eerste ring wint
+K Yinsh_family
+V Yinsh
+K Yinsh_variation
+V standaard Yinsh
+K You can only resign when it is your move
+V Je kunt alleen opgeven op je beurt
+K You have been disconnected: #1
+V De verbinding is verbroken: #1
+K You have been offered a draw - Accept or Decline
+V Er wordt remise aangeboden - Accepteer of Weiger
+K You have no legal moves.  Click on Done to pass
+V Je hebt geen legale zet.  Klik Klaar om te passen
+K You have no moves available. Click on Done to pass.
+V Je hebt geen zet. Klik Klaar om te passen.
+K You must move the gobblet you have picked up
+V Je moet de geselecteerde goblet verplaatsen
+K You must place a dome
+V Je moet een koepel plaatsen
+K You must take out a loan to pay interest
+V Je moet een lening afsluiten om rente te betalen
+K Zertz
+V Z\u00e8rtz
+K Zertz+11
+V Z\u00e8rtz+11
+K Zertz+11_variation
+V Z\u00e8rtz met 11 extra ringen
+K Zertz+24
+V Z\u00e8rtz+24
+K Zertz+24_variation
+V Z\u00e8rtz met 24 extra ringen
+K Zertz+xx
+V Z\u00e8rtz Extreme
+K Zertz+xx_variation
+V Z\u00e8rtz met standaard bord
+K Zertz_family
+V Z\u00e8rtz
+K Zertz_variation
+V standaard Z\u00e8rtz
+K accept the bid, or pay the amount yourself
+V accepteer het bod, of betaal het bedrag zelf
+K and
+V  en 
+K announceOption
+V Aankondiging nieuwe spelers
+K automute
+V #1 is automatisch gedempt
+K build an ideal city
+V bouw een ideale stad
+S capture all of one opponentr's color
+K center square is not special
+V Het centrale veld heeft geen speciale rol
+K click Done to finish this Auction
+V Klik Klaar om de veiling te beeindigen
+K connect opposite sides with a chain of markers
+V verbind tegenoverliggende zijden met je stenen
+K connecting
+V Verbindt met 
+K enterMessage
+V #1 is nu in de lobby
+K enters the room
+V #1 is nu in de ruimte
+K expand the board with your color tiles
+V breid het bord uit met eigen hexen
+K fontfamily
+V sansserif
+K form a larger triangle with your color at the tips
+V Leg een grotere driehoek met punten van je kleur
+K fund a loan from a player or the bank
+V garandeer een lening van een speler of de bank
+K game selector
+V spelkeuze
+K gold: escape the flagship  silver: capture gold flagship
+V goud: ontsnap met het Vlaggenschip  zilver: vang het Vlaggenschip
+K guest
+V gast
+S in #1
+K launchChat
+V Chat is open in Ruimte #1
+K launchGame
+V Spel open in Ruimte #1
+K launchReview
+V Commentaar mogelijk in Ruimte #1
+K launchfailed
+V De andere speler begon niet correct
+K launchspectator
+V Toeschouwer in Ruimte #1
+K load a luxury container
+V laad een luxury container
+K loaderr
+V Fout bij het laden: 
+K make 4 in a row in any direction
+V maak 4 op een rij in een willekeurige richting
+K make 5 in a row to capture a ring and win
+V maak 5 op een rij voor een ring en de winst
+K make 5 in a row to capture a ring, 3 rings win
+V maak 5 op een rij voor een ring, 3 ringen wint
+K make any loop, or a line which spans 8 rows or columns, in your color
+V maak een lus, of een lijn die 8 rijen of kolommen overspant
+K maximize the number of tiles in your reserve
+V Krijg zoveel mogelijk tegeltjes in je reserve
+K mouse tracking disabled
+V Muisvolgen niet actief
+K nolaunch
+V De server weigert verbinding, het bericht is 
+K nolobby
+V Sorry, geen toegang tot de lobby.  Hij kan vol zijn.
+K noresponse1
+V De server reageert niet.
+K noresponse2
+V Het kan uitval zijn, of een firewall die de toegang verhindert.
+K noserver
+V De lobby heeft geen verbinding mer de server.
+K own all the stacks
+V maak alle kolommen jouw kleur
+K perspective
+V perspectief
+K play
+V speel voor #1
+K player
+V speler
+S player 
+K private room
+V prive ruimte
+K punctgoal
+V verbind tegenoverliggende zijden, of plaats het laatste stuk voor contole van het centrum
+K quitting
+V #1 heeft de ruimte verlaten
+K rankingsfailed
+V Aanpassen van de stand mislukt
+K reading Zip directory...
+V leest Zip directory...
+K reading directory...
+V leest directory...
+K reconok
+V ...verbinding geslaagd
+K review
+V commentaar
+K savedmsg
+V Partij opgeslagen als #1
+K select the game to play
+V kies een spel om te spelen
+K select the game variation
+V kies de spelvariant
+K select the type of room
+V kies een type ruimte
+K select tile color
+V kies een kleur
+K set bid amount
+V bepaal bodhoogte
+K show grid
+V toon raster
+K stack six or capture six
+V maak een kolom van zes of sla zes stukken
+K stillwaiting
+V Opent...geduld aub.
+K surround your opponents queen bee
+V omsingel de koningin van de tegenspeler
+K the game has resumed
+V de partij is hervat
+K timeoutWarning
+V   Lobby sluit over 1 minuut (inactief).
+K trade a second container for a gold container
+V ruil een tweede container voor een gouden container
+K use Wooden tiles
+V gebruik Houten Hexen
+K website
+V #1 BoardSpace
+K welcome
+V Welkom in de BoardSpace Lobby, versie #1
+K you may increase your bid
+V je mag je bod verhogen
+K your name
+V je naam
+N 689

@@ -1,0 +1,1314 @@
+K #1 #2 Containers
+V #1 #2 Konteneroj
+K #1 Machine
+V #1 Ma\u015dino
+K #1 Ship
+V #1 \u015cipo
+K #1 center
+V #1 meze
+K #1 choices
+V #1 elektoj
+K #1 deliberately quit
+V #1 intence \u0109esis
+K #1 has been muted, by a consensus of the players
+V #1 fari\u011dis silenta, la\u016d konsento de la ludantoj
+K #1 has quit and become a spectator
+V #1 \u0109esis kaj fari\u011dis spektanto
+K #1 invites #2 to join room #3
+V #1 invitas #2 eniri \u0109ambron #3
+K #1 invites #2 to play #3 in room #4
+V #1 invitas #2 ludi #3 en \u0109ambro #4
+K #1 is taking over for #2
+V #1 anstata\u016das #2
+K #1 is taking over playing #2 for #3
+V #1 anstata\u016ds #2 por #3
+K #1 killed due to #2
+V #1 \u0109esigita pro #2
+K #1 left
+V #1 restas
+S #1 prisoners
+K #1 quit
+V #1 \u0109esis
+K #1 repetitions
+V #1 ripetoj
+K #1 requests Joint review
+V #1 petas Kunan Analizon. Bonvolu elekti "Kuna Analizo" en la mesa\u011da menuo
+S #1 reserves
+K #1 riders have crossed the first sprint line.
+V #1 biciklistoj transiris la unuan spurtan linion.
+K #1 riders have crossed the second sprint line.
+V #1 biciklistoj transiris la duan spurtan linion.
+K #1 riders have finished
+V #1 biciklistoj finis
+K #1 starts Joint review
+V #1 komencas Kunan Analizon
+K (unknown)
+V (nekonata)
+K (unoccupied)
+V (vaka)
+K (vacancy)
+V (vako)
+S + #1 turns
+K ...plus #1 more
+V ...plus #1 pli
+K 1 choice
+V 1 elekto
+K 4w 5g 6b or 3 of each wins
+V 4b 5g 6n a\u016d po 3 venkas
+K Accept $#1 from #2
+V Akcepti $#1 de #2
+K Accept Draw
+V Akceptu Remison
+K Accept chat from #1
+V Akcepti babiladon de #1
+K Accept the loan from the bank
+V Akcepti pruntedonon de la banko
+K Accept this loan financing or not
+V Akcepti \u0109i tiun pruntedonon a\u016d ne
+K Actions
+V Agoj
+K Active in
+V Aktivas en
+K Add a ball
+V Aldonu globon
+K Add a ball, remove a Ring
+V Aldonu globon, forprenu ringon
+K Adjust
+V Agordu
+S Adjust the chip spacing in stacks
+K Adjust your starting movements
+V Agordu viajn komencajn movojn
+K All Games
+V \u0108iuj Ludoj
+K Allow challenges from #1
+V Permesi invitojn de #1
+K Animate
+V Bildigi
+K Anyone can play in this room
+V \u0108iu ajn povas ludi en \u0109i tiu \u0109ambro
+K Apr #1#2#3
+V #1 apr, #2:#3 GMT
+K Aqua
+V Akva
+S Arimaa
+K Arimaa_family
+V Arimaa
+K Arimaa_variation
+V Norma Arimaa
+K ArmyOfFrogs
+V Armeo de Ranoj
+K ArmyOfFrogs_family
+V Armeo de Ranoj
+K ArmyOfFrogs_variation
+V norma Armeo de Ranoj
+K Auction
+V A\u016dkcio
+K Aug #1#2#3
+V #1 a\u016dg, #2:#3 GMT
+K Bank
+V Banko
+K Become a Spectator
+V Fari\u011di Spektanto
+K Bid $ #1
+V Oferti $ #1
+K Black
+V Nigran
+K Black Pieces
+V Nigraj Pecoj
+K Blue
+V Blua
+K BreakingAway
+V Breaking Away
+K BreakingAway_family
+V Breaking Away
+K BreakingAway_variation
+V norma Breaking Away
+K Build adjacent to the man you moved
+V Konstruu najbare al la movita viro
+K Build an initial stack of 2 to be placed
+V Konstruu komencan stakon de 2 por esti metita
+K Buy the goods for $#1
+V A\u0109eti la varojn kontra\u016d $#1
+K Calling server...
+V Vokante servilon...
+K Cannon
+V Kanono
+K Cannon_family
+V Kanono
+K Cannon_variation
+V norma Kanono
+K Capture 7 red balls or all of your opponent's balls
+V Kaptu 7 ru\u011dajn globojn a\u016d \u0109iujn globojn de via kontra\u016dulo
+K Capture a ball
+V Kaptu globon
+K Capture a group of opponents
+V Kaptu grupon de kontra\u016dulo
+K Capture a stack
+V Kaptu stakon
+K Capture all of your opponent's pieces
+V Kaptu \u0109iujn pecojn de via kontra\u016dulo
+K Capture most of your opponent's pieces
+V Kaptu multajn pecojn de via kontra\u016dulo
+K Capture the best combinations of all 5 colors
+V Kaptu la plej bonajn kombina\u0135ojn de koloroj kaj grandoj
+K Capture the most chips under your color stack
+V Kaptu plej multajn ringojn en viakoloraj stakoj
+K Capture your opponent's tallest king stack
+V Kaptu la plej altan re\u011dan stakon de via kontra\u016dulo
+K Capture your opponent's town
+V Kaptu la urbon de via kontra\u016dulo
+K Capturing Games
+V Ludoj pri Kaptado
+K Cash/Score
+V Mono/Poentoj
+K Chat Room
+V Babilejo
+S Che
+K Che_family
+V Che
+K Che_variation
+V norma Che
+K Checkmate your opponent's general
+V Matu la generalon de via kontra\u016dulo
+K Choose the penalty for non-payment of interest
+V Elektu la punon pro nepagon de interezo
+K Click DONE to confirm removing these markers
+V Klaku FINI por konfirmi forigon de \u0109i tiuj diskoj
+K Click DONE to confirm removing this ring
+V Klaku FINI por konfirmi forigon de \u0109i tiu ringo
+K Click DONE to confirm this move
+V Klaku FINI por konfirmi \u0109i tiun movon
+K Click DONE to confirm this placement
+V Klaku FINI por konfirmi \u0109i tiun meton
+K Click Done
+V Klaku Fini
+K Click Done to Finish the move
+V Klaku Fini por fini la movon
+K Click Done to accept a draw
+V Alklaku Fini por akcepti remison
+K Click Done to complete the exchange
+V Klaku Fini por fini la inter\u015dan\u011don
+K Click Done to confirm swapping colors with your opponent
+V Klaku Fini por konfirmi inter\u015dan\u011don de ludantaj koloroj
+K Click Done to confirm swapping fleets with your opponent
+V Klaku Fini por konfirmi inter\u015dan\u011di pecarojn kun via kontra\u016dulo
+K Click Done to confirm this action
+V Alklaku Fini por konfirmi \u0109i tiun agon
+S Click Done to confirm this move
+K Click Done to confirm this placement
+V Klaku Fini por konfirmi \u0109i tiun meton
+K Click Done to decline a draw
+V Alklaku Fini por malakcepti remison
+K Click Done to offer a draw
+V Alklaku Fini por proponi remison
+K Click on Done to complete the capture
+V Klaku Fini por fini la kapton
+K Click on Done to confirm swapping
+V Klaku Fini por konfirmi inter\u015dan\u011don
+K Click on Done to confirm the Exchange
+V Klaku Fini por konfirmi la inter\u015dan\u011don
+K Click on Done to confirm this Dance
+V Klaku Fini por konfirmi \u0109i tiun dancon
+K Click on Done to confirm your resignation
+V Klaku Fini por konfirmi vian kapitulacon
+K Click on Done to end the game
+V Klaku Fini por fini la partion
+K Click on Done to end the game (you lose)
+V Klaku Fini por fini la partion (vi malgajnas)
+K Click on Done to end the game as a Draw
+V Klaki fini por fini la ludon sen venkanto
+K Click on Done to finish all captures
+V Klaku Fini por fini \u0109iujn kaptojn
+K Click on Gipf pieces to change their capture status
+V Alklaku GIPF-pecojn por \u015dan\u011di ilian kapto-statuson
+K Click on the line to be captured
+V Klaku la kaptotan linion
+K Click on the placed piece to rotate it, or Click Done
+V Klaku la metitan pecon por turni \u011din, a\u016d klaku Fini
+K Closing...
+V Fermante...
+K Colorblind
+V Kolorblinda
+K Combine two stacks or capture another stack
+V Kunigu du stakojn, a\u016d kaptu alian stakon
+S Complete a push or pull, step #1
+K Complete a split or merge
+V Finu dividon a\u016d kunigon
+K Complete the merge
+V Finu la kunigon
+K Complete the pull, step #1
+V Finu la tiron, pa\u015do #1
+K Complete the push, step #1
+V Finu la pu\u015don, pa\u015do #1
+K Complete the split
+V Finu la dividon
+K Confirm Dropping this rider
+V Konfirmu Forigo de \u0109i tiu biciklisto
+K Connect all your frogs (at least 7) in one cluster
+V Ligu \u0109iujn viajn ranojn (almena\u016d 7) en unu grupo
+K Connection Games
+V Ludoj pri Konektado
+K Connection error
+V Konekta eraro
+K Container
+V Kontenero
+K Container-First
+V Kontenero - Originala
+K Container-First_variation
+V Kontenero kun la originala regularo
+K Container_family
+V Kontenero
+K Container_variation
+V Kontenero kun reguloj de Dua Sendo
+K Continue Capturing
+V Plu kaptu
+K Continue merging or click Done
+V Plu kunigu a\u016d klaku Fini
+S Crossfire
+S Crossfire_family
+S Crossfire_variation
+K Dec #1#2#3
+V #1 dec, #2:#3 GMT
+K Decline Draw
+V Malakceptu Remison
+K Decline the loan
+V Malakcepti la pruntedonon
+K Designate GIPF pieces to capture, or place a GIPF chip
+V Indiku GIPF-pecojn por kapti, a\u016d metu GIPF-pecon
+K Designate GIPF pieces to capture, or place a chip
+V Indiku GIPF-pecojn por kapti, a\u016d metu pecon
+K Designate a row to capture
+V Indiku vicon por kapti
+K Designate a row to capture before your turn
+V Indiku vicon por kapti anta\u016d via movo
+K Dipole
+V Dipole (originala)
+K Dipole-s
+V Dipole
+K Dipole-s_variation
+V Dipole 8x8 kun simetria komenca pozicio
+K Dipole_family
+V Dipole
+K Dipole_variation
+V Dipole 8x8 kun malsimetria komenca pozicio
+K Done
+V Fini
+K Drop a tile to enlarge the board
+V Metu pecon por pligrandigi la tabulon
+K Drop bunny chip
+V Metu unu el la pecoj de la kunikla ludanto
+K Drop the moving stack back on the rack
+V Remetu la movi\u011dantan stakon al la ujo
+K Drop the ring
+V Remetu la ringon
+K Drop this rider from the Race
+V Forigu \u0109i tiun bicikliston de la Vetkuro
+K Drop your piece onto the board or any of your stacks
+V Metu vian pecon sur la tabulon a\u016d sur iun ajn el viaj stakoj
+K Drop your piece onto the board or any stack
+V Metu vian pecon sur la tabulon a\u016d sur iun ajn stakon
+K Dvonn
+V DVONN
+K Dvonn_family
+V DVONN
+K Dvonn_variation
+V norma Dvonn
+K Eat
+V Man\u011du
+K Edit
+V Redakti
+K Eliminate all your opponent's pieces
+V Forigu \u0109iujn pecojn de via kontra\u016dulo
+S Entrapment
+S Entrapment-6x7
+K Entrapment-6x7_variation
+V Entrapment 6x7 - faster game
+K Entrapment-7x7
+V Entrapment
+K Entrapment-7x7_variation
+V standard 7x7 Entrapment
+S Entrapment-7x7x4
+K Entrapment-7x7x4_variation
+V Entrapment-7x7 with 4 roamers
+K Entrapment_family
+V Entrapment
+K Error
+V Eraro
+K Error reading directory
+V Eraro legante dosierujon
+K Error reading file
+V Eraro legante dosieron
+S Escape forced position
+S Escape forced position, or move a barrier
+S Escape forced position, or place a barrier
+K Escape from check
+V Eskapu de \u015dako
+K Euro Games
+V Europaj Ludoj
+K Exchange Prisoners
+V Inter\u015dan\u011du Kaptitojn
+K Exchange an off-board piece for a new tile
+V Inter\u015dan\u011du ekstertabulan pecon kun nova peco
+S Exxit
+K Exxit-Beginner
+V Exxit-Komencanta
+K Exxit-Beginner_variation
+V ludi Exxit kun 19 pecoj
+K Exxit-Blitz
+V Exxit-Rapida
+K Exxit-Blitz_variation
+V ludi Exxit kun 29 pecoj
+K Exxit-Pro
+V Exxit-Majstra
+K Exxit-Pro_variation
+V ludi majstran Exxit
+K Exxit_family
+V Exxit
+K Exxit_variation
+V ludi Exxit kun 39 pecoj
+S Fanorona
+K Fanorona_family
+V Fanorona
+K Fanorona_variation
+V norma Fanorona
+K Farmer configuring board
+V Farmisto aran\u011das tabulon
+K Farmer moving scared
+V Farmisto movas teruritajn
+K Farmer select
+V Farmisto elektu
+K Feb #1#2#3
+V #1 feb, #2:#3 GMT
+K Final Scores:
+V Finaj Poentoj:
+K Finished Capturing, Click Done
+V Kaptado finita, klaku Fini
+K Flagship can not capture
+V Re\u011do ne povas kapti
+K Flagship can participate in captures
+V Re\u011do povas kapti
+K Flagship is captured normally
+V Re\u011do kapteblas normale
+K Flagship must Reach the corner to win
+V Re\u011do devas atingi angulon por venki
+K Flagship must be surrounded on all 4 sides
+V Re\u011do devas esti \u0109irka\u016dita \u0109e \u0109iuj 4 flankoj
+K Flagship wins at any edge square
+V Re\u011do venkas \u0109e iu ajn randa kvadrato
+K Flip a tile, or Move Split or Merge a stack
+V Renversu kvadraton a\u016d Movu, Dividu a\u016d Kunigu stakon
+K Form a closed shape in your color
+V Fermu kompletan formon de via koloro
+K Frogs
+V Armeo de Ranoj
+K From #1
+V De #1
+K Game
+V Partio
+K Game Over
+V Partio Finita
+K Game Room
+V Partia \u0108ambro
+K Game in progress...
+V Partio progresas...
+K Game timed out.  Session has ended.
+V Partia tempolimo pasis. Sesio fini\u011dis.
+K Game won by #1
+V Partion venkis #1
+K Games do not affect your Ranking
+V Partioj ne efikas al via grado
+K Gipf
+V GIPF Baza
+K Gipf Games
+V Gipf-Ludoj
+K Gipf-standard
+V GIPF Norma
+K Gipf-standard_variation
+V GIPF Norma (kun GIPF-pecoj)
+K Gipf-tournament
+V Gipf-Altnivela
+K Gipf-tournament_variation
+V GIPF-Altnivela (senlimaj GIPF-pecoj)
+K Gipf_family
+V GIPF
+K Gipf_variation
+V GIPF Baza (neniuj GIPF-pecoj)
+S Gobblet
+K Gobblet_family
+V Gobblet
+K Gobblet_variation
+V Ludi kun permesita subrigardo
+K Gobbletm
+V GobbletM
+K Gobbletm_variation
+V Memoro gravas - subrigardo malpermesita
+S Hex
+S Hex-15
+K Hex-15_variation
+V 15x15 Hex
+S Hex-19
+K Hex-19_variation
+V 19x19 Hex
+K Hex_family
+V Hex
+K Hex_variation
+V 11x11 Hex
+K Hide
+V Ka\u015du
+K Hint
+V Propono
+S Hive
+S Hive-L
+S Hive-LM
+K Hive-LM_variation
+V Hive kun Ladybug kaj Moskito
+K Hive-L_variation
+V Hive kun Ladybug aldonita
+S Hive-M
+K Hive-M_variation
+V Hive kun Moskito aldonita
+K Hive_family
+V Hive
+K Hive_variation
+V norma Hive
+K I will make the loan
+V Mi pruntedonos
+K Idle.
+V Malaktiva.
+K Ignore chat from #1
+V Ignori babiladon de #1
+K Illegal - this move would form an illegal pattern of lines
+V Kontra\u016dle\u011de - \u0109i tiu movo kreus kontra\u016dle\u011dan aran\u011don de linioj
+K Illegal due to repetition, try something else or resign
+V Kontra\u016dle\u011da pro ripeto, provu ion alian a\u016d kapitulacu
+K Illegal move due to repetition - try something else
+V Kontra\u016dle\u011da movo pro ripetado - provu ion alian
+S Immobilize your opponent's roamers
+K Invite
+V Inviti #1 al \u0109ambro #2
+K Invite players to this room
+V Inviti ludantojn al \u0109i tiu \u0109ambro
+K Island
+V Insulo
+K Jan #1#2#3
+V #1 jan, #2:#3 GMT
+K Join
+V Ali\u011di
+K Join only if Invited
+V Ali\u011du nur se invitita
+K Joining as a spectator
+V #1 ali\u011dis kiel spektanto
+K Joint Review
+V Kuna Analizo
+K Jul #1#2#3
+V #1 jul, #2:#3 GMT
+K Jun #1#2#3
+V #1 jun, #2:#3 GMT
+K Knock 5 of your opponent's dice into the gutter
+V Frapu 5 el la kuboj de via kontra\u016dulo eksteren
+S Knockabout
+K Knockabout_family
+V Knockabout
+K Knockabout_variation
+V norma Knockabout
+S LIMBO
+K LOA
+V Lines of Action
+S LOAP
+K LOAP_variation
+V ludi la programkonkursan varianton de LOA
+K LOA_family
+V Lines of Action
+K LOA_variation
+V norma 8x8 Lines of Action
+K Launching...
+V Lan\u0109ante...
+S LeHavre
+K LeHavre_family
+V LeHavre
+K LeHavre_variation
+V standard LeHavre
+K Let The Robot Play
+V Lasu La Roboton Ludi
+K Let someone else make the loan
+V Lasi iun alian pruntedoni
+K Load more goods from the Dock
+V \u015car\u011di vian \u015dipon per pliaj varoj de la Doko
+K Load the goods you will produce
+V Metu la varojn, kiujn vi produktos
+K Load the your warehouse from the seller
+V Plenigi vian magazenon de la vendisto
+K Load your ship from the Dock
+V \u015car\u011di vian \u015dipon de la Doko
+K Loading game file
+V \u015cutante partian dosieron
+K Loan Card
+V Pruntedona Karto
+K Loan for #1 from #2
+V Pruntedono por #1 de #2
+K Loan for #1 from the bank
+V Pruntedono por #1 de la banko
+K Loans
+V Pruntedonoj
+K Lobby
+V Vestiblo
+K Lobby shutdown...
+V Mal\u015dalto de vestiblo...
+K Machines
+V Ma\u015dinoj
+K Make a Dance move
+V Faru danc-movon
+K Make a capturing move
+V Faru kaptomovon
+K Make an addional capturing move, or click on Done
+V Faru aldonan kaptomovon, a\u016d klaku Fini
+K Make an addional move, or click on Done
+V Faru aldonan movon, a\u016d klaku Fini
+K Make the first move, or swap and move second
+V Faru unuan movon, a\u016d inter\u015dan\u011du kaj movu due
+K Make your first move, or swap fleets
+V Faru vian unuan movon, a\u016d inter\u015dan\u011di pecarojn
+K Map of Player Locations
+V Mapa \u0108ambro
+K Mar #1#2#3
+V #1 mar, #2:#3 GMT
+K Master Room
+V Majstra \u0108ambro
+K Master ranked players can play
+V Majstroj povas ludi en \u0109i tiu \u0109ambro
+K Match words:
+V Trovi vortojn:
+K Maximize your profits
+V Maksimumigu viajn profitojn
+K May #1#2#3
+V #1 maj, #2:#3 GMT
+S Medina
+K Medina_family
+V Medina
+K Medina_variation
+V norma Medina
+K Members
+V Membroj
+K Memory is low
+V Memoro mankas
+K Merge this stack, or click Done
+V Kunigu \u0109i tiun stakon, a\u016d klaku Fini
+K Message:
+V Al \u0108IUJ:
+K MessageTo:
+V Al #1:
+K Messages
+V Mesa\u011doj
+S Micropul
+K Micropul_family
+V Micropul
+K Micropul_variation
+V norma Micropul
+K Move ##1
+V Movo ##1
+K Move 6 ships to the center
+V Movu 6 \u015dipojn al la centro
+K Move A Stack
+V Movu Stakon
+K Move a Cyclist
+V Movu Bicikliston
+K Move a Frog
+V Movu Ranon
+K Move a Man
+V Movu Homon
+K Move a Man up to level 3
+V Movu Homon al nivelo 3
+K Move a Rabbit to the last row
+V Movu Kuniklon al la lasta horizontalo
+K Move a ball or change a Ring
+V Movu globon a\u016d \u015dan\u011du ringon
+K Move a piece
+V Movu pecon
+K Move a piece one space
+V Movu pecon unu lokon
+K Move a piece, step #1
+V Movu pecon, pa\u015do #1
+K Move a ring
+V Movu ringon
+S Move a roamer
+S Move a roamer or move a barrier
+S Move a roamer, or place a barrier
+K Move a runner
+V Movu kuriston
+K Move a runner from a home space
+V Movu kuriston de hejmloko
+K Move a ship
+V Movu \u015dipon
+K Move a ship to the board
+V Movu \u015dipon al la tabulo
+K Move a soldier, or fire a cannon
+V Movu soldaton a\u016d pafu kanonon
+S Move a stack, or add a reserve piece
+K Move a volcano cap
+V Movu vulkanan \u0109apon
+K Move one ship
+V Movu unu pecon
+K Move stacks around any way you want to
+V Movu stakojn \u0109iel ajn vi volas
+K Move the flipped stack
+V Movu la renversitan stakon
+K Move your runners to the opposite side
+V Movu viajn kuristojn al la kontra\u016d flanko
+K Move, Split or Merge a stack
+V Movu, Dividu a\u016d Kunigu stakon
+K Moves are coming in
+V Movoj alvenas
+S Mutton
+K Mutton-shotgun
+V \u0108aspafila Mutton
+K Mutton-shotgun_variation
+V Mutton - farmisto uzas \u0109aspafilon
+K Mutton_family
+V Mutton
+K Mutton_variation
+V norma Mutton
+K News
+V Nova\u0135oj
+K No Challenges
+V Neniuj Invitoj por Ludi
+K No Chat
+V Neniu Babilado
+K No Recent Games
+V Neniuj Lastatempaj Ludoj
+K No challenges from #1
+V Neniuj invitoj de #1
+K No players.
+V Neniuj ludantoj.
+K No spectators.
+V Neniuj spektantoj.
+K No, let the bank fund it
+V Ne, lasu la bankon pruntedoni
+K Nov #1#2#3
+V #1 nov, #2:#3 GMT
+K Occupy 3 enemy bases
+V Okupu 3 kontra\u016dulajn bazojn
+K Oct #1#2#3
+V #1 okt, #2:#3 GMT
+S Octiles
+K Octiles_family
+V Octiles
+K Octiles_variation
+V norma Octiles
+K Offer a Draw
+V Proponu Remison
+K Offer a price for the goods on the ship
+V Oferti prezon por la varoj sur la \u015dipo
+K Onboard a piece, Move a stack, or Exchange
+V Surmetu pecon, Movu stakon, a\u016d Inter\u015dan\u011du
+K Only the flagship can occupy the center square
+V Nur la re\u011do povas okupi la centran kvadraton
+K Options
+V Elektoj
+S Palago
+K Palago_family
+V Palago
+K Palago_variation
+V norma Palago
+K Pass
+V Pasi
+K Pick a ring to place a chip and move
+V Elektu ringon por meti diskon kaj movi
+K Pick the stack to move
+V Elektu stakon por movi
+K Pick up and Continue your move
+V Levu kaj da\u016drigu vian movon
+K Place a Chip, or a Jewel, or a chip from the Store
+V Metu Platon, a\u016d Juvelon, a\u016d platon de la Magazeno
+K Place a Frog on the board
+V Metu Ranon sur la tabulon
+K Place a GIPF piece on a starting point
+V Metu GIPF-pecon sur komenco-punkton
+K Place a Ring on the board
+V Metu ringon sur la tabulon
+K Place a chip on a starting point
+V Metu pecon sur komenco-punkton
+K Place a gobblet on the board, or move a gobblet
+V Metu pecon sur la tabulon, a\u016d movu pecon
+K Place a marker on any empty cell
+V Metu pecon sur iun ajn vakan \u0109elon
+K Place a marker on any empty cell, or Swap Colors
+V Metu pecon sur in ajn vakan \u0109elon, a\u016d Inter\u015dan\u011du Kolorojn
+K Place a piece on the board
+V Metu pecon sur la tabulon
+K Place a piece on the board, or Exchange an off-board piece for a new tile
+V Metu pecon sur la tabulon, a\u016d inter\u015dan\u011du ekstertabulon pecon por nova peco
+K Place a piece on the board, or move a piece already on the board
+V Metu pecon sur la tabulon, a\u016d movu pecon jam sur la tabulo
+K Place a ring on the board
+V Metu ringon sur la tabulon
+S Place a roamer on the board
+K Place a second piece on the board
+V Metu duan homon sur la tabulon
+K Place a second tile adjacent to the first
+V Metu duan platon najbare al la unua
+K Place a second tile adjacent to those already on the board
+V Metu duan platon najbare al plato jam sur la tabulo
+K Place a stone on the board, or remove a stone from the board
+V Metu \u015dtonon sur la tabulon, a\u016d forprenu \u015dtonon de la tabulo
+K Place a tile
+V Metu pecon
+K Place a tile adjacent to those already on the board
+V Metu platon najbare al plato jam sur la tabulo
+K Place a tile on any empty cell
+V Metu platon sur iun ajn malplenan \u0109elon
+K Place a tile on the board
+V Metu pecon sur la tabulon
+K Place a tile on the board, or move a tile
+V Metu pecon a\u016d movi pecon
+K Place a tile on the board, where a runner can leave a home space
+V Metu platon sur la tabulon, kie kuristo povas eliri de hejmloko
+K Place all your pieces in your two home rows
+V Metu \u0109iujn viajn pecojn en viaj du hejmaj horizontaloj
+K Place prisoners here for exhange
+V Metu kaptitojn \u0109e tien por inter\u015dan\u011di
+K Place the Rabbits
+V Metu la Kuniklojn
+K Place the first meeple on the board
+V Metu la unuan homon sur la tabulon
+K Place the next tile on the board, where a runner can move over it
+V Metu la sekvan platon sur la tabulon, kie kuristo povas kuri super \u011di
+K Place your bid to fund the loan
+V Metu vian oferton pro pruntedoni
+K Place your first man on the board
+V Metu vian unuan homon sur la tabulon
+K Place your queen on the board
+V Metu vian abelre\u011dinon sur la tabulon
+K Place your second man on the board
+V Metu vian duan homon sur la tabulon
+K Place your stack on the edge of the board
+V Metu vian stakon sur la randon de la tabulo
+K Place your town in your first row
+V Metu vian urbon sur vian unuan horizontalon
+K Placing Gipf Pieces
+V Metante GIPF-pecojn
+K Placing Standard Pieces
+V Metante Normalajn Pecojn
+S Plateau
+K Plateau_family
+V Plateau
+K Plateau_variation
+V norma Plateau
+K Play #1
+V Ludi #1
+K Play Farmer
+V Ludu Farmisto
+K Played on #1
+V Ludis sur #1
+S Player #1
+K Player is 
+V Ludanto estas 
+K Players
+V Ludantoj
+K Players are: 
+V Ludantoj estas: 
+K Please Join Me
+V Bonvolu Ali\u011di Min
+K Please respect the 15 minute time limit
+V Majstropartioj havas 15-minutan tempolimon
+K Position the starting rings
+V Metu la komencajn ringojn
+K Prisoners captured by Black are held here
+V Kaptitoj fare de Nigro estas \u0109i tie
+K Prisoners captured by White are held here
+V Kaptitoj fare de Blanko estas \u0109i tie
+K Punct
+V P\u00dcNCT
+K Punct_family
+V P\u00dcNCT
+K Punct_variation
+V norma P\u00dcNCT
+S Qyshinsu
+K Qyshinsu_family
+V Qyshinsu
+K Qyshinsu_variation
+V La mistero de la vojo
+K Racing Games
+V Ludoj pri Vetkurado
+K Rearrange the gold fleet
+V Rearan\u011du la oran pecaron
+K Rearrange the silver fleet
+V Rearan\u011du la ar\u011dentan pecaron
+K Rearrange things any way you want to
+V Rearan\u011du a\u0135ojn la\u016d via pla\u0109o
+K Reconnecting
+V  ...Rekonektante...
+K Red
+V Ru\u011da
+K Rejoin
+V Reali\u011di
+K Rejoin #1
+V Reali\u011di #1
+K Remove a Ring
+V Forprenu ringon
+K Reprice the goods in your factory storage
+V \u015can\u011doj prezojn de la varoj en viaj fabrikoj
+K Reprice the goods in your warehouse storage
+V \u015can\u011di la prezojn de la varoj en viaj magazenoj
+K Requesting Bids
+V Petante Ofertojn
+K Requesting Loan
+V Petante Pruntedonon
+K Resign
+V Kapitulaci
+K Resign State
+V Klaku Fini por konfirmi vian kapitulacon
+K Restart
+V Rekomencu
+K Return to the Way
+V Reveno al la Vojo
+K Reverse View
+V Renversa Vido
+K Review Room
+V Analiza \u0108ambro
+K Review Saved Games
+V Analiza \u0108ambro
+K Rider Size
+V Grandeco de Bickilisto
+S Rotate the board 180 degrees
+S Santorini
+K Santorini_family
+V Santorini
+K Santorini_variation
+V Santorini (sen Dioj)
+K Score the most points at the sprint and finish lines
+V Akiru plej multajn poentojn \u0109e la spurta kaj fina linioj
+K See Player Comments
+V Vidi Komentojn de Ludantoj
+K See Spectator Comments
+V Vidi Komentojn de Spektantoj
+K Select Game
+V Elekti Partion
+K Select Robot
+V Elekti Roboton
+K Select a ring to remove
+V Elektu ringon por forigi
+K Select a row of 5 to remove
+V Elektu linion de 5 por forigi
+K Select the #1 piece to move
+V Elektu la #1 pecon por movi
+K Select the destination for the selected piece
+V Elektu la cellokon por la elektita peco
+K Select the stack to move from
+V Elektu la stakon de kiu vi movos
+S Select which of your roamers to kill
+S Select which opponent roamer to kill
+K Selecting game: #1
+V Elektante partion: #1
+K Send
+V Sendi
+K Sep #1#2#3
+V #1 sep, #2:#3 GMT
+K Session #1 is active.  
+V Sesio #1 estas aktiva.  
+K Session #1 is being launched.  
+V Sesio #1 lan\u0109i\u011das.  
+K Session #1 is displaying the map of players real locations
+V Sesio #1 montras mapon de realaj lokoj de ludantoj
+K Session #1 is idle.  
+V Sesio #1 estas malaktiva.  
+K Session #1 is private. 
+V Sesio #1 estas privata. 
+K Session #1: state unknown.
+V Sesio #1: nekonata stato.
+K Shipping
+V Sendado
+K Shoot
+V Pafu
+K Show SGF Text
+V Montri SGF-Tekston
+K Shuffle pieces to the exchange area, Click Done to start the exchange
+V Miksu pecojn al la inter\u015dan\u011dejo; klaku Fini por komenci la inter\u015dan\u011don
+K Slide the chip toward the center
+V Pu\u015du la pecon internen
+K Sound
+V Sono
+S Spangles
+K Spangles_family
+V Spangles
+K Spangles_variation
+V norma Spangles
+K Spectate
+V Spekti
+K Spectator
+V Spektanto
+K Spectator is: 
+V Spektanto estas: 
+K Spectators
+V Spektantoj
+K Spectators are: 
+V Spektantoj estas: 
+K Split or Merge this stack, or click Done
+V Dividu a\u016d Kunigu \u0109i tiun stakon, a\u016d klaku Fini
+K Split this stack, or click Done
+V Dividu \u0109i tiun stakon, a\u016d klaku Fini
+S Spot Price #1
+S Spread out the stacks
+K Stack Height
+V Staka Alto
+K Stacking Games
+V Stakludoj
+K Start
+V Komenci
+K Start #1
+V Komencu #1
+K Start Black
+V Komencu Nigro
+K Start White
+V Komencu Blanko
+K State unknown.
+V Stato nekonata.
+K Swap
+V Inter\u015dan\u011di
+K Swap Colors
+V Inter\u015dan\u011di Kolorojn
+S Switch to a more oblique view of the board
+S Switch to a more overhead view of the board
+K TBA1_variation
+V ludo estos anoncita
+K TBA2_variation
+V ludo estos anoncita
+K TBA3_variation
+V ludo estos anoncita
+S Tablut
+K Tablut-11
+V Tablut 11x11
+K Tablut-11_variation
+V Tablut sur 11x11-tabulo
+K Tablut-7
+V Tablut 7x7
+K Tablut-7_variation
+V Tablut sur 7x7-tabulo
+K Tablut-9
+V Tablut 9x9
+K Tablut-9_variation
+V Tablut sur 9x9-tabulo
+K Tablut_family
+V Tablut
+S Tajii
+K Tajii_family
+V Tajii
+K Take Over Playing
+V Anstata\u016dludi
+K Take your first action
+V Faru vian unuan agon
+K Take your second action
+V Faru vian duan agon
+K Tamsk_variation
+V norma Tamsk
+K The game is a draw
+V La partio estas sen venkanto
+K The game record is not available during the game
+V La ludhistorio ne haveblas dum ludado
+K The next finish bonus is #1
+V La sekva fina premio estas #1
+K The next sprint bonus is #1
+V La sekva spurt-premio estas #1
+K This is now a private room
+V \u0108i tio estas nun privata \u0109ambro
+K This is now a public room
+V \u0108i tio estas nun publika \u0109ambro
+K Tile Pattern Games
+V Ludoj pri Aran\u011doj de Platoj
+K Tile Size
+V Grando de Pecoj
+K Time is 
+V Tempo estas 
+K Timeout in 1 minute.
+V Tempolimo post 1 minuto.
+K Tournament Game
+V Turnira Partio
+S Traboulet
+K Traboulet_family
+V Traboulet
+K Traboulet_variation
+V norma Traboulet
+K Track Mice
+V Spuri Musojn
+K Traditional Pieces
+V Tradiciaj Pecoj
+S Trax
+K Trax_family
+V Trax
+K Trax_variation
+V norma Trax
+S Triad
+K Triad_family
+V Triad
+K Triad_variation
+V norma Triad
+S Truchet
+K Truchet_family
+V Truchet
+K Truchet_variation
+V norma Truchet
+K TumblingDown
+V Tumbling Down
+K TumblingDown_family
+V Tumbling Down
+K TumblingDown_variation
+V norma 8x8 TumblingDown
+K Type your message here.
+V Tajpu vian mesa\u011don \u0109i tie.
+K Tzaar
+V TZAAR
+K Tzaar-custom
+V TZAAR - la\u016dmenda
+K Tzaar-custom_variation
+V TZAAR - la\u016dmenda komenca pozicio
+K Tzaar-random
+V TZAAR - hazardkomenca
+K Tzaar-random_variation
+V TZAAR - hazarda komenca pozicio
+K Tzaar-standard
+V TZAAR - norma
+K Tzaar-standard_variation
+V TZAAR - norma komenca pozicio
+K Tzaar_family
+V TZAAR
+K Tzaar_variation
+V norma TZAAR
+K Unranked Room
+V Negradita \u0108ambro
+K Unsold Warehouses
+V Nevenditaj Magazenoj
+K User 
+V Uzanto 
+K Volcano
+V Vulkano
+K Volcano-h
+V Hex Vulkano
+K Volcano-h_variation
+V Vulkano sur sesangula krado
+K Volcano-hr
+V hazardkomenca Hex Vulkano
+K Volcano-hr_variation
+V  Hex Vulkano kun hazarda komenca pozicio
+K Volcano-r
+V hazardkomenca Vulkano
+K Volcano-r_variation
+V Vulkano kun hazarda komenca pozicio
+K Volcano_family
+V Vulkano
+K Volcano_variation
+V norma 5x5 Vulkano
+K Wait for opponents to arrive.
+V Atendi alvenon de kontra\u016duloj.
+K Wait for other players to adjust
+V Atendu dum aliaj ludantoj agordas
+K Wait for the other players to decide
+V Atendu dum aliaj ludantoj decidas
+K Waiting in
+V Atendas en
+K Warehouse
+V Magazeno
+K Warehouses
+V Magazenoj
+K Warp6
+V Warp 6
+K Warp6_family
+V Warp 6
+K Warp6_variation
+V norma Warp 6
+K Welcome to Game client, version #1
+V Bonvenon al la kliento de BoardSpace, versio #1
+K White
+V Blankan
+K White Pieces
+V Blankaj Pecoj
+K Wolf moving suspects
+V Lupo movas suspektatojn
+K Wolf player eating
+V Lupo man\u011das
+K Wolf player hiding
+V Lupo ka\u015das sin
+S Xiangqi
+K Xiangqi_family
+V Xiangqi
+K Xiangqi_variation
+V norma Xiangqi
+K Yes, I will fund the loan
+V Jes, mi volas pruntedoni
+K Yinsh
+V YINSH
+K Yinsh-Blitz
+V Rapida YINSH
+K Yinsh-Blitz_variation
+V rapida YINSH - la unua ringo venkas
+K Yinsh_family
+V YINSH
+K Yinsh_variation
+V norma YINSH
+K You can only resign when it is your move
+V Vi povas kapitulaci nur dum via movo
+K You have been disconnected: #1
+V Vi estis diskonektita: #1
+K You have been offered a draw - Accept or Decline
+V Vi ricevis proponon por remiso - Akceptu a\u016d Malakceptu
+K You have no legal moves.  Click on Done to pass
+V Vi ne havas validan movon.  Klaku Fini por pasi
+K You have no moves available. Click on Done to pass.
+V Vi ne havas validan movon. Klaku Fini por pasi.
+K You must move the gobblet you have picked up
+V Vi devas movi la pecon, kiun vi levis
+K You must place a dome
+V Vi devas meti kupolon
+K You must take out a loan to pay interest
+V Vi devas pruntepreni por pagi interezon
+K Zertz
+V Z\u00c8RTZ
+K Zertz+11
+V Z\u00c8RTZ+11
+K Zertz+11_variation
+V Z\u00c8RTZ kun 11 ekstraj ringoj
+K Zertz+24
+V Z\u00c8RTZ+24
+K Zertz+24_variation
+V Z\u00c8RTZ kun 24 ekstraj ringoj
+K Zertz+xx
+V Z\u00c8RTZ Ekstrema
+K Zertz+xx_variation
+V Z\u00c8RTZ kun la\u016dmenda tabula aran\u011do
+K Zertz_family
+V Z\u00c8RTZ
+K Zertz_variation
+V norma Z\u00c8RTZ
+K accept the bid, or pay the amount yourself
+V akceptu la oferton, a\u016d vi mem pagu tiun kvanton
+K and
+V  kaj 
+K announceOption
+V Anonci Novajn Ludantojn
+K automute
+V #1 estis a\u016dtomate mutigita
+K build an ideal city
+V konstruu idealan urbon
+K capture all of one opponentr's color
+V kaptu \u0109iujn pecojn de la koloro de unu kontra\u016dulo
+K center square is not special
+V centra kvadrato ne specialas
+S click Done to finish this Auction
+K connect opposite sides with a chain of markers
+V konektu kontra\u016dajn flankojn per \u0109eno de pecoj
+K connecting
+V Konektante al 
+K enterMessage
+V #1 eniris la vestiblon
+K enters the room
+V #1 eniris la \u0109ambron
+K expand the board with your color tiles
+V pligrandigu la tabulon per viakoloraj pecoj
+K fontfamily
+V sansserif
+K form a larger triangle with your color at the tips
+V formu pli grandan triangulon kun verticoj de via koloro
+K fund a loan from a player or the bank
+V aran\u011di pruntedonon de ludanto a\u016d de la banko
+K game selector
+V Ludelektilo
+K gold: escape the flagship  silver: capture gold flagship
+V oro: la re\u011do eskapu  ar\u011dento: kaptu la oran re\u011don
+K guest
+V gasto
+K in #1
+V en #1
+K launchChat
+V Lan\u0109ante babilejon en Sesio #1
+K launchGame
+V Lan\u0109ante partion en sesio #1
+K launchReview
+V Lan\u0109ante analizan \u0109ambron en sesio #1
+K launchfailed
+V La alia ludanto ne komencis \u011duste
+K launchspectator
+V Lan\u0109ante spektanton en Sesio #1
+S load a luxury container
+K loaderr
+V Eraro dum \u015dutado: 
+K make 4 in a row in any direction
+V faru 4 en linio en iu ajn direkto
+K make 5 in a row to capture a ring and win
+V faru 5 en linio por kapti ringon kaj venki
+K make 5 in a row to capture a ring, 3 rings win
+V faru 5 en linio por kapti ringon; 3 ringoj venkas
+K make any loop, or a line which spans 8 rows or columns, in your color
+V faru fermitan linion, a\u016d linion kiu transiras 8 horizontalojn a\u016d vertikalojn, de via koloro
+K maximize the number of tiles in your reserve
+V plejgrandigu la nombron da platoj en via rezervo
+K mouse tracking disabled
+V muso-spurado mal\u015daltita
+K nolaunch
+V La servilo rifuzis lan\u0109peton; mesa\u011de estas 
+K nolobby
+V Pardonu, la vestiblo malpermesis eniri. Eble \u011di estas plena.
+K noresponse1
+V La servilo ne respondas.
+K noresponse2
+V Eble \u011di ne funkcias, a\u016d eble fajro\u015dirmilo malebligas la konekton.
+K noserver
+V Vestiblo ne konektita al la servilo.
+S own all the stacks
+K perspective
+V perspektivo
+K play
+V ludi por #1
+K player
+V ludanto
+S player 
+K private room
+V privata \u0109ambro
+K punctgoal
+V konektu kontra\u016dajn flankojn de la tabulo, a\u016d metu vian lastan pecon posedante pli de la mezo
+K quitting
+V #1 forlasis la \u0109ambron
+K rankingsfailed
+V \u011cisdatigo de gradoj malsukcesis
+K reading Zip directory...
+V legante Zip-dosierujon...
+K reading directory...
+V legante dosierujon...
+K reconok
+V ..rekonekto sukcesis
+K review
+V analizo
+K savedmsg
+V Partio konservita kiel #1
+K select the game to play
+V elektu la ludon por ludi
+K select the game variation
+V elektu la lud-varianton
+K select the type of room
+V elektu la specon de \u0109ambro
+K select tile color
+V elektu pec-koloron
+K set bid amount
+V elektu oferton
+K show grid
+V montri kradon
+K stack six or capture six
+V staku ses a\u016d kaptu ses
+K stillwaiting
+V ankora\u016d lan\u0109ante... bonvolu atendi.
+K surround your opponents queen bee
+V \u0109irka\u016d la abelre\u011dinon de via kontra\u016dulo
+K the game has resumed
+V la partio rekomenci\u011dis
+K timeoutWarning
+V   Vestiblo mal\u015daltos sin post 1 minuto (malaktiva).
+K trade a second container for a gold container
+V inter\u015dan\u011di al ora kontenero per dua kontenero
+K use Wooden tiles
+V uzu lignajn platojn
+K website
+V #1 BoardSpace
+K welcome
+V Bonvenon al la Vestiblo de BoardSpace, versio #1
+K you may increase your bid
+V vi povas pliigi vian oferton
+K your name
+V via nomo
+N 689

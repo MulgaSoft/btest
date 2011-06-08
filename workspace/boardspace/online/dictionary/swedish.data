@@ -1,0 +1,1309 @@
+K #1 #2 Containers
+V #1 #2 containrar
+K #1 Machine
+V #1 maskin
+K #1 Ship
+V #1 skepp
+K #1 center
+V #1 i mitten
+K #1 choices
+V #1 v\u00e4ljer
+K #1 deliberately quit
+V #1 l\u00e4mnade rummet avsiktligt
+K #1 has been muted, by a consensus of the players
+V #1 har f\u00e5tt talf\u00f6rbud, i enlighet med spelarnas \u00f6nskan
+K #1 has quit and become a spectator
+V #1 har avslutat spelet och blivit \u00e5sk\u00e5dare
+K #1 invites #2 to join room #3
+V #1 bjuder in #2 till rum #3
+K #1 invites #2 to play #3 in room #4
+V #1 bjuder in #2 f\u00f6r att spela #3 i rum #4
+K #1 is taking over for #2
+V #1 tar \u00f6ver f\u00f6r #2
+K #1 is taking over playing #2 for #3
+V #1 tar \u00f6ver spelet av #2 f\u00f6r #3
+K #1 killed due to #2
+V #1 utsl\u00e4ngd p.g.a. #2
+K #1 left
+V #1 v\u00e4nster
+S #1 prisoners
+K #1 quit
+V #1 l\u00e4mnade rummet
+K #1 repetitions
+V #1 upprepningar
+K #1 requests Joint review
+V #1 f\u00f6resl\u00e5r gemensam analys. V\u00e4lj "Gemensam analys" i menyn Meddelanden.
+S #1 reserves
+K #1 riders have crossed the first sprint line.
+V #1 \u00e5kare har passerat den f\u00f6rsta sprintlinjen.
+K #1 riders have crossed the second sprint line.
+V #1 \u00e5kare har passerat den andra sprintlinjen.
+K #1 riders have finished
+V #1 \u00e5kare har \u00e5kt i m\u00e5l
+K #1 starts Joint review
+V #1 startar gemensam analys
+K (unknown)
+V (ok\u00e4nt)
+K (unoccupied)
+V (ledig)
+K (vacancy)
+V (fr\u00e5nvarande)
+S + #1 turns
+K ...plus #1 more
+V ...plus #1 till
+K 1 choice
+V 1 val
+K 4w 5g 6b or 3 of each wins
+V 4v 5g 6s eller 3 av varje ger vinst
+K Accept $#1 from #2
+V Acceptera $#1 fr\u00e5n #2
+K Accept Draw
+V Acceptera remi
+K Accept chat from #1
+V Acceptera chatt fr\u00e5n #1
+K Accept the loan from the bank
+V Acceptera l\u00e5n fr\u00e5n banken
+K Accept this loan financing or not
+V Acceptera denna l\u00e5nfinansiering eller inte
+K Actions
+V Funktioner
+K Active in
+V Aktiv i
+K Add a ball
+V Placera en kula
+K Add a ball, remove a Ring
+V Placera en kula och ta bort en ring
+K Adjust
+V Justera
+S Adjust the chip spacing in stacks
+K Adjust your starting movements
+V Justera startf\u00f6rflyttningar
+K All Games
+V Alla spel
+K Allow challenges from #1
+V Till\u00e5t inbjudningar fr\u00e5n #1
+K Animate
+V Animera
+K Anyone can play in this room
+V Alla kan spela i detta rum
+K Apr #1#2#3
+V #1 Apr, #2:#3 GMT
+K Aqua
+V Turkos
+S Arimaa
+K Arimaa_family
+V Arimaa
+K Arimaa_variation
+V Arimaa standard
+K ArmyOfFrogs
+V Army of Frogs
+K ArmyOfFrogs_family
+V Army Of Frogs
+K ArmyOfFrogs_variation
+V Army of Frogs standard
+K Auction
+V Auktion
+K Aug #1#2#3
+V #1 Aug, #2:#3 GMT
+S Bank
+K Become a Spectator
+V Bli \u00e5sk\u00e5dare
+K Bid $ #1
+V Bjud $ #1
+K Black
+V Svart
+K Black Pieces
+V Svarta brickor
+K Blue
+V Bl\u00e5
+K BreakingAway
+V Breaking Away
+K BreakingAway_family
+V Breaking Away
+K BreakingAway_variation
+V Breaking Away standard
+K Build adjacent to the man you moved
+V Bygg intill m\u00e4nniskan du flyttade
+K Build an initial stack of 2 to be placed
+V Bygg och placera en inledande h\u00f6g p\u00e5 2
+K Buy the goods for $#1
+V K\u00f6p varorna f\u00f6r $#1
+K Calling server...
+V Ansluter till servern...
+S Cannon
+K Cannon_family
+V Cannon
+K Cannon_variation
+V Cannon standard
+K Capture 7 red balls or all of your opponent's balls
+V F\u00e5nga 7 r\u00f6da kulor eller ella motst\u00e5ndarens kulor
+K Capture a ball
+V Ta en kula
+K Capture a group of opponents
+V Er\u00f6vra en grupp motst\u00e5ndare
+K Capture a stack
+V F\u00e5nga en h\u00f6g
+K Capture all of your opponent's pieces
+V Er\u00f6vra alla motst\u00e5ndarpj\u00e4ser
+K Capture most of your opponent's pieces
+V Er\u00f6vra s\u00e5 m\u00e5nga motst\u00e5ndarbrickor som m\u00f6jligt
+K Capture the best combinations of all 5 colors
+V Er\u00f6vra den b\u00e4sta kombinationen av f\u00e4rger och storlekar
+K Capture the most chips under your color stack
+V F\u00e5nga s\u00e5 m\u00e5nga ringar s\u00e5 m\u00f6jligt i dina h\u00f6gar
+K Capture your opponent's tallest king stack
+V Er\u00f6vra din motst\u00e5ndares h\u00f6gsta kungsh\u00f6g.
+K Capture your opponent's town
+V Er\u00f6vra motst\u00e5ndarens stad
+K Capturing Games
+V Er\u00f6vrarspel
+K Cash/Score
+V Pengar/Po\u00e4ng
+K Chat Room
+V Chattrum
+S Che
+K Che_family
+V Che
+K Che_variation
+V Che standard
+K Checkmate your opponent's general
+V S\u00e4tt motst\u00e5ndarens general schack matt
+K Choose the penalty for non-payment of interest
+V V\u00e4lj straff f\u00f6r utebliven betalning av r\u00e4nta
+K Click DONE to confirm removing these markers
+V Klicka p\u00e5 klar f\u00f6r att bekr\u00e4fta
+K Click DONE to confirm removing this ring
+V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
+K Click DONE to confirm this move
+V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
+K Click DONE to confirm this placement
+V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
+K Click Done
+V Klicka p\u00e5 Klar
+K Click Done to Finish the move
+V Klicka p\u00e5 Klar f\u00f6r att avsluta draget
+K Click Done to accept a draw
+V Klicka p\u00e5 Klar f\u00f6r att acceptera remi
+K Click Done to complete the exchange
+V Klicka p\u00e5 klar f\u00f6r att bekr\u00e4fta v\u00e4xlingen
+K Click Done to confirm swapping colors with your opponent
+V Klicka p\u00e5 Klar f\u00f6r att byta f\u00e4rg med din motst\u00e5ndare
+K Click Done to confirm swapping fleets with your opponent
+V Klicka p\u00e5 klar f\u00f6r att byta flotta med din motst\u00e5ndare
+K Click Done to confirm this action
+V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
+K Click Done to confirm this move
+V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
+K Click Done to confirm this placement
+V Klicka p\u00e5 klar f\u00f6r att bekr\u00e4fta
+K Click Done to decline a draw
+V Klicka p\u00e5 Klar f\u00f6r att avsl\u00e5 remierbjudande
+K Click Done to offer a draw
+V Klicka p\u00e5 Klar f\u00f6r att bjuda remi
+K Click on Done to complete the capture
+V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta f\u00e5ngst
+K Click on Done to confirm swapping
+V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
+K Click on Done to confirm the Exchange
+V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta byte
+K Click on Done to confirm this Dance
+V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta dans
+K Click on Done to confirm your resignation
+V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
+K Click on Done to end the game
+V Klicka p\u00e5 Klar f\u00f6r att avsluta spelet
+K Click on Done to end the game (you lose)
+V Klicka p\u00e5 klar f\u00f6r att avsluta spelet (du f\u00f6rlorar)
+K Click on Done to end the game as a Draw
+V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta remi.
+K Click on Done to finish all captures
+V Klicka p\u00e5 Klar f\u00f6r att avsluta alla er\u00f6vringar
+K Click on Gipf pieces to change their capture status
+V Klicka p\u00e5 Gipf-brickorna f\u00f6r att \u00e4ndra deras er\u00f6vringsstatus
+K Click on the line to be captured
+V Klicka p\u00e5 linjen som ska er\u00f6vras
+K Click on the placed piece to rotate it, or Click Done
+V Klicka p\u00e5 den placerade brickan f\u00f6r att rotera den, eller klicka p\u00e5 Klar
+K Closing...
+V St\u00e4nger...
+K Colorblind
+V Svartvit
+K Combine two stacks or capture another stack
+V Kombinera tv\u00e5 h\u00f6gar eller f\u00e5nga en ny h\u00f6g
+S Complete a push or pull, step #1
+K Complete a split or merge
+V F\u00e4rdigst\u00e4ll delning eller blandning
+K Complete the merge
+V F\u00e4rdigst\u00e4ll blandning
+K Complete the pull, step #1
+V Bekr\u00e4fta drag, g\u00e5 #1
+K Complete the push, step #1
+V Bekr\u00e4fta tryck, g\u00e5 #1
+K Complete the split
+V F\u00e4rdigst\u00e4ll delning
+K Confirm Dropping this rider
+V Bekr\u00e4fta borttagning
+K Connect all your frogs (at least 7) in one cluster
+V Samla alla dina grodor (minst 7) i en flock
+K Connection Games
+V Anslutningsspel
+K Connection error
+V Kan inte ansluta
+S Container
+K Container-First
+V Container - Original
+K Container-First_variation
+V Container med originalregler
+K Container_family
+V Container
+K Container_variation
+V Container med andra leveransregler
+K Continue Capturing
+V Forts\u00e4tt ta kulor
+K Continue merging or click Done
+V Forts\u00e4tt blandning eller klicka p\u00e5 klar
+S Crossfire
+K Crossfire_family
+V Crossfire
+K Crossfire_variation
+V standard Crossfire
+K Dec #1#2#3
+V #1 Dec, #2:#3 GMT
+K Decline Draw
+V Avsl\u00e5 remierbjudande
+K Decline the loan
+V Avb\u00f6j l\u00e5net
+K Designate GIPF pieces to capture, or place a GIPF chip
+V V\u00e4lj Gipf-brickor att er\u00f6vra, eller placera en Gipf-bricka
+K Designate GIPF pieces to capture, or place a chip
+V V\u00e4lj Gipf-brickor att er\u00f6vra, eller placera en bricka
+K Designate a row to capture
+V V\u00e4lj en rad att er\u00f6vra
+K Designate a row to capture before your turn
+V V\u00e4lj en rad att er\u00f6vra innan ditt drag
+K Dipole
+V Dipole (original)
+K Dipole-s
+V Dipole
+K Dipole-s_variation
+V Dipole p\u00e5 8x8 med en symmetrisk startposition
+K Dipole_family
+V Dipole
+K Dipole_variation
+V Dipole p\u00e5 8x8 med en asymmetrisk startposition
+K Done
+V Klar
+K Drop a tile to enlarge the board
+V Sl\u00e4pp en bricka p\u00e5 att f\u00f6rstora br\u00e4det
+K Drop bunny chip
+V Placera en av bunnyspelarens brickor
+K Drop the moving stack back on the rack
+V Flytta h\u00f6gen tillbaka p\u00e5 st\u00e4llningen
+K Drop the ring
+V Sl\u00e4pp ringen
+K Drop this rider from the Race
+V Ta bort \u00e5karen fr\u00e5n loppet
+K Drop your piece onto the board or any of your stacks
+V Sl\u00e4pp brickan p\u00e5 br\u00e4det eller n\u00e5gon av dina h\u00f6gar
+K Drop your piece onto the board or any stack
+V Sl\u00e4pp brickan p\u00e5 br\u00e4det eller en h\u00f6g
+S Dvonn
+K Dvonn_family
+V Dvonn
+K Dvonn_variation
+V Dvonn standard
+K Eat
+V \u00c4t
+K Edit
+V \u00c4ndra
+K Eliminate all your opponent's pieces
+V Eliminera alla motst\u00e5ndarens pj\u00e4ser
+S Entrapment
+S Entrapment-6x7
+K Entrapment-6x7_variation
+V Entrapment 6x7 - faster game
+K Entrapment-7x7
+V Entrapment
+K Entrapment-7x7_variation
+V standard 7x7 Entrapment
+S Entrapment-7x7x4
+K Entrapment-7x7x4_variation
+V Entrapment-7x7 with 4 roamers
+K Entrapment_family
+V Entrapment
+K Error
+V Fel
+K Error reading directory
+V Kan inte l\u00e4sa mapp
+K Error reading file
+V Kan inte l\u00e4sa fil
+S Escape forced position
+S Escape forced position, or move a barrier
+S Escape forced position, or place a barrier
+K Escape from check
+V Fly undan schack
+K Euro Games
+V Eurospel
+K Exchange Prisoners
+V V\u00e4xla f\u00e5ngar
+K Exchange an off-board piece for a new tile
+V Byt en pj\u00e4s utanf\u00f6r br\u00e4det mot ny bricka
+S Exxit
+K Exxit-Beginner
+V Exxit-nyb\u00f6rjare
+K Exxit-Beginner_variation
+V spela Exxit med 19 brickor
+K Exxit-Blitz
+V Exxit-blixt
+K Exxit-Blitz_variation
+V spela Exxit med 29 brickor
+K Exxit-Pro
+V Exxit-expert
+K Exxit-Pro_variation
+V spela Exxit-Exxit
+K Exxit_family
+V Exxit
+K Exxit_variation
+V spela Exxit med 39 brickor
+S Fanorona
+K Fanorona_family
+V Fanorona
+K Fanorona_variation
+V Fanorona standard
+K Farmer configuring board
+V Bonden \u00e4ndrar p\u00e5 br\u00e4det
+K Farmer moving scared
+V Bonden flyttar skr\u00e4mda
+K Farmer select
+V Val av bonde
+K Feb #1#2#3
+V #1 Feb, #2:#3 GMT
+K Final Scores:
+V Slutst\u00e4llning:
+K Finished Capturing, Click Done
+V Alla kulor tagna, klicka p\u00e5 Klar
+K Flagship can not capture
+V Flaggskeppet kan inte er\u00f6vra
+K Flagship can participate in captures
+V Flaggskeppet kan delta i er\u00f6vringar
+K Flagship is captured normally
+V Flaggskeppet er\u00f6vras p\u00e5 vanligt s\u00e4tt
+K Flagship must Reach the corner to win
+V Flaggskeppet m\u00e5ste n\u00e5 h\u00f6rnet f\u00f6r vinst
+K Flagship must be surrounded on all 4 sides
+V Flaggskeppet m\u00e5ste omringas p\u00e5 alla 4 sidor
+K Flagship wins at any edge square
+V Flaggskeppet m\u00e5ste n\u00e5 en kantruta f\u00f6r vinst
+K Flip a tile, or Move Split or Merge a stack
+V V\u00e4nd p\u00e5 en bricka, eller flytta, dela eller blanda en h\u00f6g.
+K Form a closed shape in your color
+V Forma en sluten form i din f\u00e4rg
+K Frogs
+V Army of Frogs
+K From #1
+V Fr\u00e5n #1
+K Game
+V Spel
+K Game Over
+V Spelet \u00e4r slut
+K Game Room
+V Spelrum
+K Game in progress...
+V P\u00e5g\u00e5ende spel...
+K Game timed out.  Session has ended.
+V Spelet gjorde timeout. Sessionen avslutades.
+K Game won by #1
+V #1 vann spelet
+K Games do not affect your Ranking
+V Spelen p\u00e5verkar inte rankingen
+K Gipf
+V Gipf Basic
+K Gipf Games
+V Gipf-serien
+K Gipf-standard
+V Gipf Standard
+K Gipf-standard_variation
+V Gipf Standard (med Gipf-brickor)
+K Gipf-tournament
+V Gipf Expert
+K Gipf-tournament_variation
+V Gipf Expert (obegr\u00e4nsat antal Gipf-brickor)
+K Gipf_family
+V Gipf
+K Gipf_variation
+V Gipf Basic (inga Gipf-brickor)
+S Gobblet
+K Gobblet_family
+V Gobblet
+K Gobblet_variation
+V Spela med m\u00f6jlighet att tjuvkika
+K Gobbletm
+V GobbletM
+K Gobbletm_variation
+V Ingen tjuvkikning, minnet g\u00e4ller
+S Hex
+S Hex-15
+K Hex-15_variation
+V Hex 15x15
+S Hex-19
+K Hex-19_variation
+V Hex 19x19
+K Hex_family
+V Hex
+K Hex_variation
+V Hex 11x11
+K Hide
+V G\u00f6m dig
+K Hint
+V Tips
+S Hive
+S Hive-L
+S Hive-LM
+K Hive-LM_variation
+V Hive with nyckelpiga och mygga
+K Hive-L_variation
+V Hive med nyckelpiga
+S Hive-M
+K Hive-M_variation
+V Hive med mygga
+K Hive_family
+V Hive
+K Hive_variation
+V Hive standard
+K I will make the loan
+V Jag tar l\u00e5net
+K Idle.
+V Inaktivt
+K Ignore chat from #1
+V Ignorera chatt fr\u00e5n #1
+K Illegal - this move would form an illegal pattern of lines
+V Otill\u00e5tet - detta skulle bilda ett otill\u00e5tet m\u00f6nster av linjer
+K Illegal due to repetition, try something else or resign
+V Otill\u00e5tet p.g.a. dragupprepning
+K Illegal move due to repetition - try something else
+V \u00c5till\u00e5tet drag p.g.a. dragupprepning
+S Immobilize your opponent's roamers
+K Invite
+V Bjud in #1 till rum #2
+K Invite players to this room
+V Bjud in spelare till detta rum
+K Island
+V \u00d6
+K Jan #1#2#3
+V #1 Jan, #2:#3 GMT
+K Join
+V G\u00e5 in i
+K Join only if Invited
+V Endast inbjudna kan spela
+K Joining as a spectator
+V #1 \u00e4r nu \u00e5sk\u00e5dare
+K Joint Review
+V Gemensam analys
+K Jul #1#2#3
+V #1 Jul, #2:#3 GMT
+K Jun #1#2#3
+V #1 Jun, #2:#3 GMT
+K Knock 5 of your opponent's dice into the gutter
+V Knuffa 5 av motst\u00e5ndarens t\u00e4rningar i r\u00e4nnan
+S Knockabout
+K Knockabout_family
+V Knockabout
+K Knockabout_variation
+V Knockabout standard
+S LIMBO
+K LOA
+V Lines of Action
+S LOAP
+K LOAP_variation
+V Spela LOA programt\u00e4vlingvariant
+K LOA_family
+V Lines of Action
+K LOA_variation
+V Lines of Action standard 8x8
+K Launching...
+V Startar...
+S LeHavre
+K LeHavre_family
+V LeHavre
+K LeHavre_variation
+V standard LeHavre
+K Let The Robot Play
+V L\u00e5t boten spela
+K Let someone else make the loan
+V L\u00e5t n\u00e5gon annan ta l\u00e5net
+K Load more goods from the Dock
+V Lasta mer varor fr\u00e5n kajen
+K Load the goods you will produce
+V Fyll p\u00e5 varor du kommer att producera
+K Load the your warehouse from the seller
+V Lasta magasinet fr\u00e5n s\u00e4ljaren
+K Load your ship from the Dock
+V Lasta ditt skepp fr\u00e5n kajen
+K Loading game file
+V Laddar spelfil
+K Loan Card
+V L\u00e5nekort
+K Loan for #1 from #2
+V #1 l\u00e5nar av #2
+K Loan for #1 from the bank
+V L\u00e5n f\u00f6r #1 fr\u00e5n banken
+K Loans
+V L\u00e5n
+S Lobby
+K Lobby shutdown...
+V Lobbyn st\u00e4nger...
+K Machines
+V Maskiner
+K Make a Dance move
+V G\u00f6r ett dansdrag
+K Make a capturing move
+V G\u00f6r ett er\u00f6vrande drag
+K Make an addional capturing move, or click on Done
+V G\u00f6r ytterligare ett er\u00f6vrande drag, eller klicka p\u00e5 Klar
+K Make an addional move, or click on Done
+V G\u00f6r ett ytterligare drag, eller klicka p\u00e5 Klar
+K Make the first move, or swap and move second
+V G\u00f6r det f\u00f6rsta draget, eller byt f\u00e4rg och g\u00f6r det andra draget
+K Make your first move, or swap fleets
+V G\u00f6r ditt f\u00f6rsta drag eller byt flotta
+K Map of Player Locations
+V Kartrum
+K Mar #1#2#3
+V #1 Mar, #2:#3 GMT
+K Master Room
+V M\u00e4starrum
+K Master ranked players can play
+V M\u00e4stare kan spela i detta rum
+K Match words:
+V Matcha ord:
+K Maximize your profits
+V Maximera vinsterna
+K May #1#2#3
+V #1 Maj, #2:#3 GMT
+S Medina
+K Medina_family
+V Medina
+K Medina_variation
+V Medina standard
+K Members
+V Medlemmar
+K Memory is low
+V Brist p\u00e5 minne
+K Merge this stack, or click Done
+V Blanda den h\u00e4r h\u00f6gen, eller klicka p\u00e5 Klar
+K Message:
+V Till alla:
+K MessageTo:
+V Till #1:
+K Messages
+V Meddelanden
+S Micropul
+K Micropul_family
+V Micropul
+K Micropul_variation
+V standard Micropul
+K Move ##1
+V Drag ##1
+K Move 6 ships to the center
+V Flytta 6 skepp till mitten
+K Move A Stack
+V Flytta en h\u00f6g
+K Move a Cyclist
+V Flytta en cyklist
+K Move a Frog
+V Flytta en groda
+K Move a Man
+V Flytta en m\u00e4nniska
+K Move a Man up to level 3
+V Flytta upp en m\u00e4nniska till niv\u00e5 3
+K Move a Rabbit to the last row
+V Flytta en kanin till sista raden
+K Move a ball or change a Ring
+V Flytta en kula eller \u00e4ndra en ring
+K Move a piece
+V Flytta en pj\u00e4s
+K Move a piece one space
+V Flytta en pj\u00e4s ett steg
+K Move a piece, step #1
+V Flytta en pj\u00e4s, g\u00e5 #1
+K Move a ring
+V Flytta en ring
+S Move a roamer
+S Move a roamer or move a barrier
+S Move a roamer, or place a barrier
+K Move a runner
+V Flytta en l\u00f6pare
+K Move a runner from a home space
+V Flytta en l\u00f6pare fr\u00e5n ett eget utrymme
+K Move a ship
+V Flytta ett skepp
+K Move a ship to the board
+V Flytta ett skepp till br\u00e4det
+K Move a soldier, or fire a cannon
+V Flytta en soldat, eller skjut med en kanon
+S Move a stack, or add a reserve piece
+K Move a volcano cap
+V Flytta ett Volcanolock
+K Move one ship
+V Flytta ett skepp
+K Move stacks around any way you want to
+V Flytta h\u00f6garna p\u00e5 valfritt s\u00e4tt
+K Move the flipped stack
+V Flytta den v\u00e4nda h\u00f6gen
+K Move your runners to the opposite side
+V Flytta dina l\u00f6pare till den motsatta sidan
+K Move, Split or Merge a stack
+V Flytta, dela eller blanda en h\u00f6g
+K Moves are coming in
+V Nya drag har inkommit
+S Mutton
+K Mutton-shotgun
+V Mutton med gev\u00e4r
+K Mutton-shotgun_variation
+V Mutton - bonden anv\u00e4nder gev\u00e4r
+K Mutton_family
+V Mutton
+K Mutton_variation
+V Mutton standard
+K News
+V Mytt
+K No Challenges
+V Inga inbjudningar
+K No Chat
+V Ingen chatt
+K No Recent Games
+V Inga nya spel
+K No challenges from #1
+V Till\u00e5t ej inbjudningar fr\u00e5n #1
+K No players.
+V Inga spelare.
+K No spectators.
+V Inga \u00e5sk\u00e5dare.
+K No, let the bank fund it
+V Nej, l\u00e5t banken finansiera l\u00e5net
+K Nov #1#2#3
+V #1 Nov, #2:#3 GMT
+K Occupy 3 enemy bases
+V Ockupera 3 fiendebaser.
+K Oct #1#2#3
+V #1 Okt, #2:#3 GMT
+S Octiles
+K Octiles_family
+V Octiles
+K Octiles_variation
+V Octiles standard
+K Offer a Draw
+V Bjud remi
+K Offer a price for the goods on the ship
+V L\u00e4gg ett bud p\u00e5 varorna p\u00e5 skeppet
+K Onboard a piece, Move a stack, or Exchange
+V Borda en bricka, flytta en h\u00f6g eller v\u00e4xla
+K Only the flagship can occupy the center square
+V Bara flaggskeppet kan ta mittrutan
+K Options
+V Inst\u00e4llningar
+S Palago
+K Palago_family
+V Palago
+K Palago_variation
+V Palago standard
+K Pass
+V Passa
+K Pick a ring to place a chip and move
+V Flytta en ring och l\u00e4mna en bricka kvar
+K Pick the stack to move
+V V\u00e4lj h\u00f6g att flytta.
+K Pick up and Continue your move
+V Plocka upp och forts\u00e4tt ditt drag
+K Place a Chip, or a Jewel, or a chip from the Store
+V Placera en bricka, eller en \u00e4delsten, eller en bricka fr\u00e5n aff\u00e4ren
+K Place a Frog on the board
+V Placera en groda p\u00e5 br\u00e4det
+K Place a GIPF piece on a starting point
+V Placera en Gipf-bricka p\u00e5 en yttre position
+K Place a Ring on the board
+V Placera en ring p\u00e5 br\u00e4det
+K Place a chip on a starting point
+V Placera en bricka p\u00e5 en yttre position
+K Place a gobblet on the board, or move a gobblet
+V Placera en gobblet p\u00e5 br\u00e4det, eller flytta en gobblet
+K Place a marker on any empty cell
+V Placera en bricka i en tom cell
+K Place a marker on any empty cell, or Swap Colors
+V Placera en bricka i en tom cell eller byt f\u00e4rg
+K Place a piece on the board
+V Placera en pj\u00e4s p\u00e5 br\u00e4det
+K Place a piece on the board, or Exchange an off-board piece for a new tile
+V Placera en pj\u00e4s p\u00e5 br\u00e4det, eller byt en pj\u00e4s utanf\u00f6r br\u00e4det mot en ny bricka
+K Place a piece on the board, or move a piece already on the board
+V Placera en bricka p\u00e5 br\u00e4det, eller flytta en bricka som redan finns p\u00e5 br\u00e4det
+K Place a ring on the board
+V Placera en ring p\u00e5 br\u00e4det
+S Place a roamer on the board
+K Place a second piece on the board
+V Placera den andra gubben p\u00e5 br\u00e4det
+K Place a second tile adjacent to the first
+V Placera den andra brickan intill den f\u00f6rsta
+K Place a second tile adjacent to those already on the board
+V Placera en andra bricka intill dem som redan finns p\u00e5 br\u00e4det
+K Place a stone on the board, or remove a stone from the board
+V Placera en sten p\u00e5 br\u00e4det, eller ta bort en sten fr\u00e5n br\u00e4det
+K Place a tile
+V Placera en bricka
+K Place a tile adjacent to those already on the board
+V Placera en bricka intill dem som redan finns p\u00e5 br\u00e4det
+K Place a tile on any empty cell
+V Placera en bricka i en tom cell
+K Place a tile on the board
+V Placera en bricka p\u00e5 br\u00e4det
+K Place a tile on the board, or move a tile
+V Placera en bricka p\u00e5 br\u00e4det, eller flytta en bricka
+K Place a tile on the board, where a runner can leave a home space
+V Placera en bricka p\u00e5 br\u00e4det, d\u00e4r en l\u00f6pare kan l\u00e4mna ett eget utrymme
+K Place all your pieces in your two home rows
+V Placera alla dina pj\u00e4ser p\u00e5 dina tv\u00e5 egna rader
+K Place prisoners here for exhange
+V Placera f\u00e5ngar h\u00e4r f\u00f6r v\u00e4xling
+K Place the Rabbits
+V Placera kaniner
+K Place the first meeple on the board
+V Placera den f\u00f6rsta gubben p\u00e5 br\u00e4det
+K Place the next tile on the board, where a runner can move over it
+V Placera n\u00e4sta bricka p\u00e5 br\u00e4det, d\u00e4r en l\u00f6pare kan passera \u00f6ver den
+K Place your bid to fund the loan
+V Placera bud f\u00f6r att finansiera l\u00e5net
+K Place your first man on the board
+V Placera din f\u00f6rsta m\u00e4nniska p\u00e5 br\u00e4det
+K Place your queen on the board
+V Placera din bidrottning p\u00e5 br\u00e4det
+K Place your second man on the board
+V Placera din andra m\u00e4nniska p\u00e5 br\u00e4det
+K Place your stack on the edge of the board
+V Placera h\u00f6gen vid kanten av br\u00e4det
+K Place your town in your first row
+V Placera din stad p\u00e5 f\u00f6rsta raden
+K Placing Gipf Pieces
+V Placerar Gipf-brickor
+K Placing Standard Pieces
+V Placerar standardbrickor
+S Plateau
+K Plateau_family
+V Plateau
+K Plateau_variation
+V Plateau standard
+K Play #1
+V Spela mot #1
+K Play Farmer
+V Spela bonden
+K Played on #1
+V Spelad p\u00e5 #1
+K Player #1
+V Spelare #1
+K Player is 
+V Spelaren \u00e4r 
+K Players
+V Spelare
+K Players are: 
+V Spelarna \u00e4r: 
+K Please Join Me
+V Kom och spela!
+K Please respect the 15 minute time limit
+V M\u00e4starspel har en tidsgr\u00e4ns p\u00e5 15 minuter
+K Position the starting rings
+V Placera startringarna
+K Prisoners captured by Black are held here
+V Svarta f\u00e5ngar finns h\u00e4r
+K Prisoners captured by White are held here
+V Vita f\u00e5ngar finns h\u00e4r
+K Punct
+V P\u00fcnct
+K Punct_family
+V P\u00fcnct
+K Punct_variation
+V P\u00fcnct standard
+S Qyshinsu
+K Qyshinsu_family
+V Qyshinsu
+K Qyshinsu_variation
+V V\u00e4gens mysterium
+K Racing Games
+V Racingspel
+K Rearrange the gold fleet
+V Omarrangera guldflottan
+K Rearrange the silver fleet
+V Omarrangera silverflottan
+K Rearrange things any way you want to
+V Arrangera p\u00e5 valfritt s\u00e4tt
+K Reconnecting
+V  ...F\u00f6rs\u00f6ker \u00e5teransluta...
+K Red
+V R\u00f6d
+K Rejoin
+V \u00c5teruppta match
+K Rejoin #1
+V \u00c5teruppta match mot #1
+K Remove a Ring
+V Ta bort en ring
+K Reprice the goods in your factory storage
+V Byt pris p\u00e5 varorna p\u00e5 lagret
+K Reprice the goods in your warehouse storage
+V Byt pris p\u00e5 varorna i magasinet
+K Requesting Bids
+V F\u00f6resl\u00e5r bud
+K Requesting Loan
+V F\u00f6resl\u00e5r l\u00e5n
+K Resign
+V Ge upp
+K Resign State
+V Klicka p\u00e5 klar f\u00f6r att bekr\u00e4fta
+K Restart
+V Starta om
+K Return to the Way
+V \u00c5terv\u00e4nd till v\u00e4gen
+K Reverse View
+V Motsatt vy
+K Review Room
+V Analysrum
+K Review Saved Games
+V Analysrum
+K Rider Size
+V \u00c5karens storlek
+S Rotate the board 180 degrees
+S Santorini
+K Santorini_family
+V Santorini
+K Santorini_variation
+V Santorini (utan gudar)
+K Score the most points at the sprint and finish lines
+V F\u00e5 s\u00e5 m\u00e5nga po\u00e4ng som m\u00f6jligt vid sprint och vid m\u00e5llinjen
+K See Player Comments
+V Se spelarens kommentarer
+K See Spectator Comments
+V Se \u00e5sk\u00e5darnas kommentarer
+K Select Game
+V V\u00e4lj spel
+K Select Robot
+V V\u00e4lj bot
+K Select a ring to remove
+V V\u00e4lj en ring att ta bort
+K Select a row of 5 to remove
+V V\u00e4lj en rad p\u00e5 5 brickor att ta bort
+K Select the #1 piece to move
+V Flytta bricka #1
+K Select the destination for the selected piece
+V V\u00e4lj vart brickan ska flyttas
+K Select the stack to move from
+V V\u00e4lj h\u00f6g att flytta fr\u00e5n
+S Select which of your roamers to kill
+S Select which opponent roamer to kill
+K Selecting game: #1
+V Val av spel: #1
+K Send
+V Skicka
+K Sep #1#2#3
+V #1 Sep, #2:#3 GMT
+K Session #1 is active.  
+V Session #1 \u00e4r aktiv.  
+K Session #1 is being launched.  
+V Session #1 startas.  
+K Session #1 is displaying the map of players real locations
+V Session #1 visar en karta \u00f6ver spelarnas geografiska l\u00e4ge.
+K Session #1 is idle.  
+V Session #1 \u00e4r inaktiv.  
+K Session #1 is private. 
+V Session #1 \u00e4r privat. 
+K Session #1: state unknown.
+V Session #1: status \u00e4r ok\u00e4nd.
+K Shipping
+V Leverans
+K Shoot
+V Skjut
+K Show SGF Text
+V Visa SGF
+K Shuffle pieces to the exchange area, Click Done to start the exchange
+V Blanda brickorna i v\u00e4xlingsutrymmet, klicka p\u00e5 Klar f\u00f6r att starta v\u00e4xlingen
+K Slide the chip toward the center
+V Skjut in brickan mot mitten
+K Sound
+V Ljud
+S Spangles
+K Spangles_family
+V Spangles
+K Spangles_variation
+V Spangles standard
+K Spectate
+V Titta p\u00e5
+K Spectator
+V \u00c5sk\u00e5dare
+K Spectator is: 
+V \u00c5sk\u00e5dare: 
+K Spectators
+V \u00c5sk\u00e5dare
+K Spectators are: 
+V \u00c5sk\u00e5dare: 
+K Split or Merge this stack, or click Done
+V Dela eller blanda den h\u00f6r h\u00f6gen, eller klicka p\u00e5 Klar
+K Split this stack, or click Done
+V Dela den h\u00e4r h\u00f6gen, eller klicka p\u00e5 Klar
+S Spot Price #1
+S Spread out the stacks
+K Stack Height
+V H\u00f6garnas h\u00f6jd
+K Stacking Games
+V Stapelspel
+K Start
+V Starta
+K Start #1
+V Starta #1
+K Start Black
+V Starta svart
+K Start White
+V Starta vit
+K State unknown.
+V Ok\u00e4nd status
+K Swap
+V Byt
+K Swap Colors
+V Byt f\u00e4rg
+S Switch to a more oblique view of the board
+S Switch to a more overhead view of the board
+K TBA1_variation
+V kommande spel
+K TBA2_variation
+V kommande spel
+K TBA3_variation
+V kommande spel
+S Tablut
+K Tablut-11
+V Tablut-11x11
+K Tablut-11_variation
+V Tablut on a 11x11 board
+K Tablut-7
+V Tablut 7x7
+K Tablut-7_variation
+V Tablut p\u00e5 7x7
+K Tablut-9
+V Tablut 9x9
+K Tablut-9_variation
+V Tablut p\u00e5 9x9
+K Tablut_family
+V Tablut
+S Tajii
+K Tajii_family
+V Tajii
+K Take Over Playing
+V Spela h\u00e4rifr\u00e5n
+K Take your first action
+V G\u00f6r ditt f\u00f6rsta drag
+K Take your second action
+V G\u00f6r ditt andra drag
+K Tamsk_variation
+V Tamsk standard
+K The game is a draw
+V Spelet \u00e4r remi
+K The game record is not available during the game
+V Rekordet \u00e4r inte tillg\u00e4ngligt under spelet
+K The next finish bonus is #1
+V N\u00e4sta m\u00e5lbonus \u00e4r #1
+K The next sprint bonus is #1
+V N\u00e4sta sprintbonus \u00e4r #1
+K This is now a private room
+V Detta \u00e4r nu ett privat rum.
+K This is now a public room
+V Detta \u00e4r nu ett offentligt rum.
+K Tile Pattern Games
+V M\u00f6nsterspel
+K Tile Size
+V Brickstorlek
+K Time is 
+V Klockan \u00e4r 
+K Timeout in 1 minute.
+V Timeout om en minut.
+K Tournament Game
+V Turneringsparti
+S Traboulet
+K Traboulet_family
+V Traboulet
+K Traboulet_variation
+V standard Traboulet
+K Track Mice
+V Sp\u00e5ra mus
+K Traditional Pieces
+V Traditionella pj\u00e4ser
+S Trax
+K Trax_family
+V Trax
+K Trax_variation
+V standard Trax
+S Triad
+K Triad_family
+V Triad
+K Triad_variation
+V Triad standard
+S Truchet
+K Truchet_family
+V Truchet
+K Truchet_variation
+V Truchet standard
+K TumblingDown
+V Tumbling Down
+K TumblingDown_family
+V Tumbling Down
+K TumblingDown_variation
+V TumblingDown standard 8x8
+K Type your message here.
+V Skriv meddelande h\u00e4r
+S Tzaar
+K Tzaar-custom
+V Tzaar - valfri
+K Tzaar-custom_variation
+V Tzaar - valfri startposition
+K Tzaar-random
+V Tzaar - slumpgenererad
+K Tzaar-random_variation
+V Tzaar - slumpgenererad startposition
+K Tzaar-standard
+V Tzaar - standard
+K Tzaar-standard_variation
+V Tzaar - standardiserad startposition
+K Tzaar_family
+V Tzaar
+K Tzaar_variation
+V Tzaar standard
+K Unranked Room
+V Orankat rum
+K Unsold Warehouses
+V Os\u00e5lda magasin
+K User 
+V Anv\u00e4ndare 
+S Volcano
+K Volcano-h
+V Hex Volcano
+K Volcano-h_variation
+V Volcano p\u00e5 ett hexagonalt br\u00e4de
+K Volcano-hr
+V Slumpgenererat Hex Volcano
+K Volcano-hr_variation
+V  Hex Volcano med slumpgenererade positioner
+K Volcano-r
+V Slumpgenererat Volcano
+K Volcano-r_variation
+V Volcano med slumpgenererade positioner
+K Volcano_family
+V Volcano
+K Volcano_variation
+V Volcano standard 5x5
+K Wait for opponents to arrive.
+V V\u00e4ntar p\u00e5 motst\u00e5ndaren.
+K Wait for other players to adjust
+V V\u00e4ntar p\u00e5 att motst\u00e5ndaren ska justera
+K Wait for the other players to decide
+V v\u00e4nta p\u00e5 att den andra spelaren best\u00e4mmer
+K Waiting in
+V V\u00e4ntar i
+K Warehouse
+V Magasin
+K Warehouses
+V Magasin
+K Warp6
+V Warp 6
+K Warp6_family
+V Warp 6
+K Warp6_variation
+V Warp 6 standard
+K Welcome to Game client, version #1
+V V\u00e4lkommen till BoardSpace klient, version #1
+K White
+V Vit
+K White Pieces
+V Vita brickor
+K Wolf moving suspects
+V Vargen flyttar misst\u00e4nkta
+K Wolf player eating
+V Vargen \u00e4ter
+K Wolf player hiding
+V Vargen g\u00f6mmer sig
+S Xiangqi
+K Xiangqi_family
+V Xiangqi
+K Xiangqi_variation
+V Xiangqi standard
+K Yes, I will fund the loan
+V Ja, jag finansierar l\u00e5net
+S Yinsh
+S Yinsh-Blitz
+K Yinsh-Blitz_variation
+V Blixt-Yinsh - f\u00f6rsta ringen vinner
+K Yinsh_family
+V Yinsh
+K Yinsh_variation
+V Yinsh standard
+K You can only resign when it is your move
+V Du kan bara ge upp n\u00e4r det \u00e4r ditt drag
+K You have been disconnected: #1
+V #1 har tappat anslutningen.
+K You have been offered a draw - Accept or Decline
+V Du har blivit erbjuden remi - acceptera eller avsl\u00e5
+K You have no legal moves.  Click on Done to pass
+V Du har inga m\u00f6jliga drag. Klicka p\u00e5 Klar f\u00f6r att passa.
+K You have no moves available. Click on Done to pass.
+V Du har inga m\u00f6jliga drag. Klicka p\u00e5 Klar f\u00f6r att passa.
+K You must move the gobblet you have picked up
+V Du m\u00e5ste flytta gobbleten du har plockat upp
+K You must place a dome
+V Du m\u00e5ste placera en kupol
+K You must take out a loan to pay interest
+V Du m\u00e5ste ta ett l\u00e5n f\u00f6r att betala r\u00e4nta
+K Zertz
+V Z\u00e8rtz
+K Zertz+11
+V Z\u00e8rtz+11
+K Zertz+11_variation
+V Z\u00e8rtz med 11 extra ringar
+K Zertz+24
+V Z\u00e8rtz+24
+K Zertz+24_variation
+V Z\u00e8rtz med 24 extra ringar
+K Zertz+xx
+V Z\u00e8rtz Extreme
+K Zertz+xx_variation
+V Z\u00e8rtz med valfri br\u00e4dstorlek
+K Zertz_family
+V Z\u00e8rtz
+K Zertz_variation
+V Z\u00e8rtz standard
+K accept the bid, or pay the amount yourself
+V acceptera budet, eller betala sj\u00e4lv
+K and
+V  och 
+K announceOption
+V Nya spelare
+K automute
+V #1 har automatiskt f\u00e5tt talf\u00f6rbud
+K build an ideal city
+V bygg en ideal stad
+K capture all of one opponentr's color
+V Er\u00f6vra alla i en motst\u00e5ndarf\u00e4rg
+K center square is not special
+V mittrutan \u00e4r inte speciell
+S click Done to finish this Auction
+K connect opposite sides with a chain of markers
+V Bind ihop dina motsatta sidor
+K connecting
+V Ansluter till 
+K enterMessage
+V #1 har stigit in
+K enters the room
+V #1 har stigit in
+K expand the board with your color tiles
+V ut\u00f6ka br\u00e4det med brickor av din f\u00e4rg
+K fontfamily
+V sansserif
+K form a larger triangle with your color at the tips
+V Bygg en st\u00f6rre triangel i din f\u00e4rg, mitten kan vara av motst\u00e5ndarens f\u00e4rg
+K fund a loan from a player or the bank
+V finansiera ett l\u00e5n fr\u00e5n en spelare eller bank
+K game selector
+V spelv\u00e4ljare
+K gold: escape the flagship  silver: capture gold flagship
+V Guld: fly med flaggskeppet; Silver: er\u00f6vra guldflaggskepept
+K guest
+V g\u00e4st
+K in #1
+V i #1
+K launchChat
+V Startar chattrum, session #1
+K launchGame
+V Startar spel, session #1
+K launchReview
+V Startar analysl\u00e4ge, session #1
+K launchfailed
+V Motst\u00e5ndaren startade inte spelet korrekt
+K launchspectator
+V Startar \u00e5sk\u00e5darl\u00e4ge, session #1
+S load a luxury container
+K loaderr
+V Kan inte ladda: 
+K make 4 in a row in any direction
+V 4 i rad i n\u00e5gon riktning ger vinst
+K make 5 in a row to capture a ring and win
+V 5 brickor i rad ger vinst
+K make 5 in a row to capture a ring, 3 rings win
+V 5 brickor i rad tar bort raden och en ring, 3 ringar ger vinst
+K make any loop, or a line which spans 8 rows or columns, in your color
+V Skapa en loop, eller en linje som t\u00e4cker 8 rader eller kolumner, i din f\u00e4rg
+K maximize the number of tiles in your reserve
+V Maximera antalet brickor i lagret
+K mouse tracking disabled
+V mussp\u00e5rning avaktiverad
+K nolaunch
+V Kunde inte starta, felmeddelande: 
+K nolobby
+V Det gick inte att \u00f6ppna lobbyn. Den kanske \u00e4r full.
+K noresponse1
+V Servern svarar inte.
+K noresponse2
+V Den kan vara nere, eller en brandv\u00e4gg kan f\u00f6rhindra anslutning.
+K noserver
+V Lobbyn \u00e4r inte ansluten till servern.
+S own all the stacks
+K perspective
+V perspektiv
+K play
+V spela #1
+K player
+V spelare
+S player 
+K private room
+V privat rum
+K punctgoal
+V Bind ihop tv\u00e5 motst\u00e5ende sidor, eller placera din sista bricka n\u00e4r du kontrollerar en st\u00f6rre del av centrumhexagonen
+K quitting
+V #1 har l\u00e4mnat rummet
+K rankingsfailed
+V Uppdatering av ranking misslyckades
+K reading Zip directory...
+V l\u00e4ser komprimerad mapp...
+K reading directory...
+V l\u00e4ser mapp...
+K reconok
+V ..\u00e5teranslutning lyckades
+K review
+V analysera
+K savedmsg
+V Spel sparat som #1
+K select the game to play
+V v\u00e4lj spel
+K select the game variation
+V v\u00e4lj spelinst\u00e4llningar
+K select the type of room
+V v\u00e4lj typ av rum
+K select tile color
+V V\u00f6lj brickf\u00e4rg
+K set bid amount
+V v\u00e4lj bud
+K show grid
+V Visa koordinater
+K stack six or capture six
+V Stapla 6 eller er\u00f6vra 6
+K stillwaiting
+V startar fortfarande... var god v\u00e4nta.
+K surround your opponents queen bee
+V omringa din motst\u00e5ndares bidrottning
+K the game has resumed
+V spelet har \u00e5terupptagits
+K timeoutWarning
+V   Lobbyn st\u00e4nger om en minut p.g.a. inaktivitet.
+K trade a second container for a gold container
+V byt en andra container mot en guldcontainer
+K use Wooden tiles
+V Anv\u00e4nd tr\u00e4brickor
+K website
+V #1 BoardSpace
+K welcome
+V V\u00e4lkommen till BoardSpace Lobby, version #1
+K you may increase your bid
+V du kan h\u00f6ja ditt bud
+K your name
+V Ditt namn
+N 689

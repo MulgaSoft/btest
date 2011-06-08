@@ -1,0 +1,902 @@
+S #1 #2 Containers
+S #1 Machine
+S #1 Ship
+S #1 center
+S #1 choices
+S #1 deliberately quit
+S #1 has been muted, by a consensus of the players
+S #1 has quit and become a spectator
+K #1 invites #2 to join room #3
+V \u03bf #1 \u03c0\u03c1\u03bf\u03c3\u03ba\u03b1\u03bb\u03b5\u03af \u03c4\u03bf\u03bd #2 \u03c3\u03c4\u03bf \u03b4\u03c9\u03bc\u03ac\u03c4\u03b9\u03bf #3
+K #1 invites #2 to play #3 in room #4
+V \u03bf #1 \u03c0\u03c1\u03bf\u03c3\u03ba\u03b1\u03bb\u03b5\u03af \u03c4\u03bf\u03bd #2 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03c0\u03b1\u03af\u03be\u03bf\u03c5\u03bd #3 \u03c3\u03c4\u03bf \u03b4\u03c9\u03bc\u03ac\u03c4\u03b9\u03bf #4
+S #1 is taking over for #2
+S #1 is taking over playing #2 for #3
+S #1 killed due to #2
+S #1 left
+S #1 prisoners
+S #1 quit
+S #1 repetitions
+K #1 requests Joint review
+V #1 requests Joint review.  Please select "Joint Review" in the messages menu
+S #1 reserves
+S #1 riders have crossed the first sprint line.
+S #1 riders have crossed the second sprint line.
+S #1 riders have finished
+S #1 starts Joint review
+S (unknown)
+S (unoccupied)
+S (vacancy)
+S + #1 turns
+S ...plus #1 more
+S 1 choice
+S 4w 5g 6b or 3 of each wins
+S Accept $#1 from #2
+S Accept Draw
+S Accept chat from #1
+S Accept the loan from the bank
+S Accept this loan financing or not
+S Actions
+S Active in
+S Add a ball
+S Add a ball, remove a Ring
+S Adjust
+S Adjust the chip spacing in stacks
+S Adjust your starting movements
+S All Games
+K Allow challenges from #1
+V Allow invitations from #1
+S Animate
+S Anyone can play in this room
+K Apr #1#2#3
+V #1 Apr, #2:#3 GMT
+S Aqua
+S Arimaa
+K Arimaa_family
+V Arimaa
+K Arimaa_variation
+V Standard Arimaa
+K ArmyOfFrogs
+V Army of Frogs
+K ArmyOfFrogs_family
+V Army Of Frogs
+K ArmyOfFrogs_variation
+V standard Army of Frogs
+S Auction
+K Aug #1#2#3
+V #1 Aug, #2:#3 GMT
+S Bank
+S Become a Spectator
+S Bid $ #1
+S Black
+S Black Pieces
+S Blue
+K BreakingAway
+V Breaking Away
+K BreakingAway_family
+V Breaking Away
+K BreakingAway_variation
+V standard Breaking Away
+S Build adjacent to the man you moved
+S Build an initial stack of 2 to be placed
+S Buy the goods for $#1
+S Calling server...
+S Cannon
+K Cannon_family
+V Cannon
+K Cannon_variation
+V standard Cannon
+S Capture 7 red balls or all of your opponent's balls
+S Capture a ball
+S Capture a group of opponents
+S Capture a stack
+S Capture all of your opponent's pieces
+S Capture most of your opponent's pieces
+K Capture the best combinations of all 5 colors
+V Capture the best combinations of colors and sizes
+S Capture the most chips under your color stack
+S Capture your opponent's tallest king stack
+S Capture your opponent's town
+S Capturing Games
+S Cash/Score
+S Chat Room
+S Che
+K Che_family
+V Che
+K Che_variation
+V standard Che
+S Checkmate your opponent's general
+S Choose the penalty for non-payment of interest
+S Click DONE to confirm removing these markers
+S Click DONE to confirm removing this ring
+S Click DONE to confirm this move
+S Click DONE to confirm this placement
+S Click Done
+S Click Done to Finish the move
+S Click Done to accept a draw
+S Click Done to complete the exchange
+S Click Done to confirm swapping colors with your opponent
+S Click Done to confirm swapping fleets with your opponent
+S Click Done to confirm this action
+S Click Done to confirm this move
+S Click Done to confirm this placement
+S Click Done to decline a draw
+S Click Done to offer a draw
+S Click on Done to complete the capture
+S Click on Done to confirm swapping
+S Click on Done to confirm the Exchange
+S Click on Done to confirm this Dance
+S Click on Done to confirm your resignation
+S Click on Done to end the game
+S Click on Done to end the game (you lose)
+S Click on Done to end the game as a Draw
+S Click on Done to finish all captures
+S Click on Gipf pieces to change their capture status
+S Click on the line to be captured
+S Click on the placed piece to rotate it, or Click Done
+S Closing...
+S Colorblind
+S Combine two stacks or capture another stack
+S Complete a push or pull, step #1
+S Complete a split or merge
+S Complete the merge
+S Complete the pull, step #1
+S Complete the push, step #1
+S Complete the split
+S Confirm Dropping this rider
+S Connect all your frogs (at least 7) in one cluster
+S Connection Games
+S Connection error
+S Container
+K Container-First
+V Container - Original
+K Container-First_variation
+V Container with the original rules
+K Container_family
+V Container
+K Container_variation
+V Container with second shipment rules
+S Continue Capturing
+S Continue merging or click Done
+S Crossfire
+K Crossfire_family
+V Crossfire
+K Crossfire_variation
+V standard Crossfire
+K Dec #1#2#3
+V #1 Dec, #2:#3 GMT
+S Decline Draw
+S Decline the loan
+S Designate GIPF pieces to capture, or place a GIPF chip
+S Designate GIPF pieces to capture, or place a chip
+S Designate a row to capture
+S Designate a row to capture before your turn
+K Dipole
+V Dipole (original)
+K Dipole-s
+V Dipole
+K Dipole-s_variation
+V Dipole 8x8 with a symmetric starting position
+K Dipole_family
+V Dipole
+K Dipole_variation
+V Dipole 8x8 with an asymmetric starting position
+S Done
+S Drop a tile to enlarge the board
+K Drop bunny chip
+V Place one of the Bunny player's chips
+S Drop the moving stack back on the rack
+S Drop the ring
+S Drop this rider from the Race
+S Drop your piece onto the board or any of your stacks
+S Drop your piece onto the board or any stack
+S Dvonn
+K Dvonn_family
+V Dvonn
+K Dvonn_variation
+V standard Dvonn
+S Eat
+S Edit
+S Eliminate all your opponent's pieces
+S Entrapment
+S Entrapment-6x7
+K Entrapment-6x7_variation
+V Entrapment 6x7 - faster game
+K Entrapment-7x7
+V Entrapment
+K Entrapment-7x7_variation
+V standard 7x7 Entrapment
+S Entrapment-7x7x4
+K Entrapment-7x7x4_variation
+V Entrapment-7x7 with 4 roamers
+K Entrapment_family
+V Entrapment
+S Error
+S Error reading directory
+S Error reading file
+S Escape forced position
+S Escape forced position, or move a barrier
+S Escape forced position, or place a barrier
+S Escape from check
+S Euro Games
+S Exchange Prisoners
+S Exchange an off-board piece for a new tile
+S Exxit
+S Exxit-Beginner
+K Exxit-Beginner_variation
+V play 19 tile Exxit
+S Exxit-Blitz
+K Exxit-Blitz_variation
+V play 29 tile Exxit
+K Exxit-Pro
+V Exxit-Expert
+K Exxit-Pro_variation
+V play expert Exxit
+K Exxit_family
+V Exxit
+K Exxit_variation
+V play 39 tile Exxit
+S Fanorona
+K Fanorona_family
+V Fanorona
+K Fanorona_variation
+V standard Fanorona
+S Farmer configuring board
+S Farmer moving scared
+S Farmer select
+K Feb #1#2#3
+V #1 Feb, #2:#3 GMT
+S Final Scores:
+S Finished Capturing, Click Done
+S Flagship can not capture
+S Flagship can participate in captures
+S Flagship is captured normally
+S Flagship must Reach the corner to win
+S Flagship must be surrounded on all 4 sides
+S Flagship wins at any edge square
+S Flip a tile, or Move Split or Merge a stack
+S Form a closed shape in your color
+K Frogs
+V Army of Frogs
+S From #1
+S Game
+S Game Over
+S Game Room
+S Game in progress...
+S Game timed out.  Session has ended.
+S Game won by #1
+S Games do not affect your Ranking
+K Gipf
+V Gipf Basic
+S Gipf Games
+K Gipf-standard
+V Gipf Standard
+K Gipf-standard_variation
+V Gipf Standard (with Gipf pieces)
+K Gipf-tournament
+V Gipf Expert
+K Gipf-tournament_variation
+V Gipf Expert (unlimited Gipf pieces)
+K Gipf_family
+V Gipf
+K Gipf_variation
+V Gipf Basic (no Gipf pieces)
+S Gobblet
+K Gobblet_family
+V Gobblet
+K Gobblet_variation
+V Play with peeking allowed
+K Gobbletm
+V GobbletM
+K Gobbletm_variation
+V Memory counts, no peeking
+S Hex
+S Hex-15
+K Hex-15_variation
+V 15x15 Hex
+S Hex-19
+K Hex-19_variation
+V 19x19 Hex
+K Hex_family
+V Hex
+K Hex_variation
+V 11x11 Hex
+S Hide
+S Hint
+S Hive
+S Hive-L
+S Hive-LM
+K Hive-LM_variation
+V Hive with LadyBug and Mosquito
+K Hive-L_variation
+V Hive with LadyBug added
+S Hive-M
+K Hive-M_variation
+V Hive with Mosquito added
+K Hive_family
+V Hive
+K Hive_variation
+V standard Hive
+S I will make the loan
+S Idle.
+S Ignore chat from #1
+S Illegal - this move would form an illegal pattern of lines
+S Illegal due to repetition, try something else or resign
+S Illegal move due to repetition - try something else
+S Immobilize your opponent's roamers
+K Invite
+V Invite #1 into room #2
+S Invite players to this room
+S Island
+K Jan #1#2#3
+V #1 Jan, #2:#3 GMT
+S Join
+K Join only if Invited
+V Join only if invited
+K Joining as a spectator
+V #1 has joined as a spectator
+S Joint Review
+K Jul #1#2#3
+V #1 Jul, #2:#3 GMT
+K Jun #1#2#3
+V #1 Jun, #2:#3 GMT
+S Knock 5 of your opponent's dice into the gutter
+S Knockabout
+K Knockabout_family
+V Knockabout
+K Knockabout_variation
+V standard Knockabout
+S LIMBO
+K LOA
+V Lines of Action
+S LOAP
+K LOAP_variation
+V play the LOA program contest variation
+K LOA_family
+V Lines of Action
+K LOA_variation
+V standard 8x8 Lines of Action
+S Launching...
+S LeHavre
+K LeHavre_family
+V LeHavre
+K LeHavre_variation
+V standard LeHavre
+S Let The Robot Play
+S Let someone else make the loan
+S Load more goods from the Dock
+S Load the goods you will produce
+S Load the your warehouse from the seller
+S Load your ship from the Dock
+S Loading game file
+S Loan Card
+S Loan for #1 from #2
+S Loan for #1 from the bank
+S Loans
+S Lobby
+S Lobby shutdown...
+S Machines
+S Make a Dance move
+S Make a capturing move
+K Make an addional capturing move, or click on Done
+V Make an additional capturing move, or click on Done
+K Make an addional move, or click on Done
+V Make an additional move, or click on Done
+S Make the first move, or swap and move second
+S Make your first move, or swap fleets
+K Map of Player Locations
+V Map Room
+K Mar #1#2#3
+V #1 Mar, #2:#3 GMT
+S Master Room
+K Master ranked players can play
+V Masters can play in this room
+S Match words:
+S Maximize your profits
+K May #1#2#3
+V #1 May, #2:#3 GMT
+S Medina
+K Medina_family
+V Medina
+K Medina_variation
+V standard Medina
+S Members
+S Memory is low
+S Merge this stack, or click Done
+K Message:
+V To ALL:
+K MessageTo:
+V To #1:
+S Messages
+S Micropul
+K Micropul_family
+V Micropul
+K Micropul_variation
+V standard Micropul
+S Move ##1
+S Move 6 ships to the center
+S Move A Stack
+S Move a Cyclist
+S Move a Frog
+S Move a Man
+S Move a Man up to level 3
+S Move a Rabbit to the last row
+S Move a ball or change a Ring
+S Move a piece
+S Move a piece one space
+S Move a piece, step #1
+S Move a ring
+S Move a roamer
+S Move a roamer or move a barrier
+S Move a roamer, or place a barrier
+S Move a runner
+S Move a runner from a home space
+S Move a ship
+S Move a ship to the board
+S Move a soldier, or fire a cannon
+S Move a stack, or add a reserve piece
+S Move a volcano cap
+S Move one ship
+S Move stacks around any way you want to
+S Move the flipped stack
+S Move your runners to the opposite side
+S Move, Split or Merge a stack
+S Moves are coming in
+S Mutton
+K Mutton-shotgun
+V shotgun Mutton
+K Mutton-shotgun_variation
+V Mutton - farmer uses a shotgun
+K Mutton_family
+V Mutton
+K Mutton_variation
+V standard Mutton
+S News
+K No Challenges
+V No Invitations to Play
+S No Chat
+S No Recent Games
+K No challenges from #1
+V No invitations from #1
+S No players.
+S No spectators.
+S No, let the bank fund it
+K Nov #1#2#3
+V #1 Nov, #2:#3 GMT
+S Occupy 3 enemy bases
+K Oct #1#2#3
+V #1 Oct, #2:#3 GMT
+S Octiles
+K Octiles_family
+V Octiles
+K Octiles_variation
+V standard Octiles
+S Offer a Draw
+S Offer a price for the goods on the ship
+S Onboard a piece, Move a stack, or Exchange
+S Only the flagship can occupy the center square
+S Options
+S Palago
+K Palago_family
+V Palago
+K Palago_variation
+V standard Palago
+S Pass
+S Pick a ring to place a chip and move
+S Pick the stack to move
+S Pick up and Continue your move
+S Place a Chip, or a Jewel, or a chip from the Store
+S Place a Frog on the board
+S Place a GIPF piece on a starting point
+S Place a Ring on the board
+S Place a chip on a starting point
+S Place a gobblet on the board, or move a gobblet
+S Place a marker on any empty cell
+S Place a marker on any empty cell, or Swap Colors
+S Place a piece on the board
+S Place a piece on the board, or Exchange an off-board piece for a new tile
+S Place a piece on the board, or move a piece already on the board
+S Place a ring on the board
+S Place a roamer on the board
+S Place a second piece on the board
+S Place a second tile adjacent to the first
+S Place a second tile adjacent to those already on the board
+S Place a stone on the board, or remove a stone from the board
+S Place a tile
+S Place a tile adjacent to those already on the board
+S Place a tile on any empty cell
+S Place a tile on the board
+S Place a tile on the board, or move a tile
+S Place a tile on the board, where a runner can leave a home space
+S Place all your pieces in your two home rows
+K Place prisoners here for exhange
+V Place prisoners here for exchange
+S Place the Rabbits
+S Place the first meeple on the board
+S Place the next tile on the board, where a runner can move over it
+S Place your bid to fund the loan
+S Place your first man on the board
+S Place your queen on the board
+S Place your second man on the board
+S Place your stack on the edge of the board
+S Place your town in your first row
+S Placing Gipf Pieces
+S Placing Standard Pieces
+S Plateau
+K Plateau_family
+V Plateau
+K Plateau_variation
+V standard Plateau
+S Play #1
+S Play Farmer
+S Played on #1
+S Player #1
+S Player is 
+S Players
+S Players are: 
+S Please Join Me
+K Please respect the 15 minute time limit
+V Master games have a 15 minute time limit
+S Position the starting rings
+S Prisoners captured by Black are held here
+S Prisoners captured by White are held here
+K Punct
+V P\ufffdnct
+K Punct_family
+V P\ufffdnct
+K Punct_variation
+V standard P\ufffdnct
+S Qyshinsu
+K Qyshinsu_family
+V Qyshinsu
+K Qyshinsu_variation
+V The mystery of the way
+S Racing Games
+S Rearrange the gold fleet
+S Rearrange the silver fleet
+S Rearrange things any way you want to
+K Reconnecting
+V  ...Reconnecting...
+S Red
+S Rejoin
+S Rejoin #1
+S Remove a Ring
+S Reprice the goods in your factory storage
+S Reprice the goods in your warehouse storage
+S Requesting Bids
+S Requesting Loan
+K Resign
+V Resign the game
+K Resign State
+V Click Done to confirm your resignation
+S Restart
+S Return to the Way
+S Reverse View
+S Review Room
+K Review Saved Games
+V Review Room
+S Rider Size
+S Rotate the board 180 degrees
+S Santorini
+K Santorini_family
+V Santorini
+K Santorini_variation
+V Santorini (without Gods)
+S Score the most points at the sprint and finish lines
+S See Player Comments
+S See Spectator Comments
+S Select Game
+S Select Robot
+S Select a ring to remove
+S Select a row of 5 to remove
+S Select the #1 piece to move
+S Select the destination for the selected piece
+S Select the stack to move from
+S Select which of your roamers to kill
+S Select which opponent roamer to kill
+S Selecting game: #1
+S Send
+K Sep #1#2#3
+V #1 Sep, #2:#3 GMT
+S Session #1 is active.  
+S Session #1 is being launched.  
+S Session #1 is displaying the map of players real locations
+S Session #1 is idle.  
+S Session #1 is private. 
+S Session #1: state unknown.
+S Shipping
+S Shoot
+S Show SGF Text
+S Shuffle pieces to the exchange area, Click Done to start the exchange
+S Slide the chip toward the center
+S Sound
+S Spangles
+K Spangles_family
+V Spangles
+K Spangles_variation
+V standard Spangles
+S Spectate
+S Spectator
+S Spectator is: 
+S Spectators
+S Spectators are: 
+S Split or Merge this stack, or click Done
+S Split this stack, or click Done
+S Spot Price #1
+S Spread out the stacks
+S Stack Height
+S Stacking Games
+S Start
+S Start #1
+S Start Black
+S Start White
+S State unknown.
+S Swap
+S Swap Colors
+S Switch to a more oblique view of the board
+S Switch to a more overhead view of the board
+K TBA1_variation
+V game to be announced
+K TBA2_variation
+V game to be announced
+K TBA3_variation
+V game to be announced
+S Tablut
+K Tablut-11
+V Tablut-11x11
+K Tablut-11_variation
+V Tablut on a 11x11 board
+K Tablut-7
+V Tablut 7x7
+K Tablut-7_variation
+V Tablut on a 7x7 board
+K Tablut-9
+V Tablut 9x9
+K Tablut-9_variation
+V Tablut on a 9x9 board
+K Tablut_family
+V Tablut
+S Tajii
+K Tajii_family
+V Tajii
+S Take Over Playing
+S Take your first action
+S Take your second action
+K Tamsk_variation
+V standard Tamsk
+S The game is a draw
+S The game record is not available during the game
+S The next finish bonus is #1
+S The next sprint bonus is #1
+S This is now a private room
+S This is now a public room
+S Tile Pattern Games
+S Tile Size
+S Time is 
+S Timeout in 1 minute.
+S Tournament Game
+S Traboulet
+K Traboulet_family
+V Traboulet
+K Traboulet_variation
+V standard Traboulet
+S Track Mice
+S Traditional Pieces
+S Trax
+K Trax_family
+V Trax
+K Trax_variation
+V standard Trax
+S Triad
+K Triad_family
+V Triad
+K Triad_variation
+V standard Triad
+S Truchet
+K Truchet_family
+V Truchet
+K Truchet_variation
+V standard Truchet
+K TumblingDown
+V Tumbling Down
+K TumblingDown_family
+V Tumbling Down
+K TumblingDown_variation
+V standard 8x8 TumblingDown
+S Type your message here.
+S Tzaar
+K Tzaar-custom
+V Tzaar - custom
+K Tzaar-custom_variation
+V Tzaar - custom starting position
+K Tzaar-random
+V Tzaar - random
+K Tzaar-random_variation
+V Tzaar - random starting position
+K Tzaar-standard
+V Tzaar - standard
+K Tzaar-standard_variation
+V Tzaar - standard starting position
+K Tzaar_family
+V Tzaar
+K Tzaar_variation
+V standard Tzaar
+S Unranked Room
+S Unsold Warehouses
+S User 
+S Volcano
+K Volcano-h
+V Hex Volcano
+K Volcano-h_variation
+V Volcano on a Hexagonal grid
+K Volcano-hr
+V randomized Hex Volcano
+K Volcano-hr_variation
+V  Hex Volcano with randomized positions
+K Volcano-r
+V randomized Volcano
+K Volcano-r_variation
+V Volcano with randomized positions
+K Volcano_family
+V Volcano
+K Volcano_variation
+V standard 5x5 Volcano
+K Wait for opponents to arrive.
+V Wait for opponent to arrive.
+S Wait for other players to adjust
+S Wait for the other players to decide
+S Waiting in
+S Warehouse
+S Warehouses
+K Warp6
+V Warp 6
+K Warp6_family
+V Warp 6
+K Warp6_variation
+V standard Warp 6
+K Welcome to Game client, version #1
+V Welcome to BoardSpace client, version #1
+S White
+S White Pieces
+S Wolf moving suspects
+S Wolf player eating
+S Wolf player hiding
+S Xiangqi
+K Xiangqi_family
+V Xiangqi
+K Xiangqi_variation
+V standard Xiangqi
+S Yes, I will fund the loan
+S Yinsh
+S Yinsh-Blitz
+K Yinsh-Blitz_variation
+V blitz Yinsh - the first ring wins
+K Yinsh_family
+V Yinsh
+K Yinsh_variation
+V standard Yinsh
+S You can only resign when it is your move
+S You have been disconnected: #1
+S You have been offered a draw - Accept or Decline
+S You have no legal moves.  Click on Done to pass
+S You have no moves available. Click on Done to pass.
+S You must move the gobblet you have picked up
+S You must place a dome
+S You must take out a loan to pay interest
+K Zertz
+V Z\ufffdrtz
+K Zertz+11
+V Z\ufffdrtz+11
+K Zertz+11_variation
+V Z\ufffdrtz with 11 extra rings
+K Zertz+24
+V Z\ufffdrtz+24
+K Zertz+24_variation
+V Z\ufffdrtz with 24 extra rings
+K Zertz+xx
+V Z\ufffdrtz Extreme
+K Zertz+xx_variation
+V Z\ufffdrtz with custom board layout
+K Zertz_family
+V Z\ufffdrtz
+K Zertz_variation
+V standard Z\ufffdrtz
+S accept the bid, or pay the amount yourself
+K and
+V  and 
+K announceOption
+V Announce New Players
+K automute
+V #1 has been automatically muted
+S build an ideal city
+S capture all of one opponentr's color
+S center square is not special
+S click Done to finish this Auction
+S connect opposite sides with a chain of markers
+K connecting
+V Connecting to 
+K enterMessage
+V #1 has entered the lobby
+K enters the room
+V #1 has entered the room
+S expand the board with your color tiles
+K fontfamily
+V sansserif
+S form a larger triangle with your color at the tips
+S fund a loan from a player or the bank
+S game selector
+K gold: escape the flagship  silver: capture gold flagship
+V gold: escape the flagship  silver: capture the gold flagship
+S guest
+S in #1
+K launchChat
+V Launching chat room in Session #1
+K launchGame
+V Launching game in session #1
+K launchReview
+V Launching review room in session #1
+K launchfailed
+V The other player didn't start properly
+K launchspectator
+V Launching spectator in Session #1
+S load a luxury container
+K loaderr
+V Error while trying to load: 
+S make 4 in a row in any direction
+S make 5 in a row to capture a ring and win
+S make 5 in a row to capture a ring, 3 rings win
+S make any loop, or a line which spans 8 rows or columns, in your color
+S maximize the number of tiles in your reserve
+S mouse tracking disabled
+K nolaunch
+V The server rejected a launch request, message is 
+K nolobby
+V Sorry, lobby has refused entry.  It may be full.
+K noresponse1
+V The server is not responding.
+K noresponse2
+V It may be down, or a firewall may be preventing the connection.
+K noserver
+V Lobby is not connected to the server.
+S own all the stacks
+S perspective
+K play
+V play for #1
+S player
+S player 
+S private room
+K punctgoal
+V connect opposite sides of the board, or play your last piece while controlling more of the center
+K quitting
+V #1 has left the room
+K rankingsfailed
+V Updating the rankings failed
+S reading Zip directory...
+S reading directory...
+K reconok
+V ..reconnection succeeded
+S review
+K savedmsg
+V Game saved as #1
+S select the game to play
+S select the game variation
+S select the type of room
+S select tile color
+S set bid amount
+S show grid
+S stack six or capture six
+K stillwaiting
+V still launching... please wait.
+S surround your opponents queen bee
+S the game has resumed
+K timeoutWarning
+V   Lobby will shutdown in 1 minute (idle).
+S trade a second container for a gold container
+S use Wooden tiles
+K website
+V #1 BoardSpace
+K welcome
+V Welcome to the BoardSpace Lobby, version #1
+S you may increase your bid
+S your name
+N 689

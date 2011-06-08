@@ -1,0 +1,1085 @@
+S #1 #2 Containers
+S #1 Machine
+S #1 Ship
+K #1 center
+V #1 centro
+K #1 choices
+V #1 elige
+K #1 deliberately quit
+V #1 abandona deliberadamente
+K #1 has been muted, by a consensus of the players
+V #1 ha sido silenciado, por consenso de los jugadores
+K #1 has quit and become a spectator
+V #1 abandona y pasa a ser espectador
+K #1 invites #2 to join room #3
+V #1 invita a #2 a incorporarse en la sala #3
+K #1 invites #2 to play #3 in room #4
+V #1 invita a #2 que juegue a #3 en la sala #4
+K #1 is taking over for #2
+V #1 toma el puesto a #2
+K #1 is taking over playing #2 for #3
+V #1 toma el puesto de juego #2 para #3
+K #1 killed due to #2
+V #1 es rechazado por #2
+K #1 left
+V #1 izquierda
+S #1 prisoners
+K #1 quit
+V #1 abandona
+K #1 repetitions
+V #1 repeticiones
+K #1 requests Joint review
+V #1 Petici\u00f3n de modo revisi\u00f3n conjunta
+S #1 reserves
+S #1 riders have crossed the first sprint line.
+S #1 riders have crossed the second sprint line.
+S #1 riders have finished
+K #1 starts Joint review
+V #1 Participar en revisi\u00f3n conjunta
+K (unknown)
+V (desconocido)
+K (unoccupied)
+V (libre)
+K (vacancy)
+V (libre)
+S + #1 turns
+S ...plus #1 more
+K 1 choice
+V 1 eliges
+K 4w 5g 6b or 3 of each wins
+V 4b 5g 6n or 3 de cada ganan
+S Accept $#1 from #2
+S Accept Draw
+K Accept chat from #1
+V Acepta chat de #1
+S Accept the loan from the bank
+S Accept this loan financing or not
+K Actions
+V Acciones
+K Active in
+V Activo en
+K Add a ball
+V A\u00f1ade una bola
+K Add a ball, remove a Ring
+V A\u00f1ade una bola, retira un anillo
+S Adjust
+S Adjust the chip spacing in stacks
+S Adjust your starting movements
+S All Games
+K Allow challenges from #1
+V Permitir invitaciones de #1
+S Animate
+K Anyone can play in this room
+V Todos pueden jugar en esta sala
+K Apr #1#2#3
+V #1 Abril, #2:#3 GMT
+S Aqua
+S Arimaa
+K Arimaa_family
+V Arimaa
+K Arimaa_variation
+V Standard Arimaa
+K ArmyOfFrogs
+V Army of Frogs
+K ArmyOfFrogs_family
+V Army Of Frogs
+K ArmyOfFrogs_variation
+V standard Army of Frogs
+S Auction
+K Aug #1#2#3
+V #1 Agosto, #2:#3 GMT
+S Bank
+K Become a Spectator
+V Pasa a ser espactador
+S Bid $ #1
+K Black
+V Negra
+K Black Pieces
+V Piezas Negras
+S Blue
+K BreakingAway
+V Breaking Away
+K BreakingAway_family
+V Breaking Away
+K BreakingAway_variation
+V standard Breaking Away
+S Build adjacent to the man you moved
+S Build an initial stack of 2 to be placed
+S Buy the goods for $#1
+K Calling server...
+V Llamando al servidor...
+S Cannon
+K Cannon_family
+V Cannon
+K Cannon_variation
+V standard Cannon
+S Capture 7 red balls or all of your opponent's balls
+K Capture a ball
+V Captura una bola
+S Capture a group of opponents
+S Capture a stack
+S Capture all of your opponent's pieces
+S Capture most of your opponent's pieces
+K Capture the best combinations of all 5 colors
+V Capture the best combinations of colors and sizes
+S Capture the most chips under your color stack
+S Capture your opponent's tallest king stack
+S Capture your opponent's town
+S Capturing Games
+S Cash/Score
+K Chat Room
+V Sala de Chat
+S Che
+K Che_family
+V Che
+K Che_variation
+V standard Che
+S Checkmate your opponent's general
+S Choose the penalty for non-payment of interest
+K Click DONE to confirm removing these markers
+V Haz click en HECHO para retirar estos marcadores
+K Click DONE to confirm removing this ring
+V Haz click en HECHO para confirmar la retirada de este anillo
+K Click DONE to confirm this move
+V Haz click en HECHO para confirmar este movimiento
+K Click DONE to confirm this placement
+V Haz click en HECHO para confirmar esta	colocaci\u00f3n
+K Click Done
+V Haz click en Done
+S Click Done to Finish the move
+S Click Done to accept a draw
+K Click Done to complete the exchange
+V Haz clic en Done para completar el intercambio
+K Click Done to confirm swapping colors with your opponent
+V Haz clic en Done para confirmar el intercambio de colores con tu oponente
+K Click Done to confirm swapping fleets with your opponent
+V Haz click en Done para confirmar el intercambio de flotas con tu oponente
+S Click Done to confirm this action
+K Click Done to confirm this move
+V Haz clic en Done para confirmar este movimiento
+S Click Done to confirm this placement
+S Click Done to decline a draw
+S Click Done to offer a draw
+K Click on Done to complete the capture
+V Haz clic en Done para completar la captura
+S Click on Done to confirm swapping
+K Click on Done to confirm the Exchange
+V Haz clic en Done para confirmar el Intercambio
+K Click on Done to confirm this Dance
+V Haz clic en Done para confirmar este baile
+K Click on Done to confirm your resignation
+V Haz clic en Done para confirmar tu abandono
+K Click on Done to end the game
+V Haz clic en Done para finalizar la partida
+S Click on Done to end the game (you lose)
+K Click on Done to end the game as a Draw
+V Haz clic en Done para terminar la partida como un empate
+S Click on Done to finish all captures
+S Click on Gipf pieces to change their capture status
+S Click on the line to be captured
+K Click on the placed piece to rotate it, or Click Done
+V Haz clic sobre la ficha colocada para rotarla, o clic en Done
+S Closing...
+K Colorblind
+V No distingue los colores
+S Combine two stacks or capture another stack
+S Complete a push or pull, step #1
+S Complete a split or merge
+S Complete the merge
+S Complete the pull, step #1
+S Complete the push, step #1
+S Complete the split
+S Confirm Dropping this rider
+S Connect all your frogs (at least 7) in one cluster
+S Connection Games
+K Connection error
+V Error en la conexi\u00f3n
+S Container
+K Container-First
+V Container - Original
+K Container-First_variation
+V Container with the original rules
+K Container_family
+V Container
+K Container_variation
+V Container with second shipment rules
+K Continue Capturing
+V Continua capturando
+S Continue merging or click Done
+S Crossfire
+K Crossfire_family
+V Crossfire
+K Crossfire_variation
+V standard Crossfire
+K Dec #1#2#3
+V #1 Diciembre, #2:#3 GMT
+S Decline Draw
+S Decline the loan
+S Designate GIPF pieces to capture, or place a GIPF chip
+S Designate GIPF pieces to capture, or place a chip
+S Designate a row to capture
+S Designate a row to capture before your turn
+K Dipole
+V Dipole (original)
+K Dipole-s
+V Dipole
+K Dipole-s_variation
+V Dipole with the symmetric starting position
+K Dipole_family
+V Dipole
+K Dipole_variation
+V Dipole with the asymmetric starting position
+K Done
+V Hecho
+K Drop a tile to enlarge the board
+V Coloca una baldosa para agrandar el tablero
+K Drop bunny chip
+V Place one of the Bunny player's chips
+S Drop the moving stack back on the rack
+S Drop the ring
+S Drop this rider from the Race
+S Drop your piece onto the board or any of your stacks
+S Drop your piece onto the board or any stack
+S Dvonn
+K Dvonn_family
+V Dvonn
+K Dvonn_variation
+V jugar a Dvonn partida est\u00e1ndar
+S Eat
+K Edit
+V Editar
+S Eliminate all your opponent's pieces
+S Entrapment
+S Entrapment-6x7
+K Entrapment-6x7_variation
+V Entrapment 6x7 - faster game
+K Entrapment-7x7
+V Entrapment
+K Entrapment-7x7_variation
+V standard 7x7 Entrapment
+S Entrapment-7x7x4
+K Entrapment-7x7x4_variation
+V Entrapment-7x7 with 4 roamers
+K Entrapment_family
+V Entrapment
+S Error
+K Error reading directory
+V Error leyendo directorio
+K Error reading file
+V Error leyendo archivo
+S Escape forced position
+S Escape forced position, or move a barrier
+S Escape forced position, or place a barrier
+S Escape from check
+S Euro Games
+S Exchange Prisoners
+K Exchange an off-board piece for a new tile
+V Intercambia una ficha de fuera del tablero por una nueva baldosa
+S Exxit
+K Exxit-Beginner
+V Exxit-Principiante
+K Exxit-Beginner_variation
+V jugar la partida de principiante de 19 baldosas
+K Exxit-Blitz
+V Exxit-Rel\u00e1mpago
+K Exxit-Blitz_variation
+V jugar la partida corta de 29 baldosas
+K Exxit-Pro
+V Exxit-Experto
+K Exxit-Pro_variation
+V jugar la variante para expertos
+K Exxit_family
+V Exxit
+K Exxit_variation
+V jugar la partida est\u00e1ndar de 39 baldosas
+S Fanorona
+K Fanorona_family
+V Fanorona
+K Fanorona_variation
+V standard Fanorona
+S Farmer configuring board
+S Farmer moving scared
+S Farmer select
+K Feb #1#2#3
+V #1 Febrero, #2:#3 GMT
+S Final Scores:
+K Finished Capturing, Click Done
+V Has terminado de capturar, Haz click en Done
+K Flagship can not capture
+V El buque insignia no puede capturar
+K Flagship can participate in captures
+V El buque insignia puede participar en las capturas
+K Flagship is captured normally
+V El buque insignia se captura de forma normal
+K Flagship must Reach the corner to win
+V El buque insignia debe alcanzar la esquina para ganar
+K Flagship must be surrounded on all 4 sides
+V El buque insignia tiene que ser rodeado por los 4 lados
+K Flagship wins at any edge square
+V El buque insignia gana en cualquier casilla del borde
+S Flip a tile, or Move Split or Merge a stack
+S Form a closed shape in your color
+K Frogs
+V Army of Frogs
+K From #1
+V de #1
+K Game
+V Juego
+K Game Over
+V Fin de la Partida
+K Game Room
+V Sala de juego
+K Game in progress...
+V Partida en progreso...
+K Game timed out.  Session has ended.
+V Juego fuera de tiempo.  La sesi\u00f3n ha finalizado.
+K Game won by #1
+V Partida ganada por #1
+K Games do not affect your Ranking
+V Juegos que no afectan a tu ranking
+K Gipf
+V Gipf Basic
+S Gipf Games
+K Gipf-standard
+V Gipf Standard
+K Gipf-standard_variation
+V Gipf Standard (with Gipf pieces)
+K Gipf-tournament
+V Gipf Expert
+K Gipf-tournament_variation
+V Gipf Expert (unlimited Gipf pieces)
+K Gipf_family
+V Gipf
+K Gipf_variation
+V Gipf Basic (no Gipf pieces)
+S Gobblet
+K Gobblet_family
+V Gobblet
+K Gobblet_variation
+V Jugar permitiendo ojear
+K Gobbletm
+V GobbletM
+K Gobbletm_variation
+V La memoria cuenta, no se puede ojear
+S Hex
+S Hex-15
+K Hex-15_variation
+V jugar  a Hex el tablero de 15x15
+S Hex-19
+K Hex-19_variation
+V jugar  a Hex el tablero de 19x19
+K Hex_family
+V Hex
+K Hex_variation
+V jugar a Hex partida  el tablero de 11x11
+S Hide
+K Hint
+V Sugerencia
+S Hive
+S Hive-L
+S Hive-LM
+K Hive-LM_variation
+V Hive with LadyBug and Mosquito
+K Hive-L_variation
+V Hive with LadyBug added
+S Hive-M
+K Hive-M_variation
+V Hive with Mosquito added
+K Hive_family
+V Hive
+K Hive_variation
+V jugar una partida est\u00e1ndar
+S I will make the loan
+K Idle.
+V Inactivo.
+K Ignore chat from #1
+V Ignora chat de #1
+S Illegal - this move would form an illegal pattern of lines
+S Illegal due to repetition, try something else or resign
+S Illegal move due to repetition - try something else
+S Immobilize your opponent's roamers
+K Invite
+V Invita #1 a la sala #2
+K Invite players to this room
+V Invitar jugadores a esta sala
+S Island
+K Jan #1#2#3
+V #1 Enero, #2:#3 GMT
+K Join
+V Unirse
+K Join only if Invited
+V Unirse solo si estas invitado
+K Joining as a spectator
+V #1 se ha unido como espectador
+K Joint Review
+V Revisi\u00f3n conjunta
+K Jul #1#2#3
+V #1 Julio, #2:#3 GMT
+K Jun #1#2#3
+V #1 Junio, #2:#3 GMT
+S Knock 5 of your opponent's dice into the gutter
+S Knockabout
+K Knockabout_family
+V Knockabout
+K Knockabout_variation
+V Standard Knockabout
+S LIMBO
+S LOA
+S LOAP
+K LOAP_variation
+V juega a la variante del consurso de programas
+K LOA_family
+V Lines of Action
+K LOA_variation
+V jugar a Lines of Action partida est\u00e1ndar
+K Launching...
+V Iniciando...
+S LeHavre
+K LeHavre_family
+V LeHavre
+K LeHavre_variation
+V standard LeHavre
+K Let The Robot Play
+V Deja jugar al robot
+S Let someone else make the loan
+S Load more goods from the Dock
+S Load the goods you will produce
+S Load the your warehouse from the seller
+S Load your ship from the Dock
+K Loading game file
+V Cargando archivo de juego
+S Loan Card
+S Loan for #1 from #2
+S Loan for #1 from the bank
+S Loans
+K Lobby
+V Grupo
+K Lobby shutdown...
+V Grupo cerrado...
+S Machines
+K Make a Dance move
+V Realiza un Baile
+S Make a capturing move
+S Make an addional capturing move, or click on Done
+S Make an addional move, or click on Done
+S Make the first move, or swap and move second
+K Make your first move, or swap fleets
+V Haz tu primer movimiento o intercambia flotas
+K Map of Player Locations
+V Sala de mapa
+K Mar #1#2#3
+V #1 Marzo, #2:#3 GMT
+K Master Room
+V Sala de Maestros
+K Master ranked players can play
+V Masters pueden jugar en esta sala
+K Match words:
+V Emparejar palabras:
+S Maximize your profits
+K May #1#2#3
+V #1 Mayo, #2:#3 GMT
+S Medina
+K Medina_family
+V Medina
+K Medina_variation
+V Standard Medina
+K Members
+V Miembros
+K Memory is low
+V La memoria est\u00e1 baja
+S Merge this stack, or click Done
+K Message:
+V para TODOS:
+K MessageTo:
+V Para #1:
+K Messages
+V Mensajes
+S Micropul
+K Micropul_family
+V Micropul
+K Micropul_variation
+V Standard Micropul
+K Move ##1
+V Movimiento ##1
+S Move 6 ships to the center
+S Move A Stack
+S Move a Cyclist
+S Move a Frog
+S Move a Man
+S Move a Man up to level 3
+S Move a Rabbit to the last row
+K Move a ball or change a Ring
+V Mueve una bola o cambia un anillo
+S Move a piece
+S Move a piece one space
+S Move a piece, step #1
+S Move a ring
+S Move a roamer
+S Move a roamer or move a barrier
+S Move a roamer, or place a barrier
+S Move a runner
+S Move a runner from a home space
+S Move a ship
+S Move a ship to the board
+S Move a soldier, or fire a cannon
+S Move a stack, or add a reserve piece
+S Move a volcano cap
+K Move one ship
+V Mueve un barco
+S Move stacks around any way you want to
+S Move the flipped stack
+S Move your runners to the opposite side
+S Move, Split or Merge a stack
+K Moves are coming in
+V Ya llegan los movimientos
+S Mutton
+K Mutton-shotgun
+V shotgun Mutton
+K Mutton-shotgun_variation
+V Mutton - farmer uses a shotgun
+K Mutton_family
+V Mutton
+K Mutton_variation
+V standard Mutton
+K News
+V Noticias
+K No Challenges
+V No hay invitaciones para jugar
+S No Chat
+S No Recent Games
+K No challenges from #1
+V No invitaciones de #1
+K No players.
+V No hay jugadores.
+K No spectators.
+V No hay espectadores.
+S No, let the bank fund it
+K Nov #1#2#3
+V #1 Noviembre, #2:#3 GMT
+S Occupy 3 enemy bases
+K Oct #1#2#3
+V #1 Octubre, #2:#3 GMT
+S Octiles
+K Octiles_family
+V Octiles
+K Octiles_variation
+V standard Octiles
+S Offer a Draw
+S Offer a price for the goods on the ship
+S Onboard a piece, Move a stack, or Exchange
+K Only the flagship can occupy the center square
+V Solo el buque insignia puede ocupar la casilla central
+K Options
+V Opciones
+S Palago
+K Palago_family
+V Palago
+K Palago_variation
+V Standard Palago
+S Pass
+K Pick a ring to place a chip and move
+V Elige un anillo al que poner una ficha y mu\u00e9velo
+S Pick the stack to move
+S Pick up and Continue your move
+S Place a Chip, or a Jewel, or a chip from the Store
+S Place a Frog on the board
+S Place a GIPF piece on a starting point
+K Place a Ring on the board
+V Coloca un anillo sobre el tablero
+S Place a chip on a starting point
+K Place a gobblet on the board, or move a gobblet
+V Coloca un gobblet en el tablero, o mueve un gobblet
+K Place a marker on any empty cell
+V Coloca una ficha en cualquier casilla vac\u00eda
+K Place a marker on any empty cell, or Swap Colors
+V Coloca una ficha en cualquier casilla vac\u00eda, o Intercambia Colores
+K Place a piece on the board
+V Coloca una ficha sobre el tablero
+K Place a piece on the board, or Exchange an off-board piece for a new tile
+V Coloca una ficha sobre el tablero, o Intercambia una ficha de fuera del tablero por una nueva baldosa
+K Place a piece on the board, or move a piece already on the board
+V Coloca una ficha sobre el tablero, o muve una ficha que ya est\u00e9 en el tablero
+S Place a ring on the board
+S Place a roamer on the board
+S Place a second piece on the board
+S Place a second tile adjacent to the first
+S Place a second tile adjacent to those already on the board
+S Place a stone on the board, or remove a stone from the board
+K Place a tile
+V Coloca una baldosa
+S Place a tile adjacent to those already on the board
+S Place a tile on any empty cell
+K Place a tile on the board
+V Coloca una baldosa sobre el tablero
+K Place a tile on the board, or move a tile
+V Coloca una baldosa sobre el tablero, o mueve una baldosa
+S Place a tile on the board, where a runner can leave a home space
+S Place all your pieces in your two home rows
+K Place prisoners here for exhange
+V Coloca aqui los prisioneros para el intercambio
+S Place the Rabbits
+S Place the first meeple on the board
+S Place the next tile on the board, where a runner can move over it
+S Place your bid to fund the loan
+S Place your first man on the board
+K Place your queen on the board
+V Coloca tu reina sobre el tablero
+S Place your second man on the board
+S Place your stack on the edge of the board
+S Place your town in your first row
+S Placing Gipf Pieces
+S Placing Standard Pieces
+S Plateau
+K Plateau_family
+V Plateau
+K Plateau_variation
+V jugar a Plateau partida est\u00e1ndar
+K Play #1
+V Juega contra #1
+S Play Farmer
+S Played on #1
+K Player #1
+V Jugador #1
+K Player is 
+V El jugador es 
+K Players
+V Jugadores
+K Players are: 
+V Los jugadores son: 
+K Please Join Me
+V Por favor, unete a m\u00ed
+K Please respect the 15 minute time limit
+V Los juegos Master tienen un l\u00edmite de tiempo de 15 minutos
+S Position the starting rings
+K Prisoners captured by Black are held here
+V Los prisioneros capturados por el Negro se dejan aqu\u00ed
+K Prisoners captured by White are held here
+V Los prisioneros capturados por el Balnco se dejan aqu\u00ed
+K Punct
+V P\u00fcnct
+K Punct_family
+V P\u00fcnct
+K Punct_variation
+V jugar a P\u00fcnct partida est\u00e1ndar
+S Qyshinsu
+K Qyshinsu_family
+V Qyshinsu
+S Qyshinsu_variation
+S Racing Games
+K Rearrange the gold fleet
+V Reorganiza la flota dorada
+K Rearrange the silver fleet
+V Reorganiza la tropa plateada
+K Rearrange things any way you want to
+V Reorganiza las cosas de la forma que quieras
+K Reconnecting
+V  ...Reconectando...
+S Red
+K Rejoin
+V Reincorporate
+K Rejoin #1
+V Reincorporate #1
+K Remove a Ring
+V Retira un anillo
+S Reprice the goods in your factory storage
+S Reprice the goods in your warehouse storage
+S Requesting Bids
+S Requesting Loan
+K Resign
+V Abandonar
+K Resign State
+V Estado rendici\u00f3n
+S Restart
+S Return to the Way
+S Reverse View
+K Review Room
+V Sala de revisi\u00f3n
+K Review Saved Games
+V Sala de revisi\u00f3n
+S Rider Size
+S Rotate the board 180 degrees
+S Santorini
+K Santorini_family
+V Santorini
+K Santorini_variation
+V Santorini (without Gods)
+S Score the most points at the sprint and finish lines
+K See Player Comments
+V Ver los comentarios de los jugadores
+K See Spectator Comments
+V Ver los comentarios de los espactadores
+K Select Game
+V Selecionar Juego
+S Select Robot
+K Select a ring to remove
+V Elige un anillo para retirarlo
+K Select a row of 5 to remove
+V Elige una linea de 5 para retirar
+K Select the #1 piece to move
+V Selecciona la pieza #1 que deseas mover
+K Select the destination for the selected piece
+V Elige el destino de la pieza seleccionada
+S Select the stack to move from
+S Select which of your roamers to kill
+S Select which opponent roamer to kill
+K Selecting game: #1
+V Seleccionando juego: #1
+K Send
+V Enviar
+K Sep #1#2#3
+V #1 Septiembre, #2:#3 GMT
+K Session #1 is active.  
+V Sesi\u00f3n #1 est\u00e1 activa.  
+K Session #1 is being launched.  
+V Sesi\u00f3n #1 se est\u00e1 iniciando.  
+K Session #1 is displaying the map of players real locations
+V Sessi\u00f3n #1 est\u00e1 mostrando el mapa real de localizaci\u00f3n de jugadores
+K Session #1 is idle.  
+V Sesi\u00f3n #1 es inactiva.  
+K Session #1 is private. 
+V Sesi\u00f3n #1 es privada. 
+K Session #1: state unknown.
+V Sesi\u00f3n #1: estado desconocido.
+S Shipping
+S Shoot
+K Show SGF Text
+V Mostrar SGF Texto
+S Shuffle pieces to the exchange area, Click Done to start the exchange
+S Slide the chip toward the center
+K Sound
+V Sonido
+S Spangles
+K Spangles_family
+V Spangles
+K Spangles_variation
+V Standard Spangles
+K Spectate
+V Espectador
+K Spectator
+V Espectador
+K Spectator is: 
+V El espectador es: 
+K Spectators
+V Espectadores
+K Spectators are: 
+V Los espectadores son: 
+S Split or Merge this stack, or click Done
+S Split this stack, or click Done
+S Spot Price #1
+S Spread out the stacks
+S Stack Height
+S Stacking Games
+K Start
+V Inicio
+K Start #1
+V Empieza #1
+K Start Black
+V Negro empieza
+K Start White
+V Blanco Empieza
+K State unknown.
+V Estado desconocido.
+S Swap
+K Swap Colors
+V Intercambiar Colores
+S Switch to a more oblique view of the board
+S Switch to a more overhead view of the board
+K TBA1_variation
+V game to be announced
+K TBA2_variation
+V game to be announced
+K TBA3_variation
+V game to be announced
+S Tablut
+K Tablut-11
+V Tablut-11x11
+K Tablut-11_variation
+V  Tablut en un tablero de 11x11
+K Tablut-7
+V Tablut 7x7
+K Tablut-7_variation
+V Tablut en un tablero de 7x7
+K Tablut-9
+V Tablut 9x9
+K Tablut-9_variation
+V Tablut en un tablero de 9x9
+K Tablut_family
+V Tablut
+S Tajii
+K Tajii_family
+V Tajii
+K Take Over Playing
+V Toma el puesto jugando
+S Take your first action
+S Take your second action
+K Tamsk_variation
+V jugar a Tamsk
+K The game is a draw
+V La partida finaliza en empate
+K The game record is not available during the game
+V El registro de la partida no est\u00e1 disponible durante el juego
+S The next finish bonus is #1
+S The next sprint bonus is #1
+K This is now a private room
+V Ahora, esta es una sala privada
+K This is now a public room
+V Ahora, esta es una sala p\u00fablica
+S Tile Pattern Games
+K Tile Size
+V Tama\u00f1o de las baldosas
+K Time is 
+V Son las 
+K Timeout in 1 minute.
+V Tiempo muerto en 1 minuto.
+K Tournament Game
+V Partida de Torneo
+S Traboulet
+K Traboulet_family
+V Traboulet
+K Traboulet_variation
+V Play standard Traboulet
+K Track Mice
+V Sigue la pista
+S Traditional Pieces
+S Trax
+K Trax_family
+V Trax
+K Trax_variation
+V jugar una partida est\u00e1ndar
+S Triad
+K Triad_family
+V Triad
+K Triad_variation
+V standard Triad
+S Truchet
+K Truchet_family
+V Truchet
+K Truchet_variation
+V Truchet on the standard 7x7 board
+K TumblingDown
+V Tumbling Down
+K TumblingDown_family
+V Tumbling Down
+K TumblingDown_variation
+V TumblingDown on the standard 8x8 board
+K Type your message here.
+V Escribe tu mensaje aqu\u00ed.
+S Tzaar
+S Tzaar-custom
+S Tzaar-custom_variation
+S Tzaar-random
+S Tzaar-random_variation
+S Tzaar-standard
+S Tzaar-standard_variation
+K Tzaar_family
+V Tzaar
+S Tzaar_variation
+K Unranked Room
+V Sala sin ranking
+S Unsold Warehouses
+K User 
+V Usuario 
+S Volcano
+K Volcano-h
+V Hex Volcano
+K Volcano-h_variation
+V Volcano on a Hexagonal grid
+K Volcano-hr
+V Hex Volcano (Randomized)
+K Volcano-hr_variation
+V  Hex Volcano with randomized positions
+K Volcano-r
+V Volcano (Randomized)
+K Volcano-r_variation
+V Volcano with randomized positions
+K Volcano_family
+V Volcano
+K Volcano_variation
+V 5x5 Volcano
+K Wait for opponents to arrive.
+V Esperando la llegada de los rivales.
+S Wait for other players to adjust
+S Wait for the other players to decide
+K Waiting in
+V Esperando en
+S Warehouse
+S Warehouses
+K Warp6
+V Warp 6
+K Warp6_family
+V Warp 6
+K Warp6_variation
+V stamdard Warp 6
+K Welcome to Game client, version #1
+V Bienvenidos al juego, versi\u00f3n #1
+K White
+V Blanca
+K White Pieces
+V Piezas Blancas
+S Wolf moving suspects
+S Wolf player eating
+S Wolf player hiding
+S Xiangqi
+K Xiangqi_family
+V Xiangqi
+K Xiangqi_variation
+V standard Xiangqi
+S Yes, I will fund the loan
+S Yinsh
+K Yinsh-Blitz
+V Yinsh-Rel\u00e1mpago
+K Yinsh-Blitz_variation
+V jugar a Yinsh partida rel\u00e1mpago - el primer anillo gana
+K Yinsh_family
+V Yinsh
+K Yinsh_variation
+V jugar a Yinsh partida est\u00e1ndar
+K You can only resign when it is your move
+V Solo puedes abandonar cuando sea tu turno
+K You have been disconnected: #1
+V Tu has sido desconectado: #1
+S You have been offered a draw - Accept or Decline
+K You have no legal moves.  Click on Done to pass
+V No tienes movimientos legales.  Haz clic en Done para pasar
+S You have no moves available. Click on Done to pass.
+K You must move the gobblet you have picked up
+V Debes mover el gobblet que has elegido
+S You must place a dome
+S You must take out a loan to pay interest
+K Zertz
+V Z\u00e8rtz
+K Zertz+11
+V Z\u00e8rtz+11
+K Zertz+11_variation
+V jugar a Z\u00e8rtz con 11 anillos extras
+K Zertz+24
+V Z\u00e8rtz+24
+K Zertz+24_variation
+V jugar a Z\u00e8rtz con 24 anillos extras
+K Zertz+xx
+V Z\u00e8rtz Extreme
+K Zertz+xx_variation
+V Z\u00e8rtz with custom board layout
+K Zertz_family
+V Z\u00e8rtz
+K Zertz_variation
+V jugar a Zertz partida est\u00e1ndar
+S accept the bid, or pay the amount yourself
+K and
+V  y 
+K announceOption
+V Anuncia Nuevos Jugadores
+K automute
+V #1 ha sido automaticamente silenciado
+S build an ideal city
+S capture all of one opponentr's color
+K center square is not special
+V la casilla central no es especial
+S click Done to finish this Auction
+K connect opposite sides with a chain of markers
+V Conecta lados opuestos con una cadena de fichas
+K connecting
+V Conectando a 
+K enterMessage
+V #1 se ha unido al grupo
+K enters the room
+V #1 ha entrado en la sala
+S expand the board with your color tiles
+K fontfamily
+V sansserif
+S form a larger triangle with your color at the tips
+S fund a loan from a player or the bank
+K game selector
+V selector de juego
+K gold: escape the flagship  silver: capture gold flagship
+V Dorado: Logra que el buque insignia escape  Plateado: Captura el buque insignia dorado
+K guest
+V invitado
+K in #1
+V en #1
+K launchChat
+V Iniciando sala de chat en sesi\u00f3n #1
+K launchGame
+V Iniciando juego en sesi\u00f3n #1
+K launchReview
+V Iniciando sala de revisi\u00f3n en sesi\u00f3n #1
+K launchfailed
+V El otro jugador no inici\u00f3 correctamente
+K launchspectator
+V Iniciando espectador en sesi\u00f3n #1
+S load a luxury container
+K loaderr
+V Error durante el intento de carga: 
+K make 4 in a row in any direction
+V forma 4 en raya en cualquier direcci\u00f3n
+K make 5 in a row to capture a ring and win
+V Haz 5 en raya para capturar un anillo y ganar
+K make 5 in a row to capture a ring, 3 rings win
+V haz 5 en linea para capturar un anillo, 3 anillos ganan
+K make any loop, or a line which spans 8 rows or columns, in your color
+V formar un circuito, o una linea que expanda 8 filas o columnas, de tu color
+S maximize the number of tiles in your reserve
+K mouse tracking disabled
+V pista del rat\u00f3n no v\u00e1lida
+K nolaunch
+V El servidor rechaza la petici\u00f3n de inicio, el mensaje es 
+K nolobby
+V Lo siento, el grupo ha rechazado la entrada. Debe estar completo.
+K noresponse1
+V El servidor no est\u00e1 respondiendo.
+K noresponse2
+V Tal vez se ha colgado, o un cortafuegos impide la conexi\u00f3n.
+K noserver
+V El grupo no est\u00e1 conectado al servidor.
+S own all the stacks
+K perspective
+V perspectiva
+K play
+V juega por #1
+K player
+V jugador
+S player 
+K private room
+V sala privada
+K punctgoal
+V conecta lados opuestos del tablero, o juega tu u\u00b4ltima pieza mientras controlas el centro del tablero
+K quitting
+V #1 abandona la sala
+K rankingsfailed
+V Actualizaci\u00f3n del ranking fallida
+K reading Zip directory...
+V leyendo un directorio Zip...
+K reading directory...
+V leyendo directorio...
+K reconok
+V ..reconexi\u00f3n con exito
+K review
+V revisi\u00f3n
+K savedmsg
+V Juego guardado como #1
+S select the game to play
+S select the game variation
+S select the type of room
+S select tile color
+S set bid amount
+K show grid
+V Mostrar cuadr\u00edcula
+S stack six or capture six
+K stillwaiting
+V a\u00fan iniciando... espere por favor.
+K surround your opponents queen bee
+V rodea la abeja reina de tu oponente
+K the game has resumed
+V el juego se ha reanudado
+K timeoutWarning
+V   El grupo se cerrar\u00e1 en un minuto (libre).
+S trade a second container for a gold container
+S use Wooden tiles
+K website
+V #1 Boardspace
+K welcome
+V Bienvenido al Servidor de Juego, versi\u00f3n #1
+S you may increase your bid
+K your name
+V tu nombre
+N 689
