@@ -181,7 +181,6 @@ public class HexGameViewer extends commonCanvas
         bb = new HexGameBoard(info.getString(exHashtable.GAMETYPE, Hex_INIT));
         doInit(false);
 
-        PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,true);
     }
 
     /** 
@@ -192,6 +191,9 @@ public class HexGameViewer extends commonCanvas
         //System.out.println(myplayer.trueName + " doinit");
         super.doInit(preserve_history);				// let commonViewer do it's things
         bb.doInit(bb.gametype);						// initialize the board
+        if(!preserve_history)
+        	{ PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,true);
+        	}
     }
     
 

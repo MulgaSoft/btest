@@ -92,7 +92,6 @@ public class CheckerGameViewer extends commonCanvas
         doInit(false);
         reverseOption = myFrame.addOption(s.get("Reverse View"),b.reverse_y,deferredEvents);
 
-        PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,true);
         
      }
 
@@ -103,7 +102,10 @@ public class CheckerGameViewer extends commonCanvas
     {	//System.out.println(myplayer.trueName + " doinit");
         super.doInit(preserve_history);				// let commonViewer do it's things
         b.doInit(b.gametype,b.randomKey);						// initialize the board
-   }
+        if(!preserve_history)
+        	{ PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,true); 
+        	}
+ }
     
     /**
      * translate the mouse coordinate x,y into a size-independent representation
