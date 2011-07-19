@@ -20,6 +20,7 @@
 <mapEntry key="final" value="true"/>
 <mapEntry key="gamerClass" value="lehavre.LehavreViewer"/>
 <mapEntry key="localfile" value="true"/>
+<mapEntry key="playersingame" value="4"/>
 <mapEntry key="randomseed" value="0"/>
 <mapEntry key="reviewerdir0" value="file:///g:/share/projects/boardspace.net/htdocs/lehavre/lehavregames"/>
 <mapEntry key="reviewonly" value="true"/>
