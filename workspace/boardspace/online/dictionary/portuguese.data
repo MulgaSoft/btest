@@ -1,4 +1,7 @@
 S #1 #2 Containers
+S #1 Camels
+S #1 Cards
+S #1 Gold
 S #1 Machine
 S #1 Ship
 K #1 center
@@ -60,6 +63,7 @@ K Actions
 V A\u00e7\u00f5es
 K Active in
 V Ativo em
+S Add Extra Dice, or click Done to Roll
 K Add a ball
 V Adicione uma bola
 K Add a ball, remove a Ring
@@ -97,23 +101,32 @@ V Tornar-se espectador
 S Bid $ #1
 K Black
 V Pretas
+S Black Palace
+S Black Palace Bonus (2 points)
 K Black Pieces
 V Pe\u00e7as Pretas
 K Blue
 V Azul
+S Blue Dome
 K BreakingAway
 V Breaking Away
 K BreakingAway_family
 V Breaking Away
 K BreakingAway_variation
 V standard Breaking Away
+S Brown Palace
+S Brown Palace Bonus (3 points)
+S Build a building, play cards, or click on Done
 K Build adjacent to the man you moved
 V Construa adjacente ao homem que voc\u00ea moveu
 K Build an initial stack of 2 to be placed
 V Construa uma pilha inicial de 2 para ser colocada
+S Buy a building with no camels
+S Buy a building with no gold
 S Buy the goods for $#1
 K Calling server...
 V Chamando o servidor...
+S Camels
 S Cannon
 K Cannon_family
 V Cannon
@@ -141,6 +154,7 @@ K Capture your opponent's town
 V Capture a cidade do oponente
 K Capturing Games
 V Jogos de Captura
+S Cards
 S Cash/Score
 K Chat Room
 V Sala de Batepapo
@@ -181,6 +195,7 @@ K Click Done to decline a draw
 V Clique em Confirmar para declinar o empate
 K Click Done to offer a draw
 V Clique em Confirmar para oferecer o empate
+S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Pressione o bot\u00e3o Confirmar para efetuar a captura
 K Click on Done to confirm swapping
@@ -189,6 +204,7 @@ K Click on Done to confirm the Exchange
 V Pressione o bot\u00e3o Confirmar para efetuar a troca
 K Click on Done to confirm this Dance
 V Pressione o bot\u00e3o Confirmar para efetuar esta Dan\u00e7a
+S Click on Done to confirm this card action
 K Click on Done to confirm your resignation
 V Pressione o bot\u00e3o Confirmar para efetuar sua resigna\u00e7\u00e3o
 K Click on Done to end the game
@@ -244,6 +260,7 @@ K Crossfire_family
 V Crossfire
 K Crossfire_variation
 V standard Crossfire
+S Cubes
 K Dec #1#2#3
 V #1 Dez, #2:#3 GMT
 K Decline Draw
@@ -414,17 +431,21 @@ K Gobbletm
 V GobbletM
 K Gobbletm_variation
 V Mem\u00f3ria \u00e9 o que conta, sem espreitar
+S Gold
+S Green Dome
+S Grey Palace
+S Grey Palace Bonus (1 point)
 S Hex
 S Hex-15
 K Hex-15_variation
-V Hex 15x15
+V 15x15 Hex
 S Hex-19
 K Hex-19_variation
-V Hex 19x19
+V 19x19 Hex
 K Hex_family
 V Hex
 K Hex_variation
-V Hex 11x11
+V 11x11 Hex
 K Hide
 V Esconder
 K Hint
@@ -473,6 +494,7 @@ K Jul #1#2#3
 V #1 Jul, #2:#3 GMT
 K Jun #1#2#3
 V #1 Jun, #2:#3 GMT
+S Keep all three types of chip visible
 K Knock 5 of your opponent's dice into the gutter
 V Empurre 5 dados do oponente para a sarjeta
 S Knockabout
@@ -545,6 +567,7 @@ K Medina_family
 V Medina
 K Medina_variation
 V Medina b\u00e1sico
+S Meeple
 K Members
 V Membros
 K Memory is low
@@ -607,6 +630,8 @@ K Move stacks around any way you want to
 V Mova as pilhas da maneira que quiser
 K Move the flipped stack
 V Mova a pilha virada
+S Move the supervisor
+S Move the supervisor up to 3 extra spaces when you move the supervisor
 K Move your runners to the opposite side
 V Mova seus corredores para o lado oposto
 K Move, Split or Merge a stack
@@ -657,6 +682,8 @@ K Only the flagship can occupy the center square
 V Somente a Nau Capit\u00e2nia pode ocupar o quadrado central
 K Options
 V Op\u00e7\u00f5es
+S Orange Palace
+S Orange Palace Bonus (4 points)
 S Palago
 K Palago_family
 V Palago
@@ -664,12 +691,21 @@ K Palago_variation
 V Palago b\u00e1sico
 K Pass
 V Passar
+S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Pegue um anel para colocar uma ficha e mover
 K Pick the stack to move
 V Pegue a pilha a mover
 K Pick up and Continue your move
 V Pegar e Continuar seu lance
+S Place #1 cubes in Bag neighborhood
+S Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
+S Place #1 cubes in Barrel neighborhood
+S Place #1 cubes in Barrel neighborhood, take a card, or move the supervisor #2 spaces
+S Place #1 cubes in Chest neighborhood
+S Place #1 cubes in Chest neighborhood, take a card, or move the supervisor #2 spaces
+S Place #1 cubes in Vase neighborhood
+S Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 spaces
 K Place a Chip, or a Jewel, or a chip from the Store
 V Coloque uma Ficha, ou uma J\u00f3ia, ou uma ficha da Loja
 K Place a Frog on the board
@@ -680,6 +716,10 @@ K Place a Ring on the board
 V Coloque um Anel no tabuleiro
 K Place a chip on a starting point
 V Coloque uma ficha em um ponto inicial
+S Place a chip on the board
+S Place a chip, or shirt or rotate a board
+S Place a cube in any unclaimed souk
+S Place a cube on the caravan
 K Place a gobblet on the board, or move a gobblet
 V Coloque um gobblet no tabuleiro, ou mova um gobblet
 K Place a marker on any empty cell
@@ -747,10 +787,12 @@ K Play #1
 V Enfrentar o #1
 K Play Farmer
 V Joga o Fazendeiro
+S Play a card
 K Played on #1
 V Jogado em #1
 K Player #1
 V Jogador #1
+S Player Cubes
 K Player is 
 V O jogador \u00e9 
 K Players
@@ -773,6 +815,11 @@ K Punct_family
 V P\u00fcnct
 K Punct_variation
 V Punct b\u00e1sico
+S Quinamid
+K Quinamid_family
+V Quinamid
+K Quinamid_variation
+V Quinamid
 S Qyshinsu
 K Qyshinsu_family
 V Qyshinsu
@@ -785,10 +832,18 @@ K Rearrange the silver fleet
 V Rearrange a frota prateada
 K Rearrange things any way you want to
 V Rearrange as coisas da maneira que quiser
+S Receive 1 extra camel when you take camels
+S Receive 1 extra cube when you place cubes in a souk
+S Receive 2 extra gold when you take gold
+S Receive 2 extra points for each completed souk
+S Receive 3 camels
+S Receive 3 gold
+S Receive a card when you place a cube in the caravan
 K Reconnecting
 V  ...Reconectando...
 K Red
 V Vermelho
+S Red Dome
 K Rejoin
 V Retomar
 K Rejoin #1
@@ -828,6 +883,8 @@ K Select Game
 V Selecionar Jogo
 K Select Robot
 V Selecione o Rob\u00f4
+S Select Row #1
+S Select a group of dice
 K Select a ring to remove
 V Selecione um anel para remover
 K Select a row of 5 to remove
@@ -890,6 +947,7 @@ K Split this stack, or click Done
 V Divida esta pilha, ou pressione o bot\u00e3o Confirmar
 S Spot Price #1
 S Spread out the stacks
+S Stable
 K Stack Height
 V Altura da Pilha
 K Stacking Games
@@ -908,6 +966,7 @@ K Swap
 V Trocar
 K Swap Colors
 V Trocar Cores
+S Swap colors, or place a chip, or move a board
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -916,6 +975,7 @@ K TBA2_variation
 V jogo a ser anunciado
 K TBA3_variation
 V jogo a ser anunciado
+S Table
 S Tablut
 K Tablut-11
 V Tablut 11x11
@@ -934,8 +994,13 @@ V Tablut
 S Tajii
 K Tajii_family
 V Tajii
+S Take #1 camels
+S Take #1 camels, take a card, or move the supervisor #2 spaces
+S Take #1 gold
+S Take #1 gold, take a card, or move the supervisor #2 spaces
 K Take Over Playing
 V Passar a Jogar
+S Take a card
 S Take your first action
 S Take your second action
 K Tamsk_variation
@@ -946,6 +1011,8 @@ K The game record is not available during the game
 V A grava\u00e7\u00e3o do jogo n\u00e3o est\u00e1 dispon\u00edvel durante a partida
 S The next finish bonus is #1
 S The next sprint bonus is #1
+S This die will be rolled
+S This die will not be rolled
 K This is now a private room
 V Agora esta \u00e9 uma sala privativa
 K This is now a public room
@@ -960,6 +1027,11 @@ K Timeout in 1 minute.
 V Cancelamento por inatividade em 1 minuto.
 K Tournament Game
 V Jogo de Campeonato
+S Tower
+S Tower 1 Bonus (1 point)
+S Tower 2 Bonus (2 points)
+S Tower 3 Bonus (3 points)
+S Tower 4 Bonus (4 points)
 S Traboulet
 K Traboulet_family
 V Traboulet
@@ -967,6 +1039,9 @@ K Traboulet_variation
 V Traboulet b\u00e1sico
 K Track Mice
 V Rastrear Mouse
+S Trade camels for gold
+S Trade up to 10 gold for 1 victory point each
+S Trade up to 4 camels for 2 victory points each
 K Traditional Pieces
 V Pe\u00e7as Tradicionais
 S Trax
@@ -1037,6 +1112,7 @@ S Wait for other players to adjust
 S Wait for the other players to decide
 K Waiting in
 V Esperando em
+S Wall
 S Warehouse
 S Warehouses
 K Warp6
@@ -1062,6 +1138,7 @@ K Xiangqi_family
 V Xiangqi
 K Xiangqi_variation
 V Xiangqi b\u00e1sico
+S Yellow Dome
 S Yes, I will fund the loan
 S Yinsh
 K Yinsh-Blitz
@@ -1087,6 +1164,10 @@ V Voc\u00ea deve mover o gobblet que voc\u00ea pegou
 K You must place a dome
 V Voc\u00ea deve colocar um domo
 S You must take out a loan to pay interest
+K Yspahan_family
+V Yspahan
+K Yspahan_variation
+V standard Yspahan
 K Zertz
 V Z\u00e8rtz
 K Zertz+11
@@ -1122,6 +1203,7 @@ K connect opposite sides with a chain of markers
 V conecte lados opostos com uma corrente de marcadores
 K connecting
 V Conectando a 
+S do what it takes to win
 K enterMessage
 V #1 entrou no sal\u00e3o
 K enters the room
@@ -1156,6 +1238,7 @@ K loaderr
 V Erro ao tentar carregar: 
 K make 4 in a row in any direction
 V fa\u00e7a 4 em uma fileira em qualquer dire\u00e7\u00e3o
+S make 5 in a row
 K make 5 in a row to capture a ring and win
 V fa\u00e7a 5 em uma fileira para capturar um anel e vencer
 K make 5 in a row to capture a ring, 3 rings win
@@ -1230,4 +1313,5 @@ V Benvindo ao sal\u00e3o do BoardSpace, vers\u00e3o #1
 S you may increase your bid
 K your name
 V seu nome
-N 689
+S yspahan
+N 769

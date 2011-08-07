@@ -1,4 +1,7 @@
 S #1 #2 Containers
+S #1 Camels
+S #1 Cards
+S #1 Gold
 S #1 Machine
 S #1 Ship
 K #1 center
@@ -58,6 +61,7 @@ K Actions
 V Acciones
 K Active in
 V Activo en
+S Add Extra Dice, or click Done to Roll
 K Add a ball
 V A\u00f1ade una bola
 K Add a ball, remove a Ring
@@ -94,20 +98,29 @@ V Pasa a ser espactador
 S Bid $ #1
 K Black
 V Negra
+S Black Palace
+S Black Palace Bonus (2 points)
 K Black Pieces
 V Piezas Negras
 S Blue
+S Blue Dome
 K BreakingAway
 V Breaking Away
 K BreakingAway_family
 V Breaking Away
 K BreakingAway_variation
 V standard Breaking Away
+S Brown Palace
+S Brown Palace Bonus (3 points)
+S Build a building, play cards, or click on Done
 S Build adjacent to the man you moved
 S Build an initial stack of 2 to be placed
+S Buy a building with no camels
+S Buy a building with no gold
 S Buy the goods for $#1
 K Calling server...
 V Llamando al servidor...
+S Camels
 S Cannon
 K Cannon_family
 V Cannon
@@ -126,6 +139,7 @@ S Capture the most chips under your color stack
 S Capture your opponent's tallest king stack
 S Capture your opponent's town
 S Capturing Games
+S Cards
 S Cash/Score
 K Chat Room
 V Sala de Chat
@@ -160,6 +174,7 @@ V Haz clic en Done para confirmar este movimiento
 S Click Done to confirm this placement
 S Click Done to decline a draw
 S Click Done to offer a draw
+S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Haz clic en Done para completar la captura
 S Click on Done to confirm swapping
@@ -167,6 +182,7 @@ K Click on Done to confirm the Exchange
 V Haz clic en Done para confirmar el Intercambio
 K Click on Done to confirm this Dance
 V Haz clic en Done para confirmar este baile
+S Click on Done to confirm this card action
 K Click on Done to confirm your resignation
 V Haz clic en Done para confirmar tu abandono
 K Click on Done to end the game
@@ -211,6 +227,7 @@ K Crossfire_family
 V Crossfire
 K Crossfire_variation
 V standard Crossfire
+S Cubes
 K Dec #1#2#3
 V #1 Diciembre, #2:#3 GMT
 S Decline Draw
@@ -361,6 +378,10 @@ K Gobbletm
 V GobbletM
 K Gobbletm_variation
 V La memoria cuenta, no se puede ojear
+S Gold
+S Green Dome
+S Grey Palace
+S Grey Palace Bonus (1 point)
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -417,6 +438,7 @@ K Jul #1#2#3
 V #1 Julio, #2:#3 GMT
 K Jun #1#2#3
 V #1 Junio, #2:#3 GMT
+S Keep all three types of chip visible
 S Knock 5 of your opponent's dice into the gutter
 S Knockabout
 K Knockabout_family
@@ -483,6 +505,7 @@ K Medina_family
 V Medina
 K Medina_variation
 V Standard Medina
+S Meeple
 K Members
 V Miembros
 K Memory is low
@@ -528,6 +551,8 @@ K Move one ship
 V Mueve un barco
 S Move stacks around any way you want to
 S Move the flipped stack
+S Move the supervisor
+S Move the supervisor up to 3 extra spaces when you move the supervisor
 S Move your runners to the opposite side
 S Move, Split or Merge a stack
 K Moves are coming in
@@ -571,22 +596,37 @@ K Only the flagship can occupy the center square
 V Solo el buque insignia puede ocupar la casilla central
 K Options
 V Opciones
+S Orange Palace
+S Orange Palace Bonus (4 points)
 S Palago
 K Palago_family
 V Palago
 K Palago_variation
 V Standard Palago
 S Pass
+S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Elige un anillo al que poner una ficha y mu\u00e9velo
 S Pick the stack to move
 S Pick up and Continue your move
+S Place #1 cubes in Bag neighborhood
+S Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
+S Place #1 cubes in Barrel neighborhood
+S Place #1 cubes in Barrel neighborhood, take a card, or move the supervisor #2 spaces
+S Place #1 cubes in Chest neighborhood
+S Place #1 cubes in Chest neighborhood, take a card, or move the supervisor #2 spaces
+S Place #1 cubes in Vase neighborhood
+S Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 spaces
 S Place a Chip, or a Jewel, or a chip from the Store
 S Place a Frog on the board
 S Place a GIPF piece on a starting point
 K Place a Ring on the board
 V Coloca un anillo sobre el tablero
 S Place a chip on a starting point
+S Place a chip on the board
+S Place a chip, or shirt or rotate a board
+S Place a cube in any unclaimed souk
+S Place a cube on the caravan
 K Place a gobblet on the board, or move a gobblet
 V Coloca un gobblet en el tablero, o mueve un gobblet
 K Place a marker on any empty cell
@@ -637,9 +677,11 @@ V jugar a Plateau partida est\u00e1ndar
 K Play #1
 V Juega contra #1
 S Play Farmer
+S Play a card
 S Played on #1
 K Player #1
 V Jugador #1
+S Player Cubes
 K Player is 
 V El jugador es 
 K Players
@@ -661,6 +703,11 @@ K Punct_family
 V P\u00fcnct
 K Punct_variation
 V jugar a P\u00fcnct partida est\u00e1ndar
+S Quinamid
+K Quinamid_family
+V Quinamid
+K Quinamid_variation
+V Quinamid
 S Qyshinsu
 K Qyshinsu_family
 V Qyshinsu
@@ -672,9 +719,17 @@ K Rearrange the silver fleet
 V Reorganiza la tropa plateada
 K Rearrange things any way you want to
 V Reorganiza las cosas de la forma que quieras
+S Receive 1 extra camel when you take camels
+S Receive 1 extra cube when you place cubes in a souk
+S Receive 2 extra gold when you take gold
+S Receive 2 extra points for each completed souk
+S Receive 3 camels
+S Receive 3 gold
+S Receive a card when you place a cube in the caravan
 K Reconnecting
 V  ...Reconectando...
 S Red
+S Red Dome
 K Rejoin
 V Reincorporate
 K Rejoin #1
@@ -711,6 +766,8 @@ V Ver los comentarios de los espactadores
 K Select Game
 V Selecionar Juego
 S Select Robot
+S Select Row #1
+S Select a group of dice
 K Select a ring to remove
 V Elige un anillo para retirarlo
 K Select a row of 5 to remove
@@ -767,6 +824,7 @@ S Split or Merge this stack, or click Done
 S Split this stack, or click Done
 S Spot Price #1
 S Spread out the stacks
+S Stable
 S Stack Height
 S Stacking Games
 K Start
@@ -782,6 +840,7 @@ V Estado desconocido.
 S Swap
 K Swap Colors
 V Intercambiar Colores
+S Swap colors, or place a chip, or move a board
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -790,6 +849,7 @@ K TBA2_variation
 V game to be announced
 K TBA3_variation
 V game to be announced
+S Table
 S Tablut
 K Tablut-11
 V Tablut-11x11
@@ -808,8 +868,13 @@ V Tablut
 S Tajii
 K Tajii_family
 V Tajii
+S Take #1 camels
+S Take #1 camels, take a card, or move the supervisor #2 spaces
+S Take #1 gold
+S Take #1 gold, take a card, or move the supervisor #2 spaces
 K Take Over Playing
 V Toma el puesto jugando
+S Take a card
 S Take your first action
 S Take your second action
 K Tamsk_variation
@@ -820,6 +885,8 @@ K The game record is not available during the game
 V El registro de la partida no est\u00e1 disponible durante el juego
 S The next finish bonus is #1
 S The next sprint bonus is #1
+S This die will be rolled
+S This die will not be rolled
 K This is now a private room
 V Ahora, esta es una sala privada
 K This is now a public room
@@ -833,6 +900,11 @@ K Timeout in 1 minute.
 V Tiempo muerto en 1 minuto.
 K Tournament Game
 V Partida de Torneo
+S Tower
+S Tower 1 Bonus (1 point)
+S Tower 2 Bonus (2 points)
+S Tower 3 Bonus (3 points)
+S Tower 4 Bonus (4 points)
 S Traboulet
 K Traboulet_family
 V Traboulet
@@ -840,6 +912,9 @@ K Traboulet_variation
 V Play standard Traboulet
 K Track Mice
 V Sigue la pista
+S Trade camels for gold
+S Trade up to 10 gold for 1 victory point each
+S Trade up to 4 camels for 2 victory points each
 S Traditional Pieces
 S Trax
 K Trax_family
@@ -902,6 +977,7 @@ S Wait for other players to adjust
 S Wait for the other players to decide
 K Waiting in
 V Esperando en
+S Wall
 S Warehouse
 S Warehouses
 K Warp6
@@ -924,6 +1000,7 @@ K Xiangqi_family
 V Xiangqi
 K Xiangqi_variation
 V standard Xiangqi
+S Yellow Dome
 S Yes, I will fund the loan
 S Yinsh
 K Yinsh-Blitz
@@ -946,6 +1023,10 @@ K You must move the gobblet you have picked up
 V Debes mover el gobblet que has elegido
 S You must place a dome
 S You must take out a loan to pay interest
+K Yspahan_family
+V Yspahan
+K Yspahan_variation
+V standard Yspahan
 K Zertz
 V Z\u00e8rtz
 K Zertz+11
@@ -980,6 +1061,7 @@ K connect opposite sides with a chain of markers
 V Conecta lados opuestos con una cadena de fichas
 K connecting
 V Conectando a 
+S do what it takes to win
 K enterMessage
 V #1 se ha unido al grupo
 K enters the room
@@ -1012,6 +1094,7 @@ K loaderr
 V Error durante el intento de carga: 
 K make 4 in a row in any direction
 V forma 4 en raya en cualquier direcci\u00f3n
+S make 5 in a row
 K make 5 in a row to capture a ring and win
 V Haz 5 en raya para capturar un anillo y ganar
 K make 5 in a row to capture a ring, 3 rings win
@@ -1082,4 +1165,5 @@ V Bienvenido al Servidor de Juego, versi\u00f3n #1
 S you may increase your bid
 K your name
 V tu nombre
-N 689
+S yspahan
+N 769

@@ -1,4 +1,7 @@
 S #1 #2 Containers
+S #1 Camels
+S #1 Cards
+S #1 Gold
 S #1 Machine
 S #1 Ship
 K #1 center
@@ -38,8 +41,7 @@ K #1 starts Joint review
 V #1: Blir med p\u00e5 felles gjennomgang
 K (unknown)
 V (ukjent)
-K (unoccupied)
-V (ledig)
+S (unoccupied)
 K (vacancy)
 V (ledig)
 S + #1 turns
@@ -56,8 +58,8 @@ S Accept the loan from the bank
 S Accept this loan financing or not
 K Actions
 V Handlinger
-K Active in
-V Aktiv i
+S Active in
+S Add Extra Dice, or click Done to Roll
 K Add a ball
 V Legg til en ball.
 K Add a ball, remove a Ring
@@ -94,21 +96,30 @@ V Bli tilskuer
 S Bid $ #1
 K Black
 V svart
+S Black Palace
+S Black Palace Bonus (2 points)
 K Black Pieces
 V Svarte brikker
 S Blue
+S Blue Dome
 K BreakingAway
 V Breaking Away
 K BreakingAway_family
 V Breaking Away
 K BreakingAway_variation
 V standard Breaking Away
+S Brown Palace
+S Brown Palace Bonus (3 points)
+S Build a building, play cards, or click on Done
 S Build adjacent to the man you moved
 K Build an initial stack of 2 to be placed
 V Bygg en stabel med to brikker som skal plasseres p\u00e5 brettet.
+S Buy a building with no camels
+S Buy a building with no gold
 S Buy the goods for $#1
 K Calling server...
 V Kontakter serveren...
+S Camels
 S Cannon
 K Cannon_family
 V Cannon
@@ -127,6 +138,7 @@ S Capture the most chips under your color stack
 S Capture your opponent's tallest king stack
 S Capture your opponent's town
 S Capturing Games
+S Cards
 S Cash/Score
 K Chat Room
 V Snakkerom
@@ -162,6 +174,7 @@ V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte dette trekket.
 S Click Done to confirm this placement
 S Click Done to decline a draw
 S Click Done to offer a draw
+S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klikk \u00abFerdig\u00bb for \u00e5 gjennomf\u00f8re slaget.
 K Click on Done to confirm swapping
@@ -170,6 +183,7 @@ K Click on Done to confirm the Exchange
 V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte byttet.
 K Click on Done to confirm this Dance
 V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte dette dansetrekket.
+S Click on Done to confirm this card action
 K Click on Done to confirm your resignation
 V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte at du gir opp.
 K Click on Done to end the game
@@ -218,6 +232,7 @@ K Crossfire_family
 V Crossfire
 K Crossfire_variation
 V standard Crossfire
+S Cubes
 K Dec #1#2#3
 V #1. des, #2.#3 GMT
 S Decline Draw
@@ -376,6 +391,10 @@ K Gobbletm
 V GobbletM
 K Gobbletm_variation
 V Hukommelsen gjelder - ingen kikking
+S Gold
+S Green Dome
+S Grey Palace
+S Grey Palace Bonus (1 point)
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -431,6 +450,7 @@ K Jul #1#2#3
 V #1. jul, #2.#3 GMT
 K Jun #1#2#3
 V #1. jun, #2.#3 GMT
+S Keep all three types of chip visible
 S Knock 5 of your opponent's dice into the gutter
 S Knockabout
 K Knockabout_family
@@ -499,6 +519,7 @@ K Medina_family
 V Medina
 K Medina_variation
 V Standard Medina
+S Meeple
 K Members
 V Medlemmer
 K Memory is low
@@ -548,6 +569,8 @@ K Move stacks around any way you want to
 V Flytt stablene rundt som du \u00f8nsker.
 K Move the flipped stack
 V Flytt stabelen som har blitt flippet.
+S Move the supervisor
+S Move the supervisor up to 3 extra spaces when you move the supervisor
 S Move your runners to the opposite side
 K Move, Split or Merge a stack
 V Flytt, fordel eller foren en stabel
@@ -595,23 +618,38 @@ K Only the flagship can occupy the center square
 V Bare flaggskipet kan v\u00e6re i sentrumsfeltet.
 K Options
 V Innstillinger
+S Orange Palace
+S Orange Palace Bonus (4 points)
 S Palago
 K Palago_family
 V Palago
 K Palago_variation
 V Standard Palago
 S Pass
+S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Velg ringen som skal flyttes for \u00e5 plassere en brikke.
 S Pick the stack to move
 K Pick up and Continue your move
 V Plukk opp og fortsett trekket.
+S Place #1 cubes in Bag neighborhood
+S Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
+S Place #1 cubes in Barrel neighborhood
+S Place #1 cubes in Barrel neighborhood, take a card, or move the supervisor #2 spaces
+S Place #1 cubes in Chest neighborhood
+S Place #1 cubes in Chest neighborhood, take a card, or move the supervisor #2 spaces
+S Place #1 cubes in Vase neighborhood
+S Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 spaces
 S Place a Chip, or a Jewel, or a chip from the Store
 S Place a Frog on the board
 S Place a GIPF piece on a starting point
 K Place a Ring on the board
 V Plasser en ring p\u00e5 brettet.
 S Place a chip on a starting point
+S Place a chip on the board
+S Place a chip, or shirt or rotate a board
+S Place a cube in any unclaimed souk
+S Place a cube on the caravan
 K Place a gobblet on the board, or move a gobblet
 V Flytt et beger eller plasser et nytt beger p\u00e5 brettet.
 K Place a marker on any empty cell
@@ -664,9 +702,11 @@ V Spill Plateau standardvarianten
 K Play #1
 V Spill mot #1
 S Play Farmer
+S Play a card
 S Played on #1
 K Player #1
 V Spiller #1
+S Player Cubes
 K Player is 
 V Spilleren er 
 K Players
@@ -689,6 +729,11 @@ K Punct_family
 V P\u00fcnct
 K Punct_variation
 V Spill Punct standardvarianten
+S Quinamid
+K Quinamid_family
+V Quinamid
+K Quinamid_variation
+V Quinamid
 S Qyshinsu
 K Qyshinsu_family
 V Qyshinsu
@@ -700,9 +745,17 @@ K Rearrange the silver fleet
 V Omgrupper s\u00f8lvfl \u00e5ten.
 K Rearrange things any way you want to
 V Omm\u00f8bler tingene som du \u00f8nsker.
+S Receive 1 extra camel when you take camels
+S Receive 1 extra cube when you place cubes in a souk
+S Receive 2 extra gold when you take gold
+S Receive 2 extra points for each completed souk
+S Receive 3 camels
+S Receive 3 gold
+S Receive a card when you place a cube in the caravan
 K Reconnecting
 V  ...Gjenoppretter forbindelsen...
 S Red
+S Red Dome
 K Rejoin
 V Kom tilbake
 K Rejoin #1
@@ -740,6 +793,8 @@ K Select Game
 V Velg spill
 K Select Robot
 V Velg robot
+S Select Row #1
+S Select a group of dice
 K Select a ring to remove
 V Velg hvilken ring som skal fjernes.
 K Select a row of 5 to remove
@@ -799,6 +854,7 @@ K Split this stack, or click Done
 V Fordel denne stabelen eller klikk Ferdig
 S Spot Price #1
 S Spread out the stacks
+S Stable
 S Stack Height
 K Stacking Games
 V Stablingsspill
@@ -814,6 +870,7 @@ K Swap
 V Bytt side
 K Swap Colors
 V Bytt farger
+S Swap colors, or place a chip, or move a board
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -822,6 +879,7 @@ K TBA2_variation
 V game to be announced
 K TBA3_variation
 V game to be announced
+S Table
 S Tablut
 K Tablut-11
 V Tablut 11\u00d711
@@ -840,8 +898,13 @@ V Tablut
 S Tajii
 K Tajii_family
 V Tajii
+S Take #1 camels
+S Take #1 camels, take a card, or move the supervisor #2 spaces
+S Take #1 gold
+S Take #1 gold, take a card, or move the supervisor #2 spaces
 K Take Over Playing
 V Ta over \u00e5 spille
+S Take a card
 S Take your first action
 S Take your second action
 K Tamsk_variation
@@ -852,6 +915,8 @@ K The game record is not available during the game
 V Partinotatene er ikke tilgjengelige under partiet.
 S The next finish bonus is #1
 S The next sprint bonus is #1
+S This die will be rolled
+S This die will not be rolled
 K This is now a private room
 V Dette er n\u00e5 et privat rom.
 K This is now a public room
@@ -863,8 +928,12 @@ K Time is
 V Tiden er 
 K Timeout in 1 minute.
 V Tiden l\u00f8per ut om ett minutt.
-K Tournament Game
-V Turneringsparti
+S Tournament Game
+S Tower
+S Tower 1 Bonus (1 point)
+S Tower 2 Bonus (2 points)
+S Tower 3 Bonus (3 points)
+S Tower 4 Bonus (4 points)
 S Traboulet
 K Traboulet_family
 V Traboulet
@@ -872,6 +941,9 @@ K Traboulet_variation
 V Play standard Traboulet
 K Track Mice
 V Spor musene
+S Trade camels for gold
+S Trade up to 10 gold for 1 victory point each
+S Trade up to 4 camels for 2 victory points each
 S Traditional Pieces
 S Trax
 K Trax_family
@@ -934,6 +1006,7 @@ S Wait for other players to adjust
 S Wait for the other players to decide
 K Waiting in
 V Venter i
+S Wall
 S Warehouse
 S Warehouses
 K Warp6
@@ -956,6 +1029,7 @@ K Xiangqi_family
 V Xiangqi
 K Xiangqi_variation
 V standard Xiangqi
+S Yellow Dome
 S Yes, I will fund the loan
 S Yinsh
 K Yinsh-Blitz
@@ -979,6 +1053,10 @@ K You must move the gobblet you have picked up
 V Du m\u00e5 flytte begeret du har plukket opp.
 S You must place a dome
 S You must take out a loan to pay interest
+K Yspahan_family
+V Yspahan
+K Yspahan_variation
+V standard Yspahan
 K Zertz
 V Z\u00e8rtz
 K Zertz+11
@@ -1013,6 +1091,7 @@ K connect opposite sides with a chain of markers
 V Forbind dine to motst\u00e5ende sider med en kjede av brikker i din farge.
 K connecting
 V Oppretter forbindelse til 
+S do what it takes to win
 K enterMessage
 V #1 har kommet inn i lobbyen.
 K enters the room
@@ -1028,8 +1107,7 @@ K gold: escape the flagship  silver: capture gold flagship
 V gull: r\u00f8m med flaggskipet  s\u00f8lv: fang flaggskipet
 K guest
 V gjest
-K in #1
-V i #1
+S in #1
 K launchChat
 V Oppretter snakkerom i sesjon #1.
 K launchGame
@@ -1045,6 +1123,7 @@ K loaderr
 V Feil i innlastingen av: 
 K make 4 in a row in any direction
 V Lag 4 p\u00e5 rad i hvilken som helst retning.
+S make 5 in a row
 K make 5 in a row to capture a ring and win
 V Lag fem p\u00e5 rad for \u00e5 fjerne en ring og vinne.
 K make 5 in a row to capture a ring, 3 rings win
@@ -1065,8 +1144,7 @@ V Den kan v\u00e6re nede, eller forbindelsen kan v\u00e6re forhindret av en bran
 K noserver
 V Foajeen har ikke forbindelse til s\u00f8rveren.
 S own all the stacks
-K perspective
-V perspektiv
+S perspective
 K play
 V spill for #1
 K player
@@ -1115,4 +1193,5 @@ V Velkommen til BoardSpace, versjon #1.
 S you may increase your bid
 K your name
 V ditt navn
-N 689
+S yspahan
+N 769

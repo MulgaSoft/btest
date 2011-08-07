@@ -1,4 +1,7 @@
 S #1 #2 Containers
+S #1 Camels
+S #1 Cards
+S #1 Gold
 S #1 Machine
 K #1 Ship
 V #1 Schip
@@ -68,6 +71,7 @@ K Actions
 V Acties
 K Active in
 V Actief in
+S Add Extra Dice, or click Done to Roll
 K Add a ball
 V Plaats een bal
 K Add a ball, remove a Ring
@@ -111,23 +115,32 @@ K Bid $ #1
 V Bied $ #1
 K Black
 V Zwart
+S Black Palace
+S Black Palace Bonus (2 points)
 K Black Pieces
 V Zwarte Stukken
 S Blue
+S Blue Dome
 K BreakingAway
 V Breaking Away
 K BreakingAway_family
 V Breaking Away
 K BreakingAway_variation
 V standaard Breaking Away
+S Brown Palace
+S Brown Palace Bonus (3 points)
+S Build a building, play cards, or click on Done
 K Build adjacent to the man you moved
 V Bouw naast het gezette stuk
 K Build an initial stack of 2 to be placed
 V Bouw een beginkolom van twee om te plaatsen
+S Buy a building with no camels
+S Buy a building with no gold
 K Buy the goods for $#1
 V Koop de goederen voor $#1
 K Calling server...
 V Probeert server...
+S Camels
 S Cannon
 K Cannon_family
 V Cannon
@@ -155,6 +168,7 @@ K Capture your opponent's town
 V Verover de stad van je tegenspeler
 K Capturing Games
 V Eliminatie Spelen
+S Cards
 S Cash/Score
 K Chat Room
 V Chat Ruimte
@@ -197,6 +211,7 @@ K Click Done to decline a draw
 V Klik Klaar om remise te weigeren
 K Click Done to offer a draw
 V Klik Klaar om remise aan te bieden
+S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klik Klaar om het slaan te voltooien
 K Click on Done to confirm swapping
@@ -205,6 +220,7 @@ K Click on Done to confirm the Exchange
 V Klik Klaar om de ruil te voltooien
 K Click on Done to confirm this Dance
 V Klik Klaar om de Dans te voltooien
+S Click on Done to confirm this card action
 K Click on Done to confirm your resignation
 V Klik Klaar om op te geven
 K Click on Done to end the game
@@ -265,6 +281,7 @@ K Crossfire_family
 V Crossfire
 K Crossfire_variation
 V standaard Crossfire
+S Cubes
 K Dec #1#2#3
 V #1 Dec, #2:#3 GMT
 K Decline Draw
@@ -436,6 +453,10 @@ K Gobbletm
 V GobbletM
 K Gobbletm_variation
 V Spieken niet toegestaan
+S Gold
+S Green Dome
+S Grey Palace
+S Grey Palace Bonus (1 point)
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -497,6 +518,7 @@ K Jul #1#2#3
 V #1 Jul, #2:#3 GMT
 K Jun #1#2#3
 V #1 Jun, #2:#3 GMT
+S Keep all three types of chip visible
 K Knock 5 of your opponent's dice into the gutter
 V Sla 5 dobbelstenen van de tegenspeler in de goot
 S Knockabout
@@ -577,6 +599,7 @@ K Medina_family
 V Medina
 K Medina_variation
 V standaard Medina
+S Meeple
 K Members
 V Leden
 K Memory is low
@@ -642,6 +665,8 @@ K Move stacks around any way you want to
 V Beweeg kolommen naar believen
 K Move the flipped stack
 V Verplaats de omgedraaide kolom
+S Move the supervisor
+S Move the supervisor up to 3 extra spaces when you move the supervisor
 K Move your runners to the opposite side
 V Breng je renners naar de overkant
 K Move, Split or Merge a stack
@@ -678,7 +703,7 @@ V #1 Nov, #2:#3 GMT
 K Occupy 3 enemy bases
 V Bezet 3 vijandelijke bases
 K Oct #1#2#3
-V #1 Okt, #2:#3 GMT
+V #1 Oct, #2:#3 GMT
 S Octiles
 K Octiles_family
 V Octiles
@@ -694,6 +719,8 @@ K Only the flagship can occupy the center square
 V Het centrale veld is alleen voor het Vlaggenschip
 K Options
 V Opties
+S Orange Palace
+S Orange Palace Bonus (4 points)
 S Palago
 K Palago_family
 V Palago
@@ -701,12 +728,21 @@ K Palago_variation
 V standaard Palago
 K Pass
 V Pas
+S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Kies een ring voor een chip en zet
 K Pick the stack to move
 V Kies de te verplaatsen kolom
 K Pick up and Continue your move
 V Pak op en ga verder met de zet
+S Place #1 cubes in Bag neighborhood
+S Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
+S Place #1 cubes in Barrel neighborhood
+S Place #1 cubes in Barrel neighborhood, take a card, or move the supervisor #2 spaces
+S Place #1 cubes in Chest neighborhood
+S Place #1 cubes in Chest neighborhood, take a card, or move the supervisor #2 spaces
+S Place #1 cubes in Vase neighborhood
+S Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 spaces
 K Place a Chip, or a Jewel, or a chip from the Store
 V Plaats een Chip, of een Juweel, of een chip uit de voorraad
 K Place a Frog on the board
@@ -717,6 +753,10 @@ K Place a Ring on the board
 V Plaats een Ring op het bord
 K Place a chip on a starting point
 V Plaats een chip op een beginpunt
+S Place a chip on the board
+S Place a chip, or shirt or rotate a board
+S Place a cube in any unclaimed souk
+S Place a cube on the caravan
 K Place a gobblet on the board, or move a gobblet
 V Plaats een gobblet op het bord, of verplaats een gobblet
 K Place a marker on any empty cell
@@ -787,10 +827,12 @@ K Play #1
 V Speel tegen #1
 K Play Farmer
 V Speel Boer
+S Play a card
 K Played on #1
 V Gespeeld op #1
 K Player #1
 V Speler #1
+S Player Cubes
 K Player is 
 V Speler is 
 K Players
@@ -813,6 +855,11 @@ K Punct_family
 V P\u00fcnct
 K Punct_variation
 V standaard P\u00fcnct
+S Quinamid
+K Quinamid_family
+V Quinamid
+K Quinamid_variation
+V Quinamid
 S Qyshinsu
 K Qyshinsu_family
 V Qyshinsu
@@ -826,9 +873,17 @@ K Rearrange the silver fleet
 V Herschik de zilvervloot
 K Rearrange things any way you want to
 V Herschik alles naar believen
+S Receive 1 extra camel when you take camels
+S Receive 1 extra cube when you place cubes in a souk
+S Receive 2 extra gold when you take gold
+S Receive 2 extra points for each completed souk
+S Receive 3 camels
+S Receive 3 gold
+S Receive a card when you place a cube in the caravan
 K Reconnecting
 V  ...maakt verbinding...
 S Red
+S Red Dome
 K Rejoin
 V Terug naar de partij
 K Rejoin #1
@@ -876,6 +931,8 @@ K Select Game
 V Kies Spel
 K Select Robot
 V Selecteer Robot
+S Select Row #1
+S Select a group of dice
 K Select a ring to remove
 V Kies een ring om te verwijderen
 K Select a row of 5 to remove
@@ -940,6 +997,7 @@ K Spot Price #1
 V Spot Prijs #1
 K Spread out the stacks
 V Spreid de kolommen
+S Stable
 K Stack Height
 V Kolom Hoogte
 K Stacking Games
@@ -956,6 +1014,7 @@ K Swap
 V Wissel kleur
 K Swap Colors
 V Verwissel Kleuren
+S Swap colors, or place a chip, or move a board
 K Switch to a more oblique view of the board
 V Verlaag blikveld op het bord
 K Switch to a more overhead view of the board
@@ -966,6 +1025,7 @@ K TBA2_variation
 V spel wordt aangekondigd
 K TBA3_variation
 V spel wordt aangekondigd
+S Table
 S Tablut
 K Tablut-11
 V Tablut-11x11
@@ -984,8 +1044,13 @@ V Tablut
 S Tajii
 K Tajii_family
 V Tajii
+S Take #1 camels
+S Take #1 camels, take a card, or move the supervisor #2 spaces
+S Take #1 gold
+S Take #1 gold, take a card, or move the supervisor #2 spaces
 K Take Over Playing
 V Neem de parij over
+S Take a card
 K Take your first action
 V Maak je eerste actie
 K Take your second action
@@ -1000,6 +1065,8 @@ K The next finish bonus is #1
 V De volgende finish bonus is #1
 K The next sprint bonus is #1
 V De volgende sprint bonus is #1
+S This die will be rolled
+S This die will not be rolled
 K This is now a private room
 V Dit is nu een prive ruimte
 K This is now a public room
@@ -1014,6 +1081,11 @@ K Timeout in 1 minute.
 V Timeout in 1 minuut.
 K Tournament Game
 V Tournooi Partij
+S Tower
+S Tower 1 Bonus (1 point)
+S Tower 2 Bonus (2 points)
+S Tower 3 Bonus (3 points)
+S Tower 4 Bonus (4 points)
 S Traboulet
 K Traboulet_family
 V Traboulet
@@ -1021,6 +1093,9 @@ K Traboulet_variation
 V standaard Traboulet
 K Track Mice
 V Volg Muis
+S Trade camels for gold
+S Trade up to 10 gold for 1 victory point each
+S Trade up to 4 camels for 2 victory points each
 K Traditional Pieces
 V Traditionele Stukken
 S Trax
@@ -1094,6 +1169,7 @@ K Wait for the other players to decide
 V Wacht tot de andere spelers beslissen
 K Waiting in
 V Wachtend in
+S Wall
 K Warehouse
 V Pakhuis
 K Warehouses
@@ -1121,6 +1197,7 @@ K Xiangqi_family
 V Xiangqi
 K Xiangqi_variation
 V standaard Xiangqi
+S Yellow Dome
 K Yes, I will fund the loan
 V Ja, ik garandeer de lening
 S Yinsh
@@ -1147,6 +1224,10 @@ K You must place a dome
 V Je moet een koepel plaatsen
 K You must take out a loan to pay interest
 V Je moet een lening afsluiten om rente te betalen
+K Yspahan_family
+V Yspahan
+K Yspahan_variation
+V standard Yspahan
 K Zertz
 V Z\u00e8rtz
 K Zertz+11
@@ -1184,6 +1265,7 @@ K connect opposite sides with a chain of markers
 V verbind tegenoverliggende zijden met je stenen
 K connecting
 V Verbindt met 
+S do what it takes to win
 K enterMessage
 V #1 is nu in de lobby
 K enters the room
@@ -1219,6 +1301,7 @@ K loaderr
 V Fout bij het laden: 
 K make 4 in a row in any direction
 V maak 4 op een rij in een willekeurige richting
+S make 5 in a row
 K make 5 in a row to capture a ring and win
 V maak 5 op een rij voor een ring en de winst
 K make 5 in a row to capture a ring, 3 rings win
@@ -1300,4 +1383,5 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 689
+S yspahan
+N 769
