@@ -1,7 +1,9 @@
 K #1 #2 Containers
 V #1 Container #2
-S #1 Camels
-S #1 Cards
+K #1 Camels
+V #1 Kamele
+K #1 Cards
+V #1 Karten
 S #1 Gold
 K #1 Machine
 V Maschine #1
@@ -72,7 +74,8 @@ K Actions
 V Aktionen
 K Active in
 V Aktiv in
-S Add Extra Dice, or click Done to Roll
+K Add Extra Dice, or click Done to Roll
+V Nutze zus\u00e4tzliche W\u00fcrfel, oder klicke Fertig zum W\u00fcrfeln
 K Add a ball
 V Lege eine Kugel
 K Add a ball, remove a Ring
@@ -129,18 +132,22 @@ K BreakingAway_variation
 V Normales Breaking Away
 S Brown Palace
 S Brown Palace Bonus (3 points)
-S Build a building, play cards, or click on Done
+K Build a building, play cards, or click on Done
+V Baue ein Geb\u00e4ude, spiele Karten, oder klicke Fertig
 K Build adjacent to the man you moved
 V Baue neben dem Menschen, den du bewegt hast
 K Build an initial stack of 2 to be placed
 V Errichte einen 2er Anfangsstapel
-S Buy a building with no camels
-S Buy a building with no gold
+K Buy a building with no camels
+V Errichte ein Geb\u00e4ude ohne Kamele
+K Buy a building with no gold
+V Errichte ein Geb\u00e4ude ohne Gold
 K Buy the goods for $#1
 V Kaufe die Waren f\u00fcr $#1
 K Calling server...
 V Rufe Server...
-S Camels
+K Camels
+V Kamele
 S Cannon
 K Cannon_family
 V Cannon
@@ -168,7 +175,8 @@ K Capture your opponent's town
 V Nimm die Stadt deines Gegners ein
 K Capturing Games
 V Fangspiele
-S Cards
+K Cards
+V Karten
 K Cash/Score
 V Bar/Punkte
 K Chat Room
@@ -212,7 +220,8 @@ K Click Done to decline a draw
 V Fertig klicken, um Remis abzulehnen
 K Click Done to offer a draw
 V Fertig klicken, um Remis anzubieten
-S Click on Done to begin the building phase
+K Click on Done to begin the building phase
+V Klicke auf Fertig, um die Geb\u00e4udephase zu beginnen
 K Click on Done to complete the capture
 V Auf Fertig klicken, um \u00dcbernahme auszuf\u00fchren
 K Click on Done to confirm swapping
@@ -221,7 +230,8 @@ K Click on Done to confirm the Exchange
 V Klicke auf Fertig, um diesen Tausch zu best\u00e4tigen.
 K Click on Done to confirm this Dance
 V Klicke auf Fertig, um diesen Tanz zu best\u00e4tigen
-S Click on Done to confirm this card action
+K Click on Done to confirm this card action
+V Klicke auf Fertig, um die Kartenaktion zu best\u00e4tigen
 K Click on Done to confirm your resignation
 V Fertig klicken, um aufzugeben
 K Click on Done to end the game
@@ -281,7 +291,8 @@ K Crossfire_family
 V Crossfire
 K Crossfire_variation
 V standard Crossfire
-S Cubes
+K Cubes
+V Steine
 K Dec #1#2#3
 V #1 Dez, #2:#3 GMT
 K Decline Draw
@@ -670,8 +681,10 @@ K Move stacks around any way you want to
 V Bewege die Stapel beliebig
 K Move the flipped stack
 V Den verdeckten Stapel bewegen
-S Move the supervisor
-S Move the supervisor up to 3 extra spaces when you move the supervisor
+K Move the supervisor
+V Ziehe den Aufseher
+K Move the supervisor up to 3 extra spaces when you move the supervisor
+V Wenn du den Aufseher ziehst, bewege ihn um bis zu 3 Felder weiter 
 K Move your runners to the opposite side
 V Bringe deine L\u00e4ufer auf die andere Seite
 K Move, Split or Merge a stack
@@ -733,21 +746,30 @@ K Palago_variation
 V Normales Palago
 K Pass
 V Passen
-S Pay a camel or click Done to send the cube to the caravan
+K Pay a camel or click Done to send the cube to the caravan
+V Gib ein Kamel ab oder klicke Fertig, um den Stein zur Karawane zu schicken
 K Pick a ring to place a chip and move
 V Bewege einen Ring und lasse dabei einen Chip zur\u00fcck.
 K Pick the stack to move
 V W\u00e4hle den Stapel, den du bewegen willst
 K Pick up and Continue your move
 V Steine aufnehmen und Zug fortsetzen
-S Place #1 cubes in Bag neighborhood
-S Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
-S Place #1 cubes in Barrel neighborhood
-S Place #1 cubes in Barrel neighborhood, take a card, or move the supervisor #2 spaces
-S Place #1 cubes in Chest neighborhood
-S Place #1 cubes in Chest neighborhood, take a card, or move the supervisor #2 spaces
-S Place #1 cubes in Vase neighborhood
-S Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 spaces
+K Place #1 cubes in Bag neighborhood
+V Lege #1 Stein in das Sackviertel
+K Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
+V Lege #1 Stein in das Sackviertel, ziehe eine Karte, oder bewege den Aufseher um #2 Felder
+K Place #1 cubes in Barrel neighborhood
+V Lege #1 Stein in das Fassviertel
+K Place #1 cubes in Barrel neighborhood, take a card, or move the supervisor #2 spaces
+V Lege #1 Stein in das Fassviertel, ziehe eine Karte, oder bewege den Aufseher um #2 Felder
+K Place #1 cubes in Chest neighborhood
+V Lege #1 Stein in das Truhenviertel
+K Place #1 cubes in Chest neighborhood, take a card, or move the supervisor #2 spaces
+V Lege #1 Stein in das Truhenviertel, ziehe eine Karte, oder bewege den Aufseher um #2 Felder
+K Place #1 cubes in Vase neighborhood
+V Lege #1 Stein in das Amphorenviertel
+K Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 spaces
+V Lege #1 Stein in das Amphorenviertel, ziehe eine Karte, oder bewege den Aufseher um #2 Felder
 K Place a Chip, or a Jewel, or a chip from the Store
 V Lege einen Stein oder ein Juwel oder einen Stein aus dem Vorrat
 K Place a Frog on the board
@@ -760,8 +782,10 @@ K Place a chip on a starting point
 V Lege einen Stein auf einen Startpunkt
 S Place a chip on the board
 S Place a chip, or shirt or rotate a board
-S Place a cube in any unclaimed souk
-S Place a cube on the caravan
+K Place a cube in any unclaimed souk
+V Lege einen Stein auf einen freien Laden
+K Place a cube on the caravan
+V Lege einen Stein auf die Karawane
 K Place a gobblet on the board, or move a gobblet
 V Gobblet setzen oder Gobblet bewegen
 K Place a marker on any empty cell
@@ -832,12 +856,14 @@ K Play #1
 V Spiel mit #1
 K Play Farmer
 V Spiele den Sch\u00e4fer
-S Play a card
+K Play a card
+V Spiele eine Karte
 K Played on #1
 V Gespielt am #1
 K Player #1
 V Spieler #1
-S Player Cubes
+K Player Cubes
+V Spielersteine
 K Player is 
 V Spieler ist 
 K Players
@@ -878,13 +904,20 @@ K Rearrange the silver fleet
 V Ordne die silberne Flotte neu an
 K Rearrange things any way you want to
 V Ordne die Spielsteine beliebig an
-S Receive 1 extra camel when you take camels
-S Receive 1 extra cube when you place cubes in a souk
-S Receive 2 extra gold when you take gold
-S Receive 2 extra points for each completed souk
-S Receive 3 camels
-S Receive 3 gold
-S Receive a card when you place a cube in the caravan
+K Receive 1 extra camel when you take camels
+V Wenn du Kamele nimmst, erh\u00e4lst du 1 zus\u00e4tzliches
+K Receive 1 extra cube when you place cubes in a souk
+V Wenn du L\u00e4den belieferst, erh\u00e4lst du einen zus\u00e4tzlichen Stein
+K Receive 2 extra gold when you take gold
+V Wenn du Gold nimmst, erh\u00e4lst du 2 zus\u00e4tzliche Gold
+K Receive 2 extra points for each completed souk
+V Erhalte 2 zus\u00e4tzliche Siegpunkte f\u00fcr jeden vollst\u00e4ndigen Bazar
+K Receive 3 camels
+V Erhalte 3 Kamele
+K Receive 3 gold
+V Erhalte 3 Gold
+K Receive a card when you place a cube in the caravan
+V Wenn dein Stein zur Karawane geschickt wird, erh\u00e4lst du 1 Karte
 K Reconnecting
 V  ...verbinde erneut...
 K Red
@@ -935,8 +968,10 @@ K Select Game
 V Spiel ausw\u00e4hlen
 K Select Robot
 V Computergegner w\u00e4hlen
-S Select Row #1
-S Select a group of dice
+K Select Row #1
+V Zeile #1 gew\u00e4hlt
+K Select a group of dice
+V W\u00e4hle eine W\u00fcrfelgruppe aus
 K Select a ring to remove
 V W\u00e4hle den Ring, der entfernt werden soll
 K Select a row of 5 to remove
@@ -1026,7 +1061,8 @@ K TBA2_variation
 V game to be announced
 K TBA3_variation
 V game to be announced
-S Table
+K Table
+V Tafel
 S Tablut
 K Tablut-11
 V Tablut 11x11
@@ -1045,13 +1081,18 @@ V Tablut
 S Tajii
 K Tajii_family
 V Tajii
-S Take #1 camels
-S Take #1 camels, take a card, or move the supervisor #2 spaces
-S Take #1 gold
-S Take #1 gold, take a card, or move the supervisor #2 spaces
+K Take #1 camels
+V Nehme #1 Kamele
+K Take #1 camels, take a card, or move the supervisor #2 spaces
+V Nimm #1 Kamele, ziehe eine Karte, oder bewege den Aufseher um #2 Felder
+K Take #1 gold
+V Nimm #1 Gold
+K Take #1 gold, take a card, or move the supervisor #2 spaces
+V Nimm #1 Gold, ziehe eine Karte, oder bewege den Aufseher um #2 Felder
 K Take Over Playing
 V Spiel \u00fcbernehmen
-S Take a card
+K Take a card
+V Nimm eine Karte
 K Take your first action
 V Mache deine erste Aktion
 K Take your second action
@@ -1066,8 +1107,10 @@ K The next finish bonus is #1
 V Der n\u00e4chste Zielbonus ist #1
 K The next sprint bonus is #1
 V Der n\u00e4chste Sprintbonus ist #1
-S This die will be rolled
-S This die will not be rolled
+K This die will be rolled
+V Dieser W\u00fcrfel wird geworfen
+K This die will not be rolled
+V Dieser W\u00fcrfel wird nicht geworfen
 K This is now a private room
 V Dies ist nun ein privater Raum.
 K This is now a public room
@@ -1094,9 +1137,12 @@ K Traboulet_variation
 V Normales Traboulet
 K Track Mice
 V Mausbewegung verfolgen
-S Trade camels for gold
-S Trade up to 10 gold for 1 victory point each
-S Trade up to 4 camels for 2 victory points each
+K Trade camels for gold
+V Tausche Kamele gegen gold
+K Trade up to 10 gold for 1 victory point each
+V Tausche bis zu 10 Gold f\u00fcr jeweils 1 Siegpunkt ein
+K Trade up to 4 camels for 2 victory points each
+V Tausche bis zu 4 Kamele f\u00fcr jeweils 2 Siegpunkt ein
 K Traditional Pieces
 V Traditionelle Spielsteine
 S Trax
@@ -1228,7 +1274,7 @@ V Du musst einen Kredit aufnehmen, um die Zinsen zu bezahlen
 K Yspahan_family
 V Yspahan
 K Yspahan_variation
-V standard Yspahan
+V Standard Yspahan
 K Zertz
 V Z\u00e8rtz
 K Zertz+11
@@ -1266,7 +1312,8 @@ K connect opposite sides with a chain of markers
 V Verbinde die Seiten des Spielbretts deiner Farbe mit einer Kette von Spielsteinen
 K connecting
 V Verbinde mit 
-S do what it takes to win
+K do what it takes to win
+V Mache deinen n\u00e4chsten Zug
 K enterMessage
 V #1 betritt die Lobby
 K enters the room
