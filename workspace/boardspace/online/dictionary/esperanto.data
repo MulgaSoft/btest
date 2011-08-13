@@ -109,8 +109,10 @@ K Auction
 V A\u016dkcio
 K Aug #1#2#3
 V #1 a\u016dg, #2:#3 GMT
+S Bag
 K Bank
 V Banko
+S Barrel
 K Become a Spectator
 V Fari\u011di Spektanto
 K Bid $ #1
@@ -137,6 +139,7 @@ K Build adjacent to the man you moved
 V Konstruu najbare al la movita viro
 K Build an initial stack of 2 to be placed
 V Konstruu komencan stakon de 2 por esti metita
+S Buildings
 S Buy a building with no camels
 S Buy a building with no gold
 K Buy the goods for $#1
@@ -172,6 +175,7 @@ K Capture your opponent's town
 V Kaptu la urbon de via kontra\u016dulo
 K Capturing Games
 V Ludoj pri Kaptado
+S Card
 S Cards
 K Cash/Score
 V Mono/Poentoj
@@ -184,14 +188,9 @@ K Che_variation
 V norma Che
 K Checkmate your opponent's general
 V Matu la generalon de via kontra\u016dulo
+S Chest
 K Choose the penalty for non-payment of interest
 V Elektu la punon pro nepagon de interezo
-K Click DONE to confirm removing these markers
-V Klaku FINI por konfirmi forigon de \u0109i tiuj diskoj
-K Click DONE to confirm removing this ring
-V Klaku FINI por konfirmi forigon de \u0109i tiu ringo
-K Click DONE to confirm this move
-V Klaku FINI por konfirmi \u0109i tiun movon
 K Click DONE to confirm this placement
 V Klaku FINI por konfirmi \u0109i tiun meton
 K Click Done
@@ -202,6 +201,8 @@ K Click Done to accept a draw
 V Alklaku Fini por akcepti remison
 K Click Done to complete the exchange
 V Klaku Fini por fini la inter\u015dan\u011don
+S Click Done to confirm removing these markers
+S Click Done to confirm removing this ring
 K Click Done to confirm swapping colors with your opponent
 V Klaku Fini por konfirmi inter\u015dan\u011don de ludantaj koloroj
 K Click Done to confirm swapping fleets with your opponent
@@ -218,6 +219,7 @@ V Alklaku Fini por proponi remison
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klaku Fini por fini la kapton
+S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V Klaku Fini por konfirmi inter\u015dan\u011don
 K Click on Done to confirm the Exchange
@@ -235,6 +237,7 @@ K Click on Done to end the game as a Draw
 V Klaki fini por fini la ludon sen venkanto
 K Click on Done to finish all captures
 V Klaku Fini por fini \u0109iujn kaptojn
+S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V Alklaku GIPF-pecojn por \u015dan\u011di ilian kapto-statuson
 K Click on the line to be captured
@@ -298,6 +301,7 @@ K Designate a row to capture
 V Indiku vicon por kapti
 K Designate a row to capture before your turn
 V Indiku vicon por kapti anta\u016d via movo
+S Dice
 K Dipole
 V Dipole (originala)
 K Dipole-s
@@ -741,6 +745,7 @@ V Pasi
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Elektu ringon por meti diskon kaj movi
+S Pick the first cube to send to the caravan
 K Pick the stack to move
 V Elektu stakon por movi
 K Pick up and Continue your move
@@ -1153,6 +1158,7 @@ K Unsold Warehouses
 V Nevenditaj Magazenoj
 K User 
 V Uzanto 
+S Vase
 K Volcano
 V Vulkano
 K Volcano-h
@@ -1236,6 +1242,7 @@ K You must place a dome
 V Vi devas meti kupolon
 K You must take out a loan to pay interest
 V Vi devas pruntepreni por pagi interezon
+S Yspahan
 K Yspahan_family
 V Yspahan
 K Yspahan_variation
@@ -1394,5 +1401,4 @@ K you may increase your bid
 V vi povas pliigi vian oferton
 K your name
 V via nomo
-S yspahan
-N 769
+N 778

@@ -108,7 +108,9 @@ K Auction
 V Veiling
 K Aug #1#2#3
 V #1 Aug, #2:#3 GMT
+S Bag
 S Bank
+S Barrel
 K Become a Spectator
 V Word toeschouwer
 K Bid $ #1
@@ -134,6 +136,7 @@ K Build adjacent to the man you moved
 V Bouw naast het gezette stuk
 K Build an initial stack of 2 to be placed
 V Bouw een beginkolom van twee om te plaatsen
+S Buildings
 S Buy a building with no camels
 S Buy a building with no gold
 K Buy the goods for $#1
@@ -168,6 +171,7 @@ K Capture your opponent's town
 V Verover de stad van je tegenspeler
 K Capturing Games
 V Eliminatie Spelen
+S Card
 S Cards
 S Cash/Score
 K Chat Room
@@ -179,14 +183,9 @@ K Che_variation
 V standaard Che
 K Checkmate your opponent's general
 V Zet de Generaal van de tegenspeler schaakmat
+S Chest
 K Choose the penalty for non-payment of interest
 V Kies de boete voor het niet betalen van rente
-K Click DONE to confirm removing these markers
-V Klik Klaar om verwijdering van de markers te voltooien
-K Click DONE to confirm removing this ring
-V Klik Klaar om de verwijdering van de ring te voltooien
-K Click DONE to confirm this move
-V Klik Klaar om de zet te voltooien
 K Click DONE to confirm this placement
 V Klik Klaar om het plaatsen te voltooien
 K Click Done
@@ -197,6 +196,8 @@ K Click Done to accept a draw
 V Klik Klaar om remise te accepteren
 K Click Done to complete the exchange
 V Klik Klaar om de ruil te voltooien
+S Click Done to confirm removing these markers
+S Click Done to confirm removing this ring
 K Click Done to confirm swapping colors with your opponent
 V Klik Klaar om de switch te voltooien
 K Click Done to confirm swapping fleets with your opponent
@@ -214,6 +215,7 @@ V Klik Klaar om remise aan te bieden
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klik Klaar om het slaan te voltooien
+S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V Klik Klaar om de switch te voltooien
 K Click on Done to confirm the Exchange
@@ -231,6 +233,7 @@ K Click on Done to end the game as a Draw
 V Klik Klaar om remise te maken
 K Click on Done to finish all captures
 V Klik Klaar om het slaan te voltooien
+S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V Klik op de stukken om hun status mbt. slaan te wijzigen
 K Click on the line to be captured
@@ -296,6 +299,7 @@ K Designate a row to capture
 V Bepaal een rij om te slaan
 K Designate a row to capture before your turn
 V Bepaal voor je zet een rij om te slaan
+S Dice
 K Dipole
 V Dipole (origineel)
 K Dipole-s
@@ -731,6 +735,7 @@ V Pas
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Kies een ring voor een chip en zet
+S Pick the first cube to send to the caravan
 K Pick the stack to move
 V Kies de te verplaatsen kolom
 K Pick up and Continue your move
@@ -1144,6 +1149,7 @@ K Unsold Warehouses
 V Onverkochte pakhuizen
 K User 
 V Gebruiker 
+S Vase
 S Volcano
 K Volcano-h
 V Hex Volcano
@@ -1224,6 +1230,7 @@ K You must place a dome
 V Je moet een koepel plaatsen
 K You must take out a loan to pay interest
 V Je moet een lening afsluiten om rente te betalen
+S Yspahan
 K Yspahan_family
 V Yspahan
 K Yspahan_variation
@@ -1383,5 +1390,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-S yspahan
-N 769
+N 778

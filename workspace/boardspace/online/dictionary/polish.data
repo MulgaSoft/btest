@@ -87,7 +87,9 @@ V standard Army of Frogs
 S Auction
 K Aug #1#2#3
 V #1 Sie, #2:#3 GMT
+S Bag
 S Bank
+S Barrel
 K Become a Spectator
 V Zosta\u0144 kibicem
 S Bid $ #1
@@ -111,6 +113,7 @@ S Build a building, play cards, or click on Done
 S Build adjacent to the man you moved
 K Build an initial stack of 2 to be placed
 V Zbuduj i umie\u015b\u0107 pocz\u0105tkowy stos dwuelementowy
+S Buildings
 S Buy a building with no camels
 S Buy a building with no gold
 S Buy the goods for $#1
@@ -134,6 +137,7 @@ S Capture the most chips under your color stack
 S Capture your opponent's tallest king stack
 S Capture your opponent's town
 S Capturing Games
+S Card
 S Cards
 S Cash/Score
 K Chat Room
@@ -144,13 +148,8 @@ V Che
 K Che_variation
 V standard Che
 S Checkmate your opponent's general
+S Chest
 S Choose the penalty for non-payment of interest
-K Click DONE to confirm removing these markers
-V Kliknij Zatwierd\u017a, by potwierdzi\u0107 usuni\u0119cie znacznik\u00f3w
-K Click DONE to confirm removing this ring
-V Kliknij Zatwierd\u017a, by potwierdzi\u0107 usuni\u0119cie
-K Click DONE to confirm this move
-V Kliknij Zatwierd\u017a by zako\u0144czy\u0107 ruch
 K Click DONE to confirm this placement
 V Kliknij ZATWIERD\u0179, by potwierdzi\u0107 miejsce
 K Click Done
@@ -160,6 +159,8 @@ V Kliknij Zatwierd\u017a, by zako\u0144czy\u0107 sw\u00f3j ruch
 S Click Done to accept a draw
 K Click Done to complete the exchange
 V Kliknij Zatwierd\u017a, by zako\u0144czy\u0107 wymian\u0119
+S Click Done to confirm removing these markers
+S Click Done to confirm removing this ring
 K Click Done to confirm swapping colors with your opponent
 V Kliknij Zatwierd\u017a, by potwierdzi\u0107 zamian\u0119 kolor\u00f3w
 K Click Done to confirm swapping fleets with your opponent
@@ -173,6 +174,7 @@ S Click Done to offer a draw
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Kliknij zatwierd\u017a, by zako\u0144czy\u0107 zbicie.
+S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V Kliknij Zatwierd\u017a by zmieni\u0107 strony
 K Click on Done to confirm the Exchange
@@ -188,6 +190,7 @@ S Click on Done to end the game (you lose)
 K Click on Done to end the game as a Draw
 V Kliknij Zatwierd\u017a, aby zako\u0144czy\u0107 gr\u0119 remisem
 S Click on Done to finish all captures
+S Click on Done to send cubes to the carvan
 S Click on Gipf pieces to change their capture status
 S Click on the line to be captured
 K Click on the placed piece to rotate it, or Click Done
@@ -232,6 +235,7 @@ S Designate GIPF pieces to capture, or place a GIPF chip
 S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
 S Designate a row to capture before your turn
+S Dice
 S Dipole
 S Dipole-s
 S Dipole-s_variation
@@ -609,6 +613,7 @@ S Pass
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Wybierz pier\u015bcie\u0144 by umie\u015bci\u0107 chip i rusz si\u0119
+S Pick the first cube to send to the caravan
 S Pick the stack to move
 K Pick up and Continue your move
 V Podnie\u015b i kontynuuj ruch
@@ -957,6 +962,7 @@ V Pok\u00f3j bez rankingu
 S Unsold Warehouses
 K User 
 V U\u017cytkownik 
+S Vase
 S Volcano
 S Volcano-h
 S Volcano-h_variation
@@ -1018,6 +1024,7 @@ K You must move the gobblet you have picked up
 V Musisz przesun\u0105\u0107 podniesiony gobblet
 S You must place a dome
 S You must take out a loan to pay interest
+S Yspahan
 K Yspahan_family
 V Yspahan
 K Yspahan_variation
@@ -1159,5 +1166,4 @@ V Witam w Pasa\u017cu BoardSpace, wersja #1
 S you may increase your bid
 K your name
 V twoje imi\u0119
-S yspahan
-N 769
+N 778

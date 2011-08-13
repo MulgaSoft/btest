@@ -67,7 +67,9 @@ V standard Army of Frogs
 S Auction
 K Aug #1#2#3
 V #1 Aug, #2:#3 GMT
+S Bag
 S Bank
+S Barrel
 S Become a Spectator
 S Bid $ #1
 S Black
@@ -87,6 +89,7 @@ S Brown Palace Bonus (3 points)
 S Build a building, play cards, or click on Done
 S Build adjacent to the man you moved
 S Build an initial stack of 2 to be placed
+S Buildings
 S Buy a building with no camels
 S Buy a building with no gold
 S Buy the goods for $#1
@@ -109,6 +112,7 @@ S Capture the most chips under your color stack
 S Capture your opponent's tallest king stack
 S Capture your opponent's town
 S Capturing Games
+S Card
 S Cards
 S Cash/Score
 S Chat Room
@@ -118,15 +122,15 @@ V Che
 K Che_variation
 V standard Che
 S Checkmate your opponent's general
+S Chest
 S Choose the penalty for non-payment of interest
-S Click DONE to confirm removing these markers
-S Click DONE to confirm removing this ring
-S Click DONE to confirm this move
 S Click DONE to confirm this placement
 S Click Done
 S Click Done to Finish the move
 S Click Done to accept a draw
 S Click Done to complete the exchange
+S Click Done to confirm removing these markers
+S Click Done to confirm removing this ring
 S Click Done to confirm swapping colors with your opponent
 S Click Done to confirm swapping fleets with your opponent
 S Click Done to confirm this action
@@ -136,6 +140,7 @@ S Click Done to decline a draw
 S Click Done to offer a draw
 S Click on Done to begin the building phase
 S Click on Done to complete the capture
+S Click on Done to confirm paying a camel
 S Click on Done to confirm swapping
 S Click on Done to confirm the Exchange
 S Click on Done to confirm this Dance
@@ -145,6 +150,7 @@ S Click on Done to end the game
 S Click on Done to end the game (you lose)
 S Click on Done to end the game as a Draw
 S Click on Done to finish all captures
+S Click on Done to send cubes to the carvan
 S Click on Gipf pieces to change their capture status
 S Click on the line to be captured
 S Click on the placed piece to rotate it, or Click Done
@@ -186,6 +192,7 @@ S Designate GIPF pieces to capture, or place a GIPF chip
 S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
 S Designate a row to capture before your turn
+S Dice
 K Dipole
 V Dipole (original)
 K Dipole-s
@@ -509,6 +516,7 @@ V standard Palago
 S Pass
 S Pay a camel or click Done to send the cube to the caravan
 S Pick a ring to place a chip and move
+S Pick the first cube to send to the caravan
 S Pick the stack to move
 S Pick up and Continue your move
 S Place #1 cubes in Bag neighborhood
@@ -803,6 +811,7 @@ V standard Tzaar
 S Unranked Room
 S Unsold Warehouses
 S User 
+S Vase
 S Volcano
 K Volcano-h
 V Hex Volcano
@@ -864,6 +873,7 @@ S You have no moves available. Click on Done to pass.
 S You must move the gobblet you have picked up
 S You must place a dome
 S You must take out a loan to pay interest
+S Yspahan
 K Yspahan_family
 V Yspahan
 K Yspahan_variation
@@ -986,5 +996,4 @@ K welcome
 V Welcome to the BoardSpace Lobby, version #1
 S you may increase your bid
 S your name
-S yspahan
-N 769
+N 778

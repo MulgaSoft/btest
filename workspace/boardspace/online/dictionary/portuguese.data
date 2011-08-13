@@ -95,7 +95,9 @@ V standard Army of Frogs
 S Auction
 K Aug #1#2#3
 V #1 Ago, #2:#3 GMT
+S Bag
 S Bank
+S Barrel
 K Become a Spectator
 V Tornar-se espectador
 S Bid $ #1
@@ -121,6 +123,7 @@ K Build adjacent to the man you moved
 V Construa adjacente ao homem que voc\u00ea moveu
 K Build an initial stack of 2 to be placed
 V Construa uma pilha inicial de 2 para ser colocada
+S Buildings
 S Buy a building with no camels
 S Buy a building with no gold
 S Buy the goods for $#1
@@ -154,6 +157,7 @@ K Capture your opponent's town
 V Capture a cidade do oponente
 K Capturing Games
 V Jogos de Captura
+S Card
 S Cards
 S Cash/Score
 K Chat Room
@@ -165,13 +169,8 @@ K Che_variation
 V Che b\u00e1sico
 K Checkmate your opponent's general
 V Aplique cheque-mate no General advers\u00e1rio
+S Chest
 S Choose the penalty for non-payment of interest
-K Click DONE to confirm removing these markers
-V Pressione CONFIRMAR para remover estes marcadores
-K Click DONE to confirm removing this ring
-V Pressione CONFIRMAR para efetuar a remo\u00e7\u00e3o deste anel
-K Click DONE to confirm this move
-V Pressione CONFIRMAR para efetuar este lance
 K Click DONE to confirm this placement
 V Pressione CONFIRMAR para efetivar esta coloca\u00e7\u00e3o
 K Click Done
@@ -182,6 +181,8 @@ K Click Done to accept a draw
 V Clique em Confirmar para aceitar o empate
 K Click Done to complete the exchange
 V Pressione o bot\u00e3o Confirmar para completar a troca
+S Click Done to confirm removing these markers
+S Click Done to confirm removing this ring
 K Click Done to confirm swapping colors with your opponent
 V Pressione o bot\u00e3o Confirmar para trocar de cor com seu oponente
 K Click Done to confirm swapping fleets with your opponent
@@ -198,6 +199,7 @@ V Clique em Confirmar para oferecer o empate
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Pressione o bot\u00e3o Confirmar para efetuar a captura
+S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V Pressione o bot\u00e3o Confirmar para efetuar a troca
 K Click on Done to confirm the Exchange
@@ -215,6 +217,7 @@ K Click on Done to end the game as a Draw
 V Pressione o bot\u00e3o Confirmar para terminar a partida como Empatada
 K Click on Done to finish all captures
 V Pressione o bot\u00e3o Confirmar para efetuar todas as capturas
+S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V Clique nas pe\u00e7as Gipf para mudar seu status de captura
 K Click on the line to be captured
@@ -274,6 +277,7 @@ K Designate a row to capture
 V Escolha uma fileira para capturar
 K Designate a row to capture before your turn
 V Indique uma fileira a capturar antes do seu turno
+S Dice
 K Dipole
 V Dipole (original)
 K Dipole-s
@@ -694,6 +698,7 @@ V Passar
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Pegue um anel para colocar uma ficha e mover
+S Pick the first cube to send to the caravan
 K Pick the stack to move
 V Pegue a pilha a mover
 K Pick up and Continue your move
@@ -1089,6 +1094,7 @@ V Sala N\u00e3o Rankeada
 S Unsold Warehouses
 K User 
 V Usu\u00e1rio 
+S Vase
 S Volcano
 K Volcano-h
 V Hex Volcano
@@ -1164,6 +1170,7 @@ V Voc\u00ea deve mover o gobblet que voc\u00ea pegou
 K You must place a dome
 V Voc\u00ea deve colocar um domo
 S You must take out a loan to pay interest
+S Yspahan
 K Yspahan_family
 V Yspahan
 K Yspahan_variation
@@ -1313,5 +1320,4 @@ V Benvindo ao sal\u00e3o do BoardSpace, vers\u00e3o #1
 S you may increase your bid
 K your name
 V seu nome
-S yspahan
-N 769
+N 778

@@ -109,7 +109,9 @@ K Auction
 V Auktion
 K Aug #1#2#3
 V #1 Aug, #2:#3 GMT
+S Bag
 S Bank
+S Barrel
 K Become a Spectator
 V Bli \u00e5sk\u00e5dare
 K Bid $ #1
@@ -136,6 +138,7 @@ K Build adjacent to the man you moved
 V Bygg intill m\u00e4nniskan du flyttade
 K Build an initial stack of 2 to be placed
 V Bygg och placera en inledande h\u00f6g p\u00e5 2
+S Buildings
 S Buy a building with no camels
 S Buy a building with no gold
 K Buy the goods for $#1
@@ -170,6 +173,7 @@ K Capture your opponent's town
 V Er\u00f6vra motst\u00e5ndarens stad
 K Capturing Games
 V Er\u00f6vrarspel
+S Card
 S Cards
 K Cash/Score
 V Pengar/Po\u00e4ng
@@ -182,14 +186,9 @@ K Che_variation
 V Che standard
 K Checkmate your opponent's general
 V S\u00e4tt motst\u00e5ndarens general schack matt
+S Chest
 K Choose the penalty for non-payment of interest
 V V\u00e4lj straff f\u00f6r utebliven betalning av r\u00e4nta
-K Click DONE to confirm removing these markers
-V Klicka p\u00e5 klar f\u00f6r att bekr\u00e4fta
-K Click DONE to confirm removing this ring
-V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
-K Click DONE to confirm this move
-V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
 K Click DONE to confirm this placement
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
 K Click Done
@@ -200,6 +199,8 @@ K Click Done to accept a draw
 V Klicka p\u00e5 Klar f\u00f6r att acceptera remi
 K Click Done to complete the exchange
 V Klicka p\u00e5 klar f\u00f6r att bekr\u00e4fta v\u00e4xlingen
+S Click Done to confirm removing these markers
+S Click Done to confirm removing this ring
 K Click Done to confirm swapping colors with your opponent
 V Klicka p\u00e5 Klar f\u00f6r att byta f\u00e4rg med din motst\u00e5ndare
 K Click Done to confirm swapping fleets with your opponent
@@ -217,6 +218,7 @@ V Klicka p\u00e5 Klar f\u00f6r att bjuda remi
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta f\u00e5ngst
+S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
 K Click on Done to confirm the Exchange
@@ -234,6 +236,7 @@ K Click on Done to end the game as a Draw
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta remi.
 K Click on Done to finish all captures
 V Klicka p\u00e5 Klar f\u00f6r att avsluta alla er\u00f6vringar
+S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V Klicka p\u00e5 Gipf-brickorna f\u00f6r att \u00e4ndra deras er\u00f6vringsstatus
 K Click on the line to be captured
@@ -298,6 +301,7 @@ K Designate a row to capture
 V V\u00e4lj en rad att er\u00f6vra
 K Designate a row to capture before your turn
 V V\u00e4lj en rad att er\u00f6vra innan ditt drag
+S Dice
 K Dipole
 V Dipole (original)
 K Dipole-s
@@ -739,6 +743,7 @@ V Passa
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Flytta en ring och l\u00e4mna en bricka kvar
+S Pick the first cube to send to the caravan
 K Pick the stack to move
 V V\u00e4lj h\u00f6g att flytta.
 K Pick up and Continue your move
@@ -1151,6 +1156,7 @@ K Unsold Warehouses
 V Os\u00e5lda magasin
 K User 
 V Anv\u00e4ndare 
+S Vase
 S Volcano
 K Volcano-h
 V Hex Volcano
@@ -1231,6 +1237,7 @@ K You must place a dome
 V Du m\u00e5ste placera en kupol
 K You must take out a loan to pay interest
 V Du m\u00e5ste ta ett l\u00e5n f\u00f6r att betala r\u00e4nta
+S Yspahan
 K Yspahan_family
 V Yspahan
 K Yspahan_variation
@@ -1390,5 +1397,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-S yspahan
-N 769
+N 778

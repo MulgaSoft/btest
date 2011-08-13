@@ -109,8 +109,10 @@ K Auction
 V \u62cd\u5356
 K Aug #1#2#3
 V \u516b\u6708#1\u53f7, #2:#3 GMT
+S Bag
 K Bank
 V \u94f6\u884c
+S Barrel
 K Become a Spectator
 V \u6210\u4e3a\u65c1\u89c2\u8005
 K Bid $ #1
@@ -137,6 +139,7 @@ K Build adjacent to the man you moved
 V \u5728\u521a\u653e\u7f6e\u7684\u4eba\u7684\u76f8\u90bb\u5904\u76d6\u5854
 K Build an initial stack of 2 to be placed
 V \u5792\u9996\u4e2a2\u5c42\u68cb\u6808
+S Buildings
 S Buy a building with no camels
 S Buy a building with no gold
 K Buy the goods for $#1
@@ -171,6 +174,7 @@ K Capture your opponent's town
 V \u653b\u4e0b\u5bf9\u624b\u7684\u57ce\u6c60
 K Capturing Games
 V \u6355\u6349\u6e38\u620f
+S Card
 S Cards
 K Cash/Score
 V \u73b0\u91d1\uff0f\u603b\u5206
@@ -183,14 +187,9 @@ K Che_variation
 V \u666e\u901aChe
 K Checkmate your opponent's general
 V \u8981\u5c06
+S Chest
 K Choose the penalty for non-payment of interest
 V \u9009\u62e9\u672a\u652f\u4ed8\u5229\u606f\u7684\u7f5a\u6b3e
-K Click DONE to confirm removing these markers
-V \u70b9\u51fb\u5b8c\u6210\u786e\u8ba4\u6e05\u9664\u6807\u8bb0\uff0c\u7ee7\u7eed\u6e38\u620f
-K Click DONE to confirm removing this ring
-V \u70b9\u51fb\u5b8c\u6210\u786e\u8ba4\u8d62\u5f97\u6b64\u73af
-K Click DONE to confirm this move
-V \u70b9\u51fb\u5b8c\u6210\u786e\u8ba4\u7ed3\u675f
 K Click DONE to confirm this placement
 V \u70b9\u51fb\u5b8c\u6210\u4ee5\u786e\u8ba4\u7ed3\u675f
 K Click Done
@@ -201,6 +200,8 @@ K Click Done to accept a draw
 V \u70b9\u51fb\u5b8c\u6210\u63a5\u53d7\u548c\u68cb
 K Click Done to complete the exchange
 V \u70b9\u51fb\u5b8c\u6210\u7ed3\u675f\u4ea4\u6362
+S Click Done to confirm removing these markers
+S Click Done to confirm removing this ring
 K Click Done to confirm swapping colors with your opponent
 V \u70b9\u51fb\u5b8c\u6210\u786e\u8ba4\u4e0e\u5bf9\u624b\u4ea4\u6362\u68cb\u5b50\u989c\u8272
 K Click Done to confirm swapping fleets with your opponent
@@ -218,6 +219,7 @@ V \u70b9\u51fb\u5b8c\u6210\u8981\u6c42\u548c\u68cb
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V \u70b9\u51fb\u5b8c\u6210\u7ed3\u675f
+S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V \u70b9\u51fb\u5b8c\u6210\u786e\u8ba4\u5bf9\u5bb6\u5148\u8d70
 K Click on Done to confirm the Exchange
@@ -235,6 +237,7 @@ K Click on Done to end the game as a Draw
 V \u6e38\u620f\u5e73\u5c40\uff0c\u70b9\u51fb\u5b8c\u6210\u7ed3\u675f
 K Click on Done to finish all captures
 V \u70b9\u51fb\u5b8c\u6210\u7ed3\u675f\u6355\u83b7
+S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V \u5728\u5c06\u8981\u88ab\u79fb\u9664\u7684\u4e00\u884c\u68cb\u4e2d\u70b9\u51fb\u4f60\u60f3\u8981\u7559\u4e0b\u7684\u4e00\u4e2a\u68cb\u6808\uff0c\u5426\u5219\u70b9\u51fb\u5b8c\u6210\u7ed3\u675f\u79fb\u9664\u6574\u884c
 K Click on the line to be captured
@@ -301,6 +304,7 @@ K Designate a row to capture
 V \u6307\u5b9a\u4e00\u884c\u8fdb\u884c\u6355\u83b7
 K Designate a row to capture before your turn
 V \u5728\u4f60\u5f00\u59cb\u524d\u6307\u5b9a\u4e00\u884c\u8fdb\u884c\u6355\u83b7
+S Dice
 K Dipole
 V Dipole (\u539f\u59cb)
 K Dipole-s
@@ -743,6 +747,7 @@ V \u4e0d\u51fa
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V \u9009\u62e9\u79fb\u52a8\u4e00\u4e2a\u73af\uff0c\u539f\u6765\u7684\u4f4d\u7f6e\u5c06\u81ea\u52a8\u4ea7\u751f\u4e00\u4e2a\u68cb\u5b50
+S Pick the first cube to send to the caravan
 K Pick the stack to move
 V \u9009\u62e9\u79fb\u52a8\u68cb\u6808
 K Pick up and Continue your move
@@ -1154,6 +1159,7 @@ K Unsold Warehouses
 V \u672a\u51fa\u552e\u7684\u4ed3\u5e93
 K User 
 V \u7528\u6237
+S Vase
 K Volcano
 V \u706b\u5c71
 K Volcano-h
@@ -1236,6 +1242,7 @@ K You must place a dome
 V \u5fc5\u987b\u653e\u4e00\u4e2a\u5706\u9876
 K You must take out a loan to pay interest
 V \u4f60\u5fc5\u987b\u62ff\u51fa\u4e00\u7b14\u8d37\u6b3e\uff0c\u652f\u4ed8\u5229\u606f
+S Yspahan
 K Yspahan_family
 V Yspahan
 K Yspahan_variation
@@ -1397,5 +1404,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-S yspahan
-N 769
+N 778

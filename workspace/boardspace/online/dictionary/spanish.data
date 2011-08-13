@@ -92,7 +92,9 @@ V standard Army of Frogs
 S Auction
 K Aug #1#2#3
 V #1 Agosto, #2:#3 GMT
+S Bag
 S Bank
+S Barrel
 K Become a Spectator
 V Pasa a ser espactador
 S Bid $ #1
@@ -115,6 +117,7 @@ S Brown Palace Bonus (3 points)
 S Build a building, play cards, or click on Done
 S Build adjacent to the man you moved
 S Build an initial stack of 2 to be placed
+S Buildings
 S Buy a building with no camels
 S Buy a building with no gold
 S Buy the goods for $#1
@@ -139,6 +142,7 @@ S Capture the most chips under your color stack
 S Capture your opponent's tallest king stack
 S Capture your opponent's town
 S Capturing Games
+S Card
 S Cards
 S Cash/Score
 K Chat Room
@@ -149,13 +153,8 @@ V Che
 K Che_variation
 V standard Che
 S Checkmate your opponent's general
+S Chest
 S Choose the penalty for non-payment of interest
-K Click DONE to confirm removing these markers
-V Haz click en HECHO para retirar estos marcadores
-K Click DONE to confirm removing this ring
-V Haz click en HECHO para confirmar la retirada de este anillo
-K Click DONE to confirm this move
-V Haz click en HECHO para confirmar este movimiento
 K Click DONE to confirm this placement
 V Haz click en HECHO para confirmar esta	colocaci\u00f3n
 K Click Done
@@ -164,6 +163,8 @@ S Click Done to Finish the move
 S Click Done to accept a draw
 K Click Done to complete the exchange
 V Haz clic en Done para completar el intercambio
+S Click Done to confirm removing these markers
+S Click Done to confirm removing this ring
 K Click Done to confirm swapping colors with your opponent
 V Haz clic en Done para confirmar el intercambio de colores con tu oponente
 K Click Done to confirm swapping fleets with your opponent
@@ -177,6 +178,7 @@ S Click Done to offer a draw
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Haz clic en Done para completar la captura
+S Click on Done to confirm paying a camel
 S Click on Done to confirm swapping
 K Click on Done to confirm the Exchange
 V Haz clic en Done para confirmar el Intercambio
@@ -191,6 +193,7 @@ S Click on Done to end the game (you lose)
 K Click on Done to end the game as a Draw
 V Haz clic en Done para terminar la partida como un empate
 S Click on Done to finish all captures
+S Click on Done to send cubes to the carvan
 S Click on Gipf pieces to change their capture status
 S Click on the line to be captured
 K Click on the placed piece to rotate it, or Click Done
@@ -236,6 +239,7 @@ S Designate GIPF pieces to capture, or place a GIPF chip
 S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
 S Designate a row to capture before your turn
+S Dice
 K Dipole
 V Dipole (original)
 K Dipole-s
@@ -607,6 +611,7 @@ S Pass
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Elige un anillo al que poner una ficha y mu\u00e9velo
+S Pick the first cube to send to the caravan
 S Pick the stack to move
 S Pick up and Continue your move
 S Place #1 cubes in Bag neighborhood
@@ -954,6 +959,7 @@ V Sala sin ranking
 S Unsold Warehouses
 K User 
 V Usuario 
+S Vase
 S Volcano
 K Volcano-h
 V Hex Volcano
@@ -1023,6 +1029,7 @@ K You must move the gobblet you have picked up
 V Debes mover el gobblet que has elegido
 S You must place a dome
 S You must take out a loan to pay interest
+S Yspahan
 K Yspahan_family
 V Yspahan
 K Yspahan_variation
@@ -1165,5 +1172,4 @@ V Bienvenido al Servidor de Juego, versi\u00f3n #1
 S you may increase your bid
 K your name
 V tu nombre
-S yspahan
-N 769
+N 778
