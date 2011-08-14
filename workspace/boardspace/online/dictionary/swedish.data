@@ -77,6 +77,7 @@ K Add a ball
 V Placera en kula
 K Add a ball, remove a Ring
 V Placera en kula och ta bort en ring
+S Add die
 K Adjust
 V Justera
 S Adjust the chip spacing in stacks
@@ -312,6 +313,7 @@ K Dipole_family
 V Dipole
 K Dipole_variation
 V Dipole p\u00e5 8x8 med en asymmetrisk startposition
+S Discards
 K Done
 V Klar
 K Drop a tile to enlarge the board
@@ -678,7 +680,8 @@ V Flytta h\u00f6garna p\u00e5 valfritt s\u00e4tt
 K Move the flipped stack
 V Flytta den v\u00e4nda h\u00f6gen
 S Move the supervisor
-S Move the supervisor up to 3 extra spaces when you move the supervisor
+K Move the supervisor up to 3 extra spaces when you move the supervisor
+V Move the supervisor up to 3 extra spaces when you move the supervisor.  Cost 3 camels + 3 gold.
 K Move your runners to the opposite side
 V Flytta dina l\u00f6pare till den motsatta sidan
 K Move, Split or Merge a stack
@@ -886,13 +889,18 @@ K Rearrange the silver fleet
 V Omarrangera silverflottan
 K Rearrange things any way you want to
 V Arrangera p\u00e5 valfritt s\u00e4tt
-S Receive 1 extra camel when you take camels
-S Receive 1 extra cube when you place cubes in a souk
-S Receive 2 extra gold when you take gold
-S Receive 2 extra points for each completed souk
+K Receive 1 extra camel when you take camels
+V Receive 1 extra camel when you take camels.  Cost 2 camels.
+K Receive 1 extra cube when you place cubes in a souk
+V Receive 1 extra cube when you place cubes in a souk.  Cost 4 camels + 4 gold.
+K Receive 2 extra gold when you take gold
+V Receive 2 extra gold when you take gold.  Cost 2 camels + 2 gold
+K Receive 2 extra points for each completed souk
+V Receive 2 extra points for each completed souk.  Cost 4 camels + 4 gold.
 S Receive 3 camels
 S Receive 3 gold
-S Receive a card when you place a cube in the caravan
+K Receive a card when you place a cube in the caravan
+V Receive a card when you place a cube in the caravan.  Cost 3 camels + 3 gold.
 K Reconnecting
 V  ...F\u00f6rs\u00f6ker \u00e5teransluta...
 K Red
@@ -1397,4 +1405,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 778
+N 780

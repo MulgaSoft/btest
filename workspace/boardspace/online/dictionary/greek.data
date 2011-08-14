@@ -44,6 +44,7 @@ S Active in
 S Add Extra Dice, or click Done to Roll
 S Add a ball
 S Add a ball, remove a Ring
+S Add die
 S Adjust
 S Adjust the chip spacing in stacks
 S Adjust your starting movements
@@ -205,6 +206,7 @@ K Dipole_family
 V Dipole
 K Dipole_variation
 V Dipole 8x8 with an asymmetric starting position
+S Discards
 S Done
 S Drop a tile to enlarge the board
 K Drop bunny chip
@@ -470,7 +472,8 @@ S Move one ship
 S Move stacks around any way you want to
 S Move the flipped stack
 S Move the supervisor
-S Move the supervisor up to 3 extra spaces when you move the supervisor
+K Move the supervisor up to 3 extra spaces when you move the supervisor
+V Move the supervisor up to 3 extra spaces when you move the supervisor.  Cost 3 camels + 3 gold.
 S Move your runners to the opposite side
 S Move, Split or Merge a stack
 S Moves are coming in
@@ -610,13 +613,18 @@ S Racing Games
 S Rearrange the gold fleet
 S Rearrange the silver fleet
 S Rearrange things any way you want to
-S Receive 1 extra camel when you take camels
-S Receive 1 extra cube when you place cubes in a souk
-S Receive 2 extra gold when you take gold
-S Receive 2 extra points for each completed souk
+K Receive 1 extra camel when you take camels
+V Receive 1 extra camel when you take camels.  Cost 2 camels.
+K Receive 1 extra cube when you place cubes in a souk
+V Receive 1 extra cube when you place cubes in a souk.  Cost 4 camels + 4 gold.
+K Receive 2 extra gold when you take gold
+V Receive 2 extra gold when you take gold.  Cost 2 camels + 2 gold
+K Receive 2 extra points for each completed souk
+V Receive 2 extra points for each completed souk.  Cost 4 camels + 4 gold.
 S Receive 3 camels
 S Receive 3 gold
-S Receive a card when you place a cube in the caravan
+K Receive a card when you place a cube in the caravan
+V Receive a card when you place a cube in the caravan.  Cost 3 camels + 3 gold.
 K Reconnecting
 V  ...Reconnecting...
 S Red
@@ -992,4 +1000,4 @@ K welcome
 V Welcome to the BoardSpace Lobby, version #1
 S you may increase your bid
 S your name
-N 778
+N 780

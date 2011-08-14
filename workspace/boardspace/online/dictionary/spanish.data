@@ -66,6 +66,7 @@ K Add a ball
 V A\u00f1ade una bola
 K Add a ball, remove a Ring
 V A\u00f1ade una bola, retira un anillo
+S Add die
 S Adjust
 S Adjust the chip spacing in stacks
 S Adjust your starting movements
@@ -250,6 +251,7 @@ K Dipole_family
 V Dipole
 K Dipole_variation
 V Dipole with the asymmetric starting position
+S Discards
 K Done
 V Hecho
 K Drop a tile to enlarge the board
@@ -556,7 +558,8 @@ V Mueve un barco
 S Move stacks around any way you want to
 S Move the flipped stack
 S Move the supervisor
-S Move the supervisor up to 3 extra spaces when you move the supervisor
+K Move the supervisor up to 3 extra spaces when you move the supervisor
+V Move the supervisor up to 3 extra spaces when you move the supervisor.  Cost 3 camels + 3 gold.
 S Move your runners to the opposite side
 S Move, Split or Merge a stack
 K Moves are coming in
@@ -724,13 +727,18 @@ K Rearrange the silver fleet
 V Reorganiza la tropa plateada
 K Rearrange things any way you want to
 V Reorganiza las cosas de la forma que quieras
-S Receive 1 extra camel when you take camels
-S Receive 1 extra cube when you place cubes in a souk
-S Receive 2 extra gold when you take gold
-S Receive 2 extra points for each completed souk
+K Receive 1 extra camel when you take camels
+V Receive 1 extra camel when you take camels.  Cost 2 camels.
+K Receive 1 extra cube when you place cubes in a souk
+V Receive 1 extra cube when you place cubes in a souk.  Cost 4 camels + 4 gold.
+K Receive 2 extra gold when you take gold
+V Receive 2 extra gold when you take gold.  Cost 2 camels + 2 gold
+K Receive 2 extra points for each completed souk
+V Receive 2 extra points for each completed souk.  Cost 4 camels + 4 gold.
 S Receive 3 camels
 S Receive 3 gold
-S Receive a card when you place a cube in the caravan
+K Receive a card when you place a cube in the caravan
+V Receive a card when you place a cube in the caravan.  Cost 3 camels + 3 gold.
 K Reconnecting
 V  ...Reconectando...
 S Red
@@ -1172,4 +1180,4 @@ V Bienvenido al Servidor de Juego, versi\u00f3n #1
 S you may increase your bid
 K your name
 V tu nombre
-N 778
+N 780

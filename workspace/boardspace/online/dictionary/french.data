@@ -75,6 +75,7 @@ K Add a ball
 V  Ajoutez une boule
 K Add a ball, remove a Ring
 V  Ajoutez une boule, \u00f4tez un anneau
+S Add die
 K Adjust
 V Ajuster
 S Adjust the chip spacing in stacks
@@ -309,6 +310,7 @@ K Dipole_family
 V Dipole
 K Dipole_variation
 V Dipole 8x8 : position initiale asym\u00e9trique
+S Discards
 K Done
 V Valider
 K Drop a tile to enlarge the board
@@ -670,7 +672,8 @@ V Bougez les piles o\u00f9 vous voulez
 K Move the flipped stack
 V Bougez le c\u00f4t\u00e9 face de la pile
 S Move the supervisor
-S Move the supervisor up to 3 extra spaces when you move the supervisor
+K Move the supervisor up to 3 extra spaces when you move the supervisor
+V Move the supervisor up to 3 extra spaces when you move the supervisor.  Cost 3 camels + 3 gold.
 K Move your runners to the opposite side
 V Fa\u00eetes atteindre le c\u00f4t\u00e9 oppos\u00e9 \u00e0 vos coureurs
 K Move, Split or Merge a stack
@@ -876,13 +879,18 @@ K Rearrange the silver fleet
 V Replacer la flotte d'argent
 K Rearrange things any way you want to
 V R\u00e9organisez comme vous le souhaitez
-S Receive 1 extra camel when you take camels
-S Receive 1 extra cube when you place cubes in a souk
-S Receive 2 extra gold when you take gold
-S Receive 2 extra points for each completed souk
+K Receive 1 extra camel when you take camels
+V Receive 1 extra camel when you take camels.  Cost 2 camels.
+K Receive 1 extra cube when you place cubes in a souk
+V Receive 1 extra cube when you place cubes in a souk.  Cost 4 camels + 4 gold.
+K Receive 2 extra gold when you take gold
+V Receive 2 extra gold when you take gold.  Cost 2 camels + 2 gold
+K Receive 2 extra points for each completed souk
+V Receive 2 extra points for each completed souk.  Cost 4 camels + 4 gold.
 S Receive 3 camels
 S Receive 3 gold
-S Receive a card when you place a cube in the caravan
+K Receive a card when you place a cube in the caravan
+V Receive a card when you place a cube in the caravan.  Cost 3 camels + 3 gold.
 K Reconnecting
 V  ... Reconnexion...
 K Red
@@ -1386,4 +1394,4 @@ K you may increase your bid
 V vous pouvez augmenter votre offre
 K your name
 V Votre nom
-N 778
+N 780

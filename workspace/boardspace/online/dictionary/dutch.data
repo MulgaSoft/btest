@@ -76,6 +76,7 @@ K Add a ball
 V Plaats een bal
 K Add a ball, remove a Ring
 V Plaats een bal, verwijder een Ring
+S Add die
 K Adjust
 V Aanpassen
 K Adjust the chip spacing in stacks
@@ -310,6 +311,7 @@ K Dipole_family
 V Dipole
 K Dipole_variation
 V Dipole 8x8 met a-symmetrische beginopstelling
+S Discards
 K Done
 V Klaar
 K Drop a tile to enlarge the board
@@ -670,7 +672,8 @@ V Beweeg kolommen naar believen
 K Move the flipped stack
 V Verplaats de omgedraaide kolom
 S Move the supervisor
-S Move the supervisor up to 3 extra spaces when you move the supervisor
+K Move the supervisor up to 3 extra spaces when you move the supervisor
+V Move the supervisor up to 3 extra spaces when you move the supervisor.  Cost 3 camels + 3 gold.
 K Move your runners to the opposite side
 V Breng je renners naar de overkant
 K Move, Split or Merge a stack
@@ -878,13 +881,18 @@ K Rearrange the silver fleet
 V Herschik de zilvervloot
 K Rearrange things any way you want to
 V Herschik alles naar believen
-S Receive 1 extra camel when you take camels
-S Receive 1 extra cube when you place cubes in a souk
-S Receive 2 extra gold when you take gold
-S Receive 2 extra points for each completed souk
+K Receive 1 extra camel when you take camels
+V Receive 1 extra camel when you take camels.  Cost 2 camels.
+K Receive 1 extra cube when you place cubes in a souk
+V Receive 1 extra cube when you place cubes in a souk.  Cost 4 camels + 4 gold.
+K Receive 2 extra gold when you take gold
+V Receive 2 extra gold when you take gold.  Cost 2 camels + 2 gold
+K Receive 2 extra points for each completed souk
+V Receive 2 extra points for each completed souk.  Cost 4 camels + 4 gold.
 S Receive 3 camels
 S Receive 3 gold
-S Receive a card when you place a cube in the caravan
+K Receive a card when you place a cube in the caravan
+V Receive a card when you place a cube in the caravan.  Cost 3 camels + 3 gold.
 K Reconnecting
 V  ...maakt verbinding...
 S Red
@@ -1390,4 +1398,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 778
+N 780

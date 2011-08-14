@@ -80,6 +80,8 @@ K Add a ball
 V Lege eine Kugel
 K Add a ball, remove a Ring
 V Lege eine Kugel und entferne einen Ring
+K Add die
+V W\u00e4hle einen zus\u00e4tzlichen W\u00fcrfel
 K Adjust
 V Anpassen
 S Adjust the chip spacing in stacks
@@ -110,7 +112,8 @@ V Normales Army of Frogs
 S Auction
 K Aug #1#2#3
 V #1 Aug, #2:#3 GMT
-S Bag
+K Bag
+V Sack
 S Bank
 K Barrel
 V Fass
@@ -328,6 +331,8 @@ K Dipole_family
 V Dipole
 K Dipole_variation
 V Dipole 8x8 mit asymmetrischer Startposition
+K Discards
+V Abwurfstapel
 K Done
 V Fertig
 K Drop a tile to enlarge the board
@@ -1445,4 +1450,4 @@ K you may increase your bid
 V Du kannst dein Gebot erh\u00f6hen
 K your name
 V Dein Name
-N 778
+N 780

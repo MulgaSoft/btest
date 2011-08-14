@@ -61,6 +61,7 @@ K Add a ball
 V Dodaj kul\u0119
 K Add a ball, remove a Ring
 V Dodaj kul\u0119, usu\u0144 pier\u015bcie\u0144
+S Add die
 S Adjust
 S Adjust the chip spacing in stacks
 S Adjust your starting movements
@@ -242,6 +243,7 @@ S Dipole-s_variation
 K Dipole_family
 V Dipole
 S Dipole_variation
+S Discards
 K Done
 V Zatwierd\u017a
 K Drop a tile to enlarge the board
@@ -556,7 +558,8 @@ V Zmieniaj po\u0142o\u017cenie stos\u00f3w jakkolwiek chcesz
 K Move the flipped stack
 V Przesu\u0144 odwr\u00f3cony stos
 S Move the supervisor
-S Move the supervisor up to 3 extra spaces when you move the supervisor
+K Move the supervisor up to 3 extra spaces when you move the supervisor
+V Move the supervisor up to 3 extra spaces when you move the supervisor.  Cost 3 camels + 3 gold.
 S Move your runners to the opposite side
 S Move, Split or Merge a stack
 K Moves are coming in
@@ -729,13 +732,18 @@ K Rearrange the silver fleet
 V Poprzestawiaj srebrn\u0105 flot\u0119
 K Rearrange things any way you want to
 V Poprzestawiaj wszystko jakkolwiek chcesz
-S Receive 1 extra camel when you take camels
-S Receive 1 extra cube when you place cubes in a souk
-S Receive 2 extra gold when you take gold
-S Receive 2 extra points for each completed souk
+K Receive 1 extra camel when you take camels
+V Receive 1 extra camel when you take camels.  Cost 2 camels.
+K Receive 1 extra cube when you place cubes in a souk
+V Receive 1 extra cube when you place cubes in a souk.  Cost 4 camels + 4 gold.
+K Receive 2 extra gold when you take gold
+V Receive 2 extra gold when you take gold.  Cost 2 camels + 2 gold
+K Receive 2 extra points for each completed souk
+V Receive 2 extra points for each completed souk.  Cost 4 camels + 4 gold.
 S Receive 3 camels
 S Receive 3 gold
-S Receive a card when you place a cube in the caravan
+K Receive a card when you place a cube in the caravan
+V Receive a card when you place a cube in the caravan.  Cost 3 camels + 3 gold.
 K Reconnecting
 V  ...\u0141acz\u0119 ponownie...
 S Red
@@ -1166,4 +1174,4 @@ V Witam w Pasa\u017cu BoardSpace, wersja #1
 S you may increase your bid
 K your name
 V twoje imi\u0119
-N 778
+N 780
