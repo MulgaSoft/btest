@@ -233,7 +233,7 @@ V Klicke auf Fertig, um die Geb\u00e4udephase zu beginnen
 K Click on Done to complete the capture
 V Auf Fertig klicken, um \u00dcbernahme auszuf\u00fchren
 K Click on Done to confirm paying a camel
-V Klick auf Fertig um das Zahlen des Kamels zu best\u00e4tigen
+V Klicke auf Fertig um das Zahlen des Kamels zu best\u00e4tigen
 K Click on Done to confirm swapping
 V Klick auf Fertig, um den Tausch zu best\u00e4tigen
 K Click on Done to confirm the Exchange
@@ -253,7 +253,7 @@ V Klicke Fertig, um das Spiel unentschieden zu beenden.
 K Click on Done to finish all captures
 V Klicke Fertig, um das Schlagen zu beenden
 K Click on Done to send cubes to the carvan
-V Klick auf Fertig um die Steine zur Karawane zu schicken
+V Klicke auf Fertig um die Steine zur Karawane zu schicken
 K Click on Gipf pieces to change their capture status
 V Klicke auf einen Gipfstein, um seinen Status zu \u00e4ndern
 K Click on the line to be captured
@@ -698,9 +698,9 @@ V Bewege die Stapel beliebig
 K Move the flipped stack
 V Den verdeckten Stapel bewegen
 K Move the supervisor
-V Ziehe den Aufseher
+V Bewege den Aufseher
 K Move the supervisor up to 3 extra spaces when you move the supervisor
-V Wenn du den Aufseher ziehst, bewege ihn um bis zu 3 Felder weiter 
+V Wenn du den Aufseher ziehst, bewege ihn um bis zu 3 Felder weiter.  Kosten: 3 Kamele + 3 Gold.
 K Move your runners to the opposite side
 V Bringe deine L\u00e4ufer auf die andere Seite
 K Move, Split or Merge a stack
@@ -781,9 +781,9 @@ V Lege #1 Stein(e) in das Fassviertel
 K Place #1 cubes in Barrel neighborhood, take a card, or move the supervisor #2 spaces
 V Lege #1 Stein(e) in das Fassviertel, ziehe eine Karte, oder bewege den Aufseher um #2 Felder
 K Place #1 cubes in Chest neighborhood
-V Lege #1 Stein in das Truhenviertel
+V Lege #1 Stein(e) in das Truhenviertel
 K Place #1 cubes in Chest neighborhood, take a card, or move the supervisor #2 spaces
-V Lege #1 Stein in das Truhenviertel, ziehe eine Karte, oder bewege den Aufseher um #2 Felder
+V Lege #1 Stein(e) in das Truhenviertel, ziehe eine Karte, oder bewege den Aufseher um #2 Felder
 K Place #1 cubes in Vase neighborhood
 V Lege #1 Stein(e) in das Amphorenviertel
 K Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 spaces
@@ -876,6 +876,8 @@ K Play Farmer
 V Spiele den Sch\u00e4fer
 K Play a card
 V Spiele eine Karte
+K Played
+V gespielt
 K Played on #1
 V Gespielt am #1
 K Player #1
@@ -923,19 +925,19 @@ V Ordne die silberne Flotte neu an
 K Rearrange things any way you want to
 V Ordne die Spielsteine beliebig an
 K Receive 1 extra camel when you take camels
-V Wenn du Kamele nimmst, erh\u00e4lst du 1 zus\u00e4tzliches
+V Wenn du Kamele nimmst, erh\u00e4lst du 1 zus\u00e4tzliches.  Kosten: 2 Kamele.
 K Receive 1 extra cube when you place cubes in a souk
-V Wenn du L\u00e4den belieferst, erh\u00e4lst du einen zus\u00e4tzlichen Stein
+V Wenn du L\u00e4den belieferst, erh\u00e4lst du einen zus\u00e4tzlichen Stein.  Kosten: 4 Kamele + 4 Gold.
 K Receive 2 extra gold when you take gold
-V Wenn du Gold nimmst, erh\u00e4lst du 2 zus\u00e4tzliche Gold
+V Wenn du Gold nimmst, erh\u00e4lst du 2 Gold zus\u00e4tzlich.  Kosten: 2 Kamele + 2 Gold.
 K Receive 2 extra points for each completed souk
-V Erhalte 2 zus\u00e4tzliche Siegpunkte f\u00fcr jeden vollst\u00e4ndigen Bazar
+V Du erh\u00e4lst 2 zus\u00e4tzliche Siegpunkte f\u00fcr jeden vollst\u00e4ndigen Basar.  Kosten: 4 Kamele + 4 Gold.
 K Receive 3 camels
-V Erhalte 3 Kamele
+V Du erh\u00e4lst 3 Kamele
 K Receive 3 gold
-V Erhalte 3 Gold
+V Du erh\u00e4lst 3 Gold
 K Receive a card when you place a cube in the caravan
-V Wenn dein Stein zur Karawane geschickt wird, erh\u00e4lst du 1 Karte
+V Wenn dein Stein zur Karawane geschickt wird, erh\u00e4lst du 1 Karte.  Kosten: 3 Kamele + 3 Gold.
 K Reconnecting
 V  ...verbinde erneut...
 K Red
@@ -1080,7 +1082,7 @@ V game to be announced
 K TBA3_variation
 V game to be announced
 K Table
-V Tafel
+V Tisch
 S Tablut
 K Tablut-11
 V Tablut 11x11
@@ -1100,7 +1102,7 @@ S Tajii
 K Tajii_family
 V Tajii
 K Take #1 camels
-V Nehme #1 Kamel(e)
+V Nimm #1 Kamel(e)
 K Take #1 camels, take a card, or move the supervisor #2 spaces
 V Nimm #1 Kamel(e), ziehe eine Karte, oder bewege den Aufseher um #2 Felder
 K Take #1 gold
@@ -1156,7 +1158,7 @@ V Normales Traboulet
 K Track Mice
 V Mausbewegung verfolgen
 K Trade camels for gold
-V Tausche Kamele gegen Gold
+V Tausche Kamele gegen Gold (oder umgekehrt)
 K Trade up to 10 gold for 1 victory point each
 V Tausche bis zu 10 Gold f\u00fcr jeweils 1 Siegpunkt ein
 K Trade up to 4 camels for 2 victory points each
@@ -1334,7 +1336,7 @@ V Verbinde die Seiten des Spielbretts deiner Farbe mit einer Kette von Spielstei
 K connecting
 V Verbinde mit 
 K do what it takes to win
-V Mache deinen n\u00e4chsten Zug
+V W\u00e4hle deinen n\u00e4chsten Zug
 K enterMessage
 V #1 betritt die Lobby
 K enters the room
@@ -1450,4 +1452,4 @@ K you may increase your bid
 V Du kannst dein Gebot erh\u00f6hen
 K your name
 V Dein Name
-N 780
+N 781
