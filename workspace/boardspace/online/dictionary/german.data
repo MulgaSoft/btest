@@ -700,7 +700,8 @@ V Den verdeckten Stapel bewegen
 K Move the supervisor
 V Bewege den Aufseher
 K Move the supervisor up to 3 extra spaces when you move the supervisor
-V Wenn du den Aufseher ziehst, bewege ihn um bis zu 3 Felder weiter.  Kosten: 3 Kamele + 3 Gold.
+V Wenn du den Aufseher ziehst, bewege ihn um bis zu 3 Felder weiter.  
+V Kosten: 3 Kamele + 3 Gold.
 K Move your runners to the opposite side
 V Bringe deine L\u00e4ufer auf die andere Seite
 K Move, Split or Merge a stack
@@ -925,19 +926,24 @@ V Ordne die silberne Flotte neu an
 K Rearrange things any way you want to
 V Ordne die Spielsteine beliebig an
 K Receive 1 extra camel when you take camels
-V Wenn du Kamele nimmst, erh\u00e4lst du 1 zus\u00e4tzliches.  Kosten: 2 Kamele.
+V Wenn du Kamele nimmst, erh\u00e4lst du 1 zus\u00e4tzliches.  
+V Kosten: 2 Kamele.
 K Receive 1 extra cube when you place cubes in a souk
-V Wenn du L\u00e4den belieferst, erh\u00e4lst du einen zus\u00e4tzlichen Stein.  Kosten: 4 Kamele + 4 Gold.
+V Wenn du L\u00e4den belieferst, erh\u00e4lst du einen zus\u00e4tzlichen Stein.  
+V Kosten: 4 Kamele + 4 Gold.
 K Receive 2 extra gold when you take gold
-V Wenn du Gold nimmst, erh\u00e4lst du 2 Gold zus\u00e4tzlich.  Kosten: 2 Kamele + 2 Gold.
+V Wenn du Gold nimmst, erh\u00e4lst du 2 Gold zus\u00e4tzlich.  
+V Kosten: 2 Kamele + 2 Gold.
 K Receive 2 extra points for each completed souk
-V Du erh\u00e4lst 2 zus\u00e4tzliche Siegpunkte f\u00fcr jeden vollst\u00e4ndigen Basar.  Kosten: 4 Kamele + 4 Gold.
+V Du erh\u00e4lst 2 zus\u00e4tzliche Siegpunkte f\u00fcr jeden vollst\u00e4ndigen Basar.  
+V Kosten: 4 Kamele + 4 Gold.
 K Receive 3 camels
 V Du erh\u00e4lst 3 Kamele
 K Receive 3 gold
 V Du erh\u00e4lst 3 Gold
 K Receive a card when you place a cube in the caravan
-V Wenn dein Stein zur Karawane geschickt wird, erh\u00e4lst du 1 Karte.  Kosten: 3 Kamele + 3 Gold.
+V Wenn dein Stein zur Karawane geschickt wird, erh\u00e4lst du 1 Karte.  
+V Kosten: 3 Kamele + 3 Gold.
 K Reconnecting
 V  ...verbinde erneut...
 K Red
