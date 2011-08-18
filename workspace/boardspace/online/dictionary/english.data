@@ -385,6 +385,8 @@ K LOA_family
 V Lines of Action
 K LOA_variation
 V standard 8x8 Lines of Action
+S Last Turn
+S Last Turn before Scoring
 S Launching...
 S LeHavre
 K LeHavre_family
@@ -1011,4 +1013,4 @@ K welcome
 V Welcome to the BoardSpace Lobby, version #1
 S you may increase your bid
 S your name
-N 781
+N 783

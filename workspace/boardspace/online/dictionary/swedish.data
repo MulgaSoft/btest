@@ -548,6 +548,8 @@ K LOA_family
 V Lines of Action
 K LOA_variation
 V Lines of Action standard 8x8
+S Last Turn
+S Last Turn before Scoring
 K Launching...
 V Startar...
 S LeHavre
@@ -681,7 +683,8 @@ K Move the flipped stack
 V Flytta den v\u00e4nda h\u00f6gen
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
-V Move the supervisor up to 3 extra spaces when you move the supervisor.  Cost 3 camels + 3 gold.
+V Move the supervisor up to 3 extra spaces when you move the supervisor.  
+V Cost 3 camels + 3 gold.
 K Move your runners to the opposite side
 V Flytta dina l\u00f6pare till den motsatta sidan
 K Move, Split or Merge a stack
@@ -844,6 +847,7 @@ V Spela mot #1
 K Play Farmer
 V Spela bonden
 S Play a card
+S Played
 K Played on #1
 V Spelad p\u00e5 #1
 K Player #1
@@ -890,17 +894,22 @@ V Omarrangera silverflottan
 K Rearrange things any way you want to
 V Arrangera p\u00e5 valfritt s\u00e4tt
 K Receive 1 extra camel when you take camels
-V Receive 1 extra camel when you take camels.  Cost 2 camels.
+V Receive 1 extra camel when you take camels.  
+V Cost 2 camels.
 K Receive 1 extra cube when you place cubes in a souk
-V Receive 1 extra cube when you place cubes in a souk.  Cost 4 camels + 4 gold.
+V Receive 1 extra cube when you place cubes in a souk.  
+V Cost 4 camels + 4 gold.
 K Receive 2 extra gold when you take gold
-V Receive 2 extra gold when you take gold.  Cost 2 camels + 2 gold
+V Receive 2 extra gold when you take gold.  
+V Cost 2 camels + 2 gold
 K Receive 2 extra points for each completed souk
-V Receive 2 extra points for each completed souk.  Cost 4 camels + 4 gold.
+V Receive 2 extra points for each completed souk.  
+V Cost 4 camels + 4 gold.
 S Receive 3 camels
 S Receive 3 gold
 K Receive a card when you place a cube in the caravan
-V Receive a card when you place a cube in the caravan.  Cost 3 camels + 3 gold.
+V Receive a card when you place a cube in the caravan.  
+V Cost 3 camels + 3 gold.
 K Reconnecting
 V  ...F\u00f6rs\u00f6ker \u00e5teransluta...
 K Red
@@ -1405,4 +1414,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 780
+N 783

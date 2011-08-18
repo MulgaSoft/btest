@@ -566,6 +566,8 @@ K LOA_family
 V Lines of Action
 K LOA_variation
 V Normales Lines of Action (8x8)
+S Last Turn
+S Last Turn before Scoring
 K Launching...
 V Wird gestartet...
 S LeHavre
@@ -1458,4 +1460,4 @@ K you may increase your bid
 V Du kannst dein Gebot erh\u00f6hen
 K your name
 V Dein Name
-N 781
+N 783

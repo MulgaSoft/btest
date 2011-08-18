@@ -549,6 +549,8 @@ K LOA_family
 V Lines of Action
 K LOA_variation
 V norma 8x8 Lines of Action
+S Last Turn
+S Last Turn before Scoring
 K Launching...
 V Lan\u0109ante...
 S LeHavre
@@ -683,7 +685,8 @@ K Move the flipped stack
 V Movu la renversitan stakon
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
-V Move the supervisor up to 3 extra spaces when you move the supervisor.  Cost 3 camels + 3 gold.
+V Move the supervisor up to 3 extra spaces when you move the supervisor.  
+V Cost 3 camels + 3 gold.
 K Move your runners to the opposite side
 V Movu viajn kuristojn al la kontra\u016d flanko
 K Move, Split or Merge a stack
@@ -846,6 +849,7 @@ V Ludi #1
 K Play Farmer
 V Ludu Farmisto
 S Play a card
+S Played
 K Played on #1
 V Ludis sur #1
 S Player #1
@@ -891,17 +895,22 @@ V Rearan\u011du la ar\u011dentan pecaron
 K Rearrange things any way you want to
 V Rearan\u011du a\u0135ojn la\u016d via pla\u0109o
 K Receive 1 extra camel when you take camels
-V Receive 1 extra camel when you take camels.  Cost 2 camels.
+V Receive 1 extra camel when you take camels.  
+V Cost 2 camels.
 K Receive 1 extra cube when you place cubes in a souk
-V Receive 1 extra cube when you place cubes in a souk.  Cost 4 camels + 4 gold.
+V Receive 1 extra cube when you place cubes in a souk.  
+V Cost 4 camels + 4 gold.
 K Receive 2 extra gold when you take gold
-V Receive 2 extra gold when you take gold.  Cost 2 camels + 2 gold
+V Receive 2 extra gold when you take gold.  
+V Cost 2 camels + 2 gold
 K Receive 2 extra points for each completed souk
-V Receive 2 extra points for each completed souk.  Cost 4 camels + 4 gold.
+V Receive 2 extra points for each completed souk.  
+V Cost 4 camels + 4 gold.
 S Receive 3 camels
 S Receive 3 gold
 K Receive a card when you place a cube in the caravan
-V Receive a card when you place a cube in the caravan.  Cost 3 camels + 3 gold.
+V Receive a card when you place a cube in the caravan.  
+V Cost 3 camels + 3 gold.
 K Reconnecting
 V  ...Rekonektante...
 K Red
@@ -1409,4 +1418,4 @@ K you may increase your bid
 V vi povas pliigi vian oferton
 K your name
 V via nomo
-N 780
+N 783

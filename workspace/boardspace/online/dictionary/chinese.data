@@ -552,6 +552,8 @@ K LOA_family
 V Lines of Action
 K LOA_variation
 V \u6807\u51c68x8 Lines of Action
+S Last Turn
+S Last Turn before Scoring
 K Launching...
 V \u6b63\u5728\u5f00\u59cb...
 S LeHavre
@@ -686,7 +688,8 @@ K Move the flipped stack
 V \u79fb\u52a8\u88ab\u7ffb\u8f6c\u7684\u68cb\u6808
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
-V Move the supervisor up to 3 extra spaces when you move the supervisor.  Cost 3 camels + 3 gold.
+V Move the supervisor up to 3 extra spaces when you move the supervisor.  
+V Cost 3 camels + 3 gold.
 K Move your runners to the opposite side
 V \u628a\u4f60\u6240\u6709\u7684\u68cb\u5b50\u8d70\u5230\u5bf9\u9762
 K Move, Split or Merge a stack
@@ -849,6 +852,7 @@ V \u548c#1\u6e38\u620f
 K Play Farmer
 V \u626e\u6f14\u519c\u6c11
 S Play a card
+S Played
 K Played on #1
 V \u73a9\u8fc7#1
 K Player #1
@@ -894,17 +898,22 @@ V \u91cd\u65b0\u6392\u5217\u94f6\u8272\u8272\u8230\u961f
 K Rearrange things any way you want to
 V \u6839\u636e\u9700\u8981\u4efb\u610f\u6446\u653e\u68cb\u76d8
 K Receive 1 extra camel when you take camels
-V Receive 1 extra camel when you take camels.  Cost 2 camels.
+V Receive 1 extra camel when you take camels.  
+V Cost 2 camels.
 K Receive 1 extra cube when you place cubes in a souk
-V Receive 1 extra cube when you place cubes in a souk.  Cost 4 camels + 4 gold.
+V Receive 1 extra cube when you place cubes in a souk.  
+V Cost 4 camels + 4 gold.
 K Receive 2 extra gold when you take gold
-V Receive 2 extra gold when you take gold.  Cost 2 camels + 2 gold
+V Receive 2 extra gold when you take gold.  
+V Cost 2 camels + 2 gold
 K Receive 2 extra points for each completed souk
-V Receive 2 extra points for each completed souk.  Cost 4 camels + 4 gold.
+V Receive 2 extra points for each completed souk.  
+V Cost 4 camels + 4 gold.
 S Receive 3 camels
 S Receive 3 gold
 K Receive a card when you place a cube in the caravan
-V Receive a card when you place a cube in the caravan.  Cost 3 camels + 3 gold.
+V Receive a card when you place a cube in the caravan.  
+V Cost 3 camels + 3 gold.
 K Reconnecting
 V  ...\u91cd\u65b0\u8fde\u63a5...
 K Red
@@ -1412,4 +1421,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-N 780
+N 783

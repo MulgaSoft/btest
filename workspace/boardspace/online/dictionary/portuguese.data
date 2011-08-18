@@ -518,6 +518,8 @@ K LOA_family
 V Lines of Action
 K LOA_variation
 V Jogue LOA 8x8
+S Last Turn
+S Last Turn before Scoring
 K Launching...
 V Iniciando...
 S LeHavre
@@ -638,7 +640,8 @@ K Move the flipped stack
 V Mova a pilha virada
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
-V Move the supervisor up to 3 extra spaces when you move the supervisor.  Cost 3 camels + 3 gold.
+V Move the supervisor up to 3 extra spaces when you move the supervisor.  
+V Cost 3 camels + 3 gold.
 K Move your runners to the opposite side
 V Mova seus corredores para o lado oposto
 K Move, Split or Merge a stack
@@ -796,6 +799,7 @@ V Enfrentar o #1
 K Play Farmer
 V Joga o Fazendeiro
 S Play a card
+S Played
 K Played on #1
 V Jogado em #1
 K Player #1
@@ -841,17 +845,22 @@ V Rearrange a frota prateada
 K Rearrange things any way you want to
 V Rearrange as coisas da maneira que quiser
 K Receive 1 extra camel when you take camels
-V Receive 1 extra camel when you take camels.  Cost 2 camels.
+V Receive 1 extra camel when you take camels.  
+V Cost 2 camels.
 K Receive 1 extra cube when you place cubes in a souk
-V Receive 1 extra cube when you place cubes in a souk.  Cost 4 camels + 4 gold.
+V Receive 1 extra cube when you place cubes in a souk.  
+V Cost 4 camels + 4 gold.
 K Receive 2 extra gold when you take gold
-V Receive 2 extra gold when you take gold.  Cost 2 camels + 2 gold
+V Receive 2 extra gold when you take gold.  
+V Cost 2 camels + 2 gold
 K Receive 2 extra points for each completed souk
-V Receive 2 extra points for each completed souk.  Cost 4 camels + 4 gold.
+V Receive 2 extra points for each completed souk.  
+V Cost 4 camels + 4 gold.
 S Receive 3 camels
 S Receive 3 gold
 K Receive a card when you place a cube in the caravan
-V Receive a card when you place a cube in the caravan.  Cost 3 camels + 3 gold.
+V Receive a card when you place a cube in the caravan.  
+V Cost 3 camels + 3 gold.
 K Reconnecting
 V  ...Reconectando...
 K Red
@@ -1328,4 +1337,4 @@ V Benvindo ao sal\u00e3o do BoardSpace, vers\u00e3o #1
 S you may increase your bid
 K your name
 V seu nome
-N 780
+N 783

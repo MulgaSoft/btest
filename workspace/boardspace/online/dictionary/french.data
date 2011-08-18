@@ -541,6 +541,8 @@ K LOA_family
 V Lines of Action
 K LOA_variation
 V standard 8x8 Lines of Action
+S Last Turn
+S Last Turn before Scoring
 K Launching...
 V Chargement en cours...
 S LeHavre
@@ -673,7 +675,8 @@ K Move the flipped stack
 V Bougez le c\u00f4t\u00e9 face de la pile
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
-V Move the supervisor up to 3 extra spaces when you move the supervisor.  Cost 3 camels + 3 gold.
+V Move the supervisor up to 3 extra spaces when you move the supervisor.  
+V Cost 3 camels + 3 gold.
 K Move your runners to the opposite side
 V Fa\u00eetes atteindre le c\u00f4t\u00e9 oppos\u00e9 \u00e0 vos coureurs
 K Move, Split or Merge a stack
@@ -835,6 +838,7 @@ V Contre #1
 K Play Farmer
 V Le fermier joue
 S Play a card
+S Played
 K Played on #1
 V Jou\u00e9 en #1
 K Player #1
@@ -880,17 +884,22 @@ V Replacer la flotte d'argent
 K Rearrange things any way you want to
 V R\u00e9organisez comme vous le souhaitez
 K Receive 1 extra camel when you take camels
-V Receive 1 extra camel when you take camels.  Cost 2 camels.
+V Receive 1 extra camel when you take camels.  
+V Cost 2 camels.
 K Receive 1 extra cube when you place cubes in a souk
-V Receive 1 extra cube when you place cubes in a souk.  Cost 4 camels + 4 gold.
+V Receive 1 extra cube when you place cubes in a souk.  
+V Cost 4 camels + 4 gold.
 K Receive 2 extra gold when you take gold
-V Receive 2 extra gold when you take gold.  Cost 2 camels + 2 gold
+V Receive 2 extra gold when you take gold.  
+V Cost 2 camels + 2 gold
 K Receive 2 extra points for each completed souk
-V Receive 2 extra points for each completed souk.  Cost 4 camels + 4 gold.
+V Receive 2 extra points for each completed souk.  
+V Cost 4 camels + 4 gold.
 S Receive 3 camels
 S Receive 3 gold
 K Receive a card when you place a cube in the caravan
-V Receive a card when you place a cube in the caravan.  Cost 3 camels + 3 gold.
+V Receive a card when you place a cube in the caravan.  
+V Cost 3 camels + 3 gold.
 K Reconnecting
 V  ... Reconnexion...
 K Red
@@ -1394,4 +1403,4 @@ K you may increase your bid
 V vous pouvez augmenter votre offre
 K your name
 V Votre nom
-N 780
+N 783

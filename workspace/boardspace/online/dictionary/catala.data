@@ -431,6 +431,8 @@ K LOA_family
 V Lines of Action
 K LOA_variation
 V standard 8x8 Lines of Action
+S Last Turn
+S Last Turn before Scoring
 K Launching...
 V Iniciant...
 S LeHavre
@@ -526,7 +528,8 @@ S Move stacks around any way you want to
 S Move the flipped stack
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
-V Move the supervisor up to 3 extra spaces when you move the supervisor.  Cost 3 camels + 3 gold.
+V Move the supervisor up to 3 extra spaces when you move the supervisor.  
+V Cost 3 camels + 3 gold.
 S Move your runners to the opposite side
 S Move, Split or Merge a stack
 K Moves are coming in
@@ -641,6 +644,7 @@ K Play #1
 V Juga #1
 S Play Farmer
 S Play a card
+S Played
 S Played on #1
 K Player #1
 V Jugador #1
@@ -679,17 +683,22 @@ S Rearrange the silver fleet
 K Rearrange things any way you want to
 V Torna-ho a col\u00b7locar tot de la manera que vulguis
 K Receive 1 extra camel when you take camels
-V Receive 1 extra camel when you take camels.  Cost 2 camels.
+V Receive 1 extra camel when you take camels.  
+V Cost 2 camels.
 K Receive 1 extra cube when you place cubes in a souk
-V Receive 1 extra cube when you place cubes in a souk.  Cost 4 camels + 4 gold.
+V Receive 1 extra cube when you place cubes in a souk.  
+V Cost 4 camels + 4 gold.
 K Receive 2 extra gold when you take gold
-V Receive 2 extra gold when you take gold.  Cost 2 camels + 2 gold
+V Receive 2 extra gold when you take gold.  
+V Cost 2 camels + 2 gold
 K Receive 2 extra points for each completed souk
-V Receive 2 extra points for each completed souk.  Cost 4 camels + 4 gold.
+V Receive 2 extra points for each completed souk.  
+V Cost 4 camels + 4 gold.
 S Receive 3 camels
 S Receive 3 gold
 K Receive a card when you place a cube in the caravan
-V Receive a card when you place a cube in the caravan.  Cost 3 camels + 3 gold.
+V Receive a card when you place a cube in the caravan.  
+V Cost 3 camels + 3 gold.
 K Reconnecting
 V  ...Reconnectant...
 S Red
@@ -1109,4 +1118,4 @@ V Benvingut a Boardspace.net, versi\u00f3 #1
 S you may increase your bid
 K your name
 V el teu nom
-N 780
+N 783
