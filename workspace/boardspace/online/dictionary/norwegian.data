@@ -363,6 +363,7 @@ K Game
 V Spill
 K Game Over
 V Partiet er over.
+S Game Over!  Final scores 
 K Game Room
 V Spillerom
 K Game in progress...
@@ -966,6 +967,9 @@ V Spor musene
 S Trade camels for gold
 S Trade up to 10 gold for 1 victory point each
 S Trade up to 4 camels for 2 victory points each
+S Traded: #1 camels for #2 points
+S Traded: #1 gold become camels
+S Traded: #1 gold for #2 points
 S Traditional Pieces
 S Trax
 K Trax_family
@@ -1217,4 +1221,4 @@ V Velkommen til BoardSpace, versjon #1.
 S you may increase your bid
 K your name
 V ditt navn
-N 783
+N 787

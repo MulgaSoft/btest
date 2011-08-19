@@ -430,6 +430,7 @@ K Game
 V Partio
 K Game Over
 V Partio Finita
+S Game Over!  Final scores 
 K Game Room
 V Partia \u0108ambro
 K Game in progress...
@@ -1126,6 +1127,9 @@ V Spuri Musojn
 S Trade camels for gold
 S Trade up to 10 gold for 1 victory point each
 S Trade up to 4 camels for 2 victory points each
+S Traded: #1 camels for #2 points
+S Traded: #1 gold become camels
+S Traded: #1 gold for #2 points
 K Traditional Pieces
 V Tradiciaj Pecoj
 S Trax
@@ -1418,4 +1422,4 @@ K you may increase your bid
 V vi povas pliigi vian oferton
 K your name
 V via nomo
-N 783
+N 787

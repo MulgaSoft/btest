@@ -429,6 +429,7 @@ K Game
 V Spel
 K Game Over
 V Spelet \u00e4r slut
+S Game Over!  Final scores 
 K Game Room
 V Spelrum
 K Game in progress...
@@ -1125,6 +1126,9 @@ V Sp\u00e5ra mus
 S Trade camels for gold
 S Trade up to 10 gold for 1 victory point each
 S Trade up to 4 camels for 2 victory points each
+S Traded: #1 camels for #2 points
+S Traded: #1 gold become camels
+S Traded: #1 gold for #2 points
 K Traditional Pieces
 V Traditionella pj\u00e4ser
 S Trax
@@ -1414,4 +1418,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 783
+N 787

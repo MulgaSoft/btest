@@ -432,6 +432,7 @@ K Game
 V \u6e38\u620f
 K Game Over
 V \u6e38\u620f\u7ed3\u675f
+S Game Over!  Final scores 
 K Game Room
 V \u6e38\u620f\u623f\u95f4
 K Game in progress...
@@ -1129,6 +1130,9 @@ V \u8ffd\u8e2a
 S Trade camels for gold
 S Trade up to 10 gold for 1 victory point each
 S Trade up to 4 camels for 2 victory points each
+S Traded: #1 camels for #2 points
+S Traded: #1 gold become camels
+S Traded: #1 gold for #2 points
 K Traditional Pieces
 V \u4f20\u7edf\u68cb\u5b50
 S Trax
@@ -1421,4 +1425,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-N 783
+N 787

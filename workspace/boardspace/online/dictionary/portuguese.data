@@ -403,6 +403,7 @@ K Game
 V Jogo
 K Game Over
 V Fim de Jogo
+S Game Over!  Final scores 
 K Game Room
 V Sala de Jogo
 K Game in progress...
@@ -1064,6 +1065,9 @@ V Rastrear Mouse
 S Trade camels for gold
 S Trade up to 10 gold for 1 victory point each
 S Trade up to 4 camels for 2 victory points each
+S Traded: #1 camels for #2 points
+S Traded: #1 gold become camels
+S Traded: #1 gold for #2 points
 K Traditional Pieces
 V Pe\u00e7as Tradicionais
 S Trax
@@ -1337,4 +1341,4 @@ V Benvindo ao sal\u00e3o do BoardSpace, vers\u00e3o #1
 S you may increase your bid
 K your name
 V seu nome
-N 783
+N 787

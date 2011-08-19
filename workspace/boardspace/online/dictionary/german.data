@@ -448,6 +448,8 @@ K Game
 V Spiel
 K Game Over
 V Spiel beendet
+K Game Over!  Final scores 
+V Spielende! Endstand
 K Game Room
 V Spiel-Raum
 K Game in progress...
@@ -566,8 +568,10 @@ K LOA_family
 V Lines of Action
 K LOA_variation
 V Normales Lines of Action (8x8)
-S Last Turn
-S Last Turn before Scoring
+K Last Turn
+V Letzter Zug
+K Last Turn before Scoring
+V Letzter Zug vor der Wertung
 K Launching...
 V Wird gestartet...
 S LeHavre
@@ -1171,6 +1175,12 @@ K Trade up to 10 gold for 1 victory point each
 V Tausche bis zu 10 Gold f\u00fcr jeweils 1 Siegpunkt ein
 K Trade up to 4 camels for 2 victory points each
 V Tausche bis zu 4 Kamele f\u00fcr jeweils 2 Siegpunkt ein
+K Traded: #1 camels for #2 points
+V Getauscht: #1 Kamele f\u00fcr 2 Punkte
+K Traded: #1 gold become camels
+V Getauscht: #1 Gold werden zu Kamelen
+K Traded: #1 gold for #2 points
+V Getauscht: #1 Gold f\u00fcr #2 Punkte
 K Traditional Pieces
 V Traditionelle Spielsteine
 S Trax
@@ -1460,4 +1470,4 @@ K you may increase your bid
 V Du kannst dein Gebot erh\u00f6hen
 K your name
 V Dein Name
-N 783
+N 787

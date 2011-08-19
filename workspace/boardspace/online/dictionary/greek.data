@@ -287,6 +287,7 @@ V Army of Frogs
 S From #1
 S Game
 S Game Over
+S Game Over!  Final scores 
 S Game Room
 S Game in progress...
 S Game timed out.  Session has ended.
@@ -781,6 +782,9 @@ S Track Mice
 S Trade camels for gold
 S Trade up to 10 gold for 1 victory point each
 S Trade up to 4 camels for 2 victory points each
+S Traded: #1 camels for #2 points
+S Traded: #1 gold become camels
+S Traded: #1 gold for #2 points
 S Traditional Pieces
 S Trax
 K Trax_family
@@ -1009,4 +1013,4 @@ K welcome
 V Welcome to the BoardSpace Lobby, version #1
 S you may increase your bid
 S your name
-N 783
+N 787

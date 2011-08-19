@@ -424,6 +424,7 @@ K Game
 V Jeu
 K Game Over
 V Partie termin\u00e9e
+S Game Over!  Final scores 
 K Game Room
 V Salle de jeu
 K Game in progress...
@@ -1115,6 +1116,9 @@ V Rep\u00e9rer la souris
 S Trade camels for gold
 S Trade up to 10 gold for 1 victory point each
 S Trade up to 4 camels for 2 victory points each
+S Traded: #1 camels for #2 points
+S Traded: #1 gold become camels
+S Traded: #1 gold for #2 points
 K Traditional Pieces
 V Pi\u00e8ces traditionnelles
 S Trax
@@ -1403,4 +1407,4 @@ K you may increase your bid
 V vous pouvez augmenter votre offre
 K your name
 V Votre nom
-N 783
+N 787
