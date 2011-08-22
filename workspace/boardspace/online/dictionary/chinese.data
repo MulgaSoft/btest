@@ -135,7 +135,8 @@ K BreakingAway_variation
 V \u666e\u901aBreaking Away
 S Brown Palace
 S Brown Palace Bonus (3 points)
-S Build a building, play cards, or click on Done
+K Build a building, play cards, or click on Done
+V Play cards,  then Build one building. Click on Done to end your turn.
 K Build adjacent to the man you moved
 V \u5728\u521a\u653e\u7f6e\u7684\u4eba\u7684\u76f8\u90bb\u5904\u76d6\u5854
 K Build an initial stack of 2 to be placed
