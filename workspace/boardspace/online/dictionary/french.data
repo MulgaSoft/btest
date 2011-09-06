@@ -1,8 +1,11 @@
 K #1 #2 Containers
 V #1 #2 Conteneurs
-S #1 Camels
-S #1 Cards
-S #1 Gold
+K #1 Camels
+V #1 Chameaux
+K #1 Cards
+V #1 Cartes
+K #1 Gold
+V #1 Or
 S #1 Machine
 K #1 Ship
 V #1 Navire
@@ -70,12 +73,14 @@ V Accepter ce cr\u00e9dit de financement ou non
 S Actions
 K Active in
 V Actif en
-S Add Extra Dice, or click Done to Roll
+K Add Extra Dice, or click Done to Roll
+V Ajouter le d\u00e9 suppl\u00e9mentaire ou valider pour lancer
 K Add a ball
 V  Ajoutez une boule
 K Add a ball, remove a Ring
 V  Ajoutez une boule, \u00f4tez un anneau
-S Add die
+K Add die
+V Ajouter le d\u00e9
 K Adjust
 V Ajuster
 S Adjust the chip spacing in stacks
@@ -107,10 +112,12 @@ K Auction
 V Ench\u00e8res
 K Aug #1#2#3
 V #1 ao\u00fb, #2:#3 GMT
-S Bag
+K Bag
+V Sac
 K Bank
 V Banque
-S Barrel
+K Barrel
+V Barril
 K Become a Spectator
 V Devenir spectateur
 K Bid $ #1
@@ -133,19 +140,23 @@ V standard Breaking Away
 S Brown Palace
 S Brown Palace Bonus (3 points)
 K Build a building, play cards, or click on Done
-V Play cards,  then Build one building. Click on Done to end your turn.
+V Jouez des cartes puis construisez un b\u00e2timent. Validez pour terminer votre tour.
 K Build adjacent to the man you moved
 V construisez au voisinage du pion d\u00e9plac\u00e9.
 K Build an initial stack of 2 to be placed
 V D\u00e9marrez en utilisant une pile de 2 pi\u00e8ces
-S Buildings
-S Buy a building with no camels
-S Buy a building with no gold
+K Buildings
+V B\u00e2timents
+K Buy a building with no camels
+V Acher un b\u00e2timent sans chameaux
+K Buy a building with no gold
+V Acheter un b\u00e2timent sans or
 K Buy the goods for $#1
 V Acheter les marchandises pour $#1
 K Calling server...
 V Contact du serveur...
-S Camels
+K Camels
+V Chameaux
 S Cannon
 K Cannon_family
 V Cannon
@@ -173,8 +184,10 @@ K Capture your opponent's town
 V D\u00e9truisez la cit\u00e9 adverse
 K Capturing Games
 V Jeux de captures
-S Card
-S Cards
+K Card
+V Carte
+K Cards
+V Cartes
 S Cash/Score
 K Chat Room
 V Salle de discussion
@@ -185,7 +198,8 @@ K Che_variation
 V standard Che
 K Checkmate your opponent's general
 V Matez le g\u00e9n\u00e9ral adverse
-S Chest
+K Chest
+V Coffre
 K Choose the penalty for non-payment of interest
 V Choisir la p\u00e9nalit\u00e9 de non-payement des int\u00e9r\u00eats
 K Click DONE to confirm this placement
@@ -214,17 +228,20 @@ K Click Done to decline a draw
 V Validez pour refuser la nulle
 K Click Done to offer a draw
 V Validez pour proposer nulle
-S Click on Done to begin the building phase
+K Click on Done to begin the building phase
+V Valider pour d\u00e9buter la phase de construction
 K Click on Done to complete the capture
 V Cliquez sur Valider pour confirmer la capture
-S Click on Done to confirm paying a camel
+K Click on Done to confirm paying a camel
+V Valider pour confirmer le paiement d'un chameau
 K Click on Done to confirm swapping
 V Cliquez sur Valider pour confirmer l'\u00e9change
 K Click on Done to confirm the Exchange
 V Cliquez sur Valider pour confirmer l'\u00e9change
 K Click on Done to confirm this Dance
 V Cliquez sur Valider pour confirmer cette danse
-S Click on Done to confirm this card action
+K Click on Done to confirm this card action
+V Valider pour confirmer cette carte action
 K Click on Done to confirm your resignation
 V Cliquez sur Valider pour confirmer votre abandon
 K Click on Done to end the game
@@ -235,7 +252,8 @@ K Click on Done to end the game as a Draw
 V Cliquez sur Valider pour finir la partie en Nulle
 K Click on Done to finish all captures
 V Cliquez sur Valider pour terminer les captures
-S Click on Done to send cubes to the carvan
+K Click on Done to send cubes to the carvan
+V Valider pour envoyer des cubes \u00e0 la caravane 
 K Click on Gipf pieces to change their capture status
 V Cliquez sur les pi\u00e8ces Gipf pour les retirer ou non.
 K Click on the line to be captured
@@ -300,7 +318,8 @@ K Designate a row to capture
 V Indiquez une ligne \u00e0 capturer
 K Designate a row to capture before your turn
 V Indiquez une ligne \u00e0 capturer avant votre coup
-S Dice
+K Dice
+V D\u00e9s
 K Dipole
 V Dipole (standard)
 K Dipole-s
@@ -311,7 +330,8 @@ K Dipole_family
 V Dipole
 K Dipole_variation
 V Dipole 8x8 : position initiale asym\u00e9trique
-S Discards
+K Discards
+V D\u00e9fausse
 K Done
 V Valider
 K Drop a tile to enlarge the board
@@ -425,7 +445,8 @@ K Game
 V Jeu
 K Game Over
 V Partie termin\u00e9e
-S Game Over!  Final scores 
+K Game Over!  Final scores 
+V Game over! Scores finaux
 K Game Room
 V Salle de jeu
 K Game in progress...
@@ -461,7 +482,8 @@ K Gobbletm
 V GobbletM
 K Gobbletm_variation
 V Version m\u00e9moire, si un gobblet est soulev\u00e9 il doit \u00eatre jou\u00e9
-S Gold
+K Gold
+V Or
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -543,8 +565,10 @@ K LOA_family
 V Lines of Action
 K LOA_variation
 V standard 8x8 Lines of Action
-S Last Turn
-S Last Turn before Scoring
+K Last Turn
+V Dernier tour
+K Last Turn before Scoring
+V Dernier tour avant d\u00e9compte
 K Launching...
 V Chargement en cours...
 S LeHavre
@@ -675,10 +699,10 @@ K Move stacks around any way you want to
 V Bougez les piles o\u00f9 vous voulez
 K Move the flipped stack
 V Bougez le c\u00f4t\u00e9 face de la pile
-S Move the supervisor
+K Move the supervisor
+V D\u00e9placer le superviseur
 K Move the supervisor up to 3 extra spaces when you move the supervisor
-V Move the supervisor up to 3 extra spaces when you move the supervisor.  
-V Cost 3 camels + 3 gold.
+V D\u00e9placer le superviseur jusqu'\u00e0 3 cases lors d'un d\u00e9placement. Co\u00fbt : 3 chameaux + 3 or.
 K Move your runners to the opposite side
 V Fa\u00eetes atteindre le c\u00f4t\u00e9 oppos\u00e9 \u00e0 vos coureurs
 K Move, Split or Merge a stack
@@ -739,22 +763,32 @@ K Palago_variation
 V standard Palago
 K Pass
 V Passer
-S Pay a camel or click Done to send the cube to the caravan
+K Pay a camel or click Done to send the cube to the caravan
+V Jouer un chameau ou valider pour envoyer le cube \u00e0 la caravane
 K Pick a ring to place a chip and move
 V D\u00e9placez un anneau pour placer un jeton
-S Pick the first cube to send to the caravan
+K Pick the first cube to send to the caravan
+V Choisir le premier cube \u00e0 envoyer \u00e0 la caravane
 K Pick the stack to move
 V S\u00e9lectionnez la pile \u00e0 d\u00e9placer
 K Pick up and Continue your move
 V Reprenez et continuez votre d\u00e9placement
-S Place #1 cubes in Bag neighborhood
-S Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
-S Place #1 cubes in Barrel neighborhood
-S Place #1 cubes in Barrel neighborhood, take a card, or move the supervisor #2 spaces
-S Place #1 cubes in Chest neighborhood
-S Place #1 cubes in Chest neighborhood, take a card, or move the supervisor #2 spaces
-S Place #1 cubes in Vase neighborhood
-S Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 spaces
+K Place #1 cubes in Bag neighborhood
+V Placer #1 cubes dans le sac voisin
+K Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
+V Placer #1 cubes dans le sac voisin, prendre une carte ou d\u00e9placer le superviseur de #2 cases
+K Place #1 cubes in Barrel neighborhood
+V Placer #1 cubes dans le baril voisin
+K Place #1 cubes in Barrel neighborhood, take a card, or move the supervisor #2 spaces
+V Placer #1 cubes dans le baril voisin, prendre une carte ou d\u00e9placer le superviseur de #2 cases
+K Place #1 cubes in Chest neighborhood
+V Placer #1 cubes dans le coffre voisin
+K Place #1 cubes in Chest neighborhood, take a card, or move the supervisor #2 spaces
+V Placer #1 cubes dans le coffre voisin, prendre une carte ou d\u00e9placer le superviseur de #2 cases
+K Place #1 cubes in Vase neighborhood
+V Placer #1 cubes dans le vase voisin
+K Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 spaces
+V Placer #1 cubes dans le vase voisin, prendre une carte ou d\u00e9placer le superviseur de #2 cases
 K Place a Chip, or a Jewel, or a chip from the Store
 V Placez un jeton ou une pierre ou un jeton de magasin
 K Place a Frog on the board
@@ -767,8 +801,10 @@ K Place a chip on a starting point
 V Placez une pi\u00e8ce \u00e0 son point de d\u00e9part
 S Place a chip on the board
 S Place a chip, or shirt or rotate a board
-S Place a cube in any unclaimed souk
-S Place a cube on the caravan
+K Place a cube in any unclaimed souk
+V Placer un cube dans un souk non attribu\u00e9
+K Place a cube on the caravan
+V Placer un cube sur la caravane
 K Place a gobblet on the board, or move a gobblet
 V Placez un gobblet sur le plateau, ou d\u00e9placez un gobelet
 K Place a marker on any empty cell
@@ -839,13 +875,16 @@ K Play #1
 V Contre #1
 K Play Farmer
 V Le fermier joue
-S Play a card
-S Played
+K Play a card
+V Jouer une carte
+K Played
+V Jou\u00e9s
 K Played on #1
 V Jou\u00e9 en #1
 K Player #1
 V Joueur #1
-S Player Cubes
+K Player Cubes
+V Cubes du joueur
 K Player is 
 V Le joueur est 
 K Players
@@ -886,22 +925,19 @@ V Replacer la flotte d'argent
 K Rearrange things any way you want to
 V R\u00e9organisez comme vous le souhaitez
 K Receive 1 extra camel when you take camels
-V Receive 1 extra camel when you take camels.  
-V Cost 2 camels.
+V Recevoir 1 chameau sup. quand vous prenez des chameaux. Co\u00fbt : 2 chameaux.
 K Receive 1 extra cube when you place cubes in a souk
-V Receive 1 extra cube when you place cubes in a souk.  
-V Cost 4 camels + 4 gold.
+V Recevoir 1 cube sup. quand vous placez des cubes dans un souk. Co\u00fbt : 4 chameaux + 4 or.
 K Receive 2 extra gold when you take gold
-V Receive 2 extra gold when you take gold.  
-V Cost 2 camels + 2 gold
+V Recevoir 2 or sup. quand vous prenez de l'or. Co\u00fbt : 2 chameaux + 2 or.
 K Receive 2 extra points for each completed souk
-V Receive 2 extra points for each completed souk.  
-V Cost 4 camels + 4 gold.
-S Receive 3 camels
-S Receive 3 gold
+V Recevoir 2 points sup. pour chaque souk compl\u00e9t\u00e9. Co\u00fbt : 4 chameaux + 4 or.
+K Receive 3 camels
+V Recevoir 3 chameaux.
+K Receive 3 gold
+V Recevoir 3 or
 K Receive a card when you place a cube in the caravan
-V Receive a card when you place a cube in the caravan.  
-V Cost 3 camels + 3 gold.
+V Recevoir une carte quand vous placez un cube dans la caravane. Co\u00fbt : 3 chameaux + 3 or.
 K Reconnecting
 V  ... Reconnexion...
 K Red
@@ -953,8 +989,10 @@ K Select Game
 V Choix de la partie
 K Select Robot
 V Choix du Robot
-S Select Row #1
-S Select a group of dice
+K Select Row #1
+V S\u00e9lectionner ligne #1
+K Select a group of dice
+V S\u00e9lectionner un groupe de d\u00e9s.
 K Select a ring to remove
 V Choisissez un anneau \u00e0 enlever
 K Select a row of 5 to remove
@@ -1065,13 +1103,18 @@ V Tablut
 S Tajii
 K Tajii_family
 V Tajii
-S Take #1 camels
-S Take #1 camels, take a card, or move the supervisor #2 spaces
-S Take #1 gold
-S Take #1 gold, take a card, or move the supervisor #2 spaces
+K Take #1 camels
+V Prendre #1 chameaux
+K Take #1 camels, take a card, or move the supervisor #2 spaces
+V Prendre #1 chameaux, prendre une carte ou d\u00e9placer le superviseur de #2 cases
+K Take #1 gold
+V Prendre #1 or
+K Take #1 gold, take a card, or move the supervisor #2 spaces
+V Prendre #1 or, prendre une carte ou d\u00e9placer le superviseur de #2 cases
 K Take Over Playing
 V Jouer \u00e0 la place de #1
-S Take a card
+K Take a card
+V Prendre une carte
 K Take your first action
 V Jouez votre premi\u00e8re action
 K Take your second action
@@ -1086,8 +1129,10 @@ K The next finish bonus is #1
 V Le bonus d'arriv\u00e9e est de #1
 K The next sprint bonus is #1
 V Prochain sprint : bonus de #1 points
-S This die will be rolled
-S This die will not be rolled
+K This die will be rolled
+V Ce d\u00e9 sera lanc\u00e9
+K This die will not be rolled
+V Ce d\u00e9 ne sera pas lanc\u00e9
 K This is now a private room
 V Cette salle est maintenant priv\u00e9e
 K This is now a public room
@@ -1114,12 +1159,18 @@ K Traboulet_variation
 V Traboulet standard
 K Track Mice
 V Rep\u00e9rer la souris
-S Trade camels for gold
-S Trade up to 10 gold for 1 victory point each
-S Trade up to 4 camels for 2 victory points each
-S Traded: #1 camels for #2 points
-S Traded: #1 gold become camels
-S Traded: #1 gold for #2 points
+K Trade camels for gold
+V Echanger des chameaux contre de l'or
+K Trade up to 10 gold for 1 victory point each
+V Echanger jusqu'\u00e0 10 or pour 1 point de victoire chacun
+K Trade up to 4 camels for 2 victory points each
+V Echanger jusqu'\u00e0 4 chameaux pour 2 points de victoire chacun
+K Traded: #1 camels for #2 points
+V Echang\u00e9s : #1 chameaux pour #2 points
+K Traded: #1 gold become camels
+V Echang\u00e9s : #1 or en chameaux
+K Traded: #1 gold for #2 points
+V Echang\u00e9s : #1 or pour #2 points
 K Traditional Pieces
 V Pi\u00e8ces traditionnelles
 S Trax
@@ -1253,7 +1304,7 @@ S Yspahan
 K Yspahan_family
 V Yspahan
 K Yspahan_variation
-V standard Yspahan
+V Standard Yspahan
 K Zertz
 V Z\u00e8rtz
 K Zertz+11
@@ -1291,7 +1342,8 @@ K connect opposite sides with a chain of markers
 V reliez les c\u00f4t\u00e9s oppos\u00e9s par une cha\u00eene de jetons
 K connecting
 V Connexion \u00e0 
-S do what it takes to win
+K do what it takes to win
+V faire ce qu'il faut pour gagner
 K enterMessage
 V #1 est entr\u00e9 dans le salon.
 K enters the room
