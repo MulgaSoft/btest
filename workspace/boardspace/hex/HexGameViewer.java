@@ -118,15 +118,24 @@ public class HexGameViewer extends commonCanvas
     //public Rectangle fullRect = addRect("fullRect"); //the whole viewer area
     //public Rectangle boardRect = addRect("boardRect"); //the actual board, normally at the left edge
     //public Rectangle chatRect = addRect("chatRect");
-    private Rectangle logRect = addRect("logRect"); //the game log, normally off the the right
+    
+    //
+    // addZoneRect also sets the rectangle as specifically known to the 
+    // mouse tracker.  The zones are considered in the order that they are
+    // added, so the smaller ones should be first, then any catchall.
+    //
+    // zones ought to be mostly irrelevant if there is only one board layout.
+    //
+    private Rectangle logRect = addZoneRect("logRect"); //the game log, normally off the the right
+    private Rectangle secondPlayerChipRect = addZoneRect("secondPlayerChipRect");
+    private Rectangle firstPlayerChipRect = addZoneRect("firstPlayerChipRect");
     private Rectangle stateRect = addRect("stateRect");
-    private Rectangle doneRect = addRect("doneRect");
+    private Rectangle doneRect = addZoneRect("doneRect");
     private Rectangle editRect = addRect("editRect");
     private Rectangle goalRect = addRect("goalRect");
+    private Rectangle leftSide = addZoneRect("left");
     //private Rectangle repRect = addRect("repRect");	// not needed for hex
     private Rectangle progressRect = addRect("progressRect");
-    private Rectangle secondPlayerChipRect = addRect("secondPlayerChipRect");
-    private Rectangle firstPlayerChipRect = addRect("firstPlayerChipRect");
 	private Rectangle swapRect=addRect("swapRect");
 
 	// private menu items
@@ -254,10 +263,15 @@ public class HexGameViewer extends commonCanvas
         fullRect.height = height;
 
         boardRect.x = 0;		// the main board
-        boardRect.y = wideFormat ? CELLSIZE : chatHeight;
+        boardRect.y = wideFormat ? 0 : chatHeight;
         boardRect.width = CELLSIZE * (int)(nrows*1.5);
         boardRect.height = CELLSIZE * (nrows );
 
+        leftSide.x = 0;
+        leftSide.y = boardRect.y;
+        leftSide.width = fullRect.width;
+        leftSide.height = fullRect.height-leftSide.y;
+        
         stateRect.x = CELLSIZE/2;
         stateRect.y = boardRect.y+CELLSIZE/2;
         stateRect.height = CELLSIZE/2;
@@ -382,11 +396,6 @@ public class HexGameViewer extends commonCanvas
             doneRect.height = editRect.height;
            }}
  
-         // not needed for hex, but other games might differ
-        //repRect.x = doneRect.x;
-        //repRect.width = 5*CELLSIZE;
-        //repRect.y = doneRect.y -CELLSIZE;
-        //repRect.height = CELLSIZE;
 
         theChat.setBounds(chatRect.x+x,chatRect.y+y,chatRect.width,chatRect.height);
         theChat.setBackgroundColor(chatBackgroundColor);
@@ -535,9 +544,9 @@ public class HexGameViewer extends commonCanvas
      * Some trickier logic may be needed if the board has several orientations,
      * or if some mouse activity should be censored.
      */
-    public Point getBoardCoords(int x, int y)
+    public String encodeScreenZone(int x, int y,Point p)
     {
-    	return(super.getBoardCoords(x,y));
+    	return(super.encodeScreenZone(x,y,p));
     }
 
    /** draw the board and the chips on it. the gc will normally draw on a background

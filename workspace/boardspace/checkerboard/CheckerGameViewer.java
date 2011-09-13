@@ -112,15 +112,26 @@ public class CheckerGameViewer extends commonCanvas
      * presumably based on the cell grid.  This is used to transmit our mouse
      * position to the other players and spectators, so it will be displayed
      * at approximately the same visual spot on their screen.  
-     * 
+     * The results of this function only have to be interpreted by {@link decodeScreenZone}
      * Some trickier logic may be needed if the board has several orientations,
      * or if some mouse activity should be censored.
      */
-    public Point getBoardCoords(int x, int y)
+    public String encodeScreenZone(int x, int y,Point p)
     {
-    	return(super.getBoardCoords(x,y));
+    	return(super.encodeScreenZone(x,y,p));
     }
-
+    /**
+     * invert the transformation done by {@link encodeScreenZone}, returning 
+     * an x,y pixel address on the main window.
+     * @param zone
+     * @param x
+     * @param y
+     * @return
+     */
+    public Point decodeScreenZone(String z,int x,int y)
+    {
+    	return(super.decodeScreenZone(z,x,y));
+    }
 	/**
 	 * 
 	 * this is a debugging hack to give you an event based on clicking in the player name

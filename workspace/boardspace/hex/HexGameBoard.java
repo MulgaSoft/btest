@@ -64,6 +64,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     private hexCell whiteChipPool = null;
     private hexCell pickedSource = null; 
     private hexCell droppedDest = null;
+    private int resetState = PUZZLE_STATE; 
     public Object lastDroppedObject = null;	// for image adjustment logic
 
     
@@ -128,6 +129,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         droppedDest = null;
         pickedSource = null;
         pickedObject = null;
+        resetState = PUZZLE_STATE;
         lastDroppedObject = null;
 
 		playerColor[0]=White_Chip_Pool;
@@ -244,6 +246,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         droppedDest = null;
         pickedSource = null;
         pickedObject = from_b.pickedObject;
+        resetState = from_b.resetState;
         lastPicked = null;
 
 		for(int i=0;i<2;i++) 
@@ -577,7 +580,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     	case PUZZLE_STATE:
     	case PLAY_STATE:
     	case PLAY_OR_SWAP_STATE:
-    		setBoardState((chips_on_board==1) ? PLAY_OR_SWAP_STATE : PLAY_STATE);
+    		setBoardState(resetState = ((chips_on_board==1) ? PLAY_OR_SWAP_STATE : PLAY_STATE));
+    		
     		break;
     	}
 
@@ -711,7 +715,7 @@ void doSwap()
         	default:
         		unDropObject();
         		unPickObject();
-        		setBoardState(((whoseTurn==1)&&(chips_on_board==1)) ? PLAY_OR_SWAP_STATE : PLAY_STATE);
+        		setBoardState(resetState);
         		break;
         	case GAMEOVER_STATE:
         		break;
@@ -880,16 +884,5 @@ void doSwap()
  		}
  	G.Text(gc, false, xpos, ypos, -1, 0,clt, null, txt);
  }
-// return a very simple representation of the board for the benefit of external robots
-// meta-format is "game" "version" xxx
-// specific format is "hex" "1" {B or W} { occupied cell }*
-//
-public String getStateString()
-{	StringBuffer occupied = new StringBuffer();
-	occupied.append("hex 1 "+ ncols+" "+hexChip.chipColor[whoseTurn]);
-	for(hexCell c =allCells; c!=null; c=c.next)
-	{	if(c.chip!=null) { occupied.append(" "+c.col+" "+c.row+" "+c.topChip().colorName); }
-	}
-	return(occupied.toString());
-}
+
 }

@@ -311,8 +311,7 @@ public void Search_Break(String msg)
  * had a chance to capture the board state.
  */
 public void PrepareToMove(int playerIndex)
-{	//use this for an arms-length robot:  
-	GameBoard.getStateString();
+{	
 	//use this for a friendly robot that shares the board class
 	board.clone(GameBoard);
     board.sameboard(GameBoard);	// check that we got a good copy.  Not expensive to do this once per move
