@@ -618,6 +618,8 @@ V Palago
 K Palago_variation
 V Standard Palago
 S Pass
+S Pay Camel
+S Pay Gold
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Wybierz pier\u015bcie\u0144 by umie\u015bci\u0107 chip i rusz si\u0119
@@ -813,6 +815,7 @@ K Selecting game: #1
 V Wybieram gr\u0119: #1
 K Send
 V Wy\u015blij
+S Send Cube
 K Sep #1#2#3
 V #1 Wrz, #2:#3 GMT
 K Session #1 is active.  
@@ -1188,4 +1191,4 @@ V Witam w Pasa\u017cu BoardSpace, wersja #1
 S you may increase your bid
 K your name
 V twoje imi\u0119
-N 787
+N 790

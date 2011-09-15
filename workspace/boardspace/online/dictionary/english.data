@@ -523,6 +523,8 @@ V Palago
 K Palago_variation
 V standard Palago
 S Pass
+S Pay Camel
+S Pay Gold
 S Pay a camel or click Done to send the cube to the caravan
 S Pick a ring to place a chip and move
 S Pick the first cube to send to the caravan
@@ -679,6 +681,7 @@ S Select which of your roamers to kill
 S Select which opponent roamer to kill
 S Selecting game: #1
 S Send
+S Send Cube
 K Sep #1#2#3
 V #1 Sep, #2:#3 GMT
 K Session #1 is active.  
@@ -1019,4 +1022,4 @@ K welcome
 V Welcome to the BoardSpace Lobby, version #1
 S you may increase your bid
 S your name
-N 787
+N 790

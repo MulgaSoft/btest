@@ -748,6 +748,8 @@ K Palago_variation
 V Palago standard
 K Pass
 V Passa
+S Pay Camel
+S Pay Gold
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Flytta en ring och l\u00e4mna en bricka kvar
@@ -981,6 +983,7 @@ K Selecting game: #1
 V Val av spel: #1
 K Send
 V Skicka
+S Send Cube
 K Sep #1#2#3
 V #1 Sep, #2:#3 GMT
 K Session #1 is active.  
@@ -1419,4 +1422,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 787
+N 790

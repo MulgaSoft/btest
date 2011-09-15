@@ -752,6 +752,8 @@ K Palago_variation
 V \u666e\u901a\u7684Palago
 K Pass
 V \u4e0d\u51fa
+S Pay Camel
+S Pay Gold
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V \u9009\u62e9\u79fb\u52a8\u4e00\u4e2a\u73af\uff0c\u539f\u6765\u7684\u4f4d\u7f6e\u5c06\u81ea\u52a8\u4ea7\u751f\u4e00\u4e2a\u68cb\u5b50
@@ -984,6 +986,7 @@ K Selecting game: #1
 V \u9009\u62e9\u6e38\u620f\uff1a#1
 K Send
 V \u53d1\u9001
+S Send Cube
 K Sep #1#2#3
 V \u4e5d\u6708#1\u53f7, #2:#3 GMT
 K Session #1 is active.  
@@ -1426,4 +1429,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-N 787
+N 790

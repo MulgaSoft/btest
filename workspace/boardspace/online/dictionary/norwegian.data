@@ -638,6 +638,8 @@ V Palago
 K Palago_variation
 V Standard Palago
 S Pass
+S Pay Camel
+S Pay Gold
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Velg ringen som skal flyttes for \u00e5 plassere en brikke.
@@ -834,6 +836,7 @@ S Select which opponent roamer to kill
 K Selecting game: #1
 V Velger parti: #1
 S Send
+S Send Cube
 K Sep #1#2#3
 V #1. sep, #2.#3 GMT
 K Session #1 is active.  
@@ -1222,4 +1225,4 @@ V Velkommen til BoardSpace, versjon #1.
 S you may increase your bid
 K your name
 V ditt navn
-N 787
+N 790

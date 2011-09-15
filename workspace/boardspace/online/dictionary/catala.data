@@ -582,6 +582,8 @@ V Palago
 K Palago_variation
 V Standard Palago
 S Pass
+S Pay Camel
+S Pay Gold
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Tria una anella per posar-hi una fitxa i moure
@@ -758,6 +760,7 @@ K Selecting game: #1
 V Seleccionant joc: #1
 K Send
 V Enviar
+S Send Cube
 K Sep #1#2#3
 V #1 Setembre, #2:#3 GMT
 K Session #1 is active.  
@@ -1123,4 +1126,4 @@ V Benvingut a Boardspace.net, versi\u00f3 #1
 S you may increase your bid
 K your name
 V el teu nom
-N 787
+N 790

@@ -740,6 +740,8 @@ K Palago_variation
 V standaard Palago
 K Pass
 V Pas
+S Pay Camel
+S Pay Gold
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Kies een ring voor een chip en zet
@@ -973,6 +975,7 @@ K Selecting game: #1
 V Selecteert partij: #1
 K Send
 V Verstuur
+S Send Cube
 K Sep #1#2#3
 V #1 Sep, #2:#3 GMT
 K Session #1 is active.  
@@ -1412,4 +1415,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 787
+N 790

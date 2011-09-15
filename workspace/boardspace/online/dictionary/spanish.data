@@ -616,6 +616,8 @@ V Palago
 K Palago_variation
 V Standard Palago
 S Pass
+S Pay Camel
+S Pay Gold
 S Pay a camel or click Done to send the cube to the caravan
 K Pick a ring to place a chip and move
 V Elige un anillo al que poner una ficha y mu\u00e9velo
@@ -807,6 +809,7 @@ K Selecting game: #1
 V Seleccionando juego: #1
 K Send
 V Enviar
+S Send Cube
 K Sep #1#2#3
 V #1 Septiembre, #2:#3 GMT
 K Session #1 is active.  
@@ -1194,4 +1197,4 @@ V Bienvenido al Servidor de Juego, versi\u00f3n #1
 S you may increase your bid
 K your name
 V tu nombre
-N 787
+N 790
