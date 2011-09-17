@@ -763,10 +763,11 @@ K Palago_variation
 V standard Palago
 K Pass
 V Passer
-S Pay Camel
+K Pay Camel
+V Jouer un Chameau
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
-V Jouer un chameau ou valider pour envoyer le cube \u00e0 la caravane
+V Choisir "Jouer un Chameau" ou "Envoyer le Cube"
 K Pick a ring to place a chip and move
 V D\u00e9placez un anneau pour placer un jeton
 K Pick the first cube to send to the caravan
@@ -1011,7 +1012,8 @@ K Selecting game: #1
 V Choix du jeu: #1
 K Send
 V Envoi
-S Send Cube
+K Send Cube
+V Envoyer le Cube 
 K Sep #1#2#3
 V #1 sep, #2:#3 GMT
 K Session #1 is active.  

@@ -640,7 +640,8 @@ V Standard Palago
 S Pass
 S Pay Camel
 S Pay Gold
-S Pay a camel or click Done to send the cube to the caravan
+K Pay a camel or click Done to send the cube to the caravan
+V Click on "Pay a Camel" or "Send Cube".
 K Pick a ring to place a chip and move
 V Velg ringen som skal flyttes for \u00e5 plassere en brikke.
 S Pick the first cube to send to the caravan

@@ -139,7 +139,7 @@ V Normales Breaking Away
 S Brown Palace
 S Brown Palace Bonus (3 points)
 K Build a building, play cards, or click on Done
-V Baue ein Geb\u00e4ude, spiele Karten, oder klicke Fertig
+V Spiele Karten und baue am Ende ein Geb\u00e4ude. Klicke Fertig, um deinen Zug zu beenden.
 K Build adjacent to the man you moved
 V Baue neben dem Menschen, den du bewegt hast
 K Build an initial stack of 2 to be placed
@@ -769,10 +769,12 @@ K Palago_variation
 V Normales Palago
 K Pass
 V Passen
-S Pay Camel
-S Pay Gold
+K Pay Camel
+V Zahle Kamel
+K Pay Gold
+V Zahle Gold
 K Pay a camel or click Done to send the cube to the caravan
-V Gib ein Kamel ab oder klicke Fertig, um den Stein zur Karawane zu schicken
+V Klicke auf "Zahle Kamel" oder "Entferne Stein".
 K Pick a ring to place a chip and move
 V Bewege einen Ring und lasse dabei einen Chip zur\u00fcck.
 K Pick the first cube to send to the caravan
@@ -1022,7 +1024,8 @@ K Selecting game: #1
 V W\u00e4hle Spiel #1
 K Send
 V Senden
-S Send Cube
+K Send Cube
+V Entferne Stein
 K Sep #1#2#3
 V #1 Sep, #2:#3 GMT
 K Session #1 is active.  

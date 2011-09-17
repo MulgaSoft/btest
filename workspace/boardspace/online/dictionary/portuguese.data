@@ -705,7 +705,8 @@ K Pass
 V Passar
 S Pay Camel
 S Pay Gold
-S Pay a camel or click Done to send the cube to the caravan
+K Pay a camel or click Done to send the cube to the caravan
+V Click on "Pay a Camel" or "Send Cube".
 K Pick a ring to place a chip and move
 V Pegue um anel para colocar uma ficha e mover
 S Pick the first cube to send to the caravan

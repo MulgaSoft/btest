@@ -620,7 +620,8 @@ V Standard Palago
 S Pass
 S Pay Camel
 S Pay Gold
-S Pay a camel or click Done to send the cube to the caravan
+K Pay a camel or click Done to send the cube to the caravan
+V Click on "Pay a Camel" or "Send Cube".
 K Pick a ring to place a chip and move
 V Wybierz pier\u015bcie\u0144 by umie\u015bci\u0107 chip i rusz si\u0119
 S Pick the first cube to send to the caravan
