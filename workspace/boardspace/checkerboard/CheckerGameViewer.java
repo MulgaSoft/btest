@@ -427,16 +427,20 @@ public class CheckerGameViewer extends commonCanvas
         int perspective_offset = 0;
         int hitX=0,hitY=0;
         // conventionally light source is to the right and shadows to the 
-        // left, so we want to draw in right-left back-front order so the
-        // solid parts will fall on top of existing shadows
-    	for (char thiscol = gb.lastColumn(),firstcol=gb.firstColumn();
-    		 thiscol>=firstcol;
-    		 thiscol--)
-    	{	// back to front
-        	for (int row = gb.lastRowInColumn(thiscol),firstRow=gb.firstRowInColumn(thiscol);
-        		 row>=firstRow;
-        		 row--)		
+        // left, so we want to draw in right-left top-bottom order so the
+        // solid parts will fall on top of existing shadows. 
+        // when the rotate view is in effect, top and bottom, left and right switch
+        // but this iterator still draws everything in the correct order for occlusion
+        // and shadows to work correctly.
+    	for (int row = gb.topRow(),stepRow=gb.stepRow(),lastRow=gb.bottomRow()+stepRow;
+		row!=lastRow;
+		row += stepRow)	
+    	{ 
+		for (int colNum = gb.leftColNum(),stepCol=gb.stepColNum(),lastCol=gb.rightColNum()+stepCol;
+		     colNum!=lastCol;
+		     colNum+=stepCol)
         	{ 
+			char thiscol = (char)('A'+colNum);
         	// note that these accessors "lastRowInColumn" etc
         	// are not really needed for simple boards, but they
         	// also work for hex boards and boards with cut out corners
