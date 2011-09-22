@@ -686,7 +686,7 @@ V Flytta den v\u00e4nda h\u00f6gen
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
-V Cost 3 camels + 3 gold.
+V Cost 2 camels + 2 gold.
 K Move your runners to the opposite side
 V Flytta dina l\u00f6pare till den motsatta sidan
 K Move, Split or Merge a stack

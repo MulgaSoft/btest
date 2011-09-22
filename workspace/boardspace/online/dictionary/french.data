@@ -702,7 +702,8 @@ V Bougez le c\u00f4t\u00e9 face de la pile
 K Move the supervisor
 V D\u00e9placer le superviseur
 K Move the supervisor up to 3 extra spaces when you move the supervisor
-V D\u00e9placer le superviseur jusqu'\u00e0 3 cases lors d'un d\u00e9placement. Co\u00fbt : 3 chameaux + 3 or.
+V D\u00e9placer le superviseur jusqu'\u00e0 3 cases lors d'un d\u00e9placement. 
+V Co\u00fbt : 2 chameaux + 2 or.
 K Move your runners to the opposite side
 V Fa\u00eetes atteindre le c\u00f4t\u00e9 oppos\u00e9 \u00e0 vos coureurs
 K Move, Split or Merge a stack

@@ -477,7 +477,7 @@ S Move the flipped stack
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
-V Cost 3 camels + 3 gold.
+V Cost 2 camels + 2 gold.
 S Move your runners to the opposite side
 S Move, Split or Merge a stack
 S Moves are coming in
