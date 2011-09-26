@@ -227,6 +227,7 @@ K Container_variation
 V Container with second shipment rules
 K Continue Capturing
 V \u041f\u0440\u043e\u0434\u043e\u043b\u0436\u0430\u0439\u0442\u0435 \u0437\u0430\u0445\u0432\u0430\u0442
+S Continue deploying the stack
 S Continue merging or click Done
 S Crossfire
 K Crossfire_family
@@ -238,6 +239,7 @@ K Dec #1#2#3
 V #1 \u0414\u0435\u043a, #2:#3 GMT
 S Decline Draw
 S Decline the loan
+S Deploy the stack, or click on Done
 S Designate GIPF pieces to capture, or place a GIPF chip
 S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
@@ -387,6 +389,11 @@ V GobbletM
 K Gobbletm_variation
 V Memory counts, \u0431\u0435\u0437 \u043f\u043e\u0434\u0441\u043c\u0430\u0442\u0440\u0438\u0432\u0430\u043d\u0438\u044f
 S Gold
+S Gounki
+K Gounki_family
+V Gounki
+K Gounki_variation
+V standard Gounki
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -548,6 +555,7 @@ S Move a Frog
 S Move a Man
 S Move a Man up to level 3
 S Move a Rabbit to the last row
+S Move a Stack or Start deploying at Stack
 K Move a ball or change a Ring
 V \u041f\u043e\u0434\u0432\u0438\u043d\u044c\u0442\u0435 \u0448\u0430\u0440\u0438\u043a \u0438\u043b\u0438 \u0441\u043c\u0435\u043d\u0438\u0442\u0435 \u043a\u043e\u043b\u044c\u0446\u043e
 S Move a piece
@@ -882,6 +890,7 @@ S Swap
 K Swap Colors
 V \u0421\u043c\u0435\u043d\u0438\u0442\u044c \u0446\u0432\u0435\u0442\u0430
 S Swap colors, or place a chip, or move a board
+S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -1157,6 +1166,7 @@ V \u0421\u043e\u0437\u0434\u0430\u0439\u0442\u0435 \u043b\u044e\u0431\u043e\u043
 S maximize the number of tiles in your reserve
 K mouse tracking disabled
 V \u043e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u043d\u0438\u0435 \u043c\u044b\u0448\u0438 \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u043e
+S move a piece to the opposite side of the board
 K nolaunch
 V \u0421\u0435\u0440\u0432\u0435\u0440 \u043e\u0442\u043a\u043b\u043e\u043d\u0438\u043b \u0437\u0430\u043f\u0440\u043e\u0441, \u043f\u0440\u0438\u0447\u0438\u043d\u0430: 
 K nolobby
@@ -1220,4 +1230,4 @@ V \u0414\u043e\u0431\u0440\u043e \u043f\u043e\u0436\u0430\u043b\u043e\u0432\u043
 S you may increase your bid
 K your name
 V \u0432\u0430\u0448\u0435 \u0438\u043c\u044f
-N 790
+N 798

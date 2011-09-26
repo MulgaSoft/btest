@@ -279,6 +279,7 @@ K Container_variation
 V Container met 'tweede lading' regels
 K Continue Capturing
 V Blijf slaan
+S Continue deploying the stack
 K Continue merging or click Done
 V Blijf samenvoegen of Klik Klaar
 S Crossfire
@@ -293,6 +294,7 @@ K Decline Draw
 V Weiger Remise
 K Decline the loan
 V Zie af van de lening
+S Deploy the stack, or click on Done
 K Designate GIPF pieces to capture, or place a GIPF chip
 V Bepaal een GIPF stuk om te slaan, of plaats een GIPF chip
 K Designate GIPF pieces to capture, or place a chip
@@ -462,6 +464,11 @@ V GobbletM
 K Gobbletm_variation
 V Spieken niet toegestaan
 S Gold
+S Gounki
+K Gounki_family
+V Gounki
+K Gounki_variation
+V standard Gounki
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -643,6 +650,7 @@ K Move a Man up to level 3
 V Verplaats een stuk naar level 3
 K Move a Rabbit to the last row
 V Breng een konijn naar de laatste rij
+S Move a Stack or Start deploying at Stack
 K Move a ball or change a Ring
 V Verplaats een bal of een Ring
 K Move a piece
@@ -1043,6 +1051,7 @@ V Wissel kleur
 K Swap Colors
 V Verwissel Kleuren
 S Swap colors, or place a chip, or move a board
+S Swing View
 K Switch to a more oblique view of the board
 V Verlaag blikveld op het bord
 K Switch to a more overhead view of the board
@@ -1345,6 +1354,7 @@ K maximize the number of tiles in your reserve
 V Krijg zoveel mogelijk tegeltjes in je reserve
 K mouse tracking disabled
 V Muisvolgen niet actief
+S move a piece to the opposite side of the board
 K nolaunch
 V De server weigert verbinding, het bericht is 
 K nolobby
@@ -1416,4 +1426,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 790
+N 798

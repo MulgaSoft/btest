@@ -222,6 +222,7 @@ K Container_variation
 V Container with second shipment rules
 K Continue Capturing
 V Kontynuuj zbijanie
+S Continue deploying the stack
 S Continue merging or click Done
 S Crossfire
 K Crossfire_family
@@ -233,6 +234,7 @@ K Dec #1#2#3
 V #1 Gru, #2:#3 GMT
 S Decline Draw
 S Decline the loan
+S Deploy the stack, or click on Done
 S Designate GIPF pieces to capture, or place a GIPF chip
 S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
@@ -382,6 +384,11 @@ V GobbletM
 K Gobbletm_variation
 V Trzeba liczy\u0107 w pami\u0119ci - bez podgl\u0105dania
 S Gold
+S Gounki
+K Gounki_family
+V Gounki
+K Gounki_variation
+V standard Gounki
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -539,6 +546,7 @@ S Move a Frog
 S Move a Man
 S Move a Man up to level 3
 S Move a Rabbit to the last row
+S Move a Stack or Start deploying at Stack
 K Move a ball or change a Ring
 V Przesu\u0144 kul\u0119 lub zmie\u0144 pier\u015bcie\u0144
 S Move a piece
@@ -875,6 +883,7 @@ V Zamie\u0144
 K Swap Colors
 V Zamie\u0144 kolory
 S Swap colors, or place a chip, or move a board
+S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -1130,6 +1139,7 @@ V zamknij p\u0119tl\u0119 lub lini\u0119 w swoim kolorze, kt\u00f3ra rozci\u0105
 S maximize the number of tiles in your reserve
 K mouse tracking disabled
 V \u015bledzenie myszy wy\u0142\u0105czone
+S move a piece to the opposite side of the board
 K nolaunch
 V Serwer odm\u00f3wi\u0142 uruchomienia, wiadomo\u015b\u0107 to 
 K nolobby
@@ -1192,4 +1202,4 @@ V Witam w Pasa\u017cu BoardSpace, wersja #1
 S you may increase your bid
 K your name
 V twoje imi\u0119
-N 790
+N 798

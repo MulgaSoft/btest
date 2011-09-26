@@ -181,6 +181,7 @@ V Container
 K Container_variation
 V Container with second shipment rules
 S Continue Capturing
+S Continue deploying the stack
 S Continue merging or click Done
 S Crossfire
 K Crossfire_family
@@ -192,6 +193,7 @@ K Dec #1#2#3
 V #1 Dec, #2:#3 GMT
 S Decline Draw
 S Decline the loan
+S Deploy the stack, or click on Done
 S Designate GIPF pieces to capture, or place a GIPF chip
 S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
@@ -319,6 +321,11 @@ V GobbletM
 K Gobbletm_variation
 V Memory counts, no peeking
 S Gold
+S Gounki
+K Gounki_family
+V Gounki
+K Gounki_variation
+V standard Gounki
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -457,6 +464,7 @@ S Move a Frog
 S Move a Man
 S Move a Man up to level 3
 S Move a Rabbit to the last row
+S Move a Stack or Start deploying at Stack
 S Move a ball or change a Ring
 S Move a piece
 S Move a piece one space
@@ -723,6 +731,7 @@ S State unknown.
 S Swap
 S Swap Colors
 S Swap colors, or place a chip, or move a board
+S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -967,6 +976,7 @@ S make 5 in a row to capture a ring, 3 rings win
 S make any loop, or a line which spans 8 rows or columns, in your color
 S maximize the number of tiles in your reserve
 S mouse tracking disabled
+S move a piece to the opposite side of the board
 K nolaunch
 V The server rejected a launch request, message is 
 K nolobby
@@ -1018,4 +1028,4 @@ K welcome
 V Welcome to the BoardSpace Lobby, version #1
 S you may increase your bid
 S your name
-N 790
+N 798

@@ -296,6 +296,7 @@ K Container_variation
 V Container mit 'second shipment'-Regeln
 K Continue Capturing
 V Schlagen fortsetzen
+S Continue deploying the stack
 K Continue merging or click Done
 V Vereine weiter oder klicke Fertig
 S Crossfire
@@ -311,6 +312,7 @@ K Decline Draw
 V Remis ablehnen
 K Decline the loan
 V Lehne Kredit ab
+S Deploy the stack, or click on Done
 K Designate GIPF pieces to capture, or place a GIPF chip
 V Bestimme die Gipfsteine, die geschlagen werden sollen oder lege einen Gipfstein
 K Designate GIPF pieces to capture, or place a chip
@@ -486,6 +488,11 @@ V GobbletM
 K Gobbletm_variation
 V Erinnerung z\u00e4hlt: ohne Anheben
 S Gold
+S Gounki
+K Gounki_family
+V Gounki
+K Gounki_variation
+V standard Gounki
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -671,6 +678,7 @@ K Move a Man up to level 3
 V Bewege einen Menschen auf Level 3
 K Move a Rabbit to the last row
 V Bringe einen Hasen bis zur letzten Reihe
+S Move a Stack or Start deploying at Stack
 K Move a ball or change a Ring
 V Bewege eine Kugel oder ver\u00e4ndere einen Ring
 K Move a piece
@@ -1091,6 +1099,7 @@ V Tauschen
 K Swap Colors
 V Farben tauschen
 S Swap colors, or place a chip, or move a board
+S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -1406,6 +1415,7 @@ K maximize the number of tiles in your reserve
 V Maximiere die Anzahl der Spielsteine in deiner Reserve
 K mouse tracking disabled
 V Mausverfolgung aus
+S move a piece to the opposite side of the board
 K nolaunch
 V Keine Verbindung zum Server.
 K nolobby
@@ -1476,4 +1486,4 @@ K you may increase your bid
 V Du kannst dein Gebot erh\u00f6hen
 K your name
 V Dein Name
-N 790
+N 798

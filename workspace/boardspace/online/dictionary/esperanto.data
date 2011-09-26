@@ -283,6 +283,7 @@ K Container_variation
 V Kontenero kun reguloj de Dua Sendo
 K Continue Capturing
 V Plu kaptu
+S Continue deploying the stack
 K Continue merging or click Done
 V Plu kunigu a\u016d klaku Fini
 S Crossfire
@@ -295,6 +296,7 @@ K Decline Draw
 V Malakceptu Remison
 K Decline the loan
 V Malakcepti la pruntedonon
+S Deploy the stack, or click on Done
 K Designate GIPF pieces to capture, or place a GIPF chip
 V Indiku GIPF-pecojn por kapti, a\u016d metu GIPF-pecon
 K Designate GIPF pieces to capture, or place a chip
@@ -468,6 +470,11 @@ V GobbletM
 K Gobbletm_variation
 V Memoro gravas - subrigardo malpermesita
 S Gold
+S Gounki
+K Gounki_family
+V Gounki
+K Gounki_variation
+V standard Gounki
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -653,6 +660,7 @@ K Move a Man up to level 3
 V Movu Homon al nivelo 3
 K Move a Rabbit to the last row
 V Movu Kuniklon al la lasta horizontalo
+S Move a Stack or Start deploying at Stack
 K Move a ball or change a Ring
 V Movu globon a\u016d \u015dan\u011du ringon
 K Move a piece
@@ -1053,6 +1061,7 @@ V Inter\u015dan\u011di
 K Swap Colors
 V Inter\u015dan\u011di Kolorojn
 S Swap colors, or place a chip, or move a board
+S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -1357,6 +1366,7 @@ K maximize the number of tiles in your reserve
 V plejgrandigu la nombron da platoj en via rezervo
 K mouse tracking disabled
 V muso-spurado mal\u015daltita
+S move a piece to the opposite side of the board
 K nolaunch
 V La servilo rifuzis lan\u0109peton; mesa\u011de estas 
 K nolobby
@@ -1427,4 +1437,4 @@ K you may increase your bid
 V vi povas pliigi vian oferton
 K your name
 V via nomo
-N 790
+N 798

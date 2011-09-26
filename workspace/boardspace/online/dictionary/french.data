@@ -296,6 +296,7 @@ K Container_variation
 V Container avec 2e exp\u00e9dition
 K Continue Capturing
 V  Continuez la capture
+S Continue deploying the stack
 K Continue merging or click Done
 V Continuez \u00e0 assembler ou cliquez sur Valider
 S Crossfire
@@ -310,6 +311,7 @@ K Decline Draw
 V Refuser la nulle
 K Decline the loan
 V Refuser le pr\u00eat
+S Deploy the stack, or click on Done
 K Designate GIPF pieces to capture, or place a GIPF chip
 V D\u00e9signer les Gipf \u00e0 capturer ou placer un Gipf
 K Designate GIPF pieces to capture, or place a chip
@@ -484,6 +486,11 @@ K Gobbletm_variation
 V Version m\u00e9moire, si un gobblet est soulev\u00e9 il doit \u00eatre jou\u00e9
 K Gold
 V Or
+S Gounki
+K Gounki_family
+V Gounki
+K Gounki_variation
+V standard Gounki
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -667,6 +674,7 @@ K Move a Man up to level 3
 V Faites grimper un pion au 3e niveau
 K Move a Rabbit to the last row
 V D\u00e9placer un Lapin sur la derni\u00e8re ligne
+S Move a Stack or Start deploying at Stack
 K Move a ball or change a Ring
 V  D\u00e9placez une boule ou changez un anneau
 K Move a piece
@@ -1082,6 +1090,7 @@ V Echange
 K Swap Colors
 V \u00c9changez les couleurs
 S Swap colors, or place a chip, or move a board
+S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -1397,6 +1406,7 @@ K maximize the number of tiles in your reserve
 V Maximisez le nombre de tuiles dans votre r\u00e9serve
 K mouse tracking disabled
 V la souris n'est pas rep\u00e9r\u00e9e
+S move a piece to the opposite side of the board
 K nolaunch
 V Le serveur a refus\u00e9 le lancement, message :  
 K nolobby
@@ -1466,4 +1476,4 @@ K you may increase your bid
 V vous pouvez augmenter votre offre
 K your name
 V Votre nom
-N 790
+N 798

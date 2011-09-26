@@ -281,6 +281,7 @@ K Container_variation
 V Container med andra leveransregler
 K Continue Capturing
 V Forts\u00e4tt ta kulor
+S Continue deploying the stack
 K Continue merging or click Done
 V Forts\u00e4tt blandning eller klicka p\u00e5 klar
 S Crossfire
@@ -295,6 +296,7 @@ K Decline Draw
 V Avsl\u00e5 remierbjudande
 K Decline the loan
 V Avb\u00f6j l\u00e5net
+S Deploy the stack, or click on Done
 K Designate GIPF pieces to capture, or place a GIPF chip
 V V\u00e4lj Gipf-brickor att er\u00f6vra, eller placera en Gipf-bricka
 K Designate GIPF pieces to capture, or place a chip
@@ -467,6 +469,11 @@ V GobbletM
 K Gobbletm_variation
 V Ingen tjuvkikning, minnet g\u00e4ller
 S Gold
+S Gounki
+K Gounki_family
+V Gounki
+K Gounki_variation
+V standard Gounki
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -651,6 +658,7 @@ K Move a Man up to level 3
 V Flytta upp en m\u00e4nniska till niv\u00e5 3
 K Move a Rabbit to the last row
 V Flytta en kanin till sista raden
+S Move a Stack or Start deploying at Stack
 K Move a ball or change a Ring
 V Flytta en kula eller \u00e4ndra en ring
 K Move a piece
@@ -1052,6 +1060,7 @@ V Byt
 K Swap Colors
 V Byt f\u00e4rg
 S Swap colors, or place a chip, or move a board
+S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -1352,6 +1361,7 @@ K maximize the number of tiles in your reserve
 V Maximera antalet brickor i lagret
 K mouse tracking disabled
 V mussp\u00e5rning avaktiverad
+S move a piece to the opposite side of the board
 K nolaunch
 V Kunde inte starta, felmeddelande: 
 K nolobby
@@ -1423,4 +1433,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 790
+N 798

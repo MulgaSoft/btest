@@ -284,6 +284,7 @@ K Container_variation
 V Container\u7b2c\u4e8c\u7248\u672c\u8239\u8fd0\u89c4\u5219
 K Continue Capturing
 V \u7ee7\u7eed\u5403
+S Continue deploying the stack
 K Continue merging or click Done
 V \u7ee7\u7eed\u5408\u5e76\u6216\u70b9\u51fb\u5b8c\u6210
 S Crossfire
@@ -298,6 +299,7 @@ K Decline Draw
 V \u62d2\u7edd\u548c\u68cb
 K Decline the loan
 V \u62d2\u7edd\u8d37\u6b3e
+S Deploy the stack, or click on Done
 K Designate GIPF pieces to capture, or place a GIPF chip
 V \u6307\u5b9aGIPF\u68cb\u5b50\u8fdb\u884c\u6355\u83b7\uff0c\u6216\u653e\u4e00\u4e2aGIPF\u68cb\u5b50
 K Designate GIPF pieces to capture, or place a chip
@@ -470,6 +472,11 @@ V GobbletM
 K Gobbletm_variation
 V \u8bb0\u5fc6\u6a21\u5f0f\uff0c\u4e0d\u5141\u8bb8\u7aa5\u89c6
 S Gold
+S Gounki
+K Gounki_family
+V Gounki
+K Gounki_variation
+V standard Gounki
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -656,6 +663,7 @@ K Move a Man up to level 3
 V \u628a\u4e00\u4e2a\u4eba\u79fb\u5230\u4e09\u5c42\u5854\u4e0a
 K Move a Rabbit to the last row
 V \u628a\u4e00\u4e2a\u5154\u5b50\u79fb\u5230\u6700\u540e\u4e00\u6392
+S Move a Stack or Start deploying at Stack
 K Move a ball or change a Ring
 V \u68cb\u5b50\u9009\u62e9\u7403\u578b\u6216\u73af\u5f62
 K Move a piece
@@ -1056,6 +1064,7 @@ V \u6362
 K Swap Colors
 V \u4ea4\u6362\u68cb\u5b50\u989c\u8272
 S Swap colors, or place a chip, or move a board
+S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -1359,6 +1368,7 @@ K maximize the number of tiles in your reserve
 V \u8d62\u53bb\u66f4\u591a\u7684\u5206\u624b
 K mouse tracking disabled
 V \u9f20\u6807\u8ddf\u8e2a\u7981\u7528
+S move a piece to the opposite side of the board
 K nolaunch
 V \u670d\u52a1\u5668\u62d2\u7edd\u8bf7\u6c42\uff0c\u7531\u4e8e\uff1a
 K nolobby
@@ -1430,4 +1440,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-N 790
+N 798

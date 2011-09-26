@@ -258,6 +258,7 @@ K Container_variation
 V Container with second shipment rules
 K Continue Capturing
 V Continue Capturando
+S Continue deploying the stack
 K Continue merging or click Done
 V Continue mesclando ou pressione o bot\u00e3o Confirmar
 S Crossfire
@@ -271,6 +272,7 @@ V #1 Dez, #2:#3 GMT
 K Decline Draw
 V Declinar Empate
 S Decline the loan
+S Deploy the stack, or click on Done
 K Designate GIPF pieces to capture, or place a GIPF chip
 V Designe pe\u00e7as GIPF a capturer, ou coloque uma ficha GIPF
 K Designate GIPF pieces to capture, or place a chip
@@ -440,6 +442,11 @@ V GobbletM
 K Gobbletm_variation
 V Mem\u00f3ria \u00e9 o que conta, sem espreitar
 S Gold
+S Gounki
+K Gounki_family
+V Gounki
+K Gounki_variation
+V standard Gounki
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -609,6 +616,7 @@ V Mova um Homem
 K Move a Man up to level 3
 V Mova um Homem at\u00e9 o n\u00edvel 3
 S Move a Rabbit to the last row
+S Move a Stack or Start deploying at Stack
 K Move a ball or change a Ring
 V Mova uma bola ou mude um Anel
 K Move a piece
@@ -995,6 +1003,7 @@ V Trocar
 K Swap Colors
 V Trocar Cores
 S Swap colors, or place a chip, or move a board
+S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -1282,6 +1291,7 @@ K maximize the number of tiles in your reserve
 V maximize o n\u00famero de pe\u00e7as na sua reserva
 K mouse tracking disabled
 V rastro do mouse desligado
+S move a piece to the opposite side of the board
 K nolaunch
 V O servidor rejeitou a requisi\u00e7\u00e3o para iniciar, a messagem \u00e9 
 K nolobby
@@ -1346,4 +1356,4 @@ V Benvindo ao sal\u00e3o do BoardSpace, vers\u00e3o #1
 S you may increase your bid
 K your name
 V seu nome
-N 790
+N 798

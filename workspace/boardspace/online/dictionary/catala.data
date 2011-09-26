@@ -209,6 +209,7 @@ K Container_variation
 V Container with second shipment rules
 K Continue Capturing
 V Continua capturant
+S Continue deploying the stack
 S Continue merging or click Done
 S Crossfire
 K Crossfire_family
@@ -220,6 +221,7 @@ K Dec #1#2#3
 V #1 Desembre, #2:#3 GMT
 S Decline Draw
 S Decline the loan
+S Deploy the stack, or click on Done
 S Designate GIPF pieces to capture, or place a GIPF chip
 S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
@@ -357,6 +359,11 @@ V GobbletM
 K Gobbletm_variation
 V Memory counts, no peeking
 S Gold
+S Gounki
+K Gounki_family
+V Gounki
+K Gounki_variation
+V standard Gounki
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -509,6 +516,7 @@ S Move a Frog
 S Move a Man
 S Move a Man up to level 3
 S Move a Rabbit to the last row
+S Move a Stack or Start deploying at Stack
 K Move a ball or change a Ring
 V Mou una bola o canvia una anella
 S Move a piece
@@ -816,6 +824,7 @@ V Estat desconegut.
 S Swap
 S Swap Colors
 S Swap colors, or place a chip, or move a board
+S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
 K TBA1_variation
@@ -1069,6 +1078,7 @@ S make any loop, or a line which spans 8 rows or columns, in your color
 S maximize the number of tiles in your reserve
 K mouse tracking disabled
 V pista de ratol\u00ed n no v\u00e0lida
+S move a piece to the opposite side of the board
 K nolaunch
 V El servidor rebutja la petici\u00f3 d'inici, el missatge \u00e9s 
 K nolobby
@@ -1127,4 +1137,4 @@ V Benvingut a Boardspace.net, versi\u00f3 #1
 S you may increase your bid
 K your name
 V el teu nom
-N 790
+N 798
