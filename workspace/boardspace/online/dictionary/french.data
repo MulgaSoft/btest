@@ -895,6 +895,7 @@ K Played on #1
 V Jou\u00e9 en #1
 K Player #1
 V Joueur #1
+S Player 1
 K Player Cubes
 V Cubes du joueur
 K Player is 
@@ -1180,6 +1181,7 @@ K Trade up to 10 gold for 1 victory point each
 V Echanger jusqu'\u00e0 10 or pour 1 point de victoire chacun
 K Trade up to 4 camels for 2 victory points each
 V Echanger jusqu'\u00e0 4 chameaux pour 2 points de victoire chacun
+S Traded #1 camels become gold
 K Traded: #1 camels for #2 points
 V Echang\u00e9s : #1 chameaux pour #2 points
 K Traded: #1 gold become camels
@@ -1228,6 +1230,7 @@ K Tzaar_family
 V Tzaar
 K Tzaar_variation
 V standard Tzaar
+S Unranked
 K Unranked Room
 V Salle d'entra\u00eenement
 K Unsold Warehouses
@@ -1476,4 +1479,4 @@ K you may increase your bid
 V vous pouvez augmenter votre offre
 K your name
 V Votre nom
-N 798
+N 801

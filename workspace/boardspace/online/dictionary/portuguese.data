@@ -817,6 +817,7 @@ K Played on #1
 V Jogado em #1
 K Player #1
 V Jogador #1
+S Player 1
 S Player Cubes
 K Player is 
 V O jogador \u00e9 
@@ -1079,6 +1080,7 @@ V Rastrear Mouse
 S Trade camels for gold
 S Trade up to 10 gold for 1 victory point each
 S Trade up to 4 camels for 2 victory points each
+S Traded #1 camels become gold
 S Traded: #1 camels for #2 points
 S Traded: #1 gold become camels
 S Traded: #1 gold for #2 points
@@ -1124,6 +1126,7 @@ K Tzaar_family
 V Tzaar
 K Tzaar_variation
 V Tzaar b\u00e1sico
+S Unranked
 K Unranked Room
 V Sala N\u00e3o Rankeada
 S Unsold Warehouses
@@ -1356,4 +1359,4 @@ V Benvindo ao sal\u00e3o do BoardSpace, vers\u00e3o #1
 S you may increase your bid
 K your name
 V seu nome
-N 798
+N 801

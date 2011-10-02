@@ -600,6 +600,7 @@ S Play a card
 S Played
 S Played on #1
 S Player #1
+S Player 1
 S Player Cubes
 S Player is 
 S Players
@@ -796,6 +797,7 @@ S Track Mice
 S Trade camels for gold
 S Trade up to 10 gold for 1 victory point each
 S Trade up to 4 camels for 2 victory points each
+S Traded #1 camels become gold
 S Traded: #1 camels for #2 points
 S Traded: #1 gold become camels
 S Traded: #1 gold for #2 points
@@ -839,6 +841,7 @@ K Tzaar_family
 V Tzaar
 K Tzaar_variation
 V standard Tzaar
+S Unranked
 S Unranked Room
 S Unsold Warehouses
 S User 
@@ -1028,4 +1031,4 @@ K welcome
 V Welcome to the BoardSpace Lobby, version #1
 S you may increase your bid
 S your name
-N 798
+N 801

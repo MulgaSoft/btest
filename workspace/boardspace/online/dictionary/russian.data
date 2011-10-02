@@ -718,6 +718,7 @@ S Played
 S Played on #1
 K Player #1
 V \u0418\u0433\u0440\u043e\u043a #1
+S Player 1
 S Player Cubes
 K Player is 
 V \u0418\u0433\u0440\u0430\u0435\u0442 
@@ -965,6 +966,7 @@ V \u041e\u0442\u0441\u043b\u0435\u0436\u0438\u0432\u0430\u0442\u044c \u043a\u044
 S Trade camels for gold
 S Trade up to 10 gold for 1 victory point each
 S Trade up to 4 camels for 2 victory points each
+S Traded #1 camels become gold
 S Traded: #1 camels for #2 points
 S Traded: #1 gold become camels
 S Traded: #1 gold for #2 points
@@ -1009,6 +1011,7 @@ K Tzaar_family
 V Tzaar
 K Tzaar_variation
 V standard Tzaar
+S Unranked
 K Unranked Room
 V \u041a\u043e\u043c\u043d\u0430\u0442\u0430 \u0431\u0435\u0437 \u0440\u0435\u0439\u0442\u0438\u043d\u0433\u043e\u0432\u0430\u043d\u0438\u044f
 S Unsold Warehouses
@@ -1230,4 +1233,4 @@ V \u0414\u043e\u0431\u0440\u043e \u043f\u043e\u0436\u0430\u043b\u043e\u0432\u043
 S you may increase your bid
 K your name
 V \u0432\u0430\u0448\u0435 \u0438\u043c\u044f
-N 798
+N 801

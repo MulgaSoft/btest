@@ -731,6 +731,7 @@ S Played
 S Played on #1
 K Player #1
 V Spiller #1
+S Player 1
 S Player Cubes
 K Player is 
 V Spilleren er 
@@ -981,6 +982,7 @@ V Spor musene
 S Trade camels for gold
 S Trade up to 10 gold for 1 victory point each
 S Trade up to 4 camels for 2 victory points each
+S Traded #1 camels become gold
 S Traded: #1 camels for #2 points
 S Traded: #1 gold become camels
 S Traded: #1 gold for #2 points
@@ -1018,6 +1020,7 @@ S Tzaar-standard_variation
 K Tzaar_family
 V Tzaar
 S Tzaar_variation
+S Unranked
 K Unranked Room
 V Urangert rom
 S Unsold Warehouses
@@ -1236,4 +1239,4 @@ V Velkommen til BoardSpace, versjon #1.
 S you may increase your bid
 K your name
 V ditt navn
-N 798
+N 801
