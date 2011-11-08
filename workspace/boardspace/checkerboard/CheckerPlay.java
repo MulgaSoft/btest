@@ -21,6 +21,7 @@ public class CheckerPlay extends commonRobot implements Runnable, CheckerConstan
     static final int DUMBOT_DEPTH = 3;
     static final int GOODBOT_DEPTH = 4;
     static final int BESTBOT_DEPTH = 6;
+	static final double VALUE_OF_WIN = 1000000.0;
     int MAX_DEPTH = BESTBOT_DEPTH;
      /* strategies */
     double CUP_WEIGHT = 1.0;
@@ -89,6 +90,8 @@ public class CheckerPlay extends commonRobot implements Runnable, CheckerConstan
     
 
     
+
+    
     /** return a value of the current board position for the specified player.
      * this should be greatest for a winning position.  The evaluations ought
      * to be stable and greater scores should indicate some degree of progress
@@ -146,15 +149,15 @@ public class CheckerPlay extends commonRobot implements Runnable, CheckerConstan
         GameBoard = (CheckerBoard) gboard;
         board = (CheckerBoard)GameBoard.cloneBoard();
         switch(strategy)
-        {case 0:
+        {case DUMBOT_LEVEL:
         	MAX_DEPTH = DUMBOT_DEPTH;
          	DUMBOT=true;
         	break;
-        case 1:
+        case SMARTBOT_LEVEL:
         	MAX_DEPTH = GOODBOT_DEPTH;
         	DUMBOT=false;
         	break;
-        case 2:
+        case BESTBOT_LEVEL:
          	MAX_DEPTH = BESTBOT_DEPTH;
         	DUMBOT=false;
         	break;

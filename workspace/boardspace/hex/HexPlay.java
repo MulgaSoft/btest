@@ -54,7 +54,9 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
 	// but it's exact value and scale are unimportant.  The main thing is to have a conventient range of values
 	// for the evaluator to work with.
     static final double VALUE_OF_WIN = 10000.0;
-    int VERBOSE = 1;						// 0 is normal, 1 displays each new principal variation, 2 displays all top level variations.
+    boolean MONTEBOT = false;
+    boolean EXP_MONTEBOT = false;
+    int VERBOSE = 0;						// 0 is normal, 1 displays each new principal variation, 2 displays all top level variations.
     boolean SAVE_TREE = false;				// debug flag for the search driver.  Uses lots of memory. Set a breakpoint after the search.
     int MAX_DEPTH = 5;						// search depth.
 	static final boolean KILLER = false;	// if true, allow the killer heuristic in the search
@@ -194,8 +196,6 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
 
 
 
-
-
     /** return a value of the current board position for the specified player.
      * this should be greatest for a winning position.  The evaluations ought
      * to be stable and greater scores should indicate some degree of progress
@@ -239,7 +239,8 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
     	G.Assert((val<(VALUE_OF_WIN/2))&&(val>=(VALUE_OF_WIN/-2)),"value out of range");
      	return(val);
     }
-    
+
+
     /** this is called from the search driver to evaluate a particular position. The driver
      * calls List_of_Legal_Moves, then calls Make_Move/Static_Evaluate_Position/UnMake_Move
      *  for each and sorts the result to preorder the tree for further evaluation
@@ -289,9 +290,10 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
         switch(stragegy)
         {
         default: G.Error("Not expecting strategy "+stragegy);
-        case 0: Strategy = DUMBOT; break;
-        case 1: Strategy = SMARTBOT; break;
-        case 2: Strategy = BESTBOT; break;
+        case DUMBOT_LEVEL: Strategy = DUMBOT; MONTEBOT = true; break;
+        case SMARTBOT_LEVEL: Strategy = SMARTBOT; MONTEBOT=false; break;
+        case BESTBOT_LEVEL: Strategy = BESTBOT; MONTEBOT = false; break;
+        case MONTEBOT_LEVEL: MONTEBOT=true; EXP_MONTEBOT = true; break;
         }
     }
 
@@ -317,12 +319,9 @@ public void PrepareToMove(int playerIndex)
     board.sameboard(GameBoard);	// check that we got a good copy.  Not expensive to do this once per move
 
 }
-/** search for a move on behalf of player p and report the result
- * to the game.  This is called in the robot process, so the normal
- * game UI is not encumbered by the search.
- */
- public commonMove DoFullMove()
-    {
+
+ public commonMove DoAlphaBetaFullMove()
+ {
         Hexmovespec move = null;
         try
         {
@@ -382,7 +381,61 @@ public void PrepareToMove(int playerIndex)
         return (null);
     }
 
-
-
-
+ // this is the monte carlo robot, which for hex is much better then the alpha-beta robot
+ // for the monte carlo bot, blazing speed of playouts is all that matters, as there is no
+ // evaluator other than winning a game.
+ public commonMove DoMonteCarloFullMove()
+ {	commonMove move = null;
+ 	try {
+       if (board.DoneState())
+        { // avoid problems with gameover by just supplying a done
+            move = new Hexmovespec("Done", board.whoseTurn);
+        }
+        else 
+        {
+        // it's important that the robot randomize the first few moves a little bit.
+        double randomn = (RANDOMIZE && (board.moveNumber <= 6)) ? 0.1/board.moveNumber : 0.0;
+        monte_search_state = new UCTMoveSearcher(this);
+        monte_search_state.save_top_digest = false;	// always on as a background check
+        monte_search_state.save_digest=false;	// debugging only
+        monte_search_state.win_randomization = randomn;		// a little bit of jitter because the values tend to be very close
+        monte_search_state.timePerMove = 20;		// 20 seconds per move
+        monte_search_state.verbose = 2;
+        monte_search_state.alpha = 0.5;
+        monte_search_state.beta = 0.5;
+        monte_search_state.simulationsPerNode = EXP_MONTEBOT ? 10 : 1;
+        move = monte_search_state.getBestMonteMove();
+        }
+ 		}
+      finally { ; }
+      if(move==null) { continuous = false; }
+     return(move);
+ }
+ /**
+  * for UCT search, return the normalized value of the game, with a penalty
+  * for longer games so we try to win in as few moves as possible.  Values
+  * must be normalized to -1.0 to 1.0
+  */
+ public double NormalizedScore(commonMove lastMove)
+ {	int player = lastMove.player;
+ 	boolean win = board.WinForPlayerNow(player);
+ 	if(win) { return(0.8+0.2/boardSearchLevel); }
+ 	boolean win2 = board.WinForPlayerNow(nextPlayer[player]);
+ 	if(win2) { return(- (0.8+0.2/boardSearchLevel)); }
+ 	return(0);
+ }
+ /** search for a move on behalf of player p and report the result
+  * to the game.  This is called in the robot process, so the normal
+  * game UI is not encumbered by the search.
+  */
+  public commonMove DoFullMove()
+  {	if(MONTEBOT)
+  	{
+ 	return(DoMonteCarloFullMove()); 
+  	}
+  	else
+  	{
+ 	 return(DoAlphaBetaFullMove());
+  	}
+  }
  }

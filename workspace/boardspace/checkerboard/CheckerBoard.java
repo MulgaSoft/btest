@@ -318,7 +318,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     	G.Error("not implemented");
     	return(false);
     }
-    // look for a win for player.  This algorithm should work for Gobblet Jr too.
+    // estimate the value of the board position.
     public double ScoreForPlayer(int player,boolean print,double cup_weight,double ml_weight,boolean dumbot)
     {  	double finalv=0.0;
     	G.Error("not implemented");

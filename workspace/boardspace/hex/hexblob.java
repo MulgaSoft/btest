@@ -29,7 +29,7 @@ public class hexblob implements HexConstants
  //pretty print
  public String toString()
     {
-      return("<"+  ((cells==null)?"m":"") + "blob "+color+" "+leftcol+"-"+rightcol+","+toprow+"-"+bottomrow+">");
+      return("<blob:"+ span()+" "+ ((cells==null)?"m":"") + color+" "+leftcol+"-"+rightcol+","+toprow+"-"+bottomrow+">");
     }
 
  // add a connection, watch out for duplicate points.  We espectially

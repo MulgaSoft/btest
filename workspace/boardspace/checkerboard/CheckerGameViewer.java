@@ -520,7 +520,11 @@ public class CheckerGameViewer extends commonCanvas
 
         if (gc != null)
         {
-            standardGameMessage(gc,gb,s.get(boardStates[vstate]),vstate,stateRect);
+            standardGameMessage(gc,
+            		vstate==GAMEOVER_STATE?gameOverMessage():s.get(boardStates[vstate]),
+            				vstate!=PUZZLE_STATE,
+            				gb.whoseTurn,
+            				stateRect);
             goalAndProgressMessage(gc,s.get("do what it takes to win"),progressRect,goalRect);
          }
         DrawRepRect(gc,b.Digest(),repRect);
@@ -540,7 +544,7 @@ public class CheckerGameViewer extends commonCanvas
      public boolean Execute(commonMove mm,boolean sounds)
     {	
         if(b.getBoardState()==PUZZLE_STATE)
-    	{   mm.sliderNumString = "--";
+    	{   mm.setSliderNumString("--");
     		switch(mm.op)
         	{
     		case MOVE_DROPB:
@@ -549,7 +553,7 @@ public class CheckerGameViewer extends commonCanvas
         	case MOVE_PICKB: 
         		break;
     		default:
-    			mm.linebreak=true;
+    			mm.setLineBreak(true);
         	}
     	}
  

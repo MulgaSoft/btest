@@ -698,7 +698,11 @@ public class HexGameViewer extends commonCanvas
  
         if (gc != null)
         {	// draw the avatars
-            standardGameMessage(gc,gb,s.get(boardStates[state]),state,stateRect);
+            standardGameMessage(gc,
+            		state==GAMEOVER_STATE?gameOverMessage():s.get(boardStates[state]),
+            				state!=PUZZLE_STATE,
+            				gb.whoseTurn,
+            				stateRect);
             goalAndProgressMessage(gc,s.get("connect opposite sides with a chain of markers"),progressRect,goalRect);
             //DrawRepRect(gc,gb.Digest(),repRect);	// Not needed for hex
         }
@@ -719,14 +723,14 @@ public class HexGameViewer extends commonCanvas
     {	
     	 // record some state so the game log will look pretty
         if(bb.getBoardState()==PUZZLE_STATE)
-    	{   mm.sliderNumString = "--";
+    	{   mm.setSliderNumString("--");
     		switch(mm.op)
         	{
         	case MOVE_PICK: 
         	case MOVE_PICKB: 
         		break;
     		default:
-    			mm.linebreak=true;
+    			mm.setLineBreak(true);
         	}
     	}
         handleExecute(bb,mm);
@@ -1392,11 +1396,9 @@ public class HexGameViewer extends commonCanvas
     public SimpleRobotProtocol newRobotPlayer() 
     {  int level = sharedInfo.getInt(exHashtable.ROBOTLEVEL,0);
        switch(level)
-       { default: G.Error("not defined");
+       { default: 
        	// fall through
-       	 case 0:
-       	 case 1:
-       	 case 2: return(new HexPlay(level));
+       	 return(new HexPlay(level));
        }
     }
 

@@ -40,7 +40,18 @@ public class Hexmovespec extends commonMove implements HexConstants
     {
         parse(new StringTokenizer(str), p);
     }
-
+    /** constructor for robot moves.  Having this "binary" constor is dramatically faster
+     * than the standard constructor which parses strings
+     */
+    public Hexmovespec(int opc,char col,int row,int what,int who)
+    {
+    	op = opc;
+    	source = EmptyBoard;
+    	object = what;
+    	to_col = col;
+    	to_row = row;
+    	player = who;
+    }
     /* contructor */
     public Hexmovespec(StringTokenizer ss, int p)
     {
@@ -99,14 +110,13 @@ public class Hexmovespec extends commonMove implements HexConstants
         }
 
         int opcode = D.getInt(cmd, MOVE_UNKNOWN);
-
+        op = opcode;
         switch (opcode)
         {
         default:
             G.Error("Cant parse " + cmd);
             break;
         case MOVE_DROPB:
-	           op = opcode;
 	            source = EmptyBoard;
 				object = D.getInt(msg.nextToken());	// B or W
 	            to_col = G.CharToken(msg);
@@ -115,7 +125,6 @@ public class Hexmovespec extends commonMove implements HexConstants
 	            break;
 
 		case MOVE_PICKB:
-            op = opcode;
             source = BoardLocation;
             to_col = G.CharToken(msg);
             to_row = G.IntToken(msg);
@@ -124,13 +133,11 @@ public class Hexmovespec extends commonMove implements HexConstants
 
         case MOVE_DROP:
         case MOVE_PICK:
-            op = opcode;
             source = D.getInt(msg.nextToken());
 
             break;
 
         case MOVE_START:
-            op = opcode;
             player = D.getInt(msg.nextToken());
 
             break;
@@ -140,7 +147,6 @@ public class Hexmovespec extends commonMove implements HexConstants
         case MOVE_EDIT:
         case MOVE_DONE:
         case MOVE_RESIGN:
-            op = opcode; // simple commands
 
             break;
         }
@@ -231,7 +237,7 @@ public class Hexmovespec extends commonMove implements HexConstants
     }
     /** standard java method, so we can read moves easily while debugging */
     public String toString()
-    {
-        return ("P" + player + "[" + moveString() + "]");
+    {	return super.toString();
+        //return ("P" + player + "[" + moveString() + "]");
     }
 }

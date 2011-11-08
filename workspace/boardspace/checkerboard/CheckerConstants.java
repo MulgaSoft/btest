@@ -6,7 +6,6 @@ public interface CheckerConstants extends OnlineConstants
 {	
 	static final int DEFAULT_COLUMNS = 8;	// 8x6 board
 	static final int DEFAULT_ROWS = 8;
-	static final double VALUE_OF_WIN = 1000.0;
 	static final String Checker_INIT = "checkers";	//init for standard game
 
     //	these next must be unique integers in the dictionary

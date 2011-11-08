@@ -55,7 +55,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 	
     private int chips_on_board = 0;			// number of chips currently on the board
     private int sweep_counter=0;			// used when scanning for blobs
-    
+    private int directionWhiteHome = -1;
+    private int directionBlackHome = -1;
     // intermediate states in the process of an unconfirmed move should
     // be represented explicitly, so unwinding is easy and reliable.
     public hexChip pickedObject = null;
@@ -131,7 +132,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         pickedObject = null;
         resetState = PUZZLE_STATE;
         lastDroppedObject = null;
-
+        directionWhiteHome = findDirection('A',1,'A',2);
+        directionBlackHome = findDirection('A',1,'B',1);
 		playerColor[0]=White_Chip_Pool;
 		playerColor[1]=Black_Chip_Pool;
 		playerChip[0]=hexChip.White;
@@ -357,7 +359,12 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     		}
     	}
     }
+
     
+    //
+    // flood fill to make this blob as large as possible.  This is more elaborate
+    // than it needs to be for scoring purposes, but it is also used by the robot
+    //  OStack<hexblob> findBlobs(int forplayer,OStack<hexblob> all)
     OStack<hexblob> findBlobs(int forplayer,OStack<hexblob> all)
     {	sweep_counter++;
     	hexChip pch = playerChip[forplayer];
@@ -372,11 +379,54 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
        	return(all);
     }
 
+
+    // flood fill the blob to make it as large as possible, but don't
+    // look for connections.  This is used when the blob os only being
+    // checked as a possible win
+    private boolean expandBlobForWin(hexblob blob,hexCell cell)
+    {	if(cell==null) {}
+    	else if((cell.sweep_counter!=sweep_counter))
+    	{
+    	cell.sweep_counter = sweep_counter;
+    	cell.blob = blob;
+     	if(cell.chip==blob.color)
+    	  {
+    	   	blob.addCell(cell);
+    	   	if(blob.span()==ncols) { return(true); } 	// a win
+    	   	for(int dir = 0; dir<6; dir++)
+    		{	if(expandBlobForWin(blob,cell.exitTo(dir))) { return(true); }
+    		}
+    	  }
+    	}
+    	return(false);
+    }
+    
+    // scan blobs only connected to the home row for the player
+    // this is the fast version that only checks for a win
+    private boolean findWinningBlob(int player)
+    {
+    	hexCell home = getCell('A',1);
+    	hexChip pch = playerChip[player];
+    	sweep_counter++;
+    	int scanDirection =  (pch==hexChip.White)
+    		? directionWhiteHome
+    		: directionBlackHome;
+    	while(home!=null)
+    	{	
+       	if((home.sweep_counter!=sweep_counter) && (home.chip==pch))
+        {
+        	hexblob blob = new hexblob(pch);
+        	if(expandBlobForWin(blob,home)) { return(true); }
+        }
+        home = home.exitTo(scanDirection);
+    	}    	
+    	return(false);
+    }
     public boolean WinForPlayerNow(int player)
     {	if(win[player]) { return(true); }
-    	OStack<hexblob> blobs = new OStack<hexblob>(hexblob.class);
-    	return(WinForPlayerNow(player,blobs));
-     }
+    	boolean win = findWinningBlob(player);
+    	return(win);
+    }
     // this method is also called by the robot to get the blobs as a side effect
     public boolean WinForPlayerNow(int player,OStack<hexblob> blobs)
     {
@@ -795,7 +845,7 @@ void doSwap()
         m.state = board_state; //record the starting state. The most reliable
         // to undo state transistions is to simple put the original state back.
         
-        G.Assert(m.player == whoseTurn, "whoseturn doesn't agree");
+        //G.Assert(m.player == whoseTurn, "whoseturn doesn't agree");
 
         if (Execute(m))
         {
@@ -866,7 +916,7 @@ void doSwap()
  	    c!=null;
  	    c = c.next)
  	{	if(c.topChip()==null)
- 		{all.addElement(new Hexmovespec("dropb "+playerChip[whoseTurn].colorName+" "+c.col+" "+c.row,whoseTurn));
+ 		{all.addElement(new Hexmovespec(MOVE_DROPB,c.col,c.row,playerColor[whoseTurn],whoseTurn));
  		}
  	}
 
