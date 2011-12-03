@@ -658,7 +658,8 @@ K Place a Ring on the board
 V \u041f\u043e\u043b\u043e\u0436\u0438\u0442\u0435 \u043a\u043e\u043b\u044c\u0446\u043e \u043d\u0430 \u0434\u043e\u0441\u043a\u0443
 S Place a chip on a starting point
 S Place a chip on the board
-S Place a chip, or shirt or rotate a board
+K Place a chip, or shirt or rotate a board
+V Place a chip, or shift or rotate a board
 S Place a cube in any unclaimed souk
 S Place a cube on the caravan
 K Place a gobblet on the board, or move a gobblet

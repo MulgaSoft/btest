@@ -818,7 +818,8 @@ V Lege einen Ring auf das Spielfeld
 K Place a chip on a starting point
 V Lege einen Stein auf einen Startpunkt
 S Place a chip on the board
-S Place a chip, or shirt or rotate a board
+K Place a chip, or shirt or rotate a board
+V Place a chip, or shift or rotate a board
 K Place a cube in any unclaimed souk
 V Lege einen Stein auf einen freien Laden
 K Place a cube on the caravan

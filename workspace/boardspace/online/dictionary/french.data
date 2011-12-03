@@ -812,7 +812,8 @@ V Placez un anneau sur le plateau
 K Place a chip on a starting point
 V Placez une pi\u00e8ce \u00e0 son point de d\u00e9part
 S Place a chip on the board
-S Place a chip, or shirt or rotate a board
+K Place a chip, or shirt or rotate a board
+V Place a chip, or shift or rotate a board
 K Place a cube in any unclaimed souk
 V Placer un cube dans un souk non attribu\u00e9
 K Place a cube on the caravan
