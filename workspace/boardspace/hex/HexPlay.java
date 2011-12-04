@@ -54,6 +54,7 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
 	// but it's exact value and scale are unimportant.  The main thing is to have a conventient range of values
 	// for the evaluator to work with.
     static final double VALUE_OF_WIN = 10000.0;
+    boolean UCT_WIN_LOSS = false;
     boolean MONTEBOT = false;
     boolean EXP_MONTEBOT = false;
     int VERBOSE = 0;						// 0 is normal, 1 displays each new principal variation, 2 displays all top level variations.
@@ -62,10 +63,8 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
 	static final boolean KILLER = false;	// if true, allow the killer heuristic in the search
 	static final double GOOD_ENOUGH_VALUE = VALUE_OF_WIN;	// good enough to stop looking
 
-	static final int DUMBOT = 1;
-    static final int SMARTBOT = 2;
-    static final int BESTBOT = 3;
-    int Strategy = DUMBOT;
+
+    int Strategy = DUMBOT_LEVEL;
     
     HexGameBoard GameBoard = null;			// this is the "real" game board we're starting from, but make a copy of
     HexGameBoard board = null;				// this is our local copy
@@ -224,12 +223,13 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
      	// if the position is not a win, then estimate the value of the position
     	switch(Strategy)
     	{	default: G.Error("Not expecting strategy "+Strategy);
-    		case DUMBOT: 
+    		case DUMBOT_LEVEL: 
     			// betterEval based on "two lines" developed by Adam Shepherd, Oct 2009
       			val = dumbotEval(evboard,blobs,player,print);
        	  		break;
-    		case SMARTBOT: 
-    		case BESTBOT: 	// both the same for now
+    		case SMARTBOT_LEVEL: 
+    		case BESTBOT_LEVEL: 	// both the same for now
+    		case MONTEBOT_LEVEL:
     			// this is the old dumbot based on connections
        			val = dumbotEval(evboard,blobs,player,print);
        			break;
@@ -287,12 +287,14 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
         GameBoard = (HexGameBoard) gboard;
         board = new HexGameBoard(GameBoard.gametype);
         // strategy with be 0,1,2 for Dumbot, Smartbot, Bestbot
+        Strategy = stragegy;
+        
         switch(stragegy)
         {
         default: G.Error("Not expecting strategy "+stragegy);
-        case DUMBOT_LEVEL: Strategy = DUMBOT; MONTEBOT = true; break;
-        case SMARTBOT_LEVEL: Strategy = SMARTBOT; MONTEBOT=false; break;
-        case BESTBOT_LEVEL: Strategy = BESTBOT; MONTEBOT = false; break;
+        case DUMBOT_LEVEL: MONTEBOT = DEPLOY_MONTEBOT; break;
+        case SMARTBOT_LEVEL: MONTEBOT=false; break;
+        case BESTBOT_LEVEL: MONTEBOT = false; break;
         case MONTEBOT_LEVEL: MONTEBOT=true; EXP_MONTEBOT = true; break;
         }
     }
@@ -386,6 +388,7 @@ public void PrepareToMove(int playerIndex)
  // evaluator other than winning a game.
  public commonMove DoMonteCarloFullMove()
  {	commonMove move = null;
+ 	UCT_WIN_LOSS = EXP_MONTEBOT;
  	try {
        if (board.DoneState())
         { // avoid problems with gameover by just supplying a done
@@ -399,11 +402,13 @@ public void PrepareToMove(int playerIndex)
         monte_search_state.save_top_digest = false;	// always on as a background check
         monte_search_state.save_digest=false;	// debugging only
         monte_search_state.win_randomization = randomn;		// a little bit of jitter because the values tend to be very close
-        monte_search_state.timePerMove = 20;		// 20 seconds per move
+        monte_search_state.timePerMove = 10;		// 20 seconds per move
         monte_search_state.verbose = 2;
         monte_search_state.alpha = 0.5;
-        monte_search_state.beta = 0.5;
-        monte_search_state.simulationsPerNode = EXP_MONTEBOT ? 10 : 1;
+        monte_search_state.sort_moves = false;
+        monte_search_state.only_child_optimization = true;
+        monte_search_state.deadChildOptimization = true;
+        monte_search_state.simulationsPerNode = EXP_MONTEBOT ? 1 : 1;
         move = monte_search_state.getBestMonteMove();
         }
  		}
@@ -419,9 +424,9 @@ public void PrepareToMove(int playerIndex)
  public double NormalizedScore(commonMove lastMove)
  {	int player = lastMove.player;
  	boolean win = board.WinForPlayerNow(player);
- 	if(win) { return(0.8+0.2/boardSearchLevel); }
+ 	if(win) { return(UCT_WIN_LOSS? 1.0 : 0.8+0.2/boardSearchLevel); }
  	boolean win2 = board.WinForPlayerNow(nextPlayer[player]);
- 	if(win2) { return(- (0.8+0.2/boardSearchLevel)); }
+ 	if(win2) { return(- (UCT_WIN_LOSS?1.0:(0.8+0.2/boardSearchLevel))); }
  	return(0);
  }
  /** search for a move on behalf of player p and report the result

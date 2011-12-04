@@ -2,6 +2,7 @@ package checkerboard;
 
 import online.common.*;
 import online.game.*;
+import online.game.BoardProtocol.replayMode;
 import online.game.sgf.*;
 import java.awt.*;
 import java.util.*;
@@ -103,7 +104,7 @@ public class CheckerGameViewer extends commonCanvas
         super.doInit(preserve_history);				// let commonViewer do it's things
         b.doInit(b.gametype,b.randomKey);						// initialize the board
         if(!preserve_history)
-        	{ PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,true); 
+        	{ PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,replayMode.Live); 
         	}
  }
     
@@ -541,7 +542,7 @@ public class CheckerGameViewer extends commonCanvas
      * @return true if all went well.  Normally G.Error would be called if anything went
      * seriously wrong.
      */
-     public boolean Execute(commonMove mm,boolean sounds)
+     public boolean Execute(commonMove mm,replayMode replay)
     {	
         if(b.getBoardState()==PUZZLE_STATE)
     	{   mm.setSliderNumString("--");
@@ -557,9 +558,9 @@ public class CheckerGameViewer extends commonCanvas
         	}
     	}
  
-        handleExecute(b,mm);
+        handleExecute(b,mm,replay);
         
-        if(sounds) { playSounds(mm); }
+        if(replay!=replayMode.Replay) { playSounds(mm); }
  
         return (true);
     }

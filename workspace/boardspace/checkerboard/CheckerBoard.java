@@ -57,7 +57,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 	{	return(new CheckerCell(c,r));
 	}
     public CheckerBoard(String init,int key) // default constructor
-    {   drawing_style = STYLE_NOTHING; // STYLE_CELL or STYLE_LINES
+    {   drawing_style = DrawingStyle.STYLE_NOTHING; // STYLE_CELL or STYLE_LINES
     	Grid_Style = CHECKERGRIDSTYLE; //coordinates left and bottom
         doInit(init,key); // do the initialization 
      }

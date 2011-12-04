@@ -24,7 +24,6 @@ public class Hexmovespec extends commonMove implements HexConstants
     //
     // variables to identify the move
     int source; // where from/to
-	int object;	// object being picked/dropped
     char to_col; // for from-to moves, the destination column
     int to_row; // for from-to moves, the destination row
     //
@@ -46,8 +45,7 @@ public class Hexmovespec extends commonMove implements HexConstants
     public Hexmovespec(int opc,char col,int row,int what,int who)
     {
     	op = opc;
-    	source = EmptyBoard;
-    	object = what;
+    	source = what;
     	to_col = col;
     	to_row = row;
     	player = who;
@@ -64,7 +62,6 @@ public class Hexmovespec extends commonMove implements HexConstants
 
         return ((op == other.op) 
 				&& (source == other.source)
-				&& (object == other.object)
 				&& (state == other.state)
 				&& (to_row == other.to_row) 
 				&& (to_col == other.to_col)
@@ -73,7 +70,6 @@ public class Hexmovespec extends commonMove implements HexConstants
 
     public void Copy_Slots(Hexmovespec to)
     {	super.Copy_Slots(to);
- 		to.object = object;
         to.to_col = to_col;
         to.to_row = to_row;
         to.state = state;
@@ -117,8 +113,7 @@ public class Hexmovespec extends commonMove implements HexConstants
             G.Error("Cant parse " + cmd);
             break;
         case MOVE_DROPB:
-	            source = EmptyBoard;
-				object = D.getInt(msg.nextToken());	// B or W
+				source = D.getInt(msg.nextToken());	// B or W
 	            to_col = G.CharToken(msg);
 	            to_row = G.IntToken(msg);
 
@@ -209,7 +204,7 @@ public class Hexmovespec extends commonMove implements HexConstants
 	        return (ind+D.findUnique(op) +" " + to_col + " " + to_row);
 
 		case MOVE_DROPB:
-	        return (ind+D.findUnique(op) + " "+D.findUnique(object)+" " + to_col + " " + to_row);
+	        return (ind+D.findUnique(op) + " "+D.findUnique(source)+" " + to_col + " " + to_row);
 
         case MOVE_DROP:
         case MOVE_PICK:

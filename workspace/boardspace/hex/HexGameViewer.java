@@ -9,6 +9,7 @@ import java.util.*;
 import javax.swing.JCheckBoxMenuItem;
 
 import online.game.*;
+import online.game.BoardProtocol.replayMode;
 /**
  * 
  * Overall Architecture
@@ -201,7 +202,7 @@ public class HexGameViewer extends commonCanvas
         super.doInit(preserve_history);				// let commonViewer do it's things
         bb.doInit(bb.gametype);						// initialize the board
         if(!preserve_history)
-        	{ PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,true);
+        	{ PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,replayMode.Live);
         	}
     }
     
@@ -719,7 +720,7 @@ public class HexGameViewer extends commonCanvas
      * @return true if all went well.  Normally G.Error would be called if anything went
      * seriously wrong.
      */
-     public boolean Execute(commonMove mm,boolean sounds)
+     public boolean Execute(commonMove mm,replayMode replay)
     {	
     	 // record some state so the game log will look pretty
         if(bb.getBoardState()==PUZZLE_STATE)
@@ -733,9 +734,9 @@ public class HexGameViewer extends commonCanvas
     			mm.setLineBreak(true);
         	}
     	}
-        handleExecute(bb,mm);
+        handleExecute(bb,mm,replay);
 		lastDropped = bb.lastDroppedObject;	// this is for the image adjustment logic
-		if(sounds) { playSounds((Hexmovespec)mm); }
+		if(replay!=replayMode.Replay) { playSounds((Hexmovespec)mm); }
        return (true);
     }
  void playSounds(Hexmovespec mm)

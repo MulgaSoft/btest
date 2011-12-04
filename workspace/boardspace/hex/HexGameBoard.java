@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.*;
 import online.game.*;
+
 /**
  * HexGameBoard knows all about the game of Hex, which is played
  * on a heagonal board. It gets a lot of logistic support from 
@@ -68,15 +69,14 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     private int resetState = PUZZLE_STATE; 
     public Object lastDroppedObject = null;	// for image adjustment logic
 
-    
-	
 	// factory method to generate a board cell
 	public hexCell newcell(char c,int r)
-	{	return(new hexCell(c,r));
+	{	return(new hexCell(BoardLocation,c,r));
 	}
+	
     public HexGameBoard(String init) // default constructor
     {
-        drawing_style = STYLE_NOTHING; // don't draw the cells.  STYLE_CELL to draw them
+        drawing_style = DrawingStyle.STYLE_NOTHING; // don't draw the cells.  STYLE_CELL to draw them
         Grid_Style = HEXGRIDSTYLE;
         doInit(init); // do the initialization 
     }
@@ -119,8 +119,10 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     	else { G.Error("No init named "+game); }
         gametype = game;
         setBoardState(PUZZLE_STATE);
-        blackChipPool = new hexCell(r);
-        whiteChipPool = new hexCell(r);
+        blackChipPool = new hexCell(r,Black_Chip_Pool);
+        blackChipPool.chip = hexChip.Black;
+        whiteChipPool = new hexCell(r,White_Chip_Pool);
+        whiteChipPool.chip = hexChip.White;
         initBoard(firstcol, ncol, null); //this sets up the hex board
         allCells.setDigestChain(r);		// set the randomv for all cells on the board
       	setBorderDirections();	// mark the border cells for use in painting
@@ -151,14 +153,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
      */
     public void sameboard(HexGameBoard from_b)
     {
-        super.sameboard(from_b); // hexboard compares the boards
+        super.sameboard(from_b); // hexboard compares the cells of the board using cell.sameCell
         
-        for(hexCell c = allCells,d=from_b.allCells;  
-		c!=null;
-		c=c.next, d= d.next)
-		{G.Assert(c.sameCell(d),"cells match");
-		}
-
         for (int i = 0; i < win.length; i++)
         {
             G.Assert(win[i] == from_b.win[i], "Win[] matches");
@@ -461,7 +457,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     	return(old);
     }
     //
-    // accept the current placements as permanant
+    // accept the current placements as permanent
     //
     public void acceptPlacement()
     {	if(droppedDest!=null)
@@ -494,13 +490,13 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     // 
     // drop the floating object.
     //
-    private void dropObject(Hexmovespec m)
+    private void dropObject(hexCell c)
     {
        pickedSource = null;
-       switch (m.source)
+       switch (c.rackLocation)
         {
         default:
-            G.Error("Not expecting dest " + m.source);
+            G.Error("Not expecting dest " + c.rackLocation);
             break;
         case Black_Chip_Pool:
         case White_Chip_Pool:		// back in the pool, we don't really care where
@@ -510,12 +506,6 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
             break;
         case BoardLocation:	// already filled board slot, which can happen in edit mode
         case EmptyBoard:
-           	hexCell c = getCell(m.to_col,m.to_row);
-           	if(c.chip!=null) 
-           		{ // this is an important bit of communication with editHistory
-           		  // tell it that this drop wasn't on an empty cell
-           			m.source=BoardLocation; 
-           		}
            	SetBoard(c,pickedObject);
            	droppedDest = c;
             lastDroppedObject = pickedObject;
@@ -542,24 +532,43 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     	}
       	return (HitNoWhere);
     }
-	// pick something up.  Note that when the something is the board,
-    // the board location really becomes empty, and we depend on unPickObject
-    // to replace the original contents if the pick is cancelled.
-    private void pickObject(int source, char col, int row)
+    /**
+     * get the cell represented by a source code, and col,row
+     * @param source
+     * @param col
+     * @param row
+     * @return
+     */
+    private hexCell getCell(int source, char col, int row)
     {
         switch (source)
         {
         default:
             G.Error("Not expecting source " + source);
+        case BoardLocation:
+        	return(getCell(col,row));
+        case Black_Chip_Pool:
+        	return(blackChipPool);
+        case White_Chip_Pool:
+        	return(whiteChipPool);
+        } 	
+    }
+	// pick something up.  Note that when the something is the board,
+    // the board location really becomes empty, and we depend on unPickObject
+    // to replace the original contents if the pick is cancelled.
+    private void pickObject(hexCell c)
+    {	pickedSource = c;
+        switch (c.rackLocation)
+        {
+        default:
+            G.Error("Not expecting rackLocation " + c.rackLocation);
             break;
         case BoardLocation:
         	{
-        	hexCell c = getCell(col,row);
-        	boolean wasDest = isDest(c);
+         	boolean wasDest = isDest(c);
         	unDropObject(); 
         	if(!wasDest)
         	{
-            pickedSource = c;
             lastPicked = pickedObject = c.topChip();
          	lastDroppedObject = droppedDest = null;
 			c.chip = null;
@@ -567,22 +576,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
             break;
 
         case Black_Chip_Pool:
-			if(pickedObject==hexChip.Black) { acceptPlacement(); }
-			else 
-			{  lastPicked = pickedObject = hexChip.Black;
-			}
-		   pickedSource = blackChipPool;
-
-            break;
-
         case White_Chip_Pool:
-			if(pickedObject==hexChip.White) { acceptPlacement(); }
-			else 
-			{
-            lastPicked = pickedObject = hexChip.White;
-			}
-            pickedSource = whiteChipPool;
-            break;
+        	lastPicked = pickedObject = c.chip;
         }
     }
     //	
@@ -700,8 +695,8 @@ void doSwap()
 			  case PLAY_STATE:
 			  case PLAY_OR_SWAP_STATE: acceptPlacement(); break;
 			}
-			pickObject(m.object, m.to_col, m.to_row);
-            dropObject(m);
+			pickObject(getCell(m.source,m.to_col,m.to_row));
+            dropObject(getCell(BoardLocation,m.to_col,m.to_row));
             setNextStateAfterDrop();
 
             break;
@@ -713,7 +708,7 @@ void doSwap()
         case MOVE_PICKB:
         	// come here only where there's something to pick, which must
         	// be a temporary p
-        	pickObject(m.source, m.to_col, m.to_row);
+        	pickObject(getCell(m.source,m.to_col,m.to_row));
         	switch(board_state)
         	{
         	case PUZZLE_STATE:
@@ -726,7 +721,7 @@ void doSwap()
             break;
 
         case MOVE_DROP: // drop on chip pool;
-            dropObject(m);
+            dropObject(getCell(m.source,m.to_col,m.to_row));
             //setNextStateAfterDrop();
 
             break;
