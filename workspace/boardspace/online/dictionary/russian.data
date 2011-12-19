@@ -198,6 +198,7 @@ V \u041d\u0430\u0436\u043c\u0438\u0442\u0435 \u0413\u043e\u0442\u043e\u0432\u043
 S Click on Done to finish all captures
 S Click on Done to send cubes to the carvan
 S Click on Gipf pieces to change their capture status
+S Click on the end of the line to move
 S Click on the line to be captured
 K Click on the placed piece to rotate it, or Click Done
 V \u041a\u043b\u0438\u043a\u043d\u0438\u0442\u0435 \u043d\u0430 \u0443\u043b\u043e\u0436\u0435\u043d\u043d\u0443\u044e \u0444\u0438\u0433\u0443\u0440\u0443, \u0447\u0442\u043e\u0431\u044b \u043f\u043e\u0432\u0435\u0440\u043d\u0443\u0442\u044c \u0435\u0451, \u0438\u043b\u0438 \u043a\u043b\u0438\u043a\u043d\u0438\u0442\u0435 \u043d\u0430 \u0413\u043e\u0442\u043e\u0432\u043e
@@ -244,6 +245,7 @@ S Designate GIPF pieces to capture, or place a GIPF chip
 S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
 S Designate a row to capture before your turn
+S Designate a zone to clear
 S Dice
 K Dipole
 V Dipole (original)
@@ -577,6 +579,7 @@ K Move stacks around any way you want to
 V \u041f\u0435\u0440\u0435\u0434\u0432\u0438\u043d\u0443\u0442\u044c \u0441\u0442\u043e\u043f\u043a\u0443 \u0432 \u043b\u044e\u0431\u043e\u043c \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u043e\u043c \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0438
 K Move the flipped stack
 V \u041f\u0435\u0440\u0435\u0434\u0432\u0438\u043d\u044c\u0442\u0435 \u043f\u0435\u0440\u0435\u0432\u0435\u0440\u043d\u0443\u0442\u0443\u044e \u0441\u0442\u043e\u043f\u043a\u0443
+S Move the line of birds
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
@@ -656,6 +659,8 @@ S Place a Frog on the board
 S Place a GIPF piece on a starting point
 K Place a Ring on the board
 V \u041f\u043e\u043b\u043e\u0436\u0438\u0442\u0435 \u043a\u043e\u043b\u044c\u0446\u043e \u043d\u0430 \u0434\u043e\u0441\u043a\u0443
+S Place a bird on an empty cell
+S Place a bird on an empty cell, or designate a bird to fly
 S Place a chip on a starting point
 S Place a chip on the board
 K Place a chip, or shirt or rotate a board
@@ -1036,6 +1041,15 @@ K Volcano_family
 V Volcano
 K Volcano_variation
 V standard 5x5 Volcano
+S Volo
+K Volo-84
+V small board Volo
+K Volo-84_variation
+V small board Volo
+K Volo_family
+V Volo
+K Volo_variation
+V standard Volo
 K Wait for opponents to arrive.
 V \u041e\u0436\u0438\u0434\u0430\u0435\u043c \u043f\u0440\u0438\u0431\u044b\u0442\u0438\u044f \u0441\u043e\u043f\u0435\u0440\u043d\u0438\u043a\u0430.
 S Wait for other players to adjust
@@ -1122,6 +1136,7 @@ S build an ideal city
 S capture all of one opponentr's color
 S center square is not special
 S click Done to finish this Auction
+S connect all your birds into one flock
 K connect opposite sides with a chain of markers
 V \u0421\u043e\u0435\u0434\u0438\u043d\u0438\u0442\u0435 \u043f\u0440\u043e\u0442\u0438\u0432\u043e\u043f\u043e\u043b\u043e\u0436\u043d\u044b\u0435 \u0441\u0442\u043e\u0440\u043e\u043d\u044b \u0446\u0435\u043f\u044c\u044e \u043c\u0430\u0440\u043a\u0435\u0440\u043e\u0432
 K connecting
@@ -1234,4 +1249,4 @@ V \u0414\u043e\u0431\u0440\u043e \u043f\u043e\u0436\u0430\u043b\u043e\u0432\u043
 S you may increase your bid
 K your name
 V \u0432\u0430\u0448\u0435 \u0438\u043c\u044f
-N 801
+N 812

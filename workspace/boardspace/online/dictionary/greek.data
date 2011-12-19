@@ -156,6 +156,7 @@ S Click on Done to end the game as a Draw
 S Click on Done to finish all captures
 S Click on Done to send cubes to the carvan
 S Click on Gipf pieces to change their capture status
+S Click on the end of the line to move
 S Click on the line to be captured
 S Click on the placed piece to rotate it, or Click Done
 S Closing...
@@ -198,6 +199,7 @@ S Designate GIPF pieces to capture, or place a GIPF chip
 S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
 S Designate a row to capture before your turn
+S Designate a zone to clear
 S Dice
 K Dipole
 V Dipole (original)
@@ -483,6 +485,7 @@ S Move a volcano cap
 S Move one ship
 S Move stacks around any way you want to
 S Move the flipped stack
+S Move the line of birds
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
@@ -552,6 +555,8 @@ S Place a Chip, or a Jewel, or a chip from the Store
 S Place a Frog on the board
 S Place a GIPF piece on a starting point
 S Place a Ring on the board
+S Place a bird on an empty cell
+S Place a bird on an empty cell, or designate a bird to fly
 S Place a chip on a starting point
 S Place a chip on the board
 K Place a chip, or shirt or rotate a board
@@ -864,6 +869,15 @@ K Volcano_family
 V Volcano
 K Volcano_variation
 V standard 5x5 Volcano
+S Volo
+K Volo-84
+V small board Volo
+K Volo-84_variation
+V small board Volo
+K Volo_family
+V Volo
+K Volo_variation
+V standard Volo
 K Wait for opponents to arrive.
 V Wait for opponent to arrive.
 S Wait for other players to adjust
@@ -942,6 +956,7 @@ S build an ideal city
 S capture all of one opponentr's color
 S center square is not special
 S click Done to finish this Auction
+S connect all your birds into one flock
 S connect opposite sides with a chain of markers
 K connecting
 V Connecting to 
@@ -1032,4 +1047,4 @@ K welcome
 V Welcome to the BoardSpace Lobby, version #1
 S you may increase your bid
 S your name
-N 801
+N 812

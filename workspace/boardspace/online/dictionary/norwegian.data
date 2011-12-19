@@ -198,6 +198,7 @@ V Klikk \u00abFerdig\u00bb for \u00e5 avslutte spillet som uavgjort.
 S Click on Done to finish all captures
 S Click on Done to send cubes to the carvan
 S Click on Gipf pieces to change their capture status
+S Click on the end of the line to move
 S Click on the line to be captured
 K Click on the placed piece to rotate it, or Click Done
 V Klikk p\u00e5 brikken du har plassert for \u00e5 rotere den eller velg \u00abFerdig\u00bb.
@@ -248,6 +249,7 @@ S Designate GIPF pieces to capture, or place a GIPF chip
 S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
 S Designate a row to capture before your turn
+S Designate a zone to clear
 S Dice
 K Dipole
 V Dipole (Originalversjonen)
@@ -587,6 +589,7 @@ K Move stacks around any way you want to
 V Flytt stablene rundt som du \u00f8nsker.
 K Move the flipped stack
 V Flytt stabelen som har blitt flippet.
+S Move the line of birds
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
@@ -669,6 +672,8 @@ S Place a Frog on the board
 S Place a GIPF piece on a starting point
 K Place a Ring on the board
 V Plasser en ring p\u00e5 brettet.
+S Place a bird on an empty cell
+S Place a bird on an empty cell, or designate a bird to fly
 S Place a chip on a starting point
 S Place a chip on the board
 K Place a chip, or shirt or rotate a board
@@ -1045,6 +1050,15 @@ K Volcano_family
 V Volcano
 K Volcano_variation
 V standard 5x5 Volcano
+S Volo
+K Volo-84
+V small board Volo
+K Volo-84_variation
+V small board Volo
+K Volo_family
+V Volo
+K Volo_variation
+V standard Volo
 K Wait for opponents to arrive.
 V Vent p\u00e5 at motstanderne kommer.
 S Wait for other players to adjust
@@ -1133,6 +1147,7 @@ S capture all of one opponentr's color
 K center square is not special
 V Sentrumsfeltet er ikke spesielt.
 S click Done to finish this Auction
+S connect all your birds into one flock
 K connect opposite sides with a chain of markers
 V Forbind dine to motst\u00e5ende sider med en kjede av brikker i din farge.
 K connecting
@@ -1240,4 +1255,4 @@ V Velkommen til BoardSpace, versjon #1.
 S you may increase your bid
 K your name
 V ditt navn
-N 801
+N 812

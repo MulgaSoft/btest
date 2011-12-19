@@ -197,6 +197,7 @@ V Haz clic en Done para terminar la partida como un empate
 S Click on Done to finish all captures
 S Click on Done to send cubes to the carvan
 S Click on Gipf pieces to change their capture status
+S Click on the end of the line to move
 S Click on the line to be captured
 K Click on the placed piece to rotate it, or Click Done
 V Haz clic sobre la ficha colocada para rotarla, o clic en Done
@@ -243,6 +244,7 @@ S Designate GIPF pieces to capture, or place a GIPF chip
 S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
 S Designate a row to capture before your turn
+S Designate a zone to clear
 S Dice
 K Dipole
 V Dipole (original)
@@ -569,6 +571,7 @@ K Move one ship
 V Mueve un barco
 S Move stacks around any way you want to
 S Move the flipped stack
+S Move the line of birds
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
@@ -646,6 +649,8 @@ S Place a Frog on the board
 S Place a GIPF piece on a starting point
 K Place a Ring on the board
 V Coloca un anillo sobre el tablero
+S Place a bird on an empty cell
+S Place a bird on an empty cell, or designate a bird to fly
 S Place a chip on a starting point
 S Place a chip on the board
 K Place a chip, or shirt or rotate a board
@@ -1016,6 +1021,15 @@ K Volcano_family
 V Volcano
 K Volcano_variation
 V 5x5 Volcano
+S Volo
+K Volo-84
+V small board Volo
+K Volo-84_variation
+V small board Volo
+K Volo_family
+V Volo
+K Volo_variation
+V standard Volo
 K Wait for opponents to arrive.
 V Esperando la llegada de los rivales.
 S Wait for other players to adjust
@@ -1103,6 +1117,7 @@ S capture all of one opponentr's color
 K center square is not special
 V la casilla central no es especial
 S click Done to finish this Auction
+S connect all your birds into one flock
 K connect opposite sides with a chain of markers
 V Conecta lados opuestos con una cadena de fichas
 K connecting
@@ -1212,4 +1227,4 @@ V Bienvenido al Servidor de Juego, versi\u00f3n #1
 S you may increase your bid
 K your name
 V tu nombre
-N 801
+N 812

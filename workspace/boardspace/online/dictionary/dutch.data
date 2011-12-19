@@ -238,6 +238,7 @@ V Klik Klaar om het slaan te voltooien
 S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V Klik op de stukken om hun status mbt. slaan te wijzigen
+S Click on the end of the line to move
 K Click on the line to be captured
 V Klik op de lijn die gelagen moet worden
 K Click on the placed piece to rotate it, or Click Done
@@ -303,6 +304,7 @@ K Designate a row to capture
 V Bepaal een rij om te slaan
 K Designate a row to capture before your turn
 V Bepaal voor je zet een rij om te slaan
+S Designate a zone to clear
 S Dice
 K Dipole
 V Dipole (origineel)
@@ -683,6 +685,7 @@ K Move stacks around any way you want to
 V Beweeg kolommen naar believen
 K Move the flipped stack
 V Verplaats de omgedraaide kolom
+S Move the line of birds
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
@@ -775,6 +778,8 @@ K Place a GIPF piece on a starting point
 V Plaats een GIPF stuk op een beginpunt
 K Place a Ring on the board
 V Plaats een Ring op het bord
+S Place a bird on an empty cell
+S Place a bird on an empty cell, or designate a bird to fly
 K Place a chip on a starting point
 V Plaats een chip op een beginpunt
 S Place a chip on the board
@@ -1206,6 +1211,15 @@ K Volcano_family
 V Volcano
 K Volcano_variation
 V standaard 5x5 Volcano
+S Volo
+K Volo-84
+V small board Volo
+K Volo-84_variation
+V small board Volo
+K Volo_family
+V Volo
+K Volo_variation
+V standard Volo
 K Wait for opponents to arrive.
 V Wacht op komst tegenspeler.
 K Wait for other players to adjust
@@ -1307,6 +1321,7 @@ K center square is not special
 V Het centrale veld heeft geen speciale rol
 K click Done to finish this Auction
 V Klik Klaar om de veiling te beeindigen
+S connect all your birds into one flock
 K connect opposite sides with a chain of markers
 V verbind tegenoverliggende zijden met je stenen
 K connecting
@@ -1430,4 +1445,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 801
+N 812

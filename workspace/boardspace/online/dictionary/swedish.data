@@ -241,6 +241,7 @@ V Klicka p\u00e5 Klar f\u00f6r att avsluta alla er\u00f6vringar
 S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V Klicka p\u00e5 Gipf-brickorna f\u00f6r att \u00e4ndra deras er\u00f6vringsstatus
+S Click on the end of the line to move
 K Click on the line to be captured
 V Klicka p\u00e5 linjen som ska er\u00f6vras
 K Click on the placed piece to rotate it, or Click Done
@@ -305,6 +306,7 @@ K Designate a row to capture
 V V\u00e4lj en rad att er\u00f6vra
 K Designate a row to capture before your turn
 V V\u00e4lj en rad att er\u00f6vra innan ditt drag
+S Designate a zone to clear
 S Dice
 K Dipole
 V Dipole (original)
@@ -691,6 +693,7 @@ K Move stacks around any way you want to
 V Flytta h\u00f6garna p\u00e5 valfritt s\u00e4tt
 K Move the flipped stack
 V Flytta den v\u00e4nda h\u00f6gen
+S Move the line of birds
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
@@ -783,6 +786,8 @@ K Place a GIPF piece on a starting point
 V Placera en Gipf-bricka p\u00e5 en yttre position
 K Place a Ring on the board
 V Placera en ring p\u00e5 br\u00e4det
+S Place a bird on an empty cell
+S Place a bird on an empty cell, or designate a bird to fly
 K Place a chip on a starting point
 V Placera en bricka p\u00e5 en yttre position
 S Place a chip on the board
@@ -1213,6 +1218,15 @@ K Volcano_family
 V Volcano
 K Volcano_variation
 V Volcano standard 5x5
+S Volo
+K Volo-84
+V small board Volo
+K Volo-84_variation
+V small board Volo
+K Volo_family
+V Volo
+K Volo_variation
+V standard Volo
 K Wait for opponents to arrive.
 V V\u00e4ntar p\u00e5 motst\u00e5ndaren.
 K Wait for other players to adjust
@@ -1314,6 +1328,7 @@ V Er\u00f6vra alla i en motst\u00e5ndarf\u00e4rg
 K center square is not special
 V mittrutan \u00e4r inte speciell
 S click Done to finish this Auction
+S connect all your birds into one flock
 K connect opposite sides with a chain of markers
 V Bind ihop dina motsatta sidor
 K connecting
@@ -1437,4 +1452,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 801
+N 812

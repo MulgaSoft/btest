@@ -242,6 +242,7 @@ V \u70b9\u51fb\u5b8c\u6210\u7ed3\u675f\u6355\u83b7
 S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V \u5728\u5c06\u8981\u88ab\u79fb\u9664\u7684\u4e00\u884c\u68cb\u4e2d\u70b9\u51fb\u4f60\u60f3\u8981\u7559\u4e0b\u7684\u4e00\u4e2a\u68cb\u6808\uff0c\u5426\u5219\u70b9\u51fb\u5b8c\u6210\u7ed3\u675f\u79fb\u9664\u6574\u884c
+S Click on the end of the line to move
 K Click on the line to be captured
 V \u70b9\u51fb\u8981\u5403\u7684\u4e00\u884c
 K Click on the placed piece to rotate it, or Click Done
@@ -308,6 +309,7 @@ K Designate a row to capture
 V \u6307\u5b9a\u4e00\u884c\u8fdb\u884c\u6355\u83b7
 K Designate a row to capture before your turn
 V \u5728\u4f60\u5f00\u59cb\u524d\u6307\u5b9a\u4e00\u884c\u8fdb\u884c\u6355\u83b7
+S Designate a zone to clear
 S Dice
 K Dipole
 V Dipole (\u539f\u59cb)
@@ -696,6 +698,7 @@ K Move stacks around any way you want to
 V \u5728\u4efb\u610f\u5730\u65b9\u653e\u7f6e\u68cb\u6808
 K Move the flipped stack
 V \u79fb\u52a8\u88ab\u7ffb\u8f6c\u7684\u68cb\u6808
+S Move the line of birds
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
@@ -787,6 +790,8 @@ K Place a GIPF piece on a starting point
 V \u5728\u8d77\u59cb\u70b9\u653e\u4e00\u4e2aGIPF\u68cb\u5b50
 K Place a Ring on the board
 V \u653e\u4e00\u4e2a\u73af\u5728\u68cb\u76d8\u4e0a
+S Place a bird on an empty cell
+S Place a bird on an empty cell, or designate a bird to fly
 K Place a chip on a starting point
 V \u5728\u8d77\u59cb\u70b9\u653e\u4e00\u4e2a\u68cb\u5b50
 S Place a chip on the board
@@ -1216,6 +1221,15 @@ K Volcano_family
 V Volcano
 K Volcano_variation
 V \u666e\u901a 5x5 \u706b\u5c71
+S Volo
+K Volo-84
+V small board Volo
+K Volo-84_variation
+V small board Volo
+K Volo_family
+V Volo
+K Volo_variation
+V standard Volo
 K Wait for opponents to arrive.
 V \u7b49\u5f85\u5bf9\u624b\u5230\u6765
 K Wait for other players to adjust
@@ -1319,6 +1333,7 @@ K center square is not special
 V \u4efb\u4f55\u68cb\u5b50\u90fd\u53ef\u4ee5\u5360\u9886\u4e2d\u5fc3\u65b9\u683c
 K click Done to finish this Auction
 V \u70b9\u51fb\u5b8c\u6210\u7ed3\u675f\u62cd\u5356
+S connect all your birds into one flock
 K connect opposite sides with a chain of markers
 V \u7528\u4f60\u7684\u68cb\u5b50\u6392\u6210\u94fe\u76f4\u5230\u8fde\u63a5\u5230\u68cb\u76d8\u7684\u4e24\u4e2a\u4e0e\u4f60\u68cb\u5b50\u989c\u8272\u76f8\u540c\u7684\u5bf9\u8fb9
 K connecting
@@ -1443,4 +1458,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-N 801
+N 812

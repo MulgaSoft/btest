@@ -194,6 +194,7 @@ V Kliknij Zatwierd\u017a, aby zako\u0144czy\u0107 gr\u0119 remisem
 S Click on Done to finish all captures
 S Click on Done to send cubes to the carvan
 S Click on Gipf pieces to change their capture status
+S Click on the end of the line to move
 S Click on the line to be captured
 K Click on the placed piece to rotate it, or Click Done
 V Kliknij na umieszczonym klocku, aby do obr\u00f3ci\u0107 albo kliknij Zatwierd\u017a
@@ -239,6 +240,7 @@ S Designate GIPF pieces to capture, or place a GIPF chip
 S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
 S Designate a row to capture before your turn
+S Designate a zone to clear
 S Dice
 S Dipole
 S Dipole-s
@@ -569,6 +571,7 @@ K Move stacks around any way you want to
 V Zmieniaj po\u0142o\u017cenie stos\u00f3w jakkolwiek chcesz
 K Move the flipped stack
 V Przesu\u0144 odwr\u00f3cony stos
+S Move the line of birds
 S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
@@ -649,6 +652,8 @@ S Place a Frog on the board
 S Place a GIPF piece on a starting point
 K Place a Ring on the board
 V Umie\u015b\u0107 pier\u015bcie\u0144 na planszy
+S Place a bird on an empty cell
+S Place a bird on an empty cell, or designate a bird to fly
 S Place a chip on a starting point
 S Place a chip on the board
 K Place a chip, or shirt or rotate a board
@@ -1012,6 +1017,15 @@ S Volcano-r_variation
 K Volcano_family
 V Volcano
 S Volcano_variation
+S Volo
+K Volo-84
+V small board Volo
+K Volo-84_variation
+V small board Volo
+K Volo_family
+V Volo
+K Volo_variation
+V standard Volo
 K Wait for opponents to arrive.
 V Czekaj na przybycie przeciwnika.
 S Wait for other players to adjust
@@ -1095,6 +1109,7 @@ S capture all of one opponentr's color
 K center square is not special
 V pole centralne nie ma specjalnych w\u0142asno\u015bci
 S click Done to finish this Auction
+S connect all your birds into one flock
 K connect opposite sides with a chain of markers
 V po\u0142\u0105cz przeciwne strony \u0142a\u0144cuchem znacznik\u00f3w
 K connecting
@@ -1206,4 +1221,4 @@ V Witam w Pasa\u017cu BoardSpace, wersja #1
 S you may increase your bid
 K your name
 V twoje imi\u0119
-N 801
+N 812

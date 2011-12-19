@@ -256,6 +256,7 @@ K Click on Done to send cubes to the carvan
 V Valider pour envoyer des cubes \u00e0 la caravane 
 K Click on Gipf pieces to change their capture status
 V Cliquez sur les pi\u00e8ces Gipf pour les retirer ou non.
+S Click on the end of the line to move
 K Click on the line to be captured
 V Cliquez sur la ligne \u00e0 capturer
 K Click on the placed piece to rotate it, or Click Done
@@ -320,6 +321,7 @@ K Designate a row to capture
 V Indiquez une ligne \u00e0 capturer
 K Designate a row to capture before your turn
 V Indiquez une ligne \u00e0 capturer avant votre coup
+S Designate a zone to clear
 K Dice
 V D\u00e9s
 K Dipole
@@ -707,6 +709,7 @@ K Move stacks around any way you want to
 V Bougez les piles o\u00f9 vous voulez
 K Move the flipped stack
 V Bougez le c\u00f4t\u00e9 face de la pile
+S Move the line of birds
 K Move the supervisor
 V D\u00e9placer le superviseur
 K Move the supervisor up to 3 extra spaces when you move the supervisor
@@ -809,6 +812,8 @@ K Place a GIPF piece on a starting point
 V Placer une pi\u00e8ce Gipf sur son point de d\u00e9part
 K Place a Ring on the board
 V Placez un anneau sur le plateau
+S Place a bird on an empty cell
+S Place a bird on an empty cell, or designate a bird to fly
 K Place a chip on a starting point
 V Placez une pi\u00e8ce \u00e0 son point de d\u00e9part
 S Place a chip on the board
@@ -1256,6 +1261,15 @@ K Volcano_family
 V Volcano
 K Volcano_variation
 V Volcano 5x5
+S Volo
+K Volo-84
+V small board Volo
+K Volo-84_variation
+V small board Volo
+K Volo_family
+V Volo
+K Volo_variation
+V standard Volo
 K Wait for opponents to arrive.
 V En attente d'adversaire.
 K Wait for other players to adjust
@@ -1357,6 +1371,7 @@ V capturez toutes les pi\u00e8ces d'une couleur adverse
 K center square is not special
 V La case centrale n'est pas sp\u00e9ciale
 S click Done to finish this Auction
+S connect all your birds into one flock
 K connect opposite sides with a chain of markers
 V reliez les c\u00f4t\u00e9s oppos\u00e9s par une cha\u00eene de jetons
 K connecting
@@ -1480,4 +1495,4 @@ K you may increase your bid
 V vous pouvez augmenter votre offre
 K your name
 V Votre nom
-N 801
+N 812
