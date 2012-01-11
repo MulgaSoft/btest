@@ -40,10 +40,12 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     //
     private int playerColor[]={White_Chip_Pool,Black_Chip_Pool};
     private hexChip playerChip[]={hexChip.White,hexChip.Black};
+    private hexCell playerCell[]=new hexCell[2];
     // get the chip pool and chip associated with a player.  these are not 
     // constants because of the swap rule.
 	public hexChip getPlayerChip(int p) { return(playerChip[p]); }
 	public int getPlayerColor(int p) { return(playerColor[p]); }
+	public hexCell getPlayerCell(int p) { return(playerCell[p]); }
 // this is required even though it is meaningless for Hex, but possibly important
 // in other games.  When a draw by repetition is detected, this function is called.
 // the game should have a "draw pending" state and enter it now, pending confirmation
@@ -53,11 +55,12 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 // other parts of this mechanism: the Viewer ought to have a "repRect" and call
 // DrawRepRect to warn the user that repetitions have been seen.
 	public void SetDrawState() {G.Error("not expected"); };	
-	
+	OStack<hexCell>animationStack = new OStack<hexCell>(hexCell.class);
     private int chips_on_board = 0;			// number of chips currently on the board
     private int sweep_counter=0;			// used when scanning for blobs
     private int directionWhiteHome = -1;
     private int directionBlackHome = -1;
+    private boolean swapped = false;
     // intermediate states in the process of an unconfirmed move should
     // be represented explicitly, so unwinding is easy and reliable.
     public hexChip pickedObject = null;
@@ -123,6 +126,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         blackChipPool.chip = hexChip.Black;
         whiteChipPool = new hexCell(r,White_Chip_Pool);
         whiteChipPool.chip = hexChip.White;
+        playerCell[FIRST_PLAYER_INDEX] = whiteChipPool; 
+        playerCell[SECOND_PLAYER_INDEX] = blackChipPool; 
         initBoard(firstcol, ncol, null); //this sets up the hex board
         allCells.setDigestChain(r);		// set the randomv for all cells on the board
       	setBorderDirections();	// mark the border cells for use in painting
@@ -262,9 +267,10 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     {
 
        Init_Standard(gtype.toLowerCase());
- 
+        animationStack.clear();
         win[0] = win[1] = false;
         resign_planned = false;
+        swapped = false;
         moveNumber = 1;
 
         // note that firstPlayer is NOT initialized here
@@ -469,13 +475,14 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     //
     // undo the drop, restore the moving object to moving status.
     //
-    private void unDropObject()
-    {
-    	if(droppedDest!=null) 
-    	{	pickedObject = droppedDest.topChip();
-    		SetBoard(droppedDest,null); 
+    private hexCell unDropObject()
+    {	hexCell rv = droppedDest;
+    	if(rv!=null) 
+    	{	pickedObject = rv.topChip();
+    		SetBoard(rv,null); 
     		droppedDest = null;
      	}
+    	return(rv);
     }
     // 
     // undo the pick, getting back to base state for the move
@@ -604,7 +611,6 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         	}
         	break;
         case PLAY_STATE:
-        case FIRST_PLAY_STATE:
         case PLAY_OR_SWAP_STATE:
 			setBoardState(CONFIRM_STATE);
 			break;
@@ -620,16 +626,20 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     	default: G.Error("Not expecting state "+board_state);
     		break;
     	case GAMEOVER_STATE: break;
-    	case CONFIRM_SWAP_STATE: setBoardState(PLAY_STATE); break;
+    	case CONFIRM_SWAP_STATE: 
+    		setBoardState(PLAY_STATE); 
+    		break;
     	case CONFIRM_STATE:
     	case PUZZLE_STATE:
     	case PLAY_STATE:
     	case PLAY_OR_SWAP_STATE:
-    		setBoardState(resetState = ((chips_on_board==1) ? PLAY_OR_SWAP_STATE : PLAY_STATE));
+    		setBoardState(((chips_on_board==1)&&(whoseTurn==SECOND_PLAYER_INDEX)&&!swapped) 
+    				? PLAY_OR_SWAP_STATE
+    				: PLAY_STATE);
     		
     		break;
     	}
-
+       	resetState = board_state;
     }
     private void doDone()
     {
@@ -651,12 +661,16 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         }
     }
 void doSwap()
-{ int c = playerColor[0];
+{	int c = playerColor[0];
 	hexChip ch = playerChip[0];
 	playerColor[0]=playerColor[1];
 	playerChip[0]=playerChip[1];
 	playerColor[1]=c;
 	playerChip[1]=ch;
+	hexCell cc = playerCell[0];
+	playerCell[0]=playerCell[1];
+	playerCell[1]=cc;
+	swapped = !swapped;
 	switch(board_state)
 	{	
 	default: G.Error("Not expecting state "+board_state);
@@ -672,9 +686,11 @@ void doSwap()
 	}
 
 }
-    public boolean Execute(commonMove mm)
+    public boolean Execute(commonMove mm,replayMode replay)
     {	Hexmovespec m = (Hexmovespec)mm;
         boolean next_rp = false;
+        
+        if(replay!=replayMode.Replay) { animationStack.clear(); }
 
         //G.print("E "+m+" for "+whoseTurn+" "+board_state);
         switch (m.op)
@@ -689,16 +705,23 @@ void doSwap()
             break;
 
         case MOVE_DROPB:
+        	{
+        	hexCell animsrc = null;
 			switch(board_state)
 			{ case PUZZLE_STATE: acceptPlacement(); break;
-			  case CONFIRM_STATE: unDropObject(); unPickObject(); break;
+			  case CONFIRM_STATE: animsrc = unDropObject(); unPickObject(); break;
 			  case PLAY_STATE:
 			  case PLAY_OR_SWAP_STATE: acceptPlacement(); break;
 			}
-			pickObject(getCell(m.source,m.to_col,m.to_row));
-            dropObject(getCell(BoardLocation,m.to_col,m.to_row));
+			{
+			hexCell src = getCell(m.source,m.to_col,m.to_row); 
+			hexCell dest =  getCell(BoardLocation,m.to_col,m.to_row);
+			pickObject(src);
+            dropObject(dest);
+            if(replay!=replayMode.Replay) { animationStack.push(animsrc==null?src:animsrc); animationStack.push(dest); }
+			}
             setNextStateAfterDrop();
-
+        	}
             break;
 
         case MOVE_PICK:
@@ -758,8 +781,17 @@ void doSwap()
         		doSwap();
         		// fall through
         	default:
-        		unDropObject();
-        		unPickObject();
+        		{	hexCell dd = droppedDest;
+        			hexCell ps = pickedSource;
+        			unDropObject();
+        			if(pickedObject!=null)
+        			{
+        				if(ps==null) { ps = playerCell[pickedObject.chipNumber()]; }
+        				animationStack.push(dd);
+        				animationStack.push(ps);
+        			}
+        			unPickObject();
+        		}
         		setBoardState(resetState);
         		break;
         	case GAMEOVER_STATE:
@@ -793,7 +825,6 @@ void doSwap()
             return(false);	// not used
         case CONFIRM_STATE:
         case PLAY_OR_SWAP_STATE:
-        case FIRST_PLAY_STATE:
         case PLAY_STATE:
         	// for hex, you can pick up a stone in the storage area
         	// but it's really optional
@@ -811,7 +842,6 @@ void doSwap()
         switch (board_state)
         {
 		case PLAY_STATE:
-		case FIRST_PLAY_STATE:
 		case PLAY_OR_SWAP_STATE:
 			return(c.chip==null);
 		case CONFIRM_SWAP_STATE:
@@ -842,7 +872,7 @@ void doSwap()
         
         //G.Assert(m.player == whoseTurn, "whoseturn doesn't agree");
 
-        if (Execute(m))
+        if (Execute(m,replayMode.Replay))
         {
             if (m.op == MOVE_DONE)
             {

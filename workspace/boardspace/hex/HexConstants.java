@@ -58,10 +58,9 @@ public interface HexConstants extends OnlineConstants
     //static final int RESIGN_STATE = 1; // pending resignation, ready to confirm
     //static final int GAMEOVER_STATE = 2; // game is over (someone won or resigned)
     static final int CONFIRM_STATE = 3; // move and remove completed, ready to commit to it.
-    static final int FIRST_PLAY_STATE = 4;	// the first move
-    static final int PLAY_STATE = 5; // place a marker on the board
-	static final int PLAY_OR_SWAP_STATE = 6; // place a marker or swap colors 
-	static final int CONFIRM_SWAP_STATE = 7; // swapped, confirm swap move
+    static final int PLAY_STATE = 4; // place a marker on the board
+	static final int PLAY_OR_SWAP_STATE = 5; // place a marker or swap colors 
+	static final int CONFIRM_SWAP_STATE = 6; // swapped, confirm swap move
     /* these strings correspond to the move states */
     static String[] boardStates = 
         {
@@ -69,7 +68,6 @@ public interface HexConstants extends OnlineConstants
             "Click on Done to confirm your resignation", 
             "Game Over", 
             "Click Done to confirm this move", 
-            "Place a marker on any empty cell",	// first play state
             "Place a marker on any empty cell",	// play state
             "Place a marker on any empty cell, or Swap Colors",
             "Click Done to confirm swapping colors with your opponent"

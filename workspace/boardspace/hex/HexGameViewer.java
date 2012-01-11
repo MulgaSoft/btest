@@ -1,6 +1,7 @@
 package hex;
 
 import online.common.*;
+import online.common.SimpleSprite.Movement;
 
 
 import java.awt.*;
@@ -37,6 +38,7 @@ import online.game.BoardProtocol.replayMode;
 import online.game.sgf.sgf_names;
 import online.game.sgf.sgf_node;
 import online.game.sgf.sgf_property;
+
 
 
 /**
@@ -285,7 +287,7 @@ public class HexGameViewer extends commonCanvas
         logRect.height = logHeight;
 
  		swapRect.x = boardRect.x + CELLSIZE;	//the "swap colors" button which appears briefly
-		swapRect.y = boardRect.y+(doRotation?2:14)*CELLSIZE;
+		swapRect.y = boardRect.y+(doRotation?2:16)*CELLSIZE;
 		swapRect.width = CELLSIZE * 5;
 		swapRect.height = CELLSIZE ;
 
@@ -436,9 +438,12 @@ public class HexGameViewer extends commonCanvas
             while (nc-- > 0)
             {	int rx = Math.abs(rand.nextInt()) % spacex;
                 int ry = Math.abs(rand.nextInt()) % spacey;
-                chip.drawChip(gc,this,CELLSIZE,r.x+CELLSIZE/2+rx,r.y+CELLSIZE/2+ry,null);
+                chip.drawChip(gc,this,(int)bb.CELLSIZE,r.x+CELLSIZE/2+rx,r.y+CELLSIZE/2+ry,null);
              }
         }
+        // set the cell location for animations
+        bb.getPlayerCell(player).current_center_x = r.x+r.width/2;
+        bb.getPlayerCell(player).current_center_y = r.y+r.height/2;
     }
     /**
     * sprites are normally a game piece that is "in the air" being moved
@@ -587,23 +592,15 @@ public class HexGameViewer extends commonCanvas
             boolean drawhighlight = (hitCell && (cell==closestCell)) 
    				|| gb.isDest(cell) 		// is legal for a "drop" operation
    				|| gb.isSource(cell);	// is legal for a "pick" operation+
-            boolean drawSomething = drawhighlight || (cell.chip!=null);
-            if(drawSomething)
-            {
-             hexChip chip = cell.topChip();
-         	 int ypos = (brect.y + brect.height) - gb.cellToY(cell);
-             int xpos = brect.x + gb.cellToX(cell);
+         	int ypos = (brect.y + brect.height) - gb.cellToY(cell);
+            int xpos = brect.x + gb.cellToX(cell);
   
-             if (drawhighlight)
+            if (drawhighlight)
              { // checking for pointable position
             	 StockArt.SmallO.drawChip(gc,this,(int)(gb.CELLSIZE*5),xpos,ypos,null);                
              }
-
-             if (chip!=null)
-             {
-              chip.drawChip(gc,this,(int)(gb.CELLSIZE),xpos,ypos,null); 
-              }
-            }}
+            cell.drawChip(gc,this,highlight,(int)(gb.CELLSIZE),xpos,ypos,null); 
+            }
         }
     }
 
@@ -734,11 +731,52 @@ public class HexGameViewer extends commonCanvas
     			mm.setLineBreak(true);
         	}
     	}
+        
         handleExecute(bb,mm,replay);
+        
+        startBoardAnimations(replay);
+        
 		lastDropped = bb.lastDroppedObject;	// this is for the image adjustment logic
 		if(replay!=replayMode.Replay) { playSounds((Hexmovespec)mm); }
        return (true);
     }
+     void startBoardAnimations(replayMode replay)
+     {
+        if(replay!=replayMode.Replay)
+     	{	while(bb.animationStack.size()>1)
+     		{
+     		hexCell dest = bb.animationStack.pop();
+     		hexCell src = bb.animationStack.pop();
+     		startAnimation(src,dest,dest.topChip());
+     		}
+     	}
+        	bb.animationStack.clear();
+     } 
+     void startAnimation(hexCell from,hexCell to,hexChip top)
+     {	if((from!=null) && (to!=null) && (top!=null))
+     	{	double speed = 0.5;
+      		if(debug)
+     		{
+     			G.Assert(!((from.current_center_x==0) && (from.current_center_y==0)),"From Cell %s center is not set",from);
+        			G.Assert(!((to.current_center_x==0) && (to.current_center_y==0)),"To %s center is not set",to);
+     		}
+     		
+     		// make time vary as a function of distance to partially equalize the runtim of
+     		// animations for long verses short moves.
+     		double dist = G.distance(from.current_center_x, from.current_center_y, to.current_center_x,  to.current_center_y);
+     		double full = G.distance(0,0,boardRect.width,boardRect.height);
+     		double endtime = speed*Math.sqrt(dist/full);
+     		
+     		SimpleSprite newSprite = new SimpleSprite(true,top,
+     				(int)bb.CELLSIZE,	// use the same cell size as drawSprite would
+     				endtime,
+             		from.current_center_x,from.current_center_y,
+             		to.current_center_x,to.current_center_y);
+     		newSprite.movement = Movement.SlowIn;
+             to.addActiveAnimation(newSprite);
+   			addSprite(newSprite);
+   			}
+     }
  void playSounds(Hexmovespec mm)
  {
 	 switch(mm.op)
@@ -823,134 +861,7 @@ public class HexGameViewer extends commonCanvas
     	     
     	  return(rval);
       }
- //   public commonMove EditHistory(commonMove nmove)
- //   {
- //       Hexmovespec newmove = (Hexmovespec) nmove;
- //       Hexmovespec rval = newmove;			// default returned value
- //       int state = bb.board_state;
- //       int idx = History.size() - 1;
- //       
- //      while(idx>=0)
- //       {	Hexmovespec m = (Hexmovespec) History.elementAt(idx);
- //       	int start_idx = idx;
- //           if(m.next!=null) 
- //           	{ // editing history, don't edit directly
- //           		switch(newmove.op)
- //           		{	case MOVE_PICK:
- //           			case MOVE_DROP:
- //           				rval = null;
- //           			default: break;
- //           		}
- //           		idx = -1; 
- //           	}
- //            else {
- //           switch(newmove.op)
- //       	{
- //           case MOVE_SWAP:
- //           	if(m.op==MOVE_SWAP) 
- //           		{ UndoHistoryElement(idx);
- //            		  rval = null;
- //           		  }
- //      		  idx=-1;
- //             break;
- //       	case MOVE_DONE:
- //       	default:
- //       		idx = -1;
- //       		break;
- //       	case MOVE_PICK:	
- //       		if((state!=PUZZLE_STATE) && (m.op==MOVE_DROPB))
- //       			{ UndoHistoryElement(idx); idx=-1; }
- //          	case MOVE_DROP:
- //          		if((idx>1) && (m.op==MOVE_PICKB) && (state!=PUZZLE_STATE))
- //          		{
- //          			Hexmovespec m2 = (Hexmovespec) History.elementAt(idx-1);
- //          			if((m2.op==MOVE_DROPB)
- //          				&& (m2.to_row==m.to_row)
- //          				&& (m2.to_col==m.to_col))
- //          				{
- //         				UndoHistoryElement(idx);
- //          				UndoHistoryElement(idx-1);
- //          				rval = null;
- //          				idx = -1;
- //          				}
- //          				
- //          		}
- //          		else if(m.op!=MOVE_PICKB)
- //          		{
- //       		rval = null;		// picks don't appear in the history.  This is probably peculiar to hex
- //          		}
- //       		idx = -1;
- //       		break;
- //       	case MOVE_RESET:
- //       		// reset is a special move that gets you back to the start of the
- //       		// current player's turn, effectively unwinding all actions taken
- //       		// so far.
- //       		rval = null;		// reset is never recorded in the history
- //       		// fall through
- //       	case MOVE_RESIGN:		// resign is your whole move, so acts like reset.
- //       		switch(m.op)
- //       		{
- //               default:
- //            		if(state==PUZZLE_STATE) { idx = -1; break; }
- //               case MOVE_PICKB:
- //               case MOVE_PICK:
- //                   UndoHistoryElement(idx);
- //               	idx--;
- //                   break;
- //               case MOVE_DONE: // these stop the scan 
- //               case MOVE_EDIT:
- //               case MOVE_START:
- //                   idx = -1;
- //               }
- //       		break;
- //       	case MOVE_DROPB:
- //       		if(state!=PUZZLE_STATE)
- //       		{	if(m.op==MOVE_DROPB) 
- //       			{ UndoHistoryElement(idx); 
- //       			}
- //       		}
- //       		else
- //       		{
- //       		if((idx>2)&& (m.op==MOVE_PICKB))
- //       		{
- //       		Hexmovespec m2 = (Hexmovespec) History.elementAt(idx-1);	
- //      		Hexmovespec m3 = (Hexmovespec) History.elementAt(idx-2);	
- //       		if((m3.op==MOVE_PICKB)
- //       				&& (m2.source==EmptyBoard)
- //       				&& (m2.op==MOVE_DROPB)
- //       				&& (m2.to_col==m.to_col)
- //       				&& (m2.to_row==m.to_row))
- //       			{	UndoHistoryElement(idx);
- //       				UndoHistoryElement(idx-1);
- //       			}
- //       		}
- //       		}
- //       		idx = -1;
- //       		break;
- //       	case MOVE_PICKB:
- //       		if(state!=PUZZLE_STATE)
- //       		{
- //       		switch(m.op)
- //       		{
- //       		case MOVE_PICKB:
- //       		case MOVE_DROPB:
- //       			if( (newmove.to_col==m.to_col)
- //           				&& (newmove.to_row==m.to_row))
- //           			{
- //           				UndoHistoryElement(idx);
- //           				if(newmove.op!=m.op) // protect against bounces
- //           					{ rval = null; }
- //           			}
- //       		}}
- //  				idx = -1;
- //  			 	break;
- //       		}	// end of switch on new move
- //           }
- //           G.Assert(idx!=start_idx,"progress editing history");
- //           }
- //
- //       return (rval);
- //   }
+
     
     /** 
      * this method is called from deep inside PerformAndTransmit, at the point
@@ -1230,7 +1141,7 @@ public class HexGameViewer extends commonCanvas
         ShowStats(offGC,vcrRect.x+vcrRect.width+10,vcrRect.y+vcrRect.height/2);	// add some stats on top of everything
  
         showRectangles(offGC, CELLSIZE); //show rectangles in the UI
- 
+        drawSprites(offGC);
         if(offScreen!=null)
         	{ // display the completed result if it was drawn into a backing bitmap rather than directly
         	displayClipped(g,fullRect,chatRect,offScreen);
