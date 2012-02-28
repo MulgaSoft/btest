@@ -73,7 +73,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
      */
     public void sameboard(CheckerBoard from_b)
     {
-    	super.sameboard(from_b);
+    	super.sameboard(from_b);	// calls sameCell for each cell
     	
         for (int i = 0; i < win.length; i++)
         {
@@ -81,11 +81,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 			G.Assert(playerColor[i]==from_b.playerColor[i],"Player colors match");
 			G.Assert(chips_on_board[i]==from_b.chips_on_board[i],"chip count matches");
         }
-        for(CheckerCell c = allCells,d=from_b.allCells;
-        	c!=null;
-        	c=c.next,d=d.next)
-        {	G.Assert(c.sameCell(d),"cells match");
-        }
+
         G.Assert(sameCells(pickedSourceStack,from_b.pickedSourceStack),"pickedSourceStack mismatch");
         G.Assert(sameCells(droppedDestStack,from_b.droppedDestStack),"droppedDestStack mismatch");
         G.Assert(pickedObject==from_b.pickedObject,"pickedObject doesn't match");
@@ -141,8 +137,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 		{	v ^= c.Digest();
 		}
 		v ^= chip.Digest(r,pickedObject);
-		v ^= CheckerCell.Digest(r,pickedSourceStack);
-		v ^= CheckerCell.Digest(r,droppedDestStack);
+		v ^= Digest(r,pickedSourceStack);
+		v ^= Digest(r,droppedDestStack);
 		v ^= (board_state*10+whoseTurn+(resign_planned?4:2))*r.nextLong();
         return (v);
     }
@@ -160,21 +156,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     {	to.clear();
     	for(int i=0,lim=from.size(); i<lim; i++) { to.push(getCell(from.elementAt(i))); }
     }
-    /**
-     * verify that cells are the same
-     * @param from_board
-     */
-    boolean sameCells(OStack<CheckerCell>local,OStack<CheckerCell>remote)
-    {	int sz = local.size();
-    	if(remote.size()!=sz) { return(false); }
-    	for(int i=0;i<sz;i++) 
-    		{ if(!CheckerCell.sameCell(local.elementAt(i),remote.elementAt(i)))
-    			{ return(false); 
-    			}; 
-    		}
-    	return(true);
-    
-    }
+
     /* make a copy of a board.  This is used by the robot to get a copy
      * of the board for it to manupulate and analyze without affecting 
      * the board that is being displayed.

@@ -1,7 +1,5 @@
 package checkerboard;
 import java.util.Random;
-
-import online.common.OStack;
 import online.game.stackCell;
 
 
@@ -32,12 +30,5 @@ public class CheckerCell extends stackCell<CheckerCell,CheckerChip> implements C
 	 * roles, or when the diest of contents is complex.
 	 */
 	public long Digest(Random r) { return(super.Digest(r)); }
-	static public long Digest(Random r,OStack<CheckerCell>st)
-	{	long v=0;
-		for(int lim=st.size()-1; lim>=0; lim--) { v ^= st.elementAt(lim).Digest(r); }
-		return(v);	
-	}
-	static public boolean sameCell(CheckerCell c,CheckerCell d)
-	{	return((c==null)?(c==d):c.sameCell(d));
-	}
+
 }
