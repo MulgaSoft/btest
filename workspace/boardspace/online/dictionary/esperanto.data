@@ -30,6 +30,7 @@ V #1 \u0109esigita pro #2
 K #1 left
 V #1 restas
 S #1 prisoners
+S #1 prizes, total value #2
 K #1 quit
 V #1 \u0109esis
 K #1 repetitions
@@ -89,6 +90,7 @@ K Allow challenges from #1
 V Permesi invitojn de #1
 K Animate
 V Bildigi
+S Animation Speed
 K Anyone can play in this room
 V \u0108iu ajn povas ludi en \u0109i tiu \u0109ambro
 K Apr #1#2#3
@@ -266,6 +268,7 @@ K Complete the split
 V Finu la dividon
 K Confirm Dropping this rider
 V Konfirmu Forigo de \u0109i tiu biciklisto
+S Confirming card selection
 K Connect all your frogs (at least 7) in one cluster
 V Ligu \u0109iujn viajn ranojn (almena\u016d 7) en unu grupo
 K Connection Games
@@ -287,6 +290,12 @@ V Plu kaptu
 S Continue deploying the stack
 K Continue merging or click Done
 V Plu kunigu a\u016d klaku Fini
+K Cookie-Disco
+V Cookie Disco
+K Cookie-Disco_variation
+V standard Cookie Disco
+K CookieDisco_family
+V Cookie Disco
 S Crossfire
 S Crossfire_family
 S Crossfire_variation
@@ -844,6 +853,8 @@ K Place the next tile on the board, where a runner can move over it
 V Metu la sekvan platon sur la tabulon, kie kuristo povas kuri super \u011di
 K Place your bid to fund the loan
 V Metu vian oferton pro pruntedoni
+S Place your cookie
+S Place your cookie, or swap colors
 K Place your first man on the board
 V Metu vian unuan homon sur la tabulon
 K Place your queen on the board
@@ -908,6 +919,11 @@ K Qyshinsu_variation
 V La mistero de la vojo
 K Racing Games
 V Ludoj pri Vetkurado
+S Raj
+K Raj_family
+V Raj
+K Raj_variation
+V Standard Raj
 K Rearrange the gold fleet
 V Rearan\u011du la oran pecaron
 K Rearrange the silver fleet
@@ -992,6 +1008,7 @@ K Select the #1 piece to move
 V Elektu la #1 pecon por movi
 K Select the destination for the selected piece
 V Elektu la cellokon por la elektita peco
+S Select the next prize
 K Select the stack to move from
 V Elektu la stakon de kiu vi movos
 S Select which of your roamers to kill
@@ -1044,6 +1061,7 @@ K Spectators are:
 V Spektantoj estas: 
 K Split or Merge this stack, or click Done
 V Dividu a\u016d Kunigu \u0109i tiun stakon, a\u016d klaku Fini
+S Split the cookies and get most of them
 K Split this stack, or click Done
 V Dividu \u0109i tiun stakon, a\u016d klaku Fini
 S Spot Price #1
@@ -1123,6 +1141,9 @@ K This is now a private room
 V \u0108i tio estas nun privata \u0109ambro
 K This is now a public room
 V \u0108i tio estas nun publika \u0109ambro
+S TicTacNine
+K TicTacNine_variation
+V experimental TicTacNine board
 K Tile Pattern Games
 V Ludoj pri Aran\u011doj de Platoj
 K Tile Size
@@ -1236,6 +1257,7 @@ K Wait for other players to adjust
 V Atendu dum aliaj ludantoj agordas
 K Wait for the other players to decide
 V Atendu dum aliaj ludantoj decidas
+S Wait for the other players to play
 K Waiting in
 V Atendas en
 S Wall
@@ -1326,6 +1348,7 @@ K announceOption
 V Anonci Novajn Ludantojn
 K automute
 V #1 estis a\u016dtomate mutigita
+S bid and win the most prize value
 K build an ideal city
 V konstruu idealan urbon
 K capture all of one opponentr's color
@@ -1456,4 +1479,4 @@ K you may increase your bid
 V vi povas pliigi vian oferton
 K your name
 V via nomo
-N 812
+N 829

@@ -204,11 +204,18 @@ public class HexGameViewer extends commonCanvas
         super.doInit(preserve_history);				// let commonViewer do it's things
         bb.doInit(bb.gametype);						// initialize the board
         if(!preserve_history)
-        	{ PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,replayMode.Live);
-        	}
+    	{ PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,replayMode.Live);
+    	}
     }
     
-
+    /** this is called by the game controller when all players have connected
+     * and the first player is about to be allowed to make his first move. This
+     * may be a new game, or a game being restored, or a player rejoining a game.
+     * You can override or encapsulate this method.
+     */
+    public void startPlaying()
+    {	super.startPlaying();
+    }
     
 	/**
 	 * 
@@ -219,6 +226,17 @@ public class HexGameViewer extends commonCanvas
     {	return(super.inPlayRect(eventX,eventY));
     }
 
+    /**
+     * update the players clocks.  The normal thing is to tick the clocks
+     * only for the player whose turn it is.  Games with a simtaneous action
+     * phase need to do something more complicated.
+     * @param inc the increment (in milliseconds) to add
+     * @param p the current player, normally the player to update.
+     */
+    public void updatePlayerTime(long inc,commonPlayer p)
+    {
+    	super.updatePlayerTime(inc,p);
+    }
 	/**
 	 * 
 	 * this is a debugging hack to give you an event based on clicking in the time
@@ -1294,15 +1312,17 @@ public class HexGameViewer extends commonCanvas
     }
 
     /** start the robot.  This is used to invoke a robot player.  Mainly this needs 
-     * to know the class for the robot and any initialization it requires.
+     * to know the class for the robot and any initialization it requires.  The return
+     * value is the player actually started, which is normally the same as requested,
+     * but might be different in some games, notably simultaneous play games like Raj
      *  */
-    public void startRobot(commonPlayer p,commonPlayer runner)
+    public commonPlayer startRobot(commonPlayer p,commonPlayer runner)
     {	// this is what the standard method does:
     	// int level = sharedInfo.getInt(sharedInfo.ROBOTLEVEL,0);
     	// RobotProtocol rr = newRobotPlayer();
     	// rr.InitRobot(sharedInfo, getBoard(), null, level);
     	// p.startRobot(rr);
-    	super.startRobot(p,runner);
+    	return(super.startRobot(p,runner));
     }
     /** factory method to create a robot */
     public SimpleRobotProtocol newRobotPlayer() 

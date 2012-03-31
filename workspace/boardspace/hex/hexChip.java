@@ -16,7 +16,7 @@ public class hexChip extends chip
 	private int index = 0;
 	public char colorName;
 	// constructor
-	private hexChip(int i,Image im,String na,double[]sc,char con,int ran)
+	private hexChip(int i,Image im,String na,double[]sc,char con,long ran)
 	{	index = i;
 		scale=sc;
 		image=im;
@@ -65,7 +65,7 @@ public class hexChip extends chip
         Image IM[]=forcan.load_masked_images(Dir,ImageNames);
         hexChip CC[] = new hexChip[nColors];
         for(int i=0;i<nColors;i++) 
-        	{CC[i]=new hexChip(i,IM[i],ImageNames[i],SCALES[i],chipColor[i],rv.nextInt()); 
+        	{CC[i]=new hexChip(i,IM[i],ImageNames[i],SCALES[i],chipColor[i],rv.nextLong()); 
         	}
         CANONICAL_PIECE = CC;
         Black = CC[1];

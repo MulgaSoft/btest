@@ -490,6 +490,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     private void unPickObject()
     {	if(pickedSource!=null) 
     		{ SetBoard(pickedSource,pickedObject);
+    		  droppedDest = pickedSource;
     		  pickedSource = null;
     		}
 		  pickedObject = null;
@@ -783,6 +784,7 @@ void doSwap()
         	default:
         		{	hexCell dd = droppedDest;
         			hexCell ps = pickedSource;
+        			if(pickedObject!=null) { unPickObject(); } 
         			unDropObject();
         			if(pickedObject!=null)
         			{

@@ -27,6 +27,7 @@ V #1 foi desligado devido a #2
 K #1 left
 V #1 esquerda
 S #1 prisoners
+S #1 prizes, total value #2
 K #1 quit
 V #1 caiu
 K #1 repetitions
@@ -76,6 +77,7 @@ S All Games
 K Allow challenges from #1
 V Permitir convites de #1
 S Animate
+S Animation Speed
 K Anyone can play in this room
 V Qualquer um pode jogar nesta sala
 K Apr #1#2#3
@@ -243,6 +245,7 @@ S Complete the push, step #1
 K Complete the split
 V Complete a divis\u00e3o
 S Confirm Dropping this rider
+S Confirming card selection
 K Connect all your frogs (at least 7) in one cluster
 V Conecte todos os seus Sapos (no m\u00ednimo 7) em um \u00fanico bloco
 S Connection Games
@@ -262,6 +265,12 @@ V Continue Capturando
 S Continue deploying the stack
 K Continue merging or click Done
 V Continue mesclando ou pressione o bot\u00e3o Confirmar
+K Cookie-Disco
+V Cookie Disco
+K Cookie-Disco_variation
+V standard Cookie Disco
+K CookieDisco_family
+V Cookie Disco
 S Crossfire
 K Crossfire_family
 V Crossfire
@@ -794,6 +803,8 @@ V Coloque o primeiro pe\u00e3o no tabuleiro
 K Place the next tile on the board, where a runner can move over it
 V Coloque a pr\u00f3xima pe\u00e7a no tabuleiro, onde um corredor possa mover-se sobre ela
 S Place your bid to fund the loan
+S Place your cookie
+S Place your cookie, or swap colors
 K Place your first man on the board
 V Coloque seu primeiro homem no tabuleiro
 K Place your queen on the board
@@ -858,6 +869,11 @@ V Qyshinsu
 K Qyshinsu_variation
 V O mist\u00e9rio do caminho
 S Racing Games
+S Raj
+K Raj_family
+V Raj
+K Raj_variation
+V Standard Raj
 K Rearrange the gold fleet
 V Rearrange a frota dourada
 K Rearrange the silver fleet
@@ -935,6 +951,7 @@ K Select the #1 piece to move
 V Selecione a pe\u00e7a #1 para mover
 K Select the destination for the selected piece
 V Escolha o destino da pe\u00e7a selecionada
+S Select the next prize
 K Select the stack to move from
 V Selecione a pilha de onde ir\u00e1 mover
 S Select which of your roamers to kill
@@ -986,6 +1003,7 @@ K Spectators are:
 V Os espectadores s\u00e3o: 
 K Split or Merge this stack, or click Done
 V Divida ou Mescle esta pilha, ou pressione o bot\u00e3o Confirmar
+S Split the cookies and get most of them
 K Split this stack, or click Done
 V Divida esta pilha, ou pressione o bot\u00e3o Confirmar
 S Spot Price #1
@@ -1061,6 +1079,9 @@ K This is now a private room
 V Agora esta \u00e9 uma sala privativa
 K This is now a public room
 V Agora esta \u00e9 uma sala p\u00fablica
+S TicTacNine
+K TicTacNine_variation
+V experimental TicTacNine board
 K Tile Pattern Games
 V Jogos de Padr\u00f5es
 K Tile Size
@@ -1169,6 +1190,7 @@ K Wait for opponents to arrive.
 V Aguarde a chegada do oponente.
 S Wait for other players to adjust
 S Wait for the other players to decide
+S Wait for the other players to play
 K Waiting in
 V Esperando em
 S Wall
@@ -1253,6 +1275,7 @@ K announceOption
 V Anunciar Novos Jogadores
 K automute
 V #1 foi automaticamente silenciado
+S bid and win the most prize value
 K build an ideal city
 V construa uma cidade ideal
 S capture all of one opponentr's color
@@ -1375,4 +1398,4 @@ V Benvindo ao sal\u00e3o do BoardSpace, vers\u00e3o #1
 S you may increase your bid
 K your name
 V seu nome
-N 812
+N 829

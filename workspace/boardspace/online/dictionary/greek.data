@@ -18,6 +18,7 @@ S #1 is taking over playing #2 for #3
 S #1 killed due to #2
 S #1 left
 S #1 prisoners
+S #1 prizes, total value #2
 S #1 quit
 S #1 repetitions
 K #1 requests Joint review
@@ -52,6 +53,7 @@ S All Games
 K Allow challenges from #1
 V Allow invitations from #1
 S Animate
+S Animation Speed
 S Anyone can play in this room
 K Apr #1#2#3
 V #1 Apr, #2:#3 GMT
@@ -169,6 +171,7 @@ S Complete the pull, step #1
 S Complete the push, step #1
 S Complete the split
 S Confirm Dropping this rider
+S Confirming card selection
 S Connect all your frogs (at least 7) in one cluster
 S Connection Games
 S Connection error
@@ -184,6 +187,12 @@ V Container with second shipment rules
 S Continue Capturing
 S Continue deploying the stack
 S Continue merging or click Done
+K Cookie-Disco
+V Cookie Disco
+K Cookie-Disco_variation
+V standard Cookie Disco
+K CookieDisco_family
+V Cookie Disco
 S Crossfire
 K Crossfire_family
 V Crossfire
@@ -588,6 +597,8 @@ S Place the Rabbits
 S Place the first meeple on the board
 S Place the next tile on the board, where a runner can move over it
 S Place your bid to fund the loan
+S Place your cookie
+S Place your cookie, or swap colors
 S Place your first man on the board
 S Place your queen on the board
 S Place your second man on the board
@@ -634,6 +645,11 @@ V Qyshinsu
 K Qyshinsu_variation
 V The mystery of the way
 S Racing Games
+S Raj
+K Raj_family
+V Raj
+K Raj_variation
+V Standard Raj
 S Rearrange the gold fleet
 S Rearrange the silver fleet
 S Rearrange things any way you want to
@@ -693,6 +709,7 @@ S Select a ring to remove
 S Select a row of 5 to remove
 S Select the #1 piece to move
 S Select the destination for the selected piece
+S Select the next prize
 S Select the stack to move from
 S Select which of your roamers to kill
 S Select which opponent roamer to kill
@@ -724,6 +741,7 @@ S Spectator is:
 S Spectators
 S Spectators are: 
 S Split or Merge this stack, or click Done
+S Split the cookies and get most of them
 S Split this stack, or click Done
 S Spot Price #1
 S Spread out the stacks
@@ -784,6 +802,9 @@ S This die will be rolled
 S This die will not be rolled
 S This is now a private room
 S This is now a public room
+S TicTacNine
+K TicTacNine_variation
+V experimental TicTacNine board
 S Tile Pattern Games
 S Tile Size
 S Time is 
@@ -882,6 +903,7 @@ K Wait for opponents to arrive.
 V Wait for opponent to arrive.
 S Wait for other players to adjust
 S Wait for the other players to decide
+S Wait for the other players to play
 S Waiting in
 S Wall
 S Warehouse
@@ -952,6 +974,7 @@ K announceOption
 V Announce New Players
 K automute
 V #1 has been automatically muted
+S bid and win the most prize value
 S build an ideal city
 S capture all of one opponentr's color
 S center square is not special
@@ -1047,4 +1070,4 @@ K welcome
 V Welcome to the BoardSpace Lobby, version #1
 S you may increase your bid
 S your name
-N 812
+N 829

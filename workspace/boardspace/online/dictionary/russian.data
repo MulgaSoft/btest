@@ -27,6 +27,7 @@ V #1 \u0443\u0431\u0438\u0442 #2
 K #1 left
 V #1 \u043b\u0435\u0432\u043e
 S #1 prisoners
+S #1 prizes, total value #2
 K #1 quit
 V #1 \u0432\u044b\u0448\u0435\u043b
 S #1 repetitions
@@ -74,6 +75,7 @@ V \u0412\u0441\u0435 \u0438\u0433\u0440\u044b
 K Allow challenges from #1
 V \u0420\u0430\u0437\u0440\u0435\u0448\u0438\u0442\u044c \u043f\u0440\u0438\u0433\u043b\u0430\u0448\u0435\u043d\u0438\u044f \u043e\u0442 #1
 S Animate
+S Animation Speed
 K Anyone can play in this room
 V \u0417\u0434\u0435\u0441\u044c \u043c\u043e\u0436\u0435\u0442 \u0438\u0433\u0440\u0430\u0442\u044c \u043a\u0442\u043e \u0443\u0433\u043e\u0434\u043d\u043e
 K Apr #1#2#3
@@ -213,6 +215,7 @@ S Complete the pull, step #1
 S Complete the push, step #1
 S Complete the split
 S Confirm Dropping this rider
+S Confirming card selection
 S Connect all your frogs (at least 7) in one cluster
 S Connection Games
 K Connection error
@@ -230,6 +233,12 @@ K Continue Capturing
 V \u041f\u0440\u043e\u0434\u043e\u043b\u0436\u0430\u0439\u0442\u0435 \u0437\u0430\u0445\u0432\u0430\u0442
 S Continue deploying the stack
 S Continue merging or click Done
+K Cookie-Disco
+V Cookie Disco
+K Cookie-Disco_variation
+V standard Cookie Disco
+K CookieDisco_family
+V Cookie Disco
 S Crossfire
 K Crossfire_family
 V Crossfire
@@ -426,9 +435,9 @@ K Hive-L_variation
 V \u0423\u043b\u0435\u0439 \u0441 \u0411\u043e\u0436\u044c\u0435\u0439 \u041a\u043e\u0440\u043e\u0432\u043a\u043e\u0439
 S Hive-M
 K Hive-M_variation
-V Hive with Mosquito added
+V \u0423\u043b\u0435\u0439 \u0441 \u041a\u043e\u043c\u0430\u0440\u043e\u043c
 K Hive_family
-V Hive
+V \u0423\u043b\u0435\u0439
 K Hive_variation
 V \u0441\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u044b\u0439 \u0423\u043b\u0435\u0439
 S I will make the loan
@@ -701,6 +710,8 @@ S Place the Rabbits
 S Place the first meeple on the board
 S Place the next tile on the board, where a runner can move over it
 S Place your bid to fund the loan
+S Place your cookie
+S Place your cookie, or swap colors
 S Place your first man on the board
 K Place your queen on the board
 V \u041f\u043e\u043b\u043e\u0436\u0438\u0442\u0435 \u0441\u0432\u043e\u044e \u043f\u0447\u0435\u043b\u043e\u043c\u0430\u0442\u043a\u0443 \u043d\u0430 \u0434\u043e\u0441\u043a\u0443
@@ -758,6 +769,11 @@ V Qyshinsu
 K Qyshinsu_variation
 V The mystery of the way
 S Racing Games
+S Raj
+K Raj_family
+V Raj
+K Raj_variation
+V Standard Raj
 S Rearrange the gold fleet
 S Rearrange the silver fleet
 K Rearrange things any way you want to
@@ -830,6 +846,7 @@ K Select the #1 piece to move
 V \u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 #1 \u0444\u0438\u0433\u0443\u0440\u0443 \u0434\u043b\u044f \u0445\u043e\u0434\u0430
 K Select the destination for the selected piece
 V \u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u043a\u0443\u0434\u0430 \u043f\u043e\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u0432\u0430\u0448\u0443 \u0444\u0438\u0433\u0443\u0440\u0443
+S Select the next prize
 S Select the stack to move from
 S Select which of your roamers to kill
 S Select which opponent roamer to kill
@@ -877,6 +894,7 @@ V \u0417\u0440\u0438\u0442\u0435\u043b\u0438
 K Spectators are: 
 V \u0417\u0440\u0438\u0442\u0435\u043b\u0438: 
 S Split or Merge this stack, or click Done
+S Split the cookies and get most of them
 S Split this stack, or click Done
 S Spot Price #1
 S Spread out the stacks
@@ -948,6 +966,9 @@ K This is now a private room
 V \u0422\u0435\u043f\u0435\u0440\u044c \u044d\u0442\u043e \u0437\u0430\u043a\u0440\u044b\u0442\u0430\u044f \u043a\u043e\u043c\u043d\u0430\u0442\u0430
 K This is now a public room
 V \u0422\u0435\u043f\u0435\u0440\u044c \u044d\u0442\u043e \u043f\u0443\u0431\u043b\u0438\u0447\u043d\u0430\u044f \u043a\u043e\u043c\u043d\u0430\u0442\u0430
+S TicTacNine
+K TicTacNine_variation
+V experimental TicTacNine board
 S Tile Pattern Games
 K Tile Size
 V \u0420\u0430\u0437\u043c\u0435\u0440 \u043f\u043b\u0438\u0442\u043a\u0438
@@ -1054,6 +1075,7 @@ K Wait for opponents to arrive.
 V \u041e\u0436\u0438\u0434\u0430\u0435\u043c \u043f\u0440\u0438\u0431\u044b\u0442\u0438\u044f \u0441\u043e\u043f\u0435\u0440\u043d\u0438\u043a\u0430.
 S Wait for other players to adjust
 S Wait for the other players to decide
+S Wait for the other players to play
 K Waiting in
 V \u0416\u0434\u0451\u0442
 S Wall
@@ -1132,6 +1154,7 @@ K announceOption
 V \u0423\u0432\u0435\u0434\u043e\u043c\u0438\u0442\u044c \u043d\u043e\u0432\u044b\u0445 \u0438\u0433\u0440\u043e\u043a\u043e\u0432
 K automute
 V #1 \u0431\u044b\u043b \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438 \u0432\u044b\u043a\u043b\u044e\u0447\u0435\u043d
+S bid and win the most prize value
 S build an ideal city
 S capture all of one opponentr's color
 S center square is not special
@@ -1249,4 +1272,4 @@ V \u0414\u043e\u0431\u0440\u043e \u043f\u043e\u0436\u0430\u043b\u043e\u0432\u043
 S you may increase your bid
 K your name
 V \u0432\u0430\u0448\u0435 \u0438\u043c\u044f
-N 812
+N 829

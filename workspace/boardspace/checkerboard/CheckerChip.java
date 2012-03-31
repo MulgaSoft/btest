@@ -26,7 +26,7 @@ public class CheckerChip extends chip
     static final int BLACK_CHIP_INDEX = FIRST_CHIP_INDEX+1;
     static final int WHITE_CHIP_INDEX = FIRST_CHIP_INDEX;
 
-	private CheckerChip(String na,int pla,Image im,int rv,double scl[])
+	private CheckerChip(String na,int pla,Image im,long rv,double scl[])
 	{	name = na;
 		colorIndex=pla;
 		image = im;
@@ -78,7 +78,7 @@ public class CheckerChip extends chip
         Random rv = new Random(343535);		// an arbitrary number, just change it
         for(int i=0;i<nColors;i++) 
         	{
-        	CC[i]=new CheckerChip(ImageNames[i],i-FIRST_CHIP_INDEX,IM[i],rv.nextInt(),SCALES[i]); 
+        	CC[i]=new CheckerChip(ImageNames[i],i-FIRST_CHIP_INDEX,IM[i],rv.nextLong(),SCALES[i]); 
         	}
         CANONICAL_PIECE = CC;
         check_digests(CC);

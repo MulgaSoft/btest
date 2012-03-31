@@ -30,6 +30,7 @@ V #1\u56e0#2\u727a\u7272
 K #1 left
 V #1 \u5de6\u8fb9
 S #1 prisoners
+S #1 prizes, total value #2
 K #1 quit
 V #1\u9000\u51fa
 K #1 repetitions
@@ -89,6 +90,7 @@ K Allow challenges from #1
 V \u5141\u8bb8#1\u9080\u8bf7
 K Animate
 V \u5f00\u59cb
+S Animation Speed
 K Anyone can play in this room
 V \u5927\u4f17\u623f\u95f4
 K Apr #1#2#3
@@ -267,6 +269,7 @@ K Complete the split
 V \u5b8c\u6210\u62c6\u5206
 K Confirm Dropping this rider
 V \u786e\u5b9a\u653e\u5f03\u8fd9\u4e2a\u9009\u624b
+S Confirming card selection
 K Connect all your frogs (at least 7) in one cluster
 V \u6536\u96c6\u4f60\u6240\u6709\u7684\u9752\u86d9\uff08\u81f3\u5c117\u4e2a\uff09
 K Connection Games
@@ -288,6 +291,12 @@ V \u7ee7\u7eed\u5403
 S Continue deploying the stack
 K Continue merging or click Done
 V \u7ee7\u7eed\u5408\u5e76\u6216\u70b9\u51fb\u5b8c\u6210
+K Cookie-Disco
+V Cookie Disco
+K Cookie-Disco_variation
+V standard Cookie Disco
+K CookieDisco_family
+V Cookie Disco
 S Crossfire
 K Crossfire_family
 V Crossfire
@@ -846,6 +855,8 @@ K Place the next tile on the board, where a runner can move over it
 V \u653e\u4e00\u5757\u56fe\u7816\u5728\u68cb\u76d8\u4e0a\uff0c\u4f7f\u68cb\u5b50\u6709\u8def\u53ef\u8d70
 K Place your bid to fund the loan
 V \u5bf9\u8d37\u6b3e\u7684\u6570\u989d\u7ed9\u51fa\u7ade\u4ef7
+S Place your cookie
+S Place your cookie, or swap colors
 K Place your first man on the board
 V \u5728\u68cb\u76d8\u4e0a\u653e\u7b2c\u4e00\u4e2a\u4eba
 K Place your queen on the board
@@ -910,6 +921,11 @@ K Qyshinsu_variation
 V \u5cf0\u56de\u8def\u8f6c
 K Racing Games
 V \u8d5b\u8dd1\u6e38\u620fGames
+S Raj
+K Raj_family
+V Raj
+K Raj_variation
+V Standard Raj
 K Rearrange the gold fleet
 V \u91cd\u65b0\u6392\u5217\u91d1\u8272\u8230\u961f
 K Rearrange the silver fleet
@@ -993,6 +1009,7 @@ K Select the #1 piece to move
 V \u9009\u62e9\u79fb\u52a8#1\u68cb
 K Select the destination for the selected piece
 V \u4e3a\u9009\u5b9a\u7684\u68cb\u9009\u62e9\u653e\u7f6e\u5730\u70b9
+S Select the next prize
 K Select the stack to move from
 V \u9009\u62e9\u8981\u8d70\u7684\u68cb\u6808
 S Select which of your roamers to kill
@@ -1045,6 +1062,7 @@ K Spectators are:
 V \u65c1\u89c2\u8005\uff1a
 K Split or Merge this stack, or click Done
 V \u62c6\u5206\u6216\u5408\u5e76\u8fd9\u4e2a\u68cb\u6808\uff0c\u6216\u8005\u70b9\u51fb\u5b8c\u6210
+S Split the cookies and get most of them
 K Split this stack, or click Done
 V \u62c6\u5206\u8fd9\u4e2a\u68cb\u6808\uff0c\u6216\u8005\u70b9\u51fb\u5b8c\u6210
 K Spot Price #1
@@ -1125,6 +1143,9 @@ K This is now a private room
 V \u73b0\u5728\u5df2\u662f\u79c1\u4eba\u623f\u95f4
 K This is now a public room
 V \u73b0\u5728\u5df2\u662f\u5927\u4f17\u623f\u95f4
+S TicTacNine
+K TicTacNine_variation
+V experimental TicTacNine board
 K Tile Pattern Games
 V \u56fe\u5f62\u6e38\u620f
 K Tile Size
@@ -1236,6 +1257,7 @@ K Wait for other players to adjust
 V \u7b49\u5f85\u5176\u4ed6\u9009\u624b\u8c03\u6574
 K Wait for the other players to decide
 V \u7b49\u5f85\u5176\u4ed6\u73a9\u5bb6\u505a\u51b3\u5b9a
+S Wait for the other players to play
 K Waiting in
 V \u7b49\u5f85
 S Wall
@@ -1325,6 +1347,7 @@ K announceOption
 V \u663e\u793a\u65b0\u73a9\u5bb6
 K automute
 V #1\u88ab\u81ea\u52a8\u9759\u97f3
+S bid and win the most prize value
 K build an ideal city
 V \u5efa\u7acb\u4e00\u4e2a\u7406\u60f3\u7684\u57ce\u5e02
 K capture all of one opponentr's color
@@ -1458,4 +1481,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-N 812
+N 829

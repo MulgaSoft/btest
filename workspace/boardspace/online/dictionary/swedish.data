@@ -30,6 +30,7 @@ V #1 utsl\u00e4ngd p.g.a. #2
 K #1 left
 V #1 v\u00e4nster
 S #1 prisoners
+S #1 prizes, total value #2
 K #1 quit
 V #1 l\u00e4mnade rummet
 K #1 repetitions
@@ -89,6 +90,7 @@ K Allow challenges from #1
 V Till\u00e5t inbjudningar fr\u00e5n #1
 K Animate
 V Animera
+S Animation Speed
 K Anyone can play in this room
 V Alla kan spela i detta rum
 K Apr #1#2#3
@@ -265,6 +267,7 @@ K Complete the split
 V F\u00e4rdigst\u00e4ll delning
 K Confirm Dropping this rider
 V Bekr\u00e4fta borttagning
+S Confirming card selection
 K Connect all your frogs (at least 7) in one cluster
 V Samla alla dina grodor (minst 7) i en flock
 K Connection Games
@@ -285,6 +288,12 @@ V Forts\u00e4tt ta kulor
 S Continue deploying the stack
 K Continue merging or click Done
 V Forts\u00e4tt blandning eller klicka p\u00e5 klar
+K Cookie-Disco
+V Cookie Disco
+K Cookie-Disco_variation
+V standard Cookie Disco
+K CookieDisco_family
+V Cookie Disco
 S Crossfire
 K Crossfire_family
 V Crossfire
@@ -842,6 +851,8 @@ K Place the next tile on the board, where a runner can move over it
 V Placera n\u00e4sta bricka p\u00e5 br\u00e4det, d\u00e4r en l\u00f6pare kan passera \u00f6ver den
 K Place your bid to fund the loan
 V Placera bud f\u00f6r att finansiera l\u00e5net
+S Place your cookie
+S Place your cookie, or swap colors
 K Place your first man on the board
 V Placera din f\u00f6rsta m\u00e4nniska p\u00e5 br\u00e4det
 K Place your queen on the board
@@ -907,6 +918,11 @@ K Qyshinsu_variation
 V V\u00e4gens mysterium
 K Racing Games
 V Racingspel
+S Raj
+K Raj_family
+V Raj
+K Raj_variation
+V Standard Raj
 K Rearrange the gold fleet
 V Omarrangera guldflottan
 K Rearrange the silver fleet
@@ -991,6 +1007,7 @@ K Select the #1 piece to move
 V Flytta bricka #1
 K Select the destination for the selected piece
 V V\u00e4lj vart brickan ska flyttas
+S Select the next prize
 K Select the stack to move from
 V V\u00e4lj h\u00f6g att flytta fr\u00e5n
 S Select which of your roamers to kill
@@ -1043,6 +1060,7 @@ K Spectators are:
 V \u00c5sk\u00e5dare: 
 K Split or Merge this stack, or click Done
 V Dela eller blanda den h\u00f6r h\u00f6gen, eller klicka p\u00e5 Klar
+S Split the cookies and get most of them
 K Split this stack, or click Done
 V Dela den h\u00e4r h\u00f6gen, eller klicka p\u00e5 Klar
 S Spot Price #1
@@ -1122,6 +1140,9 @@ K This is now a private room
 V Detta \u00e4r nu ett privat rum.
 K This is now a public room
 V Detta \u00e4r nu ett offentligt rum.
+S TicTacNine
+K TicTacNine_variation
+V experimental TicTacNine board
 K Tile Pattern Games
 V M\u00f6nsterspel
 K Tile Size
@@ -1233,6 +1254,7 @@ K Wait for other players to adjust
 V V\u00e4ntar p\u00e5 att motst\u00e5ndaren ska justera
 K Wait for the other players to decide
 V v\u00e4nta p\u00e5 att den andra spelaren best\u00e4mmer
+S Wait for the other players to play
 K Waiting in
 V V\u00e4ntar i
 S Wall
@@ -1321,6 +1343,7 @@ K announceOption
 V Nya spelare
 K automute
 V #1 har automatiskt f\u00e5tt talf\u00f6rbud
+S bid and win the most prize value
 K build an ideal city
 V bygg en ideal stad
 K capture all of one opponentr's color
@@ -1452,4 +1475,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 812
+N 829

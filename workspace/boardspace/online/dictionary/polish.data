@@ -26,6 +26,7 @@ V #1 killed #2
 K #1 left
 V #1 lewo
 S #1 prisoners
+S #1 prizes, total value #2
 K #1 quit
 V #1 wyszed\u0142
 K #1 repetitions
@@ -69,6 +70,7 @@ S All Games
 K Allow challenges from #1
 V Przyjmuj zaproszenia od #1
 S Animate
+S Animation Speed
 K Anyone can play in this room
 V Ka\u017cdy mo\u017ce gra\u0107 w tym pokoju
 K Apr #1#2#3
@@ -208,6 +210,7 @@ S Complete the pull, step #1
 S Complete the push, step #1
 S Complete the split
 S Confirm Dropping this rider
+S Confirming card selection
 S Connect all your frogs (at least 7) in one cluster
 S Connection Games
 K Connection error
@@ -225,6 +228,12 @@ K Continue Capturing
 V Kontynuuj zbijanie
 S Continue deploying the stack
 S Continue merging or click Done
+K Cookie-Disco
+V Cookie Disco
+K Cookie-Disco_variation
+V standard Cookie Disco
+K CookieDisco_family
+V Cookie Disco
 S Crossfire
 K Crossfire_family
 V Crossfire
@@ -694,6 +703,8 @@ S Place the Rabbits
 S Place the first meeple on the board
 S Place the next tile on the board, where a runner can move over it
 S Place your bid to fund the loan
+S Place your cookie
+S Place your cookie, or swap colors
 S Place your first man on the board
 K Place your queen on the board
 V Umie\u015b\u0107 swoj\u0105 kr\u00f3low\u0105 na planszy
@@ -750,6 +761,11 @@ K Qyshinsu_family
 V Qyshinsu
 S Qyshinsu_variation
 S Racing Games
+S Raj
+K Raj_family
+V Raj
+K Raj_variation
+V Standard Raj
 K Rearrange the gold fleet
 V Poprzestawiaj z\u0142ot\u0105 flot\u0119
 K Rearrange the silver fleet
@@ -824,6 +840,7 @@ K Select the #1 piece to move
 V Wybierz #1 pion, kt\u00f3rym ruszysz
 K Select the destination for the selected piece
 V Wybierz docelowe pole dla wybranego piona
+S Select the next prize
 S Select the stack to move from
 S Select which of your roamers to kill
 S Select which opponent roamer to kill
@@ -871,6 +888,7 @@ V Kibice
 K Spectators are: 
 V Kibicuj\u0105: 
 S Split or Merge this stack, or click Done
+S Split the cookies and get most of them
 S Split this stack, or click Done
 S Spot Price #1
 S Spread out the stacks
@@ -941,6 +959,9 @@ K This is now a private room
 V To jest teraz pok\u00f3j prywatny
 K This is now a public room
 V To jest teraz pok\u00f3j publiczny
+S TicTacNine
+K TicTacNine_variation
+V experimental TicTacNine board
 S Tile Pattern Games
 K Tile Size
 V Rozmiar kafelka
@@ -1030,6 +1051,7 @@ K Wait for opponents to arrive.
 V Czekaj na przybycie przeciwnika.
 S Wait for other players to adjust
 S Wait for the other players to decide
+S Wait for the other players to play
 K Waiting in
 V Oczekuje w
 S Wall
@@ -1104,6 +1126,7 @@ K announceOption
 V Anonsuj Nowych Graczy
 K automute
 V #1 zosta\u0142a automatycznie wyciszona
+S bid and win the most prize value
 S build an ideal city
 S capture all of one opponentr's color
 K center square is not special
@@ -1221,4 +1244,4 @@ V Witam w Pasa\u017cu BoardSpace, wersja #1
 S you may increase your bid
 K your name
 V twoje imi\u0119
-N 812
+N 829

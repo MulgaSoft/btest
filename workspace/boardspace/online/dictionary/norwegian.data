@@ -27,6 +27,7 @@ V #1 drept p\u00e5 grunn av #2
 K #1 left
 V #1 venstre
 S #1 prisoners
+S #1 prizes, total value #2
 K #1 quit
 V #1 sluttet.
 K #1 repetitions
@@ -72,6 +73,7 @@ S All Games
 K Allow challenges from #1
 V Tillat invitasjoner fra #1
 S Animate
+S Animation Speed
 K Anyone can play in this room
 V Alle kan spille i dette rommet.
 K Apr #1#2#3
@@ -216,6 +218,7 @@ S Complete the push, step #1
 K Complete the split
 V Fullf\u00f8r oppdelingen
 S Confirm Dropping this rider
+S Confirming card selection
 S Connect all your frogs (at least 7) in one cluster
 S Connection Games
 K Connection error
@@ -234,6 +237,12 @@ V Fortsett \u00e5 ta baller.
 S Continue deploying the stack
 K Continue merging or click Done
 V Fortsett forening eller klikk Ferdig
+K Cookie-Disco
+V Cookie Disco
+K Cookie-Disco_variation
+V standard Cookie Disco
+K CookieDisco_family
+V Cookie Disco
 S Crossfire
 K Crossfire_family
 V Crossfire
@@ -714,6 +723,8 @@ S Place the Rabbits
 S Place the first meeple on the board
 S Place the next tile on the board, where a runner can move over it
 S Place your bid to fund the loan
+S Place your cookie
+S Place your cookie, or swap colors
 S Place your first man on the board
 K Place your queen on the board
 V Plasser dronningen p\u00e5 brettet.
@@ -771,6 +782,11 @@ K Qyshinsu_family
 V Qyshinsu
 S Qyshinsu_variation
 S Racing Games
+S Raj
+K Raj_family
+V Raj
+K Raj_variation
+V Standard Raj
 K Rearrange the gold fleet
 V Omgrupper gullfl\u00e5ten.
 K Rearrange the silver fleet
@@ -845,6 +861,7 @@ K Select the #1 piece to move
 V Velg en #1 brikke \u00e5 flytte.
 K Select the destination for the selected piece
 V Velg hvor du vil flytte hen.
+S Select the next prize
 K Select the stack to move from
 V Velg stabel \u00e5 flytte fra
 S Select which of your roamers to kill
@@ -893,6 +910,7 @@ K Spectators are:
 V Tilskuerne er: 
 K Split or Merge this stack, or click Done
 V Fordel eller foren denne stabelen eller klikk Ferdig
+S Split the cookies and get most of them
 K Split this stack, or click Done
 V Fordel denne stabelen eller klikk Ferdig
 S Spot Price #1
@@ -965,6 +983,9 @@ K This is now a private room
 V Dette er n\u00e5 et privat rom.
 K This is now a public room
 V Dette er n\u00e5 et offentlig rom.
+S TicTacNine
+K TicTacNine_variation
+V experimental TicTacNine board
 S Tile Pattern Games
 K Tile Size
 V Brikkest\u00f8rrelse
@@ -1063,6 +1084,7 @@ K Wait for opponents to arrive.
 V Vent p\u00e5 at motstanderne kommer.
 S Wait for other players to adjust
 S Wait for the other players to decide
+S Wait for the other players to play
 K Waiting in
 V Venter i
 S Wall
@@ -1142,6 +1164,7 @@ K announceOption
 V Kunngj\u00f8r nye spillere
 K automute
 V #1 har automatisk blitt stum.
+S bid and win the most prize value
 S build an ideal city
 S capture all of one opponentr's color
 K center square is not special
@@ -1255,4 +1278,4 @@ V Velkommen til BoardSpace, versjon #1.
 S you may increase your bid
 K your name
 V ditt navn
-N 812
+N 829
