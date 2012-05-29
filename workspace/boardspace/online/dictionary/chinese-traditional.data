@@ -5,117 +5,95 @@ S #1 Gold
 S #1 Machine
 S #1 Ship
 S #1 center
-K #1 choices
-V #1 mo\u017enost\u00ed
-K #1 deliberately quit
-V #1 z\u00e1m\u011brn\u011b ode\u009ael
+S #1 choices
+S #1 deliberately quit
 K #1 has been muted, by a consensus of the players
-V #1 byl ztlumen dohodou ostatn\u00edch hr\u00e1\u010d\u016f
-K #1 has quit and become a spectator
-V #1 ode\u009ael a stal se div\u00e1kem
+V \u5927\u5bb6\u4e00\u81f4\u540c\u610f #1 \u7981\u6b62\u767c\u8a00\u3002 
+S #1 has quit and become a spectator
 K #1 invites #2 to join room #3
-V #1 zve #2, aby se p\u0159idal ke h\u0159e v m\u00edstnosti #3
+V #1 \u9080\u8acb #2 \u5230 #3 \u865f\u623f\u9593\u3002
 K #1 invites #2 to play #3 in room #4
-V #1 zve #2, aby se p\u0159idal ke h\u0159e #3 v m\u00edstnosti #4
-K #1 is taking over for #2
-V #1 p\u0159evzal hran\u00ed za #2
-K #1 is taking over playing #2 for #3
-V #1 p\u0159evzal hran\u00ed #2 za #3
-K #1 killed due to #2
-V #1 je zabit kv\u016fli #2
+V #1 \u9080\u8acb #2 \u5230 #4 \u865f\u623f\u9593\u73a9 #3\u3002
+S #1 is taking over for #2
+S #1 is taking over playing #2 for #3
+S #1 killed due to #2
 S #1 left
 S #1 prisoners
 S #1 prizes, total value #2
-K #1 quit
-V #1 ode\u009ael
-K #1 repetitions
-V #1 opakov\u00e1n\u00ed
+S #1 quit
+S #1 repetitions
 K #1 requests Joint review
-V #1 \u017e\u00e1d\u00e1 spole\u010dn\u00e9 opakov\u00e1n\u00ed. Vyberte "Spole\u010dn\u00e9 opakov\u00e1n\u00ed" v menu zpr\u00e1v.
+V #1 requests Joint review.  Please select "Joint Review" in the messages menu
 S #1 reserves
 S #1 riders have crossed the first sprint line.
 S #1 riders have crossed the second sprint line.
 S #1 riders have finished
-K #1 starts Joint review
-V #1 spou\u009at\u00ed spole\u010dn\u00e9 opakov\u00e1n\u00ed
-K (unknown)
-V (nezn\u00e1m\u00e9)
-K (unoccupied)
-V (neobsazen\u00e9)
-K (vacancy)
-V (voln\u00e9 m\u00edsto)
+S #1 starts Joint review
+S (unknown)
+S (unoccupied)
+S (vacancy)
 S + #1 turns
-K ...plus #1 more
-V ...plus #1 nav\u00edc
-K 1 choice
-V 1 mo\u017enost
+S ...plus #1 more
+S 1 choice
 S 4w 5g 6b or 3 of each wins
 S Accept $#1 from #2
 S Accept Draw
-K Accept chat from #1
-V P\u0159ijmout chat od #1
+S Accept chat from #1
 S Accept the loan from the bank
 S Accept this loan financing or not
 K Actions
-V Akce
+V \u52d5\u4f5c
 K Active in
-V Aktivn\u00ed v
+V \u904a\u6232\u623f\u9593
 S Add Extra Dice, or click Done to Roll
 S Add a ball
 S Add a ball, remove a Ring
 S Add die
 S Adjust
-K Adjust the chip spacing in stacks
-V P\u0159izp\u016fsobit mezery mezi \u017eetony ve sloupku
+S Adjust the chip spacing in stacks
 S Adjust your starting movements
 K All Games
-V V\u009aechny hry
+V \u6240\u6709\u904a\u6232
 K Allow challenges from #1
-V P\u0159ij\u00edmat pozv\u00e1nky od #1
+V \u540c\u610f\u4f86\u81ea #1 \u7684\u9080\u8acb
 S Animate
-K Animation Speed
-V Rychlost animace
+S Animation Speed
 K Anyone can play in this room
-V Kdokoliv m\u016f\u017ee hr\u00e1t v t\u00e9to m\u00edstnosti
+V \u958b\u653e\u4efb\u4f55\u4eba\u5c31\u5ea7
 K Apr #1#2#3
-V #1. duben, #2:#3 GMT
-K Aqua
-V modrozelen\u00fd
+V 4 \u6708 #1 \u65e5 #2:#3 GMT
+S Aqua
 S Arimaa
 K Arimaa_family
 V Arimaa
 K Arimaa_variation
-V Standardn\u00ed Arimaa
+V Standard Arimaa
 K ArmyOfFrogs
 V Army of Frogs
 K ArmyOfFrogs_family
 V Army Of Frogs
 K ArmyOfFrogs_variation
-V standardn\u00ed Army of Frogs
+V standard Army of Frogs
 S Auction
 K Aug #1#2#3
-V #1. srpen, #2:#3 GMT
+V 8 \u6708 #1 \u65e5 #2:#3 GMT
 S Bag
 S Bank
 S Barrel
-K Become a Spectator
-V St\u00e1t se div\u00e1kem
+S Become a Spectator
 S Bid $ #1
-K Black
-V \u010dern\u00fd
+S Black
 S Black Palace
 S Black Palace Bonus (2 points)
-K Black Pieces
-V figurky \u010dern\u00e9ho
-K Blue
-V modr\u00fd
+S Black Pieces
+S Blue
 S Blue Dome
 K BreakingAway
 V Breaking Away
 K BreakingAway_family
 V Breaking Away
 K BreakingAway_variation
-V standardn\u00ed Breaking Away
+V standard Breaking Away
 S Brown Palace
 S Brown Palace Bonus (3 points)
 K Build a building, play cards, or click on Done
@@ -126,65 +104,53 @@ S Buildings
 S Buy a building with no camels
 S Buy a building with no gold
 S Buy the goods for $#1
-K Calling server...
-V vol\u00e1n\u00ed serveru
+S Calling server...
 S Camels
 S Cannon
 K Cannon_family
 V Cannon
 K Cannon_variation
-V standardn\u00ed Cannon
+V standard Cannon
 S Capture 7 red balls or all of your opponent's balls
 S Capture a ball
 S Capture a group of opponents
-K Capture a stack
-V Zajm\u011bte soupe\u0159\u016fv sloupek
+S Capture a stack
 S Capture all of your opponent's pieces
-K Capture most of your opponent's pieces
-V Zajm\u011bte co nejv\u00edc soupe\u0159ov\u00fdch kamen\u016f
+S Capture most of your opponent's pieces
 K Capture the best combinations of all 5 colors
 V Capture the best combinations of colors and sizes
-K Capture the most chips under your color stack
-V Zajm\u011bte co nejv\u00edce kamen\u016f do sloupk\u016f sv\u00e9 barvy
+S Capture the most chips under your color stack
 S Capture your opponent's tallest king stack
 S Capture your opponent's town
-K Capturing Games
-V Hry se zaj\u00edm\u00e1n\u00edm soupe\u0159ov\u00fdch kamen\u016f
+S Capturing Games
 S Card
 S Cards
 S Cash/Score
-K Chat Room
-V Chatovac\u00ed m\u00edstnost
+S Chat Room
 S Che
 K Che_family
 V Che
 K Che_variation
-V standardn\u00ed Che
+V standard Che
 S Checkmate your opponent's general
 S Chest
 S Choose the penalty for non-payment of interest
 K Click DONE to confirm this placement
-V Stiskn\u011bte Hotovo pro potvrzen\u00ed tohoto um\u00edst\u011bn\u00ed
-K Click Done
-V Stiskn\u011bte Hotovo
-K Click Done to Finish the move
-V Stiskn\u011bte Hotovo pro ukon\u010den\u00ed tahu
+V \u78ba\u8a8d\u6b64\u6b65\u4e26\u9ede\u9078 "\u5b8c\u6210"
+S Click Done
+S Click Done to Finish the move
 S Click Done to accept a draw
 S Click Done to complete the exchange
 K Click Done to confirm removing these markers
-V Stiskn\u011bte Hotovo pro potvrzen\u00ed odstran\u011bn\u00ed t\u011bchto zna\u010dek
+V \u78ba\u8a8d\u53d6\u8d70\u68cb\u5b50\u4e26\u9ede\u9078 "\u5b8c\u6210"
 K Click Done to confirm removing this ring
-V Stiskn\u011bte Hotovo pro potvrzen\u00ed odstran\u011bn\u00ed tohoto krou\u017eku
-K Click Done to confirm swapping colors with your opponent
-V Stiskn\u011bte Hotovo pro potvrzen\u00ed prohozen\u00ed barvy se sv\u00fdm protivn\u00edkem
-K Click Done to confirm swapping fleets with your opponent
-V Stiskn\u011bte Hotovo pro potvrzen\u00ed prohozen\u00ed flotily se sv\u00fdm protivn\u00edkem
-K Click Done to confirm this action
-V Stiskn\u011bte Hotovo pro potvrzen\u00ed t\u00e9to akce
+V \u78ba\u8a8d\u53d6\u8d70\u6b64\u74b0\u9ede\u4e26\u9078 "\u5b8c\u6210"
+S Click Done to confirm swapping colors with your opponent
+S Click Done to confirm swapping fleets with your opponent
+S Click Done to confirm this action
 K Click Done to confirm this move
-V Stiskn\u011bte Hotovo pro ukon\u010den\u00ed sv\u00e9ho kola.
-K Click Done to confirm this placement
-V Stiskn\u011bte Hotovo pro potvrzen\u00ed um\u00edst\u011bn\u00ed
+V \u7d50\u675f\u56de\u5408\u4e26\u9ede\u9078 "\u5b8c\u6210"
+S Click Done to confirm this placement
 S Click Done to decline a draw
 S Click Done to offer a draw
 S Click on Done to begin the building phase
@@ -194,25 +160,19 @@ S Click on Done to confirm swapping
 S Click on Done to confirm the Exchange
 S Click on Done to confirm this Dance
 S Click on Done to confirm this card action
-K Click on Done to confirm your resignation
-V Stiskn\u011bte Hotovo pro potvrzen\u00ed vzd\u00e1n\u00ed hry.
+S Click on Done to confirm your resignation
 S Click on Done to end the game
 S Click on Done to end the game (you lose)
 S Click on Done to end the game as a Draw
-K Click on Done to finish all captures
-V Stiskn\u011bte Hotovo k dokon\u010den\u00ed v\u009aech zajmut\u00ed
+S Click on Done to finish all captures
 S Click on Done to send cubes to the carvan
-K Click on Gipf pieces to change their capture status
-V Klikn\u011bte na kameny Gipf a zm\u011b\u0148te, jestli maj\u00ed b\u00fdt zajmuty nebo ne
+S Click on Gipf pieces to change their capture status
 S Click on the end of the line to move
 S Click on the line to be captured
 S Click on the placed piece to rotate it, or Click Done
-K Closing...
-V Zav\u00edr\u00e1m...
-K Colorblind
-V barvoslep\u00fd
-K Combine two stacks or capture another stack
-V Polo\u017ete na sebe dva sloupky nebo zajm\u011bte dal\u009a\u00ed soupe\u0159\u016fv sloupek
+S Closing...
+S Colorblind
+S Combine two stacks or capture another stack
 S Complete a push or pull, step #1
 S Complete a split or merge
 S Complete the merge
@@ -222,19 +182,17 @@ S Complete the split
 S Confirm Dropping this rider
 S Confirming card selection
 S Connect all your frogs (at least 7) in one cluster
-K Connection Games
-V Spojovac\u00ed hry
-K Connection error
-V Chyba spojen\u00ed
+S Connection Games
+S Connection error
 S Container
 K Container-First
-V Container - p\u016fvodn\u00ed
+V Container - Original
 K Container-First_variation
-V Container s p\u016fvodn\u00edmi p\u0159epravn\u00edmi pravidly
+V Container with the original rules
 K Container_family
 V Container
 K Container_variation
-V Container s jin\u00fdmi p\u0159epravn\u00edmi pravidly
+V Container with second shipment rules
 S Continue Capturing
 S Continue deploying the stack
 S Continue merging or click Done
@@ -248,21 +206,17 @@ S Crossfire
 K Crossfire_family
 V Crossfire
 K Crossfire_variation
-V standardn\u00ed Crossfire
+V standard Crossfire
 S Cubes
 K Dec #1#2#3
-V #1. prosinec, #2:#3 GMT
+V 12 \u6708 #1 \u65e5 #2:#3 GMT
 S Decline Draw
 S Decline the loan
 S Deploy the stack, or click on Done
-K Designate GIPF pieces to capture, or place a GIPF chip
-V Navrhn\u011bte kameny Gipf k zajmut\u00ed, nebo polo\u017ete k\u00e1men Gipf
-K Designate GIPF pieces to capture, or place a chip
-V Navrhn\u011bte kameny Gipf k zajmut\u00ed, nebo polo\u017ete k\u00e1men
-K Designate a row to capture
-V Navrhn\u011bte zajmut\u00ed \u0159ady
-K Designate a row to capture before your turn
-V Navrhn\u011bte zajmut\u00ed \u0159ady p\u0159ed sv\u00fdm kolem
+S Designate GIPF pieces to capture, or place a GIPF chip
+S Designate GIPF pieces to capture, or place a chip
+S Designate a row to capture
+S Designate a row to capture before your turn
 S Designate a zone to clear
 S Diagonal Blocks
 S Diagonal Blocks Duo
@@ -276,24 +230,23 @@ K Diagonal Blocks_variation
 V Polyomino game for 4 players
 S Dice
 K Dipole
-V Dipole (p\u016fvodn\u00ed)
+V Dipole (original)
 K Dipole-s
 V Dipole
 K Dipole-s_variation
-V Dipole 8x8 se symetrickou startovn\u00ed pozic\u00ed
+V Dipole 8x8 with a symmetric starting position
 K Dipole_family
 V Dipole
 K Dipole_variation
-V Dipole 8x8 se nesymetrickou startovn\u00ed pozic\u00ed
+V Dipole 8x8 with an asymmetric starting position
 S Discards
-K Done
-V Hotovo
+S Done
 S Drop a tile to enlarge the board
 K Drop bunny chip
 V Place one of the Bunny player's chips
 S Drop the moving stack back on the rack
 K Drop the ring
-V Polo\u017ete krou\u017eek
+V \u6368\u68c4\u4e00\u500b\u74b0
 S Drop this rider from the Race
 S Drop your piece onto the board or any of your stacks
 S Drop your piece onto the board or any stack
@@ -301,69 +254,58 @@ S Dvonn
 K Dvonn_family
 V Dvonn
 K Dvonn_variation
-V standardn\u00ed Dvonn
+V standard Dvonn
 S Eat
-K Edit
-V Editovat
+S Edit
 S Eliminate all your opponent's pieces
 S Entrapment
-K Entrapment-6x7
-V Entrapment 6x7
+S Entrapment-6x7
 K Entrapment-6x7_variation
-V Entrapment 6x7 - rychlej\u009a\u00ed hra
+V Entrapment 6x7 - faster game
 K Entrapment-7x7
 V Entrapment
 K Entrapment-7x7_variation
-V standardn\u00ed 7x7 Entrapment
+V standard 7x7 Entrapment
 S Entrapment-7x7x4
 K Entrapment-7x7x4_variation
-V Entrapment 7x7 se 4 tul\u00e1ky
+V Entrapment-7x7 with 4 roamers
 K Entrapment_family
 V Entrapment
-K Error
-V Chyba
-K Error reading directory
-V Chyba p\u0159i \u010dten\u00ed slo\u017eky
-K Error reading file
-V Chyba p\u0159i \u010dten\u00ed souboru
-K Escape forced position
-V Unikn\u011bte ze vynucen\u00e9 pozice
-K Escape forced position, or move a barrier
-V Unikn\u011bte z vynucen\u00e9 pozice, nebo p\u0159em\u00edst\u011bte bari\u00e9ru
-K Escape forced position, or place a barrier
-V Unikn\u011bte z vynucen\u00e9 pozice, nebo polo\u017ete bari\u00e9ru
+S Error
+S Error reading directory
+S Error reading file
+S Escape forced position
+S Escape forced position, or move a barrier
+S Escape forced position, or place a barrier
 S Escape from check
-K Euro Games
-V Hry Euro
+S Euro Games
 S Exchange Prisoners
 S Exchange an off-board piece for a new tile
 S Exxit
-K Exxit-Beginner
-V Exxit-za\u010d\u00e1te\u010dn\u00edk
+S Exxit-Beginner
 K Exxit-Beginner_variation
-V hr\u00e1t Exxit s 19 d\u00edlky
-K Exxit-Blitz
-V Exxit-blitz
+V play 19 tile Exxit
+S Exxit-Blitz
 K Exxit-Blitz_variation
-V hr\u00e1t Exxit s 29 d\u00edlky
+V play 29 tile Exxit
 K Exxit-Pro
-V Exxit-expert
+V Exxit-Expert
 K Exxit-Pro_variation
-V hr\u00e1t Exxit pro experty
+V play expert Exxit
 K Exxit_family
 V Exxit
 K Exxit_variation
-V hr\u00e1t Exxit s 39 d\u00edlky
+V play 39 tile Exxit
 S Fanorona
 K Fanorona_family
 V Fanorona
 K Fanorona_variation
-V standardn\u00ed Fanorona
+V standard Fanorona
 S Farmer configuring board
 S Farmer moving scared
 S Farmer select
 K Feb #1#2#3
-V #1. \u00fanor, #2:#3 GMT
+V 2 \u6708 #1 \u65e5 #2:#3 GMT
 S Final Scores:
 S Finished Capturing, Click Done
 S Flagship can not capture
@@ -376,54 +318,45 @@ S Flip a tile, or Move Split or Merge a stack
 S Form a closed shape in your color
 K Frogs
 V Army of Frogs
-K From #1
-V Od #1
-K Game
-V Hra
-K Game Over
-V Konec hry
+S From #1
+S Game
+S Game Over
 S Game Over!  Final scores 
-K Game Room
-V Hern\u00ed m\u00edstnost
-K Game in progress...
-V Prob\u00edhaj\u00edc\u00ed hry...
-K Game timed out.  Session has ended.
-V Vypr\u009ael \u010das hry. Sezen\u00ed skon\u010dilo.
-K Game won by #1
-V Vyhr\u00e1l #1
-K Games do not affect your Ranking
-V Hry neovlivn\u00ed va\u009ae um\u00edst\u011bn\u00ed v \u017eeb\u0159\u00ed\u010dku
+S Game Room
+S Game in progress...
+S Game timed out.  Session has ended.
+S Game won by #1
+S Games do not affect your Ranking
 K Gipf
-V Gipf z\u00e1kladn\u00ed
-K Gipf Games
-V Hry Gipf
+V Gipf Basic
+S Gipf Games
 K Gipf-standard
-V Gipf standardn\u00ed
+V Gipf Standard
 K Gipf-standard_variation
-V Gipf standardn\u00ed (s kameny Gipf)
+V Gipf Standard (with Gipf pieces)
 K Gipf-tournament
-V Gipf expert
+V Gipf Expert
 K Gipf-tournament_variation
-V Gipf expert (neomezen\u011b kamen\u016f Gipf)
+V Gipf Expert (unlimited Gipf pieces)
 K Gipf_family
 V Gipf
 K Gipf_variation
-V Gipf z\u00e1kladn\u00ed (\u017e\u00e1dn\u00e9 kameny Gipf)
+V Gipf Basic (no Gipf pieces)
 S Gobblet
 K Gobblet_family
 V Gobblet
 K Gobblet_variation
-V Hr\u00e1t s povolen\u00fdm nakouknut\u00edm
+V Play with peeking allowed
 K Gobbletm
 V GobbletM
 K Gobbletm_variation
-V Po\u010dty pam\u011bt\u00ed, \u017e\u00e1dn\u00e9 nakouknut\u00ed
+V Memory counts, no peeking
 S Gold
 S Gounki
 K Gounki_family
 V Gounki
 K Gounki_variation
-V standardn\u00ed Gounki
+V standard Gounki
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -439,94 +372,82 @@ V Hex
 K Hex_variation
 V 11x11 Hex
 S Hide
-K Hint
-V N\u00e1pov\u011bda
+S Hint
 S Hive
 S Hive-L
 S Hive-LM
 K Hive-LM_variation
-V Hive nav\u00edc s LadyBug a Mosquito
+V Hive with LadyBug and Mosquito
 K Hive-L_variation
-V Hive nav\u00edc s LadyBug
+V Hive with LadyBug added
 S Hive-M
 K Hive-M_variation
-V Hive nav\u00edc s Mosquito
+V Hive with Mosquito added
 K Hive_family
 V Hive
 K Hive_variation
-V standardn\u00ed Hive
+V standard Hive
 S I will make the loan
-K Idle.
-V Ne\u010dinn\u00fd.
-K Ignore chat from #1
-V Ignorovat chat od #1
+S Idle.
+S Ignore chat from #1
 S Illegal - this move would form an illegal pattern of lines
 S Illegal due to repetition, try something else or resign
 S Illegal move due to repetition - try something else
-K Immobilize your opponent's roamers
-V Znehybn\u011bte soupe\u0159ovy pan\u00e1ky
+S Immobilize your opponent's roamers
 K Invite
-V Pozvat #1 do m\u00edstnosti #2
-K Invite players to this room
-V Pozvat hr\u00e1\u010de do t\u00e9to m\u00edstnosti
+V Invite #1 into room #2
+S Invite players to this room
 S Island
 K Jan #1#2#3
-V #1. leden, #2:#3 GMT
-K Join
-V P\u0159ipojit se
+V 1 \u6708 #1 \u65e5 #2:#3 GMT
+S Join
 K Join only if Invited
-V P\u0159ipojit se pouze na pozv\u00e1n\u00ed
+V Join only if invited
 K Joining as a spectator
-V #1 se p\u0159idal jako div\u00e1k
-K Joint Review
-V Spole\u010dn\u00e9 opakov\u00e1n\u00ed
+V #1 has joined as a spectator
+S Joint Review
 K Jul #1#2#3
-V #1. \u010dervenec, #2:#3 GMT
+V 7  \u6708 #1 \u65e5 #2:#3 GMT
 K Jun #1#2#3
-V #1. \u010derven, #2:#3 GMT
-K Keep all three types of chip visible
-V Udr\u017ete v\u009aechny t\u0159i typy kamen\u016f viditeln\u00e9
+V 6 \u6708 #1 \u65e5 #2:#3 GMT
+S Keep all three types of chip visible
 S Knock 5 of your opponent's dice into the gutter
 S Knockabout
 K Knockabout_family
 V Knockabout
 K Knockabout_variation
-V standardn\u00ed Knockabout
+V standard Knockabout
 S LIMBO
 K LOA
 V Lines of Action
 S LOAP
 K LOAP_variation
-V hr\u00e1t LOA program v sout\u011b\u017en\u00ed variant\u011b
+V play the LOA program contest variation
 K LOA_family
 V Lines of Action
 K LOA_variation
-V standardn\u00ed 8x8 Lines of Action
+V standard 8x8 Lines of Action
 S Last Turn
 S Last Turn before Scoring
-K Launching...
-V Spou\u009at\u00edm...
+S Launching...
 S LeHavre
 K LeHavre_family
 V LeHavre
 K LeHavre_variation
-V standardn\u00ed LeHavre
-K Let The Robot Play
-V Nech hr\u00e1t robota
+V standard LeHavre
+S Let The Robot Play
 S Let someone else make the loan
 S Load more goods from the Dock
 S Load the goods you will produce
 S Load the your warehouse from the seller
 S Load your ship from the Dock
-K Loading game file
-V Na\u010d\u00edt\u00e1n\u00ed hern\u00edho souboru
+S Loading game file
 S Loan Card
 S Loan for #1 from #2
 S Loan for #1 from the bank
 S Loans
 S Lobby
-K Lobby shutdown...
-V Lobby se zav\u00edr\u00e1...
+S Lobby shutdown...
 S Machines
 S Make a Dance move
 S Make a capturing move
@@ -537,42 +458,36 @@ V Make an additional move, or click on Done
 S Make the first move, or swap and move second
 S Make your first move, or swap fleets
 K Map of Player Locations
-V Mapov\u00e1 m\u00edstnost
+V Map Room
 K Mar #1#2#3
-V #1. b\u0159ezen, #2:#3 GMT
-K Master Room
-V Mistrovsk\u00e1 m\u00edstnost
+V 3 \u6708 #1 \u65e5 #2:#3 GMT
+S Master Room
 K Master ranked players can play
-V Mist\u0159i mohou hr\u00e1t v t\u00e9to m\u00edstnosti
-K Match words:
-V Vyhled\u00e1v\u00e1n\u00ed:
+V Masters can play in this room
+S Match words:
 S Maximize your profits
 K May #1#2#3
-V #1. kv\u011bten, #2:#3 GMT
+V 5 \u6708 #1 \u65e5 #2:#3 GMT
 S Medina
 K Medina_family
 V Medina
 K Medina_variation
-V standardn\u00ed Medina
+V standard Medina
 S Meeple
-K Members
-V \u010clenov\u00e9
-K Memory is low
-V Pam\u011b\u0165 je mal\u00e1
+S Members
+S Memory is low
 S Merge this stack, or click Done
 K Message:
-V v\u009aem
+V To ALL:
 K MessageTo:
-V Pro #1
-K Messages
-V Zpr\u00e1vy
+V To #1:
+S Messages
 S Micropul
 K Micropul_family
 V Micropul
 K Micropul_variation
-V standardn\u00ed Micropul
-K Move ##1
-V Tah ##1
+V standard Micropul
+S Move ##1
 S Move 6 ships to the center
 S Move A Stack
 S Move a Cyclist
@@ -585,14 +500,10 @@ S Move a ball or change a Ring
 S Move a piece
 S Move a piece one space
 S Move a piece, step #1
-K Move a ring
-V P\u0159em\u00edst\u011bte k\u00e1men
-K Move a roamer
-V Pohn\u011bte pan\u00e1kem
-K Move a roamer or move a barrier
-V Pohn\u011bte pan\u00e1kem, nebo p\u0159em\u00edst\u011bte bari\u00e9ru
-K Move a roamer, or place a barrier
-V Pohn\u011bte pan\u00e1kem, nebo polo\u017ete bari\u00e9ru
+S Move a ring
+S Move a roamer
+S Move a roamer or move a barrier
+S Move a roamer, or place a barrier
 S Move a runner
 S Move a runner from a home space
 S Move a ship
@@ -613,56 +524,49 @@ S Move, Split or Merge a stack
 S Moves are coming in
 S Mutton
 K Mutton-shotgun
-V Mutton s brokovnic\u00ed
+V shotgun Mutton
 K Mutton-shotgun_variation
-V Mutton - farm\u00e1\u0159 pou\u017e\u00edv\u00e1 brokovnici
+V Mutton - farmer uses a shotgun
 K Mutton_family
 V Mutton
 K Mutton_variation
-V standardn\u00ed Mutton
-K News
-V Novinky
+V standard Mutton
+S News
 K No Challenges
-V \u008e\u00e1dn\u00e9 pozv\u00e1nky ke h\u0159e
-K No Chat
-V \u008e\u00e1dn\u00fd chat
-K No Recent Games
-V \u008e\u00e1dn\u00e9 ned\u00e1vn\u00e9 hry
+V No Invitations to Play
+S No Chat
+S No Recent Games
 K No challenges from #1
-V \u008e\u00e1dn\u00e9 pozv\u00e1nky od #1
-K No players.
-V \u008e\u00e1dn\u00ed hr\u00e1\u010di.
-K No spectators.
-V \u008e\u00e1dn\u00ed div\u00e1ci
+V No invitations from #1
+S No players.
+S No spectators.
 S No, let the bank fund it
 K Nov #1#2#3
-V #1. listopad, #2:#3 GMT
+V 11 \u6708 #1 \u65e5 #2:#3 GMT
 S Occupy 3 enemy bases
 K Oct #1#2#3
-V #1. \u0159\u00edjen, #2:#3 GMT
+V 10 \u6708 #1 \u65e5 #2:#3 GMT
 S Octiles
 K Octiles_family
 V Octiles
 K Octiles_variation
-V standardn\u00ed Octiles
+V standard Octiles
 S Offer a Draw
 S Offer a price for the goods on the ship
 S Onboard a piece, Move a stack, or Exchange
 S Only the flagship can occupy the center square
-K Options
-V Volby
+S Options
 S Orange Palace
 S Orange Palace Bonus (4 points)
 S Palago
 K Palago_family
 V Palago
 K Palago_variation
-V standardn\u00ed Palago
+V standard Palago
 S Pan-Kai
 K Pan-Kai_family
 V Pan-Kai
-K Pass
-V Vynechat tah
+S Pass
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
@@ -670,7 +574,7 @@ V Click on "Pay a Camel" or "Send Cube".
 K Phlip_family
 V Phlip
 K Pick a ring to place a chip and move
-V Zvedn\u011bte krou\u017eek k um\u00edst\u011bn\u00ed zna\u010dky a pohn\u011bte s n\u00edm
+V \u653e 1 \u5b50\u65bc 1 \u74b0\u4e2d\u4e26\u79fb\u52d5\u6b64\u74b0
 S Pick the first cube to send to the caravan
 S Pick the stack to move
 S Pick up and Continue your move
@@ -684,37 +588,30 @@ S Place #1 cubes in Vase neighborhood
 S Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 spaces
 S Place a Chip, or a Jewel, or a chip from the Store
 S Place a Frog on the board
-K Place a GIPF piece on a starting point
-V Um\u00edst\u011bte k\u00e1men Gipf na po\u010d\u00e1te\u010dn\u00ed pozici
+S Place a GIPF piece on a starting point
 K Place a Ring on the board
-V Um\u00edst\u011bte krou\u017eek na desku
+V \u8acb\u9078\u64c7 1 \u9ede\u653e\u7f6e\u74b0
 S Place a bird on an empty cell
 S Place a bird on an empty cell, or designate a bird to fly
-K Place a chip on a starting point
-V Um\u00edst\u011bte k\u00e1men na po\u010d\u00e1te\u010dn\u00ed pozici
+S Place a chip on a starting point
 S Place a chip on the board
 K Place a chip, or shirt or rotate a board
 V Place a chip, or shift or rotate a board
 S Place a cube in any unclaimed souk
 S Place a cube on the caravan
 S Place a gobblet on the board, or move a gobblet
-K Place a marker on any empty cell
-V Polo\u017ete zna\u010dku na pr\u00e1zdn\u00e9 pol\u00ed\u010dko.
-K Place a marker on any empty cell, or Swap Colors
-V Polo\u017ete zna\u010dku na pr\u00e1zdn\u00e9 pol\u00ed\u010dko nebo proho\u010fte barvy.
+S Place a marker on any empty cell
+S Place a marker on any empty cell, or Swap Colors
 S Place a piece on the board
 S Place a piece on the board, or Exchange an off-board piece for a new tile
 S Place a piece on the board, or move a piece already on the board
-K Place a ring on the board
-V Um\u00edst\u011bte k\u00e1men na desku
-K Place a roamer on the board
-V Polo\u017ete pan\u00e1ka na desku
+S Place a ring on the board
+S Place a roamer on the board
 S Place a second piece on the board
 S Place a second tile adjacent to the first
 S Place a second tile adjacent to those already on the board
 S Place a stone on the board, or remove a stone from the board
-K Place a tile
-V Polo\u017ete d\u00edlek
+S Place a tile
 S Place a tile adjacent to those already on the board
 S Place a tile on any empty cell
 S Place a tile on the board
@@ -734,37 +631,27 @@ S Place your queen on the board
 S Place your second man on the board
 S Place your stack on the edge of the board
 S Place your town in your first row
-K Placing Gipf Pieces
-V Um\u00eds\u0165ov\u00e1n\u00ed kamen\u016f Gipf
-K Placing Standard Pieces
-V Um\u00eds\u0165ov\u00e1n\u00ed standardn\u00ed kamen\u016f
+S Placing Gipf Pieces
+S Placing Standard Pieces
 S Plateau
 K Plateau_family
 V Plateau
 K Plateau_variation
-V standardn\u00ed Plateau
-K Play #1
-V Hr\u00e1t s #1
+V standard Plateau
+S Play #1
 S Play Farmer
 S Play a card
 S Played
-K Played on #1
-V Hr\u00e1t na #1
-K Player #1
-V Hr\u00e1\u010d #1
-K Player 1
-V Hr\u00e1\u010d 1
+S Played on #1
+S Player #1
+S Player 1
 S Player Cubes
-K Player is 
-V Hr\u00e1\u010d je
-K Players
-V Hr\u00e1\u010di
-K Players are: 
-V Hr\u00e1\u010di jsou:
-K Please Join Me
-V Pros\u00edm, p\u0159ipojte se
+S Player is 
+S Players
+S Players are: 
+S Please Join Me
 K Please respect the 15 minute time limit
-V M\u00edstrovsk\u00e9 hry maj\u00ed \u010dasov\u00fd limit 15 minut.
+V Master games have a 15 minute time limit
 S Polyomino Flip
 K Polyomino Flip_variation
 V Polyomino Flip
@@ -777,7 +664,7 @@ V P\u00fcnct
 K Punct_family
 V P\u00fcnct
 K Punct_variation
-V standardn\u00ed P\u00fcnct
+V standard P\u00fcnct
 S Quinamid
 K Quinamid_family
 V Quinamid
@@ -787,9 +674,8 @@ S Qyshinsu
 K Qyshinsu_family
 V Qyshinsu
 K Qyshinsu_variation
-V Tajemstv\u00ed cesty
-K Racing Games
-V Z\u00e1vodn\u00ed hry
+V The mystery of the way
+S Racing Games
 S Raj
 K Raj_family
 V Raj
@@ -797,8 +683,7 @@ K Raj_variation
 V Standard Raj
 S Rearrange the gold fleet
 S Rearrange the silver fleet
-K Rearrange things any way you want to
-V P\u0159em\u00edst\u011bte v\u011bci, jak\u00fdmkoliv zp\u016fsobem chcete
+S Rearrange things any way you want to
 K Receive 1 extra camel when you take camels
 V Receive 1 extra camel when you take camels.  
 V Cost 2 camels.
@@ -817,153 +702,122 @@ K Receive a card when you place a cube in the caravan
 V Receive a card when you place a cube in the caravan.  
 V Cost 3 camels + 3 gold.
 K Reconnecting
-V ...Obnovov\u00e1n\u00ed spojen\u00ed...
-K Red
-V \u010derven\u00fd
+V ... \u91cd\u65b0\u9023\u7dda\u4e2d ...
+S Red
 S Red Dome
-K Rejoin
-V Znovu se p\u0159idat
-K Rejoin #1
-V Znovu se p\u0159idat #1
+S Rejoin
+S Rejoin #1
 S Remove a Ring
 S Reprice the goods in your factory storage
 S Reprice the goods in your warehouse storage
 S Requesting Bids
 S Requesting Loan
 K Resign
-V Vzd\u00e1t hru
+V Resign the game
 K Resign State
-V Stiskn\u011bte Hotovo k potvrzen\u00ed vzd\u00e1n\u00ed hry
+V Click Done to confirm your resignation
 S Restart
 S Return to the Way
-K Reverse View
-V P\u0159evr\u00e1tit pohled
-K Review Room
-V M\u00edstnost opakov\u00e1n\u00ed
+S Reverse View
+S Review Room
 K Review Saved Games
-V M\u00edstnost op\u00e1kov\u00e1n\u00ed
+V Review Room
 S Rider Size
-K Rotate the board 180 degrees
-V Oto\u010dit desku o 180 stup\u0148\u016f
+S Rotate the board 180 degrees
 S Santorini
 K Santorini_family
 V Santorini
 K Santorini_variation
-V Santorini (bez boh\u016f)
+V Santorini (without Gods)
 S Score the most points at the sprint and finish lines
-K See Player Comments
-V Zobrazit koment\u00e1\u0159e hr\u00e1\u010de
-K See Spectator Comments
-V Zobrazit koment\u00e1\u0159e div\u00e1ka
-K Select Game
-V Vyberte hru
-K Select Robot
-V Vyberte robota
+S See Player Comments
+S See Spectator Comments
+S Select Game
+S Select Robot
 S Select Row #1
 S Select a group of dice
 K Select a ring to remove
-V Vyberte krou\u017eek k odstran\u011bn\u00ed
+V \u8acb\u9078\u64c7 1 \u74b0\u53d6\u8d70
 K Select a row of 5 to remove
-V Vyberte \u0159adu 5 zna\u010dek k odstran\u011bn\u00ed
+V \u8acb\u9078\u64c7 5 \u500b\u5b50\u53d6\u8d70
 S Select the #1 piece to move
 S Select the destination for the selected piece
 S Select the next prize
 S Select the stack to move from
-K Select which of your roamers to kill
-V Vyberte kter\u00e9ho sv\u00e9ho pan\u00e1ka zabijete
-K Select which opponent roamer to kill
-V Vyberte kter\u00e9ho soupe\u0159ova pan\u00e1ka zabijete
-K Selecting game: #1
-V V\u00fdb\u011br hry: #1
-K Send
-V Odeslat
+S Select which of your roamers to kill
+S Select which opponent roamer to kill
+S Selecting game: #1
+S Send
 S Send Cube
 K Sep #1#2#3
-V #1. z\u00e1\u0159\u00ed, #2:#3 GMT
+V 9 \u6708 #1 \u65e5 #2:#3 GMT
 K Session #1 is active.  
-V M\u00edstnost #1 je aktivn\u00ed.
+V Room #1 is active.  
 K Session #1 is being launched.  
-V M\u00edstnost #1 je pr\u00e1v\u011b spou\u009at\u011bna.
+V Room #1 is being launched.  
 K Session #1 is displaying the map of players real locations
-V M\u00edstnost #1 zobrazuje mapu ukazuj\u00edc\u00ed, kde se nach\u00e1zej\u00ed hr\u00e1\u010di
+V Room #1 is displaying the map of players real locations
 K Session #1 is idle.  
-V M\u00edstnost #1 je ne\u010dinn\u00e1.
+V Room #1 is idle.  
 K Session #1 is private. 
-V M\u00edstnost #1 je soukrom\u00e1.
+V Room #1 is private. 
 K Session #1: state unknown.
-V M\u00edstnost #1: nezn\u00e1m\u00fd stav.
+V Room #1: state unknown.
 S Shipping
 S Shoot
-K Show SGF Text
-V Zobrazit SGF text
+S Show SGF Text
 S Shuffle pieces to the exchange area, Click Done to start the exchange
-K Slide the chip toward the center
-V Pohn\u011bte kamenem sm\u011brem ke st\u0159edu
-K Sound
-V Zvuk
+S Slide the chip toward the center
+S Sound
 S Spangles
 K Spangles_family
 V Spangles
 K Spangles_variation
-V standardn\u00ed Spangles
-K Spectate
-V D\u00edvat se
-K Spectator
-V Div\u00e1k
-K Spectator is: 
-V Div\u00e1kem je:
-K Spectators
-V Div\u00e1ci
-K Spectators are: 
-V Div\u00e1ky jsou:
+V standard Spangles
+S Spectate
+S Spectator
+S Spectator is: 
+S Spectators
+S Spectators are: 
 S Split or Merge this stack, or click Done
 S Split the cookies and get most of them
 S Split this stack, or click Done
 S Spot Price #1
-K Spread out the stacks
-V Rozpt\u00fdlit sloupky
+S Spread out the stacks
 S Stable
-K Stack Height
-V V\u00fd\u009aka sloupku
-K Stacking Games
-V Hry se stav\u011bn\u00edm v\u011b\u017ei\u010dek
+S Stack Height
+S Stacking Games
 S Start
-K Start #1
-V Za\u010d\u00edt #1
+S Start #1
 S Start Black
 S Start White
-K State unknown.
-V Nezn\u00e1m\u00fd stav.
-K Swap
-V Prohodit
-K Swap Colors
-V Prohodit barvy
+S State unknown.
+S Swap
+S Swap Colors
 S Swap colors, or place a chip, or move a board
 S Swing View
-K Switch to a more oblique view of the board
-V P\u0159epnout na v\u00edce \u009aikm\u00fd pohled na desku
-K Switch to a more overhead view of the board
-V P\u0159epnout na v\u00edce vrchn\u00ed pohled na desku
+S Switch to a more oblique view of the board
+S Switch to a more overhead view of the board
 K TBA1_variation
-V hra k ozn\u00e1men\u00ed
+V game to be announced
 K TBA2_variation
-V hra k ozn\u00e1men\u00ed
+V game to be announced
 K TBA3_variation
-V hra k ozn\u00e1men\u00ed
+V game to be announced
 S Table
 S Tablut
 K Tablut-11
 V Tablut-11x11
 K Tablut-11_variation
-V Tablut na 11x11 board
+V Tablut on a 11x11 board
 K Tablut-7
-V Tablut7x7
+V Tablut 7x7
 K Tablut-7_variation
-V Tablut na 7x7 board
+V Tablut on a 7x7 board
 K Tablut-9
 V Tablut 9x9
 K Tablut-9_variation
-V Tablut na 9x9 board
+V Tablut on a 9x9 board
 K Tablut_family
 V Tablut
 S Tajii
@@ -973,38 +827,29 @@ S Take #1 camels
 S Take #1 camels, take a card, or move the supervisor #2 spaces
 S Take #1 gold
 S Take #1 gold, take a card, or move the supervisor #2 spaces
-K Take Over Playing
-V P\u0159evz\u00edt hran\u00ed
+S Take Over Playing
 S Take a card
 S Take your first action
 S Take your second action
 K Tamsk_variation
-V standardn\u00ed Tamsk
-K The game is a draw
-V Hra je rem\u00edza
+V standard Tamsk
+S The game is a draw
 S The game record is not available during the game
 S The next finish bonus is #1
 S The next sprint bonus is #1
 S This die will be rolled
 S This die will not be rolled
-K This is now a private room
-V Toto je nyn\u00ed soukrom\u00e1 m\u00edstnost
-K This is now a public room
-V Toto je nyn\u00ed ve\u0159ejn\u00e1 m\u00edstnost
+S This is now a private room
+S This is now a public room
 S TicTacNine
 K TicTacNine_variation
 V experimental TicTacNine board
-K Tile Pattern Games
-V Hry se vzory
-K Tile Size
-V Velikost d\u00edlku
-K Time is 
-V \u010cas je 
-K Timeout in 1 minute.
-V \u010cas vypr\u009a\u00ed za minutu.
+S Tile Pattern Games
+S Tile Size
+S Time is 
+S Timeout in 1 minute.
 S Total
-K Tournament Game
-V Turnajov\u00e9 hry
+S Tournament Game
 S Tower
 S Tower 1 Bonus (1 point)
 S Tower 2 Bonus (2 points)
@@ -1014,9 +859,8 @@ S Traboulet
 K Traboulet_family
 V Traboulet
 K Traboulet_variation
-V standardn\u00ed Traboulet
-K Track Mice
-V Sledovat my\u009a
+V standard Traboulet
+S Track Mice
 S Trade camels for gold
 S Trade up to 10 gold for 1 victory point each
 S Trade up to 4 camels for 2 victory points each
@@ -1029,86 +873,81 @@ S Trax
 K Trax_family
 V Trax
 K Trax_variation
-V standardn\u00ed Trax
+V standard Trax
 S Triad
 K Triad_family
 V Triad
 K Triad_variation
-V standardn\u00ed Triad
+V standard Triad
 S Truchet
 K Truchet_family
 V Truchet
 K Truchet_variation
-V standardn\u00ed Truchet
+V standard Truchet
 K TumblingDown
 V Tumbling Down
 K TumblingDown_family
 V Tumbling Down
 K TumblingDown_variation
-V standardn\u00ed 8x8 TumblingDown
-K Type your message here.
-V Napi\u009ate svou zpr\u00e1vu zde.
+V standard 8x8 TumblingDown
+S Type your message here.
 S Tzaar
 K Tzaar-custom
-V Tzaar - voliteln\u00fd
+V Tzaar - custom
 K Tzaar-custom_variation
-V Tzaar - voliteln\u00e1 startovn\u00ed pozice
+V Tzaar - custom starting position
 K Tzaar-random
-V Tzaar - n\u00e1hodn\u00fd
+V Tzaar - random
 K Tzaar-random_variation
-V Tzaar - n\u00e1hodn\u00e1 startovn\u00ed pozice
+V Tzaar - random starting position
 K Tzaar-standard
-V Tzaar - standardn\u00ed 
+V Tzaar - standard
 K Tzaar-standard_variation
-V Tzaar - standardn\u00ed startovn\u00ed pozice
+V Tzaar - standard starting position
 K Tzaar_family
 V Tzaar
 K Tzaar_variation
-V standardn\u00ed Tzaar
+V standard Tzaar
 S Universe
 K Universe_family
 V Universe
-K Unranked
-V Nehodnocen\u00e9
-K Unranked Room
-V Nehodnocen\u00e1 m\u00edstnost
+S Unranked
+S Unranked Room
 S Unsold Warehouses
-K User 
-V U\u017eivatel
+S User 
 S Vase
 S Volcano
 K Volcano-h
 V Hex Volcano
 K Volcano-h_variation
-V Volcano na hexagon\u00e1ln\u00ed m\u0159\u00ed\u017ece
+V Volcano on a Hexagonal grid
 K Volcano-hr
-V n\u00e1hodn\u00e9 Hex Volcano
+V randomized Hex Volcano
 K Volcano-hr_variation
-V Hex Volcano s n\u00e1hodn\u00fdmi pozicemi
+V  Hex Volcano with randomized positions
 K Volcano-r
-V n\u00e1hodn\u00e9 Hex Volcano
+V randomized Volcano
 K Volcano-r_variation
-V Volcano s n\u00e1hodnou pozic\u00ed
+V Volcano with randomized positions
 K Volcano_family
 V Volcano
 K Volcano_variation
-V standardn\u00ed 5x5 Volcano
+V standard 5x5 Volcano
 S Volo
 K Volo-84
-V Volo na mal\u00e9 desce
+V small board Volo
 K Volo-84_variation
-V Volo na mal\u00e9 desce
+V small board Volo
 K Volo_family
 V Volo
 K Volo_variation
-V standardn\u00ed Volo
+V standard Volo
 K Wait for opponents to arrive.
-V Po\u010dkat na p\u0159\u00edchod soupe\u0159e.
+V Wait for opponent to arrive.
 S Wait for other players to adjust
 S Wait for the other players to decide
 S Wait for the other players to play
-K Waiting in
-V \u010cek\u00e1 v 
+S Waiting in
 S Wall
 S Warehouse
 S Warehouses
@@ -1117,13 +956,11 @@ V Warp 6
 K Warp6_family
 V Warp 6
 K Warp6_variation
-V standardn\u00ed Warp 6
+V standard Warp 6
 K Welcome to Game client, version #1
-V V\u00edtejte v klientovi BoardSpace, verze #1
-K White
-V b\u00edl\u00fd
-K White Pieces
-V figurky b\u00edl\u00e9ho
+V Welcome to BoardSpace client, version #1
+S White
+S White Pieces
 S Wolf moving suspects
 S Wolf player eating
 S Wolf player hiding
@@ -1131,21 +968,19 @@ S Xiangqi
 K Xiangqi_family
 V Xiangqi
 K Xiangqi_variation
-V standardn\u00ed Xiangqi
+V standard Xiangqi
 S Yellow Dome
 S Yes, I will fund the loan
 S Yinsh
 S Yinsh-Blitz
 K Yinsh-Blitz_variation
-V blitz Yinsh - prvn\u00ed kruh v\u00edt\u011bz\u00ed
+V blitz Yinsh - the first ring wins
 K Yinsh_family
 V Yinsh
 K Yinsh_variation
-V standardn\u00ed Yinsh
-K You can only resign when it is your move
-V Vzd\u00e1t se m\u016f\u017eete, jen kdy\u017e jste na tahu.
-K You have been disconnected: #1
-V Byli jste odpojeni: #1
+V standard Yinsh
+S You can only resign when it is your move
+S You have been disconnected: #1
 S You have been offered a draw - Accept or Decline
 S You have no legal moves.  Click on Done to pass
 S You have no moves available. Click on Done to pass.
@@ -1162,142 +997,124 @@ V Z\u00e8rtz
 K Zertz+11
 V Z\u00e8rtz+11
 K Zertz+11_variation
-V Z\u00e8rtz s 24 kameny nav\u00edc
+V Z\u00e8rtz with 11 extra rings
 K Zertz+24
 V Z\u00e8rtz+24
 K Zertz+24_variation
-V Z\u00e8rtz s 24 kameny nav\u00edc
+V Z\u00e8rtz with 24 extra rings
 K Zertz+xx
-V Z\u00e8rtz extr\u00e9mn\u00ed
+V Z\u00e8rtz Extreme
 K Zertz+xx_variation
-V Z\u00e8rtz s nastaviteln\u00fdm vzhledem desky
+V Z\u00e8rtz with custom board layout
 K Zertz_family
 V Z\u00e8rtz
 K Zertz_variation
-V standardn\u00ed Z\u00e8rtz
+V standard Z\u00e8rtz
 S accept the bid, or pay the amount yourself
 K and
-V a
+V  and 
 K announceOption
-V Oznamovat nov\u00e9 hr\u00e1\u010de
+V Announce New Players
 K automute
-V #1 byl automaticky ztlumen
+V #1 \u5df2\u88ab\u7981\u8a00\u3002
 S bid and win the most prize value
 S build an ideal city
 S capture all of one opponentr's color
 S center square is not special
 S click Done to finish this Auction
 S connect all your birds into one flock
-K connect opposite sides with a chain of markers
-V Propojte protilehl\u00e9 strany \u0159et\u011bzem zna\u010dek.
+S connect opposite sides with a chain of markers
 K connecting
-V Spojuji s
+V Connecting to 
 S do what it takes to win
 K enterMessage
-V #1 vstoupil do lobby
+V #1 \u9032\u5165\u5927\u5ef3\u3002
 K enters the room
-V #1 vstoupil do m\u00edstnosti
+V #1 has entered the room
 S expand the board with your color tiles
 K fontfamily
 V sansserif
 S form a larger triangle with your color at the tips
 S fund a loan from a player or the bank
-K game selector
-V p\u0159ep\u00edna\u010d her
+S game selector
 K gold: escape the flagship  silver: capture gold flagship
 V gold: escape the flagship  silver: capture the gold flagship
-K guest
-V host
-K in #1
-V v #1
+S guest
+S in #1
 K launchChat
-V Spou\u009at\u00edm chatovac\u00ed m\u00edstnost v m\u00edstnosti #1
+V Launching chat room in Room #1
 K launchGame
-V Spou\u009at\u00edm hru v m\u00edstnosti #1
+V Launching game in Room #1
 K launchReview
-V Spou\u009at\u00edm m\u00edstnost opakov\u00e1n\u00ed v m\u00edstnosti #1
+V Launching review room in Room #1
 K launchfailed
-V Ostatn\u00ed hr\u00e1\u010di neza\u010dali spr\u00e1vn\u011b.
+V The other player didn't start properly
 K launchspectator
-V Spou\u009at\u00edm div\u00e1ka v m\u00edstnosti #1
+V Launching spectator in Room #1
 S load a luxury container
 K loaderr
-V Chyba b\u011bhem pokusu o na\u010dten\u00ed:
+V Error while trying to load: 
 S make 4 in a row in any direction
 S make 5 in a row
 K make 5 in a row to capture a ring and win
-V ud\u011blejte 5 v \u0159ad\u011b k zajmut\u00ed krou\u017eku a zv\u00edt\u011bzte
+V \u9023 5 \u5b50\u53d6\u8d70 1 \u74b0\uff0c\u7136\u5f8c\u52dd\u51fa
 K make 5 in a row to capture a ring, 3 rings win
-V ud\u011blejte 5 v \u0159ad\u011b k zajmut\u00ed krou\u017eku, po 3 krou\u017ec\u00edch nast\u00e1v\u00e1 v\u00edt\u011bzstv\u00ed
+V \u9023 5 \u5b50\u53d6\u8d70 1 \u74b0\uff0c\u5f97\u5230 3 \u500b\u74b0\u7684\u4eba\u52dd\u51fa
 S make any loop, or a line which spans 8 rows or columns, in your color
 S make the last move
 S maximize the number of tiles in your reserve
-K mouse tracking disabled
-V Sledov\u00e1n\u00ed my\u009ai vypnuto
+S mouse tracking disabled
 S move a piece to the opposite side of the board
 K nolaunch
-V Server odm\u00edtl po\u017eadavek na spu\u009at\u011bn\u00ed, zpr\u00e1va je 
+V The server rejected a launch request, message is 
 K nolobby
-V Pardon, lobby odm\u00edtlo vstup. Mo\u017en\u00e1 je pln\u00e9.
+V Sorry, lobby has refused entry.  It may be full.
 K noresponse1
-V Server neodpov\u00edd\u00e1.
+V The server is not responding.
 K noresponse2
-V Server mo\u017en\u00e1 spadnul, nebo firewall zabr\u00e1nil spojen\u00ed.
+V It may be down, or a firewall may be preventing the connection.
 K noserver
-V Lobby nen\u00ed p\u0159ipojeno k serveru.
+V Lobby is not connected to the server.
 S own all the stacks
 S own the most blocks
-K perspective
-V pohled
+S perspective
 K play
-V hr\u00e1t za #1
-K player
-V hr\u00e1\u010d
-K player 
-V hr\u00e1\u010d
-K private room
-V Soukrom\u00e1 m\u00edstnost
+V play for #1
+S player
+S player 
+S private room
 K punctgoal
 V connect opposite sides of the board, or play your last piece while controlling more of the center
 K quitting
-V #1 opustil m\u00edstnost
+V #1 has left the room
 K rankingsfailed
-V Aktualizace hodnocen\u00ed selhala
-K reading Zip directory...
-V \u010dten\u00ed slo\u017eky v Zipu...
-K reading directory...
-V \u010dten\u00ed slo\u017eky
+V Updating the rankings failed
+S reading Zip directory...
+S reading directory...
 K reconok
-V ...obnoven\u00ed spojen\u00ed bylo \u00fasp\u011b\u009an\u00e9
-K review
-V opakov\u00e1n\u00ed
+V .. \u91cd\u65b0\u9023\u7dda\u6210\u529f
+S review
 K savedmsg
-V Hra ulo\u017eena jako #1
-K select the game to play
-V vyberte hru
-K select the game variation
-V vyberte variantu hry
-K select the type of room
-V vyberte druh m\u00edstnosti
+V Game saved as #1
+S select the game to play
+S select the game variation
+S select the type of room
 S select tile color
 S set bid amount
-K show grid
-V Zobrazit m\u0159\u00ed\u017eku
+S show grid
 S stack six or capture six
 K stillwaiting
-V st\u00e1le spou\u009at\u00edm... pros\u00edm \u010dekejte.
+V still launching... please wait.
 S surround your opponents queen bee
-K the game has resumed
-V hra pokra\u010duje
+S the game has resumed
 K timeoutWarning
-V Lobby bude ukon\u010deno behem jedn\u00e9 minuty (ne\u010dinnost)
+V \u5927\u5ef3 1 \u5206\u9418\u5f8c\u5c07\u95dc\u9589 (idle)\u3002
 S trade a second container for a gold container
 S use Wooden tiles
 K website
 V #1 BoardSpace
 K welcome
-V V\u00edtejte na BoardSpace Lobby, verze #1
+V \u6b61\u8fce\u9032\u5165 BoardSpace \u5927\u5ef3 (ver #1)
 S you may increase your bid
-K your name
-V va\u009ae jm\u00e9no
+S your name
 N 846

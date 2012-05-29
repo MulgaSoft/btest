@@ -254,6 +254,16 @@ S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
 S Designate a row to capture before your turn
 S Designate a zone to clear
+S Diagonal Blocks
+S Diagonal Blocks Duo
+K Diagonal Blocks Duo_family
+V Diagonal Blocks Duo
+K Diagonal Blocks Duo_variation
+V Polyomino game for 2 players
+K Diagonal Blocks_family
+V Diagonal Blocks
+K Diagonal Blocks_variation
+V Polyomino game for 4 players
 S Dice
 K Dipole
 V Dipole (original)
@@ -635,11 +645,16 @@ K Palago_family
 V Palago
 K Palago_variation
 V Standard Palago
+S Pan-Kai
+K Pan-Kai_family
+V Pan-Kai
 S Pass
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+K Phlip_family
+V Phlip
 K Pick a ring to place a chip and move
 V Elige un anillo al que poner una ficha y mu\u00e9velo
 S Pick the first cube to send to the caravan
@@ -735,6 +750,10 @@ K Please Join Me
 V Por favor, unete a m\u00ed
 K Please respect the 15 minute time limit
 V Los juegos Master tienen un l\u00edmite de tiempo de 15 minutos
+S Polyomino Flip
+K Polyomino Flip_variation
+V Polyomino Flip
+S Polyomino Games
 S Position the starting rings
 K Prisoners captured by Black are held here
 V Los prisioneros capturados por el Negro se dejan aqu\u00ed
@@ -963,6 +982,7 @@ K Time is
 V Son las 
 K Timeout in 1 minute.
 V Tiempo muerto en 1 minuto.
+S Total
 K Tournament Game
 V Partida de Torneo
 S Tower
@@ -1018,6 +1038,9 @@ S Tzaar-standard_variation
 K Tzaar_family
 V Tzaar
 S Tzaar_variation
+S Universe
+K Universe_family
+V Universe
 S Unranked
 K Unranked Room
 V Sala sin ranking
@@ -1185,6 +1208,7 @@ K make 5 in a row to capture a ring, 3 rings win
 V haz 5 en linea para capturar un anillo, 3 anillos ganan
 K make any loop, or a line which spans 8 rows or columns, in your color
 V formar un circuito, o una linea que expanda 8 filas o columnas, de tu color
+S make the last move
 S maximize the number of tiles in your reserve
 K mouse tracking disabled
 V pista del rat\u00f3n no v\u00e1lida
@@ -1200,6 +1224,7 @@ V Tal vez se ha colgado, o un cortafuegos impide la conexi\u00f3n.
 K noserver
 V El grupo no est\u00e1 conectado al servidor.
 S own all the stacks
+S own the most blocks
 K perspective
 V perspectiva
 K play
@@ -1250,4 +1275,4 @@ V Bienvenido al Servidor de Juego, versi\u00f3n #1
 S you may increase your bid
 K your name
 V tu nombre
-N 829
+N 846

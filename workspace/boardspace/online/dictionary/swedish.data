@@ -316,6 +316,16 @@ V V\u00e4lj en rad att er\u00f6vra
 K Designate a row to capture before your turn
 V V\u00e4lj en rad att er\u00f6vra innan ditt drag
 S Designate a zone to clear
+S Diagonal Blocks
+S Diagonal Blocks Duo
+K Diagonal Blocks Duo_family
+V Diagonal Blocks Duo
+K Diagonal Blocks Duo_variation
+V Polyomino game for 2 players
+K Diagonal Blocks_family
+V Diagonal Blocks
+K Diagonal Blocks_variation
+V Polyomino game for 4 players
 S Dice
 K Dipole
 V Dipole (original)
@@ -766,12 +776,17 @@ K Palago_family
 V Palago
 K Palago_variation
 V Palago standard
+S Pan-Kai
+K Pan-Kai_family
+V Pan-Kai
 K Pass
 V Passa
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+K Phlip_family
+V Phlip
 K Pick a ring to place a chip and move
 V Flytta en ring och l\u00e4mna en bricka kvar
 S Pick the first cube to send to the caravan
@@ -894,6 +909,10 @@ K Please Join Me
 V Kom och spela!
 K Please respect the 15 minute time limit
 V M\u00e4starspel har en tidsgr\u00e4ns p\u00e5 15 minuter
+S Polyomino Flip
+K Polyomino Flip_variation
+V Polyomino Flip
+S Polyomino Games
 K Position the starting rings
 V Placera startringarna
 K Prisoners captured by Black are held here
@@ -1151,6 +1170,7 @@ K Time is
 V Klockan \u00e4r 
 K Timeout in 1 minute.
 V Timeout om en minut.
+S Total
 K Tournament Game
 V Turneringsparti
 S Tower
@@ -1214,6 +1234,9 @@ K Tzaar_family
 V Tzaar
 K Tzaar_variation
 V Tzaar standard
+S Universe
+K Universe_family
+V Universe
 S Unranked
 K Unranked Room
 V Orankat rum
@@ -1399,6 +1422,7 @@ K make 5 in a row to capture a ring, 3 rings win
 V 5 brickor i rad tar bort raden och en ring, 3 ringar ger vinst
 K make any loop, or a line which spans 8 rows or columns, in your color
 V Skapa en loop, eller en linje som t\u00e4cker 8 rader eller kolumner, i din f\u00e4rg
+S make the last move
 K maximize the number of tiles in your reserve
 V Maximera antalet brickor i lagret
 K mouse tracking disabled
@@ -1415,6 +1439,7 @@ V Den kan vara nere, eller en brandv\u00e4gg kan f\u00f6rhindra anslutning.
 K noserver
 V Lobbyn \u00e4r inte ansluten till servern.
 S own all the stacks
+S own the most blocks
 K perspective
 V perspektiv
 K play
@@ -1475,4 +1500,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 829
+N 846

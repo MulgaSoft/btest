@@ -250,6 +250,16 @@ S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
 S Designate a row to capture before your turn
 S Designate a zone to clear
+S Diagonal Blocks
+S Diagonal Blocks Duo
+K Diagonal Blocks Duo_family
+V Diagonal Blocks Duo
+K Diagonal Blocks Duo_variation
+V Polyomino game for 2 players
+K Diagonal Blocks_family
+V Diagonal Blocks
+K Diagonal Blocks_variation
+V Polyomino game for 4 players
 S Dice
 S Dipole
 S Dipole-s
@@ -637,11 +647,16 @@ K Palago_family
 V Palago
 K Palago_variation
 V Standard Palago
+S Pan-Kai
+K Pan-Kai_family
+V Pan-Kai
 S Pass
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+K Phlip_family
+V Phlip
 K Pick a ring to place a chip and move
 V Wybierz pier\u015bcie\u0144 by umie\u015bci\u0107 chip i rusz si\u0119
 S Pick the first cube to send to the caravan
@@ -739,6 +754,10 @@ K Please Join Me
 V Zapraszam do gry
 K Please respect the 15 minute time limit
 V Gry Mistrz\u00f3w maj\u0105 limit czasu 15 minut
+S Polyomino Flip
+K Polyomino Flip_variation
+V Polyomino Flip
+S Polyomino Games
 K Position the starting rings
 V Ustaw pier\u015bcienie startowe
 K Prisoners captured by Black are held here
@@ -969,6 +988,7 @@ K Time is
 V Czas 
 K Timeout in 1 minute.
 V Czas minie za 1 minut\u0119.
+S Total
 K Tournament Game
 V Gra turniejowa
 S Tower
@@ -1021,6 +1041,9 @@ S Tzaar-standard_variation
 K Tzaar_family
 V Tzaar
 S Tzaar_variation
+S Universe
+K Universe_family
+V Universe
 S Unranked
 K Unranked Room
 V Pok\u00f3j bez rankingu
@@ -1178,6 +1201,7 @@ K make 5 in a row to capture a ring, 3 rings win
 V ustaw 5 w rz\u0119dzie, by zdoby\u0107 pier\u015bcie\u0144, 3 pier\u015bcienie wygrwaj\u0105 gr\u0119
 K make any loop, or a line which spans 8 rows or columns, in your color
 V zamknij p\u0119tl\u0119 lub lini\u0119 w swoim kolorze, kt\u00f3ra rozci\u0105ga si\u0119 na 8 rz\u0119d\u00f3w albo kolumn
+S make the last move
 S maximize the number of tiles in your reserve
 K mouse tracking disabled
 V \u015bledzenie myszy wy\u0142\u0105czone
@@ -1193,6 +1217,7 @@ V Mo\u017ce nie dzia\u0142a\u0107 lub firewall mo\u017ce blokowa\u0107 po\u0142\
 K noserver
 V Pasa\u017c nie jest po\u0142\u0105czony z serwerem.
 S own all the stacks
+S own the most blocks
 K perspective
 V perspektywa
 K play
@@ -1244,4 +1269,4 @@ V Witam w Pasa\u017cu BoardSpace, wersja #1
 S you may increase your bid
 K your name
 V twoje imi\u0119
-N 829
+N 846

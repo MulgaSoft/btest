@@ -209,6 +209,16 @@ S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
 S Designate a row to capture before your turn
 S Designate a zone to clear
+S Diagonal Blocks
+S Diagonal Blocks Duo
+K Diagonal Blocks Duo_family
+V Diagonal Blocks Duo
+K Diagonal Blocks Duo_variation
+V Polyomino game for 2 players
+K Diagonal Blocks_family
+V Diagonal Blocks
+K Diagonal Blocks_variation
+V Polyomino game for 4 players
 S Dice
 K Dipole
 V Dipole (original)
@@ -543,11 +553,16 @@ K Palago_family
 V Palago
 K Palago_variation
 V standard Palago
+S Pan-Kai
+K Pan-Kai_family
+V Pan-Kai
 S Pass
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+K Phlip_family
+V Phlip
 S Pick a ring to place a chip and move
 S Pick the first cube to send to the caravan
 S Pick the stack to move
@@ -625,6 +640,10 @@ S Players are:
 S Please Join Me
 K Please respect the 15 minute time limit
 V Master games have a 15 minute time limit
+S Polyomino Flip
+K Polyomino Flip_variation
+V Polyomino Flip
+S Polyomino Games
 S Position the starting rings
 S Prisoners captured by Black are held here
 S Prisoners captured by White are held here
@@ -809,6 +828,7 @@ S Tile Pattern Games
 S Tile Size
 S Time is 
 S Timeout in 1 minute.
+S Total
 S Tournament Game
 S Tower
 S Tower 1 Bonus (1 point)
@@ -868,6 +888,9 @@ K Tzaar_family
 V Tzaar
 K Tzaar_variation
 V standard Tzaar
+S Universe
+K Universe_family
+V Universe
 S Unranked
 S Unranked Room
 S Unsold Warehouses
@@ -1016,6 +1039,7 @@ S make 5 in a row
 S make 5 in a row to capture a ring and win
 S make 5 in a row to capture a ring, 3 rings win
 S make any loop, or a line which spans 8 rows or columns, in your color
+S make the last move
 S maximize the number of tiles in your reserve
 S mouse tracking disabled
 S move a piece to the opposite side of the board
@@ -1030,6 +1054,7 @@ V It may be down, or a firewall may be preventing the connection.
 K noserver
 V Lobby is not connected to the server.
 S own all the stacks
+S own the most blocks
 S perspective
 K play
 V play for #1
@@ -1070,4 +1095,4 @@ K welcome
 V Welcome to the BoardSpace Lobby, version #1
 S you may increase your bid
 S your name
-N 829
+N 846

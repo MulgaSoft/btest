@@ -332,6 +332,16 @@ V Bestimme eine Reihe, die geschlagen werden soll
 K Designate a row to capture before your turn
 V Bestimme eine Reihe, die geschlagen werden soll vor deinem Zug
 S Designate a zone to clear
+S Diagonal Blocks
+S Diagonal Blocks Duo
+K Diagonal Blocks Duo_family
+V Diagonal Blocks Duo
+K Diagonal Blocks Duo_variation
+V Polyomino game for 2 players
+K Diagonal Blocks_family
+V Diagonal Blocks
+K Diagonal Blocks_variation
+V Polyomino game for 4 players
 K Dice
 V W\u00fcrfel
 K Dipole
@@ -787,6 +797,9 @@ K Palago_family
 V Palago
 K Palago_variation
 V Normales Palago
+S Pan-Kai
+K Pan-Kai_family
+V Pan-Kai
 K Pass
 V Passen
 K Pay Camel
@@ -795,6 +808,8 @@ K Pay Gold
 V Zahle Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Klicke auf "Zahle Kamel" oder "Entferne Stein".
+K Phlip_family
+V Phlip
 K Pick a ring to place a chip and move
 V Bewege einen Ring und lasse dabei einen Chip zur\u00fcck.
 K Pick the first cube to send to the caravan
@@ -931,6 +946,10 @@ K Please Join Me
 V Bitte mitmachen
 K Please respect the 15 minute time limit
 V Bitte beachte das 15-Minuten-Zeitlimit.
+S Polyomino Flip
+K Polyomino Flip_variation
+V Polyomino Flip
+S Polyomino Games
 K Position the starting rings
 V Positioniere die Startringe
 K Prisoners captured by Black are held here
@@ -1198,6 +1217,7 @@ K Time is
 V Die Zeit ist 
 K Timeout in 1 minute.
 V Zeit\u00fcberschreitung in einer Minute.
+S Total
 K Tournament Game
 V Turnierspiel
 S Tower
@@ -1267,6 +1287,9 @@ K Tzaar_family
 V Tzaar
 K Tzaar_variation
 V Tzaar-Variation
+S Universe
+K Universe_family
+V Universe
 S Unranked
 K Unranked Room
 V Raum ohne Wertung
@@ -1453,6 +1476,7 @@ K make 5 in a row to capture a ring, 3 rings win
 V Bilde eine 5er-Reihe, um Ringe zu erobern -- 3 Ringe gewinnen
 K make any loop, or a line which spans 8 rows or columns, in your color
 V Lege eine Schleife oder eine Strecke \u00fcber 8 Zeilen oder Spalten in deiner Farbe
+S make the last move
 K maximize the number of tiles in your reserve
 V Maximiere die Anzahl der Spielsteine in deiner Reserve
 K mouse tracking disabled
@@ -1469,6 +1493,7 @@ V Er k\u00f6nnte ausgeschaltet sein oder eine Firewall verhindert die Verbindung
 K noserver
 V keine Verbindung zum Server 
 S own all the stacks
+S own the most blocks
 K perspective
 V Perspektive
 K play
@@ -1528,4 +1553,4 @@ K you may increase your bid
 V Du kannst dein Gebot erh\u00f6hen
 K your name
 V Dein Name
-N 829
+N 846

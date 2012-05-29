@@ -319,6 +319,16 @@ V \u6307\u5b9a\u4e00\u884c\u8fdb\u884c\u6355\u83b7
 K Designate a row to capture before your turn
 V \u5728\u4f60\u5f00\u59cb\u524d\u6307\u5b9a\u4e00\u884c\u8fdb\u884c\u6355\u83b7
 S Designate a zone to clear
+S Diagonal Blocks
+S Diagonal Blocks Duo
+K Diagonal Blocks Duo_family
+V Diagonal Blocks Duo
+K Diagonal Blocks Duo_variation
+V Polyomino game for 2 players
+K Diagonal Blocks_family
+V Diagonal Blocks
+K Diagonal Blocks_variation
+V Polyomino game for 4 players
 S Dice
 K Dipole
 V Dipole (\u539f\u59cb)
@@ -770,12 +780,17 @@ K Palago_family
 V Palago
 K Palago_variation
 V \u666e\u901a\u7684Palago
+S Pan-Kai
+K Pan-Kai_family
+V Pan-Kai
 K Pass
 V \u4e0d\u51fa
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+K Phlip_family
+V Phlip
 K Pick a ring to place a chip and move
 V \u9009\u62e9\u79fb\u52a8\u4e00\u4e2a\u73af\uff0c\u539f\u6765\u7684\u4f4d\u7f6e\u5c06\u81ea\u52a8\u4ea7\u751f\u4e00\u4e2a\u68cb\u5b50
 S Pick the first cube to send to the caravan
@@ -898,6 +913,10 @@ K Please Join Me
 V \u8bf7\u8ddf\u6211\u4e00\u8d77
 K Please respect the 15 minute time limit
 V \u5927\u5e08\u7ea7\u73a9\u5bb6\u6e38\u620f\u6709\u5341\u4e94\u5206\u949f\u9650\u65f6
+S Polyomino Flip
+K Polyomino Flip_variation
+V Polyomino Flip
+S Polyomino Games
 K Position the starting rings
 V \u653e\u7f6e\u68cb\u73af
 K Prisoners captured by Black are held here
@@ -1154,6 +1173,7 @@ K Time is
 V \u65f6\u95f4\uff1a
 K Timeout in 1 minute.
 V \u4e00\u5206\u949f\u540e\u4f11\u606f
+S Total
 K Tournament Game
 V \u7ade\u6280\u6e38\u620f
 S Tower
@@ -1216,6 +1236,9 @@ K Tzaar_family
 V Tzaar
 K Tzaar_variation
 V \u666e\u901aTzaar
+S Universe
+K Universe_family
+V Universe
 S Unranked
 K Unranked Room
 V \u4e0d\u8bb0\u5206\u623f\u95f4
@@ -1405,6 +1428,7 @@ K make 5 in a row to capture a ring, 3 rings win
 V \u6446\u4e94\u4e2a\u68cb\u6210\u4e00\u6392\u53ef\u4ee5\u8d62\u5f97\u4e00\u4e2a\u73af\uff0c\u8d62\u5f97\u4e09\u4e2a\u73af\u5c31\u80dc\u5229
 K make any loop, or a line which spans 8 rows or columns, in your color
 V \u4f60\u7684\u68cb\u5b50\u989c\u8272\u8fde\u6210\u4e00\u4e2a\u73af\u6216\u62108\u6a2a\u6392\uff0c\u6216\u62108\u7eb5\u5217
+S make the last move
 K maximize the number of tiles in your reserve
 V \u8d62\u53bb\u66f4\u591a\u7684\u5206\u624b
 K mouse tracking disabled
@@ -1421,6 +1445,7 @@ V \u8fde\u63a5\u9519\u8bef\u6216\u8005\u88ab\u9632\u706b\u5899\u963b\u6b62
 K noserver
 V \u670d\u52a1\u5668\u8fde\u63a5\u4e0d\u5230\u5927\u5385
 S own all the stacks
+S own the most blocks
 K perspective
 V \u89c6\u89d2
 K play
@@ -1481,4 +1506,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-N 829
+N 846

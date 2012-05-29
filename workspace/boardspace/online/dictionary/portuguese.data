@@ -292,6 +292,16 @@ V Escolha uma fileira para capturar
 K Designate a row to capture before your turn
 V Indique uma fileira a capturar antes do seu turno
 S Designate a zone to clear
+S Diagonal Blocks
+S Diagonal Blocks Duo
+K Diagonal Blocks Duo_family
+V Diagonal Blocks Duo
+K Diagonal Blocks Duo_variation
+V Polyomino game for 2 players
+K Diagonal Blocks_family
+V Diagonal Blocks
+K Diagonal Blocks_variation
+V Polyomino game for 4 players
 S Dice
 K Dipole
 V Dipole (original)
@@ -721,12 +731,17 @@ K Palago_family
 V Palago
 K Palago_variation
 V Palago b\u00e1sico
+S Pan-Kai
+K Pan-Kai_family
+V Pan-Kai
 K Pass
 V Passar
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+K Phlip_family
+V Phlip
 K Pick a ring to place a chip and move
 V Pegue um anel para colocar uma ficha e mover
 S Pick the first cube to send to the caravan
@@ -846,6 +861,10 @@ K Please Join Me
 V Por favor, jogue comigo
 K Please respect the 15 minute time limit
 V Jogos entre mestres t\u00eam um limite de tempo de 15 minutos
+S Polyomino Flip
+K Polyomino Flip_variation
+V Polyomino Flip
+S Polyomino Games
 K Position the starting rings
 V Posicione os an\u00e9is iniciais
 K Prisoners captured by Black are held here
@@ -1090,6 +1109,7 @@ K Time is
 V A hora \u00e9 
 K Timeout in 1 minute.
 V Cancelamento por inatividade em 1 minuto.
+S Total
 K Tournament Game
 V Jogo de Campeonato
 S Tower
@@ -1153,6 +1173,9 @@ K Tzaar_family
 V Tzaar
 K Tzaar_variation
 V Tzaar b\u00e1sico
+S Universe
+K Universe_family
+V Universe
 S Unranked
 K Unranked Room
 V Sala N\u00e3o Rankeada
@@ -1329,6 +1352,7 @@ K make 5 in a row to capture a ring, 3 rings win
 V fa\u00e7a 5 em uma fileira para capturar um anel, 3 an\u00e9is vencem
 K make any loop, or a line which spans 8 rows or columns, in your color
 V forme qualquer circuito fechado, ou uma reta que abranja 8 linhas ou colunas, na sua cor
+S make the last move
 K maximize the number of tiles in your reserve
 V maximize o n\u00famero de pe\u00e7as na sua reserva
 K mouse tracking disabled
@@ -1345,6 +1369,7 @@ V O servidor pode ter ca\u00eddo, ou um firewall pode estar bloqueando a conex\u
 K noserver
 V O sal\u00e3o n\u00e3o est\u00e1 conectado ao servidor.
 S own all the stacks
+S own the most blocks
 K perspective
 V perspectiva
 K play
@@ -1398,4 +1423,4 @@ V Benvindo ao sal\u00e3o do BoardSpace, vers\u00e3o #1
 S you may increase your bid
 K your name
 V seu nome
-N 829
+N 846

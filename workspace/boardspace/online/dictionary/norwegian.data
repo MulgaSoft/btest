@@ -259,6 +259,16 @@ S Designate GIPF pieces to capture, or place a chip
 S Designate a row to capture
 S Designate a row to capture before your turn
 S Designate a zone to clear
+S Diagonal Blocks
+S Diagonal Blocks Duo
+K Diagonal Blocks Duo_family
+V Diagonal Blocks Duo
+K Diagonal Blocks Duo_variation
+V Polyomino game for 2 players
+K Diagonal Blocks_family
+V Diagonal Blocks
+K Diagonal Blocks_variation
+V Polyomino game for 4 players
 S Dice
 K Dipole
 V Dipole (Originalversjonen)
@@ -657,11 +667,16 @@ K Palago_family
 V Palago
 K Palago_variation
 V Standard Palago
+S Pan-Kai
+K Pan-Kai_family
+V Pan-Kai
 S Pass
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+K Phlip_family
+V Phlip
 K Pick a ring to place a chip and move
 V Velg ringen som skal flyttes for \u00e5 plassere en brikke.
 S Pick the first cube to send to the caravan
@@ -760,6 +775,10 @@ K Please Join Me
 V Alle kan bli med
 K Please respect the 15 minute time limit
 V Mesterpartier har 15 minutters betenkningstid.
+S Polyomino Flip
+K Polyomino Flip_variation
+V Polyomino Flip
+S Polyomino Games
 K Position the starting rings
 V Plasser ringene
 K Prisoners captured by Black are held here
@@ -993,6 +1012,7 @@ K Time is
 V Tiden er 
 K Timeout in 1 minute.
 V Tiden l\u00f8per ut om ett minutt.
+S Total
 S Tournament Game
 S Tower
 S Tower 1 Bonus (1 point)
@@ -1047,6 +1067,9 @@ S Tzaar-standard_variation
 K Tzaar_family
 V Tzaar
 S Tzaar_variation
+S Universe
+K Universe_family
+V Universe
 S Unranked
 K Unranked Room
 V Urangert rom
@@ -1214,6 +1237,7 @@ K make 5 in a row to capture a ring, 3 rings win
 V Lag fem p\u00e5 rad for \u00e5 fjerne en ring \u2013 tre ringer vinner.
 K make any loop, or a line which spans 8 rows or columns, in your color
 V lag en l\u00f8kke eller en linje som strekker seg over minst 8 rader eller kolonner i din farge
+S make the last move
 S maximize the number of tiles in your reserve
 K mouse tracking disabled
 V mussporing er deaktivert
@@ -1229,6 +1253,7 @@ V Den kan v\u00e6re nede, eller forbindelsen kan v\u00e6re forhindret av en bran
 K noserver
 V Foajeen har ikke forbindelse til s\u00f8rveren.
 S own all the stacks
+S own the most blocks
 S perspective
 K play
 V spill for #1
@@ -1278,4 +1303,4 @@ V Velkommen til BoardSpace, versjon #1.
 S you may increase your bid
 K your name
 V ditt navn
-N 829
+N 846

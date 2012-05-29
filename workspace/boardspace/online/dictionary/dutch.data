@@ -314,6 +314,16 @@ V Bepaal een rij om te slaan
 K Designate a row to capture before your turn
 V Bepaal voor je zet een rij om te slaan
 S Designate a zone to clear
+S Diagonal Blocks
+S Diagonal Blocks Duo
+K Diagonal Blocks Duo_family
+V Diagonal Blocks Duo
+K Diagonal Blocks Duo_variation
+V Polyomino game for 2 players
+K Diagonal Blocks_family
+V Diagonal Blocks
+K Diagonal Blocks_variation
+V Polyomino game for 4 players
 S Dice
 K Dipole
 V Dipole (origineel)
@@ -758,12 +768,17 @@ K Palago_family
 V Palago
 K Palago_variation
 V standaard Palago
+S Pan-Kai
+K Pan-Kai_family
+V Pan-Kai
 K Pass
 V Pas
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+K Phlip_family
+V Phlip
 K Pick a ring to place a chip and move
 V Kies een ring voor een chip en zet
 S Pick the first cube to send to the caravan
@@ -886,6 +901,10 @@ K Please Join Me
 V Ik nodig je uit
 K Please respect the 15 minute time limit
 V Meester partijen hebben een tijdslimiet van 15 minuten
+S Polyomino Flip
+K Polyomino Flip_variation
+V Polyomino Flip
+S Polyomino Games
 K Position the starting rings
 V Plaats de startringen
 K Prisoners captured by Black are held here
@@ -1144,6 +1163,7 @@ K Time is
 V De tijd is nu 
 K Timeout in 1 minute.
 V Timeout in 1 minuut.
+S Total
 K Tournament Game
 V Tournooi Partij
 S Tower
@@ -1207,6 +1227,9 @@ K Tzaar_family
 V Tzaar
 K Tzaar_variation
 V standaard Tzaar
+S Universe
+K Universe_family
+V Universe
 S Unranked
 K Unranked Room
 V Vrije speelruimte
@@ -1392,6 +1415,7 @@ K make 5 in a row to capture a ring, 3 rings win
 V maak 5 op een rij voor een ring, 3 ringen wint
 K make any loop, or a line which spans 8 rows or columns, in your color
 V maak een lus, of een lijn die 8 rijen of kolommen overspant
+S make the last move
 K maximize the number of tiles in your reserve
 V Krijg zoveel mogelijk tegeltjes in je reserve
 K mouse tracking disabled
@@ -1409,6 +1433,7 @@ K noserver
 V De lobby heeft geen verbinding mer de server.
 K own all the stacks
 V maak alle kolommen jouw kleur
+S own the most blocks
 K perspective
 V perspectief
 K play
@@ -1468,4 +1493,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 829
+N 846

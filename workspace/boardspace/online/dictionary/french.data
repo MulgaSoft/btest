@@ -331,6 +331,16 @@ V Indiquez une ligne \u00e0 capturer
 K Designate a row to capture before your turn
 V Indiquez une ligne \u00e0 capturer avant votre coup
 S Designate a zone to clear
+S Diagonal Blocks
+S Diagonal Blocks Duo
+K Diagonal Blocks Duo_family
+V Diagonal Blocks Duo
+K Diagonal Blocks Duo_variation
+V Polyomino game for 2 players
+K Diagonal Blocks_family
+V Diagonal Blocks
+K Diagonal Blocks_variation
+V Polyomino game for 4 players
 K Dice
 V D\u00e9s
 K Dipole
@@ -782,6 +792,9 @@ K Palago_family
 V Palago
 K Palago_variation
 V standard Palago
+S Pan-Kai
+K Pan-Kai_family
+V Pan-Kai
 K Pass
 V Passer
 K Pay Camel
@@ -789,6 +802,8 @@ V Jouer un Chameau
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Choisir "Jouer un Chameau" ou "Envoyer le Cube"
+K Phlip_family
+V Phlip
 K Pick a ring to place a chip and move
 V D\u00e9placez un anneau pour placer un jeton
 K Pick the first cube to send to the caravan
@@ -925,6 +940,10 @@ K Please Join Me
 V Venez me rejoindre
 K Please respect the 15 minute time limit
 V Merci de respecter la limite de 15 minutes
+S Polyomino Flip
+K Polyomino Flip_variation
+V Polyomino Flip
+S Polyomino Games
 K Position the starting rings
 V Placez les anneaux de d\u00e9part
 K Prisoners captured by Black are held here
@@ -1188,6 +1207,7 @@ K Time is
 V Heure :  
 K Timeout in 1 minute.
 V Expiration du d\u00e9lai dans 1 minute.
+S Total
 K Tournament Game
 V Partie de tournoi
 S Tower
@@ -1257,6 +1277,9 @@ K Tzaar_family
 V Tzaar
 K Tzaar_variation
 V standard Tzaar
+S Universe
+K Universe_family
+V Universe
 S Unranked
 K Unranked Room
 V Salle d'entra\u00eenement
@@ -1444,6 +1467,7 @@ K make 5 in a row to capture a ring, 3 rings win
 V Alignez 5 jetons pour capturer un anneau, 3 fois pour gagner
 K make any loop, or a line which spans 8 rows or columns, in your color
 V Faites une boucle de votre couleur, ou une ligne traversant 8 lignes ou colonnes
+S make the last move
 K maximize the number of tiles in your reserve
 V Maximisez le nombre de tuiles dans votre r\u00e9serve
 K mouse tracking disabled
@@ -1460,6 +1484,7 @@ V Serveur hors-service, ou connexion non permise par votre Firewall.
 K noserver
 V La connexion au serveur a \u00e9chou\u00e9.
 S own all the stacks
+S own the most blocks
 S perspective
 K play
 V jouer \u00e0 la place de #1
@@ -1518,4 +1543,4 @@ K you may increase your bid
 V vous pouvez augmenter votre offre
 K your name
 V Votre nom
-N 829
+N 846
