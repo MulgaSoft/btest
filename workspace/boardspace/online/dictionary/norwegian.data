@@ -113,6 +113,7 @@ K BreakingAway_family
 V Breaking Away
 K BreakingAway_variation
 V standard Breaking Away
+S Brown
 S Brown Palace
 S Brown Palace Bonus (3 points)
 K Build a building, play cards, or click on Done
@@ -147,6 +148,9 @@ S Capture your opponent's town
 S Capturing Games
 S Card
 S Cards
+S Carnac
+K Carnac_family
+V Carnac
 S Cash/Score
 K Chat Room
 V Snakkerom
@@ -179,6 +183,7 @@ V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte dette trekket.
 S Click Done to confirm this placement
 S Click Done to decline a draw
 S Click Done to offer a draw
+S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klikk \u00abFerdig\u00bb for \u00e5 gjennomf\u00f8re slaget.
@@ -187,6 +192,7 @@ K Click on Done to confirm swapping
 V Klikk p\u00e5 Ferdig for \u00e5 bekrefte bytte
 K Click on Done to confirm the Exchange
 V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte byttet.
+S Click on Done to confirm the tip direction
 K Click on Done to confirm this Dance
 V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte dette dansetrekket.
 S Click on Done to confirm this card action
@@ -239,6 +245,10 @@ K Continue merging or click Done
 V Fortsett forening eller klikk Ferdig
 K Cookie-Disco
 V Cookie Disco
+K Cookie-Disco-crawl
+V Cookie Disco + Expansion
+K Cookie-Disco-crawl_variation
+V Cookie Disco + Crawl Cookie expansion
 K Cookie-Disco_variation
 V standard Cookie Disco
 K CookieDisco_family
@@ -263,12 +273,16 @@ S Diagonal Blocks
 S Diagonal Blocks Duo
 K Diagonal Blocks Duo_family
 V Diagonal Blocks Duo
-K Diagonal Blocks Duo_variation
-V Polyomino game for 2 players
 K Diagonal Blocks_family
 V Diagonal Blocks
-K Diagonal Blocks_variation
-V Polyomino game for 4 players
+K Diagonal-Blocks
+V Diagonal Blocks
+K Diagonal-Blocks-Duo
+V Diagonal Blocks Duo
+K Diagonal-Blocks-Duo_variation
+V Polyomino game for 2 players
+K Diagonal-Blocks_variation
+V Polyomino game for 3-4 players
 S Dice
 K Dipole
 V Dipole (Originalversjonen)
@@ -364,6 +378,7 @@ V #1. feb, #2.#3 GMT
 S Final Scores:
 K Finished Capturing, Click Done
 V Ingen flere baller \u00e5 ta: klikk \u00abFerdig\u00bb.
+S Fire!
 K Flagship can not capture
 V Flaggskipet kan ikke fange motstanderens skip.
 K Flagship can participate in captures
@@ -428,6 +443,7 @@ K Gounki_family
 V Gounki
 K Gounki_variation
 V standard Gounki
+S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -486,7 +502,24 @@ K Jul #1#2#3
 V #1. jul, #2.#3 GMT
 K Jun #1#2#3
 V #1. jun, #2.#3 GMT
+S Kamisado
+K Kamisado_family
+V Kamisado
+K Kamisado_variation
+V Kamisado
 S Keep all three types of chip visible
+K Khet-classic
+V Khet 2.0 - Classic
+K Khet-classic_variation
+V Khet 2.0 with Classic starting position
+K Khet-ihmotep
+V Khet 2.0 - Ihmotep
+K Khet-ihmotep_variation
+V Khet 2.0 with Ihmotep starting position
+K Khet_family
+V Khet
+K Khet_variation
+V Khet
 S Knock 5 of your opponent's dice into the gutter
 S Knockabout
 K Knockabout_family
@@ -584,8 +617,11 @@ S Move a Cyclist
 S Move a Frog
 S Move a Man
 S Move a Man up to level 3
+S Move a Planet
 S Move a Rabbit to the last row
 S Move a Stack or Start deploying at Stack
+K Move a Tower
+V Move any Tower
 K Move a ball or change a Ring
 V Flytt en ball eller forandre p\u00e5 en ring.
 S Move a piece
@@ -601,6 +637,7 @@ S Move a ship
 S Move a ship to the board
 S Move a soldier, or fire a cannon
 S Move a stack, or add a reserve piece
+S Move a tower to your opponent's home row
 S Move a volcano cap
 K Move one ship
 V Flytt ett skip.
@@ -613,6 +650,7 @@ S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
 V Cost 2 camels + 2 gold.
+S Move your #1 tower
 S Move your runners to the opposite side
 K Move, Split or Merge a stack
 V Flytt, fordel eller foren en stabel
@@ -627,6 +665,7 @@ K Mutton_family
 V Mutton
 K Mutton_variation
 V standard Mutton
+S N-in-a-row Games
 K News
 V Nyheter
 K No Challenges
@@ -660,6 +699,7 @@ K Only the flagship can occupy the center square
 V Bare flaggskipet kan v\u00e6re i sentrumsfeltet.
 K Options
 V Innstillinger
+S Orange
 S Orange Palace
 S Orange Palace Bonus (4 points)
 S Palago
@@ -670,6 +710,8 @@ V Standard Palago
 S Pan-Kai
 K Pan-Kai_family
 V Pan-Kai
+K Pan-Kai_variation
+V Pentamino game for 2 players
 S Pass
 S Pay Camel
 S Pay Gold
@@ -683,6 +725,7 @@ S Pick the first cube to send to the caravan
 S Pick the stack to move
 K Pick up and Continue your move
 V Plukk opp og fortsett trekket.
+S Pink
 S Place #1 cubes in Bag neighborhood
 S Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
 S Place #1 cubes in Barrel neighborhood
@@ -694,6 +737,7 @@ S Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 sp
 S Place a Chip, or a Jewel, or a chip from the Store
 S Place a Frog on the board
 S Place a GIPF piece on a starting point
+S Place a Menhir on the board
 K Place a Ring on the board
 V Plasser en ring p\u00e5 brettet.
 S Place a bird on an empty cell
@@ -716,6 +760,7 @@ K Place a piece on the board, or Exchange an off-board piece for a new tile
 V Sett en brikke p\u00e5 brettet eller bytt en brikke utenfor brettet mot en ny helle.
 K Place a piece on the board, or move a piece already on the board
 V Plasser en brikke p\u00e5 brettet eller flytt en som allerede ligger der.
+S Place a piece on the board, or swap colors with your opponent
 S Place a ring on the board
 S Place a roamer on the board
 S Place a second piece on the board
@@ -791,6 +836,7 @@ K Punct_family
 V P\u00fcnct
 K Punct_variation
 V Spill Punct standardvarianten
+S Purple
 S Quinamid
 K Quinamid_family
 V Quinamid
@@ -954,6 +1000,11 @@ S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
+S Syzygy
+K Syzygy_family
+V Syzygy
+K Syzygy_variation
+V Standard Syzygy
 K TBA1_variation
 V game to be announced
 K TBA2_variation
@@ -1012,6 +1063,7 @@ K Time is
 V Tiden er 
 K Timeout in 1 minute.
 V Tiden l\u00f8per ut om ett minutt.
+S Tip the last placed Menhir, or pass.
 S Total
 S Tournament Game
 S Tower
@@ -1070,6 +1122,8 @@ S Tzaar_variation
 S Universe
 K Universe_family
 V Universe
+K Universe_variation
+V Pentamino game for 3-4 players
 S Unranked
 K Unranked Room
 V Urangert rom
@@ -1133,6 +1187,7 @@ K Xiangqi_family
 V Xiangqi
 K Xiangqi_variation
 V standard Xiangqi
+S Yellow
 S Yellow Dome
 S Yes, I will fund the loan
 S Yinsh
@@ -1188,8 +1243,21 @@ V Kunngj\u00f8r nye spillere
 K automute
 V #1 har automatisk blitt stum.
 S bid and win the most prize value
+S blast your opponent's pharoh
 S build an ideal city
 S capture all of one opponentr's color
+K carnac_10x7
+V Carnac - Medium
+K carnac_10x7_variation
+V Carnac with a medium board
+K carnac_14x9
+V Carnac - Large
+K carnac_14x9_variation
+V Carnac with a large board
+K carnac_8x5
+V Carnac - Small
+K carnac_8x5_variation
+V Carnac with a small board
 K center square is not special
 V Sentrumsfeltet er ikke spesielt.
 S click Done to finish this Auction
@@ -1303,4 +1371,4 @@ V Velkommen til BoardSpace, versjon #1.
 S you may increase your bid
 K your name
 V ditt navn
-N 846
+N 890

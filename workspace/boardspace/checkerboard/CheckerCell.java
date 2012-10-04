@@ -1,4 +1,5 @@
 package checkerboard;
+
 import java.util.Random;
 import online.game.stackCell;
 
@@ -30,5 +31,21 @@ public class CheckerCell extends stackCell<CheckerCell,CheckerChip> implements C
 	 * roles, or when the diest of contents is complex.
 	 */
 	public long Digest(Random r) { return(super.Digest(r)); }
+	
+	/** copyFrom is called when cloning boards
+	 * 
+	 */
+	public void copyFrom(CheckerCell ot)
+	{	//CheckerCell other = (CheckerCell)ot;
+		// copy any variables that need copying
+		super.copyFrom(ot);
+	}
+	/**
+	 * reset back to the same state as when newly created.  This is used
+	 * when reinitializing a board.
+	 */
+	public void reInit()
+	{	super.reInit();
+	}
 
 }

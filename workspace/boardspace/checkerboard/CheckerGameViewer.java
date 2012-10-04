@@ -122,7 +122,7 @@ public class CheckerGameViewer extends commonCanvas
      * presumably based on the cell grid.  This is used to transmit our mouse
      * position to the other players and spectators, so it will be displayed
      * at approximately the same visual spot on their screen.  
-     * The results of this function only have to be interpreted by {@link decodeScreenZone}
+     * The results of this function only have to be interpreted by {@link #decodeScreenZone}
      * Some trickier logic may be needed if the board has several orientations,
      * or if some mouse activity should be censored.
      */
@@ -131,12 +131,12 @@ public class CheckerGameViewer extends commonCanvas
     	return(super.encodeScreenZone(x,y,p));
     }
     /**
-     * invert the transformation done by {@link encodeScreenZone}, returning 
+     * invert the transformation done by {@link #encodeScreenZone}, returning 
      * an x,y pixel address on the main window.
-     * @param zone
+     * @param z
      * @param x
      * @param y
-     * @return
+     * @return a point representing the decoded position
      */
     public Point decodeScreenZone(String z,int x,int y)
     {
@@ -179,12 +179,13 @@ public class CheckerGameViewer extends commonCanvas
 	 *  with the "addRect" mechanism to help visualize the layout.
 	 */ 
     public void setLocalBounds(int x, int y, int width, int height)
-    {   int separation=2;
+    {   boolean wideMode = width>height*1.5;
+    	int separation=3;
         int sncols = (b.boardColumns*SUBCELL+20); // more cells wide to allow for the aux displays
         int snrows = (b.boardRows+1)*SUBCELL;  
         int cellw = width / sncols;
         int chatHeight = selectChatHeight(height);
-        int cellh = (height-chatHeight) / snrows;
+        int cellh = (height-(wideMode ? 0 : chatHeight)) / snrows;
         int ideal_logwidth = CELLSIZE * 12;
         CELLSIZE = Math.max(1,Math.min(cellw, cellh)); //cell size appropriate for the aspect ration of the canvas
         SQUARESIZE = CELLSIZE*SUBCELL;
@@ -196,18 +197,19 @@ public class CheckerGameViewer extends commonCanvas
         // game log.  This is generally off to the right, and it's ok if it's not
         // completely visible in all configurations.
         
-        boardRect.x = 0;
-        boardRect.y = chatHeight+SQUARESIZE-CELLSIZE;
-        boardRect.width = SQUARESIZE * b.boardColumns ;
-        boardRect.height = SQUARESIZE * b.boardRows;
-
         stateRect.x = boardRect.x + CELLSIZE;
-        stateRect.y = chatHeight+CELLSIZE/3;
+        stateRect.y = (wideMode ? 0 : chatHeight) +CELLSIZE/3;
         stateRect.width = boardRect.width - CELLSIZE;
         stateRect.height = CELLSIZE / 2;
 
+        boardRect.x = 0;
+        boardRect.y = (wideMode ? 0 : chatHeight)+SQUARESIZE-CELLSIZE;
+        boardRect.width = SQUARESIZE * b.boardColumns ;
+        boardRect.height = SQUARESIZE * b.boardRows;
+
+
         firstPlayerChipRect.x = G.Right(boardRect)-CELLSIZE/2;
-        firstPlayerChipRect.y = chatHeight+CELLSIZE;
+        firstPlayerChipRect.y = boardRect.y+CELLSIZE/2;
         firstPlayerChipRect.width = SQUARESIZE;
         firstPlayerChipRect.height = SQUARESIZE;
  
@@ -216,17 +218,7 @@ public class CheckerGameViewer extends commonCanvas
         secondPlayerChipRect.width = SQUARESIZE;
         secondPlayerChipRect.height = SQUARESIZE;
 
-        chatRect.x = fullRect.x;
-        chatRect.y = fullRect.y;
-        chatRect.width = Math.max(boardRect.width,fullRect.width-ideal_logwidth-CELLSIZE);
-        chatRect.height = chatHeight;
-
-        logRect.x = chatRect.x + chatRect.width+CELLSIZE/3 ;
-        logRect.y = chatRect.y ;
-        logRect.width = Math.min(ideal_logwidth,fullRect.width-logRect.x);
-        logRect.height = chatRect.height;
-
-        
+       
         // "edit" rectangle, available in reviewers to switch to puzzle mode
         editRect.x = G.Right(boardRect)+CELLSIZE*separation;
         editRect.y = G.Bottom(firstPlayerChipRect)+CELLSIZE*2;
@@ -234,7 +226,7 @@ public class CheckerGameViewer extends commonCanvas
         editRect.height = 2*CELLSIZE;
 
         
-        liftRect.x = G.Right(boardRect)+CELLSIZE;;
+        liftRect.x = G.Right(boardRect)+CELLSIZE/2;;
         liftRect.y = G.Bottom(editRect)+CELLSIZE*2;
         liftRect.width = liftRect.height=CELLSIZE*4;
 
@@ -256,8 +248,11 @@ public class CheckerGameViewer extends commonCanvas
             {
             Rectangle p0time = pl0.timeRect;
             Rectangle p1time = pl1.timeRect;
+            Rectangle p0alt = pl0.extraTimeRect;
+            Rectangle p1alt = pl1.extraTimeRect;
             Rectangle p0anim = pl0.animRect;
             Rectangle p1anim = pl1.animRect;
+            
             Rectangle firstPlayerRect = pl0.nameRect;
             Rectangle secondPlayerRect = pl1.nameRect;
             Rectangle firstPlayerPicRect = pl0.picRect;
@@ -293,6 +288,11 @@ public class CheckerGameViewer extends commonCanvas
             p0time.y = firstPlayerRect.y;
             p0time.width = CELLSIZE * 3;
             p0time.height = CELLSIZE;
+            p0alt.x = p0time.x;
+            p0alt.y = G.Bottom(p0time);
+            p0alt.width = p0time.width;
+            p0alt.height = p0time.height;
+            
             // tfirst player "i'm alive" anumation ball
             p0anim.x = G.Right(p0time);
             p0anim.y = p0time.y;
@@ -303,15 +303,30 @@ public class CheckerGameViewer extends commonCanvas
             p1time.y = secondPlayerRect.y;
             p1time.width = p0time.width;
             p1time.height = p0time.height;
+            p1alt.x = p1time.x;
+            p1alt.y = G.Bottom(p1time);
+            p1alt.width = p1time.width;
+            p1alt.height = p1time.height;
+
             p1anim.x = p1time.x+p1time.width;
             p1anim.y = p1time.y;
             p1anim.width = p1time.height;
             p1anim.height = p1time.height;
 
+            int logx = G.Right(p0anim)+CELLSIZE/2;
+            logRect.x = logx;
+            logRect.y = 0 ;
+            logRect.width = Math.min(ideal_logwidth,fullRect.width-logRect.x);
+            logRect.height = wideMode ? CELLSIZE*4 : chatRect.height;
 
+            chatRect.x = wideMode ? logx : 0;
+            chatRect.y = wideMode ? G.Bottom(logRect)+CELLSIZE: 0;
+            chatRect.width = wideMode ? width-logx-CELLSIZE/2 : logx-CELLSIZE/2;
+            chatRect.height = wideMode ? Math.min(chatHeight,height-chatRect.y) : chatHeight;
+      
                   }}  
         
-        // "done" rectangle, should alway be visible, but only active when a move is complete.
+        // "done" rectangle, should always be visible, but only active when a move is complete.
         doneRect.x = editRect.x;
         doneRect.y = G.Bottom(liftRect)+CELLSIZE*2;
         doneRect.width = editRect.width;
@@ -329,7 +344,7 @@ public class CheckerGameViewer extends commonCanvas
  
         //this sets up the "vcr cluster" of forward and back controls.
         SetupVcrRects(liftRect.x,G.Bottom(doneRect)+2*CELLSIZE,
-            CELLSIZE * 10,
+            CELLSIZE * 8,
             4 * CELLSIZE);
  
         theChat.setBounds(chatRect.x+x,chatRect.y+y,chatRect.width,chatRect.height);
@@ -437,7 +452,7 @@ public class CheckerGameViewer extends commonCanvas
      	boolean dolift = (liftSteps>0);
      	if(dolift && (liftSteps<12))
      		{ // this induces a very simple animation
-     		repaint(); 
+     		repaint(20); 
      		}
      	//
         // now draw the contents of the board and anything it is pointing at
@@ -894,7 +909,7 @@ private void playSounds(commonMove mm)
         	 performReset();
             break;
         }
-        repaint();
+        repaint(20);
     }
 
     
@@ -930,7 +945,7 @@ private void playSounds(commonMove mm)
        	CheckerBoard disb = (CheckerBoard) disB();
        	CheckerBoard gb = (disb == null) ? b : disb;
 
-	    gb.SetDisplayParameters(0.94,1.0,  0.12,0.1,  0, 0, 0,0);
+	    gb.SetDisplayParameters(0.94,1.0,  0.12,0.1,  0);
 	    gb.SetDisplayRectangle(boardRect);
        
       	Image offScreen = createOffScreen(fullRect.width, fullRect.height); // create backing bitmaps;
@@ -954,7 +969,8 @@ private void playSounds(commonMove mm)
         ShowStats(offGC,boardRect.x,G.Bottom(fullRect)-CELLSIZE*2);	// add some stats on top of everything
         showRectangles(offGC, CELLSIZE); //show rectangles in the UI
         
- 
+        drawSprites(offGC);
+        
         if(offScreen!=null)
         	{
             displayClipped(g,fullRect,chatRect,offScreen);
@@ -964,7 +980,7 @@ private void playSounds(commonMove mm)
      * this is a token or tokens that initialize the variation and
      * set immutable parameters such as the number of players
      * and the random key for the game.  It can be more than one
-     * token, which ought to be parsable by {@link online.game.commonCanvas.performHistoryInitialization()}
+     * token, which ought to be parseable by {@link #performHistoryInitialization}
      * @return return what will be the init type for the game
      */
     public String gameType() 
@@ -1103,7 +1119,7 @@ private void playSounds(commonMove mm)
             {
                 if (!(value.toLowerCase().equals("checkers") || value.equals(Checker_SGF)))
                 {
-                    throw new Error("game type " + value + " is not this game");
+                	G.Error("game type " + value + " is not this game");
                 }
             }
             else if (parseVersionCommand(name,value,2)) {}

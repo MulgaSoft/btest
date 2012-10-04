@@ -132,6 +132,7 @@ K BreakingAway_family
 V Breaking Away
 K BreakingAway_variation
 V standaard Breaking Away
+S Brown
 S Brown Palace
 S Brown Palace Bonus (3 points)
 K Build a building, play cards, or click on Done
@@ -177,6 +178,9 @@ K Capturing Games
 V Eliminatie Spelen
 S Card
 S Cards
+S Carnac
+K Carnac_family
+V Carnac
 S Cash/Score
 K Chat Room
 V Chat Ruimte
@@ -216,6 +220,7 @@ K Click Done to decline a draw
 V Klik Klaar om remise te weigeren
 K Click Done to offer a draw
 V Klik Klaar om remise aan te bieden
+S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klik Klaar om het slaan te voltooien
@@ -224,6 +229,7 @@ K Click on Done to confirm swapping
 V Klik Klaar om de switch te voltooien
 K Click on Done to confirm the Exchange
 V Klik Klaar om de ruil te voltooien
+S Click on Done to confirm the tip direction
 K Click on Done to confirm this Dance
 V Klik Klaar om de Dans te voltooien
 S Click on Done to confirm this card action
@@ -288,6 +294,10 @@ K Continue merging or click Done
 V Blijf samenvoegen of Klik Klaar
 K Cookie-Disco
 V Cookie Disco
+K Cookie-Disco-crawl
+V Cookie Disco + Expansion
+K Cookie-Disco-crawl_variation
+V Cookie Disco + Crawl Cookie expansion
 K Cookie-Disco_variation
 V standard Cookie Disco
 K CookieDisco_family
@@ -318,12 +328,16 @@ S Diagonal Blocks
 S Diagonal Blocks Duo
 K Diagonal Blocks Duo_family
 V Diagonal Blocks Duo
-K Diagonal Blocks Duo_variation
-V Polyomino game for 2 players
 K Diagonal Blocks_family
 V Diagonal Blocks
-K Diagonal Blocks_variation
-V Polyomino game for 4 players
+K Diagonal-Blocks
+V Diagonal Blocks
+K Diagonal-Blocks-Duo
+V Diagonal Blocks Duo
+K Diagonal-Blocks-Duo_variation
+V Polyomino game for 2 players
+K Diagonal-Blocks_variation
+V Polyomino game for 3-4 players
 S Dice
 K Dipole
 V Dipole (origineel)
@@ -424,6 +438,7 @@ K Final Scores:
 V Eindscores:
 K Finished Capturing, Click Done
 V Slag beeindigd, Klik Klaar
+S Fire!
 K Flagship can not capture
 V Vlaggenschepen kunnen niet meedoen bij het slaan
 K Flagship can participate in captures
@@ -490,6 +505,7 @@ K Gounki_family
 V Gounki
 K Gounki_variation
 V standard Gounki
+S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -554,7 +570,24 @@ K Jul #1#2#3
 V #1 Jul, #2:#3 GMT
 K Jun #1#2#3
 V #1 Jun, #2:#3 GMT
+S Kamisado
+K Kamisado_family
+V Kamisado
+K Kamisado_variation
+V Kamisado
 S Keep all three types of chip visible
+K Khet-classic
+V Khet 2.0 - Classic
+K Khet-classic_variation
+V Khet 2.0 with Classic starting position
+K Khet-ihmotep
+V Khet 2.0 - Ihmotep
+K Khet-ihmotep_variation
+V Khet 2.0 with Ihmotep starting position
+K Khet_family
+V Khet
+K Khet_variation
+V Khet
 K Knock 5 of your opponent's dice into the gutter
 V Sla 5 dobbelstenen van de tegenspeler in de goot
 S Knockabout
@@ -669,9 +702,12 @@ K Move a Man
 V Verplaats een stuk
 K Move a Man up to level 3
 V Verplaats een stuk naar level 3
+S Move a Planet
 K Move a Rabbit to the last row
 V Breng een konijn naar de laatste rij
 S Move a Stack or Start deploying at Stack
+K Move a Tower
+V Move any Tower
 K Move a ball or change a Ring
 V Verplaats een bal of een Ring
 K Move a piece
@@ -696,6 +732,7 @@ V Verplaats een schip naar het bord
 K Move a soldier, or fire a cannon
 V Zet een soldaat, of vuur een kanon af
 S Move a stack, or add a reserve piece
+S Move a tower to your opponent's home row
 K Move a volcano cap
 V Zet een volcano cap
 K Move one ship
@@ -709,6 +746,7 @@ S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
 V Cost 2 camels + 2 gold.
+S Move your #1 tower
 K Move your runners to the opposite side
 V Breng je renners naar de overkant
 K Move, Split or Merge a stack
@@ -724,6 +762,7 @@ K Mutton_family
 V Mutton
 K Mutton_variation
 V standaard Mutton
+S N-in-a-row Games
 K News
 V Nieuws
 K No Challenges
@@ -761,6 +800,7 @@ K Only the flagship can occupy the center square
 V Het centrale veld is alleen voor het Vlaggenschip
 K Options
 V Opties
+S Orange
 S Orange Palace
 S Orange Palace Bonus (4 points)
 S Palago
@@ -771,6 +811,8 @@ V standaard Palago
 S Pan-Kai
 K Pan-Kai_family
 V Pan-Kai
+K Pan-Kai_variation
+V Pentamino game for 2 players
 K Pass
 V Pas
 S Pay Camel
@@ -786,6 +828,7 @@ K Pick the stack to move
 V Kies de te verplaatsen kolom
 K Pick up and Continue your move
 V Pak op en ga verder met de zet
+S Pink
 S Place #1 cubes in Bag neighborhood
 S Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
 S Place #1 cubes in Barrel neighborhood
@@ -800,6 +843,7 @@ K Place a Frog on the board
 V Zet een Kikker op het bord
 K Place a GIPF piece on a starting point
 V Plaats een GIPF stuk op een beginpunt
+S Place a Menhir on the board
 K Place a Ring on the board
 V Plaats een Ring op het bord
 S Place a bird on an empty cell
@@ -823,6 +867,7 @@ K Place a piece on the board, or Exchange an off-board piece for a new tile
 V Plaats een stuk op het bord, of Ruil een stuk naast het bord voor een nieuwe hex
 K Place a piece on the board, or move a piece already on the board
 V Plaats een stuk op het bord, of verplaats een stuk
+S Place a piece on the board, or swap colors with your opponent
 K Place a ring on the board
 V Plaats een ring op het bord
 S Place a roamer on the board
@@ -917,6 +962,7 @@ K Punct_family
 V P\u00fcnct
 K Punct_variation
 V standaard P\u00fcnct
+S Purple
 S Quinamid
 K Quinamid_family
 V Quinamid
@@ -1100,6 +1146,11 @@ K Switch to a more oblique view of the board
 V Verlaag blikveld op het bord
 K Switch to a more overhead view of the board
 V Verhoog blikveld op het bord
+S Syzygy
+K Syzygy_family
+V Syzygy
+K Syzygy_variation
+V Standard Syzygy
 K TBA1_variation
 V spel wordt aangekondigd
 K TBA2_variation
@@ -1163,6 +1214,7 @@ K Time is
 V De tijd is nu 
 K Timeout in 1 minute.
 V Timeout in 1 minuut.
+S Tip the last placed Menhir, or pass.
 S Total
 K Tournament Game
 V Tournooi Partij
@@ -1230,6 +1282,8 @@ V standaard Tzaar
 S Universe
 K Universe_family
 V Universe
+K Universe_variation
+V Pentamino game for 3-4 players
 S Unranked
 K Unranked Room
 V Vrije speelruimte
@@ -1301,6 +1355,7 @@ K Xiangqi_family
 V Xiangqi
 K Xiangqi_variation
 V standaard Xiangqi
+S Yellow
 S Yellow Dome
 K Yes, I will fund the loan
 V Ja, ik garandeer de lening
@@ -1360,9 +1415,22 @@ V Aankondiging nieuwe spelers
 K automute
 V #1 is automatisch gedempt
 S bid and win the most prize value
+S blast your opponent's pharoh
 K build an ideal city
 V bouw een ideale stad
 S capture all of one opponentr's color
+K carnac_10x7
+V Carnac - Medium
+K carnac_10x7_variation
+V Carnac with a medium board
+K carnac_14x9
+V Carnac - Large
+K carnac_14x9_variation
+V Carnac with a large board
+K carnac_8x5
+V Carnac - Small
+K carnac_8x5_variation
+V Carnac with a small board
 K center square is not special
 V Het centrale veld heeft geen speciale rol
 K click Done to finish this Auction
@@ -1493,4 +1561,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 846
+N 890

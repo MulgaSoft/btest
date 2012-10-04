@@ -869,7 +869,7 @@ public class HexGameViewer extends commonCanvas
     		  		if(oldMove.nVariations()>0) { idx=-1; }
     		  			else 
     		  			{ 
-    		  				UndoHistoryElement(idx); 
+    		  				popHistoryElement(); 
     		  				idx--;
     		  			}
     		  		break;
@@ -1062,7 +1062,7 @@ public class HexGameViewer extends commonCanvas
             break;
         }
 
-         repaint();
+         repaint(20);
     }
 
 
@@ -1135,12 +1135,12 @@ public class HexGameViewer extends commonCanvas
       	  if(doRotation)
       	  {
       	  // 0.95 and 1.0 are more or less magic numbers to match the board to the artwork
-          gb.SetDisplayParameters(0.95, 1.0, 0,0,60 , 0, 0,0); // shrink a little and rotate 60 degrees
+          gb.SetDisplayParameters(0.95, 1.0, 0,0,60); // shrink a little and rotate 60 degrees
      	  }
       	  else
       	  {
           // the numbers for the square-on display are slightly ad-hoc, but they look right
-          gb.SetDisplayParameters( 0.825, 0.94, 0,0,28.2, 0, 0,0); // shrink a little and rotate 30 degrees
+          gb.SetDisplayParameters( 0.825, 0.94, 0,0,28.2); // shrink a little and rotate 30 degrees
       	  }
       	}
       	gb.SetDisplayRectangle(boardRect);
@@ -1244,7 +1244,7 @@ public class HexGameViewer extends commonCanvas
         {	handled=true;
         	doRotation = rotationOption.getState();
         	resetBounds();
-        	repaint();
+        	repaint(20);
         }
 
         return (handled);
@@ -1360,7 +1360,7 @@ public class HexGameViewer extends commonCanvas
             {
                 if (!(value.toLowerCase().equals("hex") || value.equals(Hex_SGF)))
                 {
-                    throw new Error("game type " + value + " is not this game");
+                	G.Error("game type " + value + " is not this game");
                 }
             }
            else if (parseVersionCommand(name,value,2)) {}

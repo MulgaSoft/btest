@@ -135,6 +135,7 @@ K BreakingAway_family
 V Breaking Away
 K BreakingAway_variation
 V norma Breaking Away
+S Brown
 S Brown Palace
 S Brown Palace Bonus (3 points)
 K Build a building, play cards, or click on Done
@@ -181,6 +182,9 @@ K Capturing Games
 V Ludoj pri Kaptado
 S Card
 S Cards
+S Carnac
+K Carnac_family
+V Carnac
 K Cash/Score
 V Mono/Poentoj
 K Chat Room
@@ -220,6 +224,7 @@ K Click Done to decline a draw
 V Alklaku Fini por malakcepti remison
 K Click Done to offer a draw
 V Alklaku Fini por proponi remison
+S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klaku Fini por fini la kapton
@@ -228,6 +233,7 @@ K Click on Done to confirm swapping
 V Klaku Fini por konfirmi inter\u015dan\u011don
 K Click on Done to confirm the Exchange
 V Klaku Fini por konfirmi la inter\u015dan\u011don
+S Click on Done to confirm the tip direction
 K Click on Done to confirm this Dance
 V Klaku Fini por konfirmi \u0109i tiun dancon
 S Click on Done to confirm this card action
@@ -292,6 +298,10 @@ K Continue merging or click Done
 V Plu kunigu a\u016d klaku Fini
 K Cookie-Disco
 V Cookie Disco
+K Cookie-Disco-crawl
+V Cookie Disco + Expansion
+K Cookie-Disco-crawl_variation
+V Cookie Disco + Crawl Cookie expansion
 K Cookie-Disco_variation
 V standard Cookie Disco
 K CookieDisco_family
@@ -320,12 +330,16 @@ S Diagonal Blocks
 S Diagonal Blocks Duo
 K Diagonal Blocks Duo_family
 V Diagonal Blocks Duo
-K Diagonal Blocks Duo_variation
-V Polyomino game for 2 players
 K Diagonal Blocks_family
 V Diagonal Blocks
-K Diagonal Blocks_variation
-V Polyomino game for 4 players
+K Diagonal-Blocks
+V Diagonal Blocks
+K Diagonal-Blocks-Duo
+V Diagonal Blocks Duo
+K Diagonal-Blocks-Duo_variation
+V Polyomino game for 2 players
+K Diagonal-Blocks_variation
+V Polyomino game for 3-4 players
 S Dice
 K Dipole
 V Dipole (originala)
@@ -430,6 +444,7 @@ K Final Scores:
 V Finaj Poentoj:
 K Finished Capturing, Click Done
 V Kaptado finita, klaku Fini
+S Fire!
 K Flagship can not capture
 V Re\u011do ne povas kapti
 K Flagship can participate in captures
@@ -496,6 +511,7 @@ K Gounki_family
 V Gounki
 K Gounki_variation
 V standard Gounki
+S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -561,7 +577,24 @@ K Jul #1#2#3
 V #1 jul, #2:#3 GMT
 K Jun #1#2#3
 V #1 jun, #2:#3 GMT
+S Kamisado
+K Kamisado_family
+V Kamisado
+K Kamisado_variation
+V Kamisado
 S Keep all three types of chip visible
+K Khet-classic
+V Khet 2.0 - Classic
+K Khet-classic_variation
+V Khet 2.0 with Classic starting position
+K Khet-ihmotep
+V Khet 2.0 - Ihmotep
+K Khet-ihmotep_variation
+V Khet 2.0 with Ihmotep starting position
+K Khet_family
+V Khet
+K Khet_variation
+V Khet
 K Knock 5 of your opponent's dice into the gutter
 V Frapu 5 el la kuboj de via kontra\u016dulo eksteren
 S Knockabout
@@ -679,9 +712,12 @@ K Move a Man
 V Movu Homon
 K Move a Man up to level 3
 V Movu Homon al nivelo 3
+S Move a Planet
 K Move a Rabbit to the last row
 V Movu Kuniklon al la lasta horizontalo
 S Move a Stack or Start deploying at Stack
+K Move a Tower
+V Move any Tower
 K Move a ball or change a Ring
 V Movu globon a\u016d \u015dan\u011du ringon
 K Move a piece
@@ -706,6 +742,7 @@ V Movu \u015dipon al la tabulo
 K Move a soldier, or fire a cannon
 V Movu soldaton a\u016d pafu kanonon
 S Move a stack, or add a reserve piece
+S Move a tower to your opponent's home row
 K Move a volcano cap
 V Movu vulkanan \u0109apon
 K Move one ship
@@ -719,6 +756,7 @@ S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
 V Cost 2 camels + 2 gold.
+S Move your #1 tower
 K Move your runners to the opposite side
 V Movu viajn kuristojn al la kontra\u016d flanko
 K Move, Split or Merge a stack
@@ -734,6 +772,7 @@ K Mutton_family
 V Mutton
 K Mutton_variation
 V norma Mutton
+S N-in-a-row Games
 K News
 V Nova\u0135oj
 K No Challenges
@@ -771,6 +810,7 @@ K Only the flagship can occupy the center square
 V Nur la re\u011do povas okupi la centran kvadraton
 K Options
 V Elektoj
+S Orange
 S Orange Palace
 S Orange Palace Bonus (4 points)
 S Palago
@@ -781,6 +821,8 @@ V norma Palago
 S Pan-Kai
 K Pan-Kai_family
 V Pan-Kai
+K Pan-Kai_variation
+V Pentamino game for 2 players
 K Pass
 V Pasi
 S Pay Camel
@@ -796,6 +838,7 @@ K Pick the stack to move
 V Elektu stakon por movi
 K Pick up and Continue your move
 V Levu kaj da\u016drigu vian movon
+S Pink
 S Place #1 cubes in Bag neighborhood
 S Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
 S Place #1 cubes in Barrel neighborhood
@@ -810,6 +853,7 @@ K Place a Frog on the board
 V Metu Ranon sur la tabulon
 K Place a GIPF piece on a starting point
 V Metu GIPF-pecon sur komenco-punkton
+S Place a Menhir on the board
 K Place a Ring on the board
 V Metu ringon sur la tabulon
 S Place a bird on an empty cell
@@ -833,6 +877,7 @@ K Place a piece on the board, or Exchange an off-board piece for a new tile
 V Metu pecon sur la tabulon, a\u016d inter\u015dan\u011du ekstertabulon pecon por nova peco
 K Place a piece on the board, or move a piece already on the board
 V Metu pecon sur la tabulon, a\u016d movu pecon jam sur la tabulo
+S Place a piece on the board, or swap colors with your opponent
 K Place a ring on the board
 V Metu ringon sur la tabulon
 S Place a roamer on the board
@@ -926,6 +971,7 @@ K Punct_family
 V P\u00dcNCT
 K Punct_variation
 V norma P\u00dcNCT
+S Purple
 S Quinamid
 K Quinamid_family
 V Quinamid
@@ -1108,6 +1154,11 @@ S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
+S Syzygy
+K Syzygy_family
+V Syzygy
+K Syzygy_variation
+V Standard Syzygy
 K TBA1_variation
 V ludo estos anoncita
 K TBA2_variation
@@ -1171,6 +1222,7 @@ K Time is
 V Tempo estas 
 K Timeout in 1 minute.
 V Tempolimo post 1 minuto.
+S Tip the last placed Menhir, or pass.
 S Total
 K Tournament Game
 V Turnira Partio
@@ -1239,6 +1291,8 @@ V norma TZAAR
 S Universe
 K Universe_family
 V Universe
+K Universe_variation
+V Pentamino game for 3-4 players
 S Unranked
 K Unranked Room
 V Negradita \u0108ambro
@@ -1311,6 +1365,7 @@ K Xiangqi_family
 V Xiangqi
 K Xiangqi_variation
 V norma Xiangqi
+S Yellow
 S Yellow Dome
 K Yes, I will fund the loan
 V Jes, mi volas pruntedoni
@@ -1372,10 +1427,23 @@ V Anonci Novajn Ludantojn
 K automute
 V #1 estis a\u016dtomate mutigita
 S bid and win the most prize value
+S blast your opponent's pharoh
 K build an ideal city
 V konstruu idealan urbon
 K capture all of one opponentr's color
 V kaptu \u0109iujn pecojn de la koloro de unu kontra\u016dulo
+K carnac_10x7
+V Carnac - Medium
+K carnac_10x7_variation
+V Carnac with a medium board
+K carnac_14x9
+V Carnac - Large
+K carnac_14x9_variation
+V Carnac with a large board
+K carnac_8x5
+V Carnac - Small
+K carnac_8x5_variation
+V Carnac with a small board
 K center square is not special
 V centra kvadrato ne specialas
 S click Done to finish this Auction
@@ -1504,4 +1572,4 @@ K you may increase your bid
 V vi povas pliigi vian oferton
 K your name
 V via nomo
-N 846
+N 890

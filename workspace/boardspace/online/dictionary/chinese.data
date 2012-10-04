@@ -135,6 +135,7 @@ K BreakingAway_family
 V Breaking Away
 K BreakingAway_variation
 V \u666e\u901aBreaking Away
+S Brown
 S Brown Palace
 S Brown Palace Bonus (3 points)
 K Build a building, play cards, or click on Done
@@ -180,6 +181,9 @@ K Capturing Games
 V \u6355\u6349\u6e38\u620f
 S Card
 S Cards
+S Carnac
+K Carnac_family
+V Carnac
 K Cash/Score
 V \u73b0\u91d1\uff0f\u603b\u5206
 K Chat Room
@@ -220,6 +224,7 @@ K Click Done to decline a draw
 V \u70b9\u51fb\u5b8c\u6210\u62d2\u7edd\u548c\u68cb
 K Click Done to offer a draw
 V \u70b9\u51fb\u5b8c\u6210\u8981\u6c42\u548c\u68cb
+S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V \u70b9\u51fb\u5b8c\u6210\u7ed3\u675f
@@ -228,6 +233,7 @@ K Click on Done to confirm swapping
 V \u70b9\u51fb\u5b8c\u6210\u786e\u8ba4\u5bf9\u5bb6\u5148\u8d70
 K Click on Done to confirm the Exchange
 V \u70b9\u51fb\u5b8c\u6210\u7ed3\u675f\u4ea4\u6362
+S Click on Done to confirm the tip direction
 K Click on Done to confirm this Dance
 V \u70b9\u51fb\u5b8c\u6210\u7ed3\u675f\u8df3\u8dc3
 S Click on Done to confirm this card action
@@ -293,6 +299,10 @@ K Continue merging or click Done
 V \u7ee7\u7eed\u5408\u5e76\u6216\u70b9\u51fb\u5b8c\u6210
 K Cookie-Disco
 V Cookie Disco
+K Cookie-Disco-crawl
+V Cookie Disco + Expansion
+K Cookie-Disco-crawl_variation
+V Cookie Disco + Crawl Cookie expansion
 K Cookie-Disco_variation
 V standard Cookie Disco
 K CookieDisco_family
@@ -323,12 +333,16 @@ S Diagonal Blocks
 S Diagonal Blocks Duo
 K Diagonal Blocks Duo_family
 V Diagonal Blocks Duo
-K Diagonal Blocks Duo_variation
-V Polyomino game for 2 players
 K Diagonal Blocks_family
 V Diagonal Blocks
-K Diagonal Blocks_variation
-V Polyomino game for 4 players
+K Diagonal-Blocks
+V Diagonal Blocks
+K Diagonal-Blocks-Duo
+V Diagonal Blocks Duo
+K Diagonal-Blocks-Duo_variation
+V Polyomino game for 2 players
+K Diagonal-Blocks_variation
+V Polyomino game for 3-4 players
 S Dice
 K Dipole
 V Dipole (\u539f\u59cb)
@@ -432,6 +446,7 @@ K Final Scores:
 V \u6700\u540e\u5206\u6570:
 K Finished Capturing, Click Done
 V \u7ed3\u675f\u8fdb\u653b\uff0c\u70b9\u51fb\u5b8c\u6210
+S Fire!
 K Flagship can not capture
 V \u65d7\u8230\u4e0d\u80fd\u53c2\u4e0e\u6355\u6349
 K Flagship can participate in captures
@@ -498,6 +513,7 @@ K Gounki_family
 V Gounki
 K Gounki_variation
 V standard Gounki
+S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -563,7 +579,24 @@ K Jul #1#2#3
 V \u4e03\u6708#1\u53f7, #2:#3 GMT
 K Jun #1#2#3
 V \u516d\u6708#1\u53f7, #2:#3 GMT
+S Kamisado
+K Kamisado_family
+V Kamisado
+K Kamisado_variation
+V Kamisado
 S Keep all three types of chip visible
+K Khet-classic
+V Khet 2.0 - Classic
+K Khet-classic_variation
+V Khet 2.0 with Classic starting position
+K Khet-ihmotep
+V Khet 2.0 - Ihmotep
+K Khet-ihmotep_variation
+V Khet 2.0 with Ihmotep starting position
+K Khet_family
+V Khet
+K Khet_variation
+V Khet
 K Knock 5 of your opponent's dice into the gutter
 V \u628a\u5bf9\u624b\u76845\u4e2a\u8272\u5b50\u649e\u8fdb\u68cb\u76d8\u8fb9\u7684\u6c9f\u6e20\u91cc
 S Knockabout
@@ -682,9 +715,12 @@ K Move a Man
 V \u79fb\u52a8\u4e00\u4e2a\u4eba
 K Move a Man up to level 3
 V \u628a\u4e00\u4e2a\u4eba\u79fb\u5230\u4e09\u5c42\u5854\u4e0a
+S Move a Planet
 K Move a Rabbit to the last row
 V \u628a\u4e00\u4e2a\u5154\u5b50\u79fb\u5230\u6700\u540e\u4e00\u6392
 S Move a Stack or Start deploying at Stack
+K Move a Tower
+V Move any Tower
 K Move a ball or change a Ring
 V \u68cb\u5b50\u9009\u62e9\u7403\u578b\u6216\u73af\u5f62
 K Move a piece
@@ -709,6 +745,7 @@ V \u79fb\u52a8\u4e00\u8258\u8239\u5230\u68cb\u76d8\u4e0a
 K Move a soldier, or fire a cannon
 V \u79fb\u52a8\u4e00\u4e2a\u58eb\u5175\uff0c\u6216\u5f00\u70ae
 S Move a stack, or add a reserve piece
+S Move a tower to your opponent's home row
 K Move a volcano cap
 V \u79fb\u52a8\u4e00\u4e2a\u706b\u5c71\u5e3d
 K Move one ship
@@ -722,6 +759,7 @@ S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
 V Cost 2 camels + 2 gold.
+S Move your #1 tower
 K Move your runners to the opposite side
 V \u628a\u4f60\u6240\u6709\u7684\u68cb\u5b50\u8d70\u5230\u5bf9\u9762
 K Move, Split or Merge a stack
@@ -737,6 +775,7 @@ K Mutton_family
 V Mutton
 K Mutton_variation
 V \u666e\u901aMutton
+S N-in-a-row Games
 K News
 V \u65b0\u95fb
 K No Challenges
@@ -773,6 +812,7 @@ K Only the flagship can occupy the center square
 V \u53ea\u6709\u65d7\u8230\u624d\u53ef\u4ee5\u5360\u9886\u4e2d\u5fc3\u65b9\u683c
 K Options
 V \u9009\u9879
+S Orange
 S Orange Palace
 S Orange Palace Bonus (4 points)
 S Palago
@@ -783,6 +823,8 @@ V \u666e\u901a\u7684Palago
 S Pan-Kai
 K Pan-Kai_family
 V Pan-Kai
+K Pan-Kai_variation
+V Pentamino game for 2 players
 K Pass
 V \u4e0d\u51fa
 S Pay Camel
@@ -798,6 +840,7 @@ K Pick the stack to move
 V \u9009\u62e9\u79fb\u52a8\u68cb\u6808
 K Pick up and Continue your move
 V \u9009\u62e9\u68cb\u5b50\u7ee7\u7eed\u6e38\u620f
+S Pink
 S Place #1 cubes in Bag neighborhood
 S Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
 S Place #1 cubes in Barrel neighborhood
@@ -812,6 +855,7 @@ K Place a Frog on the board
 V \u653e\u4e00\u4e2a\u9752\u86d9\u5728\u68cb\u76d8\u4e0a
 K Place a GIPF piece on a starting point
 V \u5728\u8d77\u59cb\u70b9\u653e\u4e00\u4e2aGIPF\u68cb\u5b50
+S Place a Menhir on the board
 K Place a Ring on the board
 V \u653e\u4e00\u4e2a\u73af\u5728\u68cb\u76d8\u4e0a
 S Place a bird on an empty cell
@@ -835,6 +879,7 @@ K Place a piece on the board, or Exchange an off-board piece for a new tile
 V \u653e\u4e00\u4e2a\u68cb\u5728\u68cb\u76d8\u4e0a, \u6216\u7528\u4e00\u4e2a\u516d\u8fb9\u5f62\u6362\u56de\u68cb\u76d8\u5916\u7684\u4e00\u4e2a\u68cb\u5b50
 K Place a piece on the board, or move a piece already on the board
 V \u653e\u4e00\u4e2a\u65b0\u68cb\u5b50\uff0c\u6216\u8005\u79fb\u52a8\u4e00\u4e2a\u68cb\u76d8\u4e0a\u7684\u68cb\u5b50
+S Place a piece on the board, or swap colors with your opponent
 K Place a ring on the board
 V \u653e\u4e00\u4e2a\u73af\u5728\u68cb\u76d8\u4e0a
 S Place a roamer on the board
@@ -928,6 +973,7 @@ K Punct_family
 V Punct
 K Punct_variation
 V \u666e\u901aPunct
+S Purple
 S Quinamid
 K Quinamid_family
 V Quinamid
@@ -1110,6 +1156,11 @@ S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
+S Syzygy
+K Syzygy_family
+V Syzygy
+K Syzygy_variation
+V Standard Syzygy
 K TBA1_variation
 V game to be announced
 K TBA2_variation
@@ -1173,6 +1224,7 @@ K Time is
 V \u65f6\u95f4\uff1a
 K Timeout in 1 minute.
 V \u4e00\u5206\u949f\u540e\u4f11\u606f
+S Tip the last placed Menhir, or pass.
 S Total
 K Tournament Game
 V \u7ade\u6280\u6e38\u620f
@@ -1239,6 +1291,8 @@ V \u666e\u901aTzaar
 S Universe
 K Universe_family
 V Universe
+K Universe_variation
+V Pentamino game for 3-4 players
 S Unranked
 K Unranked Room
 V \u4e0d\u8bb0\u5206\u623f\u95f4
@@ -1312,6 +1366,7 @@ K Xiangqi_family
 V \u8c61\u68cb
 K Xiangqi_variation
 V \u666e\u901a\u8c61\u68cb
+S Yellow
 S Yellow Dome
 K Yes, I will fund the loan
 V \u662f\u7684, \u6211\u613f\u610f\u8d37\u6b3e\u7ed9\u4ed6
@@ -1371,10 +1426,23 @@ V \u663e\u793a\u65b0\u73a9\u5bb6
 K automute
 V #1\u88ab\u81ea\u52a8\u9759\u97f3
 S bid and win the most prize value
+S blast your opponent's pharoh
 K build an ideal city
 V \u5efa\u7acb\u4e00\u4e2a\u7406\u60f3\u7684\u57ce\u5e02
 K capture all of one opponentr's color
 V \u6355\u83b7\u4e00\u4e2a\u5bf9\u624b\u7684\u6240\u6709\u989c\u8272\u7684\u68cb\u5b50
+K carnac_10x7
+V Carnac - Medium
+K carnac_10x7_variation
+V Carnac with a medium board
+K carnac_14x9
+V Carnac - Large
+K carnac_14x9_variation
+V Carnac with a large board
+K carnac_8x5
+V Carnac - Small
+K carnac_8x5_variation
+V Carnac with a small board
 K center square is not special
 V \u4efb\u4f55\u68cb\u5b50\u90fd\u53ef\u4ee5\u5360\u9886\u4e2d\u5fc3\u65b9\u683c
 K click Done to finish this Auction
@@ -1506,4 +1574,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-N 846
+N 890

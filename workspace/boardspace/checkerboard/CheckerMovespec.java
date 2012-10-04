@@ -31,10 +31,14 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
     int to_row; // for from-to moves, the destination row
     int state;	// the state of the move before state, for UNDO
     
-    public CheckerMovespec()
+    public CheckerMovespec() // default constructor
     {
-    } // default constructor
-
+    }
+    public CheckerMovespec(int opc, int pl)	// constructor for simple moves
+    {
+    	player = pl;
+    	op = opc;
+    }
     /* constructor */
     public CheckerMovespec(String str, int p)
     {

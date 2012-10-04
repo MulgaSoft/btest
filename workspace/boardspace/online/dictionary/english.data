@@ -87,6 +87,7 @@ K BreakingAway_family
 V Breaking Away
 K BreakingAway_variation
 V standard Breaking Away
+S Brown
 S Brown Palace
 S Brown Palace Bonus (3 points)
 K Build a building, play cards, or click on Done
@@ -118,6 +119,9 @@ S Capture your opponent's town
 S Capturing Games
 S Card
 S Cards
+S Carnac
+K Carnac_family
+V Carnac
 S Cash/Score
 S Chat Room
 S Che
@@ -143,11 +147,13 @@ V Click Done to end your turn.
 S Click Done to confirm this placement
 S Click Done to decline a draw
 S Click Done to offer a draw
+S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 S Click on Done to complete the capture
 S Click on Done to confirm paying a camel
 S Click on Done to confirm swapping
 S Click on Done to confirm the Exchange
+S Click on Done to confirm the tip direction
 S Click on Done to confirm this Dance
 S Click on Done to confirm this card action
 S Click on Done to confirm your resignation
@@ -188,6 +194,10 @@ S Continue deploying the stack
 S Continue merging or click Done
 K Cookie-Disco
 V Cookie Disco
+K Cookie-Disco-crawl
+V Cookie Disco + Expansion
+K Cookie-Disco-crawl_variation
+V Cookie Disco + Crawl Cookie expansion
 K Cookie-Disco_variation
 V standard Cookie Disco
 K CookieDisco_family
@@ -212,12 +222,16 @@ S Diagonal Blocks
 S Diagonal Blocks Duo
 K Diagonal Blocks Duo_family
 V Diagonal Blocks Duo
-K Diagonal Blocks Duo_variation
-V Polyomino game for 2 players
 K Diagonal Blocks_family
 V Diagonal Blocks
-K Diagonal Blocks_variation
-V Polyomino game for 4 players
+K Diagonal-Blocks
+V Diagonal Blocks
+K Diagonal-Blocks-Duo
+V Diagonal Blocks Duo
+K Diagonal-Blocks-Duo_variation
+V Polyomino game for 2 players
+K Diagonal-Blocks_variation
+V Polyomino game for 3-4 players
 S Dice
 K Dipole
 V Dipole (original)
@@ -297,6 +311,7 @@ K Feb #1#2#3
 V #1 Feb, #2:#3 GMT
 S Final Scores:
 S Finished Capturing, Click Done
+S Fire!
 S Flagship can not capture
 S Flagship can participate in captures
 S Flagship is captured normally
@@ -346,6 +361,7 @@ K Gounki_family
 V Gounki
 K Gounki_variation
 V standard Gounki
+S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
@@ -399,7 +415,24 @@ K Jul #1#2#3
 V #1 Jul, #2:#3 GMT
 K Jun #1#2#3
 V #1 Jun, #2:#3 GMT
+S Kamisado
+K Kamisado_family
+V Kamisado
+K Kamisado_variation
+V Kamisado
 S Keep all three types of chip visible
+K Khet-classic
+V Khet 2.0 - Classic
+K Khet-classic_variation
+V Khet 2.0 with Classic starting position
+K Khet-ihmotep
+V Khet 2.0 - Ihmotep
+K Khet-ihmotep_variation
+V Khet 2.0 with Ihmotep starting position
+K Khet_family
+V Khet
+K Khet_variation
+V Khet
 S Knock 5 of your opponent's dice into the gutter
 S Knockabout
 K Knockabout_family
@@ -483,8 +516,11 @@ S Move a Cyclist
 S Move a Frog
 S Move a Man
 S Move a Man up to level 3
+S Move a Planet
 S Move a Rabbit to the last row
 S Move a Stack or Start deploying at Stack
+K Move a Tower
+V Move any Tower
 S Move a ball or change a Ring
 S Move a piece
 S Move a piece one space
@@ -499,6 +535,7 @@ S Move a ship
 S Move a ship to the board
 S Move a soldier, or fire a cannon
 S Move a stack, or add a reserve piece
+S Move a tower to your opponent's home row
 S Move a volcano cap
 S Move one ship
 S Move stacks around any way you want to
@@ -508,6 +545,7 @@ S Move the supervisor
 K Move the supervisor up to 3 extra spaces when you move the supervisor
 V Move the supervisor up to 3 extra spaces when you move the supervisor.  
 V Cost 2 camels + 2 gold.
+S Move your #1 tower
 S Move your runners to the opposite side
 S Move, Split or Merge a stack
 S Moves are coming in
@@ -520,6 +558,7 @@ K Mutton_family
 V Mutton
 K Mutton_variation
 V standard Mutton
+S N-in-a-row Games
 S News
 K No Challenges
 V No Invitations to Play
@@ -545,6 +584,7 @@ S Offer a price for the goods on the ship
 S Onboard a piece, Move a stack, or Exchange
 S Only the flagship can occupy the center square
 S Options
+S Orange
 S Orange Palace
 S Orange Palace Bonus (4 points)
 S Palago
@@ -555,6 +595,8 @@ V standard Palago
 S Pan-Kai
 K Pan-Kai_family
 V Pan-Kai
+K Pan-Kai_variation
+V Pentamino game for 2 players
 S Pass
 S Pay Camel
 S Pay Gold
@@ -566,6 +608,7 @@ S Pick a ring to place a chip and move
 S Pick the first cube to send to the caravan
 S Pick the stack to move
 S Pick up and Continue your move
+S Pink
 S Place #1 cubes in Bag neighborhood
 S Place #1 cubes in Bag neighborhood, take a card, or move the supervisor #2 spaces
 S Place #1 cubes in Barrel neighborhood
@@ -577,6 +620,7 @@ S Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 sp
 S Place a Chip, or a Jewel, or a chip from the Store
 S Place a Frog on the board
 S Place a GIPF piece on a starting point
+S Place a Menhir on the board
 S Place a Ring on the board
 S Place a bird on an empty cell
 S Place a bird on an empty cell, or designate a bird to fly
@@ -592,6 +636,7 @@ S Place a marker on any empty cell, or Swap Colors
 S Place a piece on the board
 S Place a piece on the board, or Exchange an off-board piece for a new tile
 S Place a piece on the board, or move a piece already on the board
+S Place a piece on the board, or swap colors with your opponent
 S Place a ring on the board
 S Place a roamer on the board
 S Place a second piece on the board
@@ -652,6 +697,7 @@ K Punct_family
 V P\u00fcnct
 K Punct_variation
 V standard P\u00fcnct
+S Purple
 S Quinamid
 K Quinamid_family
 V Quinamid
@@ -783,6 +829,11 @@ S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
+S Syzygy
+K Syzygy_family
+V Syzygy
+K Syzygy_variation
+V Standard Syzygy
 K TBA1_variation
 V game to be announced
 K TBA2_variation
@@ -833,6 +884,7 @@ S Tile Pattern Games
 S Tile Size
 S Time is 
 S Timeout in 1 minute.
+S Tip the last placed Menhir, or pass.
 S Total
 S Tournament Game
 S Tower
@@ -896,6 +948,8 @@ V standard Tzaar
 S Universe
 K Universe_family
 V Universe
+K Universe_variation
+V Pentamino game for 3-4 players
 S Unranked
 S Unranked Room
 S Unsold Warehouses
@@ -954,6 +1008,7 @@ K Xiangqi_family
 V Xiangqi
 K Xiangqi_variation
 V standard Xiangqi
+S Yellow
 S Yellow Dome
 S Yes, I will fund the loan
 S Yinsh
@@ -1003,8 +1058,21 @@ V Announce New Players
 K automute
 V #1 has been automatically muted
 S bid and win the most prize value
+S blast your opponent's pharoh
 S build an ideal city
 S capture all of one opponentr's color
+K carnac_10x7
+V Carnac - Medium
+K carnac_10x7_variation
+V Carnac with a medium board
+K carnac_14x9
+V Carnac - Large
+K carnac_14x9_variation
+V Carnac with a large board
+K carnac_8x5
+V Carnac - Small
+K carnac_8x5_variation
+V Carnac with a small board
 S center square is not special
 S click Done to finish this Auction
 S connect all your birds into one flock
@@ -1100,4 +1168,4 @@ K welcome
 V Welcome to the BoardSpace Lobby, version #1
 S you may increase your bid
 S your name
-N 846
+N 890

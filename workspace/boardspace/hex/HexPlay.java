@@ -1,5 +1,7 @@
 package hex;
 
+import java.util.Random;
+
 import online.game.*;
 import online.common.*;
 import online.search.*;
@@ -19,29 +21,29 @@ import online.search.*;
  * <p>
  * debugging aids:
  * <p>
- * <li>{@link List_Of_Legal_Moves} should produce only legal moves, and should
+ * <li>{@link #List_Of_Legal_Moves} should produce only legal moves, and should
  * by default produce all legal moves, but if your board class has some consistency
  * checking, errors constructing the move list might be detected. 
  * 
  * <li>Turn on the "start evaluator" action, and experiment with board positions
  * in puzzle mode.  Each new position will print the current evaluation.
  * 
- * <li>when the robot is stopped at a breakpoint (for example in {@link Static_Evaluate_Position}
+ * <li>when the robot is stopped at a breakpoint (for example in {@link #Static_Evaluate_Position}
  * turn on the "show alternate board" option to visualize the board position.  It's usually
  * not a good idea to leave the option on when the robot is running because there will be
  * two threads using the data simultaneously, which is not expected.
  *
  * <li>turn on the save_digest and check_duplicate_digest flags.
  *
- ** <li>set {@link verbose} to 1 or 2.  These produce relatively small amounts
+ ** <li>set {@link #verbose} to 1 or 2.  These produce relatively small amounts
  * of output that can be helpful understanding the progress of the search
  *
- ** <li>set a breakpoint at the exit of {@link DoFullMove} and example the
+ ** <li>set a breakpoint at the exit of {@link #DoFullMove} and example the
  * top_level_moves variable of the search driver.  It contains a lot of information
  * about the search variations that were actually examined.
  *
- * <li>for a small search (shallow depth, few nodes) turn on {@link SAVE_TREE}
- * and set a breakpoint at the exit of {@link DoFullMove}
+ * <li>for a small search (shallow depth, few nodes) turn on {@link #SAVE_TREE}
+ * and set a breakpoint at the exit of {@link #DoFullMove}
  * @author ddyer
  *
  */
@@ -51,7 +53,7 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
 	// this is an internal value used to affect the search in several ways.  Normal "value of position" results
 	// should be well below this in magnitude.  Searches are normally called off if the value of a position exceeds
 	// this, indicating "we won".   It should be at least 2x any non-winning value the evaluator normally produces.
-	// but it's exact value and scale are unimportant.  The main thing is to have a conventient range of values
+	// but it's exact value and scale are unimportant.  The main thing is to have a convenient range of values
 	// for the evaluator to work with.
     static final double VALUE_OF_WIN = 10000.0;
     boolean UCT_WIN_LOSS = false;
@@ -293,7 +295,7 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
         {
         default: G.Error("Not expecting strategy "+stragegy);
         case DUMBOT_LEVEL: MONTEBOT = DEPLOY_MONTEBOT; break;
-        case SMARTBOT_LEVEL: MONTEBOT=false; break;
+        case SMARTBOT_LEVEL: MONTEBOT=DEPLOY_MONTEBOT; break;
         case BESTBOT_LEVEL: MONTEBOT = false; break;
         case MONTEBOT_LEVEL: MONTEBOT=true; EXP_MONTEBOT = true; break;
         }
@@ -383,6 +385,17 @@ public void PrepareToMove(int playerIndex)
         return (null);
     }
 
+ /**
+  * get a random move by selecting a random one from the full list.  For games like
+  * hex, which have trivial move generators, this is "only" a factor of 2 or so improvement
+  * in the playout rate.  For games with more complex move generators, it can by much more.
+  * Diagonal-Blocks sped up by 10x 
+  * 
+  */
+ public commonMove Get_Random_Move(Random rand)
+ {	return(board.Get_Random_Hex_Move(rand));
+ }
+ 
  // this is the monte carlo robot, which for hex is much better then the alpha-beta robot
  // for the monte carlo bot, blazing speed of playouts is all that matters, as there is no
  // evaluator other than winning a game.
@@ -396,20 +409,35 @@ public void PrepareToMove(int playerIndex)
         }
         else 
         {
+         	// this is a test for the randomness of the random move selection.
+         	// "true" tests the standard slow algorithm
+         	// "false" tests the accelerated random move selection
+         	// the target value is 5 (5% of distributions outside the 5% probability range).
+         	// this can't be left in the production applet because the actual chi-squared test
+         	// isn't part of the standard kit.
+        	// also, in order for this to work, the MoveSpec class has to implement equals and hashCode
+         	//RandomMoveQA qa = new RandomMoveQA();
+         	//qa.runTest(this, new Random(),100,false);
+         	//qa.report();
+         	
         // it's important that the robot randomize the first few moves a little bit.
         double randomn = (RANDOMIZE && (board.moveNumber <= 6)) ? 0.1/board.moveNumber : 0.0;
         monte_search_state = new UCTMoveSearcher(this);
-        monte_search_state.save_top_digest = false;	// always on as a background check
+        monte_search_state.save_top_digest = true;	// always on as a background check
         monte_search_state.save_digest=false;	// debugging only
         monte_search_state.win_randomization = randomn;		// a little bit of jitter because the values tend to be very close
-        monte_search_state.timePerMove = 10;		// 20 seconds per move
+        monte_search_state.timePerMove = 15;		// 20 seconds per move
         monte_search_state.verbose = 2;
         monte_search_state.alpha = 0.5;
         monte_search_state.sort_moves = false;
         monte_search_state.only_child_optimization = true;
-        monte_search_state.deadChildOptimization = true;
-        monte_search_state.simulationsPerNode = EXP_MONTEBOT ? 1 : 1;
+        monte_search_state.dead_child_optimization = true;
+        monte_search_state.simulationsPerNode = 1;
+        monte_search_state.best_response_heuristic = true;
+        monte_search_state.node_expansion_rate = 1.0;
+        monte_search_state.randomize_uct_children = true;     
         move = monte_search_state.getBestMonteMove();
+        //monte_search_state.random_moves_per_second = 120000;
         }
  		}
       finally { ; }

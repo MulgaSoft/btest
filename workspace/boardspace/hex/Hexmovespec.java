@@ -3,6 +3,7 @@ package hex;
 import online.common.*;
 
 import java.util.*;
+
 import online.game.*;
 
 public class Hexmovespec extends commonMove implements HexConstants
@@ -21,6 +22,18 @@ public class Hexmovespec extends commonMove implements HexConstants
         D.putInt("B", Black_Chip_Pool);
 		D.putInt("Swap",MOVE_SWAP);
   }
+    //
+    // adding these makes the move specs use Same_Move_P instead of == in hash tables
+    //needed when doing chi square testing of random move generation, but possibly
+    //hazardous to keep in generally.
+    //public int hashCode()
+    //{
+    //	return(to_row<<12+to_col<<18+player<<24+op<<25);
+    //}
+    //public boolean equals(Object a)
+    //{
+    //	return( (a instanceof commonMove) && Same_Move_P((commonMove)a)); 
+    //}
     //
     // variables to identify the move
     int source; // where from/to

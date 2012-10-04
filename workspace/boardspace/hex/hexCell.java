@@ -44,7 +44,13 @@ public class hexCell extends chipCell<hexCell,hexChip> implements HexConstants
 		// copy any variables that need copying
 		super.copyFrom(ot);
 	}
-	
+	/**
+	 * reset back to the same state as when newly created.  This is used
+	 * when reinitializing a board.
+	 */
+	public void reInit()
+	{	super.reInit();
+	}
 	// constructor a cell not on the board, with a chip.  Used to construct the pool chips
 	public hexCell(hexChip cont)
 	{	super();
@@ -64,4 +70,6 @@ public class hexCell extends chipCell<hexCell,hexChip> implements HexConstants
 	 * roles, or when the diest of contents is complex.
 	 */
 	public long Digest(Random r) { return(super.Digest(r)); }
+	
+	
 }

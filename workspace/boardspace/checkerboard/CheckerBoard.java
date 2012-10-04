@@ -89,7 +89,6 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         G.Assert((board_state == from_b.board_state),"board_state matches");
         G.Assert((moveNumber == from_b.moveNumber),"moveNumber matches");
         G.Assert((resign_planned == from_b.resign_planned),"resign_planned matches");
-        G.Assert(board_state==from_b.board_state, "board_state matches");
         // this is a good overall check that all the copy/check/digest methods
         // are in sync, although if this does fail you'll no doubt be at a loss
         // to explain why.
@@ -173,11 +172,10 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         pickedObject = from_b.pickedObject;	
         getLocalCopy(pickedSourceStack,from_b.pickedSourceStack);
         getLocalCopy(droppedDestStack,from_b.droppedDestStack);
-		for(int i=0;i<2;i++) 
-		{  win[i] = from_b.win[i];
-		   playerColor[i]=from_b.playerColor[i];
-		   chips_on_board[i]=from_b.chips_on_board[i];
-		}
+        G.copy(win,from_b.win);
+        G.copy(playerColor,from_b.playerColor);
+        G.copy(chips_on_board,from_b.chips_on_board);
+
 		for(CheckerCell dest=allCells,src=from_board.allCells;
 			dest!=null;
 			dest=dest.next,src=src.next)
@@ -226,11 +224,9 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 		pickedSourceStack.clear();
 		droppedDestStack.clear();
 		pickedObject = null;
-	    for(int i=FIRST_PLAYER_INDEX;i<=SECOND_PLAYER_INDEX; i++)
-	    {
-	    chips_on_board[i] = 0;
-	    }
         allCells.setDigestChain(r);
+        G.setValue(win,false);
+        G.setValue(chips_on_board,0);
         win[0] = win[1] = false;
         resign_planned = false;
         moveNumber = 1;

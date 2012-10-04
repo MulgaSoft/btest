@@ -57,6 +57,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 	public void SetDrawState() {G.Error("not expected"); };	
 	OStack<hexCell>animationStack = new OStack<hexCell>(hexCell.class);
     private int chips_on_board = 0;			// number of chips currently on the board
+    private int fullBoard = 0;
     private int sweep_counter=0;			// used when scanning for blobs
     private int directionWhiteHome = -1;
     private int directionBlackHome = -1;
@@ -69,6 +70,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     private hexCell whiteChipPool = null;
     private hexCell pickedSource = null; 
     private hexCell droppedDest = null;
+    private OStack<hexCell>emptyCells=new OStack<hexCell>(hexCell.class);
     private int resetState = PUZZLE_STATE; 
     public Object lastDroppedObject = null;	// for image adjustment logic
 
@@ -146,7 +148,9 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 		playerChip[0]=hexChip.White;
 		playerChip[1]=hexChip.Black;
         // set the initial contents of the board to all empty cells
-		for(hexCell c = allCells; c!=null; c=c.next) { c.chip=null; }
+		emptyCells.clear();
+		for(hexCell c = allCells; c!=null; c=c.next) { c.chip=null; emptyCells.push(c); }
+		fullBoard = emptyCells.size();
     }
     public void sameboard(BoardProtocol f) { sameboard((HexGameBoard)f); }
 
@@ -243,6 +247,11 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         super.clone(from_b);
 
         chips_on_board = from_b.chips_on_board;
+        fullBoard = from_b.fullBoard;
+        
+        emptyCells.clear();
+        for(int sz=from_b.emptyCells.size(),i=0; i<sz; i++) { emptyCells.push(getCell(from_b.emptyCells.elementAt(i))); }
+        
         whoseTurn = from_b.whoseTurn;
         board_state = from_b.board_state;
         moveNumber = from_b.moveNumber;
@@ -252,11 +261,10 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         resetState = from_b.resetState;
         lastPicked = null;
 
-		for(int i=0;i<2;i++) 
-		{  win[i] = from_b.win[i];
-		   playerColor[i]=from_b.playerColor[i];
-		   playerChip[i]=from_b.playerChip[i];
-		}
+        G.copy(win,from_b.win);
+        G.copy(playerColor,from_b.playerColor);
+        G.copy(playerChip,from_b.playerChip);
+        
         resign_planned = from_b.resign_planned;
 
         if(debug) { sameboard(from_b); }
@@ -268,7 +276,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 
        Init_Standard(gtype.toLowerCase());
         animationStack.clear();
-        win[0] = win[1] = false;
+        G.setValue(win,false);
         resign_planned = false;
         swapped = false;
         moveNumber = 1;
@@ -453,11 +461,11 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     
     // set the contents of a cell, and maintian the books
     public hexChip SetBoard(hexCell c,hexChip ch)
-    {	hexChip old = c.topChip();
+    {	hexChip old = c.chip;
     	if(c.onBoard)
     	{
-    	if(old!=null) { chips_on_board--; }
-     	if(ch!=null) { chips_on_board++; }
+    	if(old!=null) { chips_on_board--; emptyCells.push(c); }
+     	if(ch!=null) { chips_on_board++; emptyCells.remove(c); }
     	}
        	c.chip = ch;
     	return(old);
@@ -561,6 +569,10 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         	return(whiteChipPool);
         } 	
     }
+    private hexCell getCell(hexCell c)
+    {
+    	return(getCell(c.rackLocation,c.col,c.row));
+    }
 	// pick something up.  Note that when the something is the board,
     // the board location really becomes empty, and we depend on unPickObject
     // to replace the original contents if the pick is cancelled.
@@ -621,7 +633,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         }
     }
     private void setNextStateAfterDone()
-    {
+    {	G.Assert(chips_on_board+emptyCells.size()==fullBoard,"cells missing");
        	switch(board_state)
     	{
     	default: G.Error("Not expecting state "+board_state);
@@ -932,7 +944,13 @@ void doSwap()
         	setWhoseTurn(m.player);
         }
  }
-    
+ public commonMove Get_Random_Hex_Move(Random rand)
+ {		int sz = emptyCells.size();
+ 		int off = G.nextInt(rand,sz);
+ 		hexCell empty = emptyCells.elementAt(off);
+ 		G.Assert(empty.chip==null,"isn't empty");
+ 		return(new Hexmovespec(MOVE_DROPB,empty.col,empty.row,playerColor[whoseTurn],whoseTurn));
+ }
  OStack<commonMove> GetListOfMoves()
  {	OStack<commonMove> all = new OStack<commonMove>(commonMove.class);
  	if(board_state==PLAY_OR_SWAP_STATE)

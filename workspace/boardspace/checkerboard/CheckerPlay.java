@@ -1,5 +1,8 @@
 package checkerboard;
 
+
+import java.util.Random;
+
 import online.game.*;
 import online.common.*;
 import online.search.*;
@@ -17,6 +20,8 @@ public class CheckerPlay extends commonRobot implements Runnable, CheckerConstan
     RobotProtocol
 {   boolean SAVE_TREE = false;				// debug flag for the search driver
     int VERBOSE = 1;						// how much to print from search
+    boolean UCT_WIN_LOSS = true;			// if true, score montebot strictly on win/loss
+    boolean MONTEBOT = false;
     boolean KILLER = false;					// probably ok for all games with a 1-part move
     static final int DUMBOT_DEPTH = 3;
     static final int GOODBOT_DEPTH = 4;
@@ -184,7 +189,9 @@ public class CheckerPlay extends commonRobot implements Runnable, CheckerConstan
 public void Search_Break(String msg)
 {	super.Search_Break(msg);
 }
- public commonMove DoFullMove()
+
+
+ public commonMove doAlphaBetaFullMove()
     {
 	 CheckerMovespec move = null;
 
@@ -243,7 +250,88 @@ public void Search_Break(String msg)
         return (null);
     }
 
+ /**
+  * get a random move by selecting a random one from the full list.  For games like
+  * hex, which have trivial move generators, this is "only" a factor of 2 or so improvement
+  * in the playout rate.  For games with more complex move generators, it can by much more.
+  * Diagonal-Blocks sped up by 10x 
+  * 
+  */
+ public commonMove Get_Random_Move(Random rand)
+ {	//return(board.Get_Random_Checker_Move(rand));
+	 return(super.Get_Random_Move(rand));
+ }
+ /**
+  * for UCT search, return the normalized value of the game, with a penalty
+  * for longer games so we try to win in as few moves as possible.  Values
+  * must be normalized to -1.0 to 1.0
+  */
+ public double NormalizedScore(commonMove lastMove)
+ {	int player = lastMove.player;
+ 	boolean win = board.WinForPlayerNow(player);
+ 	if(win) { return(UCT_WIN_LOSS? 1.0 : 0.8+0.2/boardSearchLevel); }
+ 	boolean win2 = board.WinForPlayerNow(nextPlayer[player]);
+ 	if(win2) { return(- (UCT_WIN_LOSS?1.0:(0.8+0.2/boardSearchLevel))); }
+ 	return(0);
+ }
 
-
+ // this is the monte carlo robot, which for hex is much better then the alpha-beta robot
+ // for the monte carlo bot, blazing speed of playouts is all that matters, as there is no
+ // evaluator other than winning a game.
+ public commonMove doMonteCarloFullMove()
+ {	commonMove move = null;
+ 	try {
+       if (board.DoneState())
+        { // avoid problems with gameover by just supplying a done
+            move = new CheckerMovespec(MOVE_DONE, board.whoseTurn);
+        }
+        else 
+        {
+         	// this is a test for the randomness of the random move selection.
+         	// "true" tests the standard slow algorithm
+         	// "false" tests the accelerated random move selection
+         	// the target value is 5 (5% of distributions outside the 5% probability range).
+         	// this can't be left in the production applet because the actual chi-squared test
+         	// isn't part of the standard kit.
+        	// also, in order for this to work, the MoveSpec class has to implement equals and hashCode
+         	//RandomMoveQA qa = new RandomMoveQA();
+         	//qa.runTest(this, new Random(),100,false);
+         	//qa.report();
+         	
+        // it's important that the robot randomize the first few moves a little bit.
+        double randomn = (RANDOMIZE && (board.moveNumber <= 6)) ? 0.1/board.moveNumber : 0.0;
+        monte_search_state = new UCTMoveSearcher(this);
+        monte_search_state.save_top_digest = true;	// always on as a background check
+        monte_search_state.save_digest=false;	// debugging only
+        monte_search_state.win_randomization = randomn;		// a little bit of jitter because the values tend to be very close
+        monte_search_state.timePerMove = 15;		// 20 seconds per move
+        monte_search_state.verbose = 2;
+        monte_search_state.alpha = 0.5;
+        monte_search_state.sort_moves = false;
+        monte_search_state.only_child_optimization = true;
+        monte_search_state.dead_child_optimization = true;
+        monte_search_state.simulationsPerNode = 1;
+        monte_search_state.best_response_heuristic = true;
+        monte_search_state.node_expansion_rate = 1.0;
+        monte_search_state.randomize_uct_children = true;     
+        //monte_search_state.random_moves_per_second = 120000;
+        move = monte_search_state.getBestMonteMove();
+        }
+ 		}
+      finally { ; }
+      if(move==null) { continuous = false; }
+     return(move);
+ }
+ public commonMove DoFullMove()
+ {
+	 if(MONTEBOT)
+	 {
+		 return(doMonteCarloFullMove());
+	 }
+	 else
+	 {
+		return(doAlphaBetaFullMove()); 
+	 }
+ }
 
  }
