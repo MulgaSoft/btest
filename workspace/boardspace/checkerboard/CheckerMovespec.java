@@ -258,8 +258,8 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
     }
 
     /* standard java method, so we can read moves easily while debugging */
-    public String toString()
-    {
-        return ("P" + player + "[" + moveString() + "]");
-    }
+    //public String toString()
+    //{
+    //    return ("P" + player + "[" + moveString() + "]");
+    //}
 }

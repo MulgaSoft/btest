@@ -75,14 +75,11 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     {
     	super.sameboard(from_b);	// calls sameCell for each cell
     	
-        for (int i = 0; i < win.length; i++)
-        {
-            G.Assert(win[i] == from_b.win[i], "Win[] matches");
-			G.Assert(playerColor[i]==from_b.playerColor[i],"Player colors match");
-			G.Assert(chips_on_board[i]==from_b.chips_on_board[i],"chip count matches");
-        }
 
-        G.Assert(sameCells(pickedSourceStack,from_b.pickedSourceStack),"pickedSourceStack mismatch");
+       	G.Assert(G.sameArrayContents(win,from_b.win),"win array contents match");
+       	G.Assert(G.sameArrayContents(playerColor,from_b.playerColor),"playerColor contents match");
+       	G.Assert(G.sameArrayContents(chips_on_board,from_b.chips_on_board),"chips_on_board contents match");
+       	G.Assert(sameCells(pickedSourceStack,from_b.pickedSourceStack),"pickedSourceStack mismatch");
         G.Assert(sameCells(droppedDestStack,from_b.droppedDestStack),"droppedDestStack mismatch");
         G.Assert(pickedObject==from_b.pickedObject,"pickedObject doesn't match");
         G.Assert((whoseTurn == from_b.whoseTurn),"whoseTurn matches");
@@ -227,7 +224,6 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         allCells.setDigestChain(r);
         G.setValue(win,false);
         G.setValue(chips_on_board,0);
-        win[0] = win[1] = false;
         resign_planned = false;
         moveNumber = 1;
 

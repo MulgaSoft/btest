@@ -491,7 +491,7 @@ public class CheckerGameViewer extends commonCanvas
         {	// draw a highlight rectangle here, but defer drawing an arrow until later, after the moving chip is drawn
       		highlight.arrow =(getMovingObject()>=0) 
       			? StockArt.DownArrow 
-      			: hitCell.height()>1?StockArt.UpArrow:null;
+      			: hitCell.topChip()!=null?StockArt.UpArrow:null;
       		highlight.awidth = SQUARESIZE/2;
         	G.frameRect(gc,Color.red,hitX-CELLSIZE,hitY-CELLSIZE-((hitCell.topChip()==null)?0:perspective_offset),CELLSIZE*2,CELLSIZE*2);
         }
