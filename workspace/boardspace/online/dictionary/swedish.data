@@ -515,6 +515,11 @@ S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
+S Gyges
+K Gyges_family
+V Gyges
+K Gyges_variation
+V standard Gyges
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -556,6 +561,7 @@ K Illegal due to repetition, try something else or resign
 V Otill\u00e5tet p.g.a. dragupprepning
 K Illegal move due to repetition - try something else
 V \u00c5till\u00e5tet drag p.g.a. dragupprepning
+S Immobilize your opponent
 S Immobilize your opponent's roamers
 K Invite
 V Bjud in #1 till rum #2
@@ -583,6 +589,7 @@ V Kamisado
 K Kamisado_variation
 V Kamisado
 S Keep all three types of chip visible
+S Khet
 K Khet-classic
 V Khet 2.0 - Classic
 K Khet-classic_variation
@@ -684,6 +691,7 @@ K Members
 V Medlemmar
 K Memory is low
 V Brist p\u00e5 minne
+S Menhir Size
 K Merge this stack, or click Done
 V Blanda den h\u00e4r h\u00f6gen, eller klicka p\u00e5 Klar
 K Message:
@@ -744,6 +752,7 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V Flytta ett Volcanolock
+S Move one of your pieces
 K Move one ship
 V Flytta ett skepp
 K Move stacks around any way you want to
@@ -1195,6 +1204,13 @@ K Take your first action
 V G\u00f6r ditt f\u00f6rsta drag
 K Take your second action
 V G\u00f6r ditt andra drag
+S Tako Judo
+K Tako Judo_family
+V Tako Judo
+K TakoJudo
+V Tako Judo
+K TakoJudo_variation
+V standard Tako Judo
 K Tamsk_variation
 V Tamsk standard
 K The game is a draw
@@ -1459,6 +1475,7 @@ K fontfamily
 V sansserif
 K form a larger triangle with your color at the tips
 V Bygg en st\u00f6rre triangel i din f\u00e4rg, mitten kan vara av motst\u00e5ndarens f\u00e4rg
+S form the most groups of 3 or more adjacent squares your color
 K fund a loan from a player or the bank
 V finansiera ett l\u00e5n fr\u00e5n en spelare eller bank
 K game selector
@@ -1569,4 +1586,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 890
+N 902

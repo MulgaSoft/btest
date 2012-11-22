@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.*;
 import online.game.*;
+import static hex.Hexmovespec.*;
 
 /**
  * HexGameBoard knows all about the game of Hex, which is played
@@ -164,19 +165,16 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     {
         super.sameboard(from_b); // hexboard compares the cells of the board using cell.sameCell
         
-        for (int i = 0; i < win.length; i++)
-        {
-            G.Assert(win[i] == from_b.win[i], "Win[] matches");
-			G.Assert(playerColor[i]==from_b.playerColor[i],"Player colors match");
-			G.Assert(playerChip[i]==from_b.playerChip[i],"Player chars must match");
-        }
-        G.Assert(pickedObject==from_b.pickedObject, "picked Object matches");
-        // here, check any other state of the board to see if
-        G.Assert((whoseTurn == from_b.whoseTurn) &&
-            (board_state == from_b.board_state) &&
-            (moveNumber == from_b.moveNumber) &&
-            (chips_on_board == from_b.chips_on_board) &&
-            (resign_planned == from_b.resign_planned), "Boards not the same");
+        G.Assert(G.sameArrayContents(win,from_b.win),"win mismatch");
+        G.Assert(G.sameArrayContents(playerColor,from_b.playerColor),"playerColor mismatch");
+        G.Assert(G.sameArrayContents(playerChip,from_b.playerChip),"playerChip mismatch");
+        G.Assert(pickedObject==from_b.pickedObject, "picked Object mismatch");
+        G.Assert(whoseTurn == from_b.whoseTurn,"whoseTurn mismatch");
+        G.Assert(board_state == from_b.board_state,"board_state mismatch");
+        G.Assert(moveNumber == from_b.moveNumber,"moveNumber mismatch");
+        G.Assert(chips_on_board == from_b.chips_on_board,"chips_on_board mismatch");
+        G.Assert(resign_planned == from_b.resign_planned,"resign_planned mismatch");
+
 
         // this is a good overall check that all the copy/check/digest methods
         // are in sync, although if this does fail you'll no doubt be at a loss
@@ -231,6 +229,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 		// v ^= cell.Digest(r,pickedSource);
 		v ^= chip.Digest(r,playerChip[0]);	// this accounts for the "swap" button
 		v ^= chip.Digest(r,pickedObject);
+		v ^= Digest(r,pickedSource);
 		v ^= r.nextLong()*(board_state*10+whoseTurn+(resign_planned?4:2));
         return (v);
     }
@@ -249,14 +248,13 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         chips_on_board = from_b.chips_on_board;
         fullBoard = from_b.fullBoard;
         
-        emptyCells.clear();
-        for(int sz=from_b.emptyCells.size(),i=0; i<sz; i++) { emptyCells.push(getCell(from_b.emptyCells.elementAt(i))); }
+        getLocalCopy(emptyCells,from_b.emptyCells);
         
         whoseTurn = from_b.whoseTurn;
         board_state = from_b.board_state;
         moveNumber = from_b.moveNumber;
         droppedDest = null;
-        pickedSource = null;
+        pickedSource = getCell(from_b.pickedSource);
         pickedObject = from_b.pickedObject;
         resetState = from_b.resetState;
         lastPicked = null;
@@ -464,7 +462,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     {	hexChip old = c.chip;
     	if(c.onBoard)
     	{
-    	if(old!=null) { chips_on_board--; emptyCells.push(c); }
+    	if(old!=null) { chips_on_board--;emptyCells.push(c); }
      	if(ch!=null) { chips_on_board++; emptyCells.remove(c); }
     	}
        	c.chip = ch;
@@ -498,7 +496,6 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     private void unPickObject()
     {	if(pickedSource!=null) 
     		{ SetBoard(pickedSource,pickedObject);
-    		  droppedDest = pickedSource;
     		  pickedSource = null;
     		}
 		  pickedObject = null;
@@ -569,9 +566,9 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         	return(whiteChipPool);
         } 	
     }
-    private hexCell getCell(hexCell c)
+    public hexCell getCell(hexCell c)
     {
-    	return(getCell(c.rackLocation,c.col,c.row));
+    	return((c==null)?null:getCell(c.rackLocation,c.col,c.row));
     }
 	// pick something up.  Note that when the something is the board,
     // the board location really becomes empty, and we depend on unPickObject
@@ -591,7 +588,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         	{
             lastPicked = pickedObject = c.topChip();
          	lastDroppedObject = droppedDest = null;
-			c.chip = null;
+			SetBoard(c,null);
         	}}
             break;
 
@@ -702,7 +699,6 @@ void doSwap()
     public boolean Execute(commonMove mm,replayMode replay)
     {	Hexmovespec m = (Hexmovespec)mm;
         boolean next_rp = false;
-        
         if(replay!=replayMode.Replay) { animationStack.clear(); }
 
         //G.print("E "+m+" for "+whoseTurn+" "+board_state);
@@ -727,11 +723,15 @@ void doSwap()
 			  case PLAY_OR_SWAP_STATE: acceptPlacement(); break;
 			}
 			{
+			hexChip po = pickedObject;
 			hexCell src = getCell(m.source,m.to_col,m.to_row); 
 			hexCell dest =  getCell(BoardLocation,m.to_col,m.to_row);
 			pickObject(src);
             dropObject(dest);
-            if(replay!=replayMode.Replay) { animationStack.push(animsrc==null?src:animsrc); animationStack.push(dest); }
+            if(replay!=replayMode.Replay && (po==null))
+            	{ animationStack.push(animsrc==null?src:animsrc);
+            	  animationStack.push(dest); 
+            	}
 			}
             setNextStateAfterDrop();
         	}
@@ -787,26 +787,35 @@ void doSwap()
         	switch(board_state)
         	{
         	case PUZZLE_STATE: 
-        		acceptPlacement();
         		unPickObject();
         		break;
         	case CONFIRM_SWAP_STATE:
         		doSwap();
         		// fall through
         	default:
-        		{	hexCell dd = droppedDest;
-        			hexCell ps = pickedSource;
-        			if(pickedObject!=null) { unPickObject(); } 
-        			unDropObject();
+        		{	
+        			hexCell dd = droppedDest;
+            		hexCell ps = pickedSource;
+        			if(pickedObject!=null)
+        				{ unPickObject(); 
+        				  if(ps.onBoard) 
+        				  { droppedDest = ps; 
+        				  	setBoardState(CONFIRM_STATE);
+        				  }
+         				} 
+        			else 
+        			{
+            		unDropObject();  
         			if(pickedObject!=null)
         			{
-        				if(ps==null) { ps = playerCell[pickedObject.chipNumber()]; }
+        				if(ps==null) { ps = pickedSource = playerCell[pickedObject.chipNumber()]; }
         				animationStack.push(dd);
         				animationStack.push(ps);
         			}
         			unPickObject();
+            		setBoardState(resetState);       			
+        			}
         		}
-        		setBoardState(resetState);
         		break;
         	case GAMEOVER_STATE:
         		break;
@@ -825,7 +834,6 @@ void doSwap()
 
         resign_planned = next_rp;
         //System.out.println("Ex "+m+" for "+whoseTurn+" "+board_state);
-
         return (true);
     }
 

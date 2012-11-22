@@ -76,12 +76,7 @@ public interface HexConstants extends OnlineConstants
 	
 	// move commands, actions encoded by movespecs.  Values chosen so these
     // integers won't look quite like all the other integers
-     static final int MOVE_PICK = 204; // pick a chip from a pool
-    static final int MOVE_DROP = 205; // drop a chip
-    static final int MOVE_PICKB = 206; // pick from the board
-    static final int MOVE_DROPB = 207; // drop on the board
- 	static final int MOVE_SWAP = HitSwapButton;	// swap colors (as a move) share the code for the parser's concenience
-	
+ 	
     static final String Hex_SGF = "11"; // sgf game number allocated for hex
     static final String[] HEXGRIDSTYLE = { "1", null, "A" }; // left and bottom numbers
 

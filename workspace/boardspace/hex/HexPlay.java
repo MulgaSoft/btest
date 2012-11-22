@@ -433,6 +433,7 @@ public void PrepareToMove(int playerIndex)
         monte_search_state.only_child_optimization = true;
         monte_search_state.dead_child_optimization = true;
         monte_search_state.simulationsPerNode = 1;
+        monte_search_state.final_depth = 9999;		// note needed for hex which is always finite
         monte_search_state.best_response_heuristic = true;
         monte_search_state.node_expansion_rate = 1.0;
         monte_search_state.randomize_uct_children = true;     

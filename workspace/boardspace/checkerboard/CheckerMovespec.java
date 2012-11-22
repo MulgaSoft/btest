@@ -8,6 +8,13 @@ import java.util.*;
 public class CheckerMovespec extends commonMove implements CheckerConstants
 {
     static exHashtable D = new exHashtable(true);
+    static final int MOVE_PICK = 204; // pick a chip from a pool
+    static final int MOVE_DROP = 205; // drop a chip
+    static final int MOVE_PICKB = 206; // pick from the board
+    static final int MOVE_DROPB = 207; // drop on the board
+    static final int MOVE_RACK_BOARD = 209;	// move from rack to board
+    static final int MOVE_BOARD_BOARD = 210;	// move board to board
+	
 
     static
     {

@@ -443,6 +443,11 @@ S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
+S Gyges
+K Gyges_family
+V Gyges
+K Gyges_variation
+V standard Gyges
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -479,6 +484,7 @@ V Ignorovat chat od #1
 S Illegal - this move would form an illegal pattern of lines
 S Illegal due to repetition, try something else or resign
 S Illegal move due to repetition - try something else
+S Immobilize your opponent
 K Immobilize your opponent's roamers
 V Znehybn\u011bte soupe\u0159ovy pan\u00e1ky
 K Invite
@@ -507,6 +513,7 @@ K Kamisado_variation
 V Kamisado
 K Keep all three types of chip visible
 V Udr\u017ete v\u009aechny t\u0159i typy kamen\u016f viditeln\u00e9
+S Khet
 K Khet-classic
 V Khet 2.0 - Classic
 K Khet-classic_variation
@@ -592,6 +599,7 @@ K Members
 V \u010clenov\u00e9
 K Memory is low
 V Pam\u011b\u0165 je mal\u00e1
+S Menhir Size
 S Merge this stack, or click Done
 K Message:
 V v\u009aem
@@ -637,6 +645,7 @@ S Move a soldier, or fire a cannon
 S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 S Move a volcano cap
+S Move one of your pieces
 S Move one ship
 S Move stacks around any way you want to
 S Move the flipped stack
@@ -1029,6 +1038,13 @@ V P\u0159evz\u00edt hran\u00ed
 S Take a card
 S Take your first action
 S Take your second action
+S Tako Judo
+K Tako Judo_family
+V Tako Judo
+K TakoJudo
+V Tako Judo
+K TakoJudo_variation
+V standard Tako Judo
 K Tamsk_variation
 V standardn\u00ed Tamsk
 K The game is a draw
@@ -1269,6 +1285,7 @@ S expand the board with your color tiles
 K fontfamily
 V sansserif
 S form a larger triangle with your color at the tips
+S form the most groups of 3 or more adjacent squares your color
 S fund a loan from a player or the bank
 K game selector
 V p\u0159ep\u00edna\u010d her
@@ -1368,4 +1385,4 @@ V V\u00edtejte na BoardSpace Lobby, verze #1
 S you may increase your bid
 K your name
 V va\u009ae jm\u00e9no
-N 890
+N 902

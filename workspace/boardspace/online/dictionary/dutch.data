@@ -509,6 +509,11 @@ S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
+S Gyges
+K Gyges_family
+V Gyges
+K Gyges_variation
+V standard Gyges
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -549,6 +554,7 @@ K Illegal due to repetition, try something else or resign
 V Niet legaal wegens herhaling, probeer iets anders of geef op
 K Illegal move due to repetition - try something else
 V niet legaal wegens herhaling - probeer iets anders
+S Immobilize your opponent
 S Immobilize your opponent's roamers
 K Invite
 V Uitnodiging #1 in ruimte #2
@@ -576,6 +582,7 @@ V Kamisado
 K Kamisado_variation
 V Kamisado
 S Keep all three types of chip visible
+S Khet
 K Khet-classic
 V Khet 2.0 - Classic
 K Khet-classic_variation
@@ -675,6 +682,7 @@ K Members
 V Leden
 K Memory is low
 V Weinig geheugen
+S Menhir Size
 K Merge this stack, or click Done
 V Voeg deze kolom same, of Klik Klaar
 K Message:
@@ -735,6 +743,7 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V Zet een volcano cap
+S Move one of your pieces
 K Move one ship
 V Verplaats een schip
 K Move stacks around any way you want to
@@ -1187,6 +1196,13 @@ K Take your first action
 V Maak je eerste actie
 K Take your second action
 V Maak je tweede actie
+S Tako Judo
+K Tako Judo_family
+V Tako Judo
+K TakoJudo
+V Tako Judo
+K TakoJudo_variation
+V standard Tako Judo
 K Tamsk_variation
 V standaard Tamsk
 K The game is a draw
@@ -1451,6 +1467,7 @@ K fontfamily
 V sansserif
 K form a larger triangle with your color at the tips
 V Leg een grotere driehoek met punten van je kleur
+S form the most groups of 3 or more adjacent squares your color
 K fund a loan from a player or the bank
 V garandeer een lening van een speler of de bank
 K game selector
@@ -1561,4 +1578,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 890
+N 902

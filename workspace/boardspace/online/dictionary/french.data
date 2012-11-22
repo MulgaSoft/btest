@@ -531,6 +531,11 @@ S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
+S Gyges
+K Gyges_family
+V Gyges
+K Gyges_variation
+V standard Gyges
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -571,6 +576,7 @@ K Illegal due to repetition, try something else or resign
 V Interdit (r\u00e9p\u00e9tition), essayez autre chose ou abandonnez
 K Illegal move due to repetition - try something else
 V Coup ill\u00e9gal (r\u00e9p\u00e9tition) - jouez autre chose
+S Immobilize your opponent
 S Immobilize your opponent's roamers
 K Invite
 V Inviter #1 en salle #2
@@ -598,6 +604,7 @@ V Kamisado
 K Kamisado_variation
 V Kamisado
 S Keep all three types of chip visible
+S Khet
 K Khet-classic
 V Khet 2.0 - Classic
 K Khet-classic_variation
@@ -700,6 +707,7 @@ K Members
 V Membres
 K Memory is low
 V M\u00e9moire insuffisante
+S Menhir Size
 K Merge this stack, or click Done
 V Assemblez cette pile ou cliquez sur Valider
 K Message:
@@ -759,6 +767,7 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V D\u00e9placez un chapeau de volcan
+S Move one of your pieces
 K Move one ship
 V D\u00e9placez un vaisseau
 K Move stacks around any way you want to
@@ -1229,6 +1238,13 @@ K Take your first action
 V Jouez votre premi\u00e8re action
 K Take your second action
 V Jouez votre seconde action
+S Tako Judo
+K Tako Judo_family
+V Tako Judo
+K TakoJudo
+V Tako Judo
+K TakoJudo_variation
+V standard Tako Judo
 K Tamsk_variation
 V standard Tamsk
 K The game is a draw
@@ -1502,6 +1518,7 @@ K fontfamily
 V sansserif
 K form a larger triangle with your color at the tips
 V Formez un triangle de 4 pi\u00e8ces dont les sommets sont de votre couleur
+S form the most groups of 3 or more adjacent squares your color
 K fund a loan from a player or the bank
 V financer un pr\u00eat d'un joueur ou de la banque
 K game selector
@@ -1611,4 +1628,4 @@ K you may increase your bid
 V vous pouvez augmenter votre offre
 K your name
 V Votre nom
-N 890
+N 902

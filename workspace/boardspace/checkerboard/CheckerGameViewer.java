@@ -1,13 +1,15 @@
 package checkerboard;
 
 import online.common.*;
+import online.common.SimpleSprite.Movement;
 import online.game.*;
 import online.game.BoardProtocol.replayMode;
 import online.game.sgf.*;
+
 import java.awt.*;
 import java.util.*;
 import javax.swing.JCheckBoxMenuItem;
-
+import static checkerboard.CheckerMovespec.*;
 
 /**
  * 
@@ -593,11 +595,49 @@ public class CheckerGameViewer extends commonCanvas
     	}
  
         handleExecute(b,mm,replay);
-        
+        startBoardAnimations(replay);
         if(replay!=replayMode.Replay) { playSounds(mm); }
  
         return (true);
     }
+     
+     void startBoardAnimations(replayMode replay)
+     {
+        if(replay!=replayMode.Replay)
+     	{	while(b.animationStack.size()>1)
+     		{
+     		CheckerCell dest = b.animationStack.pop();
+     		CheckerCell src = b.animationStack.pop();
+     		startAnimation(src,dest,dest.topChip());
+     		}
+     	}
+        	b.animationStack.clear();
+     } 
+     void startAnimation(CheckerCell from,CheckerCell to,CheckerChip top)
+     {	if((from!=null) && (to!=null) && (top!=null))
+     	{	double speed = 0.5;
+      		if(debug)
+     		{
+     			G.Assert(!((from.current_center_x==0) && (from.current_center_y==0)),"From Cell %s center is not set",from);
+        			G.Assert(!((to.current_center_x==0) && (to.current_center_y==0)),"To %s center is not set",to);
+     		}
+     		
+     		// make time vary as a function of distance to partially equalize the runtim of
+     		// animations for long verses short moves.
+     		double dist = G.distance(from.current_center_x, from.current_center_y, to.current_center_x,  to.current_center_y);
+     		double full = G.distance(0,0,boardRect.width,boardRect.height);
+     		double endtime = speed*Math.sqrt(dist/full);
+     		
+     		SimpleSprite newSprite = new SimpleSprite(true,top,
+     				(int)b.CELLSIZE,	// use the same cell size as drawSprite would
+     				endtime,
+             		from.current_center_x,from.current_center_y,
+             		to.current_center_x,to.current_center_y);
+     		newSprite.movement = Movement.SlowIn;
+             to.addActiveAnimation(newSprite);
+   			addSprite(newSprite);
+   			}
+     }
 /**
  * parse a move specifier on behalf of the current player.  This is called by the 
  * "game" object when it receives a move from the other player.  Note that it may

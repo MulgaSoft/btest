@@ -517,6 +517,11 @@ S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
+S Gyges
+K Gyges_family
+V Gyges
+K Gyges_variation
+V standard Gyges
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -558,6 +563,7 @@ K Illegal due to repetition, try something else or resign
 V \u8fdd\u89c4\u91cd\u590d\uff0c\u79fb\u52a8\u522b\u7684\u68cb\u6216\u9000\u51fa
 K Illegal move due to repetition - try something else
 V \u8fdd\u89c4\u91cd\u590d - \u8d70\u522b\u7684\u68cb
+S Immobilize your opponent
 S Immobilize your opponent's roamers
 K Invite
 V \u9080\u8bf7#1\u5230#2\u53f7\u623f\u95f4
@@ -585,6 +591,7 @@ V Kamisado
 K Kamisado_variation
 V Kamisado
 S Keep all three types of chip visible
+S Khet
 K Khet-classic
 V Khet 2.0 - Classic
 K Khet-classic_variation
@@ -688,6 +695,7 @@ K Members
 V \u4f1a\u5458
 K Memory is low
 V \u5185\u5b58\u4e0d\u591f
+S Menhir Size
 K Merge this stack, or click Done
 V \u5408\u5e76\u8fd9\u4e2a\u68cb\u6808\uff0c\u6216\u8005\u70b9\u51fb\u5b8c\u6210
 K Message:
@@ -748,6 +756,7 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V \u79fb\u52a8\u4e00\u4e2a\u706b\u5c71\u5e3d
+S Move one of your pieces
 K Move one ship
 V \u79fb\u52a8\u4e00\u8258\u8239
 K Move stacks around any way you want to
@@ -1197,6 +1206,13 @@ K Take your first action
 V \u8d70\u7b2c\u4e00\u6b65
 K Take your second action
 V \u8d70\u7b2c\u4e8c\u6b65
+S Tako Judo
+K Tako Judo_family
+V Tako Judo
+K TakoJudo
+V Tako Judo
+K TakoJudo_variation
+V standard Tako Judo
 K Tamsk_variation
 V \u666e\u901aTamsk
 K The game is a draw
@@ -1463,6 +1479,7 @@ K fontfamily
 V sansserif
 K form a larger triangle with your color at the tips
 V \u62fc\u6210\u4e00\u4e2a\u9876\u7aef\u90fd\u7531\u4f60\u989c\u8272\u7684\u5c0f\u4e09\u89d2\u7ec4\u6210\u7684\u5927\u4e09\u89d2\u5f62
+S form the most groups of 3 or more adjacent squares your color
 K fund a loan from a player or the bank
 V \u5411\u73a9\u5bb6\u8fd8\u662f\u94f6\u884c\u501f\u6b3e
 K game selector
@@ -1574,4 +1591,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-N 890
+N 902

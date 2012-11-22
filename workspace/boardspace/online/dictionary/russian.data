@@ -434,6 +434,11 @@ S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
+S Gyges
+K Gyges_family
+V Gyges
+K Gyges_variation
+V standard Gyges
 K Hex
 V \u0425\u0435\u043a\u0441
 S Hex-15
@@ -474,6 +479,7 @@ V \u0418\u0433\u043d\u043e\u0440\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u044
 S Illegal - this move would form an illegal pattern of lines
 S Illegal due to repetition, try something else or resign
 S Illegal move due to repetition - try something else
+S Immobilize your opponent
 S Immobilize your opponent's roamers
 K Invite
 V \u041f\u0440\u0438\u0433\u043b\u0430\u0441\u0438\u0442\u044c #1 \u0432 \u043a\u043e\u043c\u043d\u0430\u0442\u0443 #2
@@ -500,6 +506,7 @@ V Kamisado
 K Kamisado_variation
 V Kamisado
 S Keep all three types of chip visible
+S Khet
 K Khet-classic
 V Khet 2.0 - Classic
 K Khet-classic_variation
@@ -587,6 +594,7 @@ K Members
 V \u0423\u0447\u0430\u0441\u0442\u043d\u0438\u043a\u0438
 K Memory is low
 V \u041d\u0435\u0445\u0432\u0430\u0442\u043a\u0430 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u043e\u0439 \u043f\u0430\u043c\u044f\u0442\u0438
+S Menhir Size
 S Merge this stack, or click Done
 K Message:
 V \u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435:
@@ -630,6 +638,7 @@ S Move a soldier, or fire a cannon
 S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 S Move a volcano cap
+S Move one of your pieces
 S Move one ship
 K Move stacks around any way you want to
 V \u041f\u0435\u0440\u0435\u0434\u0432\u0438\u043d\u0443\u0442\u044c \u0441\u0442\u043e\u043f\u043a\u0443 \u0432 \u043b\u044e\u0431\u043e\u043c \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u043e\u043c \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0438
@@ -1022,6 +1031,13 @@ V \u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435, \u0437\u0430 \u043a\u043e\u0
 S Take a card
 S Take your first action
 S Take your second action
+S Tako Judo
+K Tako Judo_family
+V Tako Judo
+K TakoJudo
+V Tako Judo
+K TakoJudo_variation
+V standard Tako Judo
 K Tamsk_variation
 V \u0421\u0442\u0430\u043d\u0434\u0430\u0440\u0442\u043d\u044b\u0439 Tomsk
 K The game is a draw
@@ -1265,6 +1281,7 @@ V \u0440\u0430\u0441\u0448\u0438\u0440\u044c\u0442\u0435 \u0434\u043e\u0441\u043
 K fontfamily
 V sansserif
 S form a larger triangle with your color at the tips
+S form the most groups of 3 or more adjacent squares your color
 S fund a loan from a player or the bank
 K game selector
 V \u0432\u044b\u0431\u043e\u0440 \u0438\u0433\u0440
@@ -1365,4 +1382,4 @@ V \u0414\u043e\u0431\u0440\u043e \u043f\u043e\u0436\u0430\u043b\u043e\u0432\u043
 S you may increase your bid
 K your name
 V \u0432\u0430\u0448\u0435 \u0438\u043c\u044f
-N 890
+N 902

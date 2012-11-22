@@ -5,7 +5,7 @@ import online.game.*;
 
 import java.util.*;
 
-
+import static checkerboard.CheckerMovespec.*;
 /**
  * CheckerBoard knows all about the game of Truchet, which is played
  * on a 7x7 board. It gets a lot of logistic support from 
@@ -38,6 +38,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     public int boardRows = DEFAULT_ROWS;
     public void SetDrawState() { setBoardState(DRAW_STATE); }
     public CheckerCell rack[] = null;
+    public OStack<CheckerCell> animationStack = new OStack<CheckerCell>(CheckerCell.class);
     //
     // private variables
     //
@@ -143,15 +144,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 	  copy.clone(this); 
 	  return(copy);
 	}
-   /**
-    * copy from a stack on a different board, so one has to get the local equivalent
-    * @param to
-    * @param from
-    */
-    void getLocalCopy(OStack<CheckerCell>to,OStack<CheckerCell> from)
-    {	to.clear();
-    	for(int i=0,lim=from.size(); i<lim; i++) { to.push(getCell(from.elementAt(i))); }
-    }
+
 
     /* make a copy of a board.  This is used by the robot to get a copy
      * of the board for it to manupulate and analyze without affecting 
@@ -453,7 +446,11 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     // by the board display to provide a visual marker where the floating chip came from.
     //
     public boolean isSource(CheckerCell c)
-    {	return((pickedSourceStack.size()>0) && (pickedSourceStack.top()==c));
+    {	return(getSource()==c);
+    }
+    public CheckerCell getSource()
+    {
+    	return((pickedSourceStack.size()>0) ?pickedSourceStack.top() : null);
     }
     //
     // in the actual game, picks are optional; allowed but redundant.
@@ -521,10 +518,10 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     		unDropObject();
     	}
     }
-    public boolean Execute(commonMove mm)
+    public boolean Execute(commonMove mm,replayMode replay)
     {	CheckerMovespec m = (CheckerMovespec)mm;
         boolean next_rp = false;
-
+        if(replay!=replayMode.Replay) { animationStack.clear(); }
         //System.out.println("E "+m+" for "+whoseTurn);
         switch (m.op)
         {
@@ -549,8 +546,15 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         	{	default: G.Error("Not expecting robot in state "+board_state);
         		case PLAY_STATE:
         			G.Assert(pickedObject==null,"something is moving");
-        			pickObject(getCell(BoardLocation, m.from_col, m.from_row));
-        			dropObject(getCell(BoardLocation,m.to_col,m.to_row)); 
+        			CheckerCell src = getCell(BoardLocation, m.from_col, m.from_row);
+        			CheckerCell dest = getCell(BoardLocation,m.to_col,m.to_row);
+        			pickObject(src);
+        			dropObject(dest); 
+        			if(replay!=replayMode.Replay)
+        			{
+        				animationStack.push(src);
+        				animationStack.push(dest);
+        			}
  				    setNextStateAfterDrop();
         			break;
         	}
@@ -732,7 +736,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         
         G.Assert(m.player == whoseTurn, "whoseturn doesn't agree");
 
-        if (Execute(m))
+        if (Execute(m,replayMode.Replay))
         {
             if (m.op == MOVE_DONE)
             {

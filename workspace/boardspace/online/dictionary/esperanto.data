@@ -515,6 +515,11 @@ S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
+S Gyges
+K Gyges_family
+V Gyges
+K Gyges_variation
+V standard Gyges
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -556,6 +561,7 @@ K Illegal due to repetition, try something else or resign
 V Kontra\u016dle\u011da pro ripeto, provu ion alian a\u016d kapitulacu
 K Illegal move due to repetition - try something else
 V Kontra\u016dle\u011da movo pro ripetado - provu ion alian
+S Immobilize your opponent
 S Immobilize your opponent's roamers
 K Invite
 V Inviti #1 al \u0109ambro #2
@@ -583,6 +589,7 @@ V Kamisado
 K Kamisado_variation
 V Kamisado
 S Keep all three types of chip visible
+S Khet
 K Khet-classic
 V Khet 2.0 - Classic
 K Khet-classic_variation
@@ -685,6 +692,7 @@ K Members
 V Membroj
 K Memory is low
 V Memoro mankas
+S Menhir Size
 K Merge this stack, or click Done
 V Kunigu \u0109i tiun stakon, a\u016d klaku Fini
 K Message:
@@ -745,6 +753,7 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V Movu vulkanan \u0109apon
+S Move one of your pieces
 K Move one ship
 V Movu unu pecon
 K Move stacks around any way you want to
@@ -1195,6 +1204,13 @@ K Take your first action
 V Faru vian unuan agon
 K Take your second action
 V Faru vian duan agon
+S Tako Judo
+K Tako Judo_family
+V Tako Judo
+K TakoJudo
+V Tako Judo
+K TakoJudo_variation
+V standard Tako Judo
 K Tamsk_variation
 V norma Tamsk
 K The game is a draw
@@ -1463,6 +1479,7 @@ K fontfamily
 V sansserif
 K form a larger triangle with your color at the tips
 V formu pli grandan triangulon kun verticoj de via koloro
+S form the most groups of 3 or more adjacent squares your color
 K fund a loan from a player or the bank
 V aran\u011di pruntedonon de ludanto a\u016d de la banko
 K game selector
@@ -1572,4 +1589,4 @@ K you may increase your bid
 V vi povas pliigi vian oferton
 K your name
 V via nomo
-N 890
+N 902

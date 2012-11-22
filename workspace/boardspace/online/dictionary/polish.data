@@ -429,6 +429,11 @@ S Green
 S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
+S Gyges
+K Gyges_family
+V Gyges
+K Gyges_variation
+V standard Gyges
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -465,6 +470,7 @@ V Ignoruj rozmow\u0119 z #1
 S Illegal - this move would form an illegal pattern of lines
 S Illegal due to repetition, try something else or resign
 S Illegal move due to repetition - try something else
+S Immobilize your opponent
 S Immobilize your opponent's roamers
 K Invite
 V Zapro\u015b #1 do pokoju #2
@@ -491,6 +497,7 @@ V Kamisado
 K Kamisado_variation
 V Kamisado
 S Keep all three types of chip visible
+S Khet
 K Khet-classic
 V Khet 2.0 - Classic
 K Khet-classic_variation
@@ -578,6 +585,7 @@ K Members
 V Obecni
 K Memory is low
 V Ma\u0142o pami\u0119ci
+S Menhir Size
 S Merge this stack, or click Done
 K Message:
 V Do WSZYSTKICH:
@@ -621,6 +629,7 @@ S Move a soldier, or fire a cannon
 S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 S Move a volcano cap
+S Move one of your pieces
 K Move one ship
 V Przesu\u0144 jeden okr\u0119t
 K Move stacks around any way you want to
@@ -1015,6 +1024,13 @@ V Przejmij gr\u0119 jako
 S Take a card
 S Take your first action
 S Take your second action
+S Tako Judo
+K Tako Judo_family
+V Tako Judo
+K TakoJudo
+V Tako Judo
+K TakoJudo_variation
+V standard Tako Judo
 K Tamsk_variation
 V Tamsk
 K The game is a draw
@@ -1238,6 +1254,7 @@ V powi\u0119ksz plansz\u0119 kafelkami w twoim kolorze
 K fontfamily
 V sansserif
 S form a larger triangle with your color at the tips
+S form the most groups of 3 or more adjacent squares your color
 S fund a loan from a player or the bank
 K game selector
 V Wyb\u00f3r gry
@@ -1337,4 +1354,4 @@ V Witam w Pasa\u017cu BoardSpace, wersja #1
 S you may increase your bid
 K your name
 V twoje imi\u0119
-N 890
+N 902

@@ -9,6 +9,11 @@ import online.game.*;
 public class Hexmovespec extends commonMove implements HexConstants
 {	// this is the dictionary of move names
     static exHashtable D = new exHashtable(true);
+    static final int MOVE_PICK = 204; // pick a chip from a pool
+    static final int MOVE_DROP = 205; // drop a chip
+    static final int MOVE_PICKB = 206; // pick from the board
+    static final int MOVE_DROPB = 207; // drop on the board
+ 	static final int MOVE_SWAP = HitSwapButton;	// swap colors (as a move) share the code for the parser's concenience
 
     static
     {	// load the dictionary

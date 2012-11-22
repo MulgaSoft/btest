@@ -38,7 +38,7 @@ import online.game.BoardProtocol.replayMode;
 import online.game.sgf.sgf_names;
 import online.game.sgf.sgf_node;
 import online.game.sgf.sgf_property;
-
+import static hex.Hexmovespec.*;
 
 
 /**

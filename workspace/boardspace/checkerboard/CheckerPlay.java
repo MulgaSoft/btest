@@ -166,6 +166,9 @@ public class CheckerPlay extends commonRobot implements Runnable, CheckerConstan
          	MAX_DEPTH = BESTBOT_DEPTH;
         	DUMBOT=false;
         	break;
+        case MONTEBOT_LEVEL:
+        	MONTEBOT=true;
+        	break;
         default: G.Error("Not expecting strategy "+strategy);
         }
     }
@@ -308,6 +311,7 @@ public void Search_Break(String msg)
         monte_search_state.verbose = 2;
         monte_search_state.alpha = 0.5;
         monte_search_state.sort_moves = false;
+        monte_search_state.final_depth = 999;	// longest possible game
         monte_search_state.only_child_optimization = true;
         monte_search_state.dead_child_optimization = true;
         monte_search_state.simulationsPerNode = 1;
