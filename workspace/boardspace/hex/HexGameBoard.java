@@ -248,7 +248,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         chips_on_board = from_b.chips_on_board;
         fullBoard = from_b.fullBoard;
         
-        getLocalCopy(emptyCells,from_b.emptyCells);
+        getCell(emptyCells,from_b.emptyCells);
         
         whoseTurn = from_b.whoseTurn;
         board_state = from_b.board_state;
@@ -808,7 +808,9 @@ void doSwap()
             		unDropObject();  
         			if(pickedObject!=null)
         			{
-        				if(ps==null) { ps = pickedSource = playerCell[pickedObject.chipNumber()]; }
+        				if(ps==null) 
+        					{ ps = pickedSource = (pickedObject==hexChip.Black)?blackChipPool:whiteChipPool; 
+        					}
         				animationStack.push(dd);
         				animationStack.push(ps);
         			}

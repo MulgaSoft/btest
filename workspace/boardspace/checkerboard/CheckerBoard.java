@@ -160,8 +160,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         board_state = from_b.board_state;
         moveNumber = from_b.moveNumber;
         pickedObject = from_b.pickedObject;	
-        getLocalCopy(pickedSourceStack,from_b.pickedSourceStack);
-        getLocalCopy(droppedDestStack,from_b.droppedDestStack);
+        getCell(pickedSourceStack,from_b.pickedSourceStack);
+        getCell(droppedDestStack,from_b.droppedDestStack);
         G.copy(win,from_b.win);
         G.copy(playerColor,from_b.playerColor);
         G.copy(chips_on_board,from_b.chips_on_board);
