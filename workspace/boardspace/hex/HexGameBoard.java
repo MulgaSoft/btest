@@ -262,10 +262,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         // note that firstPlayer is NOT initialized here
     }
 
-    public void setWhoseTurn(int who)
-    {	
-        whoseTurn = (who<0)?FIRST_PLAYER_INDEX:who;
-    }
+ 
     //
     // change whose turn it is, increment the current move number
     //
