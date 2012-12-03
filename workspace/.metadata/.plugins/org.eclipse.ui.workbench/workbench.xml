@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="29" version="2.0">
 <workbenchAdvisor/>
-<window height="987" width="1337" x="213" y="21">
+<window height="981" width="1694" x="108" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
-<itemSize x="160"/>
+<itemSize x="169"/>
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="adt.actionSet.avdManager" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="adt.actionSet.lint" itemType="typeToolBarContribution" x="53" y="22"/>
+<coolItem id="adt.actionSet.wizards" itemType="typeToolBarContribution" x="84" y="22"/>
 <coolItem id="com.google.gdt.eclipse.suite.actionSet" itemType="typeToolBarContribution" x="84" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.WorkingSetActionSet" itemType="typeToolBarContribution" x="50" y="22"/>
+<coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="130" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.browser.editor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -41,126 +45,51 @@
 <part id="5"/>
 <part id="6"/>
 <part id="7"/>
-<part id="8"/>
-<part id="9"/>
-<part id="10"/>
-<part id="11"/>
-<part id="12"/>
-<part id="13"/>
-<part id="14"/>
-<part id="15"/>
-<part id="16"/>
-<part id="17"/>
-<part id="18"/>
-<part id="19"/>
-<part id="20"/>
-<part id="21"/>
-<part id="22"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContainerConstants.java" partName="ContainerConstants.java" path="G:/share/projects/workspace-master/boardspace/container/ContainerConstants.java" title="ContainerConstants.java" tooltip="boardspace/container/ContainerConstants.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/container/ContainerConstants.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="14" selectionOffset="2746" selectionTopPixel="776"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerPlay.java" partName="CheckerPlay.java" path="G:/share/projects/workspace-master/boardspace/checkerboard/CheckerPlay.java" title="CheckerPlay.java" tooltip="boardspace/checkerboard/CheckerPlay.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/checkerboard/CheckerPlay.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="4716"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContainerBoard.java" partName="ContainerBoard.java" path="G:/share/projects/workspace-master/boardspace/container/ContainerBoard.java" title="ContainerBoard.java" tooltip="boardspace/container/ContainerBoard.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/container/ContainerBoard.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="45" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerMovespec.java" partName="CheckerMovespec.java" path="G:/share/projects/workspace-master/boardspace/checkerboard/CheckerMovespec.java" title="CheckerMovespec.java" tooltip="boardspace/checkerboard/CheckerMovespec.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/checkerboard/CheckerMovespec.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7979" selectionTopPixel="3900"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerGameViewer.java" partName="CheckerGameViewer.java" path="G:/share/projects/workspace-master/boardspace/checkerboard/CheckerGameViewer.java" title="CheckerGameViewer.java" tooltip="boardspace/checkerboard/CheckerGameViewer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/checkerboard/CheckerGameViewer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="16624" selectionTopPixel="6579"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GygesBoard.java" partName="GygesBoard.java" path="G:/share/projects/workspace-master/boardspace/gyges/GygesBoard.java" title="GygesBoard.java" tooltip="boardspace/gyges/GygesBoard.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/gyges/GygesBoard.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="17733" selectionTopPixel="8007"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Win32SurfaceData.class" partName="Win32SurfaceData.class" title="Win32SurfaceData.class" tooltip="sun.awt.windows.Win32SurfaceData" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;sun.awt.windows(Win32SurfaceData.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GygesChip.java" partName="GygesChip.java" path="G:/share/projects/workspace-master/boardspace/gyges/GygesChip.java" title="GygesChip.java" tooltip="boardspace/gyges/GygesChip.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/gyges/GygesChip.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="511" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="BaseBoard.class" partName="BaseBoard.class" title="BaseBoard.class" tooltip="online.game.BaseBoard" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/Game.jar&lt;online.game(BaseBoard.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GygesConstants.java" partName="GygesConstants.java" path="G:/share/projects/workspace-master/boardspace/gyges/GygesConstants.java" title="GygesConstants.java" tooltip="boardspace/gyges/GygesConstants.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/gyges/GygesConstants.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="16" selectionOffset="1517" selectionTopPixel="306"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Win32SurfaceData.class" partName="Win32SurfaceData.class" title="Win32SurfaceData.class" tooltip="sun.awt.windows.Win32SurfaceData" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;sun.awt.windows(Win32SurfaceData.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GygesViewer.java" partName="GygesViewer.java" path="G:/share/projects/workspace-master/boardspace/gyges/GygesViewer.java" title="GygesViewer.java" tooltip="boardspace/gyges/GygesViewer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/gyges/GygesViewer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="397" selectionTopPixel="255"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContainerChip.java" partName="ContainerChip.java" path="G:/share/projects/workspace-master/boardspace/container/ContainerChip.java" title="ContainerChip.java" tooltip="boardspace/container/ContainerChip.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/container/ContainerChip.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1295" selectionTopPixel="561"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GygesMovespec.java" partName="GygesMovespec.java" path="G:/share/projects/workspace-master/boardspace/gyges/GygesMovespec.java" title="GygesMovespec.java" tooltip="boardspace/gyges/GygesMovespec.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/gyges/GygesMovespec.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7063" selectionTopPixel="1717"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="popupManager.class" partName="popupManager.class" title="popupManager.class" tooltip="online.common.popupManager" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/OnlineLobby.jar&lt;online.common(popupManager.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContainerMovespec.java" partName="ContainerMovespec.java" path="G:/share/projects/workspace-master/boardspace/container/ContainerMovespec.java" title="ContainerMovespec.java" tooltip="boardspace/container/ContainerMovespec.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/container/ContainerMovespec.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2546" selectionTopPixel="1054"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="popupManager.java" partName="popupManager.java" title="popupManager.java" tooltip="G:\share\projects\eclipse\boardspace\online\common\popupManager.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/G:/share/projects/eclipse/boardspace/online/common/popupManager.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="28" selectionOffset="3291" selectionTopPixel="1507"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GounkiBoard.java" partName="GounkiBoard.java" path="G:/share/projects/workspace-master/boardspace/gounki/GounkiBoard.java" title="GounkiBoard.java" tooltip="boardspace/gounki/GounkiBoard.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/gounki/GounkiBoard.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="67" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Win32SurfaceData.class" partName="Win32SurfaceData.class" title="Win32SurfaceData.class" tooltip="sun.awt.windows.Win32SurfaceData" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/C:\/java\/jre1.5.0_06\/lib\/rt.jar&lt;sun.awt.windows(Win32SurfaceData.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HiveGameBoard.java" partName="HiveGameBoard.java" path="G:/share/projects/workspace-master/boardspace/hive/HiveGameBoard.java" title="HiveGameBoard.java" tooltip="boardspace/hive/HiveGameBoard.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/hive/HiveGameBoard.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="11385" selectionTopPixel="4607"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CrossfireConstants.java" partName="CrossfireConstants.java" path="G:/share/projects/workspace-master/boardspace/crossfire/CrossfireConstants.java" title="CrossfireConstants.java" tooltip="boardspace/crossfire/CrossfireConstants.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/crossfire/CrossfireConstants.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="47" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GounkiPlay.java" partName="GounkiPlay.java" path="G:/share/projects/workspace-master/boardspace/gounki/GounkiPlay.java" title="GounkiPlay.java" tooltip="boardspace/gounki/GounkiPlay.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/gounki/GounkiPlay.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8668" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CrossfireViewer.java" partName="CrossfireViewer.java" path="G:/share/projects/workspace-master/boardspace/crossfire/CrossfireViewer.java" title="CrossfireViewer.java" tooltip="boardspace/crossfire/CrossfireViewer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/crossfire/CrossfireViewer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="15253" selectionTopPixel="4879"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CrossfireBoard.java" partName="CrossfireBoard.java" path="G:/share/projects/workspace-master/boardspace/crossfire/CrossfireBoard.java" title="CrossfireBoard.java" tooltip="boardspace/crossfire/CrossfireBoard.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/crossfire/CrossfireBoard.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3456" selectionTopPixel="1037"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CrossfirePlay.java" partName="CrossfirePlay.java" path="G:/share/projects/workspace-master/boardspace/crossfire/CrossfirePlay.java" title="CrossfirePlay.java" tooltip="boardspace/crossfire/CrossfirePlay.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/crossfire/CrossfirePlay.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9310" selectionTopPixel="3179"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerBoard.java" partName="CheckerBoard.java" path="G:/share/projects/workspace-master/boardspace/checkerboard/CheckerBoard.java" title="CheckerBoard.java" tooltip="boardspace/checkerboard/CheckerBoard.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerBoard.java" partName="CheckerBoard.java" path="G:/share/projects/workspace-master/boardspace/checkerboard/CheckerBoard.java" title="CheckerBoard.java" tooltip="boardspace/checkerboard/CheckerBoard.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/checkerboard/CheckerBoard.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="470" selectionTopPixel="204"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HexGameViewer.java" partName="HexGameViewer.java" path="G:/share/projects/workspace-master/boardspace/hex/HexGameViewer.java" title="HexGameViewer.java" tooltip="boardspace/hex/HexGameViewer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/hex/HexGameViewer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7592" selectionTopPixel="663"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerConstants.java" partName="CheckerConstants.java" path="G:/share/projects/workspace-master/boardspace/checkerboard/CheckerConstants.java" title="CheckerConstants.java" tooltip="boardspace/checkerboard/CheckerConstants.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/checkerboard/CheckerConstants.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="38" selectionOffset="2816" selectionTopPixel="515"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="G.class" partName="G.class" title="G.class" tooltip="online.common.G" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/OnlineLobby.jar&lt;online.common(G.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerCell.java" partName="CheckerCell.java" path="G:/share/projects/workspace-master/boardspace/checkerboard/CheckerCell.java" title="CheckerCell.java" tooltip="boardspace/checkerboard/CheckerCell.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/boardspace/checkerboard/CheckerCell.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
-<view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy">
-<viewState hidefields="false" hidelocaltypes="false" hidenonpublic="false" hidestatic="false" link_editors="0" mv_vertical_scroll="0" orientation="0" qualified_names="0" ratio="350" showinherited="false" sortbydefiningtype="false" vertical_scroll="0" view="2" workingSetName=""/>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat">
+<viewState/>
 </view>
 <view id="org.eclipse.search.ui.views.SearchView" partName="Search">
 <viewState isPinned="false">
-<view IMemento.internal.id="org.eclipse.jdt.ui.JavaSearchResultPage" org.eclipse.jdt.search.resultpage.grouping="3" org.eclipse.jdt.search.resultpage.limit="1000" org.eclipse.jdt.search.resultpage.limit_enabled="TRUE" org.eclipse.jdt.search.resultpage.sorting="1" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2"/>
 <view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+<view IMemento.internal.id="org.eclipse.jdt.ui.JavaSearchResultPage" org.eclipse.jdt.search.resultpage.grouping="3" org.eclipse.jdt.search.resultpage.limit="1000" org.eclipse.jdt.search.resultpage.limit_enabled="TRUE" org.eclipse.jdt.search.resultpage.sorting="1" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2"/>
 </viewState>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
@@ -168,10 +97,6 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Errors (100 of 220 items)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -179,6 +104,9 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="1" linkWithEditor="0" rootMode="1" workingSetName="">
@@ -208,51 +136,36 @@
 </customFilters>
 </viewState>
 </view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
-</view>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List"/>
 <view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
 <viewState/>
 </view>
 <view id="org.eclipse.debug.ui.VariableView" partName="Variables">
 <viewState/>
 </view>
-<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
-<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
-<columnWidths org.eclipse.ui.ide.completionField="0" org.eclipse.ui.ide.descriptionField="0" org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.priorityField="0" org.eclipse.ui.ide.resourceField="0"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
-<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
-</viewState>
-</view>
-<view id="org.eclipse.help.ui.HelpView" partName="Help">
-<viewState pageId="context-help-page"/>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
-<viewState/>
-</view>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
 <alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
@@ -260,6 +173,10 @@
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="adt.actionSet.wizards"/>
+<alwaysOnActionSet id="adt.actionSet.refactorings"/>
+<alwaysOnActionSet id="adt.actionSet.avdManager"/>
+<alwaysOnActionSet id="adt.actionSet.lint"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -273,10 +190,8 @@
 <show_view_action id="org.eclipse.ui.views.ProgressView"/>
 <show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
-<show_view_action id="ccw.view.namespacebrowser"/>
-<show_view_action id="de.tobject.findbugs.view.bugtreeview"/>
-<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
 <show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
 <show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
 <new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
 <new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
@@ -290,31 +205,27 @@
 <new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
 <new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
 <new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
-<new_wizard_action id="ccw.project.new.wizard"/>
-<new_wizard_action id="ccw.newClojureFileWizard"/>
-<new_wizard_action id="com.google.gdt.eclipse.suite.wizards.newProjectWizard"/>
-<new_wizard_action id="com.google.gwt.eclipse.core.newEntryPointWizard"/>
-<new_wizard_action id="com.google.gwt.eclipse.core.newHostPageWizard"/>
-<new_wizard_action id="com.google.gwt.eclipse.core.newModuleWizard"/>
-<new_wizard_action id="com.google.gwt.eclipse.core.newClientBundleWizard"/>
-<new_wizard_action id="com.google.gwt.eclipse.core.newUiBinderWizard"/>
 <new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
 <new_wizard_action id="org.eclipse.mylyn.tasks.ui.wizards.new.repository.task"/>
-<perspective_action id="de.tobject.findbugs.FindBugsPerspective"/>
-<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.search.ui.views.SearchView"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
-<view id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars>
-<fastViewBar fastViewLocation="131072" id="stickyFolderRight" orientation="512" selectedTabId="org.eclipse.help.ui.HelpView" style="0">
+<fastViewBar fastViewLocation="131072" id="right" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
 <fastViews>
-<view id="org.eclipse.help.ui.HelpView" ratio="0.3"/>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@507a7f37" orientation="512" selectedTabId="org.eclipse.mylyn.tasks.ui.views.tasks" style="0">
+<fastViews>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
@@ -323,17 +234,16 @@
 <info folder="true" part="left">
 <folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
-<page content="org.eclipse.jdt.ui.TypeHierarchy" label="Type Hierarchy"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.80703187" ratioLeft="987" ratioRight="236" relationship="2" relative="left">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@42bfafa3" ratio="0.8044891" ratioLeft="1362" ratioRight="331" relationship="2" relative="left">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
@@ -341,39 +251,43 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.24775584" ratioLeft="276" ratioRight="838" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7768786" ratioLeft="672" ratioRight="193" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<info part="org.eclipse.ui.editorss" ratio="0.24950625" ratioLeft="379" ratioRight="1140" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.80746794" ratioLeft="692" ratioRight="165" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<page content="com.google.gwt.eclipse.DevModeView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@ee721b" ratio="0.88364434" ratioLeft="805" ratioRight="106" relationship="2" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@507a7f37" ratio="0.75" ratioLeft="855" ratioRight="285" relationship="2" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.5" ratioLeft="300" ratioRight="300" relationship="4" relative="org.eclipse.ui.internal.ViewStack@ee721b">
+<info folder="true" part="right" ratio="0.4992224" ratioLeft="321" ratioRight="322" relationship="4" relative="org.eclipse.ui.internal.ViewStack@507a7f37">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
-<page content="ccw.view.namespacebrowser" label="LabelNotFound"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@14f67389" ratio="0.8402226" ratioLeft="1057" ratioRight="201" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 </mainWindow>
@@ -381,17 +295,21 @@
 </perspective>
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
 <alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
 <alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
-<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="adt.actionSet.wizards"/>
+<alwaysOnActionSet id="adt.actionSet.refactorings"/>
+<alwaysOnActionSet id="adt.actionSet.avdManager"/>
+<alwaysOnActionSet id="adt.actionSet.lint"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
@@ -405,77 +323,69 @@
 <show_view_action id="org.eclipse.ui.views.ContentOutline"/>
 <show_view_action id="org.eclipse.ui.console.ConsoleView"/>
 <show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="com.android.ide.eclipse.ddms.views.LogCatView"/>
+<show_view_action id="com.android.ide.eclipse.ddms.views.DeviceView"/>
 <show_view_action id="org.eclipse.ant.ui.views.AntView"/>
 <show_view_action id="org.eclipse.pde.runtime.LogView"/>
 <show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<perspective_action id="com.android.ide.eclipse.ddms.Perspective"/>
 <perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
 <perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
 <perspective_action id="org.eclipse.wst.xml.ui.perspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.TaskList"/>
-<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.eclipse.debug.ui.VariableView"/>
 <view id="org.eclipse.debug.ui.BreakpointView"/>
-<view id="org.eclipse.help.ui.HelpView"/>
-<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.88005394" ratioLeft="1306" ratioRight="178" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.help.ui.HelpView" appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="Help"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1212" ratioRight="404" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.806489" ratioLeft="696" ratioRight="167" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.75" ratioLeft="645" ratioRight="215" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
-<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
-<page content="com.google.gwt.eclipse.DevModeView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.31622747" ratioLeft="228" ratioRight="493" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.8677596" ratioLeft="794" ratioRight="121" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
-<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@5012f2b6" ratio="0.5" ratioLeft="808" ratioRight="808" relationship="2" relative="org.eclipse.debug.internal.ui.ConsoleFolderView">&#x0A;<folder activePageID="org.eclipse.search.ui.views.SearchView" appearance="2" expanded="2">&#x0A;<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.49958983" ratioLeft="609" ratioRight="610" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info part="org.eclipse.ui.editorss" ratio="0.4496124" ratioLeft="290" ratioRight="355" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="1212" ratioRight="404" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="808" ratioRight="808" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
@@ -487,169 +397,161 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/crossfire/CrossfireViewer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/gyges/GygesBoard.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/gyges/GygesConstants.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/gyges/GygesViewer.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/checkerboard/CheckerBoard.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/checkerboard/CheckerGameViewer.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/crossfire/CrossfireConstants.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/checkerboard/CheckerConstants.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/OnlineLobby.jar&lt;online.common(G.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/crossfire/CrossfireConstants.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/hex/HexGameViewer.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/checkerboard/CheckerConstants.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/crossfire/CrossfireViewer.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/OnlineLobby.jar&lt;online.common(G.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/checkerboard/CheckerCell.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/checkerboard/CheckerBoard.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/boardspace/gyges/GygesBoard.java"/>
 </editors>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="19914" y="0"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="7683" y="0"/>
 </item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="11451" y="15"/>
+<item historyLabel="GygesViewer.java" index="2">
+<position info="not_deleted" x="15111" y="0"/>
 </item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="4274" y="0"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="3969" y="0"/>
 </item>
-<item historyLabel="CheckerBoard.java" index="1">
-<position info="not_deleted" x="96" y="0"/>
+<item historyLabel="GygesConstants.java" index="1">
+<position info="not_deleted" x="2773" y="0"/>
 </item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="8090" y="171"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="2617" y="0"/>
 </item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="4274" y="0"/>
+<item historyLabel="GygesConstants.java" index="1">
+<position info="not_deleted" x="1614" y="0"/>
 </item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="11433" y="0"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="15803" y="0"/>
 </item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="25619" y="0"/>
+<item historyLabel="GygesConstants.java" index="1">
+<position info="not_deleted" x="1316" y="0"/>
 </item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="12372" y="1051"/>
+<item historyLabel="GygesViewer.java" index="2">
+<position info="not_deleted" x="15111" y="0"/>
 </item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="26778" y="0"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="15803" y="0"/>
 </item>
-<item historyLabel="CrossfireConstants.java" index="3">
-<position info="not_deleted" x="553" y="0"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="16660" y="0"/>
 </item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="16093" y="8"/>
+<item historyLabel="GygesConstants.java" index="1">
+<position info="not_deleted" x="1578" y="0"/>
 </item>
-<item historyLabel="CrossfireConstants.java" index="3">
-<position info="not_deleted" x="553" y="0"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="16660" y="0"/>
 </item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="15910" y="0"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="2070" y="0"/>
 </item>
-<item historyLabel="CheckerConstants.java" index="4">
-<position info="not_deleted" x="2816" y="38"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position/>
 </item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="15910" y="0"/>
+<item historyLabel="GygesConstants.java" index="1">
+<position info="not_deleted" x="1345" y="15"/>
 </item>
-<item historyLabel="CrossfireConstants.java" index="3">
-<position info="not_deleted" x="4155" y="0"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="25949" y="0"/>
 </item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="12372" y="1051"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="23971" y="1"/>
 </item>
-<item historyLabel="CheckerConstants.java" index="4">
-<position info="not_deleted" x="2816" y="38"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="24016" y="0"/>
 </item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="18744" y="84"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="23194" y="1"/>
 </item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="15910" y="0"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="23245" y="0"/>
 </item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="18744" y="84"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="22446" y="0"/>
 </item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="18688" y="15"/>
+<item historyLabel="GygesConstants.java" index="1">
+<position info="not_deleted" x="1517" y="16"/>
 </item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="19004" y="11"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="22446" y="0"/>
 </item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="21298" y="29"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="22418" y="0"/>
 </item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="26988" y="0"/>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="16627" y="0"/>
 </item>
-<item historyLabel="G.class" index="5">
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="16819" y="0"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="17749" y="0"/>
+</item>
+<item historyLabel="GygesConstants.java" index="1">
+<position info="not_deleted" x="1517" y="16"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="17749" y="0"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="17765" y="0"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="19430" y="69"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="18099" y="0"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="20824" y="0"/>
+</item>
+<item historyLabel="GygesViewer.java" index="2">
+<position info="not_deleted" x="33579" y="0"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="20442" y="0"/>
+</item>
+<item historyLabel="GygesViewer.java" index="2">
+<position info="not_deleted" x="397" y="0"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="20442" y="0"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="9383" y="0"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="20442" y="0"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="20418" y="21"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="16362" y="21"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="2030" y="10"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="18500" y="7"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="22401" y="0"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="16915" y="21"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="17180" y="10"/>
+</item>
+<item historyLabel="GygesBoard.java" index="0">
+<position info="not_deleted" x="2030" y="10"/>
+</item>
+<item historyLabel="CheckerBoard.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="31373" y="6"/>
-</item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="38816" y="0"/>
-</item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="31219" y="141"/>
-</item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="38669" y="13"/>
-</item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="3810" y="94"/>
-</item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="6350" y="0"/>
-</item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="37745" y="136"/>
-</item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="6350" y="0"/>
-</item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="47471" y="0"/>
-</item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="38709" y="0"/>
-</item>
-<item historyLabel="CheckerGameViewer.java" index="2">
-<position info="not_deleted" x="16624" y="10"/>
-</item>
-<item historyLabel="CrossfireConstants.java" index="3">
-<position info="not_deleted" x="4155" y="0"/>
-</item>
-<item historyLabel="CrossfireViewer.java" index="0">
-<position info="not_deleted" x="38709" y="0"/>
-</item>
-<item historyLabel="CrossfireConstants.java" index="6">
-<position info="not_deleted" x="4156" y="0"/>
-</item>
-<item historyLabel="HexGameViewer.java" index="7">
-<position info="not_deleted" x="7592" y="0"/>
-</item>
-<item historyLabel="CheckerConstants.java" index="8">
-<position info="not_deleted" x="2816" y="38"/>
-</item>
-<item historyLabel="CrossfireViewer.java" index="9">
-<position info="not_deleted" x="22153" y="7"/>
-</item>
-<item historyLabel="G.class" index="10">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="CheckerCell.java" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="CheckerBoard.java" index="12">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="CheckerBoard.java" index="12">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="CheckerCell.java" index="11">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item active="true" historyLabel="CheckerBoard.java" index="12">
-<position info="not_deleted" x="470" y="0"/>
+<item active="true" historyLabel="GygesBoard.java" index="4">
+<position info="not_deleted" x="17517" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -658,9 +560,11 @@
 <actionBarAdvisor/>
 <trimLayout>
 <trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="stickyFolderRight"/>
+<trimItem IMemento.internal.id="right"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@507a7f37"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
 <trimArea IMemento.internal.id="1024">
@@ -671,47 +575,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerCell.java" tooltip="boardspace/checkerboard/CheckerCell.java">
-<persistable path="/boardspace/checkerboard/CheckerCell.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerBoard.java" tooltip="boardspace/checkerboard/CheckerBoard.java">
+<persistable path="/boardspace/checkerboard/CheckerBoard.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GygesMovespec.java" tooltip="boardspace/gyges/GygesMovespec.java">
+<persistable path="/boardspace/gyges/GygesMovespec.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GygesViewer.java" tooltip="boardspace/gyges/GygesViewer.java">
+<persistable path="/boardspace/gyges/GygesViewer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GygesConstants.java" tooltip="boardspace/gyges/GygesConstants.java">
+<persistable path="/boardspace/gyges/GygesConstants.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GygesChip.java" tooltip="boardspace/gyges/GygesChip.java">
+<persistable path="/boardspace/gyges/GygesChip.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GygesBoard.java" tooltip="boardspace/gyges/GygesBoard.java">
+<persistable path="/boardspace/gyges/GygesBoard.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="exHashtable.class" tooltip="online.common.exHashtable">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/OnlineLobby.jar&lt;online.common(exHashtable.class"/>
 </file>
 <file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="G.class" tooltip="online.common.G">
 <persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/OnlineLobby.jar&lt;online.common(G.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerConstants.java" tooltip="boardspace/checkerboard/CheckerConstants.java">
-<persistable path="/boardspace/checkerboard/CheckerConstants.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AreaBoard.java" tooltip="boardspace/area/AreaBoard.java">
+<persistable path="/boardspace/area/AreaBoard.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HexGameViewer.java" tooltip="boardspace/hex/HexGameViewer.java">
-<persistable path="/boardspace/hex/HexGameViewer.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TakoJudoPlay.java" tooltip="boardspace/takojudo/TakoJudoPlay.java">
+<persistable path="/boardspace/takojudo/TakoJudoPlay.java"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="stackCell.class" tooltip="online.game.stackCell">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/Game.jar&lt;online.game(stackCell.class"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="commonRobot.class" tooltip="online.search.commonRobot">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/Game.jar&lt;online.search(commonRobot.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerBoard.java" tooltip="boardspace/checkerboard/CheckerBoard.java">
-<persistable path="/boardspace/checkerboard/CheckerBoard.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TakojudoBoard.java" tooltip="boardspace/takojudo/TakojudoBoard.java">
+<persistable path="/boardspace/takojudo/TakojudoBoard.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CrossfirePlay.java" tooltip="boardspace/crossfire/CrossfirePlay.java">
-<persistable path="/boardspace/crossfire/CrossfirePlay.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerMovespec.java" tooltip="boardspace/checkerboard/CheckerMovespec.java">
+<persistable path="/boardspace/checkerboard/CheckerMovespec.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CrossfireBoard.java" tooltip="boardspace/crossfire/CrossfireBoard.java">
-<persistable path="/boardspace/crossfire/CrossfireBoard.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckerPlay.java" tooltip="boardspace/checkerboard/CheckerPlay.java">
+<persistable path="/boardspace/checkerboard/CheckerPlay.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CrossfireCell.java" tooltip="boardspace/crossfire/CrossfireCell.java">
-<persistable path="/boardspace/crossfire/CrossfireCell.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CrossfireChip.java" tooltip="boardspace/crossfire/CrossfireChip.java">
-<persistable path="/boardspace/crossfire/CrossfireChip.java"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="StockArt.class" tooltip="online.common.StockArt">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/OnlineLobby.jar&lt;online.common(StockArt.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CrossfireViewer.java" tooltip="boardspace/crossfire/CrossfireViewer.java">
-<persistable path="/boardspace/crossfire/CrossfireViewer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HexPlay.java" tooltip="boardspace/hex/HexPlay.java">
-<persistable path="/boardspace/hex/HexPlay.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GounkiPlay.java" tooltip="boardspace/gounki/GounkiPlay.java">
-<persistable path="/boardspace/gounki/GounkiPlay.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="square_geo_board.class" tooltip="online.game.square_geo_board">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=boardspace/Game.jar&lt;online.game(square_geo_board.class"/>
 </file>
 </mruList>
 </workbench>

@@ -5,6 +5,7 @@ import online.common.*;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.*;
+
 import online.game.*;
 import static hex.Hexmovespec.*;
 
@@ -58,7 +59,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 	public void SetDrawState() {G.Error("not expected"); };	
 	OStack<hexCell>animationStack = new OStack<hexCell>(hexCell.class);
     private int chips_on_board = 0;			// number of chips currently on the board
-    private int fullBoard = 0;
+    private int fullBoard = 0;				// the number of cells in the board
     private int sweep_counter=0;			// used when scanning for blobs
     private int directionWhiteHome = -1;
     private int directionBlackHome = -1;
@@ -163,18 +164,14 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
      */
     public void sameboard(HexGameBoard from_b)
     {
-        super.sameboard(from_b); // hexboard compares the cells of the board using cell.sameCell
+        super.sameboard(from_b); // // calls sameCell for each cell, also for inherited class variables.
         
         G.Assert(G.sameArrayContents(win,from_b.win),"win mismatch");
         G.Assert(G.sameArrayContents(playerColor,from_b.playerColor),"playerColor mismatch");
         G.Assert(G.sameArrayContents(playerChip,from_b.playerChip),"playerChip mismatch");
         G.Assert(pickedObject==from_b.pickedObject, "picked Object mismatch");
-        G.Assert(whoseTurn == from_b.whoseTurn,"whoseTurn mismatch");
-        G.Assert(board_state == from_b.board_state,"board_state mismatch");
-        G.Assert(moveNumber == from_b.moveNumber,"moveNumber mismatch");
         G.Assert(chips_on_board == from_b.chips_on_board,"chips_on_board mismatch");
-        G.Assert(resign_planned == from_b.resign_planned,"resign_planned mismatch");
-
+ 
 
         // this is a good overall check that all the copy/check/digest methods
         // are in sync, although if this does fail you'll no doubt be at a loss
@@ -209,9 +206,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
      * simultaneously and playing one against the other.
      */
     public long Digest()
-    {
-    	long v = 0;
- 
+    { 
         // the basic digestion technique is to xor a bunch of random numbers. 
     	// many object have an associated unique random number, including "chip" and "cell"
     	// derivatives.  If the same object is digested more than once (ie; once as a chip
@@ -219,12 +214,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     	// different identity for the second use.
         //
         Random r = new Random(64 * 1000); // init the random number generator
-        
-		// note we can't change this without invalidating all the existing digests.
-		for(hexCell c=allCells; c!=null; c=c.next)
-		{	
-            v ^= c.Digest();
-		}
+        long v = super.Digest(r);
+
 		// many games will want to digest pickedSource too
 		// v ^= cell.Digest(r,pickedSource);
 		v ^= chip.Digest(r,playerChip[0]);	// this accounts for the "swap" button
@@ -238,11 +229,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
      * of the board for it to manipulate and analyze without affecting 
      * the board that is being displayed.
      *  */
-    public void clone(HexGameBoard from_board)
+    public void clone(HexGameBoard from_b)
     {
-        HexGameBoard from_b = from_board;
-        G.Assert(from_b != this, "can clone from myself");
-        doInit(from_b.gametype);
         super.clone(from_b);
 
         chips_on_board = from_b.chips_on_board;
@@ -250,29 +238,21 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         
         getCell(emptyCells,from_b.emptyCells);
         
-        whoseTurn = from_b.whoseTurn;
-        board_state = from_b.board_state;
-        moveNumber = from_b.moveNumber;
         droppedDest = null;
         pickedSource = getCell(from_b.pickedSource);
         pickedObject = from_b.pickedObject;
         resetState = from_b.resetState;
         lastPicked = null;
 
-        G.copy(win,from_b.win);
         G.copy(playerColor,from_b.playerColor);
         G.copy(playerChip,from_b.playerChip);
-        
-        resign_planned = from_b.resign_planned;
-
+ 
         if(debug) { sameboard(from_b); }
     }
 
     /* initialize a board back to initial empty state */
     public void doInit(String gtype)
-    {
-
-       Init_Standard(gtype.toLowerCase());
+    {	Init_Standard(gtype.toLowerCase());
         animationStack.clear();
         G.setValue(win,false);
         resign_planned = false;
@@ -286,12 +266,6 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     {	
         whoseTurn = (who<0)?FIRST_PLAYER_INDEX:who;
     }
-
-    public void togglePlayer()
-    {
-        setWhoseTurn(nextPlayer[whoseTurn]);
-    }
-
     //
     // change whose turn it is, increment the current move number
     //
@@ -308,7 +282,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         case CONFIRM_STATE:
         case RESIGN_STATE:
             moveNumber++; //the move is complete in these states
-			togglePlayer();
+            setWhoseTurn(nextPlayer[whoseTurn]);
             return;
         }
     }

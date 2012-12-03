@@ -74,7 +74,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
      */
     public void sameboard(CheckerBoard from_b)
     {
-    	super.sameboard(from_b);	// calls sameCell for each cell
+    	super.sameboard(from_b);	// calls sameCell for each cell, also for inherited class variables.
     	
 
        	G.Assert(G.sameArrayContents(win,from_b.win),"win array contents match");
@@ -83,10 +83,6 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
        	G.Assert(sameCells(pickedSourceStack,from_b.pickedSourceStack),"pickedSourceStack mismatch");
         G.Assert(sameCells(droppedDestStack,from_b.droppedDestStack),"droppedDestStack mismatch");
         G.Assert(pickedObject==from_b.pickedObject,"pickedObject doesn't match");
-        G.Assert((whoseTurn == from_b.whoseTurn),"whoseTurn matches");
-        G.Assert((board_state == from_b.board_state),"board_state matches");
-        G.Assert((moveNumber == from_b.moveNumber),"moveNumber matches");
-        G.Assert((resign_planned == from_b.resign_planned),"resign_planned matches");
         // this is a good overall check that all the copy/check/digest methods
         // are in sync, although if this does fail you'll no doubt be at a loss
         // to explain why.
@@ -121,7 +117,6 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
      */
    public long Digest()
     {
-        long v = 0;
 
         // the basic digestion technique is to xor a bunch of random numbers. The key
         // trick is to always generate exactly the same sequence of random numbers, and
@@ -129,10 +124,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         // digests are invalidated.
         //
         Random r = new Random(64 * 1000); // init the random number generator
-        
-		for(CheckerCell c = allCells; c!=null; c=c.next)
-		{	v ^= c.Digest();
-		}
+        long v = super.Digest(r);
+
 		v ^= chip.Digest(r,pickedObject);
 		v ^= Digest(r,pickedSourceStack);
 		v ^= Digest(r,droppedDestStack);
@@ -150,30 +143,15 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
      * of the board for it to manupulate and analyze without affecting 
      * the board that is being displayed.
      *  */
-    public void clone(CheckerBoard from_board)
-    {
-        CheckerBoard from_b = from_board;
-        G.Assert(from_b != this, "can clone from myself");
-        doInit(from_b.gametype,from_b.randomKey);
-        
-        whoseTurn = from_b.whoseTurn;
-        board_state = from_b.board_state;
-        moveNumber = from_b.moveNumber;
+    public void clone(CheckerBoard from_b)
+    {	
+        super.clone(from_b);			// copies the standard game cells in allCells list
         pickedObject = from_b.pickedObject;	
         getCell(pickedSourceStack,from_b.pickedSourceStack);
         getCell(droppedDestStack,from_b.droppedDestStack);
         G.copy(win,from_b.win);
         G.copy(playerColor,from_b.playerColor);
         G.copy(chips_on_board,from_b.chips_on_board);
-
-		for(CheckerCell dest=allCells,src=from_board.allCells;
-			dest!=null;
-			dest=dest.next,src=src.next)
-		{ dest.copyFrom(src);
-		}
-        resign_planned = from_b.resign_planned;
-        
-        
         sameboard(from_b);
     }
 
@@ -228,10 +206,6 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         whoseTurn = (who<0)?FIRST_PLAYER_INDEX:who;
     }
 
-    public void togglePlayer()
-    {
-        setWhoseTurn(nextPlayer[whoseTurn]);
-    }
 
     //
     // change whose turn it is, increment the current move number
@@ -249,7 +223,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         case DRAW_STATE:
         case RESIGN_STATE:
             moveNumber++; //the move is complete in these states
-			togglePlayer();
+            setWhoseTurn(nextPlayer[whoseTurn]);
             return;
         }
     }
