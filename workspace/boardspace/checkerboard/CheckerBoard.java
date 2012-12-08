@@ -57,10 +57,9 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 	public CheckerCell newcell(char c,int r)
 	{	return(new CheckerCell(c,r));
 	}
-    public CheckerBoard(String init,int key) // default constructor
-    {   drawing_style = DrawingStyle.STYLE_NOTHING; // STYLE_CELL or STYLE_LINES
-    	Grid_Style = CHECKERGRIDSTYLE; //coordinates left and bottom
-        doInit(init,key); // do the initialization 
+    public CheckerBoard(String init,long rv) // default constructor
+    {   
+        doInit(init,rv); // do the initialization 
      }
 
 
@@ -124,7 +123,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         // digests are invalidated.
         //
         Random r = new Random(64 * 1000); // init the random number generator
-        long v = super.Digest(r);
+        long v = super.Digest();
 
 		v ^= chip.Digest(r,pickedObject);
 		v ^= Digest(r,pickedSourceStack);
@@ -156,9 +155,11 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     }
 
     /* initialize a board back to initial empty state */
-    public void doInit(String gtype,int key)
-    {	randomKey = key;	// not used, but for reference in this demo game
-    	rack = new CheckerCell[CheckerChip.N_STANDARD_CHIPS*2];
+    public void doInit(String gtype,long rv)
+    {  	drawing_style = DrawingStyle.STYLE_NOTHING; // STYLE_CELL or STYLE_LINES
+    	Grid_Style = CHECKERGRIDSTYLE; //coordinates left and bottom
+    	randomKey = rv;
+		rack = new CheckerCell[CheckerChip.N_STANDARD_CHIPS*2];
     	Random r = new Random(67246765);
      	for(int i=0,pl=FIRST_PLAYER_INDEX;i<CheckerChip.N_STANDARD_CHIPS*2; i++,pl=nextPlayer[pl])
     	{

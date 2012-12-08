@@ -214,7 +214,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     	// different identity for the second use.
         //
         Random r = new Random(64 * 1000); // init the random number generator
-        long v = super.Digest(r);
+        long v = super.Digest();
 
 		// many games will want to digest pickedSource too
 		// v ^= cell.Digest(r,pickedSource);
@@ -251,8 +251,9 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     }
 
     /* initialize a board back to initial empty state */
-    public void doInit(String gtype)
-    {	Init_Standard(gtype.toLowerCase());
+    public void doInit(String gtype,long key)
+    {	randomKey = key;
+    	Init_Standard(gtype.toLowerCase());
         animationStack.clear();
         G.setValue(win,false);
         resign_planned = false;

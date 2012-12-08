@@ -1358,7 +1358,7 @@ public class HexGameViewer extends commonCanvas
             }
             else if (name.equals(game_property))
             {
-                if (!(value.toLowerCase().equals("hex") || value.equals(Hex_SGF)))
+                if (!((value.toLowerCase().equals("hex") || value.equals(Hex_SGF))))
                 {
                 	G.Error("game type " + value + " is not this game");
                 }
