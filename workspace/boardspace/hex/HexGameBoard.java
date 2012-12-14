@@ -11,7 +11,7 @@ import static hex.Hexmovespec.*;
 
 /**
  * HexGameBoard knows all about the game of Hex, which is played
- * on a hexagonal board. It gets a lot of logistic support from 
+ * on a heagonal board. It gets a lot of logistic support from 
  * common.hexBoard, which knows about the coordinate system.  
  * 
  * This class doesn't do any graphics or know about anything graphical, 

@@ -460,9 +460,7 @@ public class CheckerGameViewer extends commonCanvas
         // now draw the contents of the board and anything it is pointing at
         //
      	
-        CheckerCell hitCell = null;
         int perspective_offset = 0;
-        int hitX=0,hitY=0;
         // conventionally light source is to the right and shadows to the 
         // left, so we want to draw in right-left top-bottom order so the
         // solid parts will fall on top of existing shadows. 
@@ -484,20 +482,18 @@ public class CheckerGameViewer extends commonCanvas
             CheckerCell cell = gb.getCell(thiscol,row);
             int ypos = (brect.y + brect.height) - gb.cellToY(thiscol, row);
             int xpos = brect.x + gb.cellToX(thiscol, row);
-            if( cell.drawStack(gc,highlight,xpos,ypos,this,liftSteps,SQUARESIZE,0.1,null)) { hitCell = cell; }
+            if( cell.drawStack(gc,highlight,xpos,ypos,this,liftSteps,SQUARESIZE,0.1,null)) 
+            	{ // draw a highlight rectangle here, but defer drawing an arrow until later, after the moving chip is drawn
+            	highlight.arrow =(getMovingObject()>=0) 
+      				? StockArt.DownArrow 
+      				: cell.topChip()!=null?StockArt.UpArrow:null;
+            	highlight.awidth = SQUARESIZE/2;
+            	G.frameRect(gc,Color.red,xpos-CELLSIZE,ypos-CELLSIZE-((cell.topChip()==null)?0:perspective_offset),CELLSIZE*2,CELLSIZE*2);
+            	
+            	}
 
         	}
     	}
-  
-        if(hitCell!=null)
-        {	// draw a highlight rectangle here, but defer drawing an arrow until later, after the moving chip is drawn
-      		highlight.arrow =(getMovingObject()>=0) 
-      			? StockArt.DownArrow 
-      			: hitCell.topChip()!=null?StockArt.UpArrow:null;
-      		highlight.awidth = SQUARESIZE/2;
-        	G.frameRect(gc,Color.red,hitX-CELLSIZE,hitY-CELLSIZE-((hitCell.topChip()==null)?0:perspective_offset),CELLSIZE*2,CELLSIZE*2);
-        }
-
     }
      public void drawAuxControls(Graphics gc,HitPoint highlight)
     {  DrawLiftRect(gc,highlight);
@@ -1070,7 +1066,7 @@ private void playSounds(commonMove mm)
      */
     public void performHistoryInitialization(StringTokenizer his)
     {	String token = his.nextToken();		// should be a checker init spec
-    	int rk = G.IntToken(his);
+    	long rk = G.LongToken(his);
     	// make the random key part of the standard initialization,
     	// even though games like checkers probably don't use it.
         b.doInit(token,rk);
@@ -1148,7 +1144,7 @@ private void playSounds(commonMove mm)
             if (setup_property.equals(name))
             {	StringTokenizer st = new StringTokenizer(value);
             	String typ = st.nextToken();
-            	int ran = G.IntToken(st);
+            	long ran = G.LongToken(st);
                 b.doInit(typ,ran);
              }
             else if (name.equals(comment_property))
