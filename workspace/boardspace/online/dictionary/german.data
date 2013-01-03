@@ -309,6 +309,7 @@ V Schlagen fortsetzen
 S Continue deploying the stack
 K Continue merging or click Done
 V Vereine weiter oder klicke Fertig
+S Continue moving
 K Cookie-Disco
 V Cookie Disco
 K Cookie-Disco-crawl
@@ -376,6 +377,8 @@ K Drop a tile to enlarge the board
 V Lege einen Spielstein, um das Spielfeld zu vergr\u00f6ssern
 K Drop bunny chip
 V Lege einen Stein f\u00fcr den 'Hasen'
+S Drop the displaced chip anywhere except the top row
+S Drop the displaced chip anywhere expept the bottom row
 K Drop the moving stack back on the rack
 V Den aufgenommenen Stapel wieder zum Vorrat legen
 K Drop the ring
@@ -534,6 +537,14 @@ S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
 S Gyges
+K Gyges-advanced
+V Gyges (advanced rules)
+K Gyges-advanced_variation
+V Gyges with the replace-and-drop option
+K Gyges-beginner
+V Gyges (beginner rules)
+K Gyges-beginner_variation
+V Gyges without the replace-and-drop option
 K Gyges_family
 V Gyges
 K Gyges_variation
@@ -748,6 +759,9 @@ K Move a ball or change a Ring
 V Bewege eine Kugel oder ver\u00e4ndere einen Ring
 K Move a piece
 V Bewege einen Stein
+S Move a piece from the row closest to the bottom of the board
+S Move a piece from the row closest to the top of the board
+S Move a piece into the row closest to the bottom of the board
 K Move a piece one space
 V Bewege einen Stein ein Feld weit
 K Move a piece, step #1
@@ -771,6 +785,8 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V Bewege eine Vulkanspitze
+S Move any piece to the opposite goal
+S Move any piece to the opposite goal space
 S Move one of your pieces
 K Move one ship
 V Bewege ein Schiff
@@ -912,6 +928,7 @@ K Place a marker on any empty cell
 V Lege einen Stein auf eine freie Zelle
 K Place a marker on any empty cell, or Swap Colors
 V Lege einen Stein auf eine freie Zelle oder tausche die Farben
+S Place a piece into the row closest to the top of the board
 K Place a piece on the board
 V Lege einen Stein auf das Spielfeld
 K Place a piece on the board, or Exchange an off-board piece for a new tile
@@ -1152,6 +1169,7 @@ K Shoot
 V Schie\u00dfen
 K Show SGF Text
 V SGF-Text anzeigen
+S Show info for #1
 K Shuffle pieces to the exchange area, Click Done to start the exchange
 V Bewege die Steine in den Austauschbereich. Klicke auf Fertig, um den Austausch zu beginnen.
 K Slide the chip toward the center
@@ -1195,8 +1213,6 @@ K State unknown.
 V Status unbekannt.
 K Swap
 V Tauschen
-K Swap Colors
-V Farben tauschen
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -1622,6 +1638,8 @@ K stillwaiting
 V Wird geladen ... bitte warten.
 K surround your opponents queen bee
 V Umzingle die gegnerische Bienenk\u00f6nigin
+K swap solors
+V Swap Colors
 K the game has resumed
 V das Spiel wurde fortgesetzt
 K timeoutWarning
@@ -1638,4 +1656,4 @@ K you may increase your bid
 V Du kannst dein Gebot erh\u00f6hen
 K your name
 V Dein Name
-N 902
+N 916

@@ -292,6 +292,7 @@ V Blijf slaan
 S Continue deploying the stack
 K Continue merging or click Done
 V Blijf samenvoegen of Klik Klaar
+S Continue moving
 K Cookie-Disco
 V Cookie Disco
 K Cookie-Disco-crawl
@@ -356,6 +357,8 @@ K Drop a tile to enlarge the board
 V Plaats een hex om het bord te vergroten
 K Drop bunny chip
 V Plaats een chip van de Bunny speler
+S Drop the displaced chip anywhere except the top row
+S Drop the displaced chip anywhere expept the bottom row
 K Drop the moving stack back on the rack
 V Plaats de kolom terug in het rek
 K Drop the ring
@@ -510,6 +513,14 @@ S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
 S Gyges
+K Gyges-advanced
+V Gyges (advanced rules)
+K Gyges-advanced_variation
+V Gyges with the replace-and-drop option
+K Gyges-beginner
+V Gyges (beginner rules)
+K Gyges-beginner_variation
+V Gyges without the replace-and-drop option
 K Gyges_family
 V Gyges
 K Gyges_variation
@@ -720,6 +731,9 @@ K Move a ball or change a Ring
 V Verplaats een bal of een Ring
 K Move a piece
 V Zet een stuk
+S Move a piece from the row closest to the bottom of the board
+S Move a piece from the row closest to the top of the board
+S Move a piece into the row closest to the bottom of the board
 K Move a piece one space
 V Verplaats een stuk naar een aangrenzend veld
 K Move a piece, step #1
@@ -743,6 +757,8 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V Zet een volcano cap
+S Move any piece to the opposite goal
+S Move any piece to the opposite goal space
 S Move one of your pieces
 K Move one ship
 V Verplaats een schip
@@ -870,6 +886,7 @@ K Place a marker on any empty cell
 V Plaats een steen op een vrij veld
 K Place a marker on any empty cell, or Swap Colors
 V Plaats een steen op een vrij veld, of wissel van kleur
+S Place a piece into the row closest to the top of the board
 K Place a piece on the board
 V Plaats een stuk op het bord
 K Place a piece on the board, or Exchange an off-board piece for a new tile
@@ -1102,6 +1119,7 @@ V Verschepingen
 S Shoot
 K Show SGF Text
 V Toon SGF Tekst
+S Show info for #1
 K Shuffle pieces to the exchange area, Click Done to start the exchange
 V Schuif stukken naar de ruilbeurs, Klik Klaar om te ruilen
 K Slide the chip toward the center
@@ -1147,8 +1165,6 @@ K State unknown.
 V Status onbekend.
 K Swap
 V Wissel kleur
-K Swap Colors
-V Verwissel Kleuren
 S Swap colors, or place a chip, or move a board
 S Swing View
 K Switch to a more oblique view of the board
@@ -1562,6 +1578,8 @@ K stillwaiting
 V Opent...geduld aub.
 K surround your opponents queen bee
 V omsingel de koningin van de tegenspeler
+K swap solors
+V Swap Colors
 K the game has resumed
 V de partij is hervat
 K timeoutWarning
@@ -1578,4 +1596,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 902
+N 916

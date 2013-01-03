@@ -244,6 +244,7 @@ V Container s jin\u00fdmi p\u0159epravn\u00edmi pravidly
 S Continue Capturing
 S Continue deploying the stack
 S Continue merging or click Done
+S Continue moving
 K Cookie-Disco
 V Cookie Disco
 K Cookie-Disco-crawl
@@ -305,6 +306,8 @@ V Hotovo
 S Drop a tile to enlarge the board
 K Drop bunny chip
 V Place one of the Bunny player's chips
+S Drop the displaced chip anywhere except the top row
+S Drop the displaced chip anywhere expept the bottom row
 S Drop the moving stack back on the rack
 K Drop the ring
 V Polo\u017ete krou\u017eek
@@ -444,6 +447,14 @@ S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
 S Gyges
+K Gyges-advanced
+V Gyges (advanced rules)
+K Gyges-advanced_variation
+V Gyges with the replace-and-drop option
+K Gyges-beginner
+V Gyges (beginner rules)
+K Gyges-beginner_variation
+V Gyges without the replace-and-drop option
 K Gyges_family
 V Gyges
 K Gyges_variation
@@ -627,6 +638,9 @@ K Move a Tower
 V Move any Tower
 S Move a ball or change a Ring
 S Move a piece
+S Move a piece from the row closest to the bottom of the board
+S Move a piece from the row closest to the top of the board
+S Move a piece into the row closest to the bottom of the board
 S Move a piece one space
 S Move a piece, step #1
 K Move a ring
@@ -645,6 +659,8 @@ S Move a soldier, or fire a cannon
 S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 S Move a volcano cap
+S Move any piece to the opposite goal
+S Move any piece to the opposite goal space
 S Move one of your pieces
 S Move one ship
 S Move stacks around any way you want to
@@ -755,6 +771,7 @@ K Place a marker on any empty cell
 V Polo\u017ete zna\u010dku na pr\u00e1zdn\u00e9 pol\u00ed\u010dko.
 K Place a marker on any empty cell, or Swap Colors
 V Polo\u017ete zna\u010dku na pr\u00e1zdn\u00e9 pol\u00ed\u010dko nebo proho\u010fte barvy.
+S Place a piece into the row closest to the top of the board
 S Place a piece on the board
 S Place a piece on the board, or Exchange an off-board piece for a new tile
 S Place a piece on the board, or move a piece already on the board
@@ -951,6 +968,7 @@ S Shipping
 S Shoot
 K Show SGF Text
 V Zobrazit SGF text
+S Show info for #1
 S Shuffle pieces to the exchange area, Click Done to start the exchange
 K Slide the chip toward the center
 V Pohn\u011bte kamenem sm\u011brem ke st\u0159edu
@@ -991,8 +1009,6 @@ K State unknown.
 V Nezn\u00e1m\u00fd stav.
 K Swap
 V Prohodit
-K Swap Colors
-V Prohodit barvy
 S Swap colors, or place a chip, or move a board
 S Swing View
 K Switch to a more oblique view of the board
@@ -1372,6 +1388,8 @@ S stack six or capture six
 K stillwaiting
 V st\u00e1le spou\u009at\u00edm... pros\u00edm \u010dekejte.
 S surround your opponents queen bee
+K swap solors
+V Swap Colors
 K the game has resumed
 V hra pokra\u010duje
 K timeoutWarning
@@ -1385,4 +1403,4 @@ V V\u00edtejte na BoardSpace Lobby, verze #1
 S you may increase your bid
 K your name
 V va\u009ae jm\u00e9no
-N 902
+N 916

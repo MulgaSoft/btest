@@ -295,6 +295,7 @@ V Forts\u00e4tt ta kulor
 S Continue deploying the stack
 K Continue merging or click Done
 V Forts\u00e4tt blandning eller klicka p\u00e5 klar
+S Continue moving
 K Cookie-Disco
 V Cookie Disco
 K Cookie-Disco-crawl
@@ -359,6 +360,8 @@ K Drop a tile to enlarge the board
 V Sl\u00e4pp en bricka p\u00e5 att f\u00f6rstora br\u00e4det
 K Drop bunny chip
 V Placera en av bunnyspelarens brickor
+S Drop the displaced chip anywhere except the top row
+S Drop the displaced chip anywhere expept the bottom row
 K Drop the moving stack back on the rack
 V Flytta h\u00f6gen tillbaka p\u00e5 st\u00e4llningen
 K Drop the ring
@@ -516,6 +519,14 @@ S Green Dome
 S Grey Palace
 S Grey Palace Bonus (1 point)
 S Gyges
+K Gyges-advanced
+V Gyges (advanced rules)
+K Gyges-advanced_variation
+V Gyges with the replace-and-drop option
+K Gyges-beginner
+V Gyges (beginner rules)
+K Gyges-beginner_variation
+V Gyges without the replace-and-drop option
 K Gyges_family
 V Gyges
 K Gyges_variation
@@ -729,6 +740,9 @@ K Move a ball or change a Ring
 V Flytta en kula eller \u00e4ndra en ring
 K Move a piece
 V Flytta en pj\u00e4s
+S Move a piece from the row closest to the bottom of the board
+S Move a piece from the row closest to the top of the board
+S Move a piece into the row closest to the bottom of the board
 K Move a piece one space
 V Flytta en pj\u00e4s ett steg
 K Move a piece, step #1
@@ -752,6 +766,8 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V Flytta ett Volcanolock
+S Move any piece to the opposite goal
+S Move any piece to the opposite goal space
 S Move one of your pieces
 K Move one ship
 V Flytta ett skepp
@@ -879,6 +895,7 @@ K Place a marker on any empty cell
 V Placera en bricka i en tom cell
 K Place a marker on any empty cell, or Swap Colors
 V Placera en bricka i en tom cell eller byt f\u00e4rg
+S Place a piece into the row closest to the top of the board
 K Place a piece on the board
 V Placera en pj\u00e4s p\u00e5 br\u00e4det
 K Place a piece on the board, or Exchange an off-board piece for a new tile
@@ -1112,6 +1129,7 @@ K Shoot
 V Skjut
 K Show SGF Text
 V Visa SGF
+S Show info for #1
 K Shuffle pieces to the exchange area, Click Done to start the exchange
 V Blanda brickorna i v\u00e4xlingsutrymmet, klicka p\u00e5 Klar f\u00f6r att starta v\u00e4xlingen
 K Slide the chip toward the center
@@ -1157,8 +1175,6 @@ K State unknown.
 V Ok\u00e4nd status
 K Swap
 V Byt
-K Swap Colors
-V Byt f\u00e4rg
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -1570,6 +1586,8 @@ K stillwaiting
 V startar fortfarande... var god v\u00e4nta.
 K surround your opponents queen bee
 V omringa din motst\u00e5ndares bidrottning
+K swap solors
+V Swap Colors
 K the game has resumed
 V spelet har \u00e5terupptagits
 K timeoutWarning
@@ -1586,4 +1604,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 902
+N 916
