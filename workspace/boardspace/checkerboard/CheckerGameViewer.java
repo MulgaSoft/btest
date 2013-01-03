@@ -3,7 +3,6 @@ package checkerboard;
 import online.common.*;
 import online.common.SimpleSprite.Movement;
 import online.game.*;
-import online.game.BoardProtocol.replayMode;
 import online.game.sgf.*;
 
 import java.awt.*;
@@ -387,7 +386,7 @@ public class CheckerGameViewer extends commonCanvas
         boolean canPick = (thisChip!=null);
         HitPoint pt = (canHit && (canPick||canDrop))? highlight : null; 
         String msg = ""+b.chips_on_board[forPlayer];
-        thisCell.drawStack(gc,pt,r.x+r.width/2,r.y+r.height/2,this,0,r.width,0,msg);
+        thisCell.drawStack(gc,this,pt,r.width,r.x+r.width/2,r.y+r.height/2,0,0,msg);
 
         if((highlight!=null) && (highlight.hitObject==thisCell))
         {	highlight.arrow = canDrop ? StockArt.DownArrow : StockArt.UpArrow;
@@ -482,7 +481,7 @@ public class CheckerGameViewer extends commonCanvas
             CheckerCell cell = gb.getCell(thiscol,row);
             int ypos = (brect.y + brect.height) - gb.cellToY(thiscol, row);
             int xpos = brect.x + gb.cellToX(thiscol, row);
-            if( cell.drawStack(gc,highlight,xpos,ypos,this,liftSteps,SQUARESIZE,0.1,null)) 
+            if( cell.drawStack(gc,this,highlight,SQUARESIZE,xpos,ypos,liftSteps,0.1,null)) 
             	{ // draw a highlight rectangle here, but defer drawing an arrow until later, after the moving chip is drawn
             	highlight.arrow =(getMovingObject()>=0) 
       				? StockArt.DownArrow 

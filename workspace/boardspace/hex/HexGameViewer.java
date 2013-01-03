@@ -1,8 +1,6 @@
 package hex;
 
 import online.common.*;
-import online.common.SimpleSprite.Movement;
-
 
 import java.awt.*;
 import java.util.*;
@@ -10,7 +8,6 @@ import java.util.*;
 import javax.swing.JCheckBoxMenuItem;
 
 import online.game.*;
-import online.game.BoardProtocol.replayMode;
 /**
  * 
  * Overall Architecture
@@ -752,49 +749,44 @@ public class HexGameViewer extends commonCanvas
         
         handleExecute(bb,mm,replay);
         
+        /**
+         * animations are handled by a simple protocol between the board and viewer.
+         * when stones are moved around on the board, it pushes the source and destination
+         * cells onto the animationStck.  startBoardAnimations converts those points into
+         * animation sprites.  drawBoardElements arranges for the destination stones, which
+         * are already in place, to disappear until the animation finishes.  The actual drawing
+         * is done by drawSprites at the end of redrawBoard
+         */
         startBoardAnimations(replay);
         
 		lastDropped = bb.lastDroppedObject;	// this is for the image adjustment logic
 		if(replay!=replayMode.Replay) { playSounds((Hexmovespec)mm); }
        return (true);
     }
+     /**
+      * This is a simple animation which moves everything at the same time, at a speed proportional to the distance
+      * for hex, this is normally just one chip moving.  Note that the interface to drawStack arranges to make the
+      * destination chip disappear until the animation is finished.
+      * @param replay
+      */
      void startBoardAnimations(replayMode replay)
      {
         if(replay!=replayMode.Replay)
-     	{	while(bb.animationStack.size()>1)
+     	{
+     		double full = G.distance(0,0,boardRect.width,boardRect.height);
+ 
+        	while(bb.animationStack.size()>1)
      		{
      		hexCell dest = bb.animationStack.pop();
      		hexCell src = bb.animationStack.pop();
-     		startAnimation(src,dest,dest.topChip());
+    		double dist = G.distance(src.current_center_x, src.current_center_y, dest.current_center_x,  dest.current_center_y);
+    		double endTime = 0.5*Math.sqrt(dist/full);
+     		startAnimation(src,dest,dest.topChip(),(int)bb.CELLSIZE,0,endTime);
      		}
      	}
         	bb.animationStack.clear();
      } 
-     void startAnimation(hexCell from,hexCell to,hexChip top)
-     {	if((from!=null) && (to!=null) && (top!=null))
-     	{	double speed = 0.5;
-      		if(debug)
-     		{
-     			G.Assert(!((from.current_center_x==0) && (from.current_center_y==0)),"From Cell %s center is not set",from);
-        			G.Assert(!((to.current_center_x==0) && (to.current_center_y==0)),"To %s center is not set",to);
-     		}
-     		
-     		// make time vary as a function of distance to partially equalize the runtim of
-     		// animations for long verses short moves.
-     		double dist = G.distance(from.current_center_x, from.current_center_y, to.current_center_x,  to.current_center_y);
-     		double full = G.distance(0,0,boardRect.width,boardRect.height);
-     		double endtime = speed*Math.sqrt(dist/full);
-     		
-     		SimpleSprite newSprite = new SimpleSprite(true,top,
-     				(int)bb.CELLSIZE,	// use the same cell size as drawSprite would
-     				endtime,
-             		from.current_center_x,from.current_center_y,
-             		to.current_center_x,to.current_center_y);
-     		newSprite.movement = Movement.SlowIn;
-             to.addActiveAnimation(newSprite);
-   			addSprite(newSprite);
-   			}
-     }
+
  void playSounds(Hexmovespec mm)
  {
 	 switch(mm.op)
@@ -1159,7 +1151,11 @@ public class HexGameViewer extends commonCanvas
         ShowStats(offGC,vcrRect.x+vcrRect.width+10,vcrRect.y+vcrRect.height/2);	// add some stats on top of everything
  
         showRectangles(offGC, CELLSIZE); //show rectangles in the UI
+        //
+        // draw any animations that are in progress
+        //
         drawSprites(offGC);
+        
         if(offScreen!=null)
         	{ // display the completed result if it was drawn into a backing bitmap rather than directly
         	displayClipped(g,fullRect,chatRect,offScreen);

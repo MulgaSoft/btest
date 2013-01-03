@@ -11,7 +11,7 @@ import static hex.Hexmovespec.*;
 
 /**
  * HexGameBoard knows all about the game of Hex, which is played
- * on a heagonal board. It gets a lot of logistic support from 
+ * on a hexagonal board. It gets a lot of logistic support from 
  * common.hexBoard, which knows about the coordinate system.  
  * 
  * This class doesn't do any graphics or know about anything graphical, 
@@ -700,6 +700,12 @@ void doSwap()
 			hexCell dest =  getCell(BoardLocation,m.to_col,m.to_row);
 			pickObject(src);
             dropObject(dest);
+            /**
+             * if the user clicked on a board space without picking anything up,
+             * animate a stone moving in from the pool.  For Hex, the "picks" are
+             * removed from the game record, so there are never picked stones in
+             * single step replays.
+             */
             if(replay!=replayMode.Replay && (po==null))
             	{ animationStack.push(animsrc==null?src:animsrc);
             	  animationStack.push(dest); 
@@ -733,8 +739,6 @@ void doSwap()
             //setNextStateAfterDrop();
 
             break;
-
-
  
         case MOVE_START:
             setWhoseTurn(m.player);
@@ -783,6 +787,7 @@ void doSwap()
         				if(ps==null) 
         					{ ps = pickedSource = (pickedObject==hexChip.Black)?blackChipPool:whiteChipPool; 
         					}
+        				// animate the stone moving back to the pool
         				animationStack.push(dd);
         				animationStack.push(ps);
         			}
