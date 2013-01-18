@@ -17,7 +17,7 @@
     <h1 style="text-align: center;"><img src="/images/master-logo.jpg"
         title="" alt="boardspace.net" style="width: 600px; height:
         100px;"></h1>
-    <h1 style="text-align: center;">L-ogin Page<br>
+    <h1 style="text-align: center;">Login Page<br>
     </h1>
     <table>
       <tbody>
@@ -88,8 +88,8 @@
                       <td style="vertical-align: top;">
                         <center>
                           <h3>Your Java Version</h3>
-                          <applet codebase="/java/"
-                            code="online.version" height="50"
+                          <applet codebase="/java"
+                            code="online.version.class" height="50"
                             width="200"> <strong> This browser does not
                               have a Java Plug-in. </strong> </applet></center>
                         <p> There should be a java applet above this
