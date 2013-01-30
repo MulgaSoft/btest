@@ -11,13 +11,7 @@ import javax.swing.JCheckBoxMenuItem;
 import static checkerboard.CheckerMovespec.*;
 
 /**
- * 
- * Change History
- *
- * May 3007 Inital work in progress. 
- *
- * This code is derived from the "HexGameViewer" class.  Refer to the
- * documentation there for overall structure notes.
+ * This code shows the overall structure appropriate for a game view window.
 */
 public class CheckerGameViewer extends commonCanvas 
 	implements ViewerProtocol, CheckerConstants, sgf_names
@@ -81,6 +75,7 @@ public class CheckerGameViewer extends commonCanvas
     	// adjusted to the actual number, adjusted by the min and max
        	// int players_in_game = Math.max(3,info.getInt(exHashtable.PLAYERS_IN_GAME,4));
     	// players = new commonPlayer[players_in_game];
+    	int players_in_game = Math.max(2,info.getInt(exHashtable.PLAYERS_IN_GAME,2));
     	super.init(info);
        	// 
     	// for games that require some random initialization, the random key should be
@@ -90,7 +85,7 @@ public class CheckerGameViewer extends commonCanvas
 
         int randomKey = info.getInt(exHashtable.RANDOMSEED,-1);
        
-        b = new CheckerBoard(info.getString(exHashtable.GAMETYPE, Checker_INIT),randomKey);
+        b = new CheckerBoard(info.getString(exHashtable.GAMETYPE, Checker_INIT),randomKey,players_in_game);
         doInit(false);
         reverseOption = myFrame.addOption(s.get("Reverse View"),b.reverse_y,deferredEvents);
 
@@ -103,7 +98,9 @@ public class CheckerGameViewer extends commonCanvas
     public void doInit(boolean preserve_history)
     {	//System.out.println(myplayer.trueName + " doinit");
         super.doInit(preserve_history);				// let commonViewer do it's things
-        b.doInit(b.gametype,b.randomKey);			// initialize the board
+        int np = b.nPlayers();
+        b.doInit(b.gametype,b.randomKey,np);			// initialize the board
+        adjustPlayers(np);
         if(!preserve_history)
     	{ PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,replayMode.Live);
     	}
@@ -1020,7 +1017,7 @@ private void playSounds(commonMove mm)
      */
     public String gameType() 
     { 
-    	return(""+b.gametype+" "+b.randomKey); 
+    	return(""+b.gametype+" "+b.randomKey+" "+b.nPlayers()); 
    }
     public String sgfGameType() { return(Checker_SGF); }
 
@@ -1066,9 +1063,12 @@ private void playSounds(commonMove mm)
     public void performHistoryInitialization(StringTokenizer his)
     {	String token = his.nextToken();		// should be a checker init spec
     	long rk = G.LongToken(his);
+    	int np = G.IntToken(his);
     	// make the random key part of the standard initialization,
     	// even though games like checkers probably don't use it.
         b.doInit(token,rk);
+        adjustPlayers(np);
+
     }
 
     
@@ -1145,6 +1145,7 @@ private void playSounds(commonMove mm)
             	String typ = st.nextToken();
             	long ran = G.LongToken(st);
                 b.doInit(typ,ran);
+                adjustPlayers(b.nPlayers());
              }
             else if (name.equals(comment_property))
             {
@@ -1156,6 +1157,7 @@ private void playSounds(commonMove mm)
                 {
                 	G.Error("game type " + value + " is not this game");
                 }
+                adjustPlayers(b.nPlayers());
             }
             else if (parseVersionCommand(name,value,2)) {}
             else if (parsePlayerCommand(name,value)) {}

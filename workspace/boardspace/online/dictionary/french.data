@@ -571,6 +571,18 @@ V Hive avec Coccinelle
 S Hive-M
 K Hive-M_variation
 V Hive avec Moustique
+S Hive-P
+S Hive-PL
+S Hive-PLM
+K Hive-PLM_variation
+V Hive with Pillbug, Ladybug and Mosquito
+K Hive-PL_variation
+V Hive with Pillbug and Ladybug
+S Hive-PM
+K Hive-PM_variation
+V Hive with Pillbug and Mosquito
+K Hive-P_variation
+V Hive with Pillbug
 K Hive_family
 V Hive
 K Hive_variation
@@ -1628,7 +1640,7 @@ K stillwaiting
 V chargement en cours... Veuillez patienter.
 K surround your opponents queen bee
 V Entourez la reine de l'adversaire
-K swap solors
+K swap colors
 V Swap Colors
 K the game has resumed
 V la partie a repris
@@ -1646,4 +1658,4 @@ K you may increase your bid
 V vous pouvez augmenter votre offre
 K your name
 V Votre nom
-N 916
+N 924

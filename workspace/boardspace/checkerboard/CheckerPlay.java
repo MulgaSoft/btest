@@ -111,7 +111,15 @@ public class CheckerPlay extends commonRobot implements Runnable, CheckerConstan
     	return(evboard.ScoreForPlayer(player,print,CUP_WEIGHT,MULTILINE_WEIGHT,DUMBOT));
 
     }
-    
+    /**
+     * this re-evaluates the current position from the viewpoint of forplayer.
+     * for 2 player games this is to trivially negate the value, but for multiplayer
+     * games it requires considering multiple player's values.
+     */
+    public double reScorePosition(commonMove m,int forplayer)
+    {	return(m.reScorePosition(forplayer,VALUE_OF_WIN));
+    }
+ 
     /**
      * this is it! just tell me that the position is worth.  
      */

@@ -2,7 +2,7 @@ package checkerboard;
 
 import online.common.*;
 
-public interface CheckerConstants extends OnlineConstants
+public interface CheckerConstants extends Play2Constants
 {	
 	static final int DEFAULT_COLUMNS = 8;	// 8x6 board
 	static final int DEFAULT_ROWS = 8;

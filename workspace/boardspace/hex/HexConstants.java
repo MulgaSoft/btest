@@ -3,7 +3,7 @@ package hex;
 import online.common.*;
 
 
-public interface HexConstants extends OnlineConstants
+public interface HexConstants extends Play2Constants
 {
     //	these next must be unique integers in the Hexmovespec dictionary
 	//  they represent places you can click to pick up or drop a stone

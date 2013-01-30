@@ -558,6 +558,18 @@ V \u589e\u52a0\u68cb\u5b50\u74e2\u866b
 S Hive-M
 K Hive-M_variation
 V Hive\u589e\u52a0\u868a\u5b50
+S Hive-P
+S Hive-PL
+S Hive-PLM
+K Hive-PLM_variation
+V Hive with Pillbug, Ladybug and Mosquito
+K Hive-PL_variation
+V Hive with Pillbug and Ladybug
+S Hive-PM
+K Hive-PM_variation
+V Hive with Pillbug and Mosquito
+K Hive-P_variation
+V Hive with Pillbug
 K Hive_family
 V Hive
 K Hive_variation
@@ -1591,7 +1603,7 @@ K stillwaiting
 V \u8fde\u63a5\u4e2d\u2026\u8bf7\u7b49\u5f85
 K surround your opponents queen bee
 V \u5305\u56f4\u5bf9\u624b\u7684\u8702\u540e
-K swap solors
+K swap colors
 V Swap Colors
 K the game has resumed
 V \u6e38\u620f\u7ee7\u7eed
@@ -1609,4 +1621,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-N 916
+N 924

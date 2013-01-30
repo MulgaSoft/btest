@@ -415,6 +415,18 @@ V Hive with LadyBug added
 S Hive-M
 K Hive-M_variation
 V Hive with Mosquito added
+S Hive-P
+S Hive-PL
+S Hive-PLM
+K Hive-PLM_variation
+V Hive with Pillbug, Ladybug and Mosquito
+K Hive-PL_variation
+V Hive with Pillbug and Ladybug
+S Hive-PM
+K Hive-PM_variation
+V Hive with Pillbug and Mosquito
+K Hive-P_variation
+V Hive with Pillbug
 K Hive_family
 V Hive
 K Hive_variation
@@ -1208,7 +1220,7 @@ S stack six or capture six
 K stillwaiting
 V still launching... please wait.
 S surround your opponents queen bee
-K swap solors
+K swap colors
 V Swap Colors
 S the game has resumed
 K timeoutWarning
@@ -1221,4 +1233,4 @@ K welcome
 V \u6b61\u8fce\u9032\u5165 BoardSpace \u5927\u5ef3 (ver #1)
 S you may increase your bid
 S your name
-N 916
+N 924

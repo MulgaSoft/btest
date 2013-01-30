@@ -549,6 +549,18 @@ V Hive met extra Lieveheersbeestje
 S Hive-M
 K Hive-M_variation
 V Hive met extra mug
+S Hive-P
+S Hive-PL
+S Hive-PLM
+K Hive-PLM_variation
+V Hive with Pillbug, Ladybug and Mosquito
+K Hive-PL_variation
+V Hive with Pillbug and Ladybug
+S Hive-PM
+K Hive-PM_variation
+V Hive with Pillbug and Mosquito
+K Hive-P_variation
+V Hive with Pillbug
 K Hive_family
 V Hive
 K Hive_variation
@@ -1578,7 +1590,7 @@ K stillwaiting
 V Opent...geduld aub.
 K surround your opponents queen bee
 V omsingel de koningin van de tegenspeler
-K swap solors
+K swap colors
 V Swap Colors
 K the game has resumed
 V de partij is hervat
@@ -1596,4 +1608,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 916
+N 924

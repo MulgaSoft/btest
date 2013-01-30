@@ -483,6 +483,18 @@ V Hive nav\u00edc s LadyBug
 S Hive-M
 K Hive-M_variation
 V Hive nav\u00edc s Mosquito
+S Hive-P
+S Hive-PL
+S Hive-PLM
+K Hive-PLM_variation
+V Hive with Pillbug, Ladybug and Mosquito
+K Hive-PL_variation
+V Hive with Pillbug and Ladybug
+S Hive-PM
+K Hive-PM_variation
+V Hive with Pillbug and Mosquito
+K Hive-P_variation
+V Hive with Pillbug
 K Hive_family
 V Hive
 K Hive_variation
@@ -1388,7 +1400,7 @@ S stack six or capture six
 K stillwaiting
 V st\u00e1le spou\u009at\u00edm... pros\u00edm \u010dekejte.
 S surround your opponents queen bee
-K swap solors
+K swap colors
 V Swap Colors
 K the game has resumed
 V hra pokra\u010duje
@@ -1403,4 +1415,4 @@ V V\u00edtejte na BoardSpace Lobby, verze #1
 S you may increase your bid
 K your name
 V va\u009ae jm\u00e9no
-N 916
+N 924

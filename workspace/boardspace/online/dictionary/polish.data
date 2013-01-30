@@ -469,6 +469,18 @@ K Hive-L_variation
 V Hive with LadyBug added
 S Hive-M
 S Hive-M_variation
+S Hive-P
+S Hive-PL
+S Hive-PLM
+K Hive-PLM_variation
+V Hive with Pillbug, Ladybug and Mosquito
+K Hive-PL_variation
+V Hive with Pillbug and Ladybug
+S Hive-PM
+K Hive-PM_variation
+V Hive with Pillbug and Mosquito
+K Hive-P_variation
+V Hive with Pillbug
 K Hive_family
 V Hive
 K Hive_variation
@@ -1357,7 +1369,7 @@ K stillwaiting
 V wci\u0105\u017c uruchamiam... prosz\u0119 czeka\u0107.
 K surround your opponents queen bee
 V Otocz kr\u00f3low\u0105 pszczo\u0142\u0119 przeciwnika
-K swap solors
+K swap colors
 V Swap Colors
 K the game has resumed
 V przywr\u00f3cono gr\u0119
@@ -1372,4 +1384,4 @@ V Witam w Pasa\u017cu BoardSpace, wersja #1
 S you may increase your bid
 K your name
 V twoje imi\u0119
-N 916
+N 924

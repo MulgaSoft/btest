@@ -574,6 +574,18 @@ V Hive mit Marienk\u00e4fer
 S Hive-M
 K Hive-M_variation
 V Hive mit Moskito
+S Hive-P
+S Hive-PL
+S Hive-PLM
+K Hive-PLM_variation
+V Hive with Pillbug, Ladybug and Mosquito
+K Hive-PL_variation
+V Hive with Pillbug and Ladybug
+S Hive-PM
+K Hive-PM_variation
+V Hive with Pillbug and Mosquito
+K Hive-P_variation
+V Hive with Pillbug
 K Hive_family
 V Hive
 K Hive_variation
@@ -1638,7 +1650,7 @@ K stillwaiting
 V Wird geladen ... bitte warten.
 K surround your opponents queen bee
 V Umzingle die gegnerische Bienenk\u00f6nigin
-K swap solors
+K swap colors
 V Swap Colors
 K the game has resumed
 V das Spiel wurde fortgesetzt
@@ -1656,4 +1668,4 @@ K you may increase your bid
 V Du kannst dein Gebot erh\u00f6hen
 K your name
 V Dein Name
-N 916
+N 924

@@ -444,6 +444,18 @@ V Hive with LadyBug added
 S Hive-M
 K Hive-M_variation
 V Hive with Mosquito added
+S Hive-P
+S Hive-PL
+S Hive-PLM
+K Hive-PLM_variation
+V Hive with Pillbug, Ladybug and Mosquito
+K Hive-PL_variation
+V Hive with Pillbug and Ladybug
+S Hive-PM
+K Hive-PM_variation
+V Hive with Pillbug and Mosquito
+K Hive-P_variation
+V Hive with Pillbug
 K Hive_family
 V Hive
 K Hive_variation
@@ -1293,7 +1305,7 @@ S stack six or capture six
 K stillwaiting
 V encara iniciant... espereu si us plau.
 S surround your opponents queen bee
-K swap solors
+K swap colors
 V Swap Colors
 K the game has resumed
 V el joc s'ha reiniciat
@@ -1308,4 +1320,4 @@ V Benvingut a Boardspace.net, versi\u00f3 #1
 S you may increase your bid
 K your name
 V el teu nom
-N 916
+N 924

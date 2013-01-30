@@ -556,6 +556,18 @@ V Hive med nyckelpiga
 S Hive-M
 K Hive-M_variation
 V Hive med mygga
+S Hive-P
+S Hive-PL
+S Hive-PLM
+K Hive-PLM_variation
+V Hive with Pillbug, Ladybug and Mosquito
+K Hive-PL_variation
+V Hive with Pillbug and Ladybug
+S Hive-PM
+K Hive-PM_variation
+V Hive with Pillbug and Mosquito
+K Hive-P_variation
+V Hive with Pillbug
 K Hive_family
 V Hive
 K Hive_variation
@@ -1586,7 +1598,7 @@ K stillwaiting
 V startar fortfarande... var god v\u00e4nta.
 K surround your opponents queen bee
 V omringa din motst\u00e5ndares bidrottning
-K swap solors
+K swap colors
 V Swap Colors
 K the game has resumed
 V spelet har \u00e5terupptagits
@@ -1604,4 +1616,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 916
+N 924

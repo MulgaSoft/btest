@@ -33,7 +33,8 @@ import static checkerboard.CheckerMovespec.*;
  */
 
 class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,CheckerConstants
-{
+{	private int players_in_game = 2;
+	public int nPlayers() { return(players_in_game); }
     public int boardColumns = DEFAULT_COLUMNS;	// size of the board
     public int boardRows = DEFAULT_ROWS;
     public void SetDrawState() { setBoardState(DRAW_STATE); }
@@ -57,9 +58,9 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 	public CheckerCell newcell(char c,int r)
 	{	return(new CheckerCell(c,r));
 	}
-    public CheckerBoard(String init,long rv) // default constructor
+    public CheckerBoard(String init,long rv,int np) // default constructor
     {   
-        doInit(init,rv); // do the initialization 
+        doInit(init,rv,np); // do the initialization 
      }
 
 
@@ -132,7 +133,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         return (v);
     }
    public BoardProtocol cloneBoard() 
-	{ CheckerBoard copy = new CheckerBoard(gametype,randomKey);
+	{ CheckerBoard copy = new CheckerBoard(gametype,randomKey,players_in_game);
 	  copy.clone(this); 
 	  return(copy);
 	}
@@ -155,10 +156,11 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     }
 
     /* initialize a board back to initial empty state */
-    public void doInit(String gtype,long rv)
+    public void doInit(String gtype,long rv,int np)
     {  	drawing_style = DrawingStyle.STYLE_NOTHING; // STYLE_CELL or STYLE_LINES
     	Grid_Style = CHECKERGRIDSTYLE; //coordinates left and bottom
     	randomKey = rv;
+    	players_in_game = np;
 		rack = new CheckerCell[CheckerChip.N_STANDARD_CHIPS*2];
     	Random r = new Random(67246765);
      	for(int i=0,pl=FIRST_PLAYER_INDEX;i<CheckerChip.N_STANDARD_CHIPS*2; i++,pl=nextPlayer[pl])

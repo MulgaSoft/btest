@@ -200,6 +200,7 @@ public class HexGameViewer extends commonCanvas
         //System.out.println(myplayer.trueName + " doinit");
         super.doInit(preserve_history);				// let commonViewer do it's things
         bb.doInit(bb.gametype);						// initialize the board
+        adjustPlayers(2);
         if(!preserve_history)
     	{ PerformAndTransmit(reviewOnly?"Edit":"Start P0", false,replayMode.Live);
     	}
