@@ -1,6 +1,6 @@
 package checkerboard;
 
-import online.common.*;
+import online.game.Play2Constants;
 
 public interface CheckerConstants extends Play2Constants
 {	

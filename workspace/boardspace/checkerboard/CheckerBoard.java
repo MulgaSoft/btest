@@ -154,7 +154,10 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         G.copy(chips_on_board,from_b.chips_on_board);
         sameboard(from_b);
     }
-
+    public void doInit(String gtype,long rv)
+    {
+    	doInit(gtype,rv,players_in_game);
+    }
     /* initialize a board back to initial empty state */
     public void doInit(String gtype,long rv,int np)
     {  	drawing_style = DrawingStyle.STYLE_NOTHING; // STYLE_CELL or STYLE_LINES

@@ -1,6 +1,6 @@
 package hex;
 
-import online.common.*;
+import online.game.Play2Constants;
 
 
 public interface HexConstants extends Play2Constants
