@@ -1,3 +1,4 @@
+S 
 S #1 #2 Containers
 S #1 Camels
 S #1 Cards
@@ -5,7 +6,6 @@ S #1 Gold
 S #1 Machine
 S #1 Ship
 S #1 center
-S #1 choices
 K #1 deliberately quit
 V #1 abandonar intencionadament
 K #1 has been muted, by a consensus of the players
@@ -24,7 +24,6 @@ K #1 killed due to #2
 V #1 \u00e9s rebutjat per #2
 S #1 left
 S #1 prisoners
-S #1 prizes, total value #2
 K #1 quit
 V #1 abandonar
 S #1 repetitions
@@ -36,6 +35,13 @@ S #1 riders have crossed the second sprint line.
 S #1 riders have finished
 K #1 starts Joint review
 V #1 Iniciar en revisi\u00f3 conjunta
+S #1{ Choices, Choice}
+S #1{##no Camels, Camel, Camels}
+S #1{##no Gold, Gold, Gold}
+S #1{##no Victory points, Victory Point, Victory Points}
+S #1{##no cards, card, cards}
+S #1{##no chips, chip, chips}
+S #1{##no prizes, prize, prizes}, total value #2
 K (unknown)
 V (desconegut)
 K (unoccupied)
@@ -44,7 +50,6 @@ K (vacancy)
 V (lliure)
 S + #1 turns
 S ...plus #1 more
-S 1 choice
 S 4w 5g 6b or 3 of each wins
 S Accept $#1 from #2
 S Accept Draw
@@ -147,6 +152,7 @@ S Carnac
 K Carnac_family
 V Carnac
 S Cash/Score
+S Chat
 K Chat Room
 V Sala de xat
 S Che
@@ -159,8 +165,6 @@ S Chest
 S Choose the penalty for non-payment of interest
 K Click DONE to confirm this placement
 V Clica FET per confirmar aquest empla\u00e7ament
-K Click Done
-V Clica Fet
 S Click Done to Finish the move
 S Click Done to accept a draw
 S Click Done to complete the exchange
@@ -172,10 +176,10 @@ S Click Done to confirm this action
 S Click Done to confirm this move
 S Click Done to confirm this placement
 S Click Done to decline a draw
-S Click Done to offer a draw
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 S Click on Done to complete the capture
+S Click on Done to confirm passing
 S Click on Done to confirm paying a camel
 S Click on Done to confirm swapping
 S Click on Done to confirm the Exchange
@@ -186,7 +190,9 @@ S Click on Done to confirm your resignation
 S Click on Done to end the game
 S Click on Done to end the game (you lose)
 S Click on Done to end the game as a Draw
+S Click on Done to end the game as a Loss
 S Click on Done to finish all captures
+S Click on Done to offer a draw
 S Click on Done to send cubes to the carvan
 S Click on Gipf pieces to change their capture status
 S Click on the end of the line to move
@@ -557,10 +563,12 @@ S Make an addional capturing move, or click on Done
 S Make an addional move, or click on Done
 S Make the first move, or swap and move second
 S Make your first move, or swap fleets
+S Map
 K Map of Player Locations
 V Mapa de localitzaci\u00f3 dels jugadors
 K Mar #1#2#3
 V #1 Mar\u00e7, #2:#3 GMT
+S Master
 K Master Room
 V Sala de Mestres
 K Master ranked players can play
@@ -592,6 +600,10 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V Standard Micropul
+K Mogul_family
+V Mogul
+K Mogul_variation
+V standard Mogul
 K Move ##1
 V Moviment ##1
 S Move 6 ships to the center
@@ -625,9 +637,7 @@ S Move a soldier, or fire a cannon
 S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 S Move a volcano cap
-S Move any piece to the opposite goal
 S Move any piece to the opposite goal space
-S Move one of your pieces
 S Move one ship
 S Move stacks around any way you want to
 S Move the flipped stack
@@ -776,7 +786,6 @@ S Played
 S Played on #1
 K Player #1
 V Jugador #1
-S Player 1
 S Player Cubes
 K Player is 
 V El jugador \u00e9s 
@@ -859,8 +868,6 @@ V Rendici\u00f3
 S Restart
 S Return to the Way
 S Reverse View
-K Review Room
-V Sala de revisi\u00f3
 K Review Saved Games
 V  Revisi\u00f3 de jocs guardats
 S Rider Size
@@ -950,7 +957,6 @@ S Start Black
 S Start White
 K State unknown.
 V Estat desconegut.
-S Swap
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -1003,6 +1009,7 @@ K TakoJudo_variation
 V standard Tako Judo
 K Tamsk_variation
 V play standard Tamsk
+S Tan
 S The game is a draw
 S The game record is not available during the game
 S The next finish bonus is #1
@@ -1160,7 +1167,6 @@ K You have been disconnected: #1
 V Has estat desconnectat: #1
 S You have been offered a draw - Accept or Decline
 S You have no legal moves.  Click on Done to pass
-S You have no moves available. Click on Done to pass.
 S You must move the gobblet you have picked up
 S You must place a dome
 S You must take out a loan to pay interest
@@ -1229,8 +1235,6 @@ S form the most groups of 3 or more adjacent squares your color
 S fund a loan from a player or the bank
 K game selector
 V  Seleccionador (selector de joc
-K gold: escape the flagship  silver: capture gold flagship
-V gold: escape the flagship  silver: capture the gold flagship
 K guest
 V convidat
 K in #1
@@ -1320,4 +1324,4 @@ V Benvingut a Boardspace.net, versi\u00f3 #1
 S you may increase your bid
 K your name
 V el teu nom
-N 924
+N 929

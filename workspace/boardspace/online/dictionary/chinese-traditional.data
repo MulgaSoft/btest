@@ -1,3 +1,4 @@
+S 
 S #1 #2 Containers
 S #1 Camels
 S #1 Cards
@@ -5,7 +6,6 @@ S #1 Gold
 S #1 Machine
 S #1 Ship
 S #1 center
-S #1 choices
 S #1 deliberately quit
 K #1 has been muted, by a consensus of the players
 V \u5927\u5bb6\u4e00\u81f4\u540c\u610f #1 \u7981\u6b62\u767c\u8a00\u3002 
@@ -19,7 +19,6 @@ S #1 is taking over playing #2 for #3
 S #1 killed due to #2
 S #1 left
 S #1 prisoners
-S #1 prizes, total value #2
 S #1 quit
 S #1 repetitions
 K #1 requests Joint review
@@ -29,12 +28,18 @@ S #1 riders have crossed the first sprint line.
 S #1 riders have crossed the second sprint line.
 S #1 riders have finished
 S #1 starts Joint review
+S #1{ Choices, Choice}
+S #1{##no Camels, Camel, Camels}
+S #1{##no Gold, Gold, Gold}
+S #1{##no Victory points, Victory Point, Victory Points}
+S #1{##no cards, card, cards}
+S #1{##no chips, chip, chips}
+S #1{##no prizes, prize, prizes}, total value #2
 S (unknown)
 S (unoccupied)
 S (vacancy)
 S + #1 turns
 S ...plus #1 more
-S 1 choice
 S 4w 5g 6b or 3 of each wins
 S Accept $#1 from #2
 S Accept Draw
@@ -130,6 +135,7 @@ S Carnac
 K Carnac_family
 V Carnac
 S Cash/Score
+S Chat
 S Chat Room
 S Che
 K Che_family
@@ -141,7 +147,6 @@ S Chest
 S Choose the penalty for non-payment of interest
 K Click DONE to confirm this placement
 V \u78ba\u8a8d\u6b64\u6b65\u4e26\u9ede\u9078 "\u5b8c\u6210"
-S Click Done
 S Click Done to Finish the move
 S Click Done to accept a draw
 S Click Done to complete the exchange
@@ -156,10 +161,10 @@ K Click Done to confirm this move
 V \u7d50\u675f\u56de\u5408\u4e26\u9ede\u9078 "\u5b8c\u6210"
 S Click Done to confirm this placement
 S Click Done to decline a draw
-S Click Done to offer a draw
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 S Click on Done to complete the capture
+S Click on Done to confirm passing
 S Click on Done to confirm paying a camel
 S Click on Done to confirm swapping
 S Click on Done to confirm the Exchange
@@ -170,7 +175,9 @@ S Click on Done to confirm your resignation
 S Click on Done to end the game
 S Click on Done to end the game (you lose)
 S Click on Done to end the game as a Draw
+S Click on Done to end the game as a Loss
 S Click on Done to finish all captures
+S Click on Done to offer a draw
 S Click on Done to send cubes to the carvan
 S Click on Gipf pieces to change their capture status
 S Click on the end of the line to move
@@ -520,10 +527,12 @@ K Make an addional move, or click on Done
 V Make an additional move, or click on Done
 S Make the first move, or swap and move second
 S Make your first move, or swap fleets
+S Map
 K Map of Player Locations
 V Map Room
 K Mar #1#2#3
 V 3 \u6708 #1 \u65e5 #2:#3 GMT
+S Master
 S Master Room
 K Master ranked players can play
 V Masters can play in this room
@@ -551,6 +560,10 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V standard Micropul
+K Mogul_family
+V Mogul
+K Mogul_variation
+V standard Mogul
 S Move ##1
 S Move 6 ships to the center
 S Move A Stack
@@ -582,9 +595,7 @@ S Move a soldier, or fire a cannon
 S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 S Move a volcano cap
-S Move any piece to the opposite goal
 S Move any piece to the opposite goal space
-S Move one of your pieces
 S Move one ship
 S Move stacks around any way you want to
 S Move the flipped stack
@@ -727,7 +738,6 @@ S Play a card
 S Played
 S Played on #1
 S Player #1
-S Player 1
 S Player Cubes
 S Player is 
 S Players
@@ -803,7 +813,6 @@ V Click Done to confirm your resignation
 S Restart
 S Return to the Way
 S Reverse View
-S Review Room
 K Review Saved Games
 V Review Room
 S Rider Size
@@ -877,7 +886,6 @@ S Start #1
 S Start Black
 S Start White
 S State unknown.
-S Swap
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -929,6 +937,7 @@ K TakoJudo_variation
 V standard Tako Judo
 K Tamsk_variation
 V standard Tamsk
+S Tan
 S The game is a draw
 S The game record is not available during the game
 S The next finish bonus is #1
@@ -1083,7 +1092,6 @@ S You can only resign when it is your move
 S You have been disconnected: #1
 S You have been offered a draw - Accept or Decline
 S You have no legal moves.  Click on Done to pass
-S You have no moves available. Click on Done to pass.
 S You must move the gobblet you have picked up
 S You must place a dome
 S You must take out a loan to pay interest
@@ -1151,8 +1159,6 @@ S form a larger triangle with your color at the tips
 S form the most groups of 3 or more adjacent squares your color
 S fund a loan from a player or the bank
 S game selector
-K gold: escape the flagship  silver: capture gold flagship
-V gold: escape the flagship  silver: capture the gold flagship
 S guest
 S in #1
 K launchChat
@@ -1233,4 +1239,4 @@ K welcome
 V \u6b61\u8fce\u9032\u5165 BoardSpace \u5927\u5ef3 (ver #1)
 S you may increase your bid
 S your name
-N 924
+N 929

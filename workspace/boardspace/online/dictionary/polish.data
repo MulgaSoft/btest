@@ -1,3 +1,4 @@
+S 
 S #1 #2 Containers
 S #1 Camels
 S #1 Cards
@@ -6,7 +7,6 @@ S #1 Machine
 S #1 Ship
 K #1 center
 V #1 \u015brodek
-S #1 choices
 K #1 deliberately quit
 V #1 celowo wyszed\u0142
 K #1 has been muted, by a consensus of the players
@@ -26,7 +26,6 @@ V #1 killed #2
 K #1 left
 V #1 lewo
 S #1 prisoners
-S #1 prizes, total value #2
 K #1 quit
 V #1 wyszed\u0142
 K #1 repetitions
@@ -37,6 +36,13 @@ S #1 riders have crossed the first sprint line.
 S #1 riders have crossed the second sprint line.
 S #1 riders have finished
 S #1 starts Joint review
+S #1{ Choices, Choice}
+S #1{##no Camels, Camel, Camels}
+S #1{##no Gold, Gold, Gold}
+S #1{##no Victory points, Victory Point, Victory Points}
+S #1{##no cards, card, cards}
+S #1{##no chips, chip, chips}
+S #1{##no prizes, prize, prizes}, total value #2
 K (unknown)
 V (nieznany)
 K (unoccupied)
@@ -45,7 +51,6 @@ K (vacancy)
 V (brak)
 S + #1 turns
 S ...plus #1 more
-S 1 choice
 S 4w 5g 6b or 3 of each wins
 S Accept $#1 from #2
 S Accept Draw
@@ -148,6 +153,7 @@ S Carnac
 K Carnac_family
 V Carnac
 S Cash/Score
+S Chat
 K Chat Room
 V Pok\u00f3j rozm\u00f3w
 S Che
@@ -160,8 +166,6 @@ S Chest
 S Choose the penalty for non-payment of interest
 K Click DONE to confirm this placement
 V Kliknij ZATWIERD\u0179, by potwierdzi\u0107 miejsce
-K Click Done
-V Wci\u015bnij Zatwierd\u017a
 K Click Done to Finish the move
 V Kliknij Zatwierd\u017a, by zako\u0144czy\u0107 sw\u00f3j ruch
 S Click Done to accept a draw
@@ -178,11 +182,11 @@ K Click Done to confirm this move
 V Kliknij Zatwierd\u017a, by zako\u0144czy\u0107 ruch
 S Click Done to confirm this placement
 S Click Done to decline a draw
-S Click Done to offer a draw
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Kliknij zatwierd\u017a, by zako\u0144czy\u0107 zbicie.
+S Click on Done to confirm passing
 S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V Kliknij Zatwierd\u017a by zmieni\u0107 strony
@@ -199,7 +203,9 @@ V Kliknij Zatwierd\u017a, by zako\u0144czy\u0107 gr\u0119
 S Click on Done to end the game (you lose)
 K Click on Done to end the game as a Draw
 V Kliknij Zatwierd\u017a, aby zako\u0144czy\u0107 gr\u0119 remisem
+S Click on Done to end the game as a Loss
 S Click on Done to finish all captures
+S Click on Done to offer a draw
 S Click on Done to send cubes to the carvan
 S Click on Gipf pieces to change their capture status
 S Click on the end of the line to move
@@ -585,10 +591,12 @@ K Make the first move, or swap and move second
 V Wykonaj pierwszy ruch albo zamie\u0144 strony i rusz jako drugi
 K Make your first move, or swap fleets
 V Wykonaj sw\u00f3j pierwszy ruch lub zamie\u0144 floty
+S Map
 K Map of Player Locations
 V Pok\u00f3j z map\u0105 graczy
 K Mar #1#2#3
 V #1 Mar, #2:#3 GMT
+S Master
 K Master Room
 V Pok\u00f3j Mistrz\u00f3w
 K Master ranked players can play
@@ -621,6 +629,10 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V Standard Micropul
+K Mogul_family
+V Mogul
+K Mogul_variation
+V standard Mogul
 K Move ##1
 V Ruch ##1
 S Move 6 ships to the center
@@ -655,9 +667,7 @@ S Move a soldier, or fire a cannon
 S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 S Move a volcano cap
-S Move any piece to the opposite goal
 S Move any piece to the opposite goal space
-S Move one of your pieces
 K Move one ship
 V Przesu\u0144 jeden okr\u0119t
 K Move stacks around any way you want to
@@ -825,7 +835,6 @@ S Played
 S Played on #1
 K Player #1
 V Gracz #1
-S Player 1
 S Player Cubes
 K Player is 
 V Gra 
@@ -913,8 +922,6 @@ V Wci\u015bnij Zatwerd\u017a,aby potwierdzi\u0107 poddanie si\u0119
 S Restart
 S Return to the Way
 S Reverse View
-K Review Room
-V Pok\u00f3j przegl\u0105dania
 K Review Saved Games
 V Pok\u00f3j przegl\u0105dania
 S Rider Size
@@ -1007,8 +1014,6 @@ K Start White
 V Start Bia\u0142ych
 K State unknown.
 V Stan nieznany.
-K Swap
-V Zamie\u0144
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -1061,6 +1066,7 @@ K TakoJudo_variation
 V standard Tako Judo
 K Tamsk_variation
 V Tamsk
+S Tan
 K The game is a draw
 V Gra zako\u0144czy\u0142a si\u0119 remisem.
 K The game record is not available during the game
@@ -1216,7 +1222,6 @@ V Zosta\u0142e\u015b roz\u0142\u0105czony: #1
 S You have been offered a draw - Accept or Decline
 K You have no legal moves.  Click on Done to pass
 V Nie masz dozwolonych ruch\u00f3w. Kliknij Zatwierd\u017a, aby spasowa\u0107.
-S You have no moves available. Click on Done to pass.
 K You must move the gobblet you have picked up
 V Musisz przesun\u0105\u0107 podniesiony gobblet
 S You must place a dome
@@ -1286,8 +1291,6 @@ S form the most groups of 3 or more adjacent squares your color
 S fund a loan from a player or the bank
 K game selector
 V Wyb\u00f3r gry
-K gold: escape the flagship  silver: capture gold flagship
-V z\u0142oty: ucieknij okr\u0119tem flagowym, srebrny: zbij z\u0142oty okr\u0119t flagowy
 K guest
 V go\u015b\u0107
 K in #1
@@ -1384,4 +1387,4 @@ V Witam w Pasa\u017cu BoardSpace, wersja #1
 S you may increase your bid
 K your name
 V twoje imi\u0119
-N 924
+N 929

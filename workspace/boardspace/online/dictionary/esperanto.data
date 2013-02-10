@@ -1,3 +1,4 @@
+S 
 K #1 #2 Containers
 V #1 #2 Konteneroj
 S #1 Camels
@@ -9,8 +10,6 @@ K #1 Ship
 V #1 \u015cipo
 K #1 center
 V #1 meze
-K #1 choices
-V #1 elektoj
 K #1 deliberately quit
 V #1 intence \u0109esis
 K #1 has been muted, by a consensus of the players
@@ -30,7 +29,6 @@ V #1 \u0109esigita pro #2
 K #1 left
 V #1 restas
 S #1 prisoners
-S #1 prizes, total value #2
 K #1 quit
 V #1 \u0109esis
 K #1 repetitions
@@ -46,6 +44,13 @@ K #1 riders have finished
 V #1 biciklistoj finis
 K #1 starts Joint review
 V #1 komencas Kunan Analizon
+S #1{ Choices, Choice}
+S #1{##no Camels, Camel, Camels}
+S #1{##no Gold, Gold, Gold}
+S #1{##no Victory points, Victory Point, Victory Points}
+S #1{##no cards, card, cards}
+S #1{##no chips, chip, chips}
+S #1{##no prizes, prize, prizes}, total value #2
 K (unknown)
 V (nekonata)
 K (unoccupied)
@@ -55,8 +60,6 @@ V (vako)
 S + #1 turns
 K ...plus #1 more
 V ...plus #1 pli
-K 1 choice
-V 1 elekto
 K 4w 5g 6b or 3 of each wins
 V 4b 5g 6n a\u016d po 3 venkas
 K Accept $#1 from #2
@@ -187,6 +190,7 @@ K Carnac_family
 V Carnac
 K Cash/Score
 V Mono/Poentoj
+S Chat
 K Chat Room
 V Babilejo
 S Che
@@ -201,8 +205,6 @@ K Choose the penalty for non-payment of interest
 V Elektu la punon pro nepagon de interezo
 K Click DONE to confirm this placement
 V Klaku FINI por konfirmi \u0109i tiun meton
-K Click Done
-V Klaku Fini
 K Click Done to Finish the move
 V Klaku Fini por fini la movon
 K Click Done to accept a draw
@@ -222,12 +224,11 @@ K Click Done to confirm this placement
 V Klaku Fini por konfirmi \u0109i tiun meton
 K Click Done to decline a draw
 V Alklaku Fini por malakcepti remison
-K Click Done to offer a draw
-V Alklaku Fini por proponi remison
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klaku Fini por fini la kapton
+S Click on Done to confirm passing
 S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V Klaku Fini por konfirmi inter\u015dan\u011don
@@ -245,8 +246,10 @@ K Click on Done to end the game (you lose)
 V Klaku Fini por fini la partion (vi malgajnas)
 K Click on Done to end the game as a Draw
 V Klaki fini por fini la ludon sen venkanto
+S Click on Done to end the game as a Loss
 K Click on Done to finish all captures
 V Klaku Fini por fini \u0109iujn kaptojn
+S Click on Done to offer a draw
 S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V Alklaku GIPF-pecojn por \u015dan\u011di ilian kapto-statuson
@@ -691,10 +694,12 @@ K Make the first move, or swap and move second
 V Faru unuan movon, a\u016d inter\u015dan\u011du kaj movu due
 K Make your first move, or swap fleets
 V Faru vian unuan movon, a\u016d inter\u015dan\u011di pecarojn
+S Map
 K Map of Player Locations
 V Mapa \u0108ambro
 K Mar #1#2#3
 V #1 mar, #2:#3 GMT
+S Master
 K Master Room
 V Majstra \u0108ambro
 K Master ranked players can play
@@ -729,6 +734,10 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V norma Micropul
+K Mogul_family
+V Mogul
+K Mogul_variation
+V standard Mogul
 K Move ##1
 V Movo ##1
 K Move 6 ships to the center
@@ -779,9 +788,7 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V Movu vulkanan \u0109apon
-S Move any piece to the opposite goal
 S Move any piece to the opposite goal space
-S Move one of your pieces
 K Move one ship
 V Movu unu pecon
 K Move stacks around any way you want to
@@ -981,7 +988,6 @@ S Played
 K Played on #1
 V Ludis sur #1
 S Player #1
-S Player 1
 S Player Cubes
 K Player is 
 V Ludanto estas 
@@ -1079,8 +1085,6 @@ K Return to the Way
 V Reveno al la Vojo
 K Reverse View
 V Renversa Vido
-K Review Room
-V Analiza \u0108ambro
 K Review Saved Games
 V Analiza \u0108ambro
 K Rider Size
@@ -1185,8 +1189,6 @@ K Start White
 V Komencu Blanko
 K State unknown.
 V Stato nekonata.
-K Swap
-V Inter\u015dan\u011di
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -1241,6 +1243,7 @@ K TakoJudo_variation
 V standard Tako Judo
 K Tamsk_variation
 V norma Tamsk
+S Tan
 K The game is a draw
 V La partio estas sen venkanto
 K The game record is not available during the game
@@ -1431,8 +1434,6 @@ K You have been offered a draw - Accept or Decline
 V Vi ricevis proponon por remiso - Akceptu a\u016d Malakceptu
 K You have no legal moves.  Click on Done to pass
 V Vi ne havas validan movon.  Klaku Fini por pasi
-K You have no moves available. Click on Done to pass.
-V Vi ne havas validan movon. Klaku Fini por pasi.
 K You must move the gobblet you have picked up
 V Vi devas movi la pecon, kiun vi levis
 K You must place a dome
@@ -1512,8 +1513,6 @@ K fund a loan from a player or the bank
 V aran\u011di pruntedonon de ludanto a\u016d de la banko
 K game selector
 V Ludelektilo
-K gold: escape the flagship  silver: capture gold flagship
-V oro: la re\u011do eskapu  ar\u011dento: kaptu la oran re\u011don
 K guest
 V gasto
 K in #1
@@ -1619,4 +1618,4 @@ K you may increase your bid
 V vi povas pliigi vian oferton
 K your name
 V via nomo
-N 924
+N 929

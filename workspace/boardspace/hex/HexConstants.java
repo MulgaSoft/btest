@@ -5,6 +5,28 @@ import online.game.Play2Constants;
 
 public interface HexConstants extends Play2Constants
 {
+	static String HexVictoryCondition = "connect opposite sides with a chain of markers";
+	static String HexPlayState = "Place a marker on any empty cell";
+	static String HexPlayOrSwapState = "Place a marker on any empty cell, or Swap Colors";
+	static String HexConfirmSwapState = "Click Done to confirm swapping colors with your opponent";
+	static String HexStrings[] = 
+	{	
+       HexPlayState,
+       HexPlayOrSwapState,
+       HexConfirmSwapState,
+	   HexVictoryCondition
+		
+	};
+	static String HexStringPairs[][] = 
+	{   {"Hex_family","Hex"},
+		{"Hex","Hex"},
+		{"Hex-15","Hex-15"},
+		{"Hex-19","Hex-19"},
+		{"Hex_variation","11x11 Hex"},
+		{"Hex-15_variation","15x15 Hex"},
+		{"Hex-19_variation","19x19 Hex"}
+	};
+	
     //	these next must be unique integers in the Hexmovespec dictionary
 	//  they represent places you can click to pick up or drop a stone
     static final int Black_Chip_Pool = 100; // positive numbers are trackable
@@ -64,13 +86,13 @@ public interface HexConstants extends Play2Constants
     /* these strings correspond to the move states */
     static String[] boardStates = 
         {
-            "Rearrange things any way you want to", // puzzle state
-            "Click on Done to confirm your resignation", 
-            "Game Over", 
-            "Click Done to confirm this move", 
-            "Place a marker on any empty cell",	// play state
-            "Place a marker on any empty cell, or Swap Colors",
-            "Click Done to confirm swapping colors with your opponent"
+            PuzzleStateDescription, // puzzle state
+            ResignStateDescription, 
+            GameOverStateDescription, 
+            ConfirmStateDescription, 
+            HexPlayState,	// play state
+            HexPlayOrSwapState,
+            HexConfirmSwapState
          };
 
 	

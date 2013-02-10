@@ -87,7 +87,7 @@ public class CheckerGameViewer extends commonCanvas
        
         b = new CheckerBoard(info.getString(exHashtable.GAMETYPE, Checker_INIT),randomKey,players_in_game);
         doInit(false);
-        reverseOption = myFrame.addOption(s.get("Reverse View"),b.reverse_y,deferredEvents);
+        reverseOption = myFrame.addOption(s.get(ReverseView),b.reverse_y,deferredEvents);
 
         
      }
@@ -414,7 +414,7 @@ public class CheckerGameViewer extends commonCanvas
     /** this is used by the game controller to supply entertainment strings to the lobby */
     public String gameProgressString()
     {	// this is what the standard method does
-    	// return ((reviewer ? s.get("review") : ("" + viewMove)));
+    	// return ((reviewer ? s.get(ReviewAction) : ("" + viewMove)));
     	return(super.gameProgressString());
     }
 
@@ -528,7 +528,7 @@ public class CheckerGameViewer extends commonCanvas
 		if (vstate != PUZZLE_STATE)
         {
              if (G.handleRoundButton(gc, doneRect, 
-            		(b.DoneState()? select : null), s.get("Done"),
+            		(b.DoneState()? select : null), s.get(DoneAction),
                     HighlightColor, rackBackGroundColor))
             {	// always display the done button, but only make it active in
             	// the appropriate states
@@ -537,7 +537,7 @@ public class CheckerGameViewer extends commonCanvas
             if (allowed_to_edit)
             {
             	if (G.handleRoundButton(gc, editRect, select,
-                            s.get("Edit"), HighlightColor,
+                            s.get(EditAction), HighlightColor,
                             rackBackGroundColor))
                 {
                     select.hitCode = HitEditButton;
@@ -554,7 +554,7 @@ public class CheckerGameViewer extends commonCanvas
             				vstate!=PUZZLE_STATE,
             				gb.whoseTurn,
             				stateRect);
-            goalAndProgressMessage(gc,s.get("do what it takes to win"),progressRect,goalRect);
+            goalAndProgressMessage(gc,s.get(VictoryCondition),progressRect,goalRect);
          }
         DrawRepRect(gc,b.Digest(),repRect);
         drawVcrGroup(ourSelect, gc, HighlightColor, vcrButtonColor);
@@ -666,7 +666,7 @@ public class CheckerGameViewer extends commonCanvas
      * result in a null move.  It is vital that the operations performed on
      * the history are identical in effect to the manipulations of the board
      * state performed by "nmove".  This is checked by verifyGameRecord().
-     * Multiple occurrences of "resign" "start" and "edit" are handled separately
+     * 
      * in commonEditHistory()
      * 
      */
@@ -1081,7 +1081,7 @@ private void playSounds(commonMove mm)
  //       else
  //       {
  //           theChat.postMessage(GAMECHANNEL,KEYWORD_CHAT,
- //               s.get("The game record is not available during the game"));
+ //               s.get(CensoredGameRecordString));
 //        }
 //    }
 

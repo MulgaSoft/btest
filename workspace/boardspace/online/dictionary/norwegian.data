@@ -1,3 +1,4 @@
+S 
 S #1 #2 Containers
 S #1 Camels
 S #1 Cards
@@ -6,8 +7,6 @@ S #1 Machine
 S #1 Ship
 K #1 center
 V #1 sentrum
-K #1 choices
-V #1 valg
 K #1 deliberately quit
 V #1 sluttet med vilje.
 K #1 has been muted, by a consensus of the players
@@ -27,7 +26,6 @@ V #1 drept p\u00e5 grunn av #2
 K #1 left
 V #1 venstre
 S #1 prisoners
-S #1 prizes, total value #2
 K #1 quit
 V #1 sluttet.
 K #1 repetitions
@@ -40,6 +38,13 @@ S #1 riders have crossed the second sprint line.
 S #1 riders have finished
 K #1 starts Joint review
 V #1: Blir med p\u00e5 felles gjennomgang
+S #1{ Choices, Choice}
+S #1{##no Camels, Camel, Camels}
+S #1{##no Gold, Gold, Gold}
+S #1{##no Victory points, Victory Point, Victory Points}
+S #1{##no cards, card, cards}
+S #1{##no chips, chip, chips}
+S #1{##no prizes, prize, prizes}, total value #2
 K (unknown)
 V (ukjent)
 S (unoccupied)
@@ -47,8 +52,6 @@ K (vacancy)
 V (ledig)
 S + #1 turns
 S ...plus #1 more
-K 1 choice
-V 1 valg
 K 4w 5g 6b or 3 of each wins
 V 4hv 5g 6s eller 3 av hver for \u00e5 vinne.
 S Accept $#1 from #2
@@ -152,6 +155,7 @@ S Carnac
 K Carnac_family
 V Carnac
 S Cash/Score
+S Chat
 K Chat Room
 V Snakkerom
 S Che
@@ -164,8 +168,6 @@ S Chest
 S Choose the penalty for non-payment of interest
 K Click DONE to confirm this placement
 V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte plasseringen.
-K Click Done
-V Klikk \u00abFerdig\u00bb.
 K Click Done to Finish the move
 V Klikk \u00abFerdig\u00bb for \u00e5 avslutte trekket.
 S Click Done to accept a draw
@@ -182,11 +184,11 @@ K Click Done to confirm this move
 V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte dette trekket.
 S Click Done to confirm this placement
 S Click Done to decline a draw
-S Click Done to offer a draw
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klikk \u00abFerdig\u00bb for \u00e5 gjennomf\u00f8re slaget.
+S Click on Done to confirm passing
 S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V Klikk p\u00e5 Ferdig for \u00e5 bekrefte bytte
@@ -203,7 +205,9 @@ V Klikk \u00abFerdig\u00bb for \u00e5 avslutte partiet.
 S Click on Done to end the game (you lose)
 K Click on Done to end the game as a Draw
 V Klikk \u00abFerdig\u00bb for \u00e5 avslutte spillet som uavgjort.
+S Click on Done to end the game as a Loss
 S Click on Done to finish all captures
+S Click on Done to offer a draw
 S Click on Done to send cubes to the carvan
 S Click on Gipf pieces to change their capture status
 S Click on the end of the line to move
@@ -602,10 +606,12 @@ K Make the first move, or swap and move second
 V Gj\u00f8r f\u00f8rste trekk, eller bytt og flytt som nummer to
 K Make your first move, or swap fleets
 V Gj\u00f8r ditt  f\u00f8rste trekk, eller bytt fl\u00e5ter.
+S Map
 K Map of Player Locations
 V Kart
 K Mar #1#2#3
 V #1. mar, #2.#3 GMT
+S Master
 K Master Room
 V Mesterrom
 K Master ranked players can play
@@ -639,6 +645,10 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V Standard Micropul
+K Mogul_family
+V Mogul
+K Mogul_variation
+V standard Mogul
 K Move ##1
 V Trekk ##1
 S Move 6 ships to the center
@@ -673,9 +683,7 @@ S Move a soldier, or fire a cannon
 S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 S Move a volcano cap
-S Move any piece to the opposite goal
 S Move any piece to the opposite goal space
-S Move one of your pieces
 K Move one ship
 V Flytt ett skip.
 K Move stacks around any way you want to
@@ -846,7 +854,6 @@ S Played
 S Played on #1
 K Player #1
 V Spiller #1
-S Player 1
 S Player Cubes
 K Player is 
 V Spilleren er 
@@ -934,8 +941,6 @@ V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte at du gir opp.
 S Restart
 S Return to the Way
 S Reverse View
-K Review Room
-V Studierom
 K Review Saved Games
 V Studierom
 S Rider Size
@@ -1031,8 +1036,6 @@ K Start White
 V Start Hvit
 K State unknown.
 V Tilstand ukjent.
-K Swap
-V Bytt side
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -1085,6 +1088,7 @@ K TakoJudo_variation
 V standard Tako Judo
 K Tamsk_variation
 V Spill Tamsk standardvarianten
+S Tan
 K The game is a draw
 V Partiet er uavgjort.
 K The game record is not available during the game
@@ -1250,8 +1254,6 @@ V Du har mistet forbindelsen.
 S You have been offered a draw - Accept or Decline
 K You have no legal moves.  Click on Done to pass
 V Du har ingen lovlige trekk. Klikk \u00abFerdig\u00bb for \u00e5 passe.
-K You have no moves available. Click on Done to pass.
-V Du har ingen tilgjengelige trekk. Trykk Ferdig for \u00e5 melde pass.
 K You must move the gobblet you have picked up
 V Du m\u00e5 flytte begeret du har plukket opp.
 S You must place a dome
@@ -1323,8 +1325,6 @@ S form the most groups of 3 or more adjacent squares your color
 S fund a loan from a player or the bank
 K game selector
 V partivelger
-K gold: escape the flagship  silver: capture gold flagship
-V gull: r\u00f8m med flaggskipet  s\u00f8lv: fang flaggskipet
 K guest
 V gjest
 S in #1
@@ -1418,4 +1418,4 @@ V Velkommen til BoardSpace, versjon #1.
 S you may increase your bid
 K your name
 V ditt navn
-N 924
+N 929

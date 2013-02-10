@@ -1,3 +1,4 @@
+S 
 K #1 #2 Containers
 V #1 #2 \u96c6\u88c5\u7bb1
 S #1 Camels
@@ -9,8 +10,6 @@ K #1 Ship
 V #1 \u7684\u8239
 K #1 center
 V #1 \u4e2d\u5fc3
-K #1 choices
-V #1\u9009\u62e9\u9879
 K #1 deliberately quit
 V #1\u4e3b\u52a8\u9000\u51fa
 K #1 has been muted, by a consensus of the players
@@ -30,7 +29,6 @@ V #1\u56e0#2\u727a\u7272
 K #1 left
 V #1 \u5de6\u8fb9
 S #1 prisoners
-S #1 prizes, total value #2
 K #1 quit
 V #1\u9000\u51fa
 K #1 repetitions
@@ -46,6 +44,13 @@ K #1 riders have finished
 V #1\u8f66\u624b\u5df2\u7ecf\u5b8c\u6210
 K #1 starts Joint review
 V #1\u5f00\u59cb\u8054\u63a5\u67e5\u770b
+S #1{ Choices, Choice}
+S #1{##no Camels, Camel, Camels}
+S #1{##no Gold, Gold, Gold}
+S #1{##no Victory points, Victory Point, Victory Points}
+S #1{##no cards, card, cards}
+S #1{##no chips, chip, chips}
+S #1{##no prizes, prize, prizes}, total value #2
 K (unknown)
 V (\u672a\u77e5)
 K (unoccupied)
@@ -55,8 +60,6 @@ V (\u7a7a\u7f3a)
 S + #1 turns
 K ...plus #1 more
 V ...\u8fd8\u6709#1\u4e2a\u65c1\u89c2\u8005
-K 1 choice
-V \u4e00\u4e2a\u9009\u62e9
 K 4w 5g 6b or 3 of each wins
 V \u8d62\u5f974\u4e2a\u767d\u7403\uff0c\u62165\u4e2a\u7070\u7403\uff0c\u62166\u4e2a\u9ed1\u7403\uff0c\u6216\u5404\u7ec4\u4e09\u7403\u624d\u80fd\u80dc\u5229
 K Accept $#1 from #2
@@ -186,6 +189,7 @@ K Carnac_family
 V Carnac
 K Cash/Score
 V \u73b0\u91d1\uff0f\u603b\u5206
+S Chat
 K Chat Room
 V \u804a\u5929\u5ba4
 S Che
@@ -200,8 +204,6 @@ K Choose the penalty for non-payment of interest
 V \u9009\u62e9\u672a\u652f\u4ed8\u5229\u606f\u7684\u7f5a\u6b3e
 K Click DONE to confirm this placement
 V \u70b9\u51fb\u5b8c\u6210\u4ee5\u786e\u8ba4\u7ed3\u675f
-K Click Done
-V \u70b9\u51fb\u5b8c\u6210
 K Click Done to Finish the move
 V \u70b9\u51fb\u5b8c\u6210\u7ed3\u675f
 K Click Done to accept a draw
@@ -222,12 +224,11 @@ K Click Done to confirm this placement
 V \u70b9\u51fb\u5b8c\u6210\u786e\u8ba4
 K Click Done to decline a draw
 V \u70b9\u51fb\u5b8c\u6210\u62d2\u7edd\u548c\u68cb
-K Click Done to offer a draw
-V \u70b9\u51fb\u5b8c\u6210\u8981\u6c42\u548c\u68cb
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V \u70b9\u51fb\u5b8c\u6210\u7ed3\u675f
+S Click on Done to confirm passing
 S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V \u70b9\u51fb\u5b8c\u6210\u786e\u8ba4\u5bf9\u5bb6\u5148\u8d70
@@ -245,8 +246,10 @@ K Click on Done to end the game (you lose)
 V \u70b9\u51fb\u5b8c\u6210\u7ed3\u675f\u6e38\u620f (\u5931\u8d25)
 K Click on Done to end the game as a Draw
 V \u6e38\u620f\u5e73\u5c40\uff0c\u70b9\u51fb\u5b8c\u6210\u7ed3\u675f
+S Click on Done to end the game as a Loss
 K Click on Done to finish all captures
 V \u70b9\u51fb\u5b8c\u6210\u7ed3\u675f\u6355\u83b7
+S Click on Done to offer a draw
 S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V \u5728\u5c06\u8981\u88ab\u79fb\u9664\u7684\u4e00\u884c\u68cb\u4e2d\u70b9\u51fb\u4f60\u60f3\u8981\u7559\u4e0b\u7684\u4e00\u4e2a\u68cb\u6808\uff0c\u5426\u5219\u70b9\u51fb\u5b8c\u6210\u7ed3\u675f\u79fb\u9664\u6574\u884c
@@ -694,10 +697,12 @@ K Make the first move, or swap and move second
 V \u5148\u8d70\uff0c\u6216\u8ba9\u5bf9\u5bb6\u5148\u8d70
 K Make your first move, or swap fleets
 V \u5f00\u59cb\u9996\u822a\uff0c\u6216\u4ea4\u6362\u8230\u961f
+S Map
 K Map of Player Locations
 V \u5730\u56fe\u623f\u95f4
 K Mar #1#2#3
 V \u4e09\u6708#1\u53f7, #2:#3 GMT
+S Master
 K Master Room
 V \u5927\u5e08\u7ea7\u623f\u95f4
 K Master ranked players can play
@@ -732,6 +737,10 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V \u666e\u901aMicropul
+K Mogul_family
+V Mogul
+K Mogul_variation
+V standard Mogul
 K Move ##1
 V \u79fb\u52a8##1
 K Move 6 ships to the center
@@ -782,9 +791,7 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V \u79fb\u52a8\u4e00\u4e2a\u706b\u5c71\u5e3d
-S Move any piece to the opposite goal
 S Move any piece to the opposite goal space
-S Move one of your pieces
 K Move one ship
 V \u79fb\u52a8\u4e00\u8258\u8239
 K Move stacks around any way you want to
@@ -984,7 +991,6 @@ K Played on #1
 V \u73a9\u8fc7#1
 K Player #1
 V \u73a9\u5bb6#1
-S Player 1
 S Player Cubes
 K Player is 
 V \u73a9\u5bb6\u53eb\uff1a
@@ -1081,8 +1087,6 @@ K Return to the Way
 V \u4f7f\u5bf9\u624b\u65e0\u8def\u53ef\u8d70
 K Reverse View
 V \u53cd\u5411\u67e5\u770b
-K Review Room
-V \u67e5\u770b\u623f\u95f4
 K Review Saved Games
 V \u67e5\u770b\u623f\u95f4
 S Rider Size
@@ -1187,8 +1191,6 @@ K Start White
 V \u767d\u8272\u5f00\u59cb
 K State unknown.
 V \u5c1a\u672a\u7ed3\u675f
-K Swap
-V \u6362
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -1243,6 +1245,7 @@ K TakoJudo_variation
 V standard Tako Judo
 K Tamsk_variation
 V \u666e\u901aTamsk
+S Tan
 K The game is a draw
 V \u6e38\u620f\u5e73\u5c40
 K The game record is not available during the game
@@ -1430,8 +1433,6 @@ K You have been offered a draw - Accept or Decline
 V \u548c\u68cb - \u63a5\u53d7\u6216\u62d2\u7edd
 K You have no legal moves.  Click on Done to pass
 V \u6839\u636e\u89c4\u5219\u73b0\u5728\u4e0d\u80fd\u79fb\u52a8\u4efb\u4f55\u68cb.  \u70b9\u51fb\u5b8c\u6210
-K You have no moves available. Click on Done to pass.
-V \u6ca1\u6709\u53ef\u8d70\u7684\u68cb\uff0c\u70b9\u51fb\u5b8c\u6210
 K You must move the gobblet you have picked up
 V \u53ea\u80fd\u79fb\u52a8\u5df2\u9009\u62e9\u7684\u68cb\u676f
 K You must place a dome
@@ -1512,8 +1513,6 @@ K fund a loan from a player or the bank
 V \u5411\u73a9\u5bb6\u8fd8\u662f\u94f6\u884c\u501f\u6b3e
 K game selector
 V \u6e38\u620f\u9009\u62e9\u5668
-K gold: escape the flagship  silver: capture gold flagship
-V \u91d1\u8272: \u65d7\u8230\u8eb2\u907f\u5bf9\u624b\u7684\u6355\u83b7  \u94f6\u8272: \u6355\u83b7\u91d1\u8272\u65d7\u8230
 K guest
 V \u5ba2\u4eba
 K in #1
@@ -1621,4 +1620,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-N 924
+N 929

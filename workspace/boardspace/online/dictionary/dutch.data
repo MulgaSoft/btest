@@ -1,3 +1,4 @@
+S 
 S #1 #2 Containers
 S #1 Camels
 S #1 Cards
@@ -7,8 +8,6 @@ K #1 Ship
 V #1 Schip
 K #1 center
 V #1 centrum
-K #1 choices
-V #1 keuzes
 K #1 deliberately quit
 V #1 heeft de partij opzettelijk verlaten
 K #1 has been muted, by a consensus of the players
@@ -29,7 +28,6 @@ K #1 left
 V #1 links
 K #1 prisoners
 V #1 gevangenen
-S #1 prizes, total value #2
 K #1 quit
 V #1 heeft de partij verlaten
 K #1 repetitions
@@ -45,6 +43,13 @@ K #1 riders have finished
 V #1 fietsers zijn over de finish
 K #1 starts Joint review
 V #1 start gezamelijk commentaar
+S #1{ Choices, Choice}
+S #1{##no Camels, Camel, Camels}
+S #1{##no Gold, Gold, Gold}
+S #1{##no Victory points, Victory Point, Victory Points}
+S #1{##no cards, card, cards}
+S #1{##no chips, chip, chips}
+S #1{##no prizes, prize, prizes}, total value #2
 K (unknown)
 V (onbekend)
 K (unoccupied)
@@ -54,8 +59,6 @@ V (vacant)
 S + #1 turns
 K ...plus #1 more
 V ...plus #1 meer
-K 1 choice
-V 1 keuze
 K 4w 5g 6b or 3 of each wins
 V 4w 5g 6b of 3 van elk wint
 K Accept $#1 from #2
@@ -182,6 +185,7 @@ S Carnac
 K Carnac_family
 V Carnac
 S Cash/Score
+S Chat
 K Chat Room
 V Chat Ruimte
 S Che
@@ -196,8 +200,6 @@ K Choose the penalty for non-payment of interest
 V Kies de boete voor het niet betalen van rente
 K Click DONE to confirm this placement
 V Klik Klaar om het plaatsen te voltooien
-K Click Done
-V Klik Klaar
 K Click Done to Finish the move
 V Klik Klaar om de zet te voltooien
 K Click Done to accept a draw
@@ -218,12 +220,11 @@ K Click Done to confirm this placement
 V Klik Klaar om de plaatsing te voltooien
 K Click Done to decline a draw
 V Klik Klaar om remise te weigeren
-K Click Done to offer a draw
-V Klik Klaar om remise aan te bieden
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klik Klaar om het slaan te voltooien
+S Click on Done to confirm passing
 S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V Klik Klaar om de switch te voltooien
@@ -241,8 +242,10 @@ K Click on Done to end the game (you lose)
 V Klik Klaar om het spel te beeindigen (je verliest)
 K Click on Done to end the game as a Draw
 V Klik Klaar om remise te maken
+S Click on Done to end the game as a Loss
 K Click on Done to finish all captures
 V Klik Klaar om het slaan te voltooien
+S Click on Done to offer a draw
 S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V Klik op de stukken om hun status mbt. slaan te wijzigen
@@ -681,10 +684,12 @@ K Make the first move, or swap and move second
 V Doe de eerste zet, of wissel kleur en zet als tweede
 K Make your first move, or swap fleets
 V Doe een eerste zet, of verwissel de kleuren
+S Map
 K Map of Player Locations
 V Kaartruimte
 K Mar #1#2#3
 V #1 Mrt, #2:#3 GMT
+S Master
 K Master Room
 V Meesterruimte
 K Master ranked players can play
@@ -719,6 +724,10 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V standaard Micropul
+K Mogul_family
+V Mogul
+K Mogul_variation
+V standard Mogul
 K Move ##1
 V Zet ##1
 K Move 6 ships to the center
@@ -769,9 +778,7 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V Zet een volcano cap
-S Move any piece to the opposite goal
 S Move any piece to the opposite goal space
-S Move one of your pieces
 K Move one ship
 V Verplaats een schip
 K Move stacks around any way you want to
@@ -972,7 +979,6 @@ K Played on #1
 V Gespeeld op #1
 K Player #1
 V Speler #1
-S Player 1
 S Player Cubes
 K Player is 
 V Speler is 
@@ -1069,8 +1075,6 @@ K Return to the Way
 V Ga terug naar de Weg
 K Reverse View
 V Draai bord
-K Review Room
-V Commentaarruimte
 K Review Saved Games
 V Commentaarruimte
 K Rider Size
@@ -1175,8 +1179,6 @@ K Start White
 V Start Wit
 K State unknown.
 V Status onbekend.
-K Swap
-V Wissel kleur
 S Swap colors, or place a chip, or move a board
 S Swing View
 K Switch to a more oblique view of the board
@@ -1233,6 +1235,7 @@ K TakoJudo_variation
 V standard Tako Judo
 K Tamsk_variation
 V standaard Tamsk
+S Tan
 K The game is a draw
 V De partij is remise
 K The game record is not available during the game
@@ -1419,8 +1422,6 @@ K You have been offered a draw - Accept or Decline
 V Er wordt remise aangeboden - Accepteer of Weiger
 K You have no legal moves.  Click on Done to pass
 V Je hebt geen legale zet.  Klik Klaar om te passen
-K You have no moves available. Click on Done to pass.
-V Je hebt geen zet. Klik Klaar om te passen.
 K You must move the gobblet you have picked up
 V Je moet de geselecteerde goblet verplaatsen
 K You must place a dome
@@ -1500,8 +1501,6 @@ K fund a loan from a player or the bank
 V garandeer een lening van een speler of de bank
 K game selector
 V spelkeuze
-K gold: escape the flagship  silver: capture gold flagship
-V goud: ontsnap met het Vlaggenschip  zilver: vang het Vlaggenschip
 K guest
 V gast
 S in #1
@@ -1608,4 +1607,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 924
+N 929

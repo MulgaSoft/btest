@@ -3,7 +3,11 @@ package checkerboard;
 import online.game.Play2Constants;
 
 public interface CheckerConstants extends Play2Constants
-{	
+{	static String VictoryCondition = "do what it takes to win";
+	static String CheckerStrings[] =
+	{
+		VictoryCondition
+	};
 	static final int DEFAULT_COLUMNS = 8;	// 8x6 board
 	static final int DEFAULT_ROWS = 8;
 	static final String Checker_INIT = "checkers";	//init for standard game
@@ -31,11 +35,11 @@ public interface CheckerConstants extends Play2Constants
     /* these strings correspoind to the move states */
     static String[] boardStates = 
         {
-            "Rearrange things any way you want to", // puzzle state
-            "Click on Done to confirm your resignation", 
-            "Game Over", 
-            "Click Done to confirm this move", 
-            "Click on Done to end the game as a Draw",
+            PuzzleStateDescription, // puzzle state
+            ResignStateDescription, 
+            GameOverStateDescription, 
+            ConfirmStateDescription, 
+            DrawStateDescription,
             "Place a gobblet on the board, or move a gobblet",
             "You must move the gobblet you have picked up"
           };

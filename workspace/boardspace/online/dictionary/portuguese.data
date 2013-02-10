@@ -1,3 +1,4 @@
+S 
 S #1 #2 Containers
 S #1 Camels
 S #1 Cards
@@ -6,8 +7,6 @@ S #1 Machine
 S #1 Ship
 K #1 center
 V #1 centro
-K #1 choices
-V #1 escolhas
 K #1 deliberately quit
 V #1 deliberadamente saiu da sala
 K #1 has been muted, by a consensus of the players
@@ -27,7 +26,6 @@ V #1 foi desligado devido a #2
 K #1 left
 V #1 esquerda
 S #1 prisoners
-S #1 prizes, total value #2
 K #1 quit
 V #1 caiu
 K #1 repetitions
@@ -40,6 +38,13 @@ S #1 riders have crossed the second sprint line.
 S #1 riders have finished
 K #1 starts Joint review
 V #1 iniciou revis\u00e3o conjunta
+S #1{ Choices, Choice}
+S #1{##no Camels, Camel, Camels}
+S #1{##no Gold, Gold, Gold}
+S #1{##no Victory points, Victory Point, Victory Points}
+S #1{##no cards, card, cards}
+S #1{##no chips, chip, chips}
+S #1{##no prizes, prize, prizes}, total value #2
 K (unknown)
 V (desconhecido)
 K (unoccupied)
@@ -49,8 +54,6 @@ V (vago)
 S + #1 turns
 K ...plus #1 more
 V ...mais #1
-K 1 choice
-V 1 escolha
 K 4w 5g 6b or 3 of each wins
 V 4b 5c 6p or 3 de cada vencem
 S Accept $#1 from #2
@@ -168,6 +171,7 @@ S Carnac
 K Carnac_family
 V Carnac
 S Cash/Score
+S Chat
 K Chat Room
 V Sala de Batepapo
 S Che
@@ -181,8 +185,6 @@ S Chest
 S Choose the penalty for non-payment of interest
 K Click DONE to confirm this placement
 V Pressione CONFIRMAR para efetivar esta coloca\u00e7\u00e3o
-K Click Done
-V Pressione o Bot\u00e3o Confirmar
 K Click Done to Finish the move
 V Pressione o bot\u00e3o Confirmar para finalizar o lance
 K Click Done to accept a draw
@@ -202,12 +204,11 @@ K Click Done to confirm this placement
 V Pressione o bot\u00e3o confirmar para efetuar esta coloca\u00e7\u00e3o
 K Click Done to decline a draw
 V Clique em Confirmar para declinar o empate
-K Click Done to offer a draw
-V Clique em Confirmar para oferecer o empate
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Pressione o bot\u00e3o Confirmar para efetuar a captura
+S Click on Done to confirm passing
 S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V Pressione o bot\u00e3o Confirmar para efetuar a troca
@@ -225,8 +226,10 @@ K Click on Done to end the game (you lose)
 V Pressione o bot\u00e3o Confirmar para terminar a partida (voc\u00ea perdeu)
 K Click on Done to end the game as a Draw
 V Pressione o bot\u00e3o Confirmar para terminar a partida como Empatada
+S Click on Done to end the game as a Loss
 K Click on Done to finish all captures
 V Pressione o bot\u00e3o Confirmar para efetuar todas as capturas
+S Click on Done to offer a draw
 S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V Clique nas pe\u00e7as Gipf para mudar seu status de captura
@@ -650,10 +653,12 @@ K Make the first move, or swap and move second
 V Fa\u00e7a o primeiro movimento, ou troque e movimente em segundo
 K Make your first move, or swap fleets
 V Fa\u00e7a seu primeiro lance, ou troque de frota
+S Map
 K Map of Player Locations
 V Sala do Mapa
 K Mar #1#2#3
 V #1 Mar, #2:#3 GMT
+S Master
 K Master Room
 V Sala dos Mestres
 K Master ranked players can play
@@ -687,6 +692,10 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V Micropul b\u00e1sico
+K Mogul_family
+V Mogul
+K Mogul_variation
+V standard Mogul
 K Move ##1
 V Lance ##1
 K Move 6 ships to the center
@@ -734,9 +743,7 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V Mova um cone volcano
-S Move any piece to the opposite goal
 S Move any piece to the opposite goal space
-S Move one of your pieces
 K Move one ship
 V Mova um navio
 K Move stacks around any way you want to
@@ -932,7 +939,6 @@ K Played on #1
 V Jogado em #1
 K Player #1
 V Jogador #1
-S Player 1
 S Player Cubes
 K Player is 
 V O jogador \u00e9 
@@ -1024,8 +1030,6 @@ V Reiniciar
 K Return to the Way
 V Retorno ao Caminho
 S Reverse View
-K Review Room
-V Sala de Revis\u00e3o
 K Review Saved Games
 V Sala de Revis\u00e3o
 S Rider Size
@@ -1127,8 +1131,6 @@ K Start White
 V Come\u00e7am as Brancas
 K State unknown.
 V Estado desconhecido.
-K Swap
-V Trocar
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -1181,6 +1183,7 @@ K TakoJudo_variation
 V standard Tako Judo
 K Tamsk_variation
 V Tamsk b\u00e1sico
+S Tan
 K The game is a draw
 V A partida terminou empatada
 K The game record is not available during the game
@@ -1360,8 +1363,6 @@ K You have been offered a draw - Accept or Decline
 V Foi oferecido o empate - Aceitar ou Declinar
 K You have no legal moves.  Click on Done to pass
 V Voc\u00ea n\u00e3o pode efetuar nenhum lance v\u00e1lido. Pressione o bot\u00e3o Confirmar para passar a vez
-K You have no moves available. Click on Done to pass.
-V Voc\u00ea n\u00e3o possui movimentos dispon\u00edveis. Pressione o bot\u00e3o Confirmar para passar a vez.
 K You must move the gobblet you have picked up
 V Voc\u00ea deve mover o gobblet que voc\u00ea pegou
 K You must place a dome
@@ -1437,8 +1438,6 @@ S form the most groups of 3 or more adjacent squares your color
 S fund a loan from a player or the bank
 K game selector
 V seletor de jogos
-K gold: escape the flagship  silver: capture gold flagship
-V ouro: escape com a nau capit\u00e2nia   prata: capture a nau capit\u00e2nia
 K guest
 V convidado
 K in #1
@@ -1538,4 +1537,4 @@ V Benvindo ao sal\u00e3o do BoardSpace, vers\u00e3o #1
 S you may increase your bid
 K your name
 V seu nome
-N 924
+N 929

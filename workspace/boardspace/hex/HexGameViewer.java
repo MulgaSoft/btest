@@ -677,7 +677,7 @@ public class HexGameViewer extends commonCanvas
 			|| (state==PLAY_OR_SWAP_STATE) 
 			|| (state==PUZZLE_STATE))
 		{ // make the "swap" button appear if we're in the correct state
-			if(G.handleRoundButton(gc, swapRect, buttonSelect, s.get("Swap Colors"),
+			if(G.handleRoundButton(gc, swapRect, buttonSelect, s.get(SwapAction),
                 HighlightColor, rackBackGroundColor))
 			{ buttonSelect.hitCode = HitSwapButton;
 			}
@@ -688,7 +688,7 @@ public class HexGameViewer extends commonCanvas
 			// we let the board be the ultimate arbiter of if the "done" button
 			// is currently active.
             if (G.handleRoundButton(gc, doneRect, 
-            		(gb.DoneState() ? buttonSelect : null), s.get("Done"),
+            		(gb.DoneState() ? buttonSelect : null), s.get(DoneAction),
                     HighlightColor, rackBackGroundColor))
             {	// always display the done button, but only make it active in
             	// the appropriate states
@@ -698,7 +698,7 @@ public class HexGameViewer extends commonCanvas
             {	// reviewer is active if there was a game here, and we were a player, 
             	// or all the time in review rooms.
             	// we're allowed to edit the board, so we need an edit button
-                    if (G.handleRoundButton(gc, editRect, buttonSelect, s.get("Edit"),
+                    if (G.handleRoundButton(gc, editRect, buttonSelect, s.get(EditAction),
                                 HighlightColor, rackBackGroundColor))
                     {
                         buttonSelect.hitCode = HitEditButton;
@@ -717,7 +717,7 @@ public class HexGameViewer extends commonCanvas
             				state!=PUZZLE_STATE,
             				gb.whoseTurn,
             				stateRect);
-            goalAndProgressMessage(gc,s.get("connect opposite sides with a chain of markers"),progressRect,goalRect);
+            goalAndProgressMessage(gc,s.get(HexVictoryCondition),progressRect,goalRect);
             //DrawRepRect(gc,gb.Digest(),repRect);	// Not needed for hex
         }
         // draw the vcr controls
@@ -834,7 +834,7 @@ public class HexGameViewer extends commonCanvas
  * result in a null move.  It is vital that the operations performed on
  * the history are identical in effect to the manipulations of the board
  * state performed by "nmove".  This is checked by verifyGameRecord().
- * Multiple occurrences of "resign" "start" and "edit" are handled separately
+ * 
  * in commonEditHistory()
  * 
  */
@@ -1291,12 +1291,12 @@ public class HexGameViewer extends commonCanvas
      */
     public BoardProtocol getBoard()   {    return (bb);   }
 
-    /** this is used by the game controller to supply entertainment strings to the lobby */
-    public String gameProgressString()
-    {	// this is what the standard method does
-    	// return ((reviewer ? s.get("review") : ("" + viewMove)));
-    	return(super.gameProgressString());
-    }
+    //** this is used by the game controller to supply entertainment strings to the lobby */
+    // public String gameProgressString()
+    // {	// this is what the standard method does
+    // 	// return ((mutable_game_record ? Reviewing : ("" + viewMove)));
+    // 	return(super.gameProgressString());
+    // }
 
 
 /** this is used by the scorekeeper to determine who won. Draws are indicated

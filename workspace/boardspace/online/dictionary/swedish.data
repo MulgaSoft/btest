@@ -1,3 +1,4 @@
+S 
 K #1 #2 Containers
 V #1 #2 containrar
 S #1 Camels
@@ -9,8 +10,6 @@ K #1 Ship
 V #1 skepp
 K #1 center
 V #1 i mitten
-K #1 choices
-V #1 v\u00e4ljer
 K #1 deliberately quit
 V #1 l\u00e4mnade rummet avsiktligt
 K #1 has been muted, by a consensus of the players
@@ -30,7 +29,6 @@ V #1 utsl\u00e4ngd p.g.a. #2
 K #1 left
 V #1 v\u00e4nster
 S #1 prisoners
-S #1 prizes, total value #2
 K #1 quit
 V #1 l\u00e4mnade rummet
 K #1 repetitions
@@ -46,6 +44,13 @@ K #1 riders have finished
 V #1 \u00e5kare har \u00e5kt i m\u00e5l
 K #1 starts Joint review
 V #1 startar gemensam analys
+S #1{ Choices, Choice}
+S #1{##no Camels, Camel, Camels}
+S #1{##no Gold, Gold, Gold}
+S #1{##no Victory points, Victory Point, Victory Points}
+S #1{##no cards, card, cards}
+S #1{##no chips, chip, chips}
+S #1{##no prizes, prize, prizes}, total value #2
 K (unknown)
 V (ok\u00e4nt)
 K (unoccupied)
@@ -55,8 +60,6 @@ V (fr\u00e5nvarande)
 S + #1 turns
 K ...plus #1 more
 V ...plus #1 till
-K 1 choice
-V 1 val
 K 4w 5g 6b or 3 of each wins
 V 4v 5g 6s eller 3 av varje ger vinst
 K Accept $#1 from #2
@@ -185,6 +188,7 @@ K Carnac_family
 V Carnac
 K Cash/Score
 V Pengar/Po\u00e4ng
+S Chat
 K Chat Room
 V Chattrum
 S Che
@@ -199,8 +203,6 @@ K Choose the penalty for non-payment of interest
 V V\u00e4lj straff f\u00f6r utebliven betalning av r\u00e4nta
 K Click DONE to confirm this placement
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
-K Click Done
-V Klicka p\u00e5 Klar
 K Click Done to Finish the move
 V Klicka p\u00e5 Klar f\u00f6r att avsluta draget
 K Click Done to accept a draw
@@ -221,12 +223,11 @@ K Click Done to confirm this placement
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
 K Click Done to decline a draw
 V Klicka p\u00e5 Klar f\u00f6r att avsl\u00e5 remierbjudande
-K Click Done to offer a draw
-V Klicka p\u00e5 Klar f\u00f6r att bjuda remi
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta f\u00e5ngst
+S Click on Done to confirm passing
 S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
@@ -244,8 +245,10 @@ K Click on Done to end the game (you lose)
 V Klicka p\u00e5 klar f\u00f6r att avsluta spelet (du f\u00f6rlorar)
 K Click on Done to end the game as a Draw
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta remi.
+S Click on Done to end the game as a Loss
 K Click on Done to finish all captures
 V Klicka p\u00e5 Klar f\u00f6r att avsluta alla er\u00f6vringar
+S Click on Done to offer a draw
 S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V Klicka p\u00e5 Gipf-brickorna f\u00f6r att \u00e4ndra deras er\u00f6vringsstatus
@@ -690,10 +693,12 @@ K Make the first move, or swap and move second
 V G\u00f6r det f\u00f6rsta draget, eller byt f\u00e4rg och g\u00f6r det andra draget
 K Make your first move, or swap fleets
 V G\u00f6r ditt f\u00f6rsta drag eller byt flotta
+S Map
 K Map of Player Locations
 V Kartrum
 K Mar #1#2#3
 V #1 Mar, #2:#3 GMT
+S Master
 K Master Room
 V M\u00e4starrum
 K Master ranked players can play
@@ -728,6 +733,10 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V standard Micropul
+K Mogul_family
+V Mogul
+K Mogul_variation
+V standard Mogul
 K Move ##1
 V Drag ##1
 K Move 6 ships to the center
@@ -778,9 +787,7 @@ S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 K Move a volcano cap
 V Flytta ett Volcanolock
-S Move any piece to the opposite goal
 S Move any piece to the opposite goal space
-S Move one of your pieces
 K Move one ship
 V Flytta ett skepp
 K Move stacks around any way you want to
@@ -981,7 +988,6 @@ K Played on #1
 V Spelad p\u00e5 #1
 K Player #1
 V Spelare #1
-S Player 1
 S Player Cubes
 K Player is 
 V Spelaren \u00e4r 
@@ -1079,8 +1085,6 @@ K Return to the Way
 V \u00c5terv\u00e4nd till v\u00e4gen
 K Reverse View
 V Motsatt vy
-K Review Room
-V Analysrum
 K Review Saved Games
 V Analysrum
 K Rider Size
@@ -1185,8 +1189,6 @@ K Start White
 V Starta vit
 K State unknown.
 V Ok\u00e4nd status
-K Swap
-V Byt
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -1241,6 +1243,7 @@ K TakoJudo_variation
 V standard Tako Judo
 K Tamsk_variation
 V Tamsk standard
+S Tan
 K The game is a draw
 V Spelet \u00e4r remi
 K The game record is not available during the game
@@ -1427,8 +1430,6 @@ K You have been offered a draw - Accept or Decline
 V Du har blivit erbjuden remi - acceptera eller avsl\u00e5
 K You have no legal moves.  Click on Done to pass
 V Du har inga m\u00f6jliga drag. Klicka p\u00e5 Klar f\u00f6r att passa.
-K You have no moves available. Click on Done to pass.
-V Du har inga m\u00f6jliga drag. Klicka p\u00e5 Klar f\u00f6r att passa.
 K You must move the gobblet you have picked up
 V Du m\u00e5ste flytta gobbleten du har plockat upp
 K You must place a dome
@@ -1508,8 +1509,6 @@ K fund a loan from a player or the bank
 V finansiera ett l\u00e5n fr\u00e5n en spelare eller bank
 K game selector
 V spelv\u00e4ljare
-K gold: escape the flagship  silver: capture gold flagship
-V Guld: fly med flaggskeppet; Silver: er\u00f6vra guldflaggskepept
 K guest
 V g\u00e4st
 K in #1
@@ -1616,4 +1615,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 924
+N 929

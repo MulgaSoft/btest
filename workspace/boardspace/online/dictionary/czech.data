@@ -1,3 +1,4 @@
+S 
 S #1 #2 Containers
 S #1 Camels
 S #1 Cards
@@ -5,8 +6,6 @@ S #1 Gold
 S #1 Machine
 S #1 Ship
 S #1 center
-K #1 choices
-V #1 mo\u017enost\u00ed
 K #1 deliberately quit
 V #1 z\u00e1m\u011brn\u011b ode\u009ael
 K #1 has been muted, by a consensus of the players
@@ -25,7 +24,6 @@ K #1 killed due to #2
 V #1 je zabit kv\u016fli #2
 S #1 left
 S #1 prisoners
-S #1 prizes, total value #2
 K #1 quit
 V #1 ode\u009ael
 K #1 repetitions
@@ -38,6 +36,13 @@ S #1 riders have crossed the second sprint line.
 S #1 riders have finished
 K #1 starts Joint review
 V #1 spou\u009at\u00ed spole\u010dn\u00e9 opakov\u00e1n\u00ed
+S #1{ Choices, Choice}
+S #1{##no Camels, Camel, Camels}
+S #1{##no Gold, Gold, Gold}
+S #1{##no Victory points, Victory Point, Victory Points}
+S #1{##no cards, card, cards}
+S #1{##no chips, chip, chips}
+S #1{##no prizes, prize, prizes}, total value #2
 K (unknown)
 V (nezn\u00e1m\u00e9)
 K (unoccupied)
@@ -47,8 +52,6 @@ V (voln\u00e9 m\u00edsto)
 S + #1 turns
 K ...plus #1 more
 V ...plus #1 nav\u00edc
-K 1 choice
-V 1 mo\u017enost
 S 4w 5g 6b or 3 of each wins
 S Accept $#1 from #2
 S Accept Draw
@@ -157,6 +160,7 @@ S Carnac
 K Carnac_family
 V Carnac
 S Cash/Score
+S Chat
 K Chat Room
 V Chatovac\u00ed m\u00edstnost
 S Che
@@ -169,8 +173,6 @@ S Chest
 S Choose the penalty for non-payment of interest
 K Click DONE to confirm this placement
 V Stiskn\u011bte Hotovo pro potvrzen\u00ed tohoto um\u00edst\u011bn\u00ed
-K Click Done
-V Stiskn\u011bte Hotovo
 K Click Done to Finish the move
 V Stiskn\u011bte Hotovo pro ukon\u010den\u00ed tahu
 S Click Done to accept a draw
@@ -190,10 +192,10 @@ V Stiskn\u011bte Hotovo pro ukon\u010den\u00ed sv\u00e9ho kola.
 K Click Done to confirm this placement
 V Stiskn\u011bte Hotovo pro potvrzen\u00ed um\u00edst\u011bn\u00ed
 S Click Done to decline a draw
-S Click Done to offer a draw
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
 S Click on Done to complete the capture
+S Click on Done to confirm passing
 S Click on Done to confirm paying a camel
 S Click on Done to confirm swapping
 S Click on Done to confirm the Exchange
@@ -205,8 +207,10 @@ V Stiskn\u011bte Hotovo pro potvrzen\u00ed vzd\u00e1n\u00ed hry.
 S Click on Done to end the game
 S Click on Done to end the game (you lose)
 S Click on Done to end the game as a Draw
+S Click on Done to end the game as a Loss
 K Click on Done to finish all captures
 V Stiskn\u011bte Hotovo k dokon\u010den\u00ed v\u009aech zajmut\u00ed
+S Click on Done to offer a draw
 S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
 V Klikn\u011bte na kameny Gipf a zm\u011b\u0148te, jestli maj\u00ed b\u00fdt zajmuty nebo ne
@@ -599,10 +603,12 @@ K Make an addional move, or click on Done
 V Make an additional move, or click on Done
 S Make the first move, or swap and move second
 S Make your first move, or swap fleets
+S Map
 K Map of Player Locations
 V Mapov\u00e1 m\u00edstnost
 K Mar #1#2#3
 V #1. b\u0159ezen, #2:#3 GMT
+S Master
 K Master Room
 V Mistrovsk\u00e1 m\u00edstnost
 K Master ranked players can play
@@ -635,6 +641,10 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V standardn\u00ed Micropul
+K Mogul_family
+V Mogul
+K Mogul_variation
+V standard Mogul
 K Move ##1
 V Tah ##1
 S Move 6 ships to the center
@@ -671,9 +681,7 @@ S Move a soldier, or fire a cannon
 S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 S Move a volcano cap
-S Move any piece to the opposite goal
 S Move any piece to the opposite goal space
-S Move one of your pieces
 S Move one ship
 S Move stacks around any way you want to
 S Move the flipped stack
@@ -835,8 +843,6 @@ K Played on #1
 V Hr\u00e1t na #1
 K Player #1
 V Hr\u00e1\u010d #1
-K Player 1
-V Hr\u00e1\u010d 1
 S Player Cubes
 K Player is 
 V Hr\u00e1\u010d je
@@ -922,8 +928,6 @@ S Restart
 S Return to the Way
 K Reverse View
 V P\u0159evr\u00e1tit pohled
-K Review Room
-V M\u00edstnost opakov\u00e1n\u00ed
 K Review Saved Games
 V M\u00edstnost op\u00e1kov\u00e1n\u00ed
 S Rider Size
@@ -1019,8 +1023,6 @@ S Start Black
 S Start White
 K State unknown.
 V Nezn\u00e1m\u00fd stav.
-K Swap
-V Prohodit
 S Swap colors, or place a chip, or move a board
 S Swing View
 K Switch to a more oblique view of the board
@@ -1075,6 +1077,7 @@ K TakoJudo_variation
 V standard Tako Judo
 K Tamsk_variation
 V standardn\u00ed Tamsk
+S Tan
 K The game is a draw
 V Hra je rem\u00edza
 S The game record is not available during the game
@@ -1247,7 +1250,6 @@ K You have been disconnected: #1
 V Byli jste odpojeni: #1
 S You have been offered a draw - Accept or Decline
 S You have no legal moves.  Click on Done to pass
-S You have no moves available. Click on Done to pass.
 S You must move the gobblet you have picked up
 S You must place a dome
 S You must take out a loan to pay interest
@@ -1317,8 +1319,6 @@ S form the most groups of 3 or more adjacent squares your color
 S fund a loan from a player or the bank
 K game selector
 V p\u0159ep\u00edna\u010d her
-K gold: escape the flagship  silver: capture gold flagship
-V gold: escape the flagship  silver: capture the gold flagship
 K guest
 V host
 K in #1
@@ -1415,4 +1415,4 @@ V V\u00edtejte na BoardSpace Lobby, verze #1
 S you may increase your bid
 K your name
 V va\u009ae jm\u00e9no
-N 924
+N 929
