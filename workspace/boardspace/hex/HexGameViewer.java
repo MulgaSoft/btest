@@ -184,6 +184,12 @@ public class HexGameViewer extends commonCanvas
         super.init(info);
         // use_grid=reviewer;// use this to turn the grid letters off by default
 
+        if(debug)
+        {	// initialize the translations when debugging, so there
+        	// will be console chatter about strings not in the list yet.
+        	internationalStrings.put(HexStrings);
+        	internationalStrings.put(HexStringPairs);
+        }
          
         rotationOption = myFrame.addOption("rotate board",true,deferredEvents);
         
