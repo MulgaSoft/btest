@@ -2,6 +2,7 @@ package hex;
 
 import online.common.*;
 
+
 import java.util.*;
 
 import online.game.*;
@@ -46,7 +47,7 @@ public class Hexmovespec extends commonMove implements HexConstants
     int to_row; // for from-to moves, the destination row
     //
     // variables for use by the robot
-    int state;	// the state of the move before state, for robot UNDO
+    HexState state;	// the state of the move before state, for robot UNDO
     
     public Hexmovespec()
     {

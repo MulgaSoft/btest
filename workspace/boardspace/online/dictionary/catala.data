@@ -36,6 +36,9 @@ S #1 riders have finished
 K #1 starts Joint review
 V #1 Iniciar en revisi\u00f3 conjunta
 S #1{ Choices, Choice}
+S #1{ Points, Point, Points}
+S #1{##No Discards, Discard, Discards}
+S #1{##bank is empty,bank has # chip,bank has # chips}
 S #1{##no Camels, Camel, Camels}
 S #1{##no Gold, Gold, Gold}
 S #1{##no Victory points, Victory Point, Victory Points}
@@ -104,8 +107,6 @@ K Black
 V Negra
 S Black Palace
 S Black Palace Bonus (2 points)
-K Black Pieces
-V Peces negres
 S Blue
 S Blue Dome
 K BreakingAway
@@ -122,6 +123,7 @@ V Play cards,  then Build one building. Click on Done to end your turn.
 S Build adjacent to the man you moved
 S Build an initial stack of 2 to be placed
 S Buildings
+S Buy Chips
 S Buy a building with no camels
 S Buy a building with no gold
 S Buy the goods for $#1
@@ -163,8 +165,6 @@ V standard Che
 S Checkmate your opponent's general
 S Chest
 S Choose the penalty for non-payment of interest
-K Click DONE to confirm this placement
-V Clica FET per confirmar aquest empla\u00e7ament
 S Click Done to Finish the move
 S Click Done to accept a draw
 S Click Done to complete the exchange
@@ -174,7 +174,8 @@ S Click Done to confirm swapping colors with your opponent
 S Click Done to confirm swapping fleets with your opponent
 S Click Done to confirm this action
 S Click Done to confirm this move
-S Click Done to confirm this placement
+K Click Done to confirm this placement
+V Clica FET per confirmar aquest empla\u00e7ament
 S Click Done to decline a draw
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
@@ -246,6 +247,9 @@ V standard Crossfire
 S Cubes
 K Dec #1#2#3
 V #1 Desembre, #2:#3 GMT
+K DeckDescriptionStringKey
+V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
+V with borders 5 brown, 6 pink, 7 blue, 6 green, 6 yellow
 S Decline Draw
 S Decline the loan
 S Deploy the stack, or click on Done
@@ -280,6 +284,7 @@ S Dipole_variation
 S Discards
 K Done
 V Fet
+S Done selling cards
 S Drop a tile to enlarge the board
 K Drop bunny chip
 V Place one of the Bunny player's chips
@@ -600,6 +605,7 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V Standard Micropul
+S Mogul
 K Mogul_family
 V Mogul
 K Mogul_variation
@@ -624,6 +630,7 @@ S Move a piece from the row closest to the bottom of the board
 S Move a piece from the row closest to the top of the board
 S Move a piece into the row closest to the bottom of the board
 S Move a piece one space
+S Move a piece or rotate a piece
 S Move a piece, step #1
 S Move a ring
 S Move a roamer
@@ -693,6 +700,7 @@ V Opcions
 S Orange
 S Orange Palace
 S Orange Palace Bonus (4 points)
+S Out of the auction
 S Palago
 K Palago_family
 V Palago
@@ -704,10 +712,12 @@ V Pan-Kai
 K Pan-Kai_variation
 V Pentamino game for 2 players
 S Pass
+S Pay
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+S Pay a chip, or take the pot
 K Phlip_family
 V Phlip
 K Pick a ring to place a chip and move
@@ -728,8 +738,6 @@ S Place a Chip, or a Jewel, or a chip from the Store
 S Place a Frog on the board
 S Place a GIPF piece on a starting point
 S Place a Menhir on the board
-K Place a Ring on the board
-V Col\u00b7locar una anella al tauler
 S Place a bird on an empty cell
 S Place a bird on an empty cell, or designate a bird to fly
 S Place a chip on a starting point
@@ -746,7 +754,8 @@ S Place a piece on the board
 S Place a piece on the board, or Exchange an off-board piece for a new tile
 S Place a piece on the board, or move a piece already on the board
 S Place a piece on the board, or swap colors with your opponent
-S Place a ring on the board
+K Place a ring on the board
+V Col\u00b7locar una anella al tauler
 S Place a roamer on the board
 S Place a second piece on the board
 S Place a second tile adjacent to the first
@@ -783,7 +792,6 @@ V Juga #1
 S Play Farmer
 S Play a card
 S Played
-S Played on #1
 K Player #1
 V Jugador #1
 S Player Cubes
@@ -868,6 +876,8 @@ V Rendici\u00f3
 S Restart
 S Return to the Way
 S Reverse View
+K Review
+V review
 K Review Saved Games
 V  Revisi\u00f3 de jocs guardats
 S Rider Size
@@ -878,6 +888,7 @@ V Santorini
 K Santorini_variation
 V Santorini (without Gods)
 S Score the most points at the sprint and finish lines
+S Score the most points buying and selling cards
 K See Player Comments
 V Veure els comentaris dels jugadors
 K See Spectator Comments
@@ -885,7 +896,8 @@ V Veure els comentaris dels espectadors
 K Select Game
 V Seleccionar Joc
 S Select Robot
-S Select Row #1
+K Select Row #1
+V Row #1
 S Select a group of dice
 K Select a ring to remove
 V Tria una anella per treure-la
@@ -901,6 +913,13 @@ S Select which of your roamers to kill
 S Select which opponent roamer to kill
 K Selecting game: #1
 V Seleccionant joc: #1
+S Sell
+S Sell All
+S Sell All #1 Cards
+S Sell Cards
+S Sell another #1 card
+S Sell no cards
+S Sell some #1 cards
 K Send
 V Enviar
 S Send Cube
@@ -957,6 +976,8 @@ S Start Black
 S Start White
 K State unknown.
 V Estat desconegut.
+S Still in the Auction
+S Swap Colors
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -995,9 +1016,14 @@ S Take #1 camels
 S Take #1 camels, take a card, or move the supervisor #2 spaces
 S Take #1 gold
 S Take #1 gold, take a card, or move the supervisor #2 spaces
+S Take Card
+S Take Chips
 K Take Over Playing
 V Agafa el lloc jugant
+S Take The #1 Card
 S Take a card
+S Take no chips
+S Take the card, or sell cards
 S Take your first action
 S Take your second action
 S Tako Judo
@@ -1021,6 +1047,9 @@ V Ara, aquesta \u00e9s una sala privada
 K This is now a public room
 V Ara, aquesta \u00e9s una sala p\u00fablica
 S TicTacNine
+S TicTacNine Games
+K TicTacNine_family
+V TicTacNine
 K TicTacNine_variation
 V experimental TicTacNine board
 S Tile Pattern Games
@@ -1142,8 +1171,6 @@ K Welcome to Game client, version #1
 V Benvinguts a Boardspace.net, versi\u00f3 #1
 K White
 V Blanca
-K White Pieces
-V Peces blanques
 S Wolf moving suspects
 S Wolf player eating
 S Wolf player hiding
@@ -1278,6 +1305,8 @@ S own the most blocks
 S perspective
 K play
 V juga per #1
+K played on #1
+V Played on #1
 K player
 V jugador
 S player 
@@ -1295,7 +1324,7 @@ K reading directory...
 V llegint directori...
 K reconok
 V ..reconnexi\u00f3 amb \u00e8xit
-S review
+S reviewing
 K savedmsg
 V Joc guardat com #1
 S select the game to play
@@ -1309,8 +1338,6 @@ S stack six or capture six
 K stillwaiting
 V encara iniciant... espereu si us plau.
 S surround your opponents queen bee
-K swap colors
-V Swap Colors
 K the game has resumed
 V el joc s'ha reiniciat
 K timeoutWarning
@@ -1324,4 +1351,4 @@ V Benvingut a Boardspace.net, versi\u00f3 #1
 S you may increase your bid
 K your name
 V el teu nom
-N 929
+N 953

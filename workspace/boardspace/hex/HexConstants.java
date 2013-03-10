@@ -1,6 +1,7 @@
 package hex;
 
 import online.game.Play2Constants;
+import online.game.BaseBoard.BoardState;
 
 
 public interface HexConstants extends Play2Constants
@@ -10,7 +11,7 @@ public interface HexConstants extends Play2Constants
 	static String HexPlayOrSwapState = "Place a marker on any empty cell, or Swap Colors";
 	static String HexConfirmSwapState = "Click Done to confirm swapping colors with your opponent";
 	static String HexStrings[] = 
-	{	
+	{  "Hex","Hex-15","Hex-19",
        HexPlayState,
        HexPlayOrSwapState,
        HexConfirmSwapState,
@@ -19,12 +20,35 @@ public interface HexConstants extends Play2Constants
 	};
 	static String HexStringPairs[][] = 
 	{   {"Hex_family","Hex"},
-		{"Hex","Hex"},
-		{"Hex-15","Hex-15"},
-		{"Hex-19","Hex-19"},
 		{"Hex_variation","11x11 Hex"},
 		{"Hex-15_variation","15x15 Hex"},
 		{"Hex-19_variation","19x19 Hex"}
+	};
+    //
+    // states of the game
+    //
+	public enum HexState implements BoardState
+	{
+	Puzzle(PuzzleStateDescription,false,false),
+	Resign(ResignStateDescription,true,false),
+	Gameover(GameOverStateDescription,false,false),
+	Confirm(ConfirmStateDescription,true,true),
+	ConfirmSwap(HexConfirmSwapState,true,false),
+	PlayOrSwap(HexPlayOrSwapState,false,false),
+	Play(HexPlayState,false,false);
+	HexState(String des,boolean done,boolean digest)
+	{
+		description = des;
+		digestState = digest;
+		doneState = done;
+	}
+	boolean doneState;
+	boolean digestState;
+	String description;
+	public boolean GameOver() { return(this==Gameover); }
+	public String description() { return(description); }
+	public boolean doneState() { return(doneState); }
+	public boolean digestState() { return(digestState); }
 	};
 	
     //	these next must be unique integers in the Hexmovespec dictionary
@@ -73,27 +97,6 @@ public interface HexConstants extends Play2Constants
 //    static int[] ZfirstInCol = { 6, 3, 0, 1, 0, 1, 0, 3, 6 };
 //    static int[] ZnInCol =     {1, 4, 7, 6, 7, 6, 7, 4, 1 }; // depth of columns, ie A has 4, B 5 etc.
 
-    
-    /* states of the board/game.  Because several gestures are needed to complete a move, and
-    there are several types of move, we use a state machine to determine what is legal */
-    //static final int PUZZLE_STATE = 0; // no game, just plopping balls and removing rings at will.
-    //static final int RESIGN_STATE = 1; // pending resignation, ready to confirm
-    //static final int GAMEOVER_STATE = 2; // game is over (someone won or resigned)
-    static final int CONFIRM_STATE = 3; // move and remove completed, ready to commit to it.
-    static final int PLAY_STATE = 4; // place a marker on the board
-	static final int PLAY_OR_SWAP_STATE = 5; // place a marker or swap colors 
-	static final int CONFIRM_SWAP_STATE = 6; // swapped, confirm swap move
-    /* these strings correspond to the move states */
-    static String[] boardStates = 
-        {
-            PuzzleStateDescription, // puzzle state
-            ResignStateDescription, 
-            GameOverStateDescription, 
-            ConfirmStateDescription, 
-            HexPlayState,	// play state
-            HexPlayOrSwapState,
-            HexConfirmSwapState
-         };
 
 	
 	// move commands, actions encoded by movespecs.  Values chosen so these

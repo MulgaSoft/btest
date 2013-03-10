@@ -15,7 +15,6 @@ import static hex.Hexmovespec.*;
  * common.hexBoard, which knows about the coordinate system.  
  * 
  * This class doesn't do any graphics or know about anything graphical, 
- * but it does know about states of the game that should be reflected 
  * in the graphics.
  * 
  *  The principle interface with the game viewer is the "Execute" method
@@ -37,10 +36,23 @@ import static hex.Hexmovespec.*;
 
 class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstants
 {	static final boolean debug = false;
-    //
-    // private variables
-    //
+
+	private HexState board_state = HexState.Puzzle;	
+	private HexState unresign = null;	// remembers the orignal state when "resign" is hit
+	public HexState getState() { return(board_state); }
+    /**
+     * this is the preferred method when using the modern "enum" style of game state
+     * @param st
+     */
+	public void setState(HexState st) 
+	{ 	board_state = st;
+		if(!board_state.GameOver()) 
+			{ G.setValue(win,false); 	// make sure "win" is cleared
+			}
+	}
+
     private int playerColor[]={White_Chip_Pool,Black_Chip_Pool};
+    
     private hexChip playerChip[]={hexChip.White,hexChip.Black};
     private hexCell playerCell[]=new hexCell[2];
     // get the chip pool and chip associated with a player.  these are not 
@@ -73,7 +85,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     private hexCell pickedSource = null; 
     private hexCell droppedDest = null;
     private OStack<hexCell>emptyCells=new OStack<hexCell>(hexCell.class);
-    private int resetState = PUZZLE_STATE; 
+    private HexState resetState = HexState.Puzzle; 
     public Object lastDroppedObject = null;	// for image adjustment logic
 
 	// factory method to generate a board cell
@@ -114,46 +126,6 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     	c.borders = bd;
     	}
     }
-    // standared init for Hex.  Presumably there could be different
-    // initializations for variation games.
-    private void Init_Standard(String game)
-    {	int[] firstcol = null;
-    	int[] ncol = null;
-    	Random r = new Random(734687);
-    	if(Hex_INIT.equals(game)) { firstcol = ZfirstInCol; ncol = ZnInCol; }
-    	else if(Hex_15_INIT.equals(game)) { firstcol = ZfirstInCol15; ncol = ZnInCol15; }
-    	else if(Hex_19_INIT.equals(game)) { firstcol = ZfirstInCol19; ncol = ZnInCol19; }
-    	else { G.Error("No init named "+game); }
-        gametype = game;
-        setBoardState(PUZZLE_STATE);
-        blackChipPool = new hexCell(r,Black_Chip_Pool);
-        blackChipPool.chip = hexChip.Black;
-        whiteChipPool = new hexCell(r,White_Chip_Pool);
-        whiteChipPool.chip = hexChip.White;
-        playerCell[FIRST_PLAYER_INDEX] = whiteChipPool; 
-        playerCell[SECOND_PLAYER_INDEX] = blackChipPool; 
-        initBoard(firstcol, ncol, null); //this sets up the hex board
-        allCells.setDigestChain(r);		// set the randomv for all cells on the board
-      	setBorderDirections();	// mark the border cells for use in painting
-        
-        whoseTurn = FIRST_PLAYER_INDEX;
-        chips_on_board = 0;
-        droppedDest = null;
-        pickedSource = null;
-        pickedObject = null;
-        resetState = PUZZLE_STATE;
-        lastDroppedObject = null;
-        directionWhiteHome = findDirection('A',1,'A',2);
-        directionBlackHome = findDirection('A',1,'B',1);
-		playerColor[0]=White_Chip_Pool;
-		playerColor[1]=Black_Chip_Pool;
-		playerChip[0]=hexChip.White;
-		playerChip[1]=hexChip.Black;
-        // set the initial contents of the board to all empty cells
-		emptyCells.clear();
-		for(hexCell c = allCells; c!=null; c=c.next) { c.chip=null; emptyCells.push(c); }
-		fullBoard = emptyCells.size();
-    }
     public void sameboard(BoardProtocol f) { sameboard((HexGameBoard)f); }
 
     /**
@@ -165,7 +137,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     public void sameboard(HexGameBoard from_b)
     {
         super.sameboard(from_b); // // calls sameCell for each cell, also for inherited class variables.
-        
+        G.Assert(unresign==from_b.unresign,"unresign mismatch");
         G.Assert(G.sameArrayContents(win,from_b.win),"win mismatch");
         G.Assert(G.sameArrayContents(playerColor,from_b.playerColor),"playerColor mismatch");
         G.Assert(G.sameArrayContents(playerChip,from_b.playerChip),"playerChip mismatch");
@@ -221,7 +193,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 		v ^= chip.Digest(r,playerChip[0]);	// this accounts for the "swap" button
 		v ^= chip.Digest(r,pickedObject);
 		v ^= Digest(r,pickedSource);
-		v ^= r.nextLong()*(board_state*10+whoseTurn+(resign_planned?4:2));
+		v ^= r.nextLong()*(board_state.ordinal()*10+whoseTurn);
         return (v);
     }
 
@@ -237,7 +209,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         fullBoard = from_b.fullBoard;
         
         getCell(emptyCells,from_b.emptyCells);
-        
+        unresign = from_b.unresign;
+        board_state = from_b.board_state;
         droppedDest = null;
         pickedSource = getCell(from_b.pickedSource);
         pickedObject = from_b.pickedObject;
@@ -252,12 +225,51 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 
     /* initialize a board back to initial empty state */
     public void doInit(String gtype,long key)
-    {	randomKey = key;
-    	Init_Standard(gtype.toLowerCase());
+    {	
+		Random r = new Random(734687);	// this random is used to assign hash values to cells
+		setState(HexState.Puzzle);
+		gtype = gtype.toLowerCase();
+		if(Hex_INIT.equals(gtype)) { initBoard(ZfirstInCol,ZnInCol,null); }
+		else if(Hex_15_INIT.equals(gtype)) { initBoard(ZfirstInCol15,ZnInCol15,null); }
+		else if(Hex_19_INIT.equals(gtype)) { initBoard(ZfirstInCol19,ZnInCol19,null); }
+		else { G.Error("No init named "+gtype); }
+
+		allCells.setDigestChain(r);		// set the randomv for all cells on the board
+ 		gametype = gtype;
+		
+	    
+	    blackChipPool = new hexCell(r,Black_Chip_Pool);
+	    blackChipPool.chip = hexChip.Black;
+	    whiteChipPool = new hexCell(r,White_Chip_Pool);
+	    whiteChipPool.chip = hexChip.White;
+	    playerCell[FIRST_PLAYER_INDEX] = whiteChipPool; 
+	    playerCell[SECOND_PLAYER_INDEX] = blackChipPool; 
+	    
+	  	setBorderDirections();	// mark the border cells for use in painting
+	    
+	    whoseTurn = FIRST_PLAYER_INDEX;
+	    chips_on_board = 0;
+	    droppedDest = null;
+	    pickedSource = null;
+	    pickedObject = null;
+	    resetState = null;
+	    lastDroppedObject = null;
+	    directionWhiteHome = findDirection('A',1,'A',2);
+	    directionBlackHome = findDirection('A',1,'B',1);
+		playerColor[0]=White_Chip_Pool;
+		playerColor[1]=Black_Chip_Pool;
+		playerChip[0]=hexChip.White;
+		playerChip[1]=hexChip.Black;
+	    // set the initial contents of the board to all empty cells
+		emptyCells.clear();
+		for(hexCell c = allCells; c!=null; c=c.next) { c.chip=null; emptyCells.push(c); }
+		fullBoard = emptyCells.size();
+		
+		randomKey = key;
+    
         animationStack.clear();
-        G.setValue(win,false);
-        resign_planned = false;
         swapped = false;
+        unresign = null;
         moveNumber = 1;
 
         // note that firstPlayer is NOT initialized here
@@ -274,11 +286,11 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         default:
             G.Error("Move not complete, can't change the current player");
             break;
-        case PUZZLE_STATE:
+        case Puzzle:
             break;
-        case CONFIRM_SWAP_STATE:
-        case CONFIRM_STATE:
-        case RESIGN_STATE:
+        case ConfirmSwap:
+        case Confirm:
+        case Resign:
             moveNumber++; //the move is complete in these states
             setWhoseTurn(nextPlayer[whoseTurn]);
             return;
@@ -290,24 +302,15 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
      * @return
      */
     public boolean DoneState()
-    {	if(resign_planned) { return(true); }
-        switch (board_state)
-        {
-        case CONFIRM_SWAP_STATE:
-        case CONFIRM_STATE:
-            return (true);
-
-        default:
-            return (false);
-        }
+    {	return(board_state.doneState());
     }
     // this is the default, so we don't need it explicitly here.
     // but games with complex "rearrange" states might want to be
     // more selecteive.  This determines if the current board digest is added
     // to the repetition detection machinery.
     public boolean DigestState()
-    {	if(resign_planned) { return(false); }
-    	return(DoneState());
+    {	
+    	return(board_state.digestState());
     }
     //
     // flood fill to make this blob as large as possible.  This is more elaborate
@@ -587,16 +590,16 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         default:
             G.Error("Not expecting drop in state " + board_state);
             break;
-        case CONFIRM_STATE:
+        case Confirm:
         	if(droppedDest==null)
         	{setNextStateAfterDone();
         	}
         	break;
-        case PLAY_STATE:
-        case PLAY_OR_SWAP_STATE:
-			setBoardState(CONFIRM_STATE);
+        case Play:
+        case PlayOrSwap:
+			setState(HexState.Confirm);
 			break;
-        case PUZZLE_STATE:
+        case Puzzle:
 			acceptPlacement();
             break;
         }
@@ -607,17 +610,17 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     	{
     	default: G.Error("Not expecting state "+board_state);
     		break;
-    	case GAMEOVER_STATE: break;
-    	case CONFIRM_SWAP_STATE: 
-    		setBoardState(PLAY_STATE); 
+    	case Gameover: break;
+    	case ConfirmSwap: 
+    		setState(HexState.Play); 
     		break;
-    	case CONFIRM_STATE:
-    	case PUZZLE_STATE:
-    	case PLAY_STATE:
-    	case PLAY_OR_SWAP_STATE:
-    		setBoardState(((chips_on_board==1)&&(whoseTurn==SECOND_PLAYER_INDEX)&&!swapped) 
-    				? PLAY_OR_SWAP_STATE
-    				: PLAY_STATE);
+    	case Confirm:
+    	case Puzzle:
+    	case Play:
+    	case PlayOrSwap:
+    		setState(((chips_on_board==1)&&(whoseTurn==SECOND_PLAYER_INDEX)&&!swapped) 
+    				? HexState.PlayOrSwap
+    				: HexState.Play);
     		
     		break;
     	}
@@ -627,15 +630,15 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     {
         acceptPlacement();
 
-        if (resign_planned)
+        if (board_state==HexState.Resign)
         {
             win[nextPlayer[whoseTurn]] = true;
-    		setBoardState(GAMEOVER_STATE);
+    		setState(HexState.Gameover);
         }
         else
         {	if(WinForPlayerNow(whoseTurn)) 
         		{ win[whoseTurn]=true;
-        		  setBoardState(GAMEOVER_STATE); 
+        		  setState(HexState.Gameover); 
         		}
         	else {setNextPlayer();
         		setNextStateAfterDone();
@@ -657,23 +660,22 @@ void doSwap()
 	{	
 	default: G.Error("Not expecting state "+board_state);
 		break;
-	case PLAY_OR_SWAP_STATE:
-		  setBoardState(CONFIRM_SWAP_STATE);
+	case PlayOrSwap:
+		  setState(HexState.ConfirmSwap);
 		  break;
-	case CONFIRM_SWAP_STATE:
-		  setBoardState(PLAY_OR_SWAP_STATE);
+	case ConfirmSwap:
+		  setState(HexState.PlayOrSwap);
 		  break;
-	case GAMEOVER_STATE:
-	case PUZZLE_STATE: break;
+	case Gameover:
+	case Puzzle: break;
 	}
 
 }
     public boolean Execute(commonMove mm,replayMode replay)
     {	Hexmovespec m = (Hexmovespec)mm;
-        boolean next_rp = false;
         if(replay!=replayMode.Replay) { animationStack.clear(); }
 
-        //G.print("E "+m+" for "+whoseTurn+" "+board_state);
+        //G.print("E "+m+" for "+whoseTurn+" "+state);
         switch (m.op)
         {
 		case MOVE_SWAP:	// swap colors with the other player
@@ -689,10 +691,10 @@ void doSwap()
         	{
         	hexCell animsrc = null;
 			switch(board_state)
-			{ case PUZZLE_STATE: acceptPlacement(); break;
-			  case CONFIRM_STATE: animsrc = unDropObject(); unPickObject(); break;
-			  case PLAY_STATE:
-			  case PLAY_OR_SWAP_STATE: acceptPlacement(); break;
+			{ case Puzzle: acceptPlacement(); break;
+			  case Confirm: animsrc = unDropObject(); unPickObject(); break;
+			  case Play:
+			  case PlayOrSwap: acceptPlacement(); break;
 			}
 			{
 			hexChip po = pickedObject;
@@ -725,10 +727,10 @@ void doSwap()
         	pickObject(getCell(m.source,m.to_col,m.to_row));
         	switch(board_state)
         	{
-        	case PUZZLE_STATE:
+        	case Puzzle:
          		break;
-        	case CONFIRM_STATE:
-        		setBoardState((chips_on_board==1) ? PLAY_OR_SWAP_STATE : PLAY_STATE);
+        	case Confirm:
+        		setState((chips_on_board==1) ? HexState.PlayOrSwap : HexState.Play);
         		break;
         	default: ;
         	}
@@ -747,25 +749,26 @@ void doSwap()
             int nextp = nextPlayer[whoseTurn];
             // standardize the gameover state.  Particularly importing if the
             // sequence in a game is resign/start
-            setBoardState(PUZZLE_STATE);	// standardize the current state
+            setState(HexState.Puzzle);	// standardize the current state
             if((win[whoseTurn]=WinForPlayerNow(whoseTurn))
                ||(win[nextp]=WinForPlayerNow(nextp)))
-               	{ setBoardState(GAMEOVER_STATE); 
+               	{ setState(HexState.Gameover); 
                	}
             else {  setNextStateAfterDone(); }
 
             break;
 
        case MOVE_RESIGN:
-            next_rp = !resign_planned;
+    	   	if(board_state==HexState.Resign) { setState(unresign); unresign = null; }
+    	   	else { unresign = board_state; setState(HexState.Resign); }
             break;
        case MOVE_RESET:
         	switch(board_state)
         	{
-        	case PUZZLE_STATE: 
+        	case Puzzle: 
         		unPickObject();
         		break;
-        	case CONFIRM_SWAP_STATE:
+        	case Confirm:
         		doSwap();
         		// fall through
         	default:
@@ -776,7 +779,7 @@ void doSwap()
         				{ unPickObject(); 
         				  if(ps.onBoard) 
         				  { droppedDest = ps; 
-        				  	setBoardState(CONFIRM_STATE);
+        				  	setState(HexState.Confirm);
         				  }
          				} 
         			else 
@@ -792,18 +795,18 @@ void doSwap()
         				animationStack.push(ps);
         			}
         			unPickObject();
-            		setBoardState(resetState);       			
+            		setState(resetState);       			
         			}
         		}
         		break;
-        	case GAMEOVER_STATE:
+        	case Gameover:
         		break;
         	}
         	break;
         case MOVE_EDIT:
         	acceptPlacement();
             setWhoseTurn(FIRST_PLAYER_INDEX);
-            setBoardState(PUZZLE_STATE);
+            setState(HexState.Puzzle);
  
             break;
 
@@ -811,8 +814,7 @@ void doSwap()
             G.Error("Can't execute " + m);
         }
 
-        resign_planned = next_rp;
-        //System.out.println("Ex "+m+" for "+whoseTurn+" "+board_state);
+        //System.out.println("Ex "+m+" for "+whoseTurn+" "+state);
         return (true);
     }
 
@@ -824,16 +826,17 @@ void doSwap()
         default:
             G.Error("Not expecting state " + board_state);
             return(false);	// not used
-        case CONFIRM_STATE:
-        case PLAY_OR_SWAP_STATE:
-        case PLAY_STATE:
+        case Confirm:
+        case PlayOrSwap:
+        case Play:
         	// for hex, you can pick up a stone in the storage area
         	// but it's really optional
         	return(player==whoseTurn);
-		case CONFIRM_SWAP_STATE:
-		case GAMEOVER_STATE:
+		case ConfirmSwap:
+		case Resign:
+		case Gameover:
 			return(false);
-        case PUZZLE_STATE:
+        case Puzzle:
             return ((pickedObject!=null)?(pickedObject==playerChip[player]):true);
         }
     }
@@ -842,18 +845,19 @@ void doSwap()
     {	if(c==null) { return(false); }
         switch (board_state)
         {
-		case PLAY_STATE:
-		case PLAY_OR_SWAP_STATE:
+		case Play:
+		case PlayOrSwap:
 			return(c.chip==null);
-		case CONFIRM_SWAP_STATE:
-		case GAMEOVER_STATE:
+		case ConfirmSwap:
+		case Gameover:
+		case Resign:
 			return(false);
-		case CONFIRM_STATE:
+		case Confirm:
 			return(isDest(c) || (c.chip==null));
         default:
             G.Error("Not expecting state " + board_state);
             return(true);	// not used
-        case PUZZLE_STATE:
+        case Puzzle:
             return (true);
         }
     }
@@ -913,19 +917,17 @@ void doSwap()
             break;
             
         case MOVE_SWAP:
-        	setBoardState(m.state);
+        	setState(m.state);
         	doSwap();
         	break;
         case MOVE_DROPB:
         	SetBoard(getCell(m.to_col,m.to_row),null);
         	break;
         case MOVE_RESIGN:
-            resign_planned = !resign_planned;
-
             break;
         }
-
-        setBoardState(m.state);
+        unresign = null;
+        setState(m.state);
         if(whoseTurn!=m.player)
         {	moveNumber--;
         	setWhoseTurn(m.player);
@@ -940,7 +942,7 @@ void doSwap()
  }
  OStack<commonMove> GetListOfMoves()
  {	OStack<commonMove> all = new OStack<commonMove>(commonMove.class);
- 	if(board_state==PLAY_OR_SWAP_STATE)
+ 	if(board_state==HexState.PlayOrSwap)
  	{
  		all.addElement(new Hexmovespec("swap",whoseTurn));
  	}

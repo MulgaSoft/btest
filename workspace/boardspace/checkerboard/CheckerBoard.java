@@ -2,7 +2,6 @@ package checkerboard;
 
 import online.common.*;
 import online.game.*;
-
 import java.util.*;
 
 import static checkerboard.CheckerMovespec.*;
@@ -37,12 +36,21 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 	public int nPlayers() { return(players_in_game); }
     public int boardColumns = DEFAULT_COLUMNS;	// size of the board
     public int boardRows = DEFAULT_ROWS;
-    public void SetDrawState() { setBoardState(DRAW_STATE); }
+    public void SetDrawState() { setState(CheckerState.Draw); }
     public CheckerCell rack[] = null;
     public OStack<CheckerCell> animationStack = new OStack<CheckerCell>(CheckerCell.class);
     //
     // private variables
     //
+    private CheckerState board_state = CheckerState.Play;	// the current board state
+    private CheckerState unresign = null;					// remembers the previous state when "resign"
+    public CheckerState getState() { return(board_state); } 
+	public void setState(CheckerState st) 
+	{ 	board_state = st;
+		if(!board_state.GameOver()) 
+			{ G.setValue(win,false); 	// make sure "win" is cleared
+			}
+	}
     private int playerColor[]={White_Chip_Pool,Black_Chip_Pool};
  	public int getPlayerColor(int p) { return(playerColor[p]); }
 	
@@ -75,8 +83,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     public void sameboard(CheckerBoard from_b)
     {
     	super.sameboard(from_b);	// calls sameCell for each cell, also for inherited class variables.
-    	
-
+    	G.Assert(unresign==from_b.unresign,"unresign mismatch");
        	G.Assert(G.sameArrayContents(win,from_b.win),"win array contents match");
        	G.Assert(G.sameArrayContents(playerColor,from_b.playerColor),"playerColor contents match");
        	G.Assert(G.sameArrayContents(chips_on_board,from_b.chips_on_board),"chips_on_board contents match");
@@ -129,7 +136,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 		v ^= chip.Digest(r,pickedObject);
 		v ^= Digest(r,pickedSourceStack);
 		v ^= Digest(r,droppedDestStack);
-		v ^= (board_state*10+whoseTurn+(resign_planned?4:2))*r.nextLong();
+		v ^= (board_state.ordinal()*10+whoseTurn)*r.nextLong();
         return (v);
     }
    public BoardProtocol cloneBoard() 
@@ -152,6 +159,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         G.copy(win,from_b.win);
         G.copy(playerColor,from_b.playerColor);
         G.copy(chips_on_board,from_b.chips_on_board);
+        board_state = from_b.board_state;
+        unresign = from_b.unresign;
         sameboard(from_b);
     }
     public void doInit(String gtype,long rv)
@@ -161,7 +170,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     /* initialize a board back to initial empty state */
     public void doInit(String gtype,long rv,int np)
     {  	drawing_style = DrawingStyle.STYLE_NOTHING; // STYLE_CELL or STYLE_LINES
-    	Grid_Style = CHECKERGRIDSTYLE; //coordinates left and bottom
+    	Grid_Style = GRIDSTYLE; //coordinates left and bottom
     	randomKey = rv;
     	players_in_game = np;
 		rack = new CheckerCell[CheckerChip.N_STANDARD_CHIPS*2];
@@ -176,15 +185,16 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
      	{
      	String game = gtype.toLowerCase();
      	if(Checker_INIT.equals(game)) 
-     		{ boardColumns=DEFAULT_COLUMNS; 
+     		{ 
+     		boardColumns=DEFAULT_COLUMNS; 
      		boardRows = DEFAULT_ROWS;
+     		initBoard(boardColumns,boardRows); //this sets up the board and cross links
      		}
      	else { G.Error("No init named "+game); }
      	gametype = game;
      	}
-	    setBoardState(PUZZLE_STATE);
-	    initBoard(boardColumns,boardRows); //this sets up the board and cross links
-	    
+        allCells.setDigestChain(r);
+	    setState(CheckerState.Puzzle);
 	    
 	    // fill the board with the background tiles
 	    for(CheckerCell c = allCells; c!=null; c=c.next)
@@ -198,10 +208,9 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 		pickedSourceStack.clear();
 		droppedDestStack.clear();
 		pickedObject = null;
-        allCells.setDigestChain(r);
         G.setValue(win,false);
         G.setValue(chips_on_board,0);
-        resign_planned = false;
+        unresign = null;
         moveNumber = 1;
 
         // note that firstPlayer is NOT initialized here
@@ -218,11 +227,11 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         default:
             G.Error("Move not complete, can't change the current player");
             break;
-        case PUZZLE_STATE:
+        case Puzzle:
             break;
-        case CONFIRM_STATE:
-        case DRAW_STATE:
-        case RESIGN_STATE:
+        case Confirm:
+        case Draw:
+        case Resign:
             moveNumber++; //the move is complete in these states
             setWhoseTurn(nextPlayer[whoseTurn]);
             return;
@@ -234,11 +243,11 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
      * @return
      */
     public boolean DoneState()
-    {	if(resign_planned) { return(true); }
+    {	
         switch (board_state)
-        {
-         case CONFIRM_STATE:
-         case DRAW_STATE:
+        {case Resign:
+         case Confirm:
+         case Draw:
             return (true);
 
         default:
@@ -251,12 +260,12 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     {	if(winCurrent && winNext) { winCurrent=false; } // simultaneous win is a win for player2
     	win[whoseTurn]=winCurrent;
     	win[nextPlayer[whoseTurn]]=winNext;
-    	setBoardState(GAMEOVER_STATE);
+    	setState(CheckerState.Gameover);
     }
     
     public boolean WinForPlayerNow(int player)
     {	// return true if the conditions for a win exist for player right now
-    	if(board_state==GAMEOVER_STATE) { return(win[player]); }
+    	if(board_state==CheckerState.Gameover) { return(win[player]); }
     	G.Error("not implemented");
     	return(false);
     }
@@ -403,15 +412,15 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         {
         default:
             G.Error("Not expecting drop in state " + board_state);
-        case CONFIRM_STATE:
-        case DRAW_STATE:
+        case Confirm:
+        case Draw:
         	setNextStateAfterDone(); 
         	break;
-        case PLAY_STATE:
-			setBoardState(CONFIRM_STATE);
+        case Play:
+			setState(CheckerState.Confirm);
 			break;
 
-        case PUZZLE_STATE:
+        case Puzzle:
 			acceptPlacement();
             break;
         }
@@ -438,13 +447,13 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         default:
             G.Error("Not expecting pick in state " + board_state);
             break;
-        case CONFIRM_STATE:
-        case DRAW_STATE:
-        	setBoardState(PLAY_STATE);
+        case Confirm:
+        case Draw:
+        	setState(CheckerState.Play);
         	break;
-        case PLAY_STATE:
+        case Play:
 			break;
-        case PUZZLE_STATE:
+        case Puzzle:
             break;
         }
     }
@@ -454,16 +463,16 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     	{
     	default: G.Error("Not expecting state "+board_state);
     		break;
-    	case GAMEOVER_STATE: 
+    	case Gameover: 
     		break;
 
-        case DRAW_STATE:
+        case Draw:
         	setGameOver(false,false);
         	break;
-    	case CONFIRM_STATE:
-    	case PUZZLE_STATE:
-    	case PLAY_STATE:
-    		setBoardState(PLAY_STATE);
+    	case Confirm:
+    	case Puzzle:
+    	case Play:
+    		setState(CheckerState.Play);
     		break;
     	}
 
@@ -475,7 +484,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     {	
         acceptPlacement();
 
-        if (resign_planned)
+        if (board_state==CheckerState.Resign)
         {	setGameOver(false,true);
         }
         else
@@ -495,7 +504,6 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     }
     public boolean Execute(commonMove mm,replayMode replay)
     {	CheckerMovespec m = (CheckerMovespec)mm;
-        boolean next_rp = false;
         if(replay!=replayMode.Replay) { animationStack.clear(); }
         //System.out.println("E "+m+" for "+whoseTurn);
         switch (m.op)
@@ -508,7 +516,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         case MOVE_RACK_BOARD:
            	switch(board_state)
         	{	default: G.Error("Not expecting robot in state "+board_state);
-        		case PLAY_STATE:
+        		case Play:
         			G.Assert(pickedObject==null,"something is moving");
                     pickObject(getCell(m.source, m.from_col, m.from_row));
                     dropObject(getCell(BoardLocation,m.to_col,m.to_row)); 
@@ -519,7 +527,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         case MOVE_BOARD_BOARD:
         	switch(board_state)
         	{	default: G.Error("Not expecting robot in state "+board_state);
-        		case PLAY_STATE:
+        		case Play:
         			G.Assert(pickedObject==null,"something is moving");
         			CheckerCell src = getCell(BoardLocation, m.from_col, m.from_row);
         			CheckerCell dest = getCell(BoardLocation,m.to_col,m.to_row);
@@ -557,18 +565,18 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         	// be a temporary p
         	if(isDest(getCell(m.from_col,m.from_row)))
         		{ unDropObject(); 
-        		  setBoardState(PLAY_STATE);
+        		  setState(CheckerState.Play);
         		}
         	else 
         		{ pickObject(getCell(BoardLocation, m.from_col, m.from_row));
         			// if you pick up a gobblet and expose a row of 4, you lose immediately
         		  switch(board_state)
         		  {	default: G.Error("Not expecting pickb in state "+board_state);
-        		  	case PLAY_STATE:
+        		  	case Play:
         		  		// if we pick a piece off the board, we might expose a win for the other player
         		  		// and otherwise, we are comitted to moving the piece
          		  		break;
-        		  	case PUZZLE_STATE:
+        		  	case Puzzle:
         		  		break;
         		  }
          		}
@@ -596,7 +604,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
             unPickObject();
             // standardize the gameover state.  Particularly importing if the
             // sequence in a game is resign/start
-            setBoardState(PUZZLE_STATE);
+            setState(CheckerState.Puzzle);
             {	boolean win1 = WinForPlayerNow(whoseTurn);
             	boolean win2 = WinForPlayerNow(nextPlayer[whoseTurn]);
             	if(win1 || win2) { setGameOver(win1,win2); }
@@ -607,19 +615,20 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
             break;
 
         case MOVE_RESIGN:
-            next_rp = !resign_planned;
+        	if(unresign!=null) { setState(unresign); unresign = null; }
+        	else{ unresign = board_state; setState(CheckerState.Resign); }
             break;
        case MOVE_RESET:
         	switch(board_state)
         	{
-        	case PUZZLE_STATE: 
+        	case Puzzle: 
         		unPickObject();
         		break;
         	default:
        		  unwindStack();
-   			  setBoardState(PLAY_STATE); 
+   			  setState(CheckerState.Play); 
    			  break;
-        	case GAMEOVER_STATE:
+        	case Gameover:
         		break;
         	}
         	break;
@@ -627,7 +636,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     		acceptPlacement();
             setWhoseTurn(FIRST_PLAYER_INDEX);
             // standardize "gameover" is not true
-            setBoardState(PUZZLE_STATE);
+            setState(CheckerState.Puzzle);
  
             break;
 
@@ -635,8 +644,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
             G.Error("Can't execute " + m);
         }
 
-        resign_planned = next_rp;
-
+ 
         return (true);
     }
 
@@ -647,9 +655,9 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         {
         default:
             G.Error("Not expecting state " + board_state);
-         case CONFIRM_STATE:
-         case DRAW_STATE:
-         case PLAY_STATE: 
+         case Confirm:
+         case Draw:
+         case Play: 
         	return((pickedObject==null)
         			?(player==whoseTurn)
         			:((droppedDestStack.size()==0) 
@@ -657,9 +665,9 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         					&&(player==pickedObject.chipNumber())));
 
 
-		case GAMEOVER_STATE:
+		case Gameover:
 			return(false);
-        case PUZZLE_STATE:
+        case Puzzle:
         	return((pickedObject==null)?true:(player==pickedObject.chipNumber()));
         }
     }
@@ -674,17 +682,17 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     {	
         switch (board_state)
         {
- 		case PLAY_STATE:
+ 		case Play:
 			return(LegalToDropOnBoard(pickedSourceStack.top(),pickedObject,cell));
 
-		case GAMEOVER_STATE:
+		case Gameover:
 			return(false);
-		case CONFIRM_STATE:
-		case DRAW_STATE:
+		case Confirm:
+		case Draw:
 			return(isDest(cell));
         default:
             G.Error("Not expecting state " + board_state);
-        case PUZZLE_STATE:
+        case Puzzle:
         	return(pickedObject==null?(cell.chipIndex>0):true);
         }
     }
@@ -752,8 +760,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         case MOVE_RACK_BOARD:
            	switch(board_state)
         	{	default: G.Error("Not expecting robot in state "+board_state);
-        		case GAMEOVER_STATE:
-        		case PLAY_STATE:
+        		case Gameover:
+        		case Play:
         			G.Assert(pickedObject==null,"something is moving");
         			pickObject(getCell(BoardLocation,m.to_col,m.to_row));
         			dropObject(getCell(m.source,m.from_col, m.from_row));
@@ -765,8 +773,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         	switch(board_state)
         	{	default: G.Error("Not expecting robot in state "+board_state);
         			break;
-        		case GAMEOVER_STATE:
-        		case PLAY_STATE:
+        		case Gameover:
+        		case Play:
         			G.Assert(pickedObject==null,"something is moving");
         			pickObject(getCell(BoardLocation, m.to_col, m.to_row));
        			    dropObject(getCell(BoardLocation, m.from_col,m.from_row)); 
@@ -777,9 +785,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         case MOVE_RESIGN:
             break;
         }
-        resign_planned = false;
-        win[FIRST_PLAYER_INDEX]=win[SECOND_PLAYER_INDEX]=false; 
-        setBoardState(m.state);
+        unresign = null;
+        setState(m.state);
         if(whoseTurn!=m.player)
         {  	moveNumber--;
         	setWhoseTurn(m.player);

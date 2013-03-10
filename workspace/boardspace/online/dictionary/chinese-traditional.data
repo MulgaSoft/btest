@@ -29,6 +29,9 @@ S #1 riders have crossed the second sprint line.
 S #1 riders have finished
 S #1 starts Joint review
 S #1{ Choices, Choice}
+S #1{ Points, Point, Points}
+S #1{##No Discards, Discard, Discards}
+S #1{##bank is empty,bank has # chip,bank has # chips}
 S #1{##no Camels, Camel, Camels}
 S #1{##no Gold, Gold, Gold}
 S #1{##no Victory points, Victory Point, Victory Points}
@@ -90,7 +93,6 @@ S Bid $ #1
 S Black
 S Black Palace
 S Black Palace Bonus (2 points)
-S Black Pieces
 S Blue
 S Blue Dome
 K BreakingAway
@@ -107,6 +109,7 @@ V Play cards,  then Build one building. Click on Done to end your turn.
 S Build adjacent to the man you moved
 S Build an initial stack of 2 to be placed
 S Buildings
+S Buy Chips
 S Buy a building with no camels
 S Buy a building with no gold
 S Buy the goods for $#1
@@ -145,8 +148,6 @@ V standard Che
 S Checkmate your opponent's general
 S Chest
 S Choose the penalty for non-payment of interest
-K Click DONE to confirm this placement
-V \u78ba\u8a8d\u6b64\u6b65\u4e26\u9ede\u9078 "\u5b8c\u6210"
 S Click Done to Finish the move
 S Click Done to accept a draw
 S Click Done to complete the exchange
@@ -159,7 +160,8 @@ S Click Done to confirm swapping fleets with your opponent
 S Click Done to confirm this action
 K Click Done to confirm this move
 V \u7d50\u675f\u56de\u5408\u4e26\u9ede\u9078 "\u5b8c\u6210"
-S Click Done to confirm this placement
+K Click Done to confirm this placement
+V \u78ba\u8a8d\u6b64\u6b65\u4e26\u9ede\u9078 "\u5b8c\u6210"
 S Click Done to decline a draw
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
@@ -228,6 +230,9 @@ V standard Crossfire
 S Cubes
 K Dec #1#2#3
 V 12 \u6708 #1 \u65e5 #2:#3 GMT
+K DeckDescriptionStringKey
+V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
+V with borders 5 brown, 6 pink, 7 blue, 6 green, 6 yellow
 S Decline Draw
 S Decline the loan
 S Deploy the stack, or click on Done
@@ -263,6 +268,7 @@ K Dipole_variation
 V Dipole 8x8 with an asymmetric starting position
 S Discards
 S Done
+S Done selling cards
 S Drop a tile to enlarge the board
 K Drop bunny chip
 V Place one of the Bunny player's chips
@@ -560,6 +566,7 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V standard Micropul
+S Mogul
 K Mogul_family
 V Mogul
 K Mogul_variation
@@ -582,6 +589,7 @@ S Move a piece from the row closest to the bottom of the board
 S Move a piece from the row closest to the top of the board
 S Move a piece into the row closest to the bottom of the board
 S Move a piece one space
+S Move a piece or rotate a piece
 S Move a piece, step #1
 S Move a ring
 S Move a roamer
@@ -646,6 +654,7 @@ S Options
 S Orange
 S Orange Palace
 S Orange Palace Bonus (4 points)
+S Out of the auction
 S Palago
 K Palago_family
 V Palago
@@ -657,10 +666,12 @@ V Pan-Kai
 K Pan-Kai_variation
 V Pentamino game for 2 players
 S Pass
+S Pay
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+S Pay a chip, or take the pot
 K Phlip_family
 V Phlip
 K Pick a ring to place a chip and move
@@ -681,8 +692,6 @@ S Place a Chip, or a Jewel, or a chip from the Store
 S Place a Frog on the board
 S Place a GIPF piece on a starting point
 S Place a Menhir on the board
-K Place a Ring on the board
-V \u8acb\u9078\u64c7 1 \u9ede\u653e\u7f6e\u74b0
 S Place a bird on an empty cell
 S Place a bird on an empty cell, or designate a bird to fly
 S Place a chip on a starting point
@@ -699,7 +708,8 @@ S Place a piece on the board
 S Place a piece on the board, or Exchange an off-board piece for a new tile
 S Place a piece on the board, or move a piece already on the board
 S Place a piece on the board, or swap colors with your opponent
-S Place a ring on the board
+K Place a ring on the board
+V \u8acb\u9078\u64c7 1 \u9ede\u653e\u7f6e\u74b0
 S Place a roamer on the board
 S Place a second piece on the board
 S Place a second tile adjacent to the first
@@ -736,7 +746,6 @@ S Play #1
 S Play Farmer
 S Play a card
 S Played
-S Played on #1
 S Player #1
 S Player Cubes
 S Player is 
@@ -813,6 +822,8 @@ V Click Done to confirm your resignation
 S Restart
 S Return to the Way
 S Reverse View
+K Review
+V review
 K Review Saved Games
 V Review Room
 S Rider Size
@@ -823,11 +834,13 @@ V Santorini
 K Santorini_variation
 V Santorini (without Gods)
 S Score the most points at the sprint and finish lines
+S Score the most points buying and selling cards
 S See Player Comments
 S See Spectator Comments
 S Select Game
 S Select Robot
-S Select Row #1
+K Select Row #1
+V Row #1
 S Select a group of dice
 K Select a ring to remove
 V \u8acb\u9078\u64c7 1 \u74b0\u53d6\u8d70
@@ -840,6 +853,13 @@ S Select the stack to move from
 S Select which of your roamers to kill
 S Select which opponent roamer to kill
 S Selecting game: #1
+S Sell
+S Sell All
+S Sell All #1 Cards
+S Sell Cards
+S Sell another #1 card
+S Sell no cards
+S Sell some #1 cards
 S Send
 S Send Cube
 K Sep #1#2#3
@@ -886,6 +906,8 @@ S Start #1
 S Start Black
 S Start White
 S State unknown.
+S Still in the Auction
+S Swap Colors
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -924,8 +946,13 @@ S Take #1 camels
 S Take #1 camels, take a card, or move the supervisor #2 spaces
 S Take #1 gold
 S Take #1 gold, take a card, or move the supervisor #2 spaces
+S Take Card
+S Take Chips
 S Take Over Playing
+S Take The #1 Card
 S Take a card
+S Take no chips
+S Take the card, or sell cards
 S Take your first action
 S Take your second action
 S Tako Judo
@@ -947,6 +974,9 @@ S This die will not be rolled
 S This is now a private room
 S This is now a public room
 S TicTacNine
+S TicTacNine Games
+K TicTacNine_family
+V TicTacNine
 K TicTacNine_variation
 V experimental TicTacNine board
 S Tile Pattern Games
@@ -1068,7 +1098,6 @@ V standard Warp 6
 K Welcome to Game client, version #1
 V Welcome to BoardSpace client, version #1
 S White
-S White Pieces
 S Wolf moving suspects
 S Wolf player eating
 S Wolf player hiding
@@ -1200,6 +1229,8 @@ S own the most blocks
 S perspective
 K play
 V play for #1
+K played on #1
+V Played on #1
 S player
 S player 
 S private room
@@ -1213,7 +1244,7 @@ S reading Zip directory...
 S reading directory...
 K reconok
 V .. \u91cd\u65b0\u9023\u7dda\u6210\u529f
-S review
+S reviewing
 K savedmsg
 V Game saved as #1
 S select the game to play
@@ -1226,8 +1257,6 @@ S stack six or capture six
 K stillwaiting
 V still launching... please wait.
 S surround your opponents queen bee
-K swap colors
-V Swap Colors
 S the game has resumed
 K timeoutWarning
 V \u5927\u5ef3 1 \u5206\u9418\u5f8c\u5c07\u95dc\u9589 (idle)\u3002
@@ -1239,4 +1268,4 @@ K welcome
 V \u6b61\u8fce\u9032\u5165 BoardSpace \u5927\u5ef3 (ver #1)
 S you may increase your bid
 S your name
-N 929
+N 953

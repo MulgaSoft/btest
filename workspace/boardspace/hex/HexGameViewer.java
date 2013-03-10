@@ -653,7 +653,7 @@ public class HexGameViewer extends commonCanvas
     public void redrawBoard(Graphics gc, HitPoint selectPos)
     {  HexGameBoard disb = (HexGameBoard)disB();
        HexGameBoard gb = (disb==null)?bb:disb;
-       int state = gb.getBoardState();
+       HexState state = gb.getState();
        boolean moving = (getMovingObject()>=0);
        // 
        // if it is not our move, we can't click on the board or related supplies.
@@ -679,9 +679,9 @@ public class HexGameViewer extends commonCanvas
        }
        
        // draw the board control buttons 
-		if((state==CONFIRM_SWAP_STATE) 
-			|| (state==PLAY_OR_SWAP_STATE) 
-			|| (state==PUZZLE_STATE))
+		if((state==HexState.ConfirmSwap) 
+			|| (state==HexState.PlayOrSwap) 
+			|| (state==HexState.Puzzle))
 		{ // make the "swap" button appear if we're in the correct state
 			if(G.handleRoundButton(gc, swapRect, buttonSelect, s.get(SwapAction),
                 HighlightColor, rackBackGroundColor))
@@ -689,7 +689,7 @@ public class HexGameViewer extends commonCanvas
 			}
 		}
 
-		if (state != PUZZLE_STATE)
+		if (state != HexState.Puzzle)
         {	// if in any normal "playing" state, there should be a done button
 			// we let the board be the ultimate arbiter of if the "done" button
 			// is currently active.
@@ -713,14 +713,14 @@ public class HexGameViewer extends commonCanvas
         }
 
  
-        drawPlayerStuff(gc,(state==PUZZLE_STATE)?buttonSelect:null,HighlightColor,rackBackGroundColor);
+        drawPlayerStuff(gc,(state==HexState.Puzzle)?buttonSelect:null,HighlightColor,rackBackGroundColor);
   
  
         if (gc != null)
         {	// draw the avatars
             standardGameMessage(gc,
-            		state==GAMEOVER_STATE?gameOverMessage():s.get(boardStates[state]),
-            				state!=PUZZLE_STATE,
+            		state==HexState.Gameover?gameOverMessage():s.get(state.description()),
+            				state!=HexState.Puzzle,
             				gb.whoseTurn,
             				stateRect);
             goalAndProgressMessage(gc,s.get(HexVictoryCondition),progressRect,goalRect);
@@ -742,7 +742,7 @@ public class HexGameViewer extends commonCanvas
      public boolean Execute(commonMove mm,replayMode replay)
     {	
     	 // record some state so the game log will look pretty
-        if(bb.getBoardState()==PUZZLE_STATE)
+        if(bb.getState()==HexState.Puzzle)
     	{   mm.setSliderNumString("--");
     		switch(mm.op)
         	{
@@ -847,8 +847,9 @@ public class HexGameViewer extends commonCanvas
       public commonMove EditHistory(commonMove nmove)
       {
     	  commonMove rval = super.EditHistory(nmove);
+    	  HexState state = bb.getState();
     	  if((rval!=null)
-    		 && (bb.board_state==CONFIRM_STATE)
+    		 && (state==HexState.Confirm)
     	     && (rval.op==MOVE_DROPB))
     	  {
     		  // a peculiarity of the hex engine, if we have dropped a stone,
@@ -965,12 +966,12 @@ public class HexGameViewer extends commonCanvas
         }
     }
 	private void doDropChip(char col,int row)
-	{	int state = bb.getRawBoardState();
+	{	HexState state = bb.getState();
 		switch(state)
 		{
 		default: G.Error("Not expecting state "+state);
 			break;
-		case PUZZLE_STATE:
+		case Puzzle:
 		{
 		hexChip mo = bb.pickedObject;
 		if(mo==null) { mo=bb.lastPicked; }
@@ -978,9 +979,9 @@ public class HexGameViewer extends commonCanvas
 		PerformAndTransmit("dropb "+mo.colorName+" "+col+" "+row);
 		}
 		break;
-		case CONFIRM_STATE:
-		case PLAY_STATE:
-		case PLAY_OR_SWAP_STATE:
+		case Confirm:
+		case Play:
+		case PlayOrSwap:
 			hexChip mo=bb.getPlayerChip(bb.whoseTurn);	
 			PerformAndTransmit("dropb "+mo.colorName	+ " "+col+" "+row);
 			break;
@@ -1001,7 +1002,7 @@ public class HexGameViewer extends commonCanvas
     {
         int hitCode = hp.hitCode;
         hexCell hitObject = (hexCell)hp.hitObject;
-		int state = bb.getRawBoardState();
+		HexState state = bb.getState();
         switch (hitCode)
         {
         default:
@@ -1016,9 +1017,9 @@ public class HexGameViewer extends commonCanvas
 			switch(state)
 			{
 			default: G.Error("Not expecting drop on filled board in state "+state);
-			case CONFIRM_STATE:
-			case PLAY_STATE:
-			case PLAY_OR_SWAP_STATE:
+			case Confirm:
+			case Play:
+			case PlayOrSwap:
 				if(!bb.isDest(hitObject))
 					{
 					// note that according to the general theory, this shouldn't
@@ -1027,25 +1028,14 @@ public class HexGameViewer extends commonCanvas
 					G.Error("shouldn't hit a chip in state "+state);
 					}
 				// fall through and pick up the previously dropped piece
-			case PUZZLE_STATE:
+			case Puzzle:
 				PerformAndTransmit("Pickb "+hitObject.col+" "+hitObject.row);
 				break;
 			}
 			break;
 			
         case EmptyBoard:
-			switch(state)
-			{
-				default:
-					G.Error("Not expecting hit in state "+state);
-					break;
-				case CONFIRM_STATE:
-				case PLAY_STATE:
-				case PLAY_OR_SWAP_STATE:
-				case PUZZLE_STATE:
-					doDropChip(hitObject.col,hitObject.row);
-					break;
-			}
+			doDropChip(hitObject.col,hitObject.row);
 			break;
 			
         case Black_Chip_Pool:

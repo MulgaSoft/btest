@@ -47,6 +47,9 @@ V #1 coureurs sont arriv\u00e9s
 K #1 starts Joint review
 V #1 commence une revue commune
 S #1{ Choices, Choice}
+S #1{ Points, Point, Points}
+S #1{##No Discards, Discard, Discards}
+S #1{##bank is empty,bank has # chip,bank has # chips}
 S #1{##no Camels, Camel, Camels}
 S #1{##no Gold, Gold, Gold}
 S #1{##no Victory points, Victory Point, Victory Points}
@@ -131,8 +134,6 @@ K Black
 V Noire
 S Black Palace
 S Black Palace Bonus (2 points)
-K Black Pieces
-V Pi\u00e8ces noires
 K Blue
 V Bleu
 S Blue Dome
@@ -153,6 +154,7 @@ K Build an initial stack of 2 to be placed
 V D\u00e9marrez en utilisant une pile de 2 pi\u00e8ces
 K Buildings
 V B\u00e2timents
+S Buy Chips
 K Buy a building with no camels
 V Acher un b\u00e2timent sans chameaux
 K Buy a building with no gold
@@ -212,8 +214,6 @@ K Chest
 V Coffre
 K Choose the penalty for non-payment of interest
 V Choisir la p\u00e9nalit\u00e9 de non-payement des int\u00e9r\u00eats
-K Click DONE to confirm this placement
-V Validez pour confirmer cette position
 K Click Done to Finish the move
 V Validez le d\u00e9placement
 K Click Done to accept a draw
@@ -231,7 +231,7 @@ V Validez pour confirmer cette action
 K Click Done to confirm this move
 V Cliquez sur Valider pour confirmer votre coup
 K Click Done to confirm this placement
-V Cliquez sur Valider pour confirmer ce placement
+V Validez pour confirmer cette position
 K Click Done to decline a draw
 V Validez pour refuser la nulle
 S Click Fire! to fire your laser
@@ -331,6 +331,9 @@ V standard Crossfire
 S Cubes
 K Dec #1#2#3
 V #1 d\u00e9c, #2:#3 GMT
+K DeckDescriptionStringKey
+V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
+V with borders 5 brown, 6 pink, 7 blue, 6 green, 6 yellow
 K Decline Draw
 V Refuser la nulle
 K Decline the loan
@@ -375,6 +378,7 @@ K Discards
 V D\u00e9fausse
 K Done
 V Valider
+S Done selling cards
 K Drop a tile to enlarge the board
 V Poser une dalle pour \u00e9largir le plateau
 K Drop bunny chip
@@ -748,6 +752,7 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V Micropul standard
+S Mogul
 K Mogul_family
 V Mogul
 K Mogul_variation
@@ -781,6 +786,7 @@ S Move a piece from the row closest to the top of the board
 S Move a piece into the row closest to the bottom of the board
 K Move a piece one space
 V D\u00e9placez une pi\u00e8ce d'une case
+S Move a piece or rotate a piece
 K Move a piece, step #1
 V D\u00e9placer un pi\u00e8ce, pas #1
 K Move a ring
@@ -871,6 +877,7 @@ S Options
 S Orange
 S Orange Palace
 S Orange Palace Bonus (4 points)
+S Out of the auction
 S Palago
 K Palago_family
 V Palago
@@ -883,11 +890,13 @@ K Pan-Kai_variation
 V Pentamino game for 2 players
 K Pass
 V Passer
+S Pay
 K Pay Camel
 V Jouer un Chameau
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Choisir "Jouer un Chameau" ou "Envoyer le Cube"
+S Pay a chip, or take the pot
 K Phlip_family
 V Phlip
 K Pick a ring to place a chip and move
@@ -922,8 +931,6 @@ V Placer une grenouille sur le plateau
 K Place a GIPF piece on a starting point
 V Placer une pi\u00e8ce Gipf sur son point de d\u00e9part
 S Place a Menhir on the board
-K Place a Ring on the board
-V Placez un anneau sur le plateau
 S Place a bird on an empty cell
 S Place a bird on an empty cell, or designate a bird to fly
 K Place a chip on a starting point
@@ -950,7 +957,7 @@ K Place a piece on the board, or move a piece already on the board
 V Placez une nouvelle pi\u00e8ce sur le plateau ou d\u00e9placez-en une
 S Place a piece on the board, or swap colors with your opponent
 K Place a ring on the board
-V Placez une pi\u00e8ce sur le plateau
+V Placez un anneau sur le plateau
 S Place a roamer on the board
 K Place a second piece on the board
 V Placez une deuxi\u00e8me pi\u00e8ce
@@ -1013,8 +1020,6 @@ K Play a card
 V Jouer une carte
 K Played
 V Jou\u00e9s
-K Played on #1
-V Jou\u00e9 en #1
 K Player #1
 V Joueur #1
 K Player Cubes
@@ -1111,6 +1116,8 @@ K Return to the Way
 V Suivez la Voie
 K Reverse View
 V Vue inverse
+K Review
+V revoir
 K Review Saved Games
 V \u00c9tude de parties jou\u00e9es
 K Rider Size
@@ -1123,6 +1130,7 @@ K Santorini_variation
 V Santorini (sans Dieux)
 K Score the most points at the sprint and finish lines
 V Marquez le plus de points sur les sprints et la ligne d'arriv\u00e9e
+S Score the most points buying and selling cards
 K See Player Comments
 V Voir les commentaires des joueurs
 K See Spectator Comments
@@ -1150,6 +1158,13 @@ S Select which of your roamers to kill
 S Select which opponent roamer to kill
 K Selecting game: #1
 V Choix du jeu: #1
+S Sell
+S Sell All
+S Sell All #1 Cards
+S Sell Cards
+S Sell another #1 card
+S Sell no cards
+S Sell some #1 cards
 K Send
 V Envoi
 K Send Cube
@@ -1218,6 +1233,9 @@ K Start White
 V Les Blancs commencent
 K State unknown.
 V Etat ind\u00e9termin\u00e9
+S Still in the Auction
+K Swap Colors
+V \u00c9changez les couleurs
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -1260,10 +1278,15 @@ K Take #1 gold
 V Prendre #1 or
 K Take #1 gold, take a card, or move the supervisor #2 spaces
 V Prendre #1 or, prendre une carte ou d\u00e9placer le superviseur de #2 cases
+S Take Card
+S Take Chips
 K Take Over Playing
 V Jouer \u00e0 la place de #1
+S Take The #1 Card
 K Take a card
 V Prendre une carte
+S Take no chips
+S Take the card, or sell cards
 K Take your first action
 V Jouez votre premi\u00e8re action
 K Take your second action
@@ -1295,6 +1318,9 @@ V Cette salle est maintenant priv\u00e9e
 K This is now a public room
 V Cette salle est maintenant publique
 S TicTacNine
+S TicTacNine Games
+K TicTacNine_family
+V TicTacNine
 K TicTacNine_variation
 V experimental TicTacNine board
 K Tile Pattern Games
@@ -1439,8 +1465,6 @@ K Welcome to Game client, version #1
 V Bienvenue dans une salle de BoardSpace, version #1
 K White
 V Blanche
-K White Pieces
-V pi\u00e8ces blanches
 K Wolf moving suspects
 V Le Loup d\u00e9place les suspects
 K Wolf player eating
@@ -1600,6 +1624,8 @@ S own the most blocks
 S perspective
 K play
 V jouer \u00e0 la place de #1
+K played on #1
+V Jou\u00e9 en #1
 K player
 V Joueur
 S player 
@@ -1617,8 +1643,7 @@ K reading directory...
 V r\u00e9pertoire en lecture...
 K reconok
 V  reconnexion OK
-K review
-V revoir
+S reviewing
 K savedmsg
 V Partie enregistr\u00e9e sous #1
 K select the game to play
@@ -1639,8 +1664,6 @@ K stillwaiting
 V chargement en cours... Veuillez patienter.
 K surround your opponents queen bee
 V Entourez la reine de l'adversaire
-K swap colors
-V Swap Colors
 K the game has resumed
 V la partie a repris
 K timeoutWarning
@@ -1657,4 +1680,4 @@ K you may increase your bid
 V vous pouvez augmenter votre offre
 K your name
 V Votre nom
-N 929
+N 953

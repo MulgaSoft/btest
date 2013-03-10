@@ -39,6 +39,9 @@ S #1 riders have finished
 K #1 starts Joint review
 V #1: Blir med p\u00e5 felles gjennomgang
 S #1{ Choices, Choice}
+S #1{ Points, Point, Points}
+S #1{##No Discards, Discard, Discards}
+S #1{##bank is empty,bank has # chip,bank has # chips}
 S #1{##no Camels, Camel, Camels}
 S #1{##no Gold, Gold, Gold}
 S #1{##no Victory points, Victory Point, Victory Points}
@@ -106,8 +109,6 @@ K Black
 V svart
 S Black Palace
 S Black Palace Bonus (2 points)
-K Black Pieces
-V Svarte brikker
 S Blue
 S Blue Dome
 K BreakingAway
@@ -125,6 +126,7 @@ S Build adjacent to the man you moved
 K Build an initial stack of 2 to be placed
 V Bygg en stabel med to brikker som skal plasseres p\u00e5 brettet.
 S Buildings
+S Buy Chips
 S Buy a building with no camels
 S Buy a building with no gold
 S Buy the goods for $#1
@@ -166,8 +168,6 @@ V standard Che
 S Checkmate your opponent's general
 S Chest
 S Choose the penalty for non-payment of interest
-K Click DONE to confirm this placement
-V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte plasseringen.
 K Click Done to Finish the move
 V Klikk \u00abFerdig\u00bb for \u00e5 avslutte trekket.
 S Click Done to accept a draw
@@ -182,7 +182,8 @@ V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte at du vil bytte fl\u00e5ter med m
 S Click Done to confirm this action
 K Click Done to confirm this move
 V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte dette trekket.
-S Click Done to confirm this placement
+K Click Done to confirm this placement
+V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte plasseringen.
 S Click Done to decline a draw
 S Click Fire! to fire your laser
 S Click on Done to begin the building phase
@@ -266,6 +267,9 @@ V standard Crossfire
 S Cubes
 K Dec #1#2#3
 V #1. des, #2.#3 GMT
+K DeckDescriptionStringKey
+V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
+V with borders 5 brown, 6 pink, 7 blue, 6 green, 6 yellow
 S Decline Draw
 S Decline the loan
 S Deploy the stack, or click on Done
@@ -302,6 +306,7 @@ V Dipole 8x8 med asymmetrisk startposisjon
 S Discards
 K Done
 V Ferdig
+S Done selling cards
 K Drop a tile to enlarge the board
 V Slipp en helle for \u00e5 forst\u00f8rre brettet.
 K Drop bunny chip
@@ -645,6 +650,7 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V Standard Micropul
+S Mogul
 K Mogul_family
 V Mogul
 K Mogul_variation
@@ -670,6 +676,7 @@ S Move a piece from the row closest to the bottom of the board
 S Move a piece from the row closest to the top of the board
 S Move a piece into the row closest to the bottom of the board
 S Move a piece one space
+S Move a piece or rotate a piece
 S Move a piece, step #1
 S Move a ring
 S Move a roamer
@@ -747,6 +754,7 @@ V Innstillinger
 S Orange
 S Orange Palace
 S Orange Palace Bonus (4 points)
+S Out of the auction
 S Palago
 K Palago_family
 V Palago
@@ -758,10 +766,12 @@ V Pan-Kai
 K Pan-Kai_variation
 V Pentamino game for 2 players
 S Pass
+S Pay
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+S Pay a chip, or take the pot
 K Phlip_family
 V Phlip
 K Pick a ring to place a chip and move
@@ -783,8 +793,6 @@ S Place a Chip, or a Jewel, or a chip from the Store
 S Place a Frog on the board
 S Place a GIPF piece on a starting point
 S Place a Menhir on the board
-K Place a Ring on the board
-V Plasser en ring p\u00e5 brettet.
 S Place a bird on an empty cell
 S Place a bird on an empty cell, or designate a bird to fly
 S Place a chip on a starting point
@@ -807,7 +815,8 @@ V Sett en brikke p\u00e5 brettet eller bytt en brikke utenfor brettet mot en ny 
 K Place a piece on the board, or move a piece already on the board
 V Plasser en brikke p\u00e5 brettet eller flytt en som allerede ligger der.
 S Place a piece on the board, or swap colors with your opponent
-S Place a ring on the board
+K Place a ring on the board
+V Plasser en ring p\u00e5 brettet.
 S Place a roamer on the board
 S Place a second piece on the board
 S Place a second tile adjacent to the first
@@ -851,7 +860,6 @@ V Spill mot #1
 S Play Farmer
 S Play a card
 S Played
-S Played on #1
 K Player #1
 V Spiller #1
 S Player Cubes
@@ -941,6 +949,8 @@ V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte at du gir opp.
 S Restart
 S Return to the Way
 S Reverse View
+K Review
+V review
 K Review Saved Games
 V Studierom
 S Rider Size
@@ -951,6 +961,7 @@ V Santorini
 K Santorini_variation
 V Santorini (without Gods)
 S Score the most points at the sprint and finish lines
+S Score the most points buying and selling cards
 K See Player Comments
 V Se spillernes kommentarer
 K See Spectator Comments
@@ -959,7 +970,8 @@ K Select Game
 V Velg spill
 K Select Robot
 V Velg robot
-S Select Row #1
+K Select Row #1
+V Row #1
 S Select a group of dice
 K Select a ring to remove
 V Velg hvilken ring som skal fjernes.
@@ -976,6 +988,13 @@ S Select which of your roamers to kill
 S Select which opponent roamer to kill
 K Selecting game: #1
 V Velger parti: #1
+S Sell
+S Sell All
+S Sell All #1 Cards
+S Sell Cards
+S Sell another #1 card
+S Sell no cards
+S Sell some #1 cards
 S Send
 S Send Cube
 K Sep #1#2#3
@@ -1036,6 +1055,9 @@ K Start White
 V Start Hvit
 K State unknown.
 V Tilstand ukjent.
+S Still in the Auction
+K Swap Colors
+V Bytt farger
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -1074,9 +1096,14 @@ S Take #1 camels
 S Take #1 camels, take a card, or move the supervisor #2 spaces
 S Take #1 gold
 S Take #1 gold, take a card, or move the supervisor #2 spaces
+S Take Card
+S Take Chips
 K Take Over Playing
 V Ta over \u00e5 spille
+S Take The #1 Card
 S Take a card
+S Take no chips
+S Take the card, or sell cards
 S Take your first action
 S Take your second action
 S Tako Judo
@@ -1102,6 +1129,9 @@ V Dette er n\u00e5 et privat rom.
 K This is now a public room
 V Dette er n\u00e5 et offentlig rom.
 S TicTacNine
+S TicTacNine Games
+K TicTacNine_family
+V TicTacNine
 K TicTacNine_variation
 V experimental TicTacNine board
 S Tile Pattern Games
@@ -1225,8 +1255,6 @@ K Welcome to Game client, version #1
 V Velkommen til spillklienten, versjon #1
 K White
 V hvit
-K White Pieces
-V Hvite brikker
 S Wolf moving suspects
 S Wolf player eating
 S Wolf player hiding
@@ -1370,6 +1398,8 @@ S own the most blocks
 S perspective
 K play
 V spill for #1
+K played on #1
+V Played on #1
 K player
 V spiller
 S player 
@@ -1387,7 +1417,7 @@ K reading directory...
 V leser katalog...
 K reconok
 V ..forbindelsen er gjenopprettet
-S review
+S reviewing
 K savedmsg
 V Partiet er lagret som #1.
 S select the game to play
@@ -1403,8 +1433,6 @@ K stillwaiting
 V still launching... v\u00e6r vennlig og vent.
 K surround your opponents queen bee
 V omring motstanderens dronning
-K swap colors
-V Swap Colors
 K the game has resumed
 V partiet fortsetter
 K timeoutWarning
@@ -1418,4 +1446,4 @@ V Velkommen til BoardSpace, versjon #1.
 S you may increase your bid
 K your name
 V ditt navn
-N 929
+N 953

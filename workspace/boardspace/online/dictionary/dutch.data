@@ -44,6 +44,9 @@ V #1 fietsers zijn over de finish
 K #1 starts Joint review
 V #1 start gezamelijk commentaar
 S #1{ Choices, Choice}
+S #1{ Points, Point, Points}
+S #1{##No Discards, Discard, Discards}
+S #1{##bank is empty,bank has # chip,bank has # chips}
 S #1{##no Camels, Camel, Camels}
 S #1{##no Gold, Gold, Gold}
 S #1{##no Victory points, Victory Point, Victory Points}
@@ -125,8 +128,6 @@ K Black
 V Zwart
 S Black Palace
 S Black Palace Bonus (2 points)
-K Black Pieces
-V Zwarte Stukken
 S Blue
 S Blue Dome
 K BreakingAway
@@ -145,6 +146,7 @@ V Bouw naast het gezette stuk
 K Build an initial stack of 2 to be placed
 V Bouw een beginkolom van twee om te plaatsen
 S Buildings
+S Buy Chips
 S Buy a building with no camels
 S Buy a building with no gold
 K Buy the goods for $#1
@@ -198,8 +200,6 @@ V Zet de Generaal van de tegenspeler schaakmat
 S Chest
 K Choose the penalty for non-payment of interest
 V Kies de boete voor het niet betalen van rente
-K Click DONE to confirm this placement
-V Klik Klaar om het plaatsen te voltooien
 K Click Done to Finish the move
 V Klik Klaar om de zet te voltooien
 K Click Done to accept a draw
@@ -217,7 +217,7 @@ V Klik Klaar om de actie te voltooien
 K Click Done to confirm this move
 V Klik Klaar om deze zet te voltooien
 K Click Done to confirm this placement
-V Klik Klaar om de plaatsing te voltooien
+V Klik Klaar om het plaatsen te voltooien
 K Click Done to decline a draw
 V Klik Klaar om remise te weigeren
 S Click Fire! to fire your laser
@@ -314,6 +314,9 @@ V standaard Crossfire
 S Cubes
 K Dec #1#2#3
 V #1 Dec, #2:#3 GMT
+K DeckDescriptionStringKey
+V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
+V with borders 5 brown, 6 pink, 7 blue, 6 green, 6 yellow
 K Decline Draw
 V Weiger Remise
 K Decline the loan
@@ -356,6 +359,7 @@ V Dipole 8x8 met a-symmetrische beginopstelling
 S Discards
 K Done
 V Klaar
+S Done selling cards
 K Drop a tile to enlarge the board
 V Plaats een hex om het bord te vergroten
 K Drop bunny chip
@@ -724,6 +728,7 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V standaard Micropul
+S Mogul
 K Mogul_family
 V Mogul
 K Mogul_variation
@@ -757,6 +762,7 @@ S Move a piece from the row closest to the top of the board
 S Move a piece into the row closest to the bottom of the board
 K Move a piece one space
 V Verplaats een stuk naar een aangrenzend veld
+S Move a piece or rotate a piece
 K Move a piece, step #1
 V Verplaats een stuk, stap #1
 K Move a ring
@@ -847,6 +853,7 @@ V Opties
 S Orange
 S Orange Palace
 S Orange Palace Bonus (4 points)
+S Out of the auction
 S Palago
 K Palago_family
 V Palago
@@ -859,10 +866,12 @@ K Pan-Kai_variation
 V Pentamino game for 2 players
 K Pass
 V Pas
+S Pay
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+S Pay a chip, or take the pot
 K Phlip_family
 V Phlip
 K Pick a ring to place a chip and move
@@ -888,8 +897,6 @@ V Zet een Kikker op het bord
 K Place a GIPF piece on a starting point
 V Plaats een GIPF stuk op een beginpunt
 S Place a Menhir on the board
-K Place a Ring on the board
-V Plaats een Ring op het bord
 S Place a bird on an empty cell
 S Place a bird on an empty cell, or designate a bird to fly
 K Place a chip on a starting point
@@ -914,7 +921,7 @@ K Place a piece on the board, or move a piece already on the board
 V Plaats een stuk op het bord, of verplaats een stuk
 S Place a piece on the board, or swap colors with your opponent
 K Place a ring on the board
-V Plaats een ring op het bord
+V Plaats een Ring op het bord
 S Place a roamer on the board
 K Place a second piece on the board
 V Zet een tweede stuk op het bord
@@ -975,8 +982,6 @@ K Play Farmer
 V Speel Boer
 S Play a card
 S Played
-K Played on #1
-V Gespeeld op #1
 K Player #1
 V Speler #1
 S Player Cubes
@@ -1075,6 +1080,8 @@ K Return to the Way
 V Ga terug naar de Weg
 K Reverse View
 V Draai bord
+K Review
+V commentaar
 K Review Saved Games
 V Commentaarruimte
 K Rider Size
@@ -1088,6 +1095,7 @@ K Santorini_variation
 V Santorini (zonder Goden)
 K Score the most points at the sprint and finish lines
 V Scoor de meeste punten in tussensprints en aan de finish
+S Score the most points buying and selling cards
 K See Player Comments
 V Zie commentaar van spelers
 K See Spectator Comments
@@ -1096,7 +1104,8 @@ K Select Game
 V Kies Spel
 K Select Robot
 V Selecteer Robot
-S Select Row #1
+K Select Row #1
+V Row #1
 S Select a group of dice
 K Select a ring to remove
 V Kies een ring om te verwijderen
@@ -1113,6 +1122,13 @@ S Select which of your roamers to kill
 S Select which opponent roamer to kill
 K Selecting game: #1
 V Selecteert partij: #1
+S Sell
+S Sell All
+S Sell All #1 Cards
+S Sell Cards
+S Sell another #1 card
+S Sell no cards
+S Sell some #1 cards
 K Send
 V Verstuur
 S Send Cube
@@ -1179,6 +1195,9 @@ K Start White
 V Start Wit
 K State unknown.
 V Status onbekend.
+S Still in the Auction
+K Swap Colors
+V Verwissel Kleuren
 S Swap colors, or place a chip, or move a board
 S Swing View
 K Switch to a more oblique view of the board
@@ -1219,9 +1238,14 @@ S Take #1 camels
 S Take #1 camels, take a card, or move the supervisor #2 spaces
 S Take #1 gold
 S Take #1 gold, take a card, or move the supervisor #2 spaces
+S Take Card
+S Take Chips
 K Take Over Playing
 V Neem de parij over
+S Take The #1 Card
 S Take a card
+S Take no chips
+S Take the card, or sell cards
 K Take your first action
 V Maak je eerste actie
 K Take your second action
@@ -1251,6 +1275,9 @@ V Dit is nu een prive ruimte
 K This is now a public room
 V Dit is nu een publieke ruimte
 S TicTacNine
+S TicTacNine Games
+K TicTacNine_family
+V TicTacNine
 K TicTacNine_variation
 V experimental TicTacNine board
 K Tile Pattern Games
@@ -1389,8 +1416,6 @@ K Welcome to Game client, version #1
 V Welkom bij BoardSpace client, versie #1
 K White
 V Wit
-K White Pieces
-V Witte Stukken
 K Wolf moving suspects
 V Wolf verplaatst verdachten
 K Wolf player eating
@@ -1550,6 +1575,8 @@ K perspective
 V perspectief
 K play
 V speel voor #1
+K played on #1
+V Gespeeld op #1
 K player
 V speler
 S player 
@@ -1567,8 +1594,7 @@ K reading directory...
 V leest directory...
 K reconok
 V ...verbinding geslaagd
-K review
-V commentaar
+S reviewing
 K savedmsg
 V Partij opgeslagen als #1
 K select the game to play
@@ -1589,8 +1615,6 @@ K stillwaiting
 V Opent...geduld aub.
 K surround your opponents queen bee
 V omsingel de koningin van de tegenspeler
-K swap colors
-V Swap Colors
 K the game has resumed
 V de partij is hervat
 K timeoutWarning
@@ -1607,4 +1631,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 929
+N 953

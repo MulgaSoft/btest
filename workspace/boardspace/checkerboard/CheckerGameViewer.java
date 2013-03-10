@@ -374,15 +374,15 @@ public class CheckerGameViewer extends commonCanvas
 		}
     }
 	// draw a box of spare gobblets. Notice if any are being pointed at.  Highlight those that are.
-    private void DrawCommonChipPool(Graphics gc, int forPlayer, Rectangle r, int player, HitPoint highlight)
-    {	CheckerCell chips[]= b.rack;
-        boolean canHit = b.LegalToHitChips(forPlayer);
+    private void DrawCommonChipPool(Graphics gc, CheckerBoard gb, int forPlayer, Rectangle r, int player, HitPoint highlight)
+    {	CheckerCell chips[]= gb.rack;
+        boolean canHit = gb.LegalToHitChips(forPlayer);
         CheckerCell thisCell = chips[forPlayer];
         CheckerChip thisChip = thisCell.topChip();
         boolean canDrop = (getMovingObject()>=0);
         boolean canPick = (thisChip!=null);
         HitPoint pt = (canHit && (canPick||canDrop))? highlight : null; 
-        String msg = ""+b.chips_on_board[forPlayer];
+        String msg = ""+gb.chips_on_board[forPlayer];
         thisCell.drawStack(gc,this,pt,r.width,r.x+r.width/2,r.y+r.height/2,0,0,msg);
 
         if((highlight!=null) && (highlight.hitObject==thisCell))
@@ -514,18 +514,18 @@ public class CheckerGameViewer extends commonCanvas
       HitPoint ot = ourTurn ? highlight : null;	// hit if our turn
       HitPoint select = moving?null:ot;	// hit if our turn and not dragging
       HitPoint ourSelect = (moving && !reviewMode()) ? null : highlight;	// hit if not dragging
-       int vstate = b.getBoardState();
+      CheckerState vstate = gb.getState();
        redrawGameLog(gc, ourSelect, logRect, boardBackgroundColor);
     
         drawBoardElements(gc, gb, boardRect, ot);
-        DrawCommonChipPool(gc, FIRST_PLAYER_INDEX,firstPlayerChipRect, gb.whoseTurn,ot);
-        DrawCommonChipPool(gc, SECOND_PLAYER_INDEX, secondPlayerChipRect,gb.whoseTurn,ot);
+        DrawCommonChipPool(gc, gb,FIRST_PLAYER_INDEX,firstPlayerChipRect, gb.whoseTurn,ot);
+        DrawCommonChipPool(gc, gb, SECOND_PLAYER_INDEX, secondPlayerChipRect,gb.whoseTurn,ot);
 
         if (gc != null)
         {
             gc.setFont(standardBoldFont);
         }
-		if (vstate != PUZZLE_STATE)
+		if (vstate != CheckerState.Puzzle)
         {
              if (G.handleRoundButton(gc, doneRect, 
             		(b.DoneState()? select : null), s.get(DoneAction),
@@ -544,14 +544,16 @@ public class CheckerGameViewer extends commonCanvas
                 }
        }}
 
- 		drawPlayerStuff(gc,(vstate==PUZZLE_STATE)?select:null,HighlightColor,rackBackGroundColor);
+ 		drawPlayerStuff(gc,(vstate==CheckerState.Puzzle)?select:null,HighlightColor,rackBackGroundColor);
 
 
         if (gc != null)
-        {
+        {	
             standardGameMessage(gc,
-            		vstate==GAMEOVER_STATE?gameOverMessage():s.get(boardStates[vstate]),
-            				vstate!=PUZZLE_STATE,
+            		vstate==CheckerState.Gameover
+            			?gameOverMessage()
+            			:s.get(vstate.getDescription()),
+            				vstate!=CheckerState.Puzzle,
             				gb.whoseTurn,
             				stateRect);
             goalAndProgressMessage(gc,s.get(VictoryCondition),progressRect,goalRect);
@@ -572,7 +574,7 @@ public class CheckerGameViewer extends commonCanvas
      */
      public boolean Execute(commonMove mm,replayMode replay)
     {	
-        if(b.getBoardState()==PUZZLE_STATE)
+        if(b.getState()==CheckerState.Puzzle)
     	{   mm.setSliderNumString("--");
     		switch(mm.op)
         	{
@@ -785,7 +787,7 @@ public class CheckerGameViewer extends commonCanvas
     //   	}
     //   	// note: can't quite do this because the timing of "SetDrawState" is wrong.  ourB
     //   	// may be a draw where dup is not if ourB is pending a draw.
-    //   	//G.Assert(dup.getBoardState()==ourB.getBoardState(),"Replay state matches");
+    //   	//G.Assert(dup.getState()==ourB.getState(),"Replay state matches");
     //   	dupBoard = null;
     //   }
     
@@ -874,7 +876,7 @@ private void playSounds(commonMove mm)
     {
        
         int hitObject = hp.hitCode;
-		int state = b.getRawBoardState();
+		CheckerState state = b.getState();
 		CheckerCell cell = (CheckerCell)hp.hitObject;
 		CheckerChip chip = (cell==null) ? null : cell.topChip();
         switch (hitObject)
@@ -901,9 +903,9 @@ private void playSounds(commonMove mm)
 			switch(state)
 			{
 			default: G.Error("Not expecting drop on filled board in state "+state);
-			case CONFIRM_STATE:
-			case PLAY_STATE:
-			case PUZZLE_STATE:
+			case Confirm:
+			case Play:
+			case Puzzle:
 				if(b.movingObjectIndex()>=0)
 				{ if(cell!=null) { PerformAndTransmit("Dropb "+cell.col+" "+cell.row); }
 				}
@@ -925,11 +927,11 @@ private void playSounds(commonMove mm)
             	switch(state)
             	{
             	default: G.Error("can't drop on rack in state "+state);
-                	case PLAY_STATE:
+                case Play:
             		PerformAndTransmit(commonMove.RESET);
             		break;
 
-               	case PUZZLE_STATE:
+               	case Puzzle:
             		PerformAndTransmit("Drop"+col+cell.row+" "+mov);
             		break;
             	}

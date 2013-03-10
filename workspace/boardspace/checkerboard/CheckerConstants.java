@@ -1,12 +1,17 @@
 package checkerboard;
 
+import online.game.BaseBoard.BoardState;
 import online.game.Play2Constants;
 
 public interface CheckerConstants extends Play2Constants
 {	static String VictoryCondition = "do what it takes to win";
 	static String CheckerStrings[] =
-	{
+	{	"Checkers",
 		VictoryCondition
+	};
+	static String CheckerStringPairs[][] = 
+	{   {"Checkers_family","Checkers"},
+		{"Checkers_variation","Standard Checkers"},
 	};
 	static final int DEFAULT_COLUMNS = 8;	// 8x6 board
 	static final int DEFAULT_ROWS = 8;
@@ -22,31 +27,27 @@ public interface CheckerConstants extends Play2Constants
     static final int BoardLocation = 102;
     static final int LiftRect = 103;
     static final int ReverseViewButton = 104;
-     /* states of the board/game.  Because several gestures are needed to complete a move, and
-    there are several types of move, we use a state machine to determine what is legal */
-    //static final int PUZZLE_STATE = 0; // no game, just plopping balls and removing rings at will.
-    //static final int RESIGN_STATE = 1; // pending resignation, ready to confirm
-    //static final int GAMEOVER_STATE = 2; // game is over (someone won or resigned)
-    static final int CONFIRM_STATE = 3; // move and remove completed, ready to commit to it.
-    static final int DRAW_STATE = 4;	// game is a draw, click to confirm
-    static final int PLAY_STATE = 5; 	// place a marker on the board
- 
     
-    /* these strings correspoind to the move states */
-    static String[] boardStates = 
-        {
-            PuzzleStateDescription, // puzzle state
-            ResignStateDescription, 
-            GameOverStateDescription, 
-            ConfirmStateDescription, 
-            DrawStateDescription,
-            "Place a gobblet on the board, or move a gobblet",
-            "You must move the gobblet you have picked up"
-          };
-    
+    public enum CheckerState implements BoardState
+    {	Puzzle(PuzzleStateDescription),
+    	Draw(DrawStateDescription),
+    	Resign( ResignStateDescription),
+    	Gameover(GameOverStateDescription),
+    	Confirm(ConfirmStateDescription),
+    	Play("Place a checker on the board, or move a checker");
+    	
+    	String description;
+    	CheckerState(String des)
+    	{	description = des;
+    	}
+    	public String getDescription() { return(description); }
+    	public boolean GameOver() { return(this==Gameover); }
+    }
+
+
 	
     static final String Checker_SGF = "Checker"; // sgf game number allocated for hex
-    static final String[] CHECKERGRIDSTYLE = { "1", null, "A" }; // left and bottom numbers
+    static final String[] GRIDSTYLE = { "1", null, "A" }; // left and bottom numbers
 
  
     // file names for jpeg images and masks

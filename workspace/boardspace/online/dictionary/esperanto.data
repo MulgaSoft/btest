@@ -45,6 +45,9 @@ V #1 biciklistoj finis
 K #1 starts Joint review
 V #1 komencas Kunan Analizon
 S #1{ Choices, Choice}
+S #1{ Points, Point, Points}
+S #1{##No Discards, Discard, Discards}
+S #1{##bank is empty,bank has # chip,bank has # chips}
 S #1{##no Camels, Camel, Camels}
 S #1{##no Gold, Gold, Gold}
 S #1{##no Victory points, Victory Point, Victory Points}
@@ -127,8 +130,6 @@ K Black
 V Nigran
 S Black Palace
 S Black Palace Bonus (2 points)
-K Black Pieces
-V Nigraj Pecoj
 K Blue
 V Blua
 S Blue Dome
@@ -148,6 +149,7 @@ V Konstruu najbare al la movita viro
 K Build an initial stack of 2 to be placed
 V Konstruu komencan stakon de 2 por esti metita
 S Buildings
+S Buy Chips
 S Buy a building with no camels
 S Buy a building with no gold
 K Buy the goods for $#1
@@ -203,8 +205,6 @@ V Matu la generalon de via kontra\u016dulo
 S Chest
 K Choose the penalty for non-payment of interest
 V Elektu la punon pro nepagon de interezo
-K Click DONE to confirm this placement
-V Klaku FINI por konfirmi \u0109i tiun meton
 K Click Done to Finish the move
 V Klaku Fini por fini la movon
 K Click Done to accept a draw
@@ -221,7 +221,7 @@ K Click Done to confirm this action
 V Alklaku Fini por konfirmi \u0109i tiun agon
 S Click Done to confirm this move
 K Click Done to confirm this placement
-V Klaku Fini por konfirmi \u0109i tiun meton
+V Klaku FINI por konfirmi \u0109i tiun meton
 K Click Done to decline a draw
 V Alklaku Fini por malakcepti remison
 S Click Fire! to fire your laser
@@ -316,6 +316,9 @@ S Crossfire_variation
 S Cubes
 K Dec #1#2#3
 V #1 dec, #2:#3 GMT
+K DeckDescriptionStringKey
+V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
+V with borders 5 brown, 6 pink, 7 blue, 6 green, 6 yellow
 K Decline Draw
 V Malakceptu Remison
 K Decline the loan
@@ -358,6 +361,7 @@ V Dipole 8x8 kun malsimetria komenca pozicio
 S Discards
 K Done
 V Fini
+S Done selling cards
 K Drop a tile to enlarge the board
 V Metu pecon por pligrandigi la tabulon
 K Drop bunny chip
@@ -734,6 +738,7 @@ K Micropul_family
 V Micropul
 K Micropul_variation
 V norma Micropul
+S Mogul
 K Mogul_family
 V Mogul
 K Mogul_variation
@@ -767,6 +772,7 @@ S Move a piece from the row closest to the top of the board
 S Move a piece into the row closest to the bottom of the board
 K Move a piece one space
 V Movu pecon unu lokon
+S Move a piece or rotate a piece
 K Move a piece, step #1
 V Movu pecon, pa\u015do #1
 K Move a ring
@@ -857,6 +863,7 @@ V Elektoj
 S Orange
 S Orange Palace
 S Orange Palace Bonus (4 points)
+S Out of the auction
 S Palago
 K Palago_family
 V Palago
@@ -869,10 +876,12 @@ K Pan-Kai_variation
 V Pentamino game for 2 players
 K Pass
 V Pasi
+S Pay
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
+S Pay a chip, or take the pot
 K Phlip_family
 V Phlip
 K Pick a ring to place a chip and move
@@ -898,8 +907,6 @@ V Metu Ranon sur la tabulon
 K Place a GIPF piece on a starting point
 V Metu GIPF-pecon sur komenco-punkton
 S Place a Menhir on the board
-K Place a Ring on the board
-V Metu ringon sur la tabulon
 S Place a bird on an empty cell
 S Place a bird on an empty cell, or designate a bird to fly
 K Place a chip on a starting point
@@ -985,8 +992,6 @@ K Play Farmer
 V Ludu Farmisto
 S Play a card
 S Played
-K Played on #1
-V Ludis sur #1
 S Player #1
 S Player Cubes
 K Player is 
@@ -1085,6 +1090,8 @@ K Return to the Way
 V Reveno al la Vojo
 K Reverse View
 V Renversa Vido
+K Review
+V analizo
 K Review Saved Games
 V Analiza \u0108ambro
 K Rider Size
@@ -1097,6 +1104,7 @@ K Santorini_variation
 V Santorini (sen Dioj)
 K Score the most points at the sprint and finish lines
 V Akiru plej multajn poentojn \u0109e la spurta kaj fina linioj
+S Score the most points buying and selling cards
 K See Player Comments
 V Vidi Komentojn de Ludantoj
 K See Spectator Comments
@@ -1105,7 +1113,8 @@ K Select Game
 V Elekti Partion
 K Select Robot
 V Elekti Roboton
-S Select Row #1
+K Select Row #1
+V Row #1
 S Select a group of dice
 K Select a ring to remove
 V Elektu ringon por forigi
@@ -1122,6 +1131,13 @@ S Select which of your roamers to kill
 S Select which opponent roamer to kill
 K Selecting game: #1
 V Elektante partion: #1
+S Sell
+S Sell All
+S Sell All #1 Cards
+S Sell Cards
+S Sell another #1 card
+S Sell no cards
+S Sell some #1 cards
 K Send
 V Sendi
 S Send Cube
@@ -1189,6 +1205,9 @@ K Start White
 V Komencu Blanko
 K State unknown.
 V Stato nekonata.
+S Still in the Auction
+K Swap Colors
+V Inter\u015dan\u011di Kolorojn
 S Swap colors, or place a chip, or move a board
 S Swing View
 S Switch to a more oblique view of the board
@@ -1227,9 +1246,14 @@ S Take #1 camels
 S Take #1 camels, take a card, or move the supervisor #2 spaces
 S Take #1 gold
 S Take #1 gold, take a card, or move the supervisor #2 spaces
+S Take Card
+S Take Chips
 K Take Over Playing
 V Anstata\u016dludi
+S Take The #1 Card
 S Take a card
+S Take no chips
+S Take the card, or sell cards
 K Take your first action
 V Faru vian unuan agon
 K Take your second action
@@ -1259,6 +1283,9 @@ V \u0108i tio estas nun privata \u0109ambro
 K This is now a public room
 V \u0108i tio estas nun publika \u0109ambro
 S TicTacNine
+S TicTacNine Games
+K TicTacNine_family
+V TicTacNine
 K TicTacNine_variation
 V experimental TicTacNine board
 K Tile Pattern Games
@@ -1399,8 +1426,6 @@ K Welcome to Game client, version #1
 V Bonvenon al la kliento de BoardSpace, versio #1
 K White
 V Blankan
-K White Pieces
-V Blankaj Pecoj
 K Wolf moving suspects
 V Lupo movas suspektatojn
 K Wolf player eating
@@ -1561,6 +1586,8 @@ K perspective
 V perspektivo
 K play
 V ludi por #1
+K played on #1
+V Ludis sur #1
 K player
 V ludanto
 S player 
@@ -1578,8 +1605,7 @@ K reading directory...
 V legante dosierujon...
 K reconok
 V ..rekonekto sukcesis
-K review
-V analizo
+S reviewing
 K savedmsg
 V Partio konservita kiel #1
 K select the game to play
@@ -1600,8 +1626,6 @@ K stillwaiting
 V ankora\u016d lan\u0109ante... bonvolu atendi.
 K surround your opponents queen bee
 V \u0109irka\u016d la abelre\u011dinon de via kontra\u016dulo
-K swap colors
-V Swap Colors
 K the game has resumed
 V la partio rekomenci\u011dis
 K timeoutWarning
@@ -1618,4 +1642,4 @@ K you may increase your bid
 V vi povas pliigi vian oferton
 K your name
 V via nomo
-N 929
+N 953

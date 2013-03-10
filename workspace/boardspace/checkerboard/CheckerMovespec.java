@@ -36,7 +36,7 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
 	int from_row; // for from-to moves, the source row
     char to_col; // for from-to moves, the destination column
     int to_row; // for from-to moves, the destination row
-    int state;	// the state of the move before state, for UNDO
+    CheckerState state;	// the state of the move before state, for UNDO
     
     public CheckerMovespec() // default constructor
     {
