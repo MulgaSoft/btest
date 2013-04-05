@@ -1,54 +1,57 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-
-    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
     <title>BoardSpace.net Home Page</title>
     <script src="/js/site.js"></script>
   </head>
-  <body style="background-image: url(../images/background-image.jpg);">
+  <body style=" background-image: url(../images/background-image.jpg);">
     <h1 style="text-align: center;"><img alt="boardspace.net"
         src="master-logo.jpg" style="width: 600px; height: 100px;"></h1>
-    <h1 style="text-align: center;">A Place for Board Games
-      <a
+    <h1 style="text-align: center;">A Place for Board Games <a
         href="https://www.facebook.com/pages/Boardspacenet/147924481942900"
         target="_new"><img src="/images/fb-like.jpg" tooltip="Like our
           facebook page" alt="Like our facebook page" height="25"
-          width="50"></a>
-    </h1>
-    <table style="width: 80%; height: 1%; text-align: left; margin-left:
-      auto; margin-right: auto;" border="0" cellpadding="2"
+          width="50"></a> </h1>
+    <table style=" width: 80%; height: 1%; text-align: left;
+      margin-left: auto; margin-right: auto;" border="0" cellpadding="2"
       cellspacing="2">
       <caption><font size="+1"><span style="font-weight: bold;"></span></font><br>
       </caption><tbody>
         <tr>
+	<td><a href=links-page.shtml>Site News <br>and Activity</a></td>
           <td style="vertical-align: top; text-align: center;"><font
               size="+1"><a href="register.shtml"><span
                   style="font-weight: bold;">Register</span></a></font><br>
           </td>
           <td style="vertical-align: top; text-align: center;"><font
               size="+2"><a style="font-weight: bold;" href="login.shtml">Log
-                in and
-                Play<br>
+
+
+
+                in and Play<br>
               </a></font></td>
           <td style="vertical-align: top; text-align: center;"><font
               size="+1"><a href="guest.shtml"><span style="font-weight:
-                  bold;">Guest
-                  Login</span></a></font><br>
+                  bold;">Guest Login</span></a></font><br>
           </td>
+          <td style=" vertical-align: top; white-space: nowrap;">Registered
+
+            players can log in<br>
+            using&nbsp; <a href="../java/boardspace.jnlp">Java Web
+              Start</a><br>
+          </td>
+	
         </tr>
         <tr>
-          <td colspan="3" style="vertical-align: top;">If you just want
-            to
-            have a look, click on the "Guest Login" link
-            above.&nbsp;&nbsp;
-            Otherwise,&nbsp; it takes only a minute to register so you
-            can play
-            under your own name.&nbsp; Once you have logged in,&nbsp;
-            you can
-            bookmark the page to bypass this page and the login page
-            entirely. The
-            game is the thing!<br>
+          <td colspan="4" style="vertical-align: top;">If you just want
+            to have a look, click on the "Guest Login" link
+            above.&nbsp;&nbsp; Otherwise,&nbsp; it takes only a minute
+            to register so you can play under your own name.&nbsp; Once
+            you have logged in,&nbsp; you can bookmark the page to
+            bypass this page and the login page entirely. The game is
+            the thing!<br>
           </td>
         </tr>
       </tbody>
@@ -56,8 +59,10 @@
     <br>
     <!--#include virtual="/cgi-bin/top_games.cgi?embed=1" --><br>
     <br>
-    <p></p>
     <div style="text-align: center;"><span style="font-weight: bold;">Other
+
+
+
         Stuff</span><br>
     </div>
     <table style="width: 100%; text-align: left;" border="1"
@@ -71,16 +76,18 @@
             are listed on this <a
               href="http://boardgamegeek.com/geeklist/12240/item/439185#item439185">geeklist</a>.;&nbsp;
 Add
-            your candidates.<a href="http://boardgamegeek.com/game/1337"></a></td>
+
+
+
+            your candidates.</td>
         </tr>
         <tr>
           <td style="vertical-align: top;"><font size="+1"><a
                 style="font-weight: bold;" href="handmade.html">Handmade
                 Games</a></font></td>
           <td style="vertical-align: top;">In the same sense that this
-            is a
-            handmade game site, I've always been a fan of real hand made
-            games.</td>
+            is a handmade game site, I've always been a fan of real hand
+            made games.</td>
         </tr>
         <tr>
           <td style="vertical-align: top;"> <a
@@ -88,19 +95,16 @@ Add
             <br>
           </td>
           <td style="vertical-align: top;">Exclusively for development
-            of&nbsp; Go programs,
-            we're providing space for an experimental <a
-              href="http://cgos.boardspace.net/">CGOS Go Server</a>
-            which runs
-            continuous practice tournaments.<br>
+            of&nbsp; Go programs, we're providing space for an
+            experimental <a href="http://cgos.boardspace.net/">CGOS Go
+              Server</a> which runs continuous practice tournaments.<br>
           </td>
         </tr>
       </tbody>
     </table>
     <br>
     Translations by Babyl Fish (far from perfect, but better than
-    nothing!)
-    <a
+    nothing!) <a
 href="http://babelfish.altavista.com/babelfish/tr?doit=done&amp;url=http://www.boardspace.net/english/index.html&amp;lp=en_es"><img
         alt="spanish" src="/images/flags/Spain.gif" style="border: 0px
         solid ; width: 30px; height: 20px;"></a><a
@@ -126,8 +130,7 @@ document.write("space.net'>gamemaste<n>r@board<n>space.net</a>");
       </script></font><br>
             </td>
             <td style="vertical-align: top; text-align: center;">
-              visitor map
-              <a
+              visitor map <a
 href="http://www4.clustrmaps.com/counter/maps.php?url=http://www.boardspace.net"
                 id="clustrMapsLink"><img
 src="http://www4.clustrmaps.com/counter/index2.php?url=http://www.boardspace.net"
