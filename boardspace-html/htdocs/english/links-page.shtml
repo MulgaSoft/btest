@@ -12,13 +12,11 @@
           src="master-logo.jpg" style="width: 600px; height: 100px;"></h1>
       <h1 style="text-align: center;">A Place for Board Games <a
           href="https://www.facebook.com/pages/Boardspacenet/147924481942900"
-          target="_new"><img src="/images/fb-like.jpg"
-            tooltip="Like our facebook page" alt="Like our facebook
-            page" height="25" width="50"></a> </h1>
+          target="_new"><img src="/images/fb-like.jpg" tooltip="Like our
+            facebook page" alt="Like our facebook page" height="25"
+            width="50"></a> </h1>
     </center>
-
     <!--#include virtual="/cgi-bin/links.cgi" -->
-
     <table style=" text-align: left; width: 100%;" border="1"
       cellpadding="2" cellspacing="2">
       <tbody>
@@ -50,7 +48,9 @@
           <td style="vertical-align: top;"><a target="_new"
               href="abouttherobot.shtml">About the Robots</a> </td>
           <td style="vertical-align: top;"><a target="_new"
-              href="/cgi-bin/tournament-signup.cgi">Tournaments</a> </td>
+              href="/cgi-bin/tournament-signup.cgi">Tournaments</a> / <a
+              target="_new" href="/cgi-bin/meetup.cgi">Meeting finder</a>
+          </td>
           <td style="vertical-align: top;"><a target="_new"
               href="aboutthesite.shtml">About the Site</a></td>
         </tr>
@@ -70,7 +70,7 @@
         </tr>
       </tbody>
     </table>
-<p>
+    <p>
       <table style="width: 100%;">
         <tbody>
           <tr>
@@ -96,5 +96,6 @@ src="http://www4.clustrmaps.com/counter/index2.php?url=http://www.boardspace.net
           </tr>
         </tbody>
       </table>
- 
+    </p>
+  </body>
 </html>
