@@ -18,6 +18,25 @@ function editlink(to,newwin)
 		{ location.href='/cgi-bin/edit.cgi?pname=' + to;
 		}
 }
+function edituser(to, newwin) {
+    if (newwin) {
+        window.open('/cgi-bin/edit.cgi?editable=yes&pname=' + to, '');
+    }
+    else {
+        location.href = '/cgi-bin/edit.cgi?editable=yes&pname=' + to;
+    }
+}
+
+function openpop(msg,cap) {
+    OpenWindow = window.open("", "newwin", "height=100, width=300");
+    OpenWindow.document.write("<html><head><title>");
+    OpenWindow.document.write(cap);
+    OpenWindow.document.write("</title></head>");
+    OpenWindow.document.write("<BODY>");
+    OpenWindow.document.write(msg);
+    OpenWindow.document.write("</BODY></html>");
+    OpenWindow.document.close();
+}
 
   //
     // Check registation for information
@@ -207,3 +226,16 @@ function obPrint(str2,str1)
 	var str3 = hexDecode(combo);
 	document.write(str3);
 }
+
+function getTimeZone() {
+    var now = new Date();
+    return (now.getTimezoneOffset());
+}
+function setTimeZoneCookie() {
+    var then = new Date();
+    then.setYear(then.getFullYear()+1);
+    var val = 'timezoneoffset=' + getTimeZone() + " ; expires="+then.toGMTString()+ " ; path=/";
+    document.cookie = val;
+}
+
+setTimeZoneCookie();
