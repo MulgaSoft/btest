@@ -28,11 +28,8 @@ cellSpacing=2 cellPadding=2 border=1>
       </TD>
     <TD style="VERTICAL-ALIGN: top"><INPUT name=pname><BR></TD>
     <TD rowSpan=5>
-    <applet codebase="/java/"
-code="online.version.class" height="50"
-width="200"> <strong> This browser does not
-have a Java Plug-in. </strong> </applet>
-<BR></TD></TR>
+    <!--#include virtual="/cgi-bin/applettag.cgi?tagname=version" -->
+    </TD></TR>
   <TR style="FONT-WEIGHT: bold">
       <TD style="VERTICAL-ALIGN: top">Mot de passe</TD>
     <TD style="VERTICAL-ALIGN: top"><INPUT type=password 

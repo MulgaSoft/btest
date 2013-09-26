@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;
-      charset=ISO-8859-1">
+      charset=windows-1252">
     <title>BoardSpace.net Home Page</title>
     <script src="/js/site.js"></script>
   </head>
@@ -20,13 +20,17 @@
       <caption><font size="+1"><span style="font-weight: bold;"></span></font><br>
       </caption><tbody>
         <tr>
-	<td><a href=links-page.shtml>Site News <br>and Activity</a></td>
+          <td><a href="links-page.shtml">Site News <br>
+              and Activity</a></td>
           <td style="vertical-align: top; text-align: center;"><font
-              size="+1"><a href="register.shtml"><span
+              size="+1">
+              <a href="/cgi-bin/noticeme.cgi?from=homepage">
+              <a href="register.shtml"><span
                   style="font-weight: bold;">Register</span></a></font><br>
           </td>
           <td style="vertical-align: top; text-align: center;"><font
               size="+2"><a style="font-weight: bold;" href="login.shtml">Log
+
 
 
 
@@ -36,13 +40,6 @@
               size="+1"><a href="guest.shtml"><span style="font-weight:
                   bold;">Guest Login</span></a></font><br>
           </td>
-          <td style=" vertical-align: top; white-space: nowrap;">Registered
-
-            players can log in<br>
-            using&nbsp; <a href="../java/boardspace.jnlp">Java Web
-              Start</a><br>
-          </td>
-	
         </tr>
         <tr>
           <td colspan="4" style="vertical-align: top;">If you just want
@@ -63,6 +60,7 @@
 
 
 
+
         Stuff</span><br>
     </div>
     <table style="width: 100%; text-align: left;" border="1"
@@ -76,6 +74,7 @@
             are listed on this <a
               href="http://boardgamegeek.com/geeklist/12240/item/439185#item439185">geeklist</a>.;&nbsp;
 Add
+
 
 
 

@@ -12,10 +12,7 @@
         title="" alt="boardspace.net" style="width: 600px; height:
         100px;"></h1>
     <h1 style="text-align: center;">BoardSpace needs Java!</h1>
-    <applet codebase="/java" jar="online/version.jar"
-      code="online.version.class" height="50" width="200"> <strong>
-        This browser does not have a Java Plug-in. </strong> <param
-        name="permissions" value="sandbox"> </applet>
+    <!--#include virtual="/cgi-bin/applettag.cgi?tagname=version" -->
     <p><span style="font-weight: bold;">If the applet doesn't appear at
         all,</span> this is the first problem to solve.&nbsp; Our games
       require a Java-enabled browser. Most modern browsers support Java,

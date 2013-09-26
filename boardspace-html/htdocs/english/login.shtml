@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;
-      charset=ISO-8859-1">
+      charset=windows-1252">
     <title>BoardSpace.net Login Page</title>
     <script src="/js/site.js">
   </script>
@@ -44,6 +44,9 @@
 
 
 
+
+
+
                       <a href="/cgi-bin/lost_password.cgi">Lost
                         Password?</a><br>
                     </td>
@@ -61,15 +64,14 @@
                         name="cookie" type="checkbox">Set Login Cookie</td>
                     <td style="vertical-align: top;"><font size="-1"> <big>After
 
+
+
+
                           you login, bookmark the page you see, and use
                           it to log in to boardspace without entering
                           your name and password again.<br>
-                        </big><br>
-                      </font>An alternative to logging in from this page
-                      is to use <a href="../java/boardspace.jnlp">Java
-                        Web Start</a>, which will install a desktop icon
-                      you can use to launch boardspace without a using a
-                      browser.</td>
+                        </big></font><br>
+                    </td>
                   </tr>
                   <tr>
                     <td>&nbsp;<input
@@ -79,6 +81,9 @@
                       take you to the online lobby, which is the central
                       point for starting or observing games.&nbsp;&nbsp;
                       See the <a target="_new" href="lobby-help.html">help
+
+
+
 
 
 
@@ -103,10 +108,7 @@
                       <td style="vertical-align: top;">
                         <center>
                           <h3>Your Java Version</h3>
-                          <applet codebase="/java"
-                            code="online.version.class" height="50"
-                            width="200"> <strong> This browser does not
-                              have a Java Plug-in. </strong> </applet></center>
+                          <!--#include virtual="/cgi-bin/applettag.cgi?tagname=version" -->
                         <p> There should be a java applet above this
                           line which shows your java version. If there
                           is none, <a
@@ -129,7 +131,10 @@
                     <tr>
                       <td style="vertical-align: top;">Boardspace.net
                         uses Java.&nbsp; If the applet doesn't open, see
-                        the <a href="needsjava.html">NeedsJava </a>page
+                        the <a href="needsjava.shtml">NeedsJava </a>page
+
+
+
 
 
 

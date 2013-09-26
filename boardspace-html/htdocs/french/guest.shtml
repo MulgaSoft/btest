@@ -27,16 +27,9 @@ cellSpacing=2 cellPadding=2 border=1>
       name=pname>
           Invit&eacute; 
           <INPUT type=hidden value=guestx name=password><BR></TD>
-    <TD rowSpan=2><!--[if !IE]> Firefox and others will use outer object --> 
-<applet codebase="/java/" code="online/version.class"
-height="50" width="200"><!--<![endif]--><!-- MSIE (Microsoft Internet Explorer) will use inner object -->
-      <OBJECT height=50 width=200 
-      classid=clsid:8AD9C840-044E-11D1-B3E9-00805F499D93><PARAM NAME="code" VALUE="online.version"><PARAM NAME="codebase" VALUE="/java/">
-        <strong> This browser does not have aJavaPlug-in. <br>        <a 
-      href="http://java.sun.com/products/plugin/downloads/index.html"> Getthe 
-      latest Java Plug-in here. </a> </strong> </OBJECT><!--[if !IE]> close outer object -->
-</applet>
-<!--<![endif]--><BR></TD></TR>
+    <TD rowSpan=2>
+    <!--#include virtual="/cgi-bin/applettag.cgi?tagname=version" -->
+    </TD></TR>
   <TR>
         <TD style="VERTICAL-ALIGN: top"><SPAN style="FONT-WEIGHT: bold">Langue 
           pr&eacute;f&eacute;r&eacute;e </SPAN><BR>
