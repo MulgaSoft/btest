@@ -18,21 +18,23 @@
 <entry path="C:\java\jdk1.6\jre\lib\endorsed"/>
 </endorsedDirs>
 </libraryInfo>
-<libraryInfo home="C:\java\jre1.5.0_06" version="1.5.0_06">
+<libraryInfo home="C:\java\jdk1.6.0_37" version="1.6.0_37">
 <bootpath>
-<entry path="C:\java\jre1.5.0_06\lib\rt.jar"/>
-<entry path="C:\java\jre1.5.0_06\lib\i18n.jar"/>
-<entry path="C:\java\jre1.5.0_06\lib\sunrsasign.jar"/>
-<entry path="C:\java\jre1.5.0_06\lib\jsse.jar"/>
-<entry path="C:\java\jre1.5.0_06\lib\jce.jar"/>
-<entry path="C:\java\jre1.5.0_06\lib\charsets.jar"/>
-<entry path="C:\java\jre1.5.0_06\classes"/>
+<entry path="C:\java\jdk1.6.0_37\jre\lib\resources.jar"/>
+<entry path="C:\java\jdk1.6.0_37\jre\lib\rt.jar"/>
+<entry path="C:\java\jdk1.6.0_37\jre\lib\sunrsasign.jar"/>
+<entry path="C:\java\jdk1.6.0_37\jre\lib\jsse.jar"/>
+<entry path="C:\java\jdk1.6.0_37\jre\lib\jce.jar"/>
+<entry path="C:\java\jdk1.6.0_37\jre\lib\charsets.jar"/>
+<entry path="C:\java\jdk1.6.0_37\jre\lib\modules\jdk.boot.jar"/>
+<entry path="C:\java\jdk1.6.0_37\jre\classes"/>
 </bootpath>
 <extensionDirs>
-<entry path="C:\java\jre1.5.0_06\lib\ext"/>
+<entry path="C:\java\jdk1.6.0_37\jre\lib\ext"/>
+<entry path="C:\windows\Sun\Java\lib\ext"/>
 </extensionDirs>
 <endorsedDirs>
-<entry path="C:\java\jre1.5.0_06\lib\endorsed"/>
+<entry path="C:\java\jdk1.6.0_37\jre\lib\endorsed"/>
 </endorsedDirs>
 </libraryInfo>
 </libraryInfos>

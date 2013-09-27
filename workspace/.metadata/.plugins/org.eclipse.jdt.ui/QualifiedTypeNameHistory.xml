@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.swing.JMenu"/>
-<fullyQualifiedTypeName name="main.AddressInterface"/>
-<fullyQualifiedTypeName name="entrapment.EntrapmentMovespec"/>
-<fullyQualifiedTypeName name="main.LeHavre"/>
-<fullyQualifiedTypeName name="java.io.DataOutputStream"/>
 <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
 <fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
@@ -46,18 +41,23 @@
 <fullyQualifiedTypeName name="java.awt.image.PixelGrabber"/>
 <fullyQualifiedTypeName name="java.awt.image.MemoryImageSource"/>
 <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
-<fullyQualifiedTypeName name="java.awt.Graphics"/>
 <fullyQualifiedTypeName name="java.awt.Rectangle"/>
 <fullyQualifiedTypeName name="online.common.HitPoint"/>
 <fullyQualifiedTypeName name="java.util.Hashtable"/>
 <fullyQualifiedTypeName name="online.common.OStack"/>
 <fullyQualifiedTypeName name="online.game.chip"/>
-<fullyQualifiedTypeName name="online.common.StockArt"/>
 <fullyQualifiedTypeName name="online.game.square_geo_board"/>
 <fullyQualifiedTypeName name="online.game.squareBoard"/>
 <fullyQualifiedTypeName name="online.game.cell.Geometry"/>
-<fullyQualifiedTypeName name="online.common.G"/>
 <fullyQualifiedTypeName name="online.game.stackCell"/>
 <fullyQualifiedTypeName name="online.game.chipCell"/>
 <fullyQualifiedTypeName name="takojudo.TakojudoChip"/>
+<fullyQualifiedTypeName name="online.game.rectBoard"/>
+<fullyQualifiedTypeName name="online.common.StockArt"/>
+<fullyQualifiedTypeName name="java.awt.Graphics"/>
+<fullyQualifiedTypeName name="java.awt.Image"/>
+<fullyQualifiedTypeName name="online.game.Play2Constants"/>
+<fullyQualifiedTypeName name="proteus.ProteusConstants.ProteusState"/>
+<fullyQualifiedTypeName name="online.game.BaseBoard.BoardState"/>
+<fullyQualifiedTypeName name="online.common.G"/>
 </qualifiedTypeNameHistroy>

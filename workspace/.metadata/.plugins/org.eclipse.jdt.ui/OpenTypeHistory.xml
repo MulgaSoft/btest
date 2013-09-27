@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=boardspace/C:\/java\/jdk1.6\/jre\/lib\/rt.jar&lt;java.lang(ClassCastException.class[ClassCastException" modifiers="33" timestamp="1281504469121"/>
-<typeInfo handle="=boardspace/Game.jar&lt;online.game(ViewerProtocol.class[ViewerProtocol" modifiers="1537" timestamp="1354585001715"/>
-<typeInfo handle="=boardspace/C:\/java\/jdk1.6\/jre\/lib\/rt.jar&lt;java.lang(NumberFormatException.class[NumberFormatException" modifiers="33" timestamp="1281504469121"/>
-<typeInfo handle="=boardspace/C:\/java\/jdk1.6\/jre\/lib\/rt.jar&lt;java.lang(IllegalArgumentException.class[IllegalArgumentException" modifiers="33" timestamp="1281504469121"/>
+<typeInfo handle="=boardspace/Game.jar&lt;online.game(ViewerProtocol.class[ViewerProtocol" modifiers="1537" timestamp="1380152287193"/>
 </typeInfoHistroy>
