@@ -22,10 +22,25 @@ K #1 invites #2 to join room #3
 V #1 invite #2 \u00e0 rejoindre la salle #3
 K #1 invites #2 to play #3 in room #4
 V #1 invite #2 \u00e0 jouer #3 la salle #4
+S #1 is cash earned per production action
+S #1 is cash earned per shipping action
+S #1 is cash earned per warehouse action
+S #1 is cash earned selling goods
+S #1 is cash reveived from auctions
+S #1 is cash spent on auctions
+S #1 is cash spent on machines and production
+S #1 is cash spent on shipping
+S #1 is cash spent on warehouses and goods
+S #1 is interest paid
+S #1 is interest payments received
 K #1 is taking over for #2
 V #1 prend le relais de #2
 K #1 is taking over playing #2 for #3
 V #1 prend le relais de #3 et joue le #2
+S #1 is the effeciency of island purchases
+S #1 is the value of your goods on the island
+S #1 is your cash on hand
+S #1 is your final score
 K #1 killed due to #2
 V #1 d\u00e9connect\u00e9 en raison de :  #2
 K #1 left
@@ -120,6 +135,7 @@ K Auction
 V Ench\u00e8res
 K Aug #1#2#3
 V #1 ao\u00fb, #2:#3 GMT
+S Award the prize
 K Bag
 V Sac
 K Bank
@@ -274,6 +290,8 @@ K Click on the placed piece to rotate it, or Click Done
 V Cliquez sur la pi\u00e8ce plac\u00e9e pour la tourner ou cliquez sur Valider
 K Closing...
 V Fermeture...
+S Coin Flip
+S Coin flip from #1 : #2
 K Colorblind
 V Contraste \u00e9lev\u00e9
 K Combine two stacks or capture another stack
@@ -333,7 +351,7 @@ K Dec #1#2#3
 V #1 d\u00e9c, #2:#3 GMT
 K DeckDescriptionStringKey
 V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
-V with borders 5 brown, 6 pink, 7 blue, 6 green, 6 yellow
+V with borders 5 brown, 7 pink, 7 blue, 6 green, 6 yellow
 K Decline Draw
 V Refuser la nulle
 K Decline the loan
@@ -554,6 +572,7 @@ K Gyges_family
 V Gyges
 K Gyges_variation
 V standard Gyges
+S Heads
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -1020,6 +1039,8 @@ K Play a card
 V Jouer une carte
 K Played
 V Jou\u00e9s
+K Played on #1
+V Jou\u00e9 en #1
 K Player #1
 V Joueur #1
 K Player Cubes
@@ -1267,6 +1288,7 @@ K Tablut-9_variation
 V Tablut sur plateau 9x9
 K Tablut_family
 V Tablut
+S Tails
 S Tajii
 K Tajii_family
 V Tajii
@@ -1490,6 +1512,7 @@ K Yinsh_variation
 V standard Yinsh
 K You can only resign when it is your move
 V Vous ne pouvez abandonner que si c'est votre tour
+S You cannot resign in a multiplayer game
 K You have been disconnected: #1
 V Vous avez \u00e9t\u00e9 d\u00e9connect\u00e9: #1
 K You have been offered a draw - Accept or Decline
@@ -1576,6 +1599,8 @@ K fund a loan from a player or the bank
 V financer un pr\u00eat d'un joueur ou de la banque
 K game selector
 V s\u00e9lecteur de partie
+K gold: escape the flagship  silver: capture gold flagship
+V Or: Faites s'\u00e9chapper le vaisseau amiral  Argent: capturez-le !
 K guest
 V invit\u00e9
 K in #1
@@ -1624,8 +1649,6 @@ S own the most blocks
 S perspective
 K play
 V jouer \u00e0 la place de #1
-K played on #1
-V Jou\u00e9 en #1
 K player
 V Joueur
 S player 
@@ -1680,4 +1703,4 @@ K you may increase your bid
 V vous pouvez augmenter votre offre
 K your name
 V Votre nom
-N 953
+N 975

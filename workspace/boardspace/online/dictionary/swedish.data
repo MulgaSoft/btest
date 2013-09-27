@@ -20,10 +20,25 @@ K #1 invites #2 to join room #3
 V #1 bjuder in #2 till rum #3
 K #1 invites #2 to play #3 in room #4
 V #1 bjuder in #2 f\u00f6r att spela #3 i rum #4
+S #1 is cash earned per production action
+S #1 is cash earned per shipping action
+S #1 is cash earned per warehouse action
+S #1 is cash earned selling goods
+S #1 is cash reveived from auctions
+S #1 is cash spent on auctions
+S #1 is cash spent on machines and production
+S #1 is cash spent on shipping
+S #1 is cash spent on warehouses and goods
+S #1 is interest paid
+S #1 is interest payments received
 K #1 is taking over for #2
 V #1 tar \u00f6ver f\u00f6r #2
 K #1 is taking over playing #2 for #3
 V #1 tar \u00f6ver spelet av #2 f\u00f6r #3
+S #1 is the effeciency of island purchases
+S #1 is the value of your goods on the island
+S #1 is your cash on hand
+S #1 is your final score
 K #1 killed due to #2
 V #1 utsl\u00e4ngd p.g.a. #2
 K #1 left
@@ -118,6 +133,7 @@ K Auction
 V Auktion
 K Aug #1#2#3
 V #1 Aug, #2:#3 GMT
+S Award the prize
 S Bag
 S Bank
 S Barrel
@@ -259,6 +275,8 @@ K Click on the placed piece to rotate it, or Click Done
 V Klicka p\u00e5 den placerade brickan f\u00f6r att rotera den, eller klicka p\u00e5 Klar
 K Closing...
 V St\u00e4nger...
+S Coin Flip
+S Coin flip from #1 : #2
 K Colorblind
 V Svartvit
 K Combine two stacks or capture another stack
@@ -319,7 +337,7 @@ K Dec #1#2#3
 V #1 Dec, #2:#3 GMT
 K DeckDescriptionStringKey
 V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
-V with borders 5 brown, 6 pink, 7 blue, 6 green, 6 yellow
+V with borders 5 brown, 7 pink, 7 blue, 6 green, 6 yellow
 K Decline Draw
 V Avsl\u00e5 remierbjudande
 K Decline the loan
@@ -538,6 +556,7 @@ K Gyges_family
 V Gyges
 K Gyges_variation
 V standard Gyges
+S Heads
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -991,6 +1010,8 @@ K Play Farmer
 V Spela bonden
 S Play a card
 S Played
+K Played on #1
+V Spelad p\u00e5 #1
 K Player #1
 V Spelare #1
 S Player Cubes
@@ -1239,6 +1260,7 @@ K Tablut-9_variation
 V Tablut p\u00e5 9x9
 K Tablut_family
 V Tablut
+S Tails
 S Tajii
 K Tajii_family
 V Tajii
@@ -1449,6 +1471,7 @@ K Yinsh_variation
 V Yinsh standard
 K You can only resign when it is your move
 V Du kan bara ge upp n\u00e4r det \u00e4r ditt drag
+S You cannot resign in a multiplayer game
 K You have been disconnected: #1
 V #1 har tappat anslutningen.
 K You have been offered a draw - Accept or Decline
@@ -1534,6 +1557,8 @@ K fund a loan from a player or the bank
 V finansiera ett l\u00e5n fr\u00e5n en spelare eller bank
 K game selector
 V spelv\u00e4ljare
+K gold: escape the flagship  silver: capture gold flagship
+V Guld: fly med flaggskeppet; Silver: er\u00f6vra guldflaggskepept
 K guest
 V g\u00e4st
 K in #1
@@ -1582,8 +1607,6 @@ K perspective
 V perspektiv
 K play
 V spela #1
-K played on #1
-V Spelad p\u00e5 #1
 K player
 V spelare
 K player 
@@ -1639,4 +1662,4 @@ K you may increase your bid
 V du kan h\u00f6ja ditt bud
 K your name
 V Ditt namn
-N 953
+N 975

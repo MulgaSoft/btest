@@ -922,7 +922,7 @@ public class HexGameViewer extends commonCanvas
  //   	}
  //   	// note: can't quite do this because the timing of "SetDrawState" is wrong.  ourB
  //   	// may be a draw where dup is not if ourB is pending a draw.
- //   	//G.Assert(dup.getBoardState()==ourB.getBoardState(),"Replay state matches");
+ //   	//G.Assert(dup.getState()==ourB.getState(),"Replay state matches");
  //   	dupBoard = null;
  //   }
     

@@ -46,7 +46,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     private CheckerState unresign = null;					// remembers the previous state when "resign"
     public CheckerState getState() { return(board_state); } 
 	public void setState(CheckerState st) 
-	{ 	board_state = st;
+	{ 	unresign = (st==CheckerState.Resign)?board_state:null;
+		board_state = st;
 		if(!board_state.GameOver()) 
 			{ G.setValue(win,false); 	// make sure "win" is cleared
 			}
@@ -210,7 +211,6 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 		pickedObject = null;
         G.setValue(win,false);
         G.setValue(chips_on_board,0);
-        unresign = null;
         moveNumber = 1;
 
         // note that firstPlayer is NOT initialized here
@@ -615,10 +615,10 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
             break;
 
         case MOVE_RESIGN:
-        	if(unresign!=null) { setState(unresign); unresign = null; }
-        	else{ unresign = board_state; setState(CheckerState.Resign); }
+        	setState(unresign==null?CheckerState.Resign:unresign);
             break;
        case MOVE_RESET:
+    	   	if(unresign!=null) { setState(unresign); }
         	switch(board_state)
         	{
         	case Puzzle: 
@@ -785,7 +785,6 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         case MOVE_RESIGN:
             break;
         }
-        unresign = null;
         setState(m.state);
         if(whoseTurn!=m.player)
         {  	moveNumber--;

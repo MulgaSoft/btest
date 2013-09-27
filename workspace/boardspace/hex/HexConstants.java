@@ -49,6 +49,7 @@ public interface HexConstants extends Play2Constants
 	public String description() { return(description); }
 	public boolean doneState() { return(doneState); }
 	public boolean digestState() { return(digestState); }
+	public boolean Puzzle() { return(this==Puzzle); }
 	};
 	
     //	these next must be unique integers in the Hexmovespec dictionary

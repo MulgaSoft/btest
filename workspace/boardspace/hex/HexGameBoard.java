@@ -45,7 +45,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
      * @param st
      */
 	public void setState(HexState st) 
-	{ 	board_state = st;
+	{ 	unresign = (st==HexState.Resign)?board_state:null;
+		board_state = st;
 		if(!board_state.GameOver()) 
 			{ G.setValue(win,false); 	// make sure "win" is cleared
 			}
@@ -220,7 +221,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         G.copy(playerColor,from_b.playerColor);
         G.copy(playerChip,from_b.playerChip);
  
-        if(debug) { sameboard(from_b); }
+        sameboard(from_b); 
     }
 
     /* initialize a board back to initial empty state */
@@ -269,7 +270,6 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     
         animationStack.clear();
         swapped = false;
-        unresign = null;
         moveNumber = 1;
 
         // note that firstPlayer is NOT initialized here
@@ -438,7 +438,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     	if(c.onBoard)
     	{
     	if(old!=null) { chips_on_board--;emptyCells.push(c); }
-     	if(ch!=null) { chips_on_board++; emptyCells.remove(c); }
+     	if(ch!=null) { chips_on_board++; emptyCells.remove(c,false); }
     	}
        	c.chip = ch;
     	return(old);
@@ -759,16 +759,16 @@ void doSwap()
             break;
 
        case MOVE_RESIGN:
-    	   	if(board_state==HexState.Resign) { setState(unresign); unresign = null; }
-    	   	else { unresign = board_state; setState(HexState.Resign); }
+    	   	setState(unresign==null?HexState.Resign:unresign);
             break;
        case MOVE_RESET:
+    	    if(unresign!=null) { setState(unresign); }
         	switch(board_state)
         	{
         	case Puzzle: 
         		unPickObject();
         		break;
-        	case Confirm:
+        	case ConfirmSwap:
         		doSwap();
         		// fall through
         	default:
@@ -926,7 +926,6 @@ void doSwap()
         case MOVE_RESIGN:
             break;
         }
-        unresign = null;
         setState(m.state);
         if(whoseTurn!=m.player)
         {	moveNumber--;

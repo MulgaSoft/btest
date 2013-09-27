@@ -17,10 +17,25 @@ K #1 invites #2 to join room #3
 V #1 zaprasza #2 do pokoju #3
 K #1 invites #2 to play #3 in room #4
 V #1 zaprasza #2 Zagraj #3 pokoju #4
+S #1 is cash earned per production action
+S #1 is cash earned per shipping action
+S #1 is cash earned per warehouse action
+S #1 is cash earned selling goods
+S #1 is cash reveived from auctions
+S #1 is cash spent on auctions
+S #1 is cash spent on machines and production
+S #1 is cash spent on shipping
+S #1 is cash spent on warehouses and goods
+S #1 is interest paid
+S #1 is interest payments received
 K #1 is taking over for #2
 V #1 przejmuje za #2
 K #1 is taking over playing #2 for #3
 V #1 przejmuje gr\u0119 jako #2 za #3
+S #1 is the effeciency of island purchases
+S #1 is the value of your goods on the island
+S #1 is your cash on hand
+S #1 is your final score
 K #1 killed due to #2
 V #1 killed #2
 K #1 left
@@ -98,6 +113,7 @@ V standard Army of Frogs
 S Auction
 K Aug #1#2#3
 V #1 Sie, #2:#3 GMT
+S Award the prize
 S Bag
 S Bank
 S Barrel
@@ -214,6 +230,8 @@ S Click on the line to be captured
 K Click on the placed piece to rotate it, or Click Done
 V Kliknij na umieszczonym klocku, aby do obr\u00f3ci\u0107 albo kliknij Zatwierd\u017a
 S Closing...
+S Coin Flip
+S Coin flip from #1 : #2
 S Colorblind
 S Combine two stacks or capture another stack
 S Complete a push or pull, step #1
@@ -262,7 +280,7 @@ K Dec #1#2#3
 V #1 Gru, #2:#3 GMT
 K DeckDescriptionStringKey
 V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
-V with borders 5 brown, 6 pink, 7 blue, 6 green, 6 yellow
+V with borders 5 brown, 7 pink, 7 blue, 6 green, 6 yellow
 S Decline Draw
 S Decline the loan
 S Deploy the stack, or click on Done
@@ -456,6 +474,7 @@ K Gyges_family
 V Gyges
 K Gyges_variation
 V standard Gyges
+S Heads
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -841,6 +860,7 @@ V Zagraj z #1
 S Play Farmer
 S Play a card
 S Played
+S Played on #1
 K Player #1
 V Gracz #1
 S Player Cubes
@@ -1067,6 +1087,7 @@ K Tablut-9_variation
 V Tablut na planszy 9x9 
 K Tablut_family
 V Tablut
+S Tails
 S Tajii
 K Tajii_family
 V Tajii
@@ -1245,6 +1266,7 @@ K Yinsh_variation
 V standard Yinsh
 K You can only resign when it is your move
 V Mo\u017cna podda\u0107 si\u0119 tylko podczas w\u0142asnego ruchu
+S You cannot resign in a multiplayer game
 K You have been disconnected: #1
 V Zosta\u0142e\u015b roz\u0142\u0105czony: #1
 S You have been offered a draw - Accept or Decline
@@ -1319,6 +1341,8 @@ S form the most groups of 3 or more adjacent squares your color
 S fund a loan from a player or the bank
 K game selector
 V Wyb\u00f3r gry
+K gold: escape the flagship  silver: capture gold flagship
+V z\u0142oty: ucieknij okr\u0119tem flagowym, srebrny: zbij z\u0142oty okr\u0119t flagowy
 K guest
 V go\u015b\u0107
 K in #1
@@ -1366,8 +1390,6 @@ K perspective
 V perspektywa
 K play
 V graj za #1
-K played on #1
-V Played on #1
 K player
 V gracz
 S player 
@@ -1414,4 +1436,4 @@ V Witam w Pasa\u017cu BoardSpace, wersja #1
 S you may increase your bid
 K your name
 V twoje imi\u0119
-N 953
+N 975

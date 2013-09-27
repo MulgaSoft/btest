@@ -20,10 +20,25 @@ K #1 invites #2 to join room #3
 V #1\u9080\u8bf7#2\u5230#3\u53f7\u623f\u95f4
 K #1 invites #2 to play #3 in room #4
 V #1\u9080\u8bf7#2\u5230#4\u53f7\u623f\u95f4\u73a9#3
+S #1 is cash earned per production action
+S #1 is cash earned per shipping action
+S #1 is cash earned per warehouse action
+S #1 is cash earned selling goods
+S #1 is cash reveived from auctions
+S #1 is cash spent on auctions
+S #1 is cash spent on machines and production
+S #1 is cash spent on shipping
+S #1 is cash spent on warehouses and goods
+S #1 is interest paid
+S #1 is interest payments received
 K #1 is taking over for #2
 V #1\u63a5\u66ff#2
 K #1 is taking over playing #2 for #3
 V #1\u63a5\u66ff#2\u6e38\u620f#3
+S #1 is the effeciency of island purchases
+S #1 is the value of your goods on the island
+S #1 is your cash on hand
+S #1 is your final score
 K #1 killed due to #2
 V #1\u56e0#2\u727a\u7272
 K #1 left
@@ -118,6 +133,7 @@ K Auction
 V \u62cd\u5356
 K Aug #1#2#3
 V \u516b\u6708#1\u53f7, #2:#3 GMT
+S Award the prize
 S Bag
 K Bank
 V \u94f6\u884c
@@ -260,6 +276,8 @@ K Click on the placed piece to rotate it, or Click Done
 V \u70b9\u51fb\u68cb\u76d8\u4e0a\u7684\u68cb\u5b50\u65cb\u8f6c\uff0c\u6216\u8005\u70b9\u51fb\u5b8c\u6210
 K Closing...
 V \u6b63\u5728\u5173\u95ed...
+S Coin Flip
+S Coin flip from #1 : #2
 K Colorblind
 V \u8272\u76f2
 K Combine two stacks or capture another stack
@@ -321,7 +339,7 @@ K Dec #1#2#3
 V \u5341\u4e8c\u6708#1\u53f7, #2:#3 GMT
 K DeckDescriptionStringKey
 V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
-V with borders 5 brown, 6 pink, 7 blue, 6 green, 6 yellow
+V with borders 5 brown, 7 pink, 7 blue, 6 green, 6 yellow
 K Decline Draw
 V \u62d2\u7edd\u548c\u68cb
 K Decline the loan
@@ -540,6 +558,7 @@ K Gyges_family
 V Gyges
 K Gyges_variation
 V standard Gyges
+S Heads
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -994,6 +1013,8 @@ K Play Farmer
 V \u626e\u6f14\u519c\u6c11
 S Play a card
 S Played
+K Played on #1
+V \u73a9\u8fc7#1
 K Player #1
 V \u73a9\u5bb6#1
 S Player Cubes
@@ -1241,6 +1262,7 @@ K Tablut-9_variation
 V Tablut 9x9 \u68cb\u76d8
 K Tablut_family
 V Tablut
+S Tails
 S Tajii
 K Tajii_family
 V Tajii
@@ -1452,6 +1474,7 @@ K Yinsh_variation
 V \u666e\u901aYinsh
 K You can only resign when it is your move
 V \u8f6e\u5230\u4f60\u65f6\u624d\u53ef\u4ee5\u9000\u51fa
+S You cannot resign in a multiplayer game
 K You have been disconnected: #1
 V #1\uff1a\u8fde\u63a5\u5df2\u88ab\u65ad\u5f00
 K You have been offered a draw - Accept or Decline
@@ -1538,6 +1561,8 @@ K fund a loan from a player or the bank
 V \u5411\u73a9\u5bb6\u8fd8\u662f\u94f6\u884c\u501f\u6b3e
 K game selector
 V \u6e38\u620f\u9009\u62e9\u5668
+K gold: escape the flagship  silver: capture gold flagship
+V \u91d1\u8272: \u65d7\u8230\u8eb2\u907f\u5bf9\u624b\u7684\u6355\u83b7  \u94f6\u8272: \u6355\u83b7\u91d1\u8272\u65d7\u8230
 K guest
 V \u5ba2\u4eba
 K in #1
@@ -1587,8 +1612,6 @@ K perspective
 V \u89c6\u89d2
 K play
 V \u66ff#1\u6e38\u620f
-K played on #1
-V \u73a9\u8fc7#1
 K player
 V \u73a9\u5bb6
 K player 
@@ -1644,4 +1667,4 @@ K you may increase your bid
 V \u4f60\u53ef\u4ee5\u63d0\u9ad8\u51fa\u4ef7
 K your name
 V \u4f60\u7684\u540d\u5b57
-N 953
+N 975

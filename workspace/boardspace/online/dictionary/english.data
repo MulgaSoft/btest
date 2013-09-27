@@ -11,8 +11,23 @@ S #1 has been muted, by a consensus of the players
 S #1 has quit and become a spectator
 S #1 invites #2 to join room #3
 S #1 invites #2 to play #3 in room #4
+S #1 is cash earned per production action
+S #1 is cash earned per shipping action
+S #1 is cash earned per warehouse action
+S #1 is cash earned selling goods
+S #1 is cash reveived from auctions
+S #1 is cash spent on auctions
+S #1 is cash spent on machines and production
+S #1 is cash spent on shipping
+S #1 is cash spent on warehouses and goods
+S #1 is interest paid
+S #1 is interest payments received
 S #1 is taking over for #2
 S #1 is taking over playing #2 for #3
+S #1 is the effeciency of island purchases
+S #1 is the value of your goods on the island
+S #1 is your cash on hand
+S #1 is your final score
 S #1 killed due to #2
 S #1 left
 S #1 prisoners
@@ -78,6 +93,7 @@ V standard Army of Frogs
 S Auction
 K Aug #1#2#3
 V #1 Aug, #2:#3 GMT
+S Award the prize
 S Bag
 S Bank
 S Barrel
@@ -177,6 +193,8 @@ S Click on the end of the line to move
 S Click on the line to be captured
 S Click on the placed piece to rotate it, or Click Done
 S Closing...
+S Coin Flip
+S Coin flip from #1 : #2
 S Colorblind
 S Combine two stacks or capture another stack
 S Complete a push or pull, step #1
@@ -223,7 +241,7 @@ K Dec #1#2#3
 V #1 Dec, #2:#3 GMT
 K DeckDescriptionStringKey
 V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
-V with borders 5 brown, 6 pink, 7 blue, 6 green, 6 yellow
+V with borders 5 brown, 7 pink, 7 blue, 6 green, 6 yellow
 S Decline Draw
 S Decline the loan
 S Deploy the stack, or click on Done
@@ -395,6 +413,7 @@ K Gyges_family
 V Gyges
 K Gyges_variation
 V standard Gyges
+S Heads
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -735,6 +754,7 @@ S Play #1
 S Play Farmer
 S Play a card
 S Played
+S Played on #1
 S Player #1
 S Player Cubes
 S Player is 
@@ -926,6 +946,7 @@ K Tablut-9_variation
 V Tablut on a 9x9 board
 K Tablut_family
 V Tablut
+S Tails
 S Tajii
 K Tajii_family
 V Tajii
@@ -1105,6 +1126,7 @@ V Yinsh
 K Yinsh_variation
 V standard Yinsh
 S You can only resign when it is your move
+S You cannot resign in a multiplayer game
 S You have been disconnected: #1
 S You have been offered a draw - Accept or Decline
 S You have no legal moves.  Click on Done to pass
@@ -1175,6 +1197,7 @@ S form a larger triangle with your color at the tips
 S form the most groups of 3 or more adjacent squares your color
 S fund a loan from a player or the bank
 S game selector
+S gold: escape the flagship  silver: capture gold flagship
 S guest
 S in #1
 K launchChat
@@ -1214,8 +1237,6 @@ S own the most blocks
 S perspective
 K play
 V play for #1
-K played on #1
-V Played on #1
 S player
 S player 
 S private room
@@ -1253,4 +1274,4 @@ K welcome
 V Welcome to the BoardSpace Lobby, version #1
 S you may increase your bid
 S your name
-N 953
+N 975

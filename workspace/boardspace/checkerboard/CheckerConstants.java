@@ -13,8 +13,8 @@ public interface CheckerConstants extends Play2Constants
 	{   {"Checkers_family","Checkers"},
 		{"Checkers_variation","Standard Checkers"},
 	};
-	static final int DEFAULT_COLUMNS = 8;	// 8x6 board
-	static final int DEFAULT_ROWS = 8;
+	static final int DEFAULT_COLUMNS = 10;	// 8x6 board
+	static final int DEFAULT_ROWS = 10;
 	static final String Checker_INIT = "checkers";	//init for standard game
 
     //	these next must be unique integers in the dictionary
@@ -42,6 +42,7 @@ public interface CheckerConstants extends Play2Constants
     	}
     	public String getDescription() { return(description); }
     	public boolean GameOver() { return(this==Gameover); }
+    	public boolean Puzzle() { return(this==Puzzle); }
     }
 
 

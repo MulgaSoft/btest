@@ -18,10 +18,25 @@ K #1 invites #2 to join room #3
 V #1 nodigt #2 uit in ruimte #3
 K #1 invites #2 to play #3 in room #4
 V #1 nodigt #2 uit voor #3 in ruimte #4
+S #1 is cash earned per production action
+S #1 is cash earned per shipping action
+S #1 is cash earned per warehouse action
+S #1 is cash earned selling goods
+S #1 is cash reveived from auctions
+S #1 is cash spent on auctions
+S #1 is cash spent on machines and production
+S #1 is cash spent on shipping
+S #1 is cash spent on warehouses and goods
+S #1 is interest paid
+S #1 is interest payments received
 K #1 is taking over for #2
 V #1 neemt over van #2
 K #1 is taking over playing #2 for #3
 V #1 neemt speler #2 over van #3
+S #1 is the effeciency of island purchases
+S #1 is the value of your goods on the island
+S #1 is your cash on hand
+S #1 is your final score
 K #1 killed due to #2
 V #1 getermineerd door #2
 K #1 left
@@ -117,6 +132,7 @@ K Auction
 V Veiling
 K Aug #1#2#3
 V #1 Aug, #2:#3 GMT
+S Award the prize
 S Bag
 S Bank
 S Barrel
@@ -256,6 +272,8 @@ K Click on the placed piece to rotate it, or Click Done
 V Klik op het geplaatste stuk om te roteren, of klik Klaar
 K Closing...
 V Sluit...
+S Coin Flip
+S Coin flip from #1 : #2
 K Colorblind
 V Kleurenblind
 K Combine two stacks or capture another stack
@@ -316,7 +334,7 @@ K Dec #1#2#3
 V #1 Dec, #2:#3 GMT
 K DeckDescriptionStringKey
 V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
-V with borders 5 brown, 6 pink, 7 blue, 6 green, 6 yellow
+V with borders 5 brown, 7 pink, 7 blue, 6 green, 6 yellow
 K Decline Draw
 V Weiger Remise
 K Decline the loan
@@ -532,6 +550,7 @@ K Gyges_family
 V Gyges
 K Gyges_variation
 V standard Gyges
+S Heads
 S Hex
 S Hex-15
 K Hex-15_variation
@@ -982,6 +1001,8 @@ K Play Farmer
 V Speel Boer
 S Play a card
 S Played
+K Played on #1
+V Gespeeld op #1
 K Player #1
 V Speler #1
 S Player Cubes
@@ -1231,6 +1252,7 @@ K Tablut-9_variation
 V Tablut op een 9x9 bord
 K Tablut_family
 V Tablut
+S Tails
 S Tajii
 K Tajii_family
 V Tajii
@@ -1441,6 +1463,7 @@ K Yinsh_variation
 V standaard Yinsh
 K You can only resign when it is your move
 V Je kunt alleen opgeven op je beurt
+S You cannot resign in a multiplayer game
 K You have been disconnected: #1
 V De verbinding is verbroken: #1
 K You have been offered a draw - Accept or Decline
@@ -1526,6 +1549,8 @@ K fund a loan from a player or the bank
 V garandeer een lening van een speler of de bank
 K game selector
 V spelkeuze
+K gold: escape the flagship  silver: capture gold flagship
+V goud: ontsnap met het Vlaggenschip  zilver: vang het Vlaggenschip
 K guest
 V gast
 S in #1
@@ -1575,8 +1600,6 @@ K perspective
 V perspectief
 K play
 V speel voor #1
-K played on #1
-V Gespeeld op #1
 K player
 V speler
 S player 
@@ -1631,4 +1654,4 @@ K you may increase your bid
 V je mag je bod verhogen
 K your name
 V je naam
-N 953
+N 975
