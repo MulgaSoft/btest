@@ -47,6 +47,8 @@
 
 
 
+
+
                       <a href="/cgi-bin/lost_password.cgi">Lost
                         Password?</a><br>
                     </td>
@@ -67,6 +69,8 @@
 
 
 
+
+
                           you login, bookmark the page you see, and use
                           it to log in to boardspace without entering
                           your name and password again.<br>
@@ -81,6 +85,8 @@
                       take you to the online lobby, which is the central
                       point for starting or observing games.&nbsp;&nbsp;
                       See the <a target="_new" href="lobby-help.html">help
+
+
 
 
 
@@ -109,23 +115,25 @@
                         <center>
                           <h3>Your Java Version</h3>
                           <!--#include virtual="/cgi-bin/applettag.cgi?tagname=version" -->
-                        <p> There should be a java applet above this
-                          line which shows your java version. If there
-                          is none, <a
-                            href="http://www.java.com/en/download/index.jsp">
-                            Get the Java Plug-in here.</a></p>
-                        <p> If a permission menu appears, select the
-                          "activate all" option.&nbsp; <br>
-                        </p>
-                        <p>Some confused browsers display a small red
-                          icon next to the URL line instead of a
-                          pop-up.&nbsp; <br>
-                          <img style=" width: 180px; height: 31px;"
-                            alt="the button"
-                            src="../images/appletbutton.jpg"><br>
-                        </p>
-                        <p>Click on it and select "activate all"<br>
-                        </p>
+                          <p> There should be a java applet above this
+                            line which shows your java version. If there
+                            is none, <a
+                              href="http://www.java.com/en/download/index.jsp">
+                              Get the Java Plug-in here.</a></p>
+                          <p> If a permission menu appears, select the
+                            "activate all" option.&nbsp; <br>
+                            <!--#include virtual="/cgi-bin/applettag.cgi?tagname=jwslink" -->
+                          </p>
+                          <p>Some confused browsers display a small red
+                            icon next to the URL line instead of a
+                            pop-up.&nbsp; <br>
+                            <img style=" width: 180px; height: 31px;"
+                              alt="the button"
+                              src="../images/appletbutton.jpg"><br>
+                          </p>
+                          <p>Click on it and select "activate all"<br>
+                          </p>
+                        </center>
                       </td>
                     </tr>
                     <tr>
@@ -139,11 +147,11 @@
 
 
 
+
+
                         for advice.</td>
                     </tr>
                     <tr>
-                      <td style="vertical-align: top;"><br>
-                      </td>
                     </tr>
                   </tbody>
                 </table>

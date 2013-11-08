@@ -35,11 +35,13 @@
 
 
 
+
           is enabled </b>in your browser preferences.&nbsp; For reasons
         best known to the developers, this seems to be different in
         every version of every browser.&nbsp; Java.com has instructions
         where to find the <a
           href="http://java.com/en/download/help/enable_browser.xml">java
+
 
 
 
@@ -58,6 +60,7 @@
     </ul>
     Two sites that will help you test and diagnose java on your browser
     are <a href="http://java.com/en/download/help/testvm.xml">Java.com</a>&nbsp;
+
 
 
 
@@ -125,7 +128,7 @@
     or just due to random internet glitches.&nbsp; If port 80 is
     permanently blocked, try referring to boardspace.net as <a
       href="http://boardspace.net:4321/"><span style="font-weight:
-        bold;">http://www.boarspace.net:4321/</span></a><br>
+        bold;">http://www.boardspace.net:4321/</span></a><br>
     <br>
     <br>
     <h1>Browsers, Platforms and Java Versions</h1>
@@ -150,6 +153,7 @@
 
 
 
+
         Chrome and Firefox </span>all work<br>
       <span style="font-weight: bold;"></span></div>
     <blockquote><span style="font-weight: bold;"></span><span
@@ -160,14 +164,9 @@
       <br>
       <span style="font-weight: bold;"><font size="+1">Old Java Versions</font></span><br>
     </blockquote>
-    <div style="margin-left: 80px;">Boardspace works with&nbsp;<span
-        style="font-weight: bold;"> Java version 1.4.2 and greater, </span>which
-
-
-
-      is really old.&nbsp; No bleeding edge features are required.&nbsp;
-      However, security patches may require you to load a newer version
-      of java.<br>
+    <div style="margin-left: 80px;">Browsers now block old versions of
+      java because of known security holes.&nbsp; You must run a current
+      version of java.<br>
     </div>
     <blockquote><br>
       <div align="right">Back to the <a

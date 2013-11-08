@@ -31,14 +31,17 @@
               </td>
               <td rowspan="3">
                 <center><b>Your Java Version</b><br>
-                <!--#include virtual="/cgi-bin/applettag.cgi?tagname=version" -->
+                  <!--#include virtual="/cgi-bin/applettag.cgi?tagname=version" -->
                 </center>
                 <p> There should be a java applet above this line which
                   shows your java version. If there is none, <a
                     href="http://www.java.com/en/download/index.jsp">
                     Get the Java Plug-in here.</a><br>
                   If a permission menu appears, select the "always
-                  activate for this site" option. </p>
+                  activate for this site" option.<br>
+                  <!--#include virtual="/cgi-bin/applettag.cgi?tagname=jwslink" -->
+                  <br>
+                </p>
               </td>
             </tr>
             <tr>
@@ -69,6 +72,8 @@
     <center>
       <div style="text-align: left;">Boardspace.net uses Java.&nbsp; If
         the applet doesn't open, see the <a href="needsjava.shtml">NeedsJava
+
+
 
 
         </a>page for advice.<br>

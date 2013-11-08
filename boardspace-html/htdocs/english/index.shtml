@@ -23,13 +23,13 @@
           <td><a href="links-page.shtml">Site News <br>
               and Activity</a></td>
           <td style="vertical-align: top; text-align: center;"><font
-              size="+1">
-              <a href="/cgi-bin/noticeme.cgi?from=homepage">
-              <a href="register.shtml"><span
-                  style="font-weight: bold;">Register</span></a></font><br>
+              size="+1"> <a href="/cgi-bin/noticeme.cgi?from=homepage">
+              </a><a href="register.shtml"><span style="font-weight:
+                  bold;">Register</span></a></font><br>
           </td>
           <td style="vertical-align: top; text-align: center;"><font
               size="+2"><a style="font-weight: bold;" href="login.shtml">Log
+
 
 
 
@@ -61,6 +61,7 @@
 
 
 
+
         Stuff</span><br>
     </div>
     <table style="width: 100%; text-align: left;" border="1"
@@ -78,6 +79,7 @@ Add
 
 
 
+
             your candidates.</td>
         </tr>
         <tr>
@@ -89,14 +91,14 @@ Add
             made games.</td>
         </tr>
         <tr>
-          <td style="vertical-align: top;"> <a
-              href="http://cgos.boardspace.net/">CGOS Go Server</a><br>
+          <td style="vertical-align: top;"> CGOS Go Server<br>
             <br>
           </td>
-          <td style="vertical-align: top;">Exclusively for development
-            of&nbsp; Go programs, we're providing space for an
-            experimental <a href="http://cgos.boardspace.net/">CGOS Go
-              Server</a> which runs continuous practice tournaments.<br>
+          <td style="vertical-align: top;">The CGOS go server is
+            undergoing a change of management and a friendly transition
+            to a new home.<br>
+            The old site was <a href="http://cgos.boardspace.net/">Cgos.boardspace.net</a>&nbsp;&nbsp;
+            The new site is <a href="http://cgos.computergo.org">Cgos.computergo.org</a><br>
           </td>
         </tr>
       </tbody>
