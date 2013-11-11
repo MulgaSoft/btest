@@ -7,6 +7,9 @@ import java.util.*;
 
 import javax.swing.JCheckBoxMenuItem;
 
+import lib.G;
+import lib.InternationalStrings;
+
 import online.game.*;
 /**
  * 
@@ -51,14 +54,14 @@ import static hex.Hexmovespec.*;
  * <p>
  * The main classes are:
  * <br>HexGameViewer - this class, a canvas for display and mouse handling
- * <br>HexGameBoard - board representaion and implementation of the game logic
+ * <br>HexGameBoard - board representation and implementation of the game logic
  * <br>Hexmovespec - representation, parsing and printing of move specifiers
  * <br>HexPlay - a robot to play the game
  * <br>HexConstants - static constants shared by all of the above.  
  *  <p>
  *  The primary purpose of the HexGameViewer class is to do the actual
  *  drawing and to mediate the mouse gestures.  All the actual work is 
- *  done in an event loop, rather than in direct reposonse to mouse or
+ *  done in an event loop, rather than in direct response to mouse or
  *  window events, so there is only one process involved.  With a single 
  *  process, there are no worries about synchronization among processes
  *  of lack of synchronization - both major causes of flakey user interfaces.
@@ -76,18 +79,18 @@ import static hex.Hexmovespec.*;
  *  which contains the coordinates of the mouse.   As objects are drawn, we notice
  *  if the current object contains the mouse point, and if so deposit a code for 
  *  the current object in the HitPoint.  the Graphics object for drawing can be null,
- *  in which case no drawing is actully done, but the mouse sensitivity is checked
+ *  in which case no drawing is actually done, but the mouse sensitivity is checked
  *  anyway.  This method of combining drawing with mouse sensitivity helps keep the
  *  mouse sensitivity accurate, because it is always in agreement with what is being
  *  drawn.
  *  <p>
  *  Steps to clone this hierarchy to start the next game
- *  <li> copy the hierarchy to a brother directory
- *  <li>open eclipse, then select the root and "refresh".  This should result
- * in just a few complaints about package mismatches for the clones.
- *  <li>fix the package names in the clones
- *  <li>rename each of the classes in the clones, using refactor/rename
- *  <li>revert the original "Hex" hierarchy in case eclipse got carried away.
+ *  <li> use eclipse refactor to rename the package for "hex" and for individual files
+ *  <li> duplicate the hex start configuration, making a new one for the new game
+ *  <li> launch the new game and get it to start, still identical to the old hex in all but name.
+ *  	this will probably require a few edits to the init code.
+ *  <li> do a cvs update on the original hex hierarchy to get back the original code.
+ *  
 */
 public class HexGameViewer extends commonCanvas 
 	implements ViewerProtocol, HexConstants, sgf_names
@@ -103,10 +106,10 @@ public class HexGameViewer extends commonCanvas
     private Color boardBackgroundColor = new Color(220,165,155);
     private Color vcrButtonColor = new Color(0.7f, 0.7f, 0.75f);
 
-    // images, shared among all instances of the class so loaded only once
-    private static StockArt[] tileImages = null; // tile images
-    private static StockArt[] borders = null;// border tweaks for the images
-    private static Image[] textures = null;// background textures
+    // images are shared among all instances of the class so loaded only once
+    private static StockArt[] tileImages = null; 	// tile images
+    private static StockArt[] borders = null;		// border tweaks for the tile images
+    private static Image[] textures = null;			// background textures
     
     // private state
     private HexGameBoard bb = null; //the board from which we are displaying
@@ -187,8 +190,8 @@ public class HexGameViewer extends commonCanvas
         if(debug)
         {	// initialize the translations when debugging, so there
         	// will be console chatter about strings not in the list yet.
-        	internationalStrings.put(HexStrings);
-        	internationalStrings.put(HexStringPairs);
+        	InternationalStrings.put(HexStrings);
+        	InternationalStrings.put(HexStringPairs);
         }
          
         rotationOption = myFrame.addOption("rotate board",true,deferredEvents);
@@ -458,8 +461,8 @@ public class HexGameViewer extends commonCanvas
             hexChip chip = gb.getPlayerChip(player);
             int nc = 20;							 // draw 20 chips
             while (nc-- > 0)
-            {	int rx = Math.abs(rand.nextInt()) % spacex;
-                int ry = Math.abs(rand.nextInt()) % spacey;
+            {	int rx = G.nextInt(rand, spacex);
+                int ry = G.nextInt(rand, spacey);
                 chip.drawChip(gc,this,(int)bb.CELLSIZE,r.x+CELLSIZE/2+rx,r.y+CELLSIZE/2+ry,null);
              }
         }
@@ -781,13 +784,15 @@ public class HexGameViewer extends commonCanvas
         if(replay!=replayMode.Replay)
      	{
      		double full = G.distance(0,0,boardRect.width,boardRect.height);
- 
         	while(bb.animationStack.size()>1)
      		{
      		hexCell dest = bb.animationStack.pop();
      		hexCell src = bb.animationStack.pop();
     		double dist = G.distance(src.current_center_x, src.current_center_y, dest.current_center_x,  dest.current_center_y);
     		double endTime = 0.5*Math.sqrt(dist/full);
+    		//
+    		// in cases where multiple chips are flying, topChip() may not be the right thing.
+    		//
      		startAnimation(src,dest,dest.topChip(),(int)bb.CELLSIZE,0,endTime);
      		}
      	}

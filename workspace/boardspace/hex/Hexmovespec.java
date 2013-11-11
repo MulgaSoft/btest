@@ -5,6 +5,8 @@ import online.common.*;
 
 import java.util.*;
 
+import lib.G;
+
 import online.game.*;
 
 public class Hexmovespec extends commonMove implements HexConstants

@@ -1,7 +1,6 @@
 package hex;
 
-import online.common.*;
-
+import lib.*;
 
 /** a service class for the hex board/robot to keep track of blobs of like-colored
  * markers.  The same data structure is used both to describe "simple blobs" of stones

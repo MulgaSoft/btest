@@ -4,6 +4,8 @@ import online.game.*;
 import online.common.*;
 import java.util.*;
 
+import lib.G;
+
 
 public class CheckerMovespec extends commonMove implements CheckerConstants
 {

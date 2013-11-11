@@ -8,6 +8,8 @@ import online.game.sgf.*;
 import java.awt.*;
 import java.util.*;
 import javax.swing.JCheckBoxMenuItem;
+
+import lib.G;
 import static checkerboard.CheckerMovespec.*;
 
 /**
@@ -602,6 +604,9 @@ public class CheckerGameViewer extends commonCanvas
      		{
      		CheckerCell dest = b.animationStack.pop();
      		CheckerCell src = b.animationStack.pop();
+    		//
+    		// in cases where multiple chips are flying, topChip() may not be the right thing.
+    		//
      		startAnimation(src,dest,dest.topChip());
      		}
      	}

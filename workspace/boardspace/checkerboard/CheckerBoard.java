@@ -1,8 +1,9 @@
 package checkerboard;
 
-import online.common.*;
 import online.game.*;
 import java.util.*;
+
+import lib.*;
 
 import static checkerboard.CheckerMovespec.*;
 /**

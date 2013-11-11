@@ -1690,7 +1690,7 @@ V W\u00e4hle die Farbe der Spielsteine
 K set bid amount
 V Lege Gebot fest
 K show grid
-V Raster anzeigen
+V Reihenfolge
 K stack six or capture six
 V staple 6 oder schlage 6
 K stillwaiting

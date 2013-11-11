@@ -1,10 +1,10 @@
 package hex;
 
-import online.common.*;
-
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.*;
+
+import lib.*;
 
 import online.game.*;
 import static hex.Hexmovespec.*;

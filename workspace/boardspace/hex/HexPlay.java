@@ -2,6 +2,8 @@ package hex;
 
 import java.util.Random;
 
+import lib.*;
+
 import online.game.*;
 import online.common.*;
 import online.search.*;
