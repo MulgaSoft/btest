@@ -1,1 +1,11 @@
-lib
+checkerboard
+checkerboard.jdk11
+hive
+hive.jdk11
+online
+online.common
+online.game
+online.game.sgf
+online.jdk11
+online.language
+online.search
