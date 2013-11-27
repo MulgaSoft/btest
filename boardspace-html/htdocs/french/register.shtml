@@ -32,16 +32,8 @@ parties !<BR>
           pour votre explorateur. Voir la page <A 
       href="needsjava.html">NeedsJava </A>pour 
           quelques conseils.</DIV>
-        <!--[if !IE]> Firefox and others will use outer object --> <object
- codebase="/java/" classid="java:online.version.class"
- type="application/x-java-applet" height="50" width="200"><!--<![endif]--><!-- MSIE (Microsoft Internet Explorer) will use inner object -->
-      <OBJECT height=50 width=200 
-      classid=clsid:8AD9C840-044E-11D1-B3E9-00805F499D93><PARAM NAME="code" VALUE="online.version"><PARAM NAME="codebase" VALUE="/java/">
-                <strong> This browser does not have a JavaPlug-in. <br>        
-      <a href="http://java.sun.com/products/plugin/downloads/index.html"> Getthe 
-      latest Java Plug-in here. </a> </strong> </OBJECT><!--[if !IE]> close outer object -->
-        </object>
-<!--<![endif]--></TD></TR>
+          <!--#include virtual="/cgi-bin/applettag.cgi?tagname=version" -->
+ </TD></TR>
   <TR>
       <TD style="VERTICAL-ALIGN: top">Pseudo<BR>
       </TD>
