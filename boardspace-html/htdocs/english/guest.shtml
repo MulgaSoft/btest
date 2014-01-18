@@ -39,7 +39,7 @@
                     Get the Java Plug-in here.</a><br>
                   If a permission menu appears, select the "always
                   activate for this site" option.<br>
-                  <!--#include virtual="/cgi-bin/applettag.cgi?tagname=jwslink" -->
+                  <!--#include virtual="/cgi-bin/applettag.cgi?tagname=jwslink&guest=true" -->
                   <br>
                 </p>
               </td>
