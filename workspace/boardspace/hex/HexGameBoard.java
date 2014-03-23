@@ -691,7 +691,8 @@ void doSwap()
         	{
         	hexCell animsrc = null;
 			switch(board_state)
-			{ case Puzzle: acceptPlacement(); break;
+			{ default: G.Error("Not expecting state "+board_state);
+			  case Puzzle: acceptPlacement(); break;
 			  case Confirm: animsrc = unDropObject(); unPickObject(); break;
 			  case Play:
 			  case PlayOrSwap: acceptPlacement(); break;

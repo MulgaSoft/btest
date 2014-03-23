@@ -200,7 +200,7 @@ public class CheckerGameViewer extends commonCanvas
         stateRect.x = boardRect.x + CELLSIZE;
         stateRect.y = (wideMode ? 0 : chatHeight) +CELLSIZE/3;
         stateRect.width = boardRect.width - CELLSIZE;
-        stateRect.height = CELLSIZE / 2;
+        stateRect.height = CELLSIZE*2;
 
         boardRect.x = 0;
         boardRect.y = (wideMode ? 0 : chatHeight)+SQUARESIZE-CELLSIZE;
@@ -242,9 +242,8 @@ public class CheckerGameViewer extends commonCanvas
         progressRect.height = CELLSIZE/2;
 
         {
-            commonPlayer pl0 = players[0];
-            commonPlayer pl1 = players[1];
-            if((pl0!=null)&&(pl1!=null))
+            commonPlayer pl0 = getPlayerOrTemp(0);
+            commonPlayer pl1 = getPlayerOrTemp(1);
             {
             Rectangle p0time = pl0.timeRect;
             Rectangle p1time = pl1.timeRect;
@@ -360,6 +359,7 @@ public class CheckerGameViewer extends commonCanvas
     	king.drawChip(gc,this,r.width,r.x+r.width/2,r.y+r.width+r.width/2,null);
     	if(G.pointInRect(highlight,r))
     	{	G.frameRect(gc,Color.red,r);
+			highlight.helpText = s.get(ReverseViewExplanation);
     		highlight.hitCode = ReverseViewButton;
     	}
      }  
@@ -375,7 +375,7 @@ public class CheckerGameViewer extends commonCanvas
 		  G.frameRect(gc,hit?HighlightColor:Color.black,liftRect);
 		}
     }
-	// draw a box of spare gobblets. Notice if any are being pointed at.  Highlight those that are.
+	// draw a box of spare chips. Notice if any are being pointed at.  Highlight those that are.
     private void DrawCommonChipPool(Graphics gc, CheckerBoard gb, int forPlayer, Rectangle r, int player, HitPoint highlight)
     {	CheckerCell chips[]= gb.rack;
         boolean canHit = gb.LegalToHitChips(forPlayer);
@@ -427,12 +427,12 @@ public class CheckerGameViewer extends commonCanvas
      * in our cease, we draw the board and the chips on it. 
      * */
     private void drawFixedElements(Graphics gc, CheckerBoard gb,Rectangle brect)
-    {
+    {	boolean reviewBackground = reviewMode()&&!mutable_game_record;
       // erase
-      gc.setColor(reviewMode() ? reviewModeBackground : boardBackgroundColor);
+      gc.setColor(reviewBackground ? reviewModeBackground : boardBackgroundColor);
       //G.fillRect(gc, fullRect);
       G.tileImage(gc,textures[BACKGROUND_TILE_INDEX], fullRect, this);   
-      if(reviewMode())
+      if(reviewBackground)
       {	 
         G.tileImage(gc,textures[BACKGROUND_REVIEW_INDEX],boardRect, this);   
       }
@@ -558,7 +558,7 @@ public class CheckerGameViewer extends commonCanvas
             				vstate!=CheckerState.Puzzle,
             				gb.whoseTurn,
             				stateRect);
-            goalAndProgressMessage(gc,s.get(VictoryCondition),progressRect,goalRect);
+            goalAndProgressMessage(gc,Color.black,s.get(VictoryCondition),progressRect,goalRect);
          }
         DrawRepRect(gc,b.Digest(),repRect);
         drawVcrGroup(ourSelect, gc, HighlightColor, vcrButtonColor);
@@ -614,7 +614,7 @@ public class CheckerGameViewer extends commonCanvas
      } 
      void startAnimation(CheckerCell from,CheckerCell to,CheckerChip top)
      {	if((from!=null) && (to!=null) && (top!=null))
-     	{	double speed = 0.5;
+     	{	double speed = masterAnimationSpeed*0.5;
       		if(debug)
      		{
      			G.Assert(!((from.current_center_x==0) && (from.current_center_y==0)),"From Cell %s center is not set",from);

@@ -347,10 +347,8 @@ public class HexGameViewer extends commonCanvas
 
   
         {
-            commonPlayer pl0 = players[0];
-            commonPlayer pl1 = players[1];
-            if((pl0!=null)&&(pl1!=null))
-            {
+            commonPlayer pl0 = getPlayerOrTemp(0);
+            commonPlayer pl1 = getPlayerOrTemp(1);
             Rectangle p0time = pl0.timeRect;
             Rectangle p1time = pl1.timeRect;
             Rectangle p0anim = pl0.animRect;
@@ -422,7 +420,7 @@ public class HexGameViewer extends commonCanvas
             doneRect.y = editRect.y;
             doneRect.width = editRect.width;
             doneRect.height = editRect.height;
-           }}
+           }
  
 
         theChat.setBounds(chatRect.x+x,chatRect.y+y,chatRect.width,chatRect.height);
@@ -499,10 +497,11 @@ public class HexGameViewer extends commonCanvas
      * */
     private void drawFixedElements(Graphics gc, HexGameBoard gb,Rectangle brect)
     { // erase
-      gc.setColor(reviewMode() ? reviewModeBackground : boardBackgroundColor);
+    	boolean reviewBackground = reviewMode()&&!mutable_game_record;
+      gc.setColor(reviewBackground ? reviewModeBackground : boardBackgroundColor);
       //G.fillRect(gc, fullRect);
       G.tileImage(gc,textures[BACKGROUND_TILE_INDEX], fullRect, this);   
-      if(reviewMode())
+      if(reviewBackground)
       {	 
         G.tileImage(gc,textures[BACKGROUND_REVIEW_INDEX],boardRect, this);   
       }
@@ -789,7 +788,7 @@ public class HexGameViewer extends commonCanvas
      		hexCell dest = bb.animationStack.pop();
      		hexCell src = bb.animationStack.pop();
     		double dist = G.distance(src.current_center_x, src.current_center_y, dest.current_center_x,  dest.current_center_y);
-    		double endTime = 0.5*Math.sqrt(dist/full);
+    		double endTime = masterAnimationSpeed*0.5*Math.sqrt(dist/full);
     		//
     		// in cases where multiple chips are flying, topChip() may not be the right thing.
     		//

@@ -7,9 +7,9 @@ import lib.*;
 
 import static checkerboard.CheckerMovespec.*;
 /**
- * CheckerBoard knows all about the game of Truchet, which is played
- * on a 7x7 board. It gets a lot of logistic support from 
- * common.rectBoard, which knows about the coordinate system.  
+ * CheckerBoard knows all about the game of Checkers.
+ * It gets a lot of logistic support from game.rectBoard, 
+ * which knows about the coordinate system.  
  * 
  * This class doesn't do any graphics or know about anything graphical, 
  * but it does know about states of the game that should be reflected 
@@ -21,7 +21,7 @@ import static checkerboard.CheckerMovespec.*;
  *  In general, the state of the game is represented by the contents of the board,
  *  whose turn it is, and an explicit state variable.  All the transitions specified
  *  by moves are mediated by the state.  In general, my philosophy is to be extremely
- *  restrictive about what to allow in each state, and have a lot of tripwires to
+ *  restrictive about what to allow in each state, and have a lot of trip wires to
  *  catch unexpected transitions.   We expect to be fed only legal moves, but mistakes
  *  will be made and it's good to have the maximum opportunity to catch the unexpected.
  *  
@@ -79,7 +79,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     /**
      * Robots use this to verify a copy of a board.  If the copy method is
      * implemented correctly, there should never be a problem.  This is mainly
-     * a bug trap to see if BOTH the copy and sameboard methods agree.
+     * a bug trap to see if clone,digest and sameboard methods agree.
      * @param from_b
      */
     public void sameboard(CheckerBoard from_b)
@@ -279,9 +279,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 
 
     //
-    // return true if balls[rack][ball] should be selectable, meaning
-    // we can pick up a ball or drop a ball there.  movingBallColor is 
-    // the ball we would drop, or -1 if we want to pick up
+    // finalize all the state changes for this move.
     //
     public void acceptPlacement()
     {	
@@ -570,14 +568,10 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         		}
         	else 
         		{ pickObject(getCell(BoardLocation, m.from_col, m.from_row));
-        			// if you pick up a gobblet and expose a row of 4, you lose immediately
         		  switch(board_state)
         		  {	default: G.Error("Not expecting pickb in state "+board_state);
         		  	case Play:
-        		  		// if we pick a piece off the board, we might expose a win for the other player
-        		  		// and otherwise, we are comitted to moving the piece
-         		  		break;
-        		  	case Puzzle:
+         		  	case Puzzle:
         		  		break;
         		  }
          		}
@@ -673,8 +667,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         }
     }
   
-    // true if it's legal to drop gobblet  originating from fromCell on toCell
-    public boolean LegalToDropOnBoard(CheckerCell fromCell,CheckerChip gobblet,CheckerCell toCell)
+    // true if it's legal to drop something  originating from fromCell on toCell
+    public boolean LegalToDropOnBoard(CheckerCell fromCell,CheckerChip chip,CheckerCell toCell)
     {	
 		return(false);
 

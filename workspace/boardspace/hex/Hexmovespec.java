@@ -77,13 +77,16 @@ public class Hexmovespec extends commonMove implements HexConstants
         parse(ss, p);
     }
 
+    /**
+     * This is used to check for equivalent moves "as specified" not "as executed", so
+     * it should only compare those elements that are specified when the move is created. 
+     */
     public boolean Same_Move_P(commonMove oth)
     {
         Hexmovespec other = (Hexmovespec) oth;
 
         return ((op == other.op) 
 				&& (source == other.source)
-				&& (state == other.state)
 				&& (to_row == other.to_row) 
 				&& (to_col == other.to_col)
 				&& (player == other.player));

@@ -59,6 +59,11 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
     {
         parse(ss, p);
     }
+    
+    /**
+     * This is used to check for equivalent moves "as specified" not "as executed", so
+     * it should only compare those elements that are specified when the move is created. 
+     */
     public boolean Same_Move_P(commonMove oth)
     {
     	CheckerMovespec other = (CheckerMovespec) oth;
@@ -66,7 +71,6 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
         return ((op == other.op) 
 				&& (source == other.source)
 				&& (object == other.object)
-				&& (state == other.state)
 				&& (to_row == other.to_row) 
 				&& (to_col == other.to_col)
 				&& (from_row == other.from_row)
