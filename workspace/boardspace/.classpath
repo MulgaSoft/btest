@@ -12,6 +12,9 @@
 			<attribute name="javadoc_location" value="file:/G:/share/projects/workspace-master/doc/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="pf-joi.jar"/>
+	<classpathentry kind="lib" path="pf.jar"/>
 	<classpathentry kind="lib" path="Sounds.jar"/>
+	<classpathentry kind="lib" path="bsh-2.0b4.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
