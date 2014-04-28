@@ -65,6 +65,12 @@
                 around in the lobby.<br>
               </td>
             </tr>
+            <tr>
+              <td colspan="3" valign="top"><a href="help-video.html"><img
+                    alt="help video" src="../images/video_icon.png"
+                    border="0" height="49" width="50"></a>View a short
+                video to help get you started. </td>
+            </tr>
           </tbody>
         </table>
       </form>
@@ -72,6 +78,7 @@
     <center>
       <div style="text-align: left;">Boardspace.net uses Java.&nbsp; If
         the applet doesn't open, see the <a href="needsjava.shtml">NeedsJava
+
 
 
 
