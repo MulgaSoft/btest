@@ -69,6 +69,7 @@ jar -cmf generic-manifest.txt Rithmomachy.jar rithmomachy/*.class rithmomachy/im
 jar -cmf generic-manifest.txt Shogi.jar shogi/*.class shogi/images/*.jpg
 jar -cmf generic-manifest.txt OnedayInLondon.jar oneday/*.class oneday/images/*.jpg
 jar -cmf generic-manifest.txt Morelli.jar morelli/*.class morelli/images/*.jpg
+jar -cmf generic-manifest.txt Colorito.jar colorito/*.class colorito/images/*.jpg
 jar -i OnlineLobby.jar
 jar -i Launcher.jar
 rm ../v102/*.jar
