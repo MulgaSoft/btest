@@ -41,12 +41,12 @@ Signup</a> </td>
     </tr>
     <tr>
       <td><a target="moreboardspace"
- href="/cgi-bin/boardspace_rankings.cgi?game=z">Z&egrave;rtz Rankings</a></td>
+ href="/cgi-bin/boardspace_rankings.cgi?game=z&language=russian">Z&egrave;rtz Rankings</a></td>
       <td><a target="moreboardspace"
- href="/cgi-bin/boardspace_rankings.cgi?game=z11">Z&egrave;rtz+11
+ href="/cgi-bin/boardspace_rankings.cgi?game=z11&language=russian">Z&egrave;rtz+11
 Rankings</a> </td>
       <td style="vertical-align: top;"><a target="moreboardspace"
- href="/cgi-bin/boardspace_rankings.cgi?game=z24">Z&egrave;rtz+24
+ href="/cgi-bin/boardspace_rankings.cgi?game=z24&language=russian">Z&egrave;rtz+24
 Rankings</a></td>
       <td><a target="moreboardspace"
  href="http://www.assimilate.de/Default.aspx?tabid=39">Zertz
@@ -55,7 +55,7 @@ Status</a> </td>
     </tr>
     <tr>
       <td style="vertical-align: top;"><a target="moreboardspace"
- href="/cgi-bin/boardspace_rankings.cgi?game=l">Lines of Action
+ href="/cgi-bin/boardspace_rankings.cgi?game=l&language=russian">Lines of Action
 Rankings</a></td>
       <td style="vertical-align: top;"><a target="moreboardspace"
  href="/loa/">Loa Rules<br>
@@ -68,7 +68,7 @@ Status</a></td>
     </tr>
     <tr>
       <td style="vertical-align: top;"><a target="moreboardspace"
- href="/cgi-bin/boardspace_rankings.cgi?game=p">Plateau Rankings</a></td>
+ href="/cgi-bin/boardspace_rankings.cgi?game=p&language=russian">Plateau Rankings</a></td>
       <td style="vertical-align: top;"><a target="moreboardspace"
  href="/plateau/english/rules.html">Plateau Rules</a><br>
       </td>
