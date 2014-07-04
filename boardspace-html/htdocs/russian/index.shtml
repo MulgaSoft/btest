@@ -49,8 +49,7 @@
     <br>
     <!--#include virtual="/cgi-bin/top_games.cgi?embed=1" --><br>
     <br>
-    <div style="text-align: center;"><span style="font-weight: bold;">Other
-        Stuff</span><br>
+    <div style="text-align: center;"><span style="font-weight: bold;">Прочее</span><br>
     </div>
     <table style="width: 100%; text-align: left;" border="1"
       cellpadding="2" cellspacing="2">
@@ -97,7 +96,7 @@
       </tbody>
     </table>
     <br>
-    Попробуйте перевод программы Babyl Fish (далек от совершенства, но
+    Попробуйте перевод программы BabelFish (далек от совершенства, но
     лучше чем ничего!)
     <a
 href="http://babelfish.altavista.com/babelfish/tr?doit=done&amp;url=http://www.boardspace.net/english/index.html&amp;lp=en_es"><img
@@ -150,7 +149,7 @@ curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
               <form action="http://www.google.com/search" method="get"
                 onsubmit="Gsitesearch(this)"><input name="q"
                   type="hidden"> <input name="qfront" style="width:
-                  120px;" type="text"> <input value="Search this site"
+                  120px;" type="text"> <input value="Поиск по сайту"
                   type="submit"> </form>
             </td>
             <td align="right"><a href="/">На главную</a> </td>
