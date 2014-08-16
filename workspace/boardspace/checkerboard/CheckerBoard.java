@@ -1,6 +1,7 @@
 package checkerboard;
 
 import online.game.*;
+
 import java.util.*;
 
 import lib.*;
@@ -35,8 +36,8 @@ import static checkerboard.CheckerMovespec.*;
 class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,CheckerConstants
 {	private int players_in_game = 2;
 	public int nPlayers() { return(players_in_game); }
-    public int boardColumns = DEFAULT_COLUMNS;	// size of the board
-    public int boardRows = DEFAULT_ROWS;
+    public int boardColumns;	// size of the board
+    public int boardRows;
     public void SetDrawState() { setState(CheckerState.Draw); }
     public CheckerCell rack[] = null;
     public OStack<CheckerCell> animationStack = new OStack<CheckerCell>(CheckerCell.class);
@@ -45,6 +46,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     //
     private CheckerState board_state = CheckerState.Play;	// the current board state
     private CheckerState unresign = null;					// remembers the previous state when "resign"
+    Variation variation = Variation.Checkers_10;
     public CheckerState getState() { return(board_state); } 
 	public void setState(CheckerState st) 
 	{ 	unresign = (st==CheckerState.Resign)?board_state:null;
@@ -53,8 +55,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 			{ G.setValue(win,false); 	// make sure "win" is cleared
 			}
 	}
-    private int playerColor[]={White_Chip_Pool,Black_Chip_Pool};
- 	public int getPlayerColor(int p) { return(playerColor[p]); }
+    private CheckerId playerColor[]={CheckerId.White_Chip_Pool,CheckerId.Black_Chip_Pool};
+ 	public CheckerId getPlayerColor(int p) { return(playerColor[p]); }
 	
    public int chips_on_board[] = new int[2];			// number of chips currently on the board
     
@@ -146,6 +148,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 	  copy.clone(this); 
 	  return(copy);
 	}
+   public void copyFrom(BoardProtocol b) { clone((CheckerBoard)b); }
 
 
     /* make a copy of a board.  This is used by the robot to get a copy
@@ -184,17 +187,21 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
        	cell.addChip(CheckerChip.getChip(i));
     	rack[i]=cell;
      	}    
+     	
+     	variation = Variation.findVariation(gtype);
+     	switch(variation)
      	{
-     	String game = gtype.toLowerCase();
-     	if(Checker_INIT.equals(game)) 
-     		{ 
-     		boardColumns=DEFAULT_COLUMNS; 
-     		boardRows = DEFAULT_ROWS;
-     		initBoard(boardColumns,boardRows); //this sets up the board and cross links
-     		}
-     	else { G.Error("No init named "+game); }
-     	gametype = game;
+     	default:  G.Error("No init named "+gtype);
+     	case Checkers_10:
+     	case Checkers_8:
+     	case Checkers_6:
+     		boardColumns = variation.size;
+     		boardRows = variation.size;
+     		initBoard(boardColumns,boardRows);
+     		gametype = gtype;
+     		break;
      	}
+
         allCells.setDigestChain(r);
 	    setState(CheckerState.Puzzle);
 	    
@@ -205,8 +212,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 	    }
 	    
 	    whoseTurn = FIRST_PLAYER_INDEX;
-		playerColor[FIRST_PLAYER_INDEX]=White_Chip_Pool;
-		playerColor[SECOND_PLAYER_INDEX]=Black_Chip_Pool;
+		playerColor[FIRST_PLAYER_INDEX]=CheckerId.White_Chip_Pool;
+		playerColor[SECOND_PLAYER_INDEX]=CheckerId.Black_Chip_Pool;
 		pickedSourceStack.clear();
 		droppedDestStack.clear();
 		pickedObject = null;
@@ -296,7 +303,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     if(droppedDestStack.size()>0)
     	{
     	CheckerCell dr = droppedDestStack.pop();
-    	switch(dr.rackLocation)
+    	switch(dr.rackLocation())
 	    	{
 	   		default: G.Error("Not expecting rackLocation %s",dr.rackLocation);
 			case BoardLocation: 
@@ -318,7 +325,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     	if(po!=null)
     	{
     		CheckerCell ps = pickedSourceStack.pop();
-    		switch(ps.rackLocation)
+    		switch(ps.rackLocation())
     		{
     		default: G.Error("Not expecting rackLocation %s",ps.rackLocation);
     		case BoardLocation: ps.addChip(po); break;
@@ -334,7 +341,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     //
     private void dropObject(CheckerCell c)
     {   G.Assert(pickedObject!=null,"pickedObject should not be null"); 	    		
-    	switch(c.rackLocation)
+    	switch(c.rackLocation())
 		{
 		default: G.Error("Not expecting rackLocation %s",c.rackLocation);
 		case BoardLocation: c.addChip(pickedObject); break;
@@ -360,10 +367,10 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     	if(ch!=null)
     		{ return(ch.chipNumber());
     		}
-        return (HitNoWhere);
+        return (NothingMoving);
     }
     
-    public CheckerCell getCell(int source,char col,int row)
+    public CheckerCell getCell(CheckerId source,char col,int row)
     {
         switch (source)
         {
@@ -379,14 +386,14 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     }
     public CheckerCell getCell(CheckerCell c)
     {
-    	return((c==null)?null:getCell(c.rackLocation,c.col,c.row));
+    	return((c==null)?null:getCell(c.rackLocation(),c.col,c.row));
     }
 	// pick something up.  Note that when the something is the board,
     // the board location really becomes empty, and we depend on unPickObject
     // to replace the original contents if the pick is cancelled.
     private void pickObject(CheckerCell c)
     {	G.Assert(pickedObject==null,"pickedObject should be null");
-    	switch(c.rackLocation)
+    	switch(c.rackLocation())
     	{
 		default: G.Error("Not expecting rackLocation %s",c.rackLocation);
 		case BoardLocation: 
@@ -518,7 +525,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         		case Play:
         			G.Assert(pickedObject==null,"something is moving");
                     pickObject(getCell(m.source, m.from_col, m.from_row));
-                    dropObject(getCell(BoardLocation,m.to_col,m.to_row)); 
+                    dropObject(getCell(CheckerId.BoardLocation,m.to_col,m.to_row)); 
                     setNextStateAfterDrop();
                     break;
         	}
@@ -528,8 +535,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         	{	default: G.Error("Not expecting robot in state "+board_state);
         		case Play:
         			G.Assert(pickedObject==null,"something is moving");
-        			CheckerCell src = getCell(BoardLocation, m.from_col, m.from_row);
-        			CheckerCell dest = getCell(BoardLocation,m.to_col,m.to_row);
+        			CheckerCell src = getCell(CheckerId.BoardLocation, m.from_col, m.from_row);
+        			CheckerCell dest = getCell(CheckerId.BoardLocation,m.to_col,m.to_row);
         			pickObject(src);
         			dropObject(dest); 
         			if(replay!=replayMode.Replay)
@@ -543,7 +550,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         	break;
         case MOVE_DROPB:
 			{
-			CheckerCell c = getCell(BoardLocation, m.to_col, m.to_row);
+			CheckerCell c = getCell(CheckerId.BoardLocation, m.to_col, m.to_row);
         	G.Assert(pickedObject!=null,"something is moving");
 			
             if(isSource(c)) 
@@ -567,7 +574,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         		  setState(CheckerState.Play);
         		}
         	else 
-        		{ pickObject(getCell(BoardLocation, m.from_col, m.from_row));
+        		{ pickObject(getCell(CheckerId.BoardLocation, m.from_col, m.from_row));
         		  switch(board_state)
         		  {	default: G.Error("Not expecting pickb in state "+board_state);
         		  	case Play:
@@ -758,7 +765,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         		case Gameover:
         		case Play:
         			G.Assert(pickedObject==null,"something is moving");
-        			pickObject(getCell(BoardLocation,m.to_col,m.to_row));
+        			pickObject(getCell(CheckerId.BoardLocation,m.to_col,m.to_row));
         			dropObject(getCell(m.source,m.from_col, m.from_row));
        			    acceptPlacement();
                     break;
@@ -771,8 +778,8 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
         		case Gameover:
         		case Play:
         			G.Assert(pickedObject==null,"something is moving");
-        			pickObject(getCell(BoardLocation, m.to_col, m.to_row));
-       			    dropObject(getCell(BoardLocation, m.from_col,m.from_row)); 
+        			pickObject(getCell(CheckerId.BoardLocation, m.to_col, m.to_row));
+       			    dropObject(getCell(CheckerId.BoardLocation, m.from_col,m.from_row)); 
        			    acceptPlacement();
         			break;
         	}

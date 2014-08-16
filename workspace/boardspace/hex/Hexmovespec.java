@@ -16,8 +16,7 @@ public class Hexmovespec extends commonMove implements HexConstants
     static final int MOVE_DROP = 205; // drop a chip
     static final int MOVE_PICKB = 206; // pick from the board
     static final int MOVE_DROPB = 207; // drop on the board
- 	static final int MOVE_SWAP = HitSwapButton;	// swap colors (as a move) share the code for the parser's concenience
-
+ 
     static
     {	// load the dictionary
         // these int values must be unique in the dictionary
@@ -26,9 +25,6 @@ public class Hexmovespec extends commonMove implements HexConstants
         D.putInt("Pickb", MOVE_PICKB);
         D.putInt("Drop", MOVE_DROP);
         D.putInt("Dropb", MOVE_DROPB);
-        D.putInt("W", White_Chip_Pool);
-        D.putInt("B", Black_Chip_Pool);
-		D.putInt("Swap",MOVE_SWAP);
   }
     //
     // adding these makes the move specs use Same_Move_P instead of == in hash tables
@@ -44,7 +40,7 @@ public class Hexmovespec extends commonMove implements HexConstants
     //}
     //
     // variables to identify the move
-    int source; // where from/to
+    HexId source; // where from/to
     char to_col; // for from-to moves, the destination column
     int to_row; // for from-to moves, the destination row
     //
@@ -63,7 +59,7 @@ public class Hexmovespec extends commonMove implements HexConstants
     /** constructor for robot moves.  Having this "binary" constor is dramatically faster
      * than the standard constructor which parses strings
      */
-    public Hexmovespec(int opc,char col,int row,int what,int who)
+    public Hexmovespec(int opc,char col,int row,HexId what,int who)
     {
     	op = opc;
     	source = what;
@@ -137,14 +133,14 @@ public class Hexmovespec extends commonMove implements HexConstants
             G.Error("Cant parse " + cmd);
             break;
         case MOVE_DROPB:
-				source = D.getInt(msg.nextToken());	// B or W
+				source = HexId.get(msg.nextToken());	// B or W
 	            to_col = G.CharToken(msg);
 	            to_row = G.IntToken(msg);
 
 	            break;
 
 		case MOVE_PICKB:
-            source = BoardLocation;
+            source = HexId.BoardLocation;
             to_col = G.CharToken(msg);
             to_row = G.IntToken(msg);
 
@@ -152,7 +148,7 @@ public class Hexmovespec extends commonMove implements HexConstants
 
         case MOVE_DROP:
         case MOVE_PICK:
-            source = D.getInt(msg.nextToken());
+            source = HexId.get(msg.nextToken());
 
             break;
 
@@ -187,7 +183,7 @@ public class Hexmovespec extends commonMove implements HexConstants
 
         case MOVE_DROP:
         case MOVE_PICK:
-            return (D.findUnique(op) + " "+D.findUnique(source));
+            return (D.findUnique(op) + " "+source.shortName);
 
         case MOVE_DONE:
         case MOVE_RESET:
@@ -228,11 +224,11 @@ public class Hexmovespec extends commonMove implements HexConstants
 	        return (ind+D.findUnique(op) +" " + to_col + " " + to_row);
 
 		case MOVE_DROPB:
-	        return (ind+D.findUnique(op) + " "+D.findUnique(source)+" " + to_col + " " + to_row);
+	        return (ind+D.findUnique(op) + " "+source.shortName+" " + to_col + " " + to_row);
 
         case MOVE_DROP:
         case MOVE_PICK:
-            return (ind+D.findUnique(op) + " "+D.findUnique(source));
+            return (ind+D.findUnique(op) + " "+source.shortName);
 
         case MOVE_START:
             return (ind+"Start P" + player);

@@ -1,6 +1,7 @@
 S 
 S #1 #2 Containers
 S #1 Camels
+S #1 Captured, #2%
 S #1 Cards
 S #1 Gold
 S #1 Machine
@@ -56,22 +57,204 @@ V #1: Blir med p\u00e5 felles gjennomgang
 S #1{ Choices, Choice}
 S #1{ Points, Point, Points}
 S #1{##No Discards, Discard, Discards}
+S #1{##a possible recruit choice
 S #1{##bank is empty,bank has # chip,bank has # chips}
 S #1{##no Camels, Camel, Camels}
 S #1{##no Gold, Gold, Gold}
 S #1{##no Victory points, Victory Point, Victory Points}
+S #1{##no active recruit cards,# active recruit card,# active recruit cards}
+S #1{##no artifact cards,# artifact card,# artifact cards}
+S #1{##no authority tokens,# authority token,# authority tokens}
+S #1{##no bliss,# bliss,# bliss}
 S #1{##no cards, card, cards}
 S #1{##no chips, chip, chips}
+S #1{##no clay,# clay,# clay}
+S #1{##no discarded artifact cards,# discarded artifact card,# discarded artifact cards}
+S #1{##no energy,# energy,# energy}
+S #1{##no food,# food,# food}
+S #1{##no gold,# gold,# gold}
+S #1{##no hidden recruit cards,# hidden recruit card,# hidden recruit cards}
+S #1{##no new workers,# new worker,# new workers}
 S #1{##no prizes, prize, prizes}, total value #2
+S #1{##no recruit authority tokens,# recruit authority token,# recruit authority tokens}
+S #1{##no stones,# stone,# stones}
+S #1{##no unused dilemma cards,# unused dilemma cards,# unused dilemma cards}
+S #1{##no unused markets,# unused market,# unused markets}
+S #1{##no unused recruit cards,# unused recruit cards,# unused recruit cards}
+S #1{##no used recruit cards,# used recruit cards,# used recruit cards}
+S #1{##no water,# water,# water}
+S #1{##no workers,# worker,# workers}
 K (unknown)
 V (ukjent)
 S (unoccupied)
 K (vacancy)
 V (ledig)
 S + #1 turns
+S +1 Artifact card (from Kyle the Scavenger)
+S +1 Artifact card and +1 Resource (from Steven the Scholar)
+S +1 Bliss (from Sarinee the Cloud Miner)
+S +1 Energy (from Faith the Hydroelectrician)
+S +1 Energy (from Zong the Astronomer)
+S +1 Food (from Katy the Dietician)
+S +1 Food (from Scarby the Harvester)
+S +1 Knowledge and +1 Morale (from Michael the Engineer)
+S +1 Knowledge for #1 (from Lee the Gossip)
+S +1 Knowledge for #1 (from Maxime the Ambassador)
+S +1 Knowledge for #1 (from Rebecca the Peddler)
+S +1 Knowledge, +1 #1 (from Xander the Excavator)
+S +1 Morale (from Gary the Electrician)
+S +1 Morale (from Nick the Understudy)
+S +1 Morale (from Soulless the Plumbler)
+S +1 Stone (from Maggie the Outlaw)
+S +1 Water (from Ian the Horticulturist)
+S +1 Water (from Maggie the Outlaw)
+S +1 Water (from Soulless the Plumber)
+S +1 Water (from Zong the Astronomer)
+S +2 Knowledge +1 Artifact card, +1 Tunnel (from Reitz the Archeologist)
+S +2 Knowledge for +1 Artifact (from Pete the Cannibal)
+S +2 Knowledge for +1 Artifact (from Phil the Spy)
+S +2 Knowledge for +2 Artifact cards keep 1 (from Bradley the Futurist)
+S +2 Knowledge to use this tunnel (from Kadan the Infiltrator)
+S +2 Knowledge, +1 Artifact card (from Jonathan the Artist)
+S +2 Knowledge, +1 Resource (from Brett the Lock Picker)
+S +2 Morale (from Ray the Foreman)
+S -1 Artifact, +1 Energy +1 Morale (from Esme the Fireman)
+S -1 Artifact, +1 Energy -1 Knowledge (from Esme the Fireman)
+S -1 Gold to #1, +2 Cards (from Laura The Philanthropist)
+S -1 Knowledge (from Curtis the Propagandist)
+S -1 Knowledge (from Sarinee the Cloud Miner)
+S -1 Knowledge (from Scarby the Harvester)
+S -1 Morale, +1 Commodity (from Lee the Gossip)
+S -2 Knowledge (from Ray the Foreman)
+S -2 Knowledge instead of +2 Morale (from Gidget the Hypnotist)
+S -2 Morale +1 Artifact card (from Maxime the Ambassador)
+S -2 Morale and +1 Artifact card for #1 (from Ben the Lodologist)
+S -2 Morale and +1 Resource (from Rebecca the Peddler)
+S -2 Morale for +1 Artifact card (from Sheppard the Lobotomist)
+S -2 Morale for +1 Resource (from Julia the Thought Inspector)
+S -2 Morale, +1 Artifact card (from Flavio the Merchant)
 S ...plus #1 more
+S 1 Artifact Card and 1 Bliss or 1 Food
+S 1 Artifact Card and 4 Food or Bliss
+S 1 Artifact card
+S 1 Artifact card and 1 Resource
+S 1 Artifact card and 1 Resource or 1 Bliss
+S 1 Artifact card or 1 Clay
+S 1 Artifact card or 1 Gold
+S 1 Artifact card or 1 Stone
+S 1 Balloon or 2 other Artifact cards
+S 1 Balloons Artifact card
+S 1 Bat Artifact card
+S 1 Bat or 2 other Artifact cards
+S 1 Bear Artifact card
+S 1 Bear or 2 other Artifact cards
+S 1 Bifocals Artifact card
+S 1 Bifocals or 2 other Artifact cards
+S 1 Bliss
+S 1 Bliss and 1 non-bliss Commodity
+S 1 Bliss or 1 Food
+S 1 Bliss or 1 Food or 1 Energy
+S 1 Bliss or 1 Food, plus 1 not Bliss
+S 1 Bliss,  or click on DONE for +1 Knowledge (from Matthew the Thief)
+S 1 Book Artifact card
+S 1 Book or 2 other Artifact cards
+S 1 Box Artifact card
+S 1 Box or 2 other Artifact cards
+S 1 Card (after preview by  Geek the Oracle)
+S 1 Card (hand limit: low Morale)
+S 1 Clay
+S 1 Clay or 1 Artifact card
+S 1 Clay or 1 Bliss
+S 1 Clay or 1 Food or 1 Bliss
+S 1 Commodity
+S 1 Commodity and 1 Balloons Artifact card
+S 1 Commodity and 1 Bat Artifact card
+S 1 Commodity and 1 Bear Artifact card
+S 1 Commodity and 1 Bifocals Artifact card
+S 1 Commodity and 1 Book Artifact card
+S 1 Commodity and 1 Box Artifact card
+S 1 Commodity or 1 Resource
+K 1 Food
+V 1 food
+S 1 Food,  or click on DONE for +1 Knowledge (from Matthew the Thief)
+S 1 Gold
+S 1 Gold or 1 Artifact card
+S 1 Gold or 1 Bliss
+S 1 Gold or 1 Food or 1 Bliss
+S 1 Knowledge
+S 1 Morale
+S 1 Morale or -1 Knowledge
+S 1 Resource
+S 1 Resource and 4 Food or Bliss
+S 1 Resource or 1 Bliss
+S 1 Resource or 1 Food or 1 Bliss
+S 1 Stone
+S 1 Stone or 1 Artifact card
+S 1 Stone or 1 Bliss
+S 1 Stone or 1 Food or 1 Bliss
+S 1 Water
+S 1 Water (from IanTheHorticulturist)
+S 1 Water or 1 Energy (from Zong the Astronomer)
+S 1 Water or 1 Stone (from Maggie the Outlaw)
+S 1 Water, or click on DONE for +1 Knowledge (from Matthew the Thief)
+S 1 commodity (not Bliss)
+K 1 energy
+V 1 Energy
+S 1 resource, with +1 knowledge, +1 morale if you use Gold
+S 2 Artifact cards
+S 2 Artifact cards, keep 1 of them
+S 2 Cards (hand limit: low Morale)
+S 2 Clay
+S 2 Commodities or Resources
+S 2 Gold
+S 2 Knowledge
+S 2 Morale
+S 2 Stone
+S 2 resources
+S 3 Artifact cards
+S 3 Artifact cards, or a Pair of Artifact Cards
+S 3 Bliss
+S 3 Cards (hand limit: low Morale)
+S 3 Commodities or Resources
+S 3 Food
+S 3 Resources
+K 3 energy
+V 3 Energy
+K 3 water
+V 3 Water
+S 4 Bliss and 1 Resource
+S 4 Bliss and 1 Resource, or 5 Bliss
+S 4 Cards (hand limit: low Morale)
+S 4 Commodities or Resources
+S 4 Energy and 1 Artifact Card
+S 4 Energy and 1 Clay
+S 4 Energy and 1 Clay or 1 Bliss
+S 4 Energy and 1 Clay, Bliss or Food
+S 4 Energy and 1 Stone
+S 4 Energy and 1 Stone or 1 Bliss
+S 4 Energy and 1 Stone, Bliss, or Food
+K 4 Food
+V 4 food
+S 4 Food and 1 Artifact card
+S 4 Food and 1 Gold
+S 4 Food and 1 Gold or 1 Bliss
+S 4 Food and 1 Stone or 1 Bliss
+S 4 Food and 1 Stone or Bliss, or 5 Food
+S 4 Powwer
+S 4 Water
+S 4 Water and 1 Artifact Card
+S 4 Water and 1 Clay
+S 4 Water and 1 Clay or 1 Bliss
+S 4 Water and 1 Clay, Bliss or Food
+S 4 Water and 1 Gold
+S 4 Water and 1 Gold or 1 Bliss
+S 4 Water and 1 Gold, Bliss or Food
+K 4 bliss
+V 4 Bliss
 K 4w 5g 6b or 3 of each wins
 V 4hv 5g 6s eller 3 av hver for \u00e5 vinne.
+S 5 Cards (hand limit: low Morale)
+S 6 Cards (hand limit: low Morale)
 S Accept $#1 from #2
 S Accept Draw
 K Accept chat from #1
@@ -80,6 +263,7 @@ S Accept the loan from the bank
 S Accept this loan financing or not
 K Actions
 V Handlinger
+S Active Recruit
 S Active in
 S Add Extra Dice, or click Done to Roll
 K Add a ball
@@ -87,37 +271,53 @@ V Legg til en ball.
 K Add a ball, remove a Ring
 V Legg til en ball og fjern en ring.
 S Add die
+S Add or remove pieces, and set up starting board position
 S Adjust
 S Adjust the chip spacing in stacks
 S Adjust your starting movements
 S All Games
 K Allow challenges from #1
 V Tillat invitasjoner fra #1
+S Ambush
+S Ancient Games
 S Animate
 S Animation Speed
+S Any Commodity
+S Any Resource
 K Anyone can play in this room
 V Alle kan spille i dette rommet.
 K Apr #1#2#3
 V #1. apr, #2.#3 GMT
 S Aqua
+S Aquifer
 S Arimaa
 K Arimaa_family
 V Arimaa
 K Arimaa_variation
 V Standard Arimaa
+S Arithmetic series
 K ArmyOfFrogs
 V Army of Frogs
 K ArmyOfFrogs_family
 V Army Of Frogs
 K ArmyOfFrogs_variation
 V standard Army of Frogs
+S Arrange a 10 stop trip through the London tube
+K Artifact Card
+V Artifact card
+S Artifact Deck
+S Artifact Discards
 S Auction
 K Aug #1#2#3
 V #1. aug, #2.#3 GMT
+S Authority
+K Authority Token
+V authority token
 S Award the prize
 S Bag
 S Bank
 S Barrel
+S Basket
 K Become a Spectator
 V Bli tilskuer
 S Bid $ #1
@@ -129,13 +329,23 @@ S Blue
 S Blue Dome
 K BreakingAway
 V Breaking Away
+K BreakingAway-ss
+V Breaking Away SS
+K BreakingAway-ss_variation
+V Breaking Away with stagger start
 K BreakingAway_family
 V Breaking Away
 K BreakingAway_variation
 V standard Breaking Away
+S Breeze Bar
 S Brown
 S Brown Palace
 S Brown Palace Bonus (3 points)
+S Build Euphorian Market
+S Build Subterran Market A
+S Build Subterran Market B
+S Build Wastelander Market A
+S Build Wastelander Market B
 K Build a building, play cards, or click on Done
 V Play cards,  then Build one building. Click on Done to end your turn.
 S Build adjacent to the man you moved
@@ -146,6 +356,7 @@ S Buy Chips
 S Buy a building with no camels
 S Buy a building with no gold
 S Buy the goods for $#1
+S BuyChips
 K Calling server...
 V Kontakter serveren...
 S Camels
@@ -154,6 +365,7 @@ K Cannon_family
 V Cannon
 K Cannon_variation
 V standard Cannon
+S Capture 50% of pieces, or 75% of value, or form a glorious victory
 S Capture 7 red balls or all of your opponent's balls
 K Capture a ball
 V Ta en ball.
@@ -169,6 +381,7 @@ S Capture your opponent's town
 S Capturing Games
 S Card
 S Cards
+S Cards for #1
 S Carnac
 K Carnac_family
 V Carnac
@@ -181,9 +394,14 @@ K Che_family
 V Che
 K Che_variation
 V standard Che
+S Checkerboard overlay
 S Checkmate your opponent's general
 S Chest
 S Choose the penalty for non-payment of interest
+S Choose to play the black or white pieces
+S Choose your recruits
+K Clay
+V clay
 K Click Done to Finish the move
 V Klikk \u00abFerdig\u00bb for \u00e5 avslutte trekket.
 S Click Done to accept a draw
@@ -202,9 +420,14 @@ K Click Done to confirm this placement
 V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte plasseringen.
 S Click Done to decline a draw
 S Click Fire! to fire your laser
+S Click on DONE to complete placing the worker
+S Click on DONE to complete retrieval
+S Click on DONE to confirm your choice of recruits
+S Click on DONE to confirm your payment
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klikk \u00abFerdig\u00bb for \u00e5 gjennomf\u00f8re slaget.
+S Click on Done to confirm moving second
 S Click on Done to confirm passing
 S Click on Done to confirm paying a camel
 K Click on Done to confirm swapping
@@ -231,11 +454,36 @@ S Click on the end of the line to move
 S Click on the line to be captured
 K Click on the placed piece to rotate it, or Click Done
 V Klikk p\u00e5 brikken du har plassert for \u00e5 rotere den eller velg \u00abFerdig\u00bb.
+S Closed
 S Closing...
+S Cloud Mine
 S Coin Flip
 S Coin flip from #1 : #2
+S Collect #1 as your benefit
+S Collecting more benefits
 K Colorblind
 V Fargeblind
+S Colorito
+K Colorito-10
+V Colorito 10x10
+K Colorito-10_variation
+V Colorito on the standard 10x10 board
+K Colorito-6
+V Colorito 6x6
+K Colorito-6_variation
+V Colorito on a 6x6 board
+K Colorito-7
+V Colorito 7x7
+K Colorito-7_variation
+V Colorito on a 7x7 board
+K Colorito-8
+V Colorito 8x8
+K Colorito-8_variation
+V Colorito on an 8x8 board
+K Colorito_family
+V Colorito
+K Colorito_variation
+V Standard Colorito
 S Combine two stacks or capture another stack
 S Complete a push or pull, step #1
 K Complete a split or merge
@@ -247,6 +495,10 @@ S Complete the push, step #1
 K Complete the split
 V Fullf\u00f8r oppdelingen
 S Confirm Dropping this rider
+S Confirm using your recruit ability
+S Confirm your benefit selection
+S Confirm your decision to fight the Opressor
+S Confirm your decision to join the Establishment
 S Confirming card selection
 S Connect all your frogs (at least 7) in one cluster
 S Connection Games
@@ -267,6 +519,7 @@ S Continue deploying the stack
 K Continue merging or click Done
 V Fortsett forening eller klikk Ferdig
 S Continue moving
+S Control the center at the end of the game
 K Cookie-Disco
 V Cookie Disco
 K Cookie-Disco-crawl
@@ -285,6 +538,7 @@ V standard Crossfire
 S Cubes
 K Dec #1#2#3
 V #1. des, #2.#3 GMT
+S Deck
 K DeckDescriptionStringKey
 V deck contains 8 brown,7 pink, 6 blue, 5 green, 5 yellow cards
 V with borders 5 brown, 7 pink, 7 blue, 6 green, 6 yellow
@@ -311,6 +565,13 @@ V Polyomino game for 2 players
 K Diagonal-Blocks_variation
 V Polyomino game for 3-4 players
 S Dice
+S Die 1
+S Die 2
+S Die 3
+S Die 4
+S Die 5
+S Die 6
+S Dilemma
 K Dipole
 V Dipole (Originalversjonen)
 K Dipole-s
@@ -322,6 +583,7 @@ V Dipole
 K Dipole_variation
 V Dipole 8x8 med asymmetrisk startposisjon
 S Discards
+S Display Only
 K Done
 V Ferdig
 S Done selling cards
@@ -350,6 +612,7 @@ K Edit
 V Rediger
 K Eliminate all your opponent's pieces
 V Eliminer alle brikkene til motspilleren
+S EndSale
 S Entrapment
 S Entrapment-6x7
 K Entrapment-6x7_variation
@@ -363,21 +626,47 @@ K Entrapment-7x7x4_variation
 V Entrapment-7x7 with 4 roamers
 K Entrapment_family
 V Entrapment
+S Equality
 K Error
 V Feil
 K Error reading directory
 V Feil under lesing av katalog
 K Error reading file
 V Feil under lesing av fil
+S Eruption
 S Escape forced position
 S Escape forced position, or move a barrier
 S Escape forced position, or place a barrier
 S Escape from check
+S Euphoria
+K Euphoria_family
+V Euphoria
+K Euphoria_variation
+V Euphoria
+S Euphorian
+S Euphorian Authority
+S Euphorian Market
+S Euphorian Market A
+S Euphorian Market B
+S Euphorian Tunnel
+S Euphorians only: play here to get 3 water
 S Euro Games
+S Every time you roll a 1, lose a commodity or a resource.
+S Every time you roll a 2, lose a commodity or a resource.
+S Every time you roll a 3, lose a commodity or a resource.
+S Every time you roll a 4, lose a commodity or a resource.
+S Every time you roll a 5, lose a commodity or a resource.
+S Every time you roll a 6, lose a commodity or a resource.
 K Exchange Prisoners
 V Utveksl fanger
 K Exchange an off-board piece for a new tile
 V Bytt en brikke utenfor brettet mot en ny helle.
+S Extra Artifact card cancelled by Registry of Personal Secrets
+S Extra Artifact card peek from Geek The Oracle
+S Extra bliss cancelled by Registry of Personal Secrets
+S Extra energy cancelled by Registry of Personal Secrets
+S Extra food cancelled by Registry of Personal Secrets
+S Extra water cancelled by Registry of Personal Secrets
 S Exxit
 K Exxit-Beginner
 V Exxit-Begynner
@@ -400,11 +689,14 @@ K Fanorona_family
 V Fanorona
 K Fanorona_variation
 V standard Fanorona
+S Farm
 S Farmer configuring board
 S Farmer moving scared
 S Farmer select
 K Feb #1#2#3
 V #1. feb, #2.#3 GMT
+K Fight the opressor
+V Fight The Opressor
 S Final Scores:
 K Finished Capturing, Click Done
 V Ingen flere baller \u00e5 ta: klikk \u00abFerdig\u00bb.
@@ -423,11 +715,19 @@ K Flagship wins at any edge square
 V Flaggskipet vinner ved \u00e5 n\u00e5 kanten.
 K Flip a tile, or Move Split or Merge a stack
 V Snu en helle, eller flytt, fordel eller foren en stabel
+K Food
+V food
 S Form a closed shape in your color
+S Free Energy
+S Free Food
+S Free Water
 K Frogs
 V Army of Frogs
 K From #1
 V Fra #1
+S Gained 2 cards instead of 1 (from Jonathan the Gambler)
+S Gained 3 cards instead of 1 (from Jonathan the Gambler)
+S Gained no cards instead of 1 (from Jonathan the Gambler)
 K Game
 V Spill
 K Game Over
@@ -443,6 +743,8 @@ K Game won by #1
 V Partiet ble vunnet av #1.
 K Games do not affect your Ranking
 V Partiene p\u00e5virker ikke rangeringen din.
+S Generator
+S Geometric series
 K Gipf
 V Gipf Basic
 S Gipf Games
@@ -467,7 +769,6 @@ K Gobbletm
 V GobbletM
 K Gobbletm_variation
 V Hukommelsen gjelder - ingen kikking
-S Gold
 S Gounki
 K Gounki_family
 V Gounki
@@ -490,6 +791,7 @@ K Gyges_family
 V Gyges
 K Gyges_variation
 V standard Gyges
+S Harmonic series
 S Heads
 S Hex
 S Hex-15
@@ -502,6 +804,8 @@ K Hex_family
 V Hex
 K Hex_variation
 V Spill 11x11 Hex p\u00e5
+S Hidden Recruit
+S Hidden Recruits
 S Hide
 S Hint
 S Hive
@@ -526,11 +830,19 @@ K Hive-PM_variation
 V Hive with Pillbug and Mosquito
 K Hive-P_variation
 V Hive with Pillbug
+K Hive-Ultimate
+V Hive Ultimate
+K Hive-Ultimate_variation
+V Hive with selected pieces
 K Hive_family
 V Hive
 K Hive_variation
 V Spill Hive standardvarianten
 S I will make the loan
+S I will play with the black pieces
+S I will play with the white pieces
+S Icarite
+S Icarite Authority
 K Idle.
 V Ikke i bruk.
 K Ignore chat from #1
@@ -538,6 +850,7 @@ V Overse chat fra #1
 S Illegal - this move would form an illegal pattern of lines
 S Illegal due to repetition, try something else or resign
 S Illegal move due to repetition - try something else
+S Immediately roll and place the new worker (from Chase the Miner)
 S Immobilize your opponent
 S Immobilize your opponent's roamers
 K Invite
@@ -549,6 +862,8 @@ K Jan #1#2#3
 V #1. jan, #2.#3 GMT
 K Join
 V Bli med
+K Join The Establishment
+V Join the Establishment
 K Join only if Invited
 V Bare for inviterte
 K Joining as a spectator
@@ -584,6 +899,7 @@ K Knockabout_family
 V Knockabout
 K Knockabout_variation
 V Standard Knockabout
+S Knowledge
 S LIMBO
 K LOA
 V Handlingens linjer
@@ -620,12 +936,14 @@ K Lobby
 V Foaj\u00e9
 K Lobby shutdown...
 V Foajeen stenger...
+S Lose an extra morale due to the Cafeteria of Nameless Meat
 S Machines
 K Make a Dance move
 V Gj\u00f8r et dansetrekk.
 S Make a capturing move
 S Make an addional capturing move, or click on Done
 S Make an addional move, or click on Done
+S Make the first move, or pass and move second
 K Make the first move, or swap and move second
 V Gj\u00f8r f\u00f8rste trekk, eller bytt og flytt som nummer to
 K Make your first move, or swap fleets
@@ -635,6 +953,7 @@ K Map of Player Locations
 V Kart
 K Mar #1#2#3
 V #1. mar, #2.#3 GMT
+S Market Cost
 S Master
 K Master Room
 V Mesterrom
@@ -674,6 +993,12 @@ K Mogul_family
 V Mogul
 K Mogul_variation
 V standard Mogul
+S Morale
+S Morelli
+K Morelli_family
+V Morelli
+K Morelli_variation
+V Standard Morelli
 K Move ##1
 V Trekk ##1
 S Move 6 ships to the center
@@ -690,12 +1015,16 @@ K Move a Tower
 V Move any Tower
 K Move a ball or change a Ring
 V Flytt en ball eller forandre p\u00e5 en ring.
+S Move a chip
+S Move a cookie
 S Move a piece
 S Move a piece from the row closest to the bottom of the board
 S Move a piece from the row closest to the top of the board
 S Move a piece into the row closest to the bottom of the board
 S Move a piece one space
 S Move a piece or rotate a piece
+S Move a piece toward the center
+S Move a piece, or drop a captured piece
 S Move a piece, step #1
 S Move a ring
 S Move a roamer
@@ -709,6 +1038,7 @@ S Move a soldier, or fire a cannon
 S Move a stack, or add a reserve piece
 S Move a tower to your opponent's home row
 S Move a volcano cap
+S Move all your chips across the board
 S Move any piece to the opposite goal space
 K Move one ship
 V Flytt ett skip.
@@ -737,17 +1067,26 @@ V Mutton
 K Mutton_variation
 V standard Mutton
 S N-in-a-row Games
+S New Recruit
+S New Worker
+S New worker and gain morale
+S New worker and lose knowledge
 K News
 V Nyheter
+S Nimbus Loft
 K No Challenges
 V Ingen invitasjoner til \u00e5 spille
 K No Chat
 V Ingen chat
 S No Recent Games
+S No Robot
+S No Robot, Random player order
 K No challenges from #1
 V Ingen invitasjoner fra #1
+S No loss of Morale (from Yordy the Demotivator)
 K No players.
 V Ingen spillere.
+S No robots
 K No spectators.
 V Ingen tilskuere.
 S No, let the bank fund it
@@ -766,6 +1105,16 @@ S Offer a Draw
 S Offer a price for the goods on the ship
 K Onboard a piece, Move a stack, or Exchange
 V Plasser en brikke p\u00e5 brettet, flytt en stabel, eller utveksl fanger.
+K One Day In London_family
+V One Day in London
+K Oneday_family
+V One Day In London
+K Oneday_variation
+V Standard One Day in London
+K Onedayinlondon
+V One Day In London
+K Onedayinlondon_variation
+V Standard One Day in London
 K Only the flagship can occupy the center square
 V Bare flaggskipet kan v\u00e6re i sentrumsfeltet.
 K Options
@@ -786,13 +1135,23 @@ K Pan-Kai_variation
 V Pentamino game for 2 players
 S Pass
 S Pay
+S Pay #1 
+S Pay #1, or click on DONE to coninue with no penalty (from Yordy the Demotivator)
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
 S Pay a chip, or take the pot
+S Pay to Join the Establishment
+S Pay to fight the opressor
+S Pay with Artifact card, gain Morale (from Flartner the Luddite)
+S Pay with energy, +1 Morale -1 Knowledge (from Jefferson the Shock Artist)
+S PayChip
+S Phlip
 K Phlip_family
 V Phlip
+K Phlip_variation
+V Standard Phlip
 K Pick a ring to place a chip and move
 V Velg ringen som skal flyttes for \u00e5 plassere en brikke.
 S Pick the first cube to send to the caravan
@@ -850,12 +1209,21 @@ V Plasser en brikke p\u00e5 brettet.
 K Place a tile on the board, or move a tile
 V Plasser en brikke p\u00e5 brettet eller flytt en brikke.
 S Place a tile on the board, where a runner can leave a home space
+S Place a worker
+S Place a worker or withdraw one or more workers
 S Place all your pieces in your two home rows
+S Place an extra Authority token (from Jacko the Archivist)
+S Place another worker
+S Place another worker, or click on DONE
 K Place prisoners here for exhange
 V Plasser fangene her for \u00e5 bytte dem.
 S Place the Rabbits
+S Place the card on one of the discard stacks
 S Place the first meeple on the board
+S Place the new worker
 S Place the next tile on the board, where a runner can move over it
+S Place you cards in your rack
+S Place your benefit here
 S Place your bid to fund the loan
 S Place your cookie
 S Place your cookie, or swap colors
@@ -903,6 +1271,7 @@ K Prisoners captured by Black are held here
 V Fanger tatt av svart holdes her.
 K Prisoners captured by White are held here
 V Fanger tatt av hvit holdes her.
+S Pronounced: #1
 K Punct
 V P\u00fcnct
 K Punct_family
@@ -910,6 +1279,7 @@ V P\u00fcnct
 K Punct_variation
 V Spill Punct standardvarianten
 S Purple
+S Quarry
 S Quinamid
 K Quinamid_family
 V Quinamid
@@ -925,6 +1295,8 @@ K Raj_family
 V Raj
 K Raj_variation
 V Standard Raj
+S Randomized Start
+S Ready to start regular play
 K Rearrange the gold fleet
 V Omgrupper gullfl\u00e5ten.
 K Rearrange the silver fleet
@@ -950,6 +1322,8 @@ V Receive a card when you place a cube in the caravan.
 V Cost 3 camels + 3 gold.
 K Reconnecting
 V  ...Gjenoppretter forbindelsen...
+S Recruit Authority
+S Recruits
 S Red
 S Red Dome
 K Rejoin
@@ -967,6 +1341,7 @@ V Gi opp
 K Resign State
 V Klikk \u00abFerdig\u00bb for \u00e5 bekrefte at du gir opp.
 S Restart
+S Retrieve one or more workers
 S Return to the Way
 S Reverse View
 K Review
@@ -974,7 +1349,16 @@ V review
 K Review Saved Games
 V Studierom
 S Rider Size
+S Rithmomachy
+K Rithmomachy_family
+V Rithmomachy
+K Rithmomachy_variation
+V Standard Rithmomachy
 S Rotate the board 180 degrees
+S Running the train simulation
+S Sacrice the worker for #1 (from Chase the Miner)
+S Sacrifice a worker (from Pete the Cannibal)
+S Sacrifice the worker for an extra Authority Token
 S Santorini
 K Santorini_family
 V Santorini
@@ -1006,6 +1390,7 @@ K Select the stack to move from
 V Velg stabel \u00e5 flytte fra
 S Select which of your roamers to kill
 S Select which opponent roamer to kill
+S Select your die roll (and pay 1 Bliss) or click on DONE to proceed normally
 K Selecting game: #1
 V Velger parti: #1
 S Sell
@@ -1015,6 +1400,8 @@ S Sell Cards
 S Sell another #1 card
 S Sell no cards
 S Sell some #1 cards
+S SellALl
+S SellCard
 S Send
 S Send Cube
 K Sep #1#2#3
@@ -1032,12 +1419,18 @@ V Sesjon #1 er privat.
 K Session #1: state unknown.
 V Sesjon #1: tilstand ukjent.
 S Shipping
+S Shogi
+K Shogi_family
+V Shogi
+K Shogi_variation
+V standard Shogi
 S Shoot
 K Show SGF Text
 V Vis SGF tekst
 S Show info for #1
 K Shuffle pieces to the exchange area, Click Done to start the exchange
 V Flytt brikker til utvekslingsomr\u00e5det. Klikk \u00abFerdig\u00bb for \u00e5 starte utvekslingen.
+S Sky Lounge
 S Slide the chip toward the center
 K Sound
 V Lyd
@@ -1076,12 +1469,21 @@ V Start Hvit
 K State unknown.
 V Tilstand ukjent.
 S Still in the Auction
+S Subterran
+S Subterran Authority
+S Subterran Market
+S Subterran Tunnel
+S Subterrans only: play here to get 3 food
 K Swap Colors
 V Bytt farger
+S Swap a discard or a card from the draw pile with a card in your rack
 S Swap colors, or place a chip, or move a board
+S Swap the top of the Draw pile for a card in your rack
 S Swing View
 S Switch to a more oblique view of the board
 S Switch to a more overhead view of the board
+S Switch to traditional pieces
+S Switch to westernized pieces
 S Syzygy
 K Syzygy_family
 V Syzygy
@@ -1117,6 +1519,9 @@ S Take #1 camels
 S Take #1 camels, take a card, or move the supervisor #2 spaces
 S Take #1 gold
 S Take #1 gold, take a card, or move the supervisor #2 spaces
+S Take 1 Bliss or click on DONE to lose 1 Knowledge
+S Take 1 Energy, or click on DONE to gain 1 Morale (from Gary The Electrician)
+S Take 1 Food or click on DONE to lose 1 Knowledge (from Scarby the Harvester)
 S Take Card
 S Take Chips
 K Take Over Playing
@@ -1127,6 +1532,8 @@ S Take no chips
 S Take the card, or sell cards
 S Take your first action
 S Take your second action
+S TakeCard
+S TakePot
 S Tako Judo
 K Tako Judo_family
 V Tako Judo
@@ -1206,6 +1613,7 @@ K TumblingDown_family
 V Tumbling Down
 K TumblingDown_variation
 V TumblingDown p\u00c3\u00a5 et standard 8x8-brett
+S Tunnel Open
 K Type your message here.
 V Skriv meldingen din her.
 S Tzaar
@@ -1227,6 +1635,13 @@ S Unranked
 K Unranked Room
 V Urangert rom
 S Unsold Warehouses
+S Unused Dilemmas
+S Unused Markets
+S Unused Recruits
+S Upgrade the tunnel effect (from Andrew the Spelunker)
+S Use Recruit Ability
+S Use your recruit's power, or click on DONE to proceed normally
+S Used Recruits
 K User 
 V Bruker 
 S Vase
@@ -1260,6 +1675,7 @@ K Wait for opponents to arrive.
 V Vent p\u00e5 at motstanderne kommer.
 S Wait for other players to adjust
 S Wait for the other players to decide
+S Wait for the other players to fill their racks
 S Wait for the other players to play
 K Waiting in
 V Venter i
@@ -1272,13 +1688,22 @@ K Warp6_family
 V Warp 6
 K Warp6_variation
 V standard Warp 6
+S Wastelander
+S Wastelander Authority
+S Wastelander Market
+S Wastelander Tunnel
+S Wastelanders only: play here to get 3 energy
 K Welcome to Game client, version #1
 V Velkommen til spillklienten, versjon #1
 K White
 V hvit
+S Wind Salon
 S Wolf moving suspects
 S Wolf player eating
 S Wolf player hiding
+S Worker
+S Worker Activation A
+S Worker Activation B
 S Xiangqi
 K Xiangqi_family
 V Xiangqi
@@ -1299,11 +1724,23 @@ V Spill Yinsh standardvarianten
 K You can only resign when it is your move
 V Du kan bare gi opp n\u00e5r det er ditt trekk.
 S You cannot resign in a multiplayer game
+S You do not get allegiance track bonuses.
+S You gain knowlege when you place authority
 K You have been disconnected: #1
 V Du har mistet forbindelsen.
 S You have been offered a draw - Accept or Decline
 K You have no legal moves.  Click on Done to pass
 V Du har ingen lovlige trekk. Klikk \u00abFerdig\u00bb for \u00e5 passe.
+S You lose an extra morale when you retrieve workers for free.
+S You may not add workers when you have 2 or 3 workers.
+S You may not bump your own workers from action spaces.
+S You may not place more than 1 worker per turn.
+S You may not place more than one worker in each commodity area.
+S You may not place workers in Icarus.
+S You may not place workers on constructed markets missing your authority.
+S You may not place workers on construction sites occupied by other players' workers.
+S You may not use pairs of cards at Artifact markets.
+S You may not use your activeRecruits' special abilities.
 K You must move the gobblet you have picked up
 V Du m\u00e5 flytte begeret du har plukket opp.
 S You must place a dome
@@ -1331,15 +1768,30 @@ K Zertz_family
 V Z\u00e8rtz
 K Zertz_variation
 V Spill Z\u00e8rtz standardvarianten
+S a market or authority zone
+S a pair of Artifact cards
 S accept the bid, or pay the amount yourself
+S add Icarite influence due to BrianTheViticulturist
+S an ethical dilemma
+S an extra Euphorian Authority
+S an extra Subterran Authority
+S an extra Wastelander Authority
 K and
 V  og 
 K announceOption
 V Kunngj\u00f8r nye spillere
+S any 5 Bliss or food, or any 4 with a resource
+S arithmetic
+K artifact
+V Artifact
+S authority tokens
+S authority zone
 K automute
 V #1 har automatisk blitt stum.
 S bid and win the most prize value
 S blast your opponent's pharoh
+K bliss
+V Bliss
 S build an ideal city
 S capture all of one opponentr's color
 K carnac_10x7
@@ -1363,6 +1815,8 @@ V Forbind dine to motst\u00e5ende sider med en kjede av brikker i din farge.
 K connecting
 V Oppretter forbindelse til 
 S do what it takes to win
+K energy
+V Energy
 K enterMessage
 V #1 har kommet inn i lobbyen.
 K enters the room
@@ -1375,10 +1829,14 @@ S form the most groups of 3 or more adjacent squares your color
 S fund a loan from a player or the bank
 K game selector
 V partivelger
+S geometric
+K gold
+V Gold
 K gold: escape the flagship  silver: capture gold flagship
 V gull: r\u00f8m med flaggskipet  s\u00f8lv: fang flaggskipet
 K guest
 V gjest
+S harmonic
 S in #1
 K launchChat
 V Oppretter snakkerom i sesjon #1.
@@ -1393,6 +1851,7 @@ V Sender tilskuer til sesjon #1.
 S load a luxury container
 K loaderr
 V Feil i innlastingen av: 
+S lose #1 due to market re-roll penalties
 K make 4 in a row in any direction
 V Lag 4 p\u00e5 rad i hvilken som helst retning.
 S make 5 in a row
@@ -1404,9 +1863,25 @@ K make any loop, or a line which spans 8 rows or columns, in your color
 V lag en l\u00f8kke eller en linje som strekker seg over minst 8 rader eller kolonner i din farge
 S make the last move
 S maximize the number of tiles in your reserve
+K morelli-11
+V Morelli 11x11
+K morelli-11_variation
+V Morelli on a 11x11 board
+K morelli-13
+V Morelli 13x13
+K morelli-13_variation
+V Morelli on a 13x13 board
+K morelli-9
+V Morelli 9x9
+K morelli-9_variation
+V Morelli on a 9x9 board
 K mouse tracking disabled
 V mussporing er deaktivert
 S move a piece to the opposite side of the board
+S must be a Euphorian
+S must be a subterran
+S must be a wastelander
+S must be an icarite
 K nolaunch
 V Serveren avviste foresp\u00f8rselen; meldingen er 
 K nolobby
@@ -1419,9 +1894,18 @@ K noserver
 V Foajeen har ikke forbindelse til s\u00f8rveren.
 S own all the stacks
 S own the most blocks
+S pay +1 Knowledge instead of #1 (from Matthew the Thief)
 S perspective
+S place all 10 authority tokens
 K play
 V spill for #1
+S play here to advance the miner and gain a benefit
+S play here to contribute to building the adjacent market
+S play here to gain a worker
+S play here to get energy
+S play here to get food
+S play here to get water
+S play here to place an authority token
 K player
 V spiller
 S player 
@@ -1437,9 +1921,13 @@ K reading Zip directory...
 V leser zip-katalog...
 K reading directory...
 V leser katalog...
+S receive an extra Water or Stone from Maggie the Outlaw
 K reconok
 V ..forbindelsen er gjenopprettet
+S retrieve another worker, or hit DONE
 S reviewing
+S sacrifice a worker
+S sacrifice worker for +4 Food and +1 Resource (from Sheppard the Lobotomist)
 K savedmsg
 V Partiet er lagret som #1.
 S select the game to play
@@ -1453,19 +1941,29 @@ K stack six or capture six
 V stable seks brikker eller fang seks brikker
 K stillwaiting
 V still launching... v\u00e6r vennlig og vent.
+K stone
+V Stone
 K surround your opponents queen bee
 V omring motstanderens dronning
+S take 1 water, or click on DONE to get +1 Morale (from Soulless the Plumber)
 K the game has resumed
 V partiet fortsetter
 K timeoutWarning
 V   Foajeen stenger om ett minutt.
 S trade a second container for a gold container
+K unused workers
+V Unused Workers
+S use Bliss instead of Resource (from Josh the Negotiator)
 S use Wooden tiles
+S used Food instead of Bliss (from Brian the Viticulturist)
+K water
+V Water
 K website
 V #1 spillserver
 K welcome
 V Velkommen til BoardSpace, versjon #1.
 S you may increase your bid
+S you should never see this
 K your name
 V ditt navn
-N 975
+N 1420

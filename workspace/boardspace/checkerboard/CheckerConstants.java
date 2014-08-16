@@ -1,5 +1,7 @@
 package checkerboard;
 
+import lib.G;
+import online.common.CellId;
 import online.game.BaseBoard.BoardState;
 import online.game.Play2Constants;
 
@@ -13,20 +15,52 @@ public interface CheckerConstants extends Play2Constants
 	{   {"Checkers_family","Checkers"},
 		{"Checkers_variation","Standard Checkers"},
 	};
-	static final int DEFAULT_COLUMNS = 10;	// 8x6 board
-	static final int DEFAULT_ROWS = 10;
-	static final String Checker_INIT = "checkers";	//init for standard game
-
+	
+	static enum Variation
+	{
+		Checkers_10("checkers-10",10),
+		Checkers_8("checkers-8",8),
+		Checkers_6("checkers-6",6);
+		int size;
+		String name;
+		Variation(String n,int sz) {name = n;  size = sz; }
+		static Variation findVariation(String n)
+    	{
+    		if(n!=null)
+    		{	String nl = n.toLowerCase();
+    			for(Variation s : values()) { if(s.name.equals(nl)) { return(s); }}
+    		}
+    		return(null);
+    	}
+	};
+	
+	enum CheckerId implements CellId
+	{
     //	these next must be unique integers in the dictionary
-    static final int Black_Chip_Pool = 100; // positive numbers are trackable
-    static final int White_Chip_Pool = 101;
+    	Black_Chip_Pool("B"), // positive numbers are trackable
+    	White_Chip_Pool("W"),
+        BoardLocation(null),
+        LiftRect(null),
+        ReverseViewButton(null),
+  	;
+    	String shortName = name();
+    	CheckerId(String sn) { if(sn!=null) { shortName = sn; }}
+    	static public CheckerId find(String s)
+    	{	String sl = s.toLowerCase();
+    		for(CheckerId v : values()) { if(sl.equals(v.shortName.toLowerCase())) { return(v); }}
+    		return(null);
+    	}
+    	static public CheckerId get(String s)
+    	{	CheckerId v = find(s);
+    		G.Assert(v!=null,"Id %s not found",s);
+    		return(v);
+    	}
+     	
+	}
     static final int White_Chip_Index = 0;
     static final int Black_Chip_Index = 1;
-    static final int RackLocation[] = { White_Chip_Pool,Black_Chip_Pool};
+    static final CheckerId RackLocation[] = { CheckerId.White_Chip_Pool,CheckerId.Black_Chip_Pool};
     
-    static final int BoardLocation = 102;
-    static final int LiftRect = 103;
-    static final int ReverseViewButton = 104;
     
     public enum CheckerState implements BoardState
     {	Puzzle(PuzzleStateDescription),

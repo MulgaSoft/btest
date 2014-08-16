@@ -12,7 +12,12 @@ import checkerboard.*;
 */
 public class CheckerViewer extends CheckerGameViewer
 {
-    /* constructor.  This is used to actually create the viewer */
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/* constructor.  This is used to actually create the viewer */
     public CheckerViewer()
     {
     }

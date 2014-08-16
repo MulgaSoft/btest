@@ -10,8 +10,11 @@ public class CheckerCell extends stackCell<CheckerCell,CheckerChip> implements C
 	// constructor
 	public CheckerCell(char c,int r) 
 	{	super(Geometry.Oct,c,r);
-		rackLocation = BoardLocation;
+		rackLocation = CheckerId.BoardLocation;
 	}
+	/** upcast the cell id to our local type */
+	public CheckerId rackLocation() { return((CheckerId)rackLocation); }
+	
 	public CheckerCell(Random r) { super(r); }
 	
 	/** define the base level for stacks as 1.  This is because level 0 is the square itself for this

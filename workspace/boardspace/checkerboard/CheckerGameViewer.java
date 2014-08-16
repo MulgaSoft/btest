@@ -18,7 +18,11 @@ import static checkerboard.CheckerMovespec.*;
 public class CheckerGameViewer extends commonCanvas 
 	implements ViewerProtocol, CheckerConstants, sgf_names
 {
-     // colors
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 0;
+	// colors
     private Color reviewModeBackground = new Color(220,165,200);
     private Color HighlightColor = new Color(0.2f, 0.95f, 0.75f);
     private Color rackBackGroundColor = new Color(194,175,148);
@@ -87,7 +91,7 @@ public class CheckerGameViewer extends commonCanvas
 
         int randomKey = info.getInt(exHashtable.RANDOMSEED,-1);
        
-        b = new CheckerBoard(info.getString(exHashtable.GAMETYPE, Checker_INIT),randomKey,players_in_game);
+        b = new CheckerBoard(info.getString(exHashtable.GAMETYPE, Variation.Checkers_10.name),randomKey,players_in_game);
         doInit(false);
         reverseOption = myFrame.addOption(s.get(ReverseView),b.reverse_y,deferredEvents);
 
@@ -360,14 +364,14 @@ public class CheckerGameViewer extends commonCanvas
     	if(G.pointInRect(highlight,r))
     	{	G.frameRect(gc,Color.red,r);
 			highlight.helpText = s.get(ReverseViewExplanation);
-    		highlight.hitCode = ReverseViewButton;
+    		highlight.hitCode = CheckerId.ReverseViewButton;
     	}
      }  
     private void DrawLiftRect(Graphics gc,HitPoint highlight)
     {	boolean hit = false;
     	if(G.pointInRect(highlight,liftRect))
     	{	hit = true;
-    		highlight.hitCode = LiftRect;
+    		highlight.hitCode = CheckerId.LiftRect;
     		highlight.dragging = lifted = highlight.down;
     	}
 		if(gc!=null) 
@@ -534,7 +538,7 @@ public class CheckerGameViewer extends commonCanvas
                     HighlightColor, rackBackGroundColor))
             {	// always display the done button, but only make it active in
             	// the appropriate states
-                select.hitCode = HitDoneButton;
+                select.hitCode = DefaultId.HitDoneButton;
             }
             if (allowed_to_edit)
             {
@@ -542,7 +546,7 @@ public class CheckerGameViewer extends commonCanvas
                             s.get(EditAction), HighlightColor,
                             rackBackGroundColor))
                 {
-                    select.hitCode = HitEditButton;
+                    select.hitCode = DefaultId.HitEditButton;
                 }
        }}
 
@@ -833,12 +837,12 @@ private void playSounds(commonMove mm)
     public void StartDragging(HitPoint hp)
     {
         int mo = getMovingObject();
-        if (mo < 0) // not dragging anything yet, so maybe start
+        if ((mo < 0) && (hp.hitCode instanceof CheckerId)) // not dragging anything yet, so maybe start
         {
         
         if(hp!=null)
         {
-        int hitObject = hp.hitCode;
+        CheckerId hitObject = (CheckerId)hp.hitCode;
 		CheckerCell cell = (CheckerCell)hp.hitObject;
 		CheckerChip chip = (cell==null) ? null : cell.topChip();
 		if(chip!=null)
@@ -846,7 +850,7 @@ private void playSounds(commonMove mm)
 	    switch(hitObject)
 	    {
 	    case LiftRect:
-        case vcrSlider:			// this is a draggable object that the board doesn't know about
+	    case ReverseViewButton:
              break;
 	    case Black_Chip_Pool:
 	    	PerformAndTransmit("Pick B "+cell.row+" "+chip.chipNumber());
@@ -872,30 +876,28 @@ private void playSounds(commonMove mm)
         }}
     }
 
-	/** 
+ 	/** 
 	 * this is called on "mouse up".  We may have been just clicking
 	 * on something, or we may have just finished a click-drag-release.
 	 * We're guaranteed just one mouse up, no bounces.
 	 */
     public void StopDragging( HitPoint hp)
-    {
-       
-        int hitObject = hp.hitCode;
+    {	CellId id = hp.hitCode;
+    	if(!(id instanceof CheckerId)) 
+    		{ // handle all the actions that aren't ours
+    			missedOneClick = performStandardActions(hp,missedOneClick); 
+    		}
+    	else {
+    	missedOneClick = false;
+        CheckerId hitObject = (CheckerId)id;
 		CheckerState state = b.getState();
 		CheckerCell cell = (CheckerCell)hp.hitObject;
 		CheckerChip chip = (cell==null) ? null : cell.topChip();
         switch (hitObject)
         {
         default:
-        	if (performStandardButtons(hitObject)) {}
-        	else if (performVcrButton(hitObject, hp))	// handle anything in the vcr group
-            {
-            }
-            else
-            {
-            G.Error("Hit Unknown object " + hitObject);
-            }
-        	break;
+           G.Error("Hit Unknown object " + hitObject);
+           break;
 
         case ReverseViewButton:
        	 reverseOption.setState(b.reverse_y = !b.reverse_y);
@@ -926,7 +928,7 @@ private void playSounds(commonMove mm)
         case Black_Chip_Pool:
         	{
         	int mov = b.movingObjectIndex();
-        	String col =  (hitObject==Black_Chip_Pool) ? " B " : " W ";
+        	String col =  hitObject.shortName;
             if(mov>=0) 
 			{//if we're dragging a black chip around, drop it.
             	switch(state)
@@ -944,10 +946,7 @@ private void playSounds(commonMove mm)
          	}
             break;
 
-         case HitNoWhere:
-        	 performReset();
-            break;
-        }
+        }}
         repaint(20);
     }
 

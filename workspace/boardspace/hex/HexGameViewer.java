@@ -2,6 +2,7 @@ package hex;
 
 import online.common.*;
 
+
 import java.awt.*;
 import java.util.*;
 
@@ -196,7 +197,7 @@ public class HexGameViewer extends commonCanvas
          
         rotationOption = myFrame.addOption("rotate board",true,deferredEvents);
         
-        bb = new HexGameBoard(info.getString(exHashtable.GAMETYPE, Hex_INIT));
+        bb = new HexGameBoard(info.getString(exHashtable.GAMETYPE, HexVariation.hex.name));
         doInit(false);
 
     }
@@ -278,7 +279,7 @@ public class HexGameViewer extends commonCanvas
     public void setLocalBounds(int x, int y, int width, int height)
     {	boolean wideFormat = (height*1.6)<width;
         int ncols = 34; // more cells wide to allow for the aux displays
-        int nrows = wideFormat?16:18;  
+        int nrows = wideFormat?16:20;  
         int cellw = width / ncols;
         int chatHeight = selectChatHeight(height);
         int cellh = (height-(wideFormat?0:chatHeight)) / nrows;
@@ -291,7 +292,7 @@ public class HexGameViewer extends commonCanvas
         fullRect.height = height;
 
         boardRect.x = 0;		// the main board
-        boardRect.y = wideFormat ? 0 : chatHeight;
+        boardRect.y = wideFormat ? 0 : chatHeight+CELLSIZE/2;
         boardRect.width = CELLSIZE * (int)(nrows*1.5);
         boardRect.height = CELLSIZE * (nrows );
 
@@ -301,8 +302,8 @@ public class HexGameViewer extends commonCanvas
         leftSide.height = fullRect.height-leftSide.y;
         
         stateRect.x = CELLSIZE/2;
-        stateRect.y = boardRect.y+CELLSIZE/2;
-        stateRect.height = CELLSIZE/2;
+        stateRect.y = boardRect.y;
+        stateRect.height = CELLSIZE;
         stateRect.width = boardRect.width-CELLSIZE;
         
         logRect.width = CELLSIZE * 6;
@@ -599,7 +600,7 @@ public class HexGameViewer extends commonCanvas
         { // note what we hit, row, col, and cell
           boolean empty = (closestCell.chip == null);
           boolean picked = (gb.pickedObject!=null);
-          highlight.hitCode = (empty||picked) ? EmptyBoard : BoardLocation;
+          highlight.hitCode = (empty||picked) ? HexId.EmptyBoard : HexId.BoardLocation;
           highlight.hitObject = closestCell;
           highlight.arrow = (empty||picked) ? StockArt.DownArrow : StockArt.UpArrow;
           highlight.awidth = CELLSIZE;
@@ -687,7 +688,7 @@ public class HexGameViewer extends commonCanvas
 		{ // make the "swap" button appear if we're in the correct state
 			if(G.handleRoundButton(gc, swapRect, buttonSelect, s.get(SwapAction),
                 HighlightColor, rackBackGroundColor))
-			{ buttonSelect.hitCode = HitSwapButton;
+			{ buttonSelect.hitCode = DefaultId.HitSwapButton;
 			}
 		}
 
@@ -700,7 +701,7 @@ public class HexGameViewer extends commonCanvas
                     HighlightColor, rackBackGroundColor))
             {	// always display the done button, but only make it active in
             	// the appropriate states
-                buttonSelect.hitCode = HitDoneButton;
+                buttonSelect.hitCode = DefaultId.HitDoneButton;
             }
             if (allowed_to_edit)
             {	// reviewer is active if there was a game here, and we were a player, 
@@ -709,7 +710,7 @@ public class HexGameViewer extends commonCanvas
                     if (G.handleRoundButton(gc, editRect, buttonSelect, s.get(EditAction),
                                 HighlightColor, rackBackGroundColor))
                     {
-                        buttonSelect.hitCode = HitEditButton;
+                        buttonSelect.hitCode = DefaultId.HitEditButton;
                     }
             }
         }
@@ -725,7 +726,7 @@ public class HexGameViewer extends commonCanvas
             				state!=HexState.Puzzle,
             				gb.whoseTurn,
             				stateRect);
-            goalAndProgressMessage(gc,s.get(HexVictoryCondition),progressRect,goalRect);
+            goalAndProgressMessage(gc,Color.black,s.get(HexVictoryCondition),progressRect,goalRect);
             //DrawRepRect(gc,gb.Digest(),repRect);	// Not needed for hex
         }
         // draw the vcr controls
@@ -942,20 +943,16 @@ public class HexGameViewer extends commonCanvas
     public void StartDragging(HitPoint hp)
     {
         int mo = bb.movingObjectIndex();
-        if (mo==HitNoWhere) // not dragging anything yet, so maybe start
+        if ((mo==NothingMoving) && (hp.hitCode instanceof HexId))// not dragging anything yet, so maybe start
         {
-        int hitObject =  hp.hitCode;
+        HexId hitObject =  (HexId)hp.hitCode;
  	    switch(hitObject)
 	    {
 	    default: break;
 	    
-        case vcrSlider:			// this is a draggable object that the board doesn't know about
-             break;
-	    case Black_Chip_Pool:
-	    	PerformAndTransmit("Pick B");
-	    	break;
-	    case White_Chip_Pool:
-	    	PerformAndTransmit("Pick W");
+ 	    case Black_Chip_Pool:
+ 	    case White_Chip_Pool:
+	    	PerformAndTransmit("Pick " + hitObject.shortName);
 	    	break;
 	    case BoardLocation:
 	        hexCell hitCell = (hexCell)hp.hitObject;
@@ -1004,7 +1001,11 @@ public class HexGameViewer extends commonCanvas
 	 */
     public void StopDragging(HitPoint hp)
     {
-        int hitCode = hp.hitCode;
+        CellId id = hp.hitCode;
+       	if(!(id instanceof HexId))  {   missedOneClick = performStandardActions(hp,missedOneClick);   }
+        else {
+        missedOneClick = false;
+        HexId hitCode = (HexId)id;
         hexCell hitObject = (hexCell)hp.hitObject;
 		HexState state = bb.getState();
         switch (hitCode)
@@ -1050,11 +1051,8 @@ public class HexGameViewer extends commonCanvas
 			}
            break;
  
-        case HitNoWhere:
-        	performReset();
-            break;
         }
-
+        }
          repaint(20);
     }
 

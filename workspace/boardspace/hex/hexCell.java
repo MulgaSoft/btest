@@ -20,11 +20,12 @@ public class hexCell extends chipCell<hexCell,hexChip> implements HexConstants
 	int sweep_counter;		// the sweep counter for which blob is accurate
 	int borders = -1;		// bitmask of possible borders
 
-	public hexCell(Random r,int rack) { super(r,rack); }		// construct a cell not on the board
-	public hexCell(int rack,char c,int r) 		// construct a cell on the board
+	public hexCell(Random r,HexId rack) { super(r,rack); }		// construct a cell not on the board
+	public hexCell(HexId rack,char c,int r) 		// construct a cell on the board
 	{	super(cell.Geometry.Hex,rack,c,r);
 	};
-	
+	/** upcast racklocation to our local type */
+	public HexId rackLocation() { return((HexId)rackLocation); }
 	/** sameCell is called at various times as a consistency check
 	 * 
 	 * @param other

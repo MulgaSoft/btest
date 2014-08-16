@@ -36,7 +36,7 @@ import static hex.Hexmovespec.*;
 
 class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstants
 {	static final boolean debug = false;
-
+	HexVariation variation = HexVariation.hex;
 	private HexState board_state = HexState.Puzzle;	
 	private HexState unresign = null;	// remembers the orignal state when "resign" is hit
 	public HexState getState() { return(board_state); }
@@ -52,14 +52,14 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 			}
 	}
 
-    private int playerColor[]={White_Chip_Pool,Black_Chip_Pool};
+    private HexId playerColor[]={HexId.White_Chip_Pool,HexId.Black_Chip_Pool};
     
     private hexChip playerChip[]={hexChip.White,hexChip.Black};
     private hexCell playerCell[]=new hexCell[2];
     // get the chip pool and chip associated with a player.  these are not 
     // constants because of the swap rule.
 	public hexChip getPlayerChip(int p) { return(playerChip[p]); }
-	public int getPlayerColor(int p) { return(playerColor[p]); }
+	public HexId getPlayerColor(int p) { return(playerColor[p]); }
 	public hexCell getPlayerCell(int p) { return(playerCell[p]); }
 // this is required even though it is meaningless for Hex, but possibly important
 // in other games.  When a draw by repetition is detected, this function is called.
@@ -91,7 +91,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 
 	// factory method to generate a board cell
 	public hexCell newcell(char c,int r)
-	{	return(new hexCell(BoardLocation,c,r));
+	{	return(new hexCell(HexId.BoardLocation,c,r));
 	}
 	
     public HexGameBoard(String init) // default constructor
@@ -105,6 +105,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 	  dup.clone(this);
 	  return(dup); 
    	}
+    public void copyFrom(BoardProtocol b) { clone((HexGameBoard)b); }
 
     // precompute which border cell decorations needs to be drawn 
     // this is peculiar to the way we draw the borders of the hex board
@@ -139,6 +140,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     {
         super.sameboard(from_b); // // calls sameCell for each cell, also for inherited class variables.
         G.Assert(unresign==from_b.unresign,"unresign mismatch");
+        G.Assert(variation==from_b.variation,"variation matches");
         G.Assert(G.sameArrayContents(win,from_b.win),"win mismatch");
         G.Assert(G.sameArrayContents(playerColor,from_b.playerColor),"playerColor mismatch");
         G.Assert(G.sameArrayContents(playerChip,from_b.playerChip),"playerChip mismatch");
@@ -230,18 +232,25 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 		Random r = new Random(734687);	// this random is used to assign hash values to cells
 		setState(HexState.Puzzle);
 		gtype = gtype.toLowerCase();
-		if(Hex_INIT.equals(gtype)) { initBoard(ZfirstInCol,ZnInCol,null); }
-		else if(Hex_15_INIT.equals(gtype)) { initBoard(ZfirstInCol15,ZnInCol15,null); }
-		else if(Hex_19_INIT.equals(gtype)) { initBoard(ZfirstInCol19,ZnInCol19,null); }
-		else { G.Error("No init named "+gtype); }
+		variation = HexVariation.findVariation(gtype);
+		G.Assert(variation!=null,"No init named %s",gtype);
+		switch(variation)
+		{
+		default: G.Error("Not expecting variation %s",variation);
+			break;
+		case hex_19:
+		case hex_15:
+		case hex:
+			initBoard(variation.firstInCol,variation.ZinCol,null);
+		}
 
 		allCells.setDigestChain(r);		// set the randomv for all cells on the board
  		gametype = gtype;
 		
 	    
-	    blackChipPool = new hexCell(r,Black_Chip_Pool);
+	    blackChipPool = new hexCell(r,HexId.Black_Chip_Pool);
 	    blackChipPool.chip = hexChip.Black;
-	    whiteChipPool = new hexCell(r,White_Chip_Pool);
+	    whiteChipPool = new hexCell(r,HexId.White_Chip_Pool);
 	    whiteChipPool.chip = hexChip.White;
 	    playerCell[FIRST_PLAYER_INDEX] = whiteChipPool; 
 	    playerCell[SECOND_PLAYER_INDEX] = blackChipPool; 
@@ -257,8 +266,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 	    lastDroppedObject = null;
 	    directionWhiteHome = findDirection('A',1,'A',2);
 	    directionBlackHome = findDirection('A',1,'B',1);
-		playerColor[0]=White_Chip_Pool;
-		playerColor[1]=Black_Chip_Pool;
+		playerColor[0]=HexId.White_Chip_Pool;
+		playerColor[1]=HexId.Black_Chip_Pool;
 		playerChip[0]=hexChip.White;
 		playerChip[1]=hexChip.Black;
 	    // set the initial contents of the board to all empty cells
@@ -481,7 +490,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     private void dropObject(hexCell c)
     {
        pickedSource = null;
-       switch (c.rackLocation)
+       switch (c.rackLocation())
         {
         default:
             G.Error("Not expecting dest " + c.rackLocation);
@@ -518,7 +527,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
       if(ch!=null)
     	{	return(ch.chipNumber()); 
     	}
-      	return (HitNoWhere);
+      	return (NothingMoving);
     }
     /**
      * get the cell represented by a source code, and col,row
@@ -527,7 +536,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
      * @param row
      * @return
      */
-    private hexCell getCell(int source, char col, int row)
+    private hexCell getCell(HexId source, char col, int row)
     {
         switch (source)
         {
@@ -543,14 +552,14 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
     }
     public hexCell getCell(hexCell c)
     {
-    	return((c==null)?null:getCell(c.rackLocation,c.col,c.row));
+    	return((c==null)?null:getCell(c.rackLocation(),c.col,c.row));
     }
 	// pick something up.  Note that when the something is the board,
     // the board location really becomes empty, and we depend on unPickObject
     // to replace the original contents if the pick is cancelled.
     private void pickObject(hexCell c)
     {	pickedSource = c;
-        switch (c.rackLocation)
+        switch (c.rackLocation())
         {
         default:
             G.Error("Not expecting rackLocation " + c.rackLocation);
@@ -646,7 +655,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         }
     }
 void doSwap()
-{	int c = playerColor[0];
+{	HexId c = playerColor[0];
 	hexChip ch = playerChip[0];
 	playerColor[0]=playerColor[1];
 	playerChip[0]=playerChip[1];
@@ -691,16 +700,19 @@ void doSwap()
         	{
         	hexCell animsrc = null;
 			switch(board_state)
-			{ default: G.Error("Not expecting state "+board_state);
-			  case Puzzle: acceptPlacement(); break;
+			{ case Puzzle: acceptPlacement(); break;
+			  case ConfirmSwap:
 			  case Confirm: animsrc = unDropObject(); unPickObject(); break;
 			  case Play:
 			  case PlayOrSwap: acceptPlacement(); break;
+			  case Gameover:
+			  case Resign:
+				  break;
 			}
 			{
 			hexChip po = pickedObject;
 			hexCell src = getCell(m.source,m.to_col,m.to_row); 
-			hexCell dest =  getCell(BoardLocation,m.to_col,m.to_row);
+			hexCell dest =  getCell(HexId.BoardLocation,m.to_col,m.to_row);
 			pickObject(src);
             dropObject(dest);
             /**
@@ -731,7 +743,7 @@ void doSwap()
         	case Puzzle:
          		break;
         	case Confirm:
-        		setState((chips_on_board==1) ? HexState.PlayOrSwap : HexState.Play);
+        		setState(((chips_on_board==1) && !swapped) ? HexState.PlayOrSwap : HexState.Play);
         		break;
         	default: ;
         	}
