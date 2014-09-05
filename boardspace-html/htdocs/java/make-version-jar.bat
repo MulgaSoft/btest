@@ -1,3 +1,2 @@
 jar -cmf online/manifest.txt online/version.jar online/*.class 
-jarsigner -storepass BSkeystore -keystore g:/share/usr/ddyer/crypto/Boardspace.keystore  online/version.jar "david dyer's comodo ca limited id"
-g:/share/usr/ddyer/crypto/Boardspace.keystore ../v102/%%f "david dyer's comodo ca limited id"
+jarsigner -storepass davescommodocert -storetype pkcs12 -keystore g:/share/usr/ddyer/crypto/Boardspace.p12  online/version.jar "david dyer's comodo ca limited id"

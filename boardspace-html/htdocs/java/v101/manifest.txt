@@ -3,8 +3,8 @@ class-path: OnlineLobby.jar Game.jar Sounds.jar jzlib.jar OnlineGame.jar Exxit.j
   Traboulet.jar Dvonn.jar Tzaar.jar Qyshinsu.jar Knockabout.jar Gipf.jar Palago.jar Santorini.jar Spangles.jar Micropul.jar
   Medina.jar Cannon.jar Warp6.jar Triad.jar Che.jar Mutton.jar Octiles.jar Frogs.jar Xiangqi.jar BreakingAway.jar Khet.jar
   Container.jar Arimaa.jar Crossfire.jar Lehavre.jar Entrapment.jar Quinamid.jar Gounki.jar Yspahan.jar Cookie.jar Snakes.jar TicTacNine.jar Raj.jar
-  Universe.jar Volo.jar Syzygy.jar Carnac.jar  Takojudo.jar Gyges.jar 
-  Morelli.jar Rithmomachy.jar Mogul.jar Shogi.jar OnedayInLondon.jar Kamisado.jar Colorito.jar
+  Universe.jar Volo.jar Syzygy.jar Carnac.jar  Takojudo.jar Gyges.jar Euphoria.jar
+  Morelli.jar Rithmomachy.jar Mogul.jar Shogi.jar OnedayInLondon.jar Kamisado.jar Colorito.jar Euphoria.jar
   pf-joi.jar pf.jar bsh.jar
 permissions: all-permissions
 codebase: *.boardspace.net

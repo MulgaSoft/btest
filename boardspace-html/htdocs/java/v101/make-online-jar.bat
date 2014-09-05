@@ -70,6 +70,9 @@ jar -cmf generic-manifest.txt Shogi.jar shogi/*.class shogi/images/*.jpg
 jar -cmf generic-manifest.txt OnedayInLondon.jar oneday/*.class oneday/images/*.jpg
 jar -cmf generic-manifest.txt Morelli.jar morelli/*.class morelli/images/*.jpg
 jar -cmf generic-manifest.txt Colorito.jar colorito/*.class colorito/images/*.jpg
+jar -cmf generic-manifest.txt Euphoria.jar euphoria/*.class euphoria/images/*.jpg euphoria/sounds/*.au euphoria/images/artifacts/*.jpg euphoria/images/dice/*.jpg euphoria/images/markets/*.jpg euphoria/images/dilemmas/*.jpg euphoria/images/recruits/*.jpg
+
+
 jar -i OnlineLobby.jar
 jar -i Launcher.jar
 rm ../v102/*.jar
@@ -82,6 +85,6 @@ rem make new certificate
 rem keytool -storepass BSkeystore -keystore g:/share/usr/ddyer/crypto/Boardspace.keystore  -genkey -validity 1000 -alias Boardspace
 rem
 rem sign the copies, not the originals
-for %%f in (../v102/*.jar) do jarsigner -storepass BSkeystore -keystore g:/share/usr/ddyer/crypto/Boardspace.keystore ../v102/%%f "david dyer's comodo ca limited id"
+for %%f in (../v102/*.jar) do jarsigner -storepass davescommodocert -storetype pkcs12 -keystore g:/share/usr/ddyer/crypto/Boardspace.p12 ../v102/%%f "david dyer's comodo ca limited id"
 rem
 cp online/dictionary/*.data ../v102/online/dictionary
