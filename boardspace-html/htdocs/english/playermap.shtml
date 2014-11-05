@@ -51,7 +51,7 @@ satisfactory if the amount of data involved is fairly small.</font><br>
 <br>
 <applet <!--#include virtual="/cgi-bin/applettag.cgi" --> width=720
 height=360>
-<param name='permissions' value='sandbox'>
+<param name='permissions' value='all-permissions'>
 <param name="rootname" value="the Players World Map"><param name="embed"
  value="true"><param name="viewerclass" value="G:GameReviewer"><param
  name="game" value="zertz"><param name="zertz.classname"
