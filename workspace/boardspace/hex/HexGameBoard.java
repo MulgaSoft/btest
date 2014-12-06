@@ -5,7 +5,6 @@ import java.awt.Graphics;
 import java.util.*;
 
 import lib.*;
-
 import online.game.*;
 import static hex.Hexmovespec.*;
 
@@ -35,10 +34,14 @@ import static hex.Hexmovespec.*;
  */
 
 class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstants
-{	static final boolean debug = false;
+{	static int REVISION = 100;			// 100 represents the initial version of the game
+	int revision = 1;					// games with no revision information will be 100
+	static final boolean debug = false;
 	HexVariation variation = HexVariation.hex;
 	private HexState board_state = HexState.Puzzle;	
 	private HexState unresign = null;	// remembers the orignal state when "resign" is hit
+	private OStack<HexState>robotState = new OStack<HexState>(HexState.class);
+	
 	public HexState getState() { return(board_state); }
     /**
      * this is the preferred method when using the modern "enum" style of game state
@@ -94,40 +97,127 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 	{	return(new hexCell(HexId.BoardLocation,c,r));
 	}
 	
-    public HexGameBoard(String init) // default constructor
+	// constructor 
+    public HexGameBoard(String init,int players,long key) // default constructor
     {
         drawing_style = DrawingStyle.STYLE_NOTHING; // don't draw the cells.  STYLE_CELL to draw them
         Grid_Style = HEXGRIDSTYLE;
-        doInit(init); // do the initialization 
+        doInit(init,key,players,REVISION); // do the initialization 
     }
+    
+    public String gameType() { return(gametype+" "+players_in_game+" "+randomKey+" "+revision); }
+    
+
+    public void doInit(String gtype,long key)
+    {
+    	StringTokenizer tok = new StringTokenizer(gtype);
+    	String typ = tok.nextToken();
+    	int np = tok.hasMoreTokens() ? G.IntToken(tok) : players_in_game;
+    	long ran = tok.hasMoreTokens() ? G.IntToken(tok) : key;
+    	int rev = tok.hasMoreTokens() ? G.IntToken(tok) : revision;
+    	doInit(typ,ran,np,rev);
+    }
+    /* initialize a board back to initial empty state */
+    public void doInit(String gtype,long key,int players,int rev)
+    {	randomKey = key;
+    	revision = rev;
+    	players_in_game = players;
+ 		Random r = new Random(734687);	// this random is used to assign hash values to cells, common to all games of this type.
+		setState(HexState.Puzzle);
+		gtype = gtype.toLowerCase();
+		variation = HexVariation.findVariation(gtype);
+		G.Assert(variation!=null,"No init named %s",gtype);
+		robotState.clear();
+		gametype = gtype;
+		switch(variation)
+		{
+		default: G.Error("Not expecting variation %s",variation);
+			break;
+		case hex_19:
+		case hex_15:
+		case hex:
+			initBoard(variation.firstInCol,variation.ZinCol,null);
+		}
+
+		allCells.setDigestChain(r);		// set the randomv for all cells on the board
+ 		
+	    
+	    blackChipPool = new hexCell(r,HexId.Black_Chip_Pool);
+	    blackChipPool.chip = hexChip.Black;
+	    whiteChipPool = new hexCell(r,HexId.White_Chip_Pool);
+	    whiteChipPool.chip = hexChip.White;
+	    playerCell[FIRST_PLAYER_INDEX] = whiteChipPool; 
+	    playerCell[SECOND_PLAYER_INDEX] = blackChipPool; 
+	    
+	  	setBorderDirections();	// mark the border cells for use in painting
+	    
+	    whoseTurn = FIRST_PLAYER_INDEX;
+	    chips_on_board = 0;
+	    droppedDest = null;
+	    pickedSource = null;
+	    pickedObject = null;
+	    resetState = null;
+	    lastDroppedObject = null;
+	    directionWhiteHome = findDirection('A',1,'A',2);
+	    directionBlackHome = findDirection('A',1,'B',1);
+		playerColor[0]=HexId.White_Chip_Pool;
+		playerColor[1]=HexId.Black_Chip_Pool;
+		playerChip[0]=hexChip.White;
+		playerChip[1]=hexChip.Black;
+	    // set the initial contents of the board to all empty cells
+		emptyCells.clear();
+		for(hexCell c = allCells; c!=null; c=c.next) { c.chip=null; emptyCells.push(c); }
+		fullBoard = emptyCells.size();
+		
+		randomKey = key;
+    
+        animationStack.clear();
+        swapped = false;
+        moveNumber = 1;
+
+        // note that firstPlayer is NOT initialized here
+    }
+
+    public HexGameBoard clone()
+    {
+    	return((HexGameBoard)cloneBoard());
+    }
+    /** create a copy of this board */
     public BoardProtocol cloneBoard() 
-	{ HexGameBoard dup = new HexGameBoard(gametype); 
-	  dup.clone(this);
+	{ HexGameBoard dup = new HexGameBoard(gametype,players_in_game,randomKey); 
+	  dup.copyFrom(this);
 	  return(dup); 
    	}
-    public void copyFrom(BoardProtocol b) { clone((HexGameBoard)b); }
+    public void copyFrom(BoardProtocol b) { copyFrom((HexGameBoard)b); }
 
-    // precompute which border cell decorations needs to be drawn 
-    // this is peculiar to the way we draw the borders of the hex board
-    // not a general game requirement.
-    private void setBorderDirections()
-    {	for(hexCell c = allCells;
-    		c!=null;
-    		c = c.next)
-    	{
-    	int bd = 0;
-        for(int direction=0;direction<6;direction++)
-        {		hexCell border0 = c.exitTo(direction);
-        		hexCell border1 = c.exitTo(direction+1); 
-        		// this is a little complex because the corner cells
-        		// are part of two borders.
-        		if((border0==null) && (border1==null))
-        		{	bd |= (1<<BorderPairIndex[direction]);
-        		}
-        	}
-    	c.borders = bd;
-    	}
+    /* make a copy of a board.  This is used by the robot to get a copy
+     * of the board for it to manipulate and analyze without affecting 
+     * the board that is being displayed.
+     *  */
+    public void copyFrom(HexGameBoard from_b)
+    {
+        super.clone(from_b);
+        revision = from_b.revision;
+        chips_on_board = from_b.chips_on_board;
+        fullBoard = from_b.fullBoard;
+        robotState.copyFrom(from_b.robotState);
+        getCell(emptyCells,from_b.emptyCells);
+        unresign = from_b.unresign;
+        board_state = from_b.board_state;
+        droppedDest = null;
+        pickedSource = getCell(from_b.pickedSource);
+        pickedObject = from_b.pickedObject;
+        resetState = from_b.resetState;
+        lastPicked = null;
+
+        G.copy(playerColor,from_b.playerColor);
+        G.copy(playerChip,from_b.playerChip);
+ 
+        sameboard(from_b); 
     }
+
+    
+
     public void sameboard(BoardProtocol f) { sameboard((HexGameBoard)f); }
 
     /**
@@ -157,7 +247,7 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
 
     /** 
      * Digest produces a 64 bit hash of the game state.  This is used in many different
-     * ways to identify "same" board states.  Some are germaine to the ordinary operation
+     * ways to identify "same" board states.  Some are relevant to the ordinary operation
      * of the game, others are for system record keeping use; so it is important that the
      * game Digest be consistent both within a game and between games over a long period
      * of time which have the same moves. 
@@ -200,91 +290,8 @@ class HexGameBoard extends hexBoard<hexCell> implements BoardProtocol,HexConstan
         return (v);
     }
 
-    /* make a copy of a board.  This is used by the robot to get a copy
-     * of the board for it to manipulate and analyze without affecting 
-     * the board that is being displayed.
-     *  */
-    public void clone(HexGameBoard from_b)
-    {
-        super.clone(from_b);
 
-        chips_on_board = from_b.chips_on_board;
-        fullBoard = from_b.fullBoard;
-        
-        getCell(emptyCells,from_b.emptyCells);
-        unresign = from_b.unresign;
-        board_state = from_b.board_state;
-        droppedDest = null;
-        pickedSource = getCell(from_b.pickedSource);
-        pickedObject = from_b.pickedObject;
-        resetState = from_b.resetState;
-        lastPicked = null;
 
-        G.copy(playerColor,from_b.playerColor);
-        G.copy(playerChip,from_b.playerChip);
- 
-        sameboard(from_b); 
-    }
-
-    /* initialize a board back to initial empty state */
-    public void doInit(String gtype,long key)
-    {	
-		Random r = new Random(734687);	// this random is used to assign hash values to cells
-		setState(HexState.Puzzle);
-		gtype = gtype.toLowerCase();
-		variation = HexVariation.findVariation(gtype);
-		G.Assert(variation!=null,"No init named %s",gtype);
-		switch(variation)
-		{
-		default: G.Error("Not expecting variation %s",variation);
-			break;
-		case hex_19:
-		case hex_15:
-		case hex:
-			initBoard(variation.firstInCol,variation.ZinCol,null);
-		}
-
-		allCells.setDigestChain(r);		// set the randomv for all cells on the board
- 		gametype = gtype;
-		
-	    
-	    blackChipPool = new hexCell(r,HexId.Black_Chip_Pool);
-	    blackChipPool.chip = hexChip.Black;
-	    whiteChipPool = new hexCell(r,HexId.White_Chip_Pool);
-	    whiteChipPool.chip = hexChip.White;
-	    playerCell[FIRST_PLAYER_INDEX] = whiteChipPool; 
-	    playerCell[SECOND_PLAYER_INDEX] = blackChipPool; 
-	    
-	  	setBorderDirections();	// mark the border cells for use in painting
-	    
-	    whoseTurn = FIRST_PLAYER_INDEX;
-	    chips_on_board = 0;
-	    droppedDest = null;
-	    pickedSource = null;
-	    pickedObject = null;
-	    resetState = null;
-	    lastDroppedObject = null;
-	    directionWhiteHome = findDirection('A',1,'A',2);
-	    directionBlackHome = findDirection('A',1,'B',1);
-		playerColor[0]=HexId.White_Chip_Pool;
-		playerColor[1]=HexId.Black_Chip_Pool;
-		playerChip[0]=hexChip.White;
-		playerChip[1]=hexChip.Black;
-	    // set the initial contents of the board to all empty cells
-		emptyCells.clear();
-		for(hexCell c = allCells; c!=null; c=c.next) { c.chip=null; emptyCells.push(c); }
-		fullBoard = emptyCells.size();
-		
-		randomKey = key;
-    
-        animationStack.clear();
-        swapped = false;
-        moveNumber = 1;
-
-        // note that firstPlayer is NOT initialized here
-    }
-
- 
     //
     // change whose turn it is, increment the current move number
     //
@@ -885,7 +892,7 @@ void doSwap()
     */
     public void RobotExecute(Hexmovespec m)
     {
-        m.state = board_state; //record the starting state. The most reliable
+        robotState.push(board_state); //record the starting state. The most reliable
         // to undo state transistions is to simple put the original state back.
         
         //G.Assert(m.player == whoseTurn, "whoseturn doesn't agree");
@@ -915,7 +922,7 @@ void doSwap()
     public void UnExecute(Hexmovespec m)
     {
         //System.out.println("U "+m+" for "+whoseTurn);
-
+    	HexState state = robotState.pop();
         switch (m.op)
         {
         case MOVE_START:
@@ -930,7 +937,7 @@ void doSwap()
             break;
             
         case MOVE_SWAP:
-        	setState(m.state);
+        	setState(state);
         	doSwap();
         	break;
         case MOVE_DROPB:
@@ -939,7 +946,7 @@ void doSwap()
         case MOVE_RESIGN:
             break;
         }
-        setState(m.state);
+        setState(state);
         if(whoseTurn!=m.player)
         {	moveNumber--;
         	setWhoseTurn(m.player);
@@ -969,6 +976,27 @@ void doSwap()
  	return(all);
  }
  
+ // precompute which border cell decorations needs to be drawn 
+ // this is peculiar to the way we draw the borders of the hex board
+ // not a general game requirement.
+ private void setBorderDirections()
+ {	for(hexCell c = allCells;
+ 		c!=null;
+ 		c = c.next)
+ 	{
+ 	int bd = 0;
+     for(int direction=0;direction<6;direction++)
+     {		hexCell border0 = c.exitTo(direction);
+     		hexCell border1 = c.exitTo(direction+1); 
+     		// this is a little complex because the corner cells
+     		// are part of two borders.
+     		if((border0==null) && (border1==null))
+     		{	bd |= (1<<BorderPairIndex[direction]);
+     		}
+     	}
+ 	c.borders = bd;
+ 	}
+ }
  // small ad-hoc adjustment to the grid positions
  public void DrawGridCoord(Graphics gc, Color clt,int xpos, int ypos, int cellsize,String txt)
  {   if(Character.isDigit(txt.charAt(0)))

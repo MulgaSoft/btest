@@ -34,8 +34,7 @@ import static checkerboard.CheckerMovespec.*;
  */
 
 class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,CheckerConstants
-{	private int players_in_game = 2;
-	public int nPlayers() { return(players_in_game); }
+{	
     public int boardColumns;	// size of the board
     public int boardRows;
     public void SetDrawState() { setState(CheckerState.Draw); }

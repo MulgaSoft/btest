@@ -176,15 +176,16 @@ public class HexGameViewer extends commonCanvas
 	 * info contains all the goodies from the environment.
 	 * */
     public void init(exHashtable info)
-    {	// for games with more than two players, the default players list should be 
+    {	
+    	// for games with more than two players, the default players list should be 
     	// adjusted to the actual number, adjusted by the min and max
-       	// int players_in_game = Math.max(3,info.getInt(exHashtable.PLAYERS_IN_GAME,4));
-    	// players = new commonPlayer[players_in_game];
+       	int players_in_game = Math.max(2,info.getInt(exHashtable.PLAYERS_IN_GAME,2));
+    	players = new commonPlayer[players_in_game];
     	// 
     	// for games that require some random initialization, the random key should be
     	// captured at this point and passed to the the board init too.
-        // randomKey = info.getInt(exHashtable.RANDOMSEED,-1);
-    	//
+        int randomKey = info.getInt(exHashtable.RANDOMSEED,-1);
+        
         super.init(info);
         // use_grid=reviewer;// use this to turn the grid letters off by default
 
@@ -197,7 +198,12 @@ public class HexGameViewer extends commonCanvas
          
         rotationOption = myFrame.addOption("rotate board",true,deferredEvents);
         
-        bb = new HexGameBoard(info.getString(exHashtable.GAMETYPE, HexVariation.hex.name));
+        String type = info.getString(exHashtable.GAMETYPE, HexVariation.hex.name);
+        // recommended procedure is to supply players and randomkey, even for games which
+        // are current strictly 2 player and no-randomization.  It will make it easier when
+        // later, some variant is created, or the game code base is re purposed as the basis
+        // for another game.
+        bb = new HexGameBoard(type,players_in_game,randomKey);
         doInit(false);
 
     }
@@ -394,7 +400,7 @@ public class HexGameViewer extends commonCanvas
             p0time.y = firstPlayerRect.y;
             p0time.width = 3*CELLSIZE/2;
             p0time.height = CELLSIZE;
-            // first player "i'm alive" anumation ball
+            // first player "i'm alive" animation ball
             p0anim.x = G.Right(p0time) ;
             p0anim.y = p0time.y;
             p0anim.width = CELLSIZE;
@@ -658,6 +664,8 @@ public class HexGameViewer extends commonCanvas
        HexGameBoard gb = (disb==null)?bb:disb;
        HexState state = gb.getState();
        boolean moving = (getMovingObject()>=0);
+       
+       setDisplayParameters(gb,boardRect);
        // 
        // if it is not our move, we can't click on the board or related supplies.
        // we accomplish this by supressing the highlight pointer.
@@ -1081,6 +1089,26 @@ public class HexGameViewer extends commonCanvas
         	offGC.drawImage(allFixed,0,0,fullRect.width,fullRect.height,this);
     	}
      }
+    private boolean setDisplayParameters(HexGameBoard gb,Rectangle r)
+    {
+      	boolean complete = false;
+      	if(doRotation!=lastRotation)		//if changing the whole orientation of the screen, unusual steps have to be taken
+      	{ complete=true;					// for sure, paint everything
+      	  lastRotation=doRotation;			// and only do this once
+      	  if(doRotation)
+      	  {
+      	  // 0.95 and 1.0 are more or less magic numbers to match the board to the artwork
+          gb.SetDisplayParameters(0.95, 1.0, 0,0,60); // shrink a little and rotate 60 degrees
+     	  }
+      	  else
+      	  {
+          // the numbers for the square-on display are slightly ad-hoc, but they look right
+          gb.SetDisplayParameters( 0.825, 0.94, 0,0,28.2); // shrink a little and rotate 30 degrees
+      	  }
+      	}
+      	gb.SetDisplayRectangle(r);
+      	return(complete);
+    }
     /** this is the place where the canvas is actually repainted.  We get here
      * from the event loop, not from the normal canvas repaint request.
      * <p>
@@ -1119,22 +1147,9 @@ public class HexGameViewer extends commonCanvas
       	Image offScreen = createOffScreen(fullRect.width, fullRect.height); // create the intermediate bitmap
       	Graphics offGC = (offScreen==null) ? g : offScreen.getGraphics();
       	G.setClip(offGC,fullRect);
-      	
-      	if(doRotation!=lastRotation)		//if changing the whole orientation of the screen, unusual steps have to be taken
-      	{ complete=true;					// for sure, paint everything
-      	  lastRotation=doRotation;			// and only do this once
-      	  if(doRotation)
-      	  {
-      	  // 0.95 and 1.0 are more or less magic numbers to match the board to the artwork
-          gb.SetDisplayParameters(0.95, 1.0, 0,0,60); // shrink a little and rotate 60 degrees
-     	  }
-      	  else
-      	  {
-          // the numbers for the square-on display are slightly ad-hoc, but they look right
-          gb.SetDisplayParameters( 0.825, 0.94, 0,0,28.2); // shrink a little and rotate 30 degrees
-      	  }
-      	}
-      	gb.SetDisplayRectangle(boardRect);
+ 
+      	complete |= setDisplayParameters(gb,boardRect);
+
       	drawFixedElements(offGC,complete,gb);	// draw the board into the deep background
    	
     	// draw the board contents and changing elements.
@@ -1170,9 +1185,7 @@ public class HexGameViewer extends commonCanvas
      */
      public String gameType() 
     	{
-    	   // in games which have a randomized start, this method would return
-    	   // return(bb.gametype+" "+bb.randomKey); 
-    	return(bb.gametype); 
+    	return(bb.gameType()); 
     	}	
      
     // this is the subgame "setup" within the master type.
@@ -1218,12 +1231,15 @@ public class HexGameViewer extends commonCanvas
      public void performHistoryInitialization(StringTokenizer his)
     {   //the initialization sequence
     	String token = his.nextToken();
+    	int np = G.IntToken(his);	// players always 2
+    	long rv = G.IntToken(his);
+    	int rev = G.IntToken(his);	// rev does't get used either
     	//
     	// in games which have a randomized start, this is the point where
     	// the randomization is inserted
         // int rk = G.IntToken(his);
     	// bb.doInit(token,rk);
-        bb.doInit(token);
+        bb.doInit(token,rv,np,rev);
     }
 
 

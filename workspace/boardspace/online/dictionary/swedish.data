@@ -1,6 +1,7 @@
 S 
 K #1 #2 Containers
 V #1 #2 containrar
+S #1 +1 Knowledge (thanks to Josia The Hacker)
 S #1 Camels
 S #1 Captured, #2%
 S #1 Cards
@@ -13,6 +14,7 @@ K #1 center
 V #1 i mitten
 K #1 deliberately quit
 V #1 l\u00e4mnade rummet avsiktligt
+S #1 gets an artifact card (from Jacko the Archivist)
 K #1 has been muted, by a consensus of the players
 V #1 har f\u00e5tt talf\u00f6rbud, i enlighet med spelarnas \u00f6nskan
 K #1 has quit and become a spectator
@@ -90,6 +92,7 @@ S #1{##no unused recruit cards,# unused recruit cards,# unused recruit cards}
 S #1{##no used recruit cards,# used recruit cards,# used recruit cards}
 S #1{##no water,# water,# water}
 S #1{##no workers,# worker,# workers}
+S #2 lose #1 due to roll penalties
 K (unknown)
 V (ok\u00e4nt)
 K (unoccupied)
@@ -97,10 +100,11 @@ V (ledig)
 K (vacancy)
 V (fr\u00e5nvarande)
 S + #1 turns
+S +1 Artifact and +1 Resource for #1 (from Steven the Scholar)
 S +1 Artifact card (from Kyle the Scavenger)
-S +1 Artifact card and +1 Resource (from Steven the Scholar)
 S +1 Bliss (from Sarinee the Cloud Miner)
 S +1 Energy (from Faith the Hydroelectrician)
+S +1 Energy (from Gary the Electrician)
 S +1 Energy (from Zong the Astronomer)
 S +1 Food (from Katy the Dietician)
 S +1 Food (from Scarby the Harvester)
@@ -112,6 +116,8 @@ S +1 Knowledge, +1 #1 (from Xander the Excavator)
 S +1 Morale (from Gary the Electrician)
 S +1 Morale (from Nick the Understudy)
 S +1 Morale (from Soulless the Plumbler)
+S +1 Morale (thanks to Josia the Hacker)
+S +1 Morale or -1 Knowledge
 S +1 Stone (from Maggie the Outlaw)
 S +1 Water (from Ian the Horticulturist)
 S +1 Water (from Maggie the Outlaw)
@@ -124,13 +130,18 @@ S +2 Knowledge for +2 Artifact cards keep 1 (from Bradley the Futurist)
 S +2 Knowledge to use this tunnel (from Kadan the Infiltrator)
 S +2 Knowledge, +1 Artifact card (from Jonathan the Artist)
 S +2 Knowledge, +1 Resource (from Brett the Lock Picker)
+S +2 Knowledge, Extra miner movement, Extra #1 (from Dave the Demolitionist)
 S +2 Morale (from Ray the Foreman)
+S +2 Morale or -2 Knowledge
+S -1 Artifact (Book), +2 Energy +2 Morale (from Esme the Fireman)
+S -1 Artifact (Book), +2 Energy -2 Knowledge (from Esme the Fireman)
 S -1 Artifact, +1 Energy +1 Morale (from Esme the Fireman)
 S -1 Artifact, +1 Energy -1 Knowledge (from Esme the Fireman)
 S -1 Gold to #1, +2 Cards (from Laura The Philanthropist)
 S -1 Knowledge (from Curtis the Propagandist)
 S -1 Knowledge (from Sarinee the Cloud Miner)
 S -1 Knowledge (from Scarby the Harvester)
+S -1 Morale for +1 Resource (from Julia the Thought Inspector)
 S -1 Morale, +1 Commodity (from Lee the Gossip)
 S -2 Knowledge (from Ray the Foreman)
 S -2 Knowledge instead of +2 Morale (from Gidget the Hypnotist)
@@ -142,6 +153,7 @@ S -2 Morale for +1 Resource (from Julia the Thought Inspector)
 S -2 Morale, +1 Artifact card (from Flavio the Merchant)
 K ...plus #1 more
 V ...plus #1 till
+S 1 Artifact (and others +1 Artifact), or a pair of Artifacts, or 3 Artifacts
 S 1 Artifact Card and 1 Bliss or 1 Food
 S 1 Artifact Card and 4 Food or Bliss
 S 1 Artifact card
@@ -163,7 +175,6 @@ S 1 Bliss and 1 non-bliss Commodity
 S 1 Bliss or 1 Food
 S 1 Bliss or 1 Food or 1 Energy
 S 1 Bliss or 1 Food, plus 1 not Bliss
-S 1 Bliss,  or click on DONE for +1 Knowledge (from Matthew the Thief)
 S 1 Book Artifact card
 S 1 Book or 2 other Artifact cards
 S 1 Box Artifact card
@@ -182,8 +193,8 @@ S 1 Commodity and 1 Bifocals Artifact card
 S 1 Commodity and 1 Book Artifact card
 S 1 Commodity and 1 Box Artifact card
 S 1 Commodity or 1 Resource
-K 1 Food
-V 1 food
+S 1 Energy
+S 1 Energy,  or click on DONE for +1 Knowledge (from Matthew the Thief)
 S 1 Food,  or click on DONE for +1 Knowledge (from Matthew the Thief)
 S 1 Gold
 S 1 Gold or 1 Artifact card
@@ -191,7 +202,6 @@ S 1 Gold or 1 Bliss
 S 1 Gold or 1 Food or 1 Bliss
 S 1 Knowledge
 S 1 Morale
-S 1 Morale or -1 Knowledge
 S 1 Resource
 S 1 Resource and 4 Food or Bliss
 S 1 Resource or 1 Bliss
@@ -206,11 +216,11 @@ S 1 Water or 1 Energy (from Zong the Astronomer)
 S 1 Water or 1 Stone (from Maggie the Outlaw)
 S 1 Water, or click on DONE for +1 Knowledge (from Matthew the Thief)
 S 1 commodity (not Bliss)
-K 1 energy
-V 1 Energy
+S 1 food
 S 1 resource, with +1 knowledge, +1 morale if you use Gold
 S 2 Artifact cards
 S 2 Artifact cards, keep 1 of them
+S 2 Cards (after preview by  Geek the Oracle)
 S 2 Cards (hand limit: low Morale)
 S 2 Clay
 S 2 Commodities or Resources
@@ -218,18 +228,18 @@ S 2 Gold
 S 2 Knowledge
 S 2 Morale
 S 2 Stone
+S 2 energy
 S 2 resources
 S 3 Artifact cards
 S 3 Artifact cards, or a Pair of Artifact Cards
 S 3 Bliss
 S 3 Cards (hand limit: low Morale)
 S 3 Commodities or Resources
+S 3 Energy
 S 3 Food
 S 3 Resources
-K 3 energy
-V 3 Energy
-K 3 water
-V 3 Water
+S 3 Water
+S 4 Bliss
 S 4 Bliss and 1 Resource
 S 4 Bliss and 1 Resource, or 5 Bliss
 S 4 Cards (hand limit: low Morale)
@@ -241,8 +251,6 @@ S 4 Energy and 1 Clay, Bliss or Food
 S 4 Energy and 1 Stone
 S 4 Energy and 1 Stone or 1 Bliss
 S 4 Energy and 1 Stone, Bliss, or Food
-K 4 Food
-V 4 food
 S 4 Food and 1 Artifact card
 S 4 Food and 1 Gold
 S 4 Food and 1 Gold or 1 Bliss
@@ -257,8 +265,7 @@ S 4 Water and 1 Clay, Bliss or Food
 S 4 Water and 1 Gold
 S 4 Water and 1 Gold or 1 Bliss
 S 4 Water and 1 Gold, Bliss or Food
-K 4 bliss
-V 4 Bliss
+S 4 food
 K 4w 5g 6b or 3 of each wins
 V 4v 5g 6s eller 3 av varje ger vinst
 S 5 Cards (hand limit: low Morale)
@@ -294,6 +301,7 @@ K All Games
 V Alla spel
 K Allow challenges from #1
 V Till\u00e5t inbjudningar fr\u00e5n #1
+S Amanda the broker selects a #1
 S Ambush
 S Ancient Games
 K Animate
@@ -321,17 +329,15 @@ V Army Of Frogs
 K ArmyOfFrogs_variation
 V Army of Frogs standard
 S Arrange a 10 stop trip through the London tube
-K Artifact Card
-V Artifact card
+S Artifact
 S Artifact Deck
 S Artifact Discards
+S Artifact card
 K Auction
 V Auktion
 K Aug #1#2#3
 V #1 Aug, #2:#3 GMT
 S Authority
-K Authority Token
-V authority token
 S Award the prize
 S Bag
 S Bank
@@ -345,6 +351,7 @@ K Black
 V Svart
 S Black Palace
 S Black Palace Bonus (2 points)
+S Bliss
 K Blue
 V Bl\u00e5
 S Blue Dome
@@ -374,6 +381,7 @@ V Bygg intill m\u00e4nniskan du flyttade
 K Build an initial stack of 2 to be placed
 V Bygg och placera en inledande h\u00f6g p\u00e5 2
 S Buildings
+S Bumped #1 gets roll of #2 (from Julia the Thought Inspector)
 S Buy Chips
 S Buy a building with no camels
 S Buy a building with no gold
@@ -462,6 +470,8 @@ S Click on DONE to complete placing the worker
 S Click on DONE to complete retrieval
 S Click on DONE to confirm your choice of recruits
 S Click on DONE to confirm your payment
+S Click on DONE to use Jacko The Archivist
+S Click on DONE to use Jacko The Archivist, or continue with more cards
 S Click on Done to begin the building phase
 K Click on Done to complete the capture
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta f\u00e5ngst
@@ -545,6 +555,7 @@ K Confirm Dropping this rider
 V Bekr\u00e4fta borttagning
 S Confirm using your recruit ability
 S Confirm your benefit selection
+S Confirm your choice of recruits
 S Confirm your decision to fight the Opressor
 S Confirm your decision to join the Establishment
 S Confirming card selection
@@ -671,6 +682,7 @@ V \u00c4ndra
 K Eliminate all your opponent's pieces
 V Eliminera alla motst\u00e5ndarens pj\u00e4ser
 S EndSale
+S Energy
 S Entrapment
 S Entrapment-6x7
 K Entrapment-6x7_variation
@@ -758,8 +770,7 @@ K Farmer select
 V Val av bonde
 K Feb #1#2#3
 V #1 Feb, #2:#3 GMT
-K Fight the opressor
-V Fight The Opressor
+S Fight The Opressor
 K Final Scores:
 V Slutst\u00e4llning:
 K Finished Capturing, Click Done
@@ -779,8 +790,6 @@ K Flagship wins at any edge square
 V Flaggskeppet m\u00e5ste n\u00e5 en kantruta f\u00f6r vinst
 K Flip a tile, or Move Split or Merge a stack
 V V\u00e4nd p\u00e5 en bricka, eller flytta, dela eller blanda en h\u00f6g.
-K Food
-V food
 K Form a closed shape in your color
 V Forma en sluten form i din f\u00e4rg
 S Free Energy
@@ -791,6 +800,7 @@ V Army of Frogs
 K From #1
 V Fr\u00e5n #1
 S Gained 2 cards instead of 1 (from Jonathan the Gambler)
+S Gained 2 cards instead of 1 (thanks to Jonathan the Gambler)
 S Gained 3 cards instead of 1 (from Jonathan the Gambler)
 S Gained no cards instead of 1 (from Jonathan the Gambler)
 K Game
@@ -835,6 +845,7 @@ K Gobbletm
 V GobbletM
 K Gobbletm_variation
 V Ingen tjuvkikning, minnet g\u00e4ller
+S Gold
 S Gounki
 K Gounki_family
 V Gounki
@@ -935,10 +946,9 @@ K Jan #1#2#3
 V #1 Jan, #2:#3 GMT
 K Join
 V G\u00e5 in i
-K Join The Establishment
-V Join the Establishment
 K Join only if Invited
 V Endast inbjudna kan spela
+S Join the Establishment
 K Joining as a spectator
 V #1 \u00e4r nu \u00e5sk\u00e5dare
 K Joint Review
@@ -1018,6 +1028,7 @@ V L\u00e5n
 S Lobby
 K Lobby shutdown...
 V Lobbyn st\u00e4nger...
+S Lose a #2 to knowledge check, total was #1
 S Lose an extra morale due to the Cafeteria of Nameless Meat
 K Machines
 V Maskiner
@@ -1029,6 +1040,7 @@ K Make an addional capturing move, or click on Done
 V G\u00f6r ytterligare ett er\u00f6vrande drag, eller klicka p\u00e5 Klar
 K Make an addional move, or click on Done
 V G\u00f6r ett ytterligare drag, eller klicka p\u00e5 Klar
+S Make the first move, or click on Done to move second
 S Make the first move, or pass and move second
 K Make the first move, or swap and move second
 V G\u00f6r det f\u00f6rsta draget, eller byt f\u00e4rg och g\u00f6r det andra draget
@@ -1245,7 +1257,8 @@ K Pass
 V Passa
 S Pay
 S Pay #1 
-S Pay #1, or click on DONE to coninue with no penalty (from Yordy the Demotivator)
+S Pay #1 for +2 Morale, or click on DONE to continue and -1 Morale
+S Pay #1, or click on DONE to continue with no penalty (from Yordy the Demotivator)
 S Pay Camel
 S Pay Gold
 K Pay a camel or click Done to send the cube to the caravan
@@ -1255,6 +1268,9 @@ S Pay to Join the Establishment
 S Pay to fight the opressor
 S Pay with Artifact card, gain Morale (from Flartner the Luddite)
 S Pay with energy, +1 Morale -1 Knowledge (from Jefferson the Shock Artist)
+S Pay with knowledge instead of Energy (from Matthew the Thief)
+S Pay with knowledge instead of Food (from Matthew the Thief)
+S Pay with knowledge instead of Water (from Matthew the Thief)
 S PayChip
 S Phlip
 K Phlip_family
@@ -1277,6 +1293,8 @@ S Place #1 cubes in Chest neighborhood
 S Place #1 cubes in Chest neighborhood, take a card, or move the supervisor #2 spaces
 S Place #1 cubes in Vase neighborhood
 S Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 spaces
+S Place 2 tiles
+S Place 2 tiles or a bridge
 K Place a Chip, or a Jewel, or a chip from the Store
 V Placera en bricka, eller en \u00e4delsten, eller en bricka fr\u00e5n aff\u00e4ren
 K Place a Frog on the board
@@ -1286,6 +1304,7 @@ V Placera en Gipf-bricka p\u00e5 en yttre position
 S Place a Menhir on the board
 S Place a bird on an empty cell
 S Place a bird on an empty cell, or designate a bird to fly
+S Place a bridge, or click on DONE to Pass
 K Place a chip on a starting point
 V Placera en bricka p\u00e5 en yttre position
 S Place a chip on the board
@@ -1312,6 +1331,7 @@ V Placera en ring p\u00e5 br\u00e4det
 S Place a roamer on the board
 K Place a second piece on the board
 V Placera den andra gubben p\u00e5 br\u00e4det
+S Place a second tile
 K Place a second tile adjacent to the first
 V Placera den andra brickan intill den f\u00f6rsta
 K Place a second tile adjacent to those already on the board
@@ -1347,6 +1367,8 @@ V Placera den f\u00f6rsta gubben p\u00e5 br\u00e4det
 S Place the new worker
 K Place the next tile on the board, where a runner can move over it
 V Placera n\u00e4sta bricka p\u00e5 br\u00e4det, d\u00e4r en l\u00f6pare kan passera \u00f6ver den
+S Place the other end of the bridge
+S Place two tiles or swap colors
 S Place you cards in your rack
 S Place your benefit here
 K Place your bid to fund the loan
@@ -1397,6 +1419,11 @@ S Polyomino Flip
 K Polyomino Flip_variation
 V Polyomino Flip
 S Polyomino Games
+S Ponte del Diavolo
+K Ponte_Del_Diavolo_family
+V Ponte del Diavolo
+K Ponte_variation
+V 10x10 Ponte Del Diavolo
 K Position the starting rings
 V Placera startringarna
 K Prisoners captured by Black are held here
@@ -1520,6 +1547,7 @@ K Select Robot
 V V\u00e4lj bot
 K Select Row #1
 V Row #1
+S Select a different initial setup setup, or click on Done
 S Select a group of dice
 K Select a ring to remove
 V V\u00e4lj en ring att ta bort
@@ -1620,6 +1648,7 @@ V Starta vit
 K State unknown.
 V Ok\u00e4nd status
 S Still in the Auction
+S Stone
 S Subterran
 S Subterran Authority
 S Subterran Market
@@ -1697,6 +1726,7 @@ V standard Tako Judo
 K Tamsk_variation
 V Tamsk standard
 S Tan
+S The auction is for a #1 card, or the right to sell #2 cards
 K The game is a draw
 V Spelet \u00e4r remi
 K The game record is not available during the game
@@ -1804,6 +1834,7 @@ V Os\u00e5lda magasin
 S Unused Dilemmas
 S Unused Markets
 S Unused Recruits
+S Unused Workers
 S Upgrade the tunnel effect (from Andrew the Spelunker)
 S Use Recruit Ability
 S Use your recruit's power, or click on DONE to proceed normally
@@ -1845,6 +1876,7 @@ K Wait for the other players to decide
 V v\u00e4nta p\u00e5 att den andra spelaren best\u00e4mmer
 S Wait for the other players to fill their racks
 S Wait for the other players to play
+S Waiting for the other players to choose recruits
 K Waiting in
 V V\u00e4ntar i
 S Wall
@@ -1863,6 +1895,7 @@ S Wastelander Authority
 S Wastelander Market
 S Wastelander Tunnel
 S Wastelanders only: play here to get 3 energy
+S Water
 K Welcome to Game client, version #1
 V V\u00e4lkommen till BoardSpace klient, version #1
 K White
@@ -1894,6 +1927,7 @@ K Yinsh_family
 V Yinsh
 K Yinsh_variation
 V Yinsh standard
+S Yordy the Demotivator selects a #1
 K You can only resign when it is your move
 V Du kan bara ge upp n\u00e4r det \u00e4r ditt drag
 S You cannot resign in a multiplayer game
@@ -1959,16 +1993,14 @@ K announceOption
 V Nya spelare
 S any 5 Bliss or food, or any 4 with a resource
 S arithmetic
-K artifact
-V Artifact
+S authority token
 S authority tokens
 S authority zone
 K automute
 V #1 har automatiskt f\u00e5tt talf\u00f6rbud
 S bid and win the most prize value
 S blast your opponent's pharoh
-K bliss
-V Bliss
+S bridge islands of exactly 4 squares to score points
 K build an ideal city
 V bygg en ideal stad
 K capture all of one opponentr's color
@@ -1988,14 +2020,13 @@ V Carnac with a small board
 K center square is not special
 V mittrutan \u00e4r inte speciell
 S click Done to finish this Auction
+S click on DONE to confirm swapping colors
 S connect all your birds into one flock
 K connect opposite sides with a chain of markers
 V Bind ihop dina motsatta sidor
 K connecting
 V Ansluter till 
 S do what it takes to win
-K energy
-V Energy
 K enterMessage
 V #1 har stigit in
 K enters the room
@@ -2004,6 +2035,7 @@ K expand the board with your color tiles
 V ut\u00f6ka br\u00e4det med brickor av din f\u00e4rg
 K fontfamily
 V sansserif
+S food
 K form a larger triangle with your color at the tips
 V Bygg en st\u00f6rre triangel i din f\u00e4rg, mitten kan vara av motst\u00e5ndarens f\u00e4rg
 S form the most groups of 3 or more adjacent squares your color
@@ -2012,8 +2044,6 @@ V finansiera ett l\u00e5n fr\u00e5n en spelare eller bank
 K game selector
 V spelv\u00e4ljare
 S geometric
-K gold
-V Gold
 K gold: escape the flagship  silver: capture gold flagship
 V Guld: fly med flaggskeppet; Silver: er\u00f6vra guldflaggskepept
 K guest
@@ -2034,7 +2064,6 @@ V Startar \u00e5sk\u00e5darl\u00e4ge, session #1
 S load a luxury container
 K loaderr
 V Kan inte ladda: 
-S lose #1 due to market re-roll penalties
 K make 4 in a row in any direction
 V 4 i rad i n\u00e5gon riktning ger vinst
 S make 5 in a row
@@ -2079,6 +2108,7 @@ V Lobbyn \u00e4r inte ansluten till servern.
 S own all the stacks
 S own the most blocks
 S pay +1 Knowledge instead of #1 (from Matthew the Thief)
+S pay with any resource (from Michael the Engineer)
 K perspective
 V perspektiv
 S place all 10 authority tokens
@@ -2113,7 +2143,7 @@ V ..\u00e5teranslutning lyckades
 S retrieve another worker, or hit DONE
 S reviewing
 S sacrifice a worker
-S sacrifice worker for +4 Food and +1 Resource (from Sheppard the Lobotomist)
+S sacrifice worker for +4 Bliss and +1 Resource (from Sheppard the Lobotomist)
 K savedmsg
 V Spel sparat som #1
 K select the game to play
@@ -2132,8 +2162,6 @@ K stack six or capture six
 V Stapla 6 eller er\u00f6vra 6
 K stillwaiting
 V startar fortfarande... var god v\u00e4nta.
-K stone
-V Stone
 K surround your opponents queen bee
 V omringa din motst\u00e5ndares bidrottning
 S take 1 water, or click on DONE to get +1 Morale (from Soulless the Plumber)
@@ -2143,14 +2171,10 @@ K timeoutWarning
 V   Lobbyn st\u00e4nger om en minut p.g.a. inaktivitet.
 K trade a second container for a gold container
 V byt en andra container mot en guldcontainer
-K unused workers
-V Unused Workers
 S use Bliss instead of Resource (from Josh the Negotiator)
 K use Wooden tiles
 V Anv\u00e4nd tr\u00e4brickor
 S used Food instead of Bliss (from Brian the Viticulturist)
-K water
-V Water
 K website
 V #1 BoardSpace
 K welcome
@@ -2160,4 +2184,4 @@ V du kan h\u00f6ja ditt bud
 S you should never see this
 K your name
 V Ditt namn
-N 1420
+N 1460

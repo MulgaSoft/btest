@@ -18,11 +18,7 @@ import static checkerboard.CheckerMovespec.*;
 public class CheckerGameViewer extends commonCanvas 
 	implements ViewerProtocol, CheckerConstants, sgf_names
 {
-     /**
-	 * 
-	 */
-	private static final long serialVersionUID = 0;
-	// colors
+     // colors
     private Color reviewModeBackground = new Color(220,165,200);
     private Color HighlightColor = new Color(0.2f, 0.95f, 0.75f);
     private Color rackBackGroundColor = new Color(194,175,148);
@@ -850,7 +846,6 @@ private void playSounds(commonMove mm)
 	    switch(hitObject)
 	    {
 	    case LiftRect:
-	    case ReverseViewButton:
              break;
 	    case Black_Chip_Pool:
 	    	PerformAndTransmit("Pick B "+cell.row+" "+chip.chipNumber());

@@ -3,7 +3,6 @@ package hex;
 import java.util.Random;
 
 import lib.*;
-
 import online.game.*;
 import online.common.*;
 import online.search.*;
@@ -49,7 +48,7 @@ import online.search.*;
  * @author ddyer
  *
  */
-public class HexPlay extends commonRobot implements Runnable, HexConstants,
+public class HexPlay extends commonRobot<HexGameBoard> implements Runnable, HexConstants,
     RobotProtocol
     {
 	// this is an internal value used to affect the search in several ways.  Normal "value of position" results
@@ -61,7 +60,7 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
     boolean UCT_WIN_LOSS = false;
     boolean MONTEBOT = false;
     boolean EXP_MONTEBOT = false;
-    int VERBOSE = 0;						// 0 is normal, 1 displays each new principal variation, 2 displays all top level variations.
+    int VERBOSE = 1;						// 0 is normal, 1 displays each new principal variation, 2 displays all top level variations.
     boolean SAVE_TREE = false;				// debug flag for the search driver.  Uses lots of memory. Set a breakpoint after the search.
     int MAX_DEPTH = 5;						// search depth.
 	static final boolean KILLER = false;	// if true, allow the killer heuristic in the search
@@ -70,8 +69,6 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
 
     int Strategy = DUMBOT_LEVEL;
     
-    HexGameBoard GameBoard = null;			// this is the "real" game board we're starting from, but make a copy of
-    HexGameBoard board = null;				// this is our local copy
     int boardSearchLevel = 0;				// the current search depth
 
     /**
@@ -276,8 +273,7 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
      * */
     public void StaticEval()
     {
-            HexGameBoard evboard = new HexGameBoard(GameBoard.gametype);
-            evboard.clone(GameBoard);
+            HexGameBoard evboard = GameBoard.clone();
             double val0 = ScoreForPlayer(evboard,FIRST_PLAYER_INDEX,true);
             double val1 = ScoreForPlayer(evboard,SECOND_PLAYER_INDEX,true);
             System.out.println("Eval is "+ val0 +" "+val1+ " = " + (val0-val1));
@@ -296,7 +292,7 @@ public class HexPlay extends commonRobot implements Runnable, HexConstants,
     {
         InitRobot(info);
         GameBoard = (HexGameBoard) gboard;
-        board = new HexGameBoard(GameBoard.gametype);
+        board = GameBoard.clone();
         // strategy with be 0,1,2 for Dumbot, Smartbot, Bestbot
         Strategy = stragegy;
         
@@ -328,7 +324,7 @@ public void Search_Break(String msg)
 public void PrepareToMove(int playerIndex)
 {	
 	//use this for a friendly robot that shares the board class
-	board.clone(GameBoard);
+	board.copyFrom(GameBoard);
     board.sameboard(GameBoard);	// check that we got a good copy.  Not expensive to do this once per move
 
 }
@@ -358,7 +354,7 @@ public void PrepareToMove(int playerIndex)
             // for games such as hex, where there are no "fools mate" type situations
             // the best colution is to use dif=0.0;  For games with fools mates,
             // set dif so the really bad choices will be avoided
-            Setup_For_Search(depth, false);
+            Search_Driver search_state = Setup_For_Search(depth, false);
             search_state.save_all_variations = SAVE_TREE;
             search_state.good_enough_to_quit = GOOD_ENOUGH_VALUE;
             search_state.verbose = VERBOSE;
@@ -432,23 +428,27 @@ public void PrepareToMove(int playerIndex)
          	
         // it's important that the robot randomize the first few moves a little bit.
         double randomn = (RANDOMIZE && (board.moveNumber <= 6)) ? 0.1/board.moveNumber : 0.0;
-        monte_search_state = new UCTMoveSearcher(this);
+        UCTMoveSearcher monte_search_state = new UCTMoveSearcher(this);
         monte_search_state.save_top_digest = true;	// always on as a background check
         monte_search_state.save_digest=false;	// debugging only
         monte_search_state.win_randomization = randomn;		// a little bit of jitter because the values tend to be very close
         monte_search_state.timePerMove = 15;		// 20 seconds per move
-        monte_search_state.verbose = 2;
+        monte_search_state.verbose = VERBOSE;
         monte_search_state.alpha = 0.5;
+        monte_search_state.blitz = false;			// for hex, blitz is 2/3 the speed of normal unwinds
         monte_search_state.sort_moves = false;
         monte_search_state.only_child_optimization = true;
         monte_search_state.dead_child_optimization = true;
         monte_search_state.simulationsPerNode = 1;
         monte_search_state.final_depth = 9999;		// note needed for hex which is always finite
-        monte_search_state.best_response_heuristic = true;
         monte_search_state.node_expansion_rate = 1.0;
         monte_search_state.randomize_uct_children = true;     
+        monte_search_state.maxThreads = DEPLOY_THREADS;
+        monte_search_state.random_moves_per_second = 1000000;		// 
+        monte_search_state.max_random_moves_per_second = 5000000;		// 
+        
         move = monte_search_state.getBestMonteMove();
-        //monte_search_state.random_moves_per_second = 120000;
+
         }
  		}
       finally { ; }

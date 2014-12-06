@@ -18,7 +18,7 @@ import online.search.*;
  * @author ddyer
  *
  */
-public class CheckerPlay extends commonRobot implements Runnable, CheckerConstants,
+public class CheckerPlay extends commonRobot<CheckerBoard> implements Runnable, CheckerConstants,
     RobotProtocol
 {   boolean SAVE_TREE = false;				// debug flag for the search driver
     int VERBOSE = 1;						// how much to print from search
@@ -34,8 +34,6 @@ public class CheckerPlay extends commonRobot implements Runnable, CheckerConstan
     double CUP_WEIGHT = 1.0;
     double MULTILINE_WEIGHT=1.0;
     boolean DUMBOT = false;
-    CheckerBoard GameBoard = null;			// this is the "real" game board we're starting from
-    CheckerBoard board = null;				// this is our local copy
     int boardSearchLevel = 0;				// the current search depth
 
     /* constructor */
@@ -232,7 +230,7 @@ public void Search_Break(String msg)
             // set dif so the really bad choices will be avoided
             boardSearchLevel = 0;
 
-            Setup_For_Search(depth, false);
+            Search_Driver search_state = Setup_For_Search(depth, false);
             search_state.save_all_variations = SAVE_TREE;
             search_state.allow_killer = KILLER;
             search_state.verbose=VERBOSE;			// debugging
@@ -313,7 +311,7 @@ public void Search_Break(String msg)
          	
         // it's important that the robot randomize the first few moves a little bit.
         double randomn = (RANDOMIZE && (board.moveNumber <= 6)) ? 0.1/board.moveNumber : 0.0;
-        monte_search_state = new UCTMoveSearcher(this);
+        UCTMoveSearcher monte_search_state = new UCTMoveSearcher(this);
         monte_search_state.save_top_digest = true;	// always on as a background check
         monte_search_state.save_digest=false;	// debugging only
         monte_search_state.win_randomization = randomn;		// a little bit of jitter because the values tend to be very close
@@ -325,7 +323,6 @@ public void Search_Break(String msg)
         monte_search_state.only_child_optimization = true;
         monte_search_state.dead_child_optimization = true;
         monte_search_state.simulationsPerNode = 1;
-        monte_search_state.best_response_heuristic = true;
         monte_search_state.node_expansion_rate = 1.0;
         monte_search_state.randomize_uct_children = true;     
         //monte_search_state.random_moves_per_second = 120000;

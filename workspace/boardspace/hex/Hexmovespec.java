@@ -43,9 +43,6 @@ public class Hexmovespec extends commonMove implements HexConstants
     HexId source; // where from/to
     char to_col; // for from-to moves, the destination column
     int to_row; // for from-to moves, the destination row
-    //
-    // variables for use by the robot
-    HexState state;	// the state of the move before state, for robot UNDO
     
     public Hexmovespec()
     {
@@ -92,7 +89,6 @@ public class Hexmovespec extends commonMove implements HexConstants
     {	super.Copy_Slots(to);
         to.to_col = to_col;
         to.to_row = to_row;
-        to.state = state;
         to.source = source;
     }
 
