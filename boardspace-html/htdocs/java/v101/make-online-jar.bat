@@ -71,6 +71,8 @@ jar -cmf generic-manifest.txt OnedayInLondon.jar oneday/*.class oneday/images/*.
 jar -cmf generic-manifest.txt Morelli.jar morelli/*.class morelli/images/*.jpg
 jar -cmf generic-manifest.txt Colorito.jar colorito/*.class colorito/images/*.jpg
 jar -cmf generic-manifest.txt Euphoria.jar euphoria/*.class euphoria/images/*.jpg euphoria/sounds/*.au euphoria/images/artifacts/*.jpg euphoria/images/dice/*.jpg euphoria/images/markets/*.jpg euphoria/images/dilemmas/*.jpg euphoria/images/recruits/*.jpg
+jar -cmf generic-manifest.txt Ponte.jar ponte/*.class ponte/images/*.jpg
+jar -cmf generic-manifest.txt Tammany.jar tammany/*.class tammany/images/*.jpg
 
 
 jar -i OnlineLobby.jar
