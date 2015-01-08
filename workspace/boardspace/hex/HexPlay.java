@@ -287,8 +287,8 @@ public class HexPlay extends commonRobot<HexGameBoard> implements Runnable, HexC
  * really used at this point, but was intended to be the class name of a plugin
  * evaluator class
  */
- public void InitRobot(exHashtable info, BoardProtocol gboard, String evaluator,
-        int stragegy)
+ public void InitRobot(ViewerProtocol newParam, exHashtable info, BoardProtocol gboard,
+        String evaluator, int stragegy)
     {
         InitRobot(info);
         GameBoard = (HexGameBoard) gboard;

@@ -146,68 +146,7 @@ public interface HexConstants extends Play2Constants
     static final String Hex_SGF = "11"; // sgf game number allocated for hex
     static final String[] HEXGRIDSTYLE = { "1", null, "A" }; // left and bottom numbers
 
- 
     // file names for jpeg images and masks
     static final String ImageDir = "hex/images/";
-    static final int HEXTILE_INDEX = 0;
-    static final int HEXTILE_NR_INDEX = 1;
-    //
-    // basic image strategy is to use jpg format because it is compact.
-    // .. but since jpg doesn't support transparency, we have to create
-    // composite images wiht transparency from two matching images.
-    // the masks are used to give images soft edges and shadows
-    //
-    static final String[] TileFileNames = 
-        {   "hextile",
-            "hextile-nr"
-        };
-    // the artwork for these is derived directly from the tile artwork, so 
-    // they can use the same offset and scale information
-    static final int HEXTILE_BORDER_INDEX = 0;
-    static final int HEXTILE_BORDER_NR_INDEX = 4;
-    int BorderPairIndex[]={0,1,1,3,3,2};	// this table matches the artwork below to the rotations defined by exitToward(x)
-    static final String BorderFileNames[] = 
-    {	"border-sw",
-    	"border-nw",
-    	"border-se",
-    	"border-ne",
-    	
-       	"border-w",
-    	"border-n",
-     	"border-s",
-       	"border-e"
-
-    };
-    static final double BORDERSCALES[][] = 
-    {	{0.50,0.50,1.76},
-    	{0.50,0.50,1.76},
-    	{0.50,0.50,1.76},
-    	{0.50,0.50,1.76},
-    	
-    	{0.50,0.50,1.76},
-    	{0.50,0.50,1.76},
-    	{0.50,0.50,1.76},
-    	{0.50,0.50,1.76}
-    
-    };
-    //to keep the artwork aquisition problem as simple as possible, images
-    //are recentered and scaled on the fly before presentation.  These arrays
-    //are X,Y,SCALE factors to standardize the size and center of the images
-    //in the development environment, use "show aux sliders" to pop up sliders
-    //which adjust the position and scale of displayed elements.  Copy the numbers
-    //back into these arrays and save.  Due to flakeyness in eclipse, it's not very
-    //reliable to save and have the result be replaced in the running applet, but
-    //this is only a one time thing in development.
-    //
-    //ad hoc scale factors to fit the stones to the board
-    static final double[][] TILESCALES=
-    {   {0.50,0.50,1.76},	// hex tile and border artworks
-    	{0.50,0.50,1.6}};	// unrotated hex tile and border artwork
-
-    
-    static final int BACKGROUND_TILE_INDEX = 0;
-    static final int BACKGROUND_REVIEW_INDEX = 1;
-    static final String TextureNames[] = { "background-tile" ,"background-review-tile"};
-
 
 }

@@ -177,9 +177,9 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
     	Grid_Style = GRIDSTYLE; //coordinates left and bottom
     	randomKey = rv;
     	players_in_game = np;
-		rack = new CheckerCell[CheckerChip.N_STANDARD_CHIPS*2];
+		rack = new CheckerCell[2];
     	Random r = new Random(67246765);
-     	for(int i=0,pl=FIRST_PLAYER_INDEX;i<CheckerChip.N_STANDARD_CHIPS*2; i++,pl=nextPlayer[pl])
+     	for(int i=0,pl=FIRST_PLAYER_INDEX;i<2; i++,pl=nextPlayer[pl])
     	{
        	CheckerCell cell = new CheckerCell(r);
        	cell.rackLocation=RackLocation[i];

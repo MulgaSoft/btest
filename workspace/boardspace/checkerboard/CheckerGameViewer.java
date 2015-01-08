@@ -25,9 +25,6 @@ public class CheckerGameViewer extends commonCanvas
     private Color boardBackgroundColor = new Color(220,165,155);
     private Color vcrButtonColor = new Color(0.7f, 0.7f, 0.75f);
  
-    // images
-    private static Image[] textures = null;// background textures
-    
     // private state
     private CheckerBoard b = null; 	// the board from which we are displaying
     private int CELLSIZE; 			// size of the layout cell.  
@@ -59,11 +56,6 @@ public class CheckerGameViewer extends commonCanvas
     public void preloadImages()
     {	
        	CheckerChip.preloadImages(this,ImageDir);
-        if (textures == null)
-    	{ // note that for this to work correctly, the images and masks must be the same size.  
-          // Refer to http://www.andromeda.com/people/ddyer/java/imagedemo/transparent.html
-        textures = load_images(ImageDir,TextureNames);
-    	}
     }
 
 
@@ -353,8 +345,8 @@ public class CheckerGameViewer extends commonCanvas
     
 	// draw a box of spare . Notice if any are being pointed at.  Highlight those that are.
     private void DrawReverseMarker(Graphics gc, Rectangle r,HitPoint highlight)
-    {	StockArt king = CheckerChip.getChip(b.reverse_y?1:0,CheckerChip.BLANK_CHIP_INDEX);
-    	StockArt reverse = CheckerChip.getChip(b.reverse_y?0:1,CheckerChip.BLANK_CHIP_INDEX);
+    {	StockArt king = CheckerChip.getChip(b.reverse_y?1:0);
+    	StockArt reverse = CheckerChip.getChip(b.reverse_y?0:1);
     	reverse.drawChip(gc,this,r.width,r.x+r.width/2,r.y+r.width/2,null);
     	king.drawChip(gc,this,r.width,r.x+r.width/2,r.y+r.width+r.width/2,null);
     	if(G.pointInRect(highlight,r))
@@ -370,10 +362,8 @@ public class CheckerGameViewer extends commonCanvas
     		highlight.hitCode = CheckerId.LiftRect;
     		highlight.dragging = lifted = highlight.down;
     	}
-		if(gc!=null) 
-		{ G.centerImage(gc,textures[LIFT_ICON_INDEX],liftRect,this); 
-		  G.frameRect(gc,hit?HighlightColor:Color.black,liftRect);
-		}
+		G.centerImage(gc,CheckerChip.liftIcon.image,liftRect,this); 
+		G.frameRect(gc,hit?HighlightColor:Color.black,liftRect);
     }
 	// draw a box of spare chips. Notice if any are being pointed at.  Highlight those that are.
     private void DrawCommonChipPool(Graphics gc, CheckerBoard gb, int forPlayer, Rectangle r, int player, HitPoint highlight)
@@ -402,7 +392,7 @@ public class CheckerGameViewer extends commonCanvas
     //
     public void drawSprite(Graphics g,int obj,int xp,int yp)
     {  	// draw an object being dragged
-    	CheckerChip ch = CheckerChip.getChip(obj);// Tiles have zero offset
+    	CheckerChip ch = CheckerChip.getChipNumber(obj);// Tiles have zero offset
     	ch.drawChip(g,this,SQUARESIZE,xp,yp,null);
      }
 
@@ -431,10 +421,10 @@ public class CheckerGameViewer extends commonCanvas
       // erase
       gc.setColor(reviewBackground ? reviewModeBackground : boardBackgroundColor);
       //G.fillRect(gc, fullRect);
-      G.tileImage(gc,textures[BACKGROUND_TILE_INDEX], fullRect, this);   
+      G.tileImage(gc,CheckerChip.backgroundTile.image, fullRect, this);   
       if(reviewBackground)
       {	 
-        G.tileImage(gc,textures[BACKGROUND_REVIEW_INDEX],boardRect, this);   
+        G.tileImage(gc,CheckerChip.backgroundReviewTile.image,boardRect, this);   
       }
        
       // if the board is one large graphic, for which the visual target points
@@ -848,10 +838,10 @@ private void playSounds(commonMove mm)
 	    case LiftRect:
              break;
 	    case Black_Chip_Pool:
-	    	PerformAndTransmit("Pick B "+cell.row+" "+chip.chipNumber());
+	    	PerformAndTransmit("Pick B "+cell.row+" "+chip.id.shortName);
 	    	break;
 	    case White_Chip_Pool:
-	    	PerformAndTransmit("Pick W "+cell.row+" "+chip.chipNumber());
+	    	PerformAndTransmit("Pick W "+cell.row+" "+chip.id.shortName);
 	    	break;
 	    case BoardLocation:
 	    	// note, in this implementation the board squares are themselves pieces on the board
@@ -859,7 +849,7 @@ private void playSounds(commonMove mm)
 	    	// behavior as well as click-to-pick
 	    	if(cell.chipIndex>0)
 	    		{
-	    		PerformAndTransmit("Pickb "+cell.col+" "+cell.row+" "+chip.chipNumber());
+	    		PerformAndTransmit("Pickb "+cell.col+" "+cell.row+" "+chip.id.shortName);
 	    		}
 	    	break;
         }
@@ -913,7 +903,7 @@ private void playSounds(commonMove mm)
 				}
 				else if(chip!=null)
 				{
-				PerformAndTransmit( "Pickb "+cell.col+" "+cell.row+" "+chip.chipNumber());
+				PerformAndTransmit( "Pickb "+cell.col+" "+cell.row+" "+chip.id.shortName);
 				}
 				break;
 			}

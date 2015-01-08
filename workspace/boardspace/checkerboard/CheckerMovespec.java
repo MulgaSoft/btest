@@ -31,7 +31,6 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
    }
 
     CheckerId source; // where from/to
-	int object;	// object being picked/dropped
 	char from_col; //for from-to moves, the source column
 	int from_row; // for from-to moves, the source row
     char to_col; // for from-to moves, the destination column
@@ -68,7 +67,6 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
 
         return ((op == other.op) 
 				&& (source == other.source)
-				&& (object == other.object)
 				&& (to_row == other.to_row) 
 				&& (to_col == other.to_col)
 				&& (from_row == other.from_row)
@@ -79,7 +77,6 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
     public void Copy_Slots(CheckerMovespec to)
     {	super.Copy_Slots(to);
         to.player = player;
-		to.object = object;
         to.to_col = to_col;
         to.to_row = to_row;
         to.from_col = from_col;
@@ -125,7 +122,6 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
             source = CheckerId.get(msg.nextToken());	// white rack or black rack
             from_col = '@';						// always
             from_row = G.IntToken(msg);			// index into the rack
-            object = G.IntToken(msg);			// cup size
  	        to_col = G.CharToken(msg);			// destination cell col
 	        to_row = G.IntToken(msg);  			// destination cell row
 	        break;
@@ -135,7 +131,6 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
             source = CheckerId.BoardLocation;		
             from_col = G.CharToken(msg);	//from col,row
             from_row = G.IntToken(msg);
-            object = G.IntToken(msg);       //cupsize
  	        to_col = G.CharToken(msg);		//to col row
 	        to_row = G.IntToken(msg);
 	        break;
@@ -152,7 +147,6 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
             source = CheckerId.BoardLocation;
             from_col = G.CharToken(msg);
             from_row = G.IntToken(msg);
-            object = G.IntToken(msg);
 
             break;
 
@@ -193,18 +187,18 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
         switch (op)
         {
         case MOVE_PICKB:
-            return (object+"@"+from_col + from_row);
+            return ("@"+from_col + from_row);
 
 		case MOVE_DROPB:
             return (to_col + " " + to_row);
 
         case MOVE_DROP:
         case MOVE_PICK:
-            return (source.shortName+object);
+            return (source.shortName);
         case MOVE_RACK_BOARD:
-        	return(source.shortName+object+"@ "+to_col + " " + to_row);
+        	return(source.shortName+"@ "+to_col + " " + to_row);
         case MOVE_BOARD_BOARD:
-        	return(object+"@"+from_col + from_row+" "+to_col + " " + to_row);
+        	return("@"+from_col + from_row+" "+to_col + " " + to_row);
         case MOVE_DONE:
         case MOVE_RESET:
             return ("");
@@ -231,7 +225,7 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
         {
             ind += (index + " ");
         }
-        // adding the move index as a prefix provides numnbers
+        // adding the move index as a prefix provides numbers
         // for the game record and also helps navigate in joint
         // review mode
         switch (op)
@@ -240,22 +234,22 @@ public class CheckerMovespec extends commonMove implements CheckerConstants
             G.Error("moveString Not implemented: " + op);
 
         case MOVE_PICKB:
-	        return (ind+D.findUnique(op) + " " + from_col + " " + from_row+" "+object);
+	        return (ind+D.findUnique(op) + " " + from_col + " " + from_row);
 
 		case MOVE_DROPB:
-	        return (ind+D.findUnique(op) + " " + to_col + " " + to_row+" "+object);
+	        return (ind+D.findUnique(op) + " " + to_col + " " + to_row);
 
 		case MOVE_RACK_BOARD:
-			return(ind+D.findUnique(op) + " " +source.shortName+ " "+from_row+" "+object
+			return(ind+D.findUnique(op) + " " +source.shortName+ " "+from_row
 					+ " " + to_col + " " + to_row);
 		case MOVE_BOARD_BOARD:
-			return(ind+D.findUnique(op) + " " + from_col + " " + from_row+" "+object
+			return(ind+D.findUnique(op) + " " + from_col + " " + from_row
 					+ " " + to_col + " " + to_row);
         case MOVE_PICK:
-            return (ind+D.findUnique(op) + " "+source.shortName+ " "+from_row+" "+object);
+            return (ind+D.findUnique(op) + " "+source.shortName+ " "+from_row);
 
         case MOVE_DROP:
-             return (ind+D.findUnique(op) + " "+source.shortName+ " "+to_row+" "+object);
+             return (ind+D.findUnique(op) + " "+source.shortName+ " "+to_row);
 
         case MOVE_START:
             return (ind+"Start P" + player);

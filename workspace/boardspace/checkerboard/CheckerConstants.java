@@ -83,17 +83,6 @@ public interface CheckerConstants extends Play2Constants
 	
     static final String Checker_SGF = "Checker"; // sgf game number allocated for hex
     static final String[] GRIDSTYLE = { "1", null, "A" }; // left and bottom numbers
-
- 
-    // file names for jpeg images and masks
     static final String ImageDir = "checkerboard/images/";
-	// sounds
-    static final int BACKGROUND_TILE_INDEX = 0;
-    static final int BACKGROUND_REVIEW_INDEX = 1;
-    static final int LIFT_ICON_INDEX = 2;
-    static final String TextureNames[] = 
-    	{ "background-tile" ,
-    	  "background-review-tile",
-    	  "lift-icon"};
 
 }

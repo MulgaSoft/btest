@@ -652,7 +652,7 @@ K Done
 V Klaar
 S Done selling cards
 K Drop a tile to enlarge the board
-V Plaats een hex om het bord te vergroten
+V Plaats een tammany om het bord te vergroten
 K Drop bunny chip
 V Plaats een chip van de Bunny speler
 S Drop the displaced chip anywhere except the top row
@@ -728,7 +728,7 @@ S Every time you roll a 6, lose a commodity or a resource.
 K Exchange Prisoners
 V Ruil Gevangenen
 K Exchange an off-board piece for a new tile
-V Ruil een stuk naast het bord voor een nieuwe hex
+V Ruil een stuk naast het bord voor een nieuwe tammany
 S Extra Artifact card cancelled by Registry of Personal Secrets
 S Extra Artifact card peek from Geek The Oracle
 S Extra bliss cancelled by Registry of Personal Secrets
@@ -738,10 +738,10 @@ S Extra water cancelled by Registry of Personal Secrets
 S Exxit
 S Exxit-Beginner
 K Exxit-Beginner_variation
-V speel 19 hex Exxit
+V speel 19 tammany Exxit
 S Exxit-Blitz
 K Exxit-Blitz_variation
-V speel 29 hex Exxit
+V speel 29 tammany Exxit
 K Exxit-Pro
 V Exxit-Expert
 K Exxit-Pro_variation
@@ -749,7 +749,7 @@ V speel expert Exxit
 K Exxit_family
 V Exxit
 K Exxit_variation
-V speel 39 hex Exxit
+V speel 39 tammany Exxit
 S Fanorona
 K Fanorona_family
 V Fanorona
@@ -1313,7 +1313,7 @@ S Place a piece into the row closest to the top of the board
 K Place a piece on the board
 V Plaats een stuk op het bord
 K Place a piece on the board, or Exchange an off-board piece for a new tile
-V Plaats een stuk op het bord, of Ruil een stuk naast het bord voor een nieuwe hex
+V Plaats een stuk op het bord, of Ruil een stuk naast het bord voor een nieuwe tammany
 K Place a piece on the board, or move a piece already on the board
 V Plaats een stuk op het bord, of verplaats een stuk
 S Place a piece on the board, or swap colors with your opponent
@@ -1324,7 +1324,7 @@ K Place a second piece on the board
 V Zet een tweede stuk op het bord
 S Place a second tile
 K Place a second tile adjacent to the first
-V Plaats een tweede hex grenzend aan de eerste
+V Plaats een tweede tammany grenzend aan de eerste
 K Place a second tile adjacent to those already on the board
 V Plaats een tweede tegel aangrenzend aan de bordpositie
 K Place a stone on the board, or remove a stone from the board

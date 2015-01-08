@@ -107,11 +107,7 @@ public class HexGameViewer extends commonCanvas
     private Color boardBackgroundColor = new Color(220,165,155);
     private Color vcrButtonColor = new Color(0.7f, 0.7f, 0.75f);
 
-    // images are shared among all instances of the class so loaded only once
-    private static StockArt[] tileImages = null; 	// tile images
-    private static StockArt[] borders = null;		// border tweaks for the tile images
-    private static Image[] textures = null;			// background textures
-    
+     
     // private state
     private HexGameBoard bb = null; //the board from which we are displaying
     private int CELLSIZE; 	//size of the layout cell
@@ -153,21 +149,6 @@ public class HexGameViewer extends commonCanvas
  */
     public void preloadImages()
     {	hexChip.preloadImages(this,ImageDir);	// load the images used by stones
-    	if (tileImages == null)
-    	{ 	// note that for this to work correctly, the images and masks must be the same size.  
-        	// Refer to http://www.andromeda.com/people/ddyer/java/imagedemo/transparent.html
-    		
-    		// images and textures are static variables, so they're shared by
-    		// the entire class and only get loaded once.  Special synchronization
-    		// tricks are used to make sure this is true.
-    		
-    	  // load the tiles used to construct the board as stock art
-    	  tileImages = StockArt.preLoadArt(this,ImageDir,TileFileNames,TILESCALES);
-    	  // load the background textures as simple images
-          textures = load_images(ImageDir,TextureNames);
-          // load the black and white borders as stock art.
-          borders = StockArt.preLoadArt(this,ImageDir,BorderFileNames,BORDERSCALES);
-    	}
     }
 
 	/**
@@ -507,10 +488,10 @@ public class HexGameViewer extends commonCanvas
     	boolean reviewBackground = reviewMode()&&!mutable_game_record;
       gc.setColor(reviewBackground ? reviewModeBackground : boardBackgroundColor);
       //G.fillRect(gc, fullRect);
-      G.tileImage(gc,textures[BACKGROUND_TILE_INDEX], fullRect, this);   
+      G.tileImage(gc,hexChip.backgroundTile.image, fullRect, this);   
       if(reviewBackground)
       {	 
-        G.tileImage(gc,textures[BACKGROUND_REVIEW_INDEX],boardRect, this);   
+        G.tileImage(gc,hexChip.backgroundReviewTile.image,boardRect, this);   
       }
        
       // if the board is one large graphic, for which the visual target points
@@ -541,14 +522,14 @@ public class HexGameViewer extends commonCanvas
            { //where we draw the grid
               int ypos = (brect.y + brect.height) - gb.cellToY(thiscol, thisrow);
               int xpos = brect.x + gb.cellToX(thiscol, thisrow);
-              int hidx = lastRotation?HEXTILE_INDEX:HEXTILE_NR_INDEX;
-              int bindex = lastRotation ? HEXTILE_BORDER_INDEX : HEXTILE_BORDER_NR_INDEX;
+              hexChip tile = lastRotation?hexChip.hexTile:hexChip.hexTileNR;
+              hexChip btiles[] = lastRotation ? hexChip.border : hexChip.borderNR;
               int xsize = (int)gb.CELLSIZE;//((lastRotation?0.80:0.8)*);
              // double scale[] = TILESCALES[hidx];
              //adjustScales(scale,null);		// adjust the tile size/position.  This is used only in development
              // to fine tune the board rendering.
              //G.print("cell "+CELLSIZE+" "+xsize);
-              tileImages[hidx].drawChip(gc,this,xsize,xpos,ypos,null);
+              tile.drawChip(gc,this,xsize,xpos,ypos,null);
               //equivalent lower level draw image
               // drawImage(gc,tileImages[hidx].image,tileImages[hidx].getScale(), xpos,ypos,gb.CELLSIZE,1.0);
               //
@@ -564,7 +545,7 @@ public class HexGameViewer extends commonCanvas
               for(int dir=0; dir<4;dir++)
               {	// precalculated border cell properties
             	  if((c.borders&(1<<dir))!=0)
-            	  {	  borders[bindex+dir].drawChip(gc,this,xsize,xpos,ypos,null);
+            	  {	  btiles[dir].drawChip(gc,this,xsize,xpos,ypos,null);
             	  }
               }}
           }
@@ -985,14 +966,14 @@ public class HexGameViewer extends commonCanvas
 		hexChip mo = bb.pickedObject;
 		if(mo==null) { mo=bb.lastPicked; }
 		if(mo==null) { mo=bb.getPlayerChip(bb.whoseTurn); }
-		PerformAndTransmit("dropb "+mo.colorName+" "+col+" "+row);
+		PerformAndTransmit("dropb "+mo.id.shortName+" "+col+" "+row);
 		}
 		break;
 		case Confirm:
 		case Play:
 		case PlayOrSwap:
 			hexChip mo=bb.getPlayerChip(bb.whoseTurn);	
-			PerformAndTransmit("dropb "+mo.colorName	+ " "+col+" "+row);
+			PerformAndTransmit("dropb "+mo.id.shortName	+ " "+col+" "+row);
 			break;
 					                 
 		
@@ -1055,7 +1036,7 @@ public class HexGameViewer extends commonCanvas
         case White_Chip_Pool:
            if(bb.pickedObject!=null) 
 			{//if we're dragging a black chip around, drop it.
-            	PerformAndTransmit("Drop "+bb.pickedObject.colorName);
+            	PerformAndTransmit("Drop "+bb.pickedObject.id.shortName);
 			}
            break;
  

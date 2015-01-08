@@ -4,7 +4,6 @@ package checkerboard;
 import java.util.Random;
 
 import lib.*;
-
 import online.game.*;
 import online.common.*;
 import online.search.*;
@@ -155,8 +154,8 @@ public class CheckerPlay extends commonRobot<CheckerBoard> implements Runnable, 
  * is the real game board.  The real board shouldn't be changed.  Evaluator and Strategy
  * are parameters from the applet that can be interpreted as desired.
  */
- public void InitRobot(exHashtable info, BoardProtocol gboard, String evaluator,
-        int strategy)
+ public void InitRobot(ViewerProtocol newParam, exHashtable info, BoardProtocol gboard,
+        String evaluator, int strategy)
     {
         InitRobot(info);
         GameBoard = (CheckerBoard) gboard;

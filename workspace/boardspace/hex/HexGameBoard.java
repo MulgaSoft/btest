@@ -991,7 +991,7 @@ void doSwap()
      		// this is a little complex because the corner cells
      		// are part of two borders.
      		if((border0==null) && (border1==null))
-     		{	bd |= (1<<BorderPairIndex[direction]);
+     		{	bd |= (1<<hexChip.BorderPairIndex[direction]);
      		}
      	}
  	c.borders = bd;
