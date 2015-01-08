@@ -2,10 +2,10 @@ checkerboard
 checkerboard.jdk11
 hex
 hex.jdk11
+lib
 online
 online.common
 online.game
-online.game.sgf
 online.jdk11
 online.language
 online.search
