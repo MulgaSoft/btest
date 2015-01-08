@@ -12,7 +12,7 @@
 <intAttribute key="org.eclipse.jdt.launching.APPLET_HEIGHT" value="200"/>
 <stringAttribute key="org.eclipse.jdt.launching.APPLET_NAME" value=""/>
 <mapAttribute key="org.eclipse.jdt.launching.APPLET_PARAMETERS">
-<mapEntry key="GameType" value="Checkers"/>
+<mapEntry key="GameType" value="Checkers-8"/>
 <mapEntry key="chatpercent" value="0"/>
 <mapEntry key="debug" value="true"/>
 <mapEntry key="extraactions" value="true"/>
