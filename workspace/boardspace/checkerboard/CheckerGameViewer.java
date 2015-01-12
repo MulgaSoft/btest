@@ -548,7 +548,7 @@ public class CheckerGameViewer extends commonCanvas
             				vstate!=CheckerState.Puzzle,
             				gb.whoseTurn,
             				stateRect);
-            goalAndProgressMessage(gc,Color.black,s.get(VictoryCondition),progressRect,goalRect);
+            goalAndProgressMessage(gc,highlight,Color.black,s.get(VictoryCondition),progressRect, goalRect);
          }
         DrawRepRect(gc,b.Digest(),repRect);
         drawVcrGroup(ourSelect, gc, HighlightColor, vcrButtonColor);

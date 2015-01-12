@@ -715,7 +715,7 @@ public class HexGameViewer extends commonCanvas
             				state!=HexState.Puzzle,
             				gb.whoseTurn,
             				stateRect);
-            goalAndProgressMessage(gc,Color.black,s.get(HexVictoryCondition),progressRect,goalRect);
+            goalAndProgressMessage(gc,selectPos,Color.black,s.get(HexVictoryCondition),progressRect, goalRect);
             //DrawRepRect(gc,gb.Digest(),repRect);	// Not needed for hex
         }
         // draw the vcr controls
