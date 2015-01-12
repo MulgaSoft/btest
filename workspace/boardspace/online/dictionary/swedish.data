@@ -12,8 +12,12 @@ K #1 Ship
 V #1 skepp
 K #1 center
 V #1 i mitten
+S #1 chips
 K #1 deliberately quit
 V #1 l\u00e4mnade rummet avsiktligt
+S #1 gains a card (from Jonathan the gambler)
+S #1 gets #2{ points, point, point} for unused slander
+S #1 gets 2 points for #2 control
 S #1 gets an artifact card (from Jacko the Archivist)
 K #1 has been muted, by a consensus of the players
 V #1 har f\u00e5tt talf\u00f6rbud, i enlighet med spelarnas \u00f6nskan
@@ -39,6 +43,7 @@ V #1 tar \u00f6ver f\u00f6r #2
 K #1 is taking over playing #2 for #3
 V #1 tar \u00f6ver spelet av #2 f\u00f6r #3
 S #1 is the effeciency of island purchases
+S #1 is the new mayor
 S #1 is the value of your goods on the island
 S #1 is your cash on hand
 S #1 is your final score
@@ -154,14 +159,17 @@ S -2 Morale, +1 Artifact card (from Flavio the Merchant)
 K ...plus #1 more
 V ...plus #1 till
 S 1 Artifact (and others +1 Artifact), or a pair of Artifacts, or 3 Artifacts
-S 1 Artifact Card and 1 Bliss or 1 Food
-S 1 Artifact Card and 4 Food or Bliss
 S 1 Artifact card
+K 1 Artifact card and 1 Bliss or 1 Food
+V 1 Artifact Card and 1 Bliss or 1 Food
 S 1 Artifact card and 1 Resource
 S 1 Artifact card and 1 Resource or 1 Bliss
+K 1 Artifact card and 4 Food or Bliss
+V 1 Artifact Card and 4 Food or Bliss
 S 1 Artifact card or 1 Clay
 S 1 Artifact card or 1 Gold
 S 1 Artifact card or 1 Stone
+S 1 Artifact with +1 Morale, or 1 resource, with +1 knowledge, +1 morale if you use Gold
 S 1 Balloon or 2 other Artifact cards
 S 1 Balloons Artifact card
 S 1 Bat Artifact card
@@ -195,6 +203,8 @@ S 1 Commodity and 1 Box Artifact card
 S 1 Commodity or 1 Resource
 S 1 Energy
 S 1 Energy,  or click on DONE for +1 Knowledge (from Matthew the Thief)
+K 1 Food
+V 1 food
 S 1 Food,  or click on DONE for +1 Knowledge (from Matthew the Thief)
 S 1 Gold
 S 1 Gold or 1 Artifact card
@@ -215,8 +225,8 @@ S 1 Water (from IanTheHorticulturist)
 S 1 Water or 1 Energy (from Zong the Astronomer)
 S 1 Water or 1 Stone (from Maggie the Outlaw)
 S 1 Water, or click on DONE for +1 Knowledge (from Matthew the Thief)
+S 1 chip
 S 1 commodity (not Bliss)
-S 1 food
 S 1 resource, with +1 knowledge, +1 morale if you use Gold
 S 2 Artifact cards
 S 2 Artifact cards, keep 1 of them
@@ -224,14 +234,16 @@ S 2 Cards (after preview by  Geek the Oracle)
 S 2 Cards (hand limit: low Morale)
 S 2 Clay
 S 2 Commodities or Resources
+K 2 Energy
+V 2 energy
 S 2 Gold
 S 2 Knowledge
 S 2 Morale
 S 2 Stone
-S 2 energy
 S 2 resources
 S 3 Artifact cards
-S 3 Artifact cards, or a Pair of Artifact Cards
+K 3 Artifact cards, or a Pair of Artifact cards
+V 3 Artifact cards, or a Pair of Artifact Cards
 S 3 Bliss
 S 3 Cards (hand limit: low Morale)
 S 3 Commodities or Resources
@@ -244,13 +256,16 @@ S 4 Bliss and 1 Resource
 S 4 Bliss and 1 Resource, or 5 Bliss
 S 4 Cards (hand limit: low Morale)
 S 4 Commodities or Resources
-S 4 Energy and 1 Artifact Card
+K 4 Energy and 1 Artifact card
+V 4 Energy and 1 Artifact Card
 S 4 Energy and 1 Clay
 S 4 Energy and 1 Clay or 1 Bliss
 S 4 Energy and 1 Clay, Bliss or Food
 S 4 Energy and 1 Stone
 S 4 Energy and 1 Stone or 1 Bliss
 S 4 Energy and 1 Stone, Bliss, or Food
+K 4 Food
+V 4 food
 S 4 Food and 1 Artifact card
 S 4 Food and 1 Gold
 S 4 Food and 1 Gold or 1 Bliss
@@ -258,14 +273,14 @@ S 4 Food and 1 Stone or 1 Bliss
 S 4 Food and 1 Stone or Bliss, or 5 Food
 S 4 Powwer
 S 4 Water
-S 4 Water and 1 Artifact Card
+K 4 Water and 1 Artifact card
+V 4 Water and 1 Artifact Card
 S 4 Water and 1 Clay
 S 4 Water and 1 Clay or 1 Bliss
 S 4 Water and 1 Clay, Bliss or Food
 S 4 Water and 1 Gold
 S 4 Water and 1 Gold or 1 Bliss
 S 4 Water and 1 Gold, Bliss or Food
-S 4 food
 K 4w 5g 6b or 3 of each wins
 V 4v 5g 6s eller 3 av varje ger vinst
 S 5 Cards (hand limit: low Morale)
@@ -338,6 +353,12 @@ V Auktion
 K Aug #1#2#3
 V #1 Aug, #2:#3 GMT
 S Authority
+K Authority token
+V authority token
+K Authority tokens
+V authority tokens
+K Authority zone
+V authority zone
 S Award the prize
 S Bag
 S Bank
@@ -457,6 +478,7 @@ K Click Done to confirm swapping colors with your opponent
 V Klicka p\u00e5 Klar f\u00f6r att byta f\u00e4rg med din motst\u00e5ndare
 K Click Done to confirm swapping fleets with your opponent
 V Klicka p\u00e5 klar f\u00f6r att byta flotta med din motst\u00e5ndare
+S Click Done to confirm the new role assignments
 K Click Done to confirm this action
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
 K Click Done to confirm this move
@@ -486,6 +508,7 @@ S Click on Done to confirm the tip direction
 K Click on Done to confirm this Dance
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta dans
 S Click on Done to confirm this card action
+S Click on Done to confirm using your role
 K Click on Done to confirm your resignation
 V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta
 K Click on Done to end the game
@@ -497,6 +520,8 @@ V Klicka p\u00e5 Klar f\u00f6r att bekr\u00e4fta remi.
 S Click on Done to end the game as a Loss
 K Click on Done to finish all captures
 V Klicka p\u00e5 Klar f\u00f6r att avsluta alla er\u00f6vringar
+S Click on Done to finish placement
+S Click on Done to finish placement, or Place a slander chip
 S Click on Done to offer a draw
 S Click on Done to send cubes to the carvan
 K Click on Gipf pieces to change their capture status
@@ -651,6 +676,7 @@ K Dipole_variation
 V Dipole p\u00e5 8x8 med en asymmetrisk startposition
 S Discards
 S Display Only
+S Distribute roles to your opponents
 K Done
 V Klar
 S Done selling cards
@@ -679,6 +705,8 @@ K Eat
 V \u00c4t
 K Edit
 V \u00c4ndra
+S Election
+S Election Next Year
 K Eliminate all your opponent's pieces
 V Eliminera alla motst\u00e5ndarens pj\u00e4ser
 S EndSale
@@ -710,6 +738,12 @@ S Escape forced position, or place a barrier
 K Escape from check
 V Fly undan schack
 S Euphoria
+K Euphoria2
+V Euphoria v2
+K Euphoria2_family
+V Euphoria with v2 recruits
+K Euphoria2_variation
+V Euphoria V2
 K Euphoria_family
 V Euphoria
 K Euphoria_variation
@@ -720,7 +754,8 @@ S Euphorian Market
 S Euphorian Market A
 S Euphorian Market B
 S Euphorian Tunnel
-S Euphorians only: play here to get 3 water
+K Euphorians only: play here to get 3 Water
+V Euphorians only: play here to get 3 water
 K Euro Games
 V Eurospel
 S Every time you roll a 1, lose a commodity or a resource.
@@ -770,7 +805,8 @@ K Farmer select
 V Val av bonde
 K Feb #1#2#3
 V #1 Feb, #2:#3 GMT
-S Fight The Opressor
+K Fight the Opressor
+V Fight The Opressor
 K Final Scores:
 V Slutst\u00e4llning:
 K Finished Capturing, Click Done
@@ -790,6 +826,8 @@ K Flagship wins at any edge square
 V Flaggskeppet m\u00e5ste n\u00e5 en kantruta f\u00f6r vinst
 K Flip a tile, or Move Split or Merge a stack
 V V\u00e4nd p\u00e5 en bricka, eller flytta, dela eller blanda en h\u00f6g.
+K Food
+V food
 K Form a closed shape in your color
 V Forma en sluten form i din f\u00e4rg
 S Free Energy
@@ -800,7 +838,6 @@ V Army of Frogs
 K From #1
 V Fr\u00e5n #1
 S Gained 2 cards instead of 1 (from Jonathan the Gambler)
-S Gained 2 cards instead of 1 (thanks to Jonathan the Gambler)
 S Gained 3 cards instead of 1 (from Jonathan the Gambler)
 S Gained no cards instead of 1 (from Jonathan the Gambler)
 K Game
@@ -836,6 +873,9 @@ K Gipf_family
 V Gipf
 K Gipf_variation
 V Gipf Basic (inga Gipf-brickor)
+K GoalExplanation2
+V The goal of the game is:
+V #1
 S Gobblet
 K Gobblet_family
 V Gobblet
@@ -1028,6 +1068,8 @@ V L\u00e5n
 S Lobby
 K Lobby shutdown...
 V Lobbyn st\u00e4nger...
+S Lose 1 Artifact Card (from Brian the Viticulturist)
+S Lose 1 morale (from Brian the Viticulturist)
 S Lose a #2 to knowledge check, total was #1
 S Lose an extra morale due to the Cafeteria of Nameless Meat
 K Machines
@@ -1064,6 +1106,10 @@ V Maximera vinsterna
 K May #1#2#3
 V #1 Maj, #2:#3 GMT
 S Medina
+K Medina-v2
+V Medina 2'nd Edition
+K Medina-v2_variation
+V Medina with the well and tea cards
 K Medina_family
 V Medina
 K Medina_variation
@@ -1122,6 +1168,7 @@ K Move a ball or change a Ring
 V Flytta en kula eller \u00e4ndra en ring
 S Move a chip
 S Move a cookie
+S Move a cube to an adjacent district, or click on Done
 K Move a piece
 V Flytta en pj\u00e4s
 S Move a piece from the row closest to the bottom of the board
@@ -1265,7 +1312,8 @@ K Pay a camel or click Done to send the cube to the caravan
 V Click on "Pay a Camel" or "Send Cube".
 S Pay a chip, or take the pot
 S Pay to Join the Establishment
-S Pay to fight the opressor
+K Pay to fight the Opressor
+V Pay to fight the opressor
 S Pay with Artifact card, gain Morale (from Flartner the Luddite)
 S Pay with energy, +1 Morale -1 Knowledge (from Jefferson the Shock Artist)
 S Pay with knowledge instead of Energy (from Matthew the Thief)
@@ -1295,6 +1343,8 @@ S Place #1 cubes in Vase neighborhood
 S Place #1 cubes in Vase neighborhood, take a card, or move the supervisor #2 spaces
 S Place 2 tiles
 S Place 2 tiles or a bridge
+S Place Your first Boss Token
+S Place Your second Boss Token
 K Place a Chip, or a Jewel, or a chip from the Store
 V Placera en bricka, eller en \u00e4delsten, eller en bricka fr\u00e5n aff\u00e4ren
 K Place a Frog on the board
@@ -1311,6 +1361,7 @@ S Place a chip on the board
 K Place a chip, or shirt or rotate a board
 V Place a chip, or shift or rotate a board
 S Place a cube in any unclaimed souk
+S Place a cube of your choice
 S Place a cube on the caravan
 K Place a gobblet on the board, or move a gobblet
 V Placera en gobblet p\u00e5 br\u00e4det, eller flytta en gobblet
@@ -1329,6 +1380,7 @@ S Place a piece on the board, or swap colors with your opponent
 K Place a ring on the board
 V Placera en ring p\u00e5 br\u00e4det
 S Place a roamer on the board
+S Place a second boss token, or a cube from Castle Cardens
 K Place a second piece on the board
 V Placera den andra gubben p\u00e5 br\u00e4det
 S Place a second tile
@@ -1357,6 +1409,7 @@ V Placera alla dina pj\u00e4ser p\u00e5 dina tv\u00e5 egna rader
 S Place an extra Authority token (from Jacko the Archivist)
 S Place another worker
 S Place another worker, or click on DONE
+S Place lock a district, or click on Done
 K Place prisoners here for exhange
 V Placera f\u00e5ngar h\u00e4r f\u00f6r v\u00e4xling
 K Place the Rabbits
@@ -1385,6 +1438,7 @@ K Place your stack on the edge of the board
 V Placera h\u00f6gen vid kanten av br\u00e4det
 K Place your town in your first row
 V Placera din stad p\u00e5 f\u00f6rsta raden
+S Place your votes for ward #1
 K Placing Gipf Pieces
 V Placerar Gipf-brickor
 K Placing Standard Pieces
@@ -1419,9 +1473,12 @@ S Polyomino Flip
 K Polyomino Flip_variation
 V Polyomino Flip
 S Polyomino Games
-S Ponte del Diavolo
-K Ponte_Del_Diavolo_family
+K Ponte
 V Ponte del Diavolo
+K Ponte Del Diavolo
+V Ponte del Diavolo
+K Ponte Del Diavolo_family
+V Ponte Del Diavolo
 K Ponte_variation
 V 10x10 Ponte Del Diavolo
 K Position the starting rings
@@ -1494,6 +1551,9 @@ K Rejoin #1
 V \u00c5teruppta match mot #1
 K Remove a Ring
 V Ta bort en ring
+S Remove a cube, or click on Done
+S Remove a ward boss, and pay 2 influence chips
+S Remove a ward boss, and pay an influence chip
 K Reprice the goods in your factory storage
 V Byt pris p\u00e5 varorna p\u00e5 lagret
 K Reprice the goods in your warehouse storage
@@ -1528,7 +1588,8 @@ S Rotate the board 180 degrees
 S Running the train simulation
 S Sacrice the worker for #1 (from Chase the Miner)
 S Sacrifice a worker (from Pete the Cannibal)
-S Sacrifice the worker for an extra Authority Token
+K Sacrifice the worker for an extra Authority token
+V Sacrifice the worker for an extra Authority Token
 S Santorini
 K Santorini_family
 V Santorini
@@ -1537,6 +1598,7 @@ V Santorini (utan gudar)
 K Score the most points at the sprint and finish lines
 V F\u00e5 s\u00e5 m\u00e5nga po\u00e4ng som m\u00f6jligt vid sprint och vid m\u00e5llinjen
 S Score the most points buying and selling cards
+S Score the most points by winning votes
 K See Player Comments
 V Se spelarens kommentarer
 K See Spectator Comments
@@ -1606,6 +1668,8 @@ S Show info for #1
 K Shuffle pieces to the exchange area, Click Done to start the exchange
 V Blanda brickorna i v\u00e4xlingsutrymmet, klicka p\u00e5 Klar f\u00f6r att starta v\u00e4xlingen
 S Sky Lounge
+S Slander a second boss, or click on Done
+S Slander a ward boss, or click on done
 K Slide the chip toward the center
 V Skjut in brickan mot mitten
 K Sound
@@ -1708,6 +1772,8 @@ K Take Over Playing
 V Spela h\u00e4rifr\u00e5n
 S Take The #1 Card
 S Take a card
+S Take a disc of your choice
+S Take an influence disk, or click on Done
 S Take no chips
 S Take the card, or sell cards
 K Take your first action
@@ -1723,9 +1789,18 @@ K TakoJudo
 V Tako Judo
 K TakoJudo_variation
 V standard Tako Judo
+K Tammany
+V Tammany Hall
+S Tammany Hall
+K Tammany Hall_family
+V Tammany Hall
+K Tammany_variation
+V Standard Tammany Hall
 K Tamsk_variation
 V Tamsk standard
 S Tan
+S Tea
+S Tea-back
 S The auction is for a #1 card, or the right to sell #2 cards
 K The game is a draw
 V Spelet \u00e4r remi
@@ -1735,6 +1810,7 @@ K The next finish bonus is #1
 V N\u00e4sta m\u00e5lbonus \u00e4r #1
 K The next sprint bonus is #1
 V N\u00e4sta sprintbonus \u00e4r #1
+S There is no new mayor
 S This die will be rolled
 S This die will not be rolled
 K This is now a private room
@@ -1756,6 +1832,7 @@ V Klockan \u00e4r
 K Timeout in 1 minute.
 V Timeout om en minut.
 S Tip the last placed Menhir, or pass.
+S Toggle the view between normal and flattened
 S Total
 K Tournament Game
 V Turneringsparti
@@ -1836,6 +1913,7 @@ S Unused Markets
 S Unused Recruits
 S Unused Workers
 S Upgrade the tunnel effect (from Andrew the Spelunker)
+S Upload your avatar at #1
 S Use Recruit Ability
 S Use your recruit's power, or click on DONE to proceed normally
 S Used Recruits
@@ -1868,6 +1946,7 @@ K Volo_family
 V Volo
 K Volo_variation
 V standard Volo
+S Vote!
 K Wait for opponents to arrive.
 V V\u00e4ntar p\u00e5 motst\u00e5ndaren.
 K Wait for other players to adjust
@@ -1876,10 +1955,16 @@ K Wait for the other players to decide
 V v\u00e4nta p\u00e5 att den andra spelaren best\u00e4mmer
 S Wait for the other players to fill their racks
 S Wait for the other players to play
+S Wait for the other players to vote
 S Waiting for the other players to choose recruits
 K Waiting in
 V V\u00e4ntar i
 S Wall
+S Ward #1
+S Ward #1 is a tie
+S Ward #1 is unclaimed
+S Ward #1 is vacant
+S Ward #1 won by #2
 K Warehouse
 V Magasin
 K Warehouses
@@ -1890,6 +1975,7 @@ K Warp6_family
 V Warp 6
 K Warp6_variation
 V Warp 6 standard
+S Waste
 S Wastelander
 S Wastelander Authority
 S Wastelander Market
@@ -1898,6 +1984,7 @@ S Wastelanders only: play here to get 3 energy
 S Water
 K Welcome to Game client, version #1
 V V\u00e4lkommen till BoardSpace klient, version #1
+S Well
 K White
 V Vit
 S Wind Salon
@@ -1915,6 +2002,7 @@ K Xiangqi_family
 V Xiangqi
 K Xiangqi_variation
 V Xiangqi standard
+S Year #1
 S Yellow
 S Yellow Dome
 K Yes, I will fund the loan
@@ -1939,6 +2027,7 @@ K You have been offered a draw - Accept or Decline
 V Du har blivit erbjuden remi - acceptera eller avsl\u00e5
 K You have no legal moves.  Click on Done to pass
 V Du har inga m\u00f6jliga drag. Klicka p\u00e5 Klar f\u00f6r att passa.
+S You have no moves, click on DONE
 S You lose an extra morale when you retrieve workers for free.
 S You may not add workers when you have 2 or 3 workers.
 S You may not bump your own workers from action spaces.
@@ -1978,11 +2067,13 @@ K Zertz_family
 V Z\u00e8rtz
 K Zertz_variation
 V Z\u00e8rtz standard
-S a market or authority zone
+K a Market or Authority zone
+V a market or authority zone
 S a pair of Artifact cards
 K accept the bid, or pay the amount yourself
 V acceptera budet, eller betala sj\u00e4lv
 S add Icarite influence due to BrianTheViticulturist
+S add Wastelander influence due to BrianTheViticulturist
 S an ethical dilemma
 S an extra Euphorian Authority
 S an extra Subterran Authority
@@ -1993,9 +2084,6 @@ K announceOption
 V Nya spelare
 S any 5 Bliss or food, or any 4 with a resource
 S arithmetic
-S authority token
-S authority tokens
-S authority zone
 K automute
 V #1 har automatiskt f\u00e5tt talf\u00f6rbud
 S bid and win the most prize value
@@ -2021,6 +2109,7 @@ K center square is not special
 V mittrutan \u00e4r inte speciell
 S click Done to finish this Auction
 S click on DONE to confirm swapping colors
+S click on Done to finish the slander
 S connect all your birds into one flock
 K connect opposite sides with a chain of markers
 V Bind ihop dina motsatta sidor
@@ -2035,7 +2124,6 @@ K expand the board with your color tiles
 V ut\u00f6ka br\u00e4det med brickor av din f\u00e4rg
 K fontfamily
 V sansserif
-S food
 K form a larger triangle with your color at the tips
 V Bygg en st\u00f6rre triangel i din f\u00e4rg, mitten kan vara av motst\u00e5ndarens f\u00e4rg
 S form the most groups of 3 or more adjacent squares your color
@@ -2095,6 +2183,7 @@ S must be a Euphorian
 S must be a subterran
 S must be a wastelander
 S must be an icarite
+S no chips
 K nolaunch
 V Kunde inte starta, felmeddelande: 
 K nolobby
@@ -2111,7 +2200,8 @@ S pay +1 Knowledge instead of #1 (from Matthew the Thief)
 S pay with any resource (from Michael the Engineer)
 K perspective
 V perspektiv
-S place all 10 authority tokens
+K place all 10 Authority tokens
+V place all 10 authority tokens
 K play
 V spela #1
 S play here to advance the miner and gain a benefit
@@ -2120,7 +2210,8 @@ S play here to gain a worker
 S play here to get energy
 S play here to get food
 S play here to get water
-S play here to place an authority token
+K play here to place an Authority token
+V play here to place an authority token
 K player
 V spelare
 K player 
@@ -2184,4 +2275,4 @@ V du kan h\u00f6ja ditt bud
 S you should never see this
 K your name
 V Ditt namn
-N 1460
+N 1520
