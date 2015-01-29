@@ -715,6 +715,8 @@ void doSwap()
 			  case Gameover:
 			  case Resign:
 				  break;
+			default:
+				break;
 			}
 			{
 			hexChip po = pickedObject;

@@ -12,9 +12,11 @@ public interface HexConstants extends Play2Constants
 	static String HexPlayState = "Place a marker on any empty cell";
 	static String HexPlayOrSwapState = "Place a marker on any empty cell, or Swap Colors";
 	static String HexConfirmSwapState = "Click Done to confirm swapping colors with your opponent";
+	static String SwitchMessage = "Switch sides, and play white using the current position";
 	static String HexStrings[] = 
 	{  "Hex","Hex-15","Hex-19",
        HexPlayState,
+       SwitchMessage,
        HexPlayOrSwapState,
        HexConfirmSwapState,
 	   HexVictoryCondition

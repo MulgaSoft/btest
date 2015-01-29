@@ -679,7 +679,7 @@ class CheckerBoard extends rectBoard<CheckerCell> implements BoardProtocol,Check
 		return(false);
 
     }
-    public boolean LegalToHitBoard(CheckerCell cell)
+    public boolean legalToHitBoard(CheckerCell cell)
     {	
         switch (board_state)
         {

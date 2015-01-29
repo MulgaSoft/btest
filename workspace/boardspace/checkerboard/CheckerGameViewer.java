@@ -470,12 +470,13 @@ public class CheckerGameViewer extends commonCanvas
             CheckerCell cell = gb.getCell(thiscol,row);
             int ypos = (brect.y + brect.height) - gb.cellToY(thiscol, row);
             int xpos = brect.x + gb.cellToX(thiscol, row);
-            if( cell.drawStack(gc,this,highlight,SQUARESIZE,xpos,ypos,liftSteps,0.1,null)) 
+            HitPoint hitNow = gb.legalToHitBoard(cell) ? highlight : null;
+            if( cell.drawStack(gc,this,hitNow,SQUARESIZE,xpos,ypos,liftSteps,0.1,null)) 
             	{ // draw a highlight rectangle here, but defer drawing an arrow until later, after the moving chip is drawn
-            	highlight.arrow =(getMovingObject()>=0) 
+            	hitNow.arrow =(getMovingObject()>=0) 
       				? StockArt.DownArrow 
       				: cell.topChip()!=null?StockArt.UpArrow:null;
-            	highlight.awidth = SQUARESIZE/2;
+            	hitNow.awidth = SQUARESIZE/2;
             	G.frameRect(gc,Color.red,xpos-CELLSIZE,ypos-CELLSIZE-((cell.topChip()==null)?0:perspective_offset),CELLSIZE*2,CELLSIZE*2);
             	
             	}
@@ -536,7 +537,7 @@ public class CheckerGameViewer extends commonCanvas
                 }
        }}
 
- 		drawPlayerStuff(gc,(vstate==CheckerState.Puzzle)?select:null,HighlightColor,rackBackGroundColor);
+ 		drawPlayerStuff(gc,(vstate==CheckerState.Puzzle),moving?null:highlight,HighlightColor,rackBackGroundColor);
 
 
         if (gc != null)
@@ -852,6 +853,8 @@ private void playSounds(commonMove mm)
 	    		PerformAndTransmit("Pickb "+cell.col+" "+cell.row+" "+chip.id.shortName);
 	    		}
 	    	break;
+		default:
+			break;
         }
 
         if (getMovingObject() >= 0)

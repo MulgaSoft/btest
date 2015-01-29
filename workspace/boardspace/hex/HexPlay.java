@@ -90,11 +90,11 @@ public class HexPlay extends commonRobot<HexGameBoard> implements Runnable, HexC
     	return(board);
     }
     /** return true if the search should be depth limited at this point.  current
-     * is the current search depth, max is the maxumum you set for the search.
+     * is the current search depth, max is the maximum you set for the search.
      * You're free to stop the search earlier or let it continue longer, but usually
      * it's best to conduct an entire search with the same depth.
      * @param current the current depth
-     * @param max the declared maxumum depth.
+     * @param max the declared maximum depth.
      * 
      */
     public boolean Depth_Limit(int current, int max)
@@ -107,7 +107,7 @@ public class HexPlay extends commonRobot<HexGameBoard> implements Runnable, HexC
    }
 /** Called from the search driver to undo the effect of a previous Make_Move.  These
  * will always be done in reverse sequence. This is usually the most troublesome 
- * method to implement - everthing else in the board manipulations moves "forward".
+ * method to implement - everything else in the board manipulations moves "forward".
  * Among other things, Unmake_Move will have to undo captures and restore captured
  * pieces to the board, remove newly placed pieces from the board and so on.  
  * <p>

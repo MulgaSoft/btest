@@ -397,6 +397,7 @@ class TabGameBoard extends rectBoard<TabCell> implements BoardProtocol,TabConsta
        case REARRANGE_GOLD_STATE:
        case REARRANGE_SILVER_STATE:
     	   	return(false);
+       default: break;
 	   }
    		return(DoneState());
    }
@@ -663,7 +664,9 @@ void doSwap()
 				 unPickObject(); 
 				 break;
 			  case PLAY_STATE:
-			  case PLAY_OR_SWAP_STATE: acceptPlacement(); break;
+			  case PLAY_OR_SWAP_STATE: acceptPlacement(); 
+			  	break;
+			  default:
 			}
           	TabCell c = getCell(m.to_col, m.to_row);
            	SetBoard(c,pickedObject);

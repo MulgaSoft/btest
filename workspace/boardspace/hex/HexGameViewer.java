@@ -313,14 +313,15 @@ public class HexGameViewer extends commonCanvas
         
         // and for the second player at the bottom
 		secondPlayerChipRect.x = firstPlayerChipRect.x + (wideFormat?0:4*CELLSIZE); 
-		secondPlayerChipRect.y = firstPlayerChipRect.y+6*CELLSIZE+((doRotation&&!wideFormat)?5*CELLSIZE:0);
+		secondPlayerChipRect.y = firstPlayerChipRect.y+6*CELLSIZE+((doRotation&&!wideFormat)?6*CELLSIZE:0);
 		secondPlayerChipRect.width = firstPlayerChipRect.width;
 		secondPlayerChipRect.height= firstPlayerChipRect.height;
 
 		//this sets up the "vcr cluster" of forward and back controls.
         SetupVcrRects(CELLSIZE / 2,
-            (boardRect.y + boardRect.height) - (5 * CELLSIZE), CELLSIZE * 4,
-            CELLSIZE*2);
+            (boardRect.y + boardRect.height) - (5 * CELLSIZE),
+            CELLSIZE * 5,
+            (CELLSIZE * 5) / 2);
         auxSRect.max = 3.0;		// max scale on the aux sliders
         
         goalRect.x = CELLSIZE * 6;		// really just a general message
@@ -611,7 +612,8 @@ public class HexGameViewer extends commonCanvas
              { // checking for pointable position
             	 StockArt.SmallO.drawChip(gc,this,(int)(gb.CELLSIZE*5),xpos,ypos,null);                
              }
-            cell.drawChip(gc,this,highlight,(int)(gb.CELLSIZE),xpos,ypos,null); 
+            cell.drawChip(gc,this,highlight,(int)(gb.CELLSIZE),xpos,ypos,null);
+            
             }
         }
     }
@@ -679,6 +681,8 @@ public class HexGameViewer extends commonCanvas
                 HighlightColor, rackBackGroundColor))
 			{ buttonSelect.hitCode = DefaultId.HitSwapButton;
 			}
+			// this is an example of how to set a tooltip
+			HitPoint.setHelpText(selectPos,swapRect,s.get(SwitchMessage));
 		}
 
 		if (state != HexState.Puzzle)
@@ -704,8 +708,9 @@ public class HexGameViewer extends commonCanvas
             }
         }
 
- 
-        drawPlayerStuff(gc,(state==HexState.Puzzle)?buttonSelect:null,HighlightColor,rackBackGroundColor);
+		// if the state is Puzzle, present the player names as start buttons.
+		// in any case, pass the mouse location so tooltips will be attached.
+        drawPlayerStuff(gc,(state==HexState.Puzzle),selectPos,HighlightColor,rackBackGroundColor);
   
  
         if (gc != null)
