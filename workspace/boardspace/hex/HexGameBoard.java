@@ -1002,10 +1002,20 @@ void doSwap()
  // small ad-hoc adjustment to the grid positions
  public void DrawGridCoord(Graphics gc, Color clt,int xpos, int ypos, int cellsize,String txt)
  {   if(Character.isDigit(txt.charAt(0)))
-	 	{ xpos-=cellsize/4;
+	 	{ switch(variation)
+	 		{case hex_19: 
+	 			xpos-=3*cellsize/4;
+	 			break;
+	 		case hex_15:
+	 			xpos -= 2*cellsize/3;
+	 			break;
+	 		case hex:
+	 			xpos -= cellsize/2;
+	 			break;
+	 		}
 	 	}
  		else
- 		{ xpos += cellsize/4; 
+ 		{ 
  		  ypos += cellsize/4;
  		}
  	G.Text(gc, false, xpos, ypos, -1, 0,clt, null, txt);
