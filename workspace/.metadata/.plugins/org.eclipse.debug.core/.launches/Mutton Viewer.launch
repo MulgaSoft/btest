@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.javaApplet">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/boardspace/OnlineLobby.jar"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<intAttribute key="org.eclipse.jdt.launching.APPLET_HEIGHT" value="200"/>
+<stringAttribute key="org.eclipse.jdt.launching.APPLET_NAME" value=""/>
+<mapAttribute key="org.eclipse.jdt.launching.APPLET_PARAMETERS">
+<mapEntry key="reviewonly" value="true"/>
+<mapEntry key="final" value="true"/>
+<mapEntry key="extramouse" value="true"/>
+<mapEntry key="localfile" value="true"/>
+<mapEntry key="reviewerdir0" value="file:///g:/share/projects/boardspace.net/htdocs/mutton/muttongames/"/>
+<mapEntry key="debug" value="true"/>
+<mapEntry key="viewerClass" value="mutton.MuttonGameViewer"/>
+<mapEntry key="servername" value="192.168.0.1"/>
+<mapEntry key="zertz.classname" value="L:Game"/>
+<mapEntry key="extraactions" value="true"/>
+</mapAttribute>
+<intAttribute key="org.eclipse.jdt.launching.APPLET_WIDTH" value="200"/>
+<stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.5.0_06"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="online.Root"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="boardspace"/>
+</launchConfiguration>
